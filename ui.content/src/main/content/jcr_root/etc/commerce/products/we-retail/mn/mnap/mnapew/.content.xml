@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:commerceType="product"
+    cq:productVariantAxes="[size]"
+    cq:tags="[we-retail:gender/men\,we-retail:season/winter\,we-retail:apparel/coat\,we-retail:activity/skiing]"
+    jcr:description="Men's Winter Coat"
+    jcr:lastModified="{Date}2015-09-23T22:44:07.699+02:00"
+    jcr:mixinTypes="[cq:Taggable]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Edmonton Winter"
+    sling:resourceType="commerce/components/product"
+    identifier="mnapew"
+    price="{Decimal}160"
+    summary="...">
+    <image
+        jcr:lastModified="{Date}2015-01-26T12:28:08.414Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product/image"
+        fileReference="/content/dam/geometrixx-outdoors/products/coat/Edmonton.jpg"/>
+    <size-s
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.415Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="S"/>
+    <size-m
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.416Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="M"/>
+    <size-l
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.416Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="L"/>
+    <size-xl
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.417Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="XL"/>
+    <size-2xl
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.417Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="2XL"/>
+</jcr:root>

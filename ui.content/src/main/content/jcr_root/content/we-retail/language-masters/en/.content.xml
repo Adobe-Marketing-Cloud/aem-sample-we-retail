@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2015-09-24T18:07:53.945+02:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2015-09-20T19:51:21.401+02:00"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:template="/apps/we-retail/templates/page-content"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="English"
+        jcr:uuid="2b148edb-fe55-47c9-8d8c-0a8356ca147f"
+        sling:resourceType="we-retail/components/structure/page">
+        <logo
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="we-retail/components/structure/logo"/>
+        <title
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="we-retail/components/content/title"/>
+        <topnav
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="we-retail/components/structure/topnav"/>
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <jumbotron
+                jcr:created="{Date}2015-09-20T00:33:17.531+02:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-09-20T00:54:29.689+02:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/jumbotron"
+                buttonLabel="Learn more"
+                text="This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique."
+                title="Hello, world!">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <tablet
+                        jcr:primaryType="nt:unstructured"
+                        width="12"/>
+                </cq:responsive>
+            </jumbotron>
+            <text
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/text"
+                text="&lt;p>This is a content page&lt;/p>"
+                textIsRich="true">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <tablet
+                        jcr:primaryType="nt:unstructured"
+                        behavior="newline"
+                        width="12"/>
+                </cq:responsive>
+            </text>
+        </par>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Phone"
+                    width="{Decimal}650"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Decimal}1200"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+    <discover/>
+    <communities/>
+    <about-us/>
+</jcr:root>

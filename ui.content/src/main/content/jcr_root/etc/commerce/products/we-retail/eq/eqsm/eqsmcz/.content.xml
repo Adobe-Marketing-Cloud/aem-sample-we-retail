@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:commerceType="product"
+    cq:productVariantAxes="[color]"
+    cq:tags="[we-retail:activity/hiking,we-retail:season/summer]"
+    jcr:description="Backpack"
+    jcr:description.ga="Mála Droma"
+    jcr:lastModified="{Date}2015-01-26T12:28:08.318Z"
+    jcr:mixinTypes="[cq:Taggable]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Cuzco"
+    jcr:title.ga="Cuzco"
+    sling:resourceType="commerce/components/product"
+    features="..."
+    identifier="eqsmcz"
+    price="{Decimal}210"
+    summary="...">
+    <image
+        jcr:lastModified="{Date}2015-01-26T12:28:08.318Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product/image"
+        fileReference="/content/dam/geometrixx-outdoors/products/equipment/Lake Titicaca Blue.jpg"/>
+    <eqsmcz.1
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.319Z"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Cuzco Blue"
+        jcr:title.ga="Cuzco Gorm"
+        sling:resourceType="commerce/components/product"
+        color="Cuzco Blue"
+        identifier="eqsmcz.1"/>
+    <eqsmcz.2
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.320Z"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Cuzco Orange"
+        jcr:title.ga="Cuzco Oráiste"
+        sling:resourceType="commerce/components/product"
+        color="Cuzco Orange"
+        identifier="eqsmcz.2">
+        <image
+            jcr:lastModified="{Date}2015-01-26T12:28:08.321Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/geometrixx-outdoors/products/equipment/Lake Titicaca Orange.jpg"/>
+    </eqsmcz.2>
+</jcr:root>

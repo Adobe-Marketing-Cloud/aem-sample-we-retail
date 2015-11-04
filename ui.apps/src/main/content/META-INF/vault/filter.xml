@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/we-retail">
+        <exclude pattern="/apps/we-retail/install" />
+    </filter>
+    
+    <filter root="/etc/tags/we-retail"/>
+    <filter root="/etc/designs/we-retail"/>
+    <filter root="/etc/clientlibs/we-retail"/>
+</workspaceFilter>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2015-09-19T22:08:05.065+02:00"
+        cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2015-09-19T22:08:05.073+02:00"
+        cq:lastRolledoutBy="admin"
+        cq:template="/apps/we-retail/templates/page-content"
+        jcr:mixinTypes="[cq:LiveRelationship,cq:LiveSync]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Français"
+        sling:resourceType="we-retail/components/structure/page">
+        <logo
+            jcr:mixinTypes="[cq:LiveRelationship]"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="we-retail/components/structure/logo"/>
+        <title
+            jcr:mixinTypes="[cq:LiveRelationship]"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="we-retail/components/content/title"/>
+        <topnav
+            jcr:mixinTypes="[cq:LiveRelationship]"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="we-retail/components/structure/topnav"/>
+        <par
+            jcr:mixinTypes="[cq:LiveRelationship]"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <text
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/text"
+                text="&lt;p>Il s'agit d'une page de contenu&lt;/p>"
+                textIsRich="true"/>
+        </par>
+        <cq:LiveSyncConfig
+            cq:excludedPaths="[]"
+            cq:isDeep="{Boolean}true"
+            cq:master="/content/we-retail/language-masters/fr"
+            cq:rolloutConfigs="[/etc/msm/rolloutconfigs/default]"
+            jcr:primaryType="cq:LiveCopy"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:commerceType="product"
+    cq:productVariantAxes="[color,size]"
+    cq:tags="[we-retail:gender/women\,we-retail:apparel/shirt\,we-retail:season/summer]"
+    jcr:description="Women's Cotton Shirt"
+    jcr:description.ga="Léine Cadás do na Mná"
+    jcr:lastModified="{Date}2015-09-23T22:44:07.698+02:00"
+    jcr:mixinTypes="[cq:Taggable]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Palau Summer"
+    jcr:title.ga="Palau Samhradh"
+    sling:resourceType="commerce/components/product"
+    features="&lt;ul>&#xa;&lt;li>Lightweight cotton twill&lt;/li>&#xa;&lt;li>Made in Thailand&lt;/li>&#xa;&lt;li>Guaranteed sweatshop-free&lt;/li>&#xa;&lt;/ul>&#xa;"
+    features.ga="&lt;ul>&#xa;&lt;li>Cadás corrán éadrom&lt;/li>&#xa;&lt;li>Rinneadh se Téalainn&lt;/li>&#xa;&lt;li>Ráthaithe monarcha dhúshaothair saor&lt;/li>&#xa;&lt;/ul>&#xa;"
+    identifier="wmappl"
+    price="{Decimal}55"
+    summary="&lt;p>Lightweight cotton in a variety of colors. Perfect for both working out or lounging around at home.&lt;/p>&#xa;"
+    summary.ga="&lt;p>Cadás éadrom i réimse na dathanna. Foirfe don dá oibriú amach nó scíth a ligean sa bhaile.&lt;/p>&#xa;">
+    <image
+        jcr:lastModified="{Date}2015-01-26T12:28:08.464Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product/image"
+        fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Red.jpg"/>
+    <wmappl.1
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.465Z"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Palau Summer Red"
+        jcr:title.ga="Palau Samhradh Dearg"
+        sling:resourceType="commerce/components/product"
+        color="Red"
+        identifier="wmappl.1">
+        <size-xs
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.465Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="XS"/>
+        <size-s
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.466Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="S"/>
+        <size-m
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.466Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="M"/>
+        <size-l
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.466Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="L"/>
+        <size-xl
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.466Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="XL"/>
+    </wmappl.1>
+    <wmappl.2
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.467Z"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Palau Summer Black"
+        jcr:title.ga="Palau Samhradh Dubh"
+        sling:resourceType="commerce/components/product"
+        color="Black"
+        identifier="wmappl.2"
+        price="{Decimal}65">
+        <image
+            jcr:lastModified="{Date}2015-01-26T12:28:08.467Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Black.jpg"/>
+        <size-xs
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.467Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="XS"/>
+        <size-s
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.468Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="S"/>
+        <size-m
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.468Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="M"/>
+        <size-l
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.468Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="L"/>
+        <size-xl
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.468Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="XL"/>
+    </wmappl.2>
+</jcr:root>

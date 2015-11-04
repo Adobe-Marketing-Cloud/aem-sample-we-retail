@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:commerceType="product"
+    cq:tags="[we-retail:season/winter\,we-retail:activity/skiing\,we-retail:apparel/helmet]"
+    jcr:description="Skiing Helmet"
+    jcr:lastModified="{Date}2015-09-23T22:44:07.700+02:00"
+    jcr:mixinTypes="[cq:Taggable]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Kawartha Snow"
+    sling:resourceType="commerce/components/product"
+    identifier="eqwnkw"
+    price="{Decimal}82"
+    summary="...">
+    <image
+        jcr:lastModified="{Date}2015-01-26T12:28:08.381Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product/image"
+        fileReference="/content/dam/geometrixx-outdoors/products/helmet/Kawartha.jpg"/>
+</jcr:root>

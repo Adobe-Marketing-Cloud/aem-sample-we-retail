@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:commerceType="product"
+    cq:productVariantAxes="[size]"
+    cq:tags="[we-retail:activity/skiing\,we-retail:season/winter\,we-retail:apparel/footwear]"
+    jcr:description="Snowboarding Boots"
+    jcr:lastModified="{Date}2015-09-23T22:44:07.698+02:00"
+    jcr:mixinTypes="[cq:Taggable]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Kamloops Snow"
+    sling:resourceType="commerce/components/product"
+    identifier="eqwnkm"
+    price="{Decimal}190"
+    summary="...">
+    <image
+        jcr:lastModified="{Date}2015-01-26T12:28:08.377Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product/image"
+        fileReference="/content/dam/geometrixx-outdoors/products/footwear/Kamloops.jpg"/>
+    <size-7
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.378Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="7"/>
+    <size-8
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.378Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="8"/>
+    <size-9
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.379Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="9"/>
+    <size-10
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.379Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="10"/>
+    <size-11
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.379Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="11"/>
+    <size-12
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.380Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="12"/>
+    <size-13
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.380Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="13"/>
+</jcr:root>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:commerceType="product"
+    cq:productVariantAxes="[size]"
+    cq:tags="[we-retail:gender/men\,we-retail:apparel/shorts\,we-retail:season/summer\,we-retail:activity/hiking]"
+    jcr:description="Men's Shorts"
+    jcr:description.ga="Bríste Gearr Lúthcleasach do na Fir"
+    jcr:lastModified="{Date}2015-09-23T22:44:07.701+02:00"
+    jcr:mixinTypes="[cq:Taggable]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Tuareg Summer"
+    jcr:title.ga="Taureg Samhradh"
+    sling:resourceType="commerce/components/product"
+    features="&lt;ul>&#xa;&lt;li>Lightweight, breathable cotton keeps you cool on hot summer days&lt;/li>&#xa;&lt;li>Large pockets secure essentials like your keys and wallet&lt;/li>&#xa;&lt;li>Comes in range of colors&lt;/li>&#xa;&lt;li>Easywash, pre-shrunk and stain-resistant&lt;/li>&#xa;&lt;/ul>&#xa;"
+    features.ga="&lt;ul>&#xa;&lt;li>Cadás thrécaoiltech éadrom a coinníonn tú fionnuar ar laethanta te ar tsamhraidh&lt;/li>&#xa;&lt;li>Pócaí mór a connigh slán rudaí riachtanach cosúil do eochair agus sparán&lt;/li>&#xa;&lt;li>Thagann sé i réimse na dathanna&lt;/li>&#xa;&lt;li>Éasca a nigh agus a chomhracfaidh smáil&lt;/li>&#xa;&lt;/ul>&#xa;"
+    identifier="mnaptg"
+    price="{Decimal}39.9"
+    summary="&lt;p>Easywash lightweight cotton keeps you cool and comfortable in the hottest weather. Pre-shrunk stain-resistant fabric. Extra-deep front pockets. Natural Fit is relaxed through the hip and thigh with straight legs. Double stitching throughout. Machine wash and dry.&lt;/p>&#xa;"
+    summary.ga="&lt;p>Éasca a nigh cadás éadrom a coinníonn tú fionnuar agus compordach san aimsir is teo. Fabraic a chomhracfaidh smáil. Pócaí breise tosaigh domhain. Tá oiriúnach nádúrtha scíth a ligean tríd an cromáin agus leis le cosa díreach. Fuála dúbhailte ar fud. Níochán meaisín agus tirim.&lt;/p>&#xa;">
+    <image
+        jcr:lastModified="{Date}2015-01-26T12:28:08.445Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product/image"
+        fileReference="/content/dam/geometrixx-outdoors/products/shorts/Tuareg.jpg"/>
+    <size-s
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.446Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="S"/>
+    <size-m
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.446Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="M"/>
+    <size-l
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.446Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="L"/>
+    <size-xl
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.446Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="XL"/>
+</jcr:root>
