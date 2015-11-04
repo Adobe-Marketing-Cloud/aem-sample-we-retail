@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:lastModified="{Date}2011-11-10T10:20:59.400+01:00"
+    jcr:primaryType="cq:Tag"
+    jcr:title="Activity"
+    sling:resourceType="cq/tagging/components/tag">
+    <biking/>
+    <hiking/>
+    <running/>
+    <skiing/>
+    <surfing/>
+    <swimming/>
+</jcr:root>

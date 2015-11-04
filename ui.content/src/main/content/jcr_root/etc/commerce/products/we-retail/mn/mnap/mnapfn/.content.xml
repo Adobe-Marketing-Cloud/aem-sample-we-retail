@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:commerceType="product"
+    cq:tags="[we-retail:gender/men\,we-retail:activity/hiking\,we-retail:season/summer\,we-retail:apparel/pants]"
+    jcr:description="Men's Hiking Pants"
+    jcr:lastModified="{Date}2015-09-23T22:44:07.700+02:00"
+    jcr:mixinTypes="[cq:Taggable]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Fulani Nomad"
+    sling:resourceType="commerce/components/product"
+    features="&lt;ul>&#xa;&lt;li>Quick-dry fabric&lt;/li>&#xa;&lt;li>Plenty of pockets&lt;/li>&#xa;&lt;li>Zippable legs for conversion to shorts&lt;/li>&#xa;&lt;/ul>"
+    identifier="mnapfn"
+    price="{Decimal}59.9"
+    summary="&lt;p>Fulani pants are ideal for hiking or camping. Durable quick-dry fabric ensures that you are always comfortable. An elasticized waistband provides comfort and fit. And best of all, when you get too warm, you can convert them to shorts!&lt;br>&#xa;&lt;/p>&#xa;">
+    <image
+        jcr:lastModified="{Date}2015-01-26T12:28:08.418Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product/image"
+        fileReference="/content/dam/geometrixx-outdoors/products/pants/Fulani.jpg"/>
+</jcr:root>

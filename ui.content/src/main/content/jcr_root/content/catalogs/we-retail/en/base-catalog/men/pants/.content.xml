@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2012-01-23T11:05:28.592+01:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/commerce/templates/section"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Pants"
+        jcr:uuid="bd11b80d-cb91-4d39-8f77-ecb89612e5a9"
+        sling:resourceType="commerce/components/section">
+        <target
+            jcr:primaryType="nt:unstructured"
+            jcr_title="Pants"/>
+        <filter
+            jcr:primaryType="nt:unstructured"
+            matchTags="[we-retail:gender/men,we-retail:apparel/pants]"/>
+    </jcr:content>
+</jcr:root>

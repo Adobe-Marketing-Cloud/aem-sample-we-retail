@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2015-09-23T23:03:32.243+02:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/commerce/templates/section"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Shirts"
+        jcr:uuid="c4289a01-83f3-4347-a844-f37cfd8007f6"
+        sling:resourceType="commerce/components/section">
+        <target
+            jcr:primaryType="nt:unstructured"
+            jcr_title="Shirts">
+            <par jcr:primaryType="nt:unstructured">
+                <banner
+                    jcr:primaryType="nt:unstructured"
+                    fileReference="/content/dam/geometrixx-outdoors/banners/cool-and-stylish.jpg"/>
+            </par>
+        </target>
+        <filter
+            jcr:primaryType="nt:unstructured"
+            matchTags="[we-retail:gender/women\,we-retail:apparel/shirt]"/>
+    </jcr:content>
+</jcr:root>

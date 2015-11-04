@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/content/we-retail"/>
+    <filter root="/content/dam/we-retail"/>
+    <filter root="/content/catalogs/we-retail"/>
+    
+    <filter root="/etc/commerce/products/we-retail"/>
+</workspaceFilter>

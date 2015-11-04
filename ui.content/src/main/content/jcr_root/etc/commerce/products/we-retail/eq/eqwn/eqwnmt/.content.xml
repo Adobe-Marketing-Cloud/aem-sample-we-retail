@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:commerceType="product"
+    cq:productVariantAxes="[size]"
+    cq:tags="[we-retail:activity/skiing\,we-retail:season/winter\,we-retail:apparel/gloves]"
+    jcr:description="Nordic Ski Gloves"
+    jcr:lastModified="{Date}2015-09-23T22:44:07.700+02:00"
+    jcr:mixinTypes="[cq:Taggable]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Mont Tremblant"
+    sling:resourceType="commerce/components/product"
+    identifier="eqwnmt"
+    price="{Decimal}67"
+    summary="...">
+    <image
+        jcr:lastModified="{Date}2015-01-26T12:28:08.384Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product/image"
+        fileReference="/content/dam/geometrixx-outdoors/products/gloves/Mont Tremblant.jpg"/>
+    <size-s
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.384Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="S"/>
+    <size-m
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.384Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="M"/>
+    <size-l
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.385Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="L"/>
+</jcr:root>

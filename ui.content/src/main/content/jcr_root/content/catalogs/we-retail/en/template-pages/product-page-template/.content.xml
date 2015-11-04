@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2013-02-19T15:19:48.986Z"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/we-retail/templates/page-product"
+        jcr:language="en"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Product Page Template"
+        sling:resourceType="we-retail/components/structure/page"/>
+</jcr:root>

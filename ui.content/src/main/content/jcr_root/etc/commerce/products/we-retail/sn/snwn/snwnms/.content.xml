@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:commerceType="product"
+    cq:productVariantAxes="[color]"
+    cq:tags="[we-retail:season/winter\,we-retail:activity/skiing\,we-retail:apparel/hat]"
+    jcr:description="Winter Hat"
+    jcr:lastModified="{Date}2015-09-23T22:44:07.698+02:00"
+    jcr:mixinTypes="[cq:Taggable]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Montreal Snow"
+    sling:resourceType="commerce/components/product"
+    identifier="snwnms"
+    price="{Decimal}29.9"
+    summary="...">
+    <image
+        jcr:lastModified="{Date}2015-01-26T12:28:08.449Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product/image"
+        fileReference="/content/dam/geometrixx-outdoors/products/hat/Montreal Red.jpg"/>
+    <snwnms.1
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.449Z"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Montreal Snow Red"
+        sling:resourceType="commerce/components/product"
+        color="Red"
+        identifier="snwnms.1"/>
+    <snwnms.2
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.449Z"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Montreal Snow Pink"
+        sling:resourceType="commerce/components/product"
+        color="Pink"
+        identifier="snwnms.2">
+        <image
+            jcr:lastModified="{Date}2015-01-26T12:28:08.450Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/geometrixx-outdoors/products/hat/Montreal Pink.jpg"/>
+    </snwnms.2>
+    <snwnms.3
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.450Z"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Montreal Snow Blue"
+        sling:resourceType="commerce/components/product"
+        color="Blue"
+        identifier="snwnms.3">
+        <image
+            jcr:lastModified="{Date}2015-01-26T12:28:08.450Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/geometrixx-outdoors/products/hat/Montreal Blue.jpg"/>
+    </snwnms.3>
+</jcr:root>

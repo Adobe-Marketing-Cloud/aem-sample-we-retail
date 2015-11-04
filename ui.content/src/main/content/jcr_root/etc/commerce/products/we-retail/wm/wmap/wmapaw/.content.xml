@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:commerceType="product"
+    cq:productVariantAxes="[color,size]"
+    cq:tags="[we-retail:season/summer\,we-retail:activity/swimming\,we-retail:gender/women]"
+    jcr:description="Swim Trunks"
+    jcr:lastModified="{Date}2015-09-23T22:44:07.698+02:00"
+    jcr:mixinTypes="[cq:Taggable]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Abidjan Water"
+    sling:resourceType="commerce/components/product"
+    features="&lt;ul>&#xa;&lt;li>Tough construction&lt;/li>&#xa;&lt;li>Double seamed&lt;/li>&#xa;&lt;li>Zippable ineternal pocket for your keys or credit cards&lt;/li>&#xa;&lt;li>Comfortplus mesh lining&lt;/li>&#xa;&lt;/ul>"
+    identifier="wmapaw"
+    price="{Decimal}38.9"
+    summary="&lt;p>Summer's here and beach is calling. Whether you want to surf the waves or just lie in the sand, Abidjan swim trunks look great and feel better.&lt;br>&#xa;&lt;/p>&#xa;">
+    <image
+        jcr:lastModified="{Date}2015-01-26T12:28:08.403Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product/image"
+        fileReference="/content/dam/geometrixx-outdoors/products/swimming/Abidjan Red.jpg"/>
+    <wmapaw.r
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.404Z"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Abidjan Water Red"
+        sling:resourceType="commerce/components/product"
+        color="Water Red"
+        identifier="wmapaw.r">
+        <size-s
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.405Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="S"/>
+        <size-m
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.405Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="M"/>
+        <size-l
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.406Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            identifier="wmapaw.r"
+            price="{Decimal}51"
+            size="L"/>
+    </wmapaw.r>
+    <wmapaw.b
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.407Z"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Abidjan Water Blue"
+        sling:resourceType="commerce/components/product"
+        color="Water Blue"
+        identifier="wmapaw.b">
+        <image
+            jcr:lastModified="{Date}2015-01-26T12:28:08.407Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/geometrixx-outdoors/products/swimming/Abidjan Blue.jpg"/>
+        <size-s
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.407Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="S"/>
+        <size-m
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.408Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="M"/>
+        <size-l
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.408Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            identifier="wmapaw.b"
+            price="{Decimal}51"
+            size="L"/>
+    </wmapaw.b>
+</jcr:root>

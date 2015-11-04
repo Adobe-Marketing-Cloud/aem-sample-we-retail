@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:commerceType="product"
+    cq:productVariantAxes="[size]"
+    cq:tags="[we-retail:activity/biking\,we-retail:season/summer]"
+    jcr:description="Biking Helmet"
+    jcr:description.ga="Clogad Rothar"
+    jcr:lastModified="{Date}2015-09-23T22:40:21.112+02:00"
+    jcr:mixinTypes="[cq:Taggable]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Tacna"
+    sling:resourceType="commerce/components/product"
+    features="..."
+    identifier="eqsmtc"
+    price="{Decimal}62"
+    summary="...">
+    <image
+        jcr:lastModified="{Date}2015-01-26T12:28:08.294Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product/image"
+        fileReference="/content/dam/geometrixx-outdoors/products/helmet/Tacna.jpg"/>
+    <size-m
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.317Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        size="M"/>
+    <size-l
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.317Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        identifier="eqsmtc"
+        price="{Decimal}64"
+        size="L"/>
+</jcr:root>

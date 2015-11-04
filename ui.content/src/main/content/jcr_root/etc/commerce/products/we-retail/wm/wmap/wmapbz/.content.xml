@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:commerceType="product"
+    cq:productVariantAxes="[color,size]"
+    cq:tags="[we-retail:activity/swimming\,we-retail:season/summer\,we-retail:gender/women]"
+    jcr:description="Bikini"
+    jcr:lastModified="{Date}2015-09-23T22:44:07.699+02:00"
+    jcr:mixinTypes="[cq:Taggable]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Brazzaville"
+    sling:resourceType="commerce/components/product"
+    features="&lt;ul>&#xa;&lt;li>Highest quality material&lt;/li>&#xa;&lt;li>Made in China&lt;/li>&#xa;&lt;li>Tons of colors&lt;/li>&#xa;&lt;/ul>&#xa;"
+    identifier="wmapbz"
+    price="{Decimal}52"
+    summary="&lt;p>The Brazzaville bikini really captures that &amp;quot;fun-in-the-sun&amp;quot; feeling. Its made of high quality fabric and comes in tons of colors!&lt;br>&#xa;&lt;/p>">
+    <image
+        jcr:lastModified="{Date}2015-01-26T12:28:08.410Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product/image"
+        fileReference="/content/dam/geometrixx-outdoors/products/swimming/Brazzaville Warm.jpg"/>
+    <wmapbz.w
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.411Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        color="Warm"
+        identifier="wmapbz.w">
+        <size-s
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.411Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="S"/>
+        <size-m
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.412Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="M"/>
+        <size-l
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.412Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="L"/>
+    </wmapbz.w>
+    <wmapbz.c
+        cq:commerceType="variant"
+        jcr:lastModified="{Date}2015-01-26T12:28:08.412Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product"
+        color="Cold"
+        identifier="wmapbz.c">
+        <image
+            jcr:lastModified="{Date}2015-01-26T12:28:08.413Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/geometrixx-outdoors/products/swimming/Brazzaville Cold.jpg"/>
+        <size-s
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-01-26T12:28:08.413Z"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="S"/>
+    </wmapbz.c>
+</jcr:root>

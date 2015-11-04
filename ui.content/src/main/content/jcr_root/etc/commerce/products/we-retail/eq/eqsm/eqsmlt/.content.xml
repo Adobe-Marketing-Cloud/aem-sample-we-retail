@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:commerceType="product"
+    cq:tags="[we-retail:activity/hiking\,we-retail:season/summer]"
+    jcr:description="Hiking Poles"
+    jcr:lastModified="{Date}2015-09-23T22:39:02.679+02:00"
+    jcr:mixinTypes="[cq:Taggable]"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Longirod Trek"
+    sling:resourceType="commerce/components/product"
+    features="..."
+    identifier="eqsmlt"
+    price="{Decimal}89"
+    summary="...">
+    <image
+        jcr:lastModified="{Date}2015-01-26T12:28:08.329Z"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="commerce/components/product/image"
+        fileReference="/content/dam/geometrixx-outdoors/products/equipment/Longirod.jpg"/>
+</jcr:root>
