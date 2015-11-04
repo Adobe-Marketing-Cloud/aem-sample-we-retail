@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2015-09-24T18:07:53.945+02:00"
+        cq:lastModified="{Date}2015-11-04T11:16:24.017+01:00"
         cq:lastModifiedBy="admin"
         cq:lastReplicated="{Date}2015-09-20T19:51:21.401+02:00"
         cq:lastReplicatedBy="admin"
@@ -26,34 +26,198 @@
         <par
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
-            <jumbotron
-                jcr:created="{Date}2015-09-20T00:33:17.531+02:00"
+            <hero_image
+                jcr:created="{Date}2015-11-04T00:14:44.088+01:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-09-20T00:54:29.689+02:00"
+                jcr:lastModified="{Date}2015-11-04T00:14:44.088+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/jumbotron"
-                buttonLabel="Learn more"
-                text="This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique."
-                title="Hello, world!">
-                <cq:responsive jcr:primaryType="nt:unstructured">
-                    <tablet
-                        jcr:primaryType="nt:unstructured"
-                        width="12"/>
-                </cq:responsive>
-            </jumbotron>
-            <text
+                sling:resourceType="we-retail/components/content/hero-image"/>
+            <section_title
+                jcr:created="{Date}2015-11-04T00:47:00.581+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-04T00:47:09.764+01:00"
+                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/text"
-                text="&lt;p>This is a content page&lt;/p>"
-                textIsRich="true">
+                sling:resourceType="we-retail/components/content/section-title"
+                text="Featured products"/>
+            <products_grid
+                jcr:created="{Date}2015-11-03T23:39:56.441+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-03T23:39:56.441+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/products-grid"/>
+            <section_title_496791378
+                jcr:created="{Date}2015-11-04T00:47:33.815+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-04T00:49:27.412+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/section-title"
+                text="Fight the cold with the world finest gears"/>
+            <category_teaser
+                jcr:created="{Date}2015-11-03T23:52:30.703+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-04T00:03:12.613+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/category-teaser"
+                buttonLabel="Freestyle"
+                fileReference="/content/dam/we-retail/images/bg-teaser-1.jpg">
                 <cq:responsive jcr:primaryType="nt:unstructured">
-                    <tablet
+                    <default
                         jcr:primaryType="nt:unstructured"
-                        behavior="newline"
+                        width="4"/>
+                    <phone
+                        jcr:primaryType="nt:unstructured"
                         width="12"/>
                 </cq:responsive>
-            </text>
+            </category_teaser>
+            <category_teaser_859708776
+                jcr:created="{Date}2015-11-04T00:10:12.400+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-04T00:10:40.295+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/category-teaser"
+                buttonLabel="Backcountry"
+                fileReference="/content/dam/we-retail/images/bg-teaser-2.jpg">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        width="4"/>
+                    <phone
+                        jcr:primaryType="nt:unstructured"
+                        width="12"/>
+                </cq:responsive>
+            </category_teaser_859708776>
+            <category_teaser_465639357
+                jcr:created="{Date}2015-11-04T00:10:50.268+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-04T00:11:10.262+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/category-teaser"
+                buttonLabel="Freeride"
+                fileReference="/content/dam/we-retail/images/bg-teaser-3.jpg">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        width="4"/>
+                    <phone
+                        jcr:primaryType="nt:unstructured"
+                        width="12"/>
+                </cq:responsive>
+            </category_teaser_465639357>
+            <community_teaser
+                jcr:created="{Date}2015-11-04T00:38:05.872+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-04T00:38:05.872+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/community-teaser"/>
+            <section_title_431279162
+                jcr:created="{Date}2015-11-04T00:51:12.388+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-04T00:51:20.147+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/section-title"
+                text="The latest on we.RETAIL"/>
+            <article_teaser
+                jcr:created="{Date}2015-11-04T00:31:31.216+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-04T00:31:31.216+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/article-teaser">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        width="4"/>
+                </cq:responsive>
+            </article_teaser>
+            <article_teaser_810360091
+                jcr:created="{Date}2015-11-04T00:31:41.312+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-04T00:31:41.312+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/article-teaser">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        width="4"/>
+                </cq:responsive>
+            </article_teaser_810360091>
+            <article_teaser_49623094
+                jcr:created="{Date}2015-11-04T00:31:46.320+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-04T00:31:46.320+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/article-teaser">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        width="4"/>
+                </cq:responsive>
+            </article_teaser_49623094>
+            <article_teaser_2099972854
+                jcr:created="{Date}2015-11-04T00:33:46.025+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-04T00:33:46.025+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/article-teaser">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        width="4"/>
+                </cq:responsive>
+            </article_teaser_2099972854>
+            <article_teaser_1776029550
+                jcr:created="{Date}2015-11-04T00:33:49.217+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-04T00:33:49.217+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/article-teaser">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        width="4"/>
+                </cq:responsive>
+            </article_teaser_1776029550>
+            <article_teaser_2066798396
+                jcr:created="{Date}2015-11-04T00:33:52.939+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-04T00:33:52.939+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/article-teaser">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        width="4"/>
+                </cq:responsive>
+            </article_teaser_2066798396>
+            <section_title_239098915
+                jcr:created="{Date}2015-11-04T00:51:38.275+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-04T00:51:50.624+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/section-title"
+                text="New arrivals"/>
+            <products_grid_1773541649
+                jcr:created="{Date}2015-11-04T00:51:55.043+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-04T00:51:55.043+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/products-grid"/>
         </par>
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
