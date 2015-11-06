@@ -1,0 +1,97 @@
+//== helper mixins
+
+.btn-extend(@color, @background-hover) {
+  &:hover, &.hover,
+  &:focus, &.focus {
+    color: @color;
+    background-color: @background-hover;
+    border-color: @background-hover;
+
+    &::after {
+      color: @color;
+      background-color: @background-hover;
+      border-color: @background-hover;
+    }
+
+    &:active, &.active {
+      background-color: @background-hover;
+      border-color: @background-hover;
+      outline-color: @brand-primary;
+
+      &::after {
+        background-color: @background-hover;
+        border-color: @background-hover;
+      }
+    }
+  }
+
+  &:active, &.active {
+    background-color: @background-hover;
+    border-color: @background-hover;
+
+    &::after {
+      background-color: @background-hover;
+      border-color: @background-hover;
+      .box-shadow(inset 0 3 px 5 px rgba(0, 0, 0, .125));
+    }
+  }
+}
+
+//== helper classes
+
+.link-underline {
+  text-transform: uppercase;
+
+  &::after {
+    transition: all @transition-bounce;
+    content: '';
+
+    display: block;
+
+    width: 0;
+
+    border-top: 2px solid #000;
+
+    margin: -5px auto 3px;
+  }
+
+  &:hover, &.hover,
+  &:focus, &.focus {
+    text-decoration: none;
+
+    &::after {
+      width: 95%;
+      width: ~'calc(100% - 4px)';
+
+      border-top-color: @gray-dark;
+    }
+  }
+
+  &.btn-primary {
+    &::after {
+      border-top-color: @brand-primary;
+    }
+  }
+
+  &.btn-inverse, [class*=inverse] & {
+    &::after {
+      border-top-color: #fff;
+    }
+  }
+}
+
+.black {
+  font-weight: 900;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.normal {
+  font-weight: 400;
+}
+
+.light {
+  font-weight: 300;
+}

@@ -1,0 +1,73 @@
+@import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
+
+.we-ArticleTeaser {
+  padding-bottom: @padding-large-vertical;
+
+  margin-bottom: (@padding-base-horizontal + @padding-large-horizontal);
+
+  background: fade(@gray-base, 5);
+
+  position: relative;
+
+  &-visual {
+    display: block;
+
+    img {
+      &:extend(.img-responsive);
+
+      width: 100%;
+    }
+  }
+
+  &-title {
+    &:extend(.h3);
+
+    padding: 0 @padding-large-horizontal;
+
+    margin: @padding-large-horizontal auto;
+
+    font-weight: 700;
+    line-height: 29px;
+  }
+
+  &-category {
+    padding: 5px @padding-small-horizontal 4px;
+
+    margin: auto @padding-large-horizontal;
+
+    background-color: fade(@gray-base, 15);
+
+    color: #fff;
+
+    text-transform: uppercase;
+  }
+
+  &-date {
+    &:extend(.text-muted);
+
+    float: right;
+
+    margin: auto @padding-large-horizontal;
+
+    font-size: 13px;
+    line-height: 26px;
+
+    text-transform: uppercase;
+  }
+
+  &-author {
+    &:extend(.text-muted);
+
+    display: block;
+
+    padding: 0 @padding-large-horizontal;
+
+    margin-bottom: 12px;
+  }
+
+  &-text {
+    padding: 0 @padding-large-horizontal;
+
+    line-height: normal;
+  }
+}
