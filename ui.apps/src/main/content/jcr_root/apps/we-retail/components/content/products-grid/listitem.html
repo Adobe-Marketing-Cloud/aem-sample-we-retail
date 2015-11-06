@@ -1,0 +1,77 @@
+<!--/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ ADOBE CONFIDENTIAL
+  ~
+  ~ Copyright 2015 Adobe Systems Incorporated
+  ~ All Rights Reserved.
+  ~
+  ~ NOTICE:  All information contained herein is, and remains
+  ~ the property of Adobe Systems Incorporated and its suppliers,
+  ~ if any.  The intellectual and technical concepts contained
+  ~ herein are proprietary to Adobe Systems Incorporated and its
+  ~ suppliers and may be covered by U.S. and Foreign Patents,
+  ~ patents in process, and are protected by trade secret or copyright law.
+  ~ Dissemination of this information or reproduction of this material
+  ~ is strictly forbidden unless prior written permission is obtained
+  ~ from Adobe Systems Incorporated.
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
+<template data-sly-template.default="${@ renderItem}">
+<p>
+    <a href="${renderItem.item.path}.html"
+        onclick="CQ_Analytics.record({event: 'listItemClicked', values: { listItemPath: '${renderItem.item.path @ context='scriptString'}' }, collect:  false, options: { obj: this }, componentPath: '${resource.resourceType @ context='scriptString'}'})">${renderItem.itemName}</a>
+</p>
+</template>
+
+<template data-sly-template.news="${@ renderItem}">
+<p>
+    <a href="${renderItem.item.path}.html"
+        onclick="CQ_Analytics.record({event: 'listNewsItemClicked', values: { listItemPath: '${renderItem.item.path @ context='scriptString'}' }, collect:  false, options: { obj: this }, componentPath: '${resource.resourceType @ context='scriptString'}'})">
+        <span data-sly-test="${renderItem.modifdate}" class="news-date">${renderItem.modifdate}:&nbsp;</span>
+        <span class="news-title">${renderItem.itemName}</span></a>
+        <sly data-sly-test="${renderItem.item.description}">
+            <br/>
+            <span class="news-description">${renderItem.item.description}</span>
+        </sly>
+</p>
+</template>
+
+<template data-sly-template.teaser="${@ renderItem}">
+<p>
+    <a href="${renderItem.item.path}.html"
+            onclick="CQ_Analytics.record({event: 'listTeaserItemClicked', values: { listItemPath: '${renderItem.item.path @ context='scriptString'}' }, collect:  false, options: { obj: this }, componentPath: '${resource.resourceType @ context='scriptString'}'})">
+        <img data-sly-test="${renderItem.hasimage}" class="teaser" src="${renderItem.item.path}/jcr:content.thumbnail.48.48.jpg" alt=""/>
+        <span class="teaser-title">${renderItem.itemName}</span>
+    </a>
+    <sly data-sly-test="${renderItem.item.description}">
+        <br/>
+        <span class="teaser-description">${renderItem.item.description}</span>
+    </sly>
+</p>
+</template>
+
+<template data-sly-template.composable="${@ renderItem, resourceType}">
+    <sly data-sly-resource="${renderItem.item.path @ resourceType = resourceType}"></sly>
+</template>
+
+<template data-sly-template.products="${@ renderItem}">
+    <div class="col-md-2">
+        <div class="we-Product">
+            <div class="we-Product-image">
+            	<img data-sly-test="${renderItem.hasimage}" src="${renderItem.item.path}/jcr:content.thumbnail.48.48.jpg" alt="${renderItem.itemName}"/>
+            	<img data-sly-test="${!renderItem.hasimage}" src="http://placehold.it/300/c0c0c1/ffffff"/>
+            </div>
+            
+            <h3 class="we-Product-title">${renderItem.itemName}</h3>
+            <span class="we-Product-subtitle">${renderItem.item.description}</span>
+            
+            <strong class="we-Product-price">
+            	<span>$399.95</span>
+            	<span class="we-Product-price-new"></span>
+            	<s class="we-Product-price-old"></s>
+           	</strong>
+           	
+           	<span class="we-Product-discount hidden"><span></span>off</span>
+           	<a href="${renderItem.item.path}.html" class="we-Product-link"></a> 
+        </div>
+        <!-- /.we-Product --> 
+    </div>
+</template>
