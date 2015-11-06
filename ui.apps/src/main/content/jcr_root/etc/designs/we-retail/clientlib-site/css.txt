@@ -1,5 +1,2 @@
-grid.less
-
-// TODO: fix LESS compilation issues and remove main.css
-//main.less
-main.css
+less/main.less
+less/grid.less

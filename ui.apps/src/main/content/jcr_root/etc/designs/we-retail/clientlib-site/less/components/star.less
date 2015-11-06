@@ -1,0 +1,22 @@
+.we-Star {
+  transition: color @transition-default;
+
+  display: inline-block;
+  font: normal normal normal @fa-font-size-base/@fa-line-height-base "we-icons"; // shortening font declaration
+  font-size: 19px; // can't have font-size inherit on line above, so need to override
+  color: fade(@gray-base, 5);
+
+  cursor: pointer;
+
+  &::after {
+    content: @we-Icon--var-star;
+  }
+
+  &:hover {
+    color: fade(@brand-primary, 20);
+  }
+
+  &.active {
+    color: @brand-primary;
+  }
+}

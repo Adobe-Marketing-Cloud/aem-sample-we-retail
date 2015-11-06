@@ -1,0 +1,65 @@
+@import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
+
+.we-HeroImage {
+  &:extend(.jumbotron);
+
+  height: 100vh;
+
+  padding: @jumbotron-padding 0;
+
+  background: 50% no-repeat;
+  background-size: cover;
+
+  position: relative;
+
+  &.ratio-16by9 {
+    height: auto;
+
+    padding: 0 @jumbotron-padding percentage(9/16);
+  }
+
+  .navbar {
+    margin-top: @jumbotron-padding;
+  }
+
+  .container {
+    transform: translateX(-50%);
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+  }
+
+  &-wrapper {
+    transform: translateY(-50%);
+
+    .make-md-column-offset(2);
+
+    position: absolute;
+    top: 50%;
+  }
+
+  &-title {
+    &:extend(.h1);
+    &:extend(.text-uppercase);
+
+    display: block;
+
+    margin: 0 auto 20px;
+  }
+
+  p {
+    &:extend(.h3);
+
+    margin: 0 auto;
+  }
+
+  .navbar-fixed-top + & {
+    margin-top: 40px;
+
+    &:not(.ratio-16by9) {
+      height: ~'calc(100vh - 40px)';
+    }
+  }
+}

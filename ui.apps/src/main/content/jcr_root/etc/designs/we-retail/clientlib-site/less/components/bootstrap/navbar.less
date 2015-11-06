@@ -1,0 +1,168 @@
+.navbar {
+  margin-right: @navbar-height + 2;
+
+  border-width: 0 0 1px;
+
+  font-weight: 700;
+  font-size: @font-size-small;
+
+  text-transform: uppercase;
+
+  .navbar-center {
+    float: none;
+
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.navbar-default {
+}
+
+.navbar-inverse {
+  border-bottom: none;
+}
+
+.navbar-collapse {
+  text-align: center;
+
+  @media (max-width: @grid-float-breakpoint-max) {
+    text-align: left;
+  }
+}
+
+.navbar-nav {
+  & > li {
+    & > a {
+      padding-right: @padding-base-horizontal;
+      padding-left: @padding-base-horizontal;
+    }
+
+    &.active > a {
+      .navbar-default & {
+        &:hover::after {
+          border-top-color: @navbar-default-link-active-color;
+        }
+      }
+
+      .navbar-inverse & {
+        &:hover::after {
+          border-top-color: @navbar-inverse-link-active-color;
+        }
+      }
+    }
+
+    @media (max-width: @grid-float-breakpoint-max) {
+      & > a {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.navbar-header {
+  @media (max-width: @grid-float-breakpoint-max) {
+    text-align: center;
+  }
+}
+
+.navbar-brand {
+  font-size: inherit;
+
+  letter-spacing: 2px;
+
+  strong {
+    color: @brand-primary;
+  }
+
+  @media (max-width: @grid-float-breakpoint-max) {
+    float: none;
+
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.navbar-toggle {
+  float: left;
+
+  .navbar-vertical-align(30.5px);
+  margin-right: auto;
+  margin-left: @padding-small-horizontal;
+
+  .icon-bar {
+    border-radius: 2px;
+  }
+
+  .icon-bar + .icon-bar {
+    margin-top: (13px/2);
+  }
+}
+
+.navbar-right-outside {
+  transform: translateX(100%);
+
+  position: absolute;
+  top: 0;
+  right: -2px;
+
+  .btn {
+    min-width: @navbar-height;
+
+    padding-top: ((@navbar-height - (@font-size-base * @line-height-base)) / 2 - 1);
+    padding-bottom: ((@navbar-height - (@font-size-base * @line-height-base)) / 2 - 1);
+
+    .navbar-default & {
+      padding-bottom: ((@navbar-height - (@font-size-base * @line-height-base)) / 2);
+
+      border-bottom: 1px solid @navbar-default-border;
+
+      &:hover, &.hover,
+      &:focus, &.focus {
+        color: @brand-primary-hover;
+      }
+
+      &:active, &.active {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.navbar-fixed-top {
+  min-height: 40px;
+
+  margin: 0;
+
+  background-color: @gray-base;
+
+  .navbar-nav {
+    margin: auto;
+
+    &> li {
+      &> a {
+        padding: 8px @padding-small-horizontal;
+
+        &::after {
+          display: none;
+        }
+
+        .fa {
+          opacity: .2;
+
+          vertical-align: text-bottom;
+
+          margin-right: 10px;
+
+          font-size: 16px;
+        }
+
+        .badge {
+          vertical-align: baseline;
+
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
