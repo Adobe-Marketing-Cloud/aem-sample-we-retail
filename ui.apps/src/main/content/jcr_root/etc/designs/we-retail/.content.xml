@@ -9,11 +9,7 @@
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/parsys"
-                components="[group:We.Retail]">
-                <colctrl
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/colctrl"
-                    layouts="2;cq-colctrl-lt0&#x9;2 Columns (50%, 50%)"/>
+                components="[group:we.RETAIL]">
                 <cq:authoring jcr:primaryType="nt:unstructured">
                     <assetToComponentMapping jcr:primaryType="nt:unstructured">
                         <image
