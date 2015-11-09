@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:importCount="{Long}6"
+    jcr:primaryType="sling:Folder">
+    <jcr:content jcr:primaryType="nt:unstructured">
+        <folderThumbnail/>
+    </jcr:content>
+    <eqbisublp
+        cq:commerceType="product"
+        cq:tags="[we-retail:season/summer,we-retail:activity/biking,we-retail:equipment]"
+        jcr:description="equipment"
+        jcr:lastModified="{Date}2015-09-08T17:10:12.283-07:00"
+        jcr:mixinTypes="[cq:Taggable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Blast Mini Pump"
+        sling:resourceType="commerce/components/product"
+        features="T-handle provides solid grip and comfort while pumping&#xa;Works with both Presta and Schrader valves&#xa;Dust cap keeps internal pump head free from debris"
+        identifier="eqbisublp"
+        inventory="71"
+        margin="0.52"
+        price="{Decimal}15"
+        rating="5"
+        reviews="This item is not yet reviewed. Be the first to write a review."
+        summary="The Blast mini pump features an efficient single-stroke pumping action that inflates tires up to 90 psi.">
+        <image
+            jcr:lastModified="{Date}2015-09-08T17:10:12.283-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/we-retail/products/equipment/Blast.jpg"/>
+    </eqbisublp>
+    <eqbisucol
+        cq:commerceType="product"
+        cq:tags="[we-retail:season/summer,we-retail:activity/biking,we-retail:equipment]"
+        jcr:description="equipment"
+        jcr:lastModified="{Date}2015-09-08T17:10:12.284-07:00"
+        jcr:mixinTypes="[cq:Taggable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Compact Chain Tool"
+        sling:resourceType="commerce/components/product"
+        features="Works on any chain, including Hyperglide&#xa;Has a built-in shelf for loosening tight links"
+        identifier="eqbisucol"
+        inventory="301"
+        margin="0.61"
+        price="{Decimal}15"
+        rating="1"
+        reviews="By gcsailing&#xa;from Biloxi, MS&#xa;I broke my bike chain not far from my house and decided to use this tool to put on a spare chain I had. After two hours of trying to line the pin up I still could not get it to go into the chain link. I don't know if I was just doing something wrong but even after reading the directions supplied with the tool I could not fix the chain. I ended up taking it to a bike shop and getting it fixed for less than the cost of the tool."
+        summary="This lightweight, compact chain tool is built to travel! Fits into any pocket or bike bag, yet performs like a shop-quality instrument.">
+        <image
+            jcr:lastModified="{Date}2015-09-08T17:10:12.284-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/we-retail/products/equipment/Chain Tool.jpg"/>
+        <assets jcr:primaryType="nt:unstructured">
+            <asset
+                jcr:lastModified="{Date}2015-09-08T17:10:12.284-07:00"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="commerce/components/product/image"
+                fileReference="/content/dam/we-retail/products/equipment/Chain Tool In Action 1.jpg"/>
+            <asset0
+                jcr:lastModified="{Date}2015-09-08T17:10:12.284-07:00"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="commerce/components/product/image"
+                fileReference="/content/dam/we-retail/products/equipment/Chain Tool In Action 2.jpg"/>
+        </assets>
+    </eqbisucol>
+    <eqbisucos
+        cq:commerceType="product"
+        cq:productVariantAxes="[size]"
+        cq:tags="[we-retail:season/summer,we-retail:activity/biking,we-retail:apparel/gloves]"
+        jcr:description="gloves"
+        jcr:lastModified="{Date}2015-09-08T17:10:12.285-07:00"
+        jcr:mixinTypes="[cq:Taggable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Comfort Gel Gloves"
+        sling:resourceType="commerce/components/product"
+        features="Anatomically positioned gel pads on palms absorb shock, protecting nerves in wrists&#xa;Mesh palms help reduce overheating and perspiraton&#xa;Polyester stretch fabric on back of hands wicks moisture and enhances ventilation"
+        identifier="eqbisucos"
+        inventory="610"
+        margin="0.43"
+        price="{Decimal}30"
+        rating="4"
+        reviews="&#xa;By ExplodingZero&#xa;from Cincinnati, OH&#xa;Great design and fit. Breathable material on the top feels great and lets your skin breathe pretty well. My bike lacks shocks and after riding my hands and sometimes shoulders would be pretty sore. These have padding in all the right spots without feeling heavy. The packaging listed a few pressure points and nerve endings that it protects and I'd have to say it does just that. There's also a small loop on the ring finger of each glove that gives you a good pull point to get them off without having to work too hard. It's a nice feature and it's almost invisible. The fastner uses a loop and hook that isn't scratchy at all. The styling looks great to top it all off. I just got them recently, so I can't comment on durability."
+        summary="Comfort Gel bike gloves offer cooling comfort, UV protection and bump-damping support. Just what you need for a long day on the road.">
+        <image
+            jcr:lastModified="{Date}2015-09-08T17:10:12.285-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/we-retail/products/gloves/Comfort Gel.jpg"/>
+        <size-s
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.286-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="S"/>
+        <size-m
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.286-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="M"/>
+        <size-l
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.286-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="L"/>
+    </eqbisucos>
+    <eqbisumas
+        cq:commerceType="product"
+        cq:productVariantAxes="[size]"
+        cq:tags="[we-retail:season/summer,we-retail:activity/biking,we-retail:apparel/footwear]"
+        jcr:description="footwear"
+        jcr:lastModified="{Date}2015-09-08T17:10:12.287-07:00"
+        jcr:mixinTypes="[cq:Taggable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Marin Mountain Bike Shoes"
+        sling:resourceType="commerce/components/product"
+        features="Microfiber synthetic leather and nylon mesh uppers give a glovelike fit with excellent breathability&#xa;Carbon composite road soles offer more rigidity than a nylon sole, providing a direct connection with the pedal, solid power transfer and excellent aerodynamics&#xa;High traction lugs on outsoles enhance grip and durability in muddy conditions"
+        identifier="eqbisumas"
+        inventory="509"
+        margin="0.62"
+        price="{Decimal}110"
+        rating="4"
+        reviews="By Boise mtn biker&#xa;&#xa;from Boise, ID Great shoe. Been riding a long time and tried many shoes, this one is well built, fits me as well as any mtn bike shoe I've had, and seems like it will last.  If  you don't want to spend $$$ on carbon soled shoes, these shoes might do you well."
+        summary="Marin mountain bike shoes offer a supportive fit with a supple upper and a stiff, lugged sole to enhance pedal efficiency when grinding uphill and through the dirt.">
+        <image
+            jcr:lastModified="{Date}2015-09-08T17:10:12.287-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/we-retail/products/footwear/Marin.jpg"/>
+        <size-7
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.287-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="7"/>
+        <size-8
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.288-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="8"/>
+        <size-9
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.288-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="9"/>
+        <size-10
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.288-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="10"/>
+        <size-11
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.288-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="11"/>
+        <size-12
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.288-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="12"/>
+    </eqbisumas>
+    <eqbisumxs
+        cq:commerceType="product"
+        cq:productVariantAxes="[size]"
+        cq:tags="[we-retail:season/summer,we-retail:activity/biking,we-retail:equipment]"
+        jcr:description="equipment"
+        jcr:lastModified="{Date}2015-09-08T17:10:12.289-07:00"
+        jcr:mixinTypes="[cq:Taggable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="MX121 Sport Pedals"
+        sling:resourceType="commerce/components/product"
+        features="Ideal for recumbents, commuters and recreational cyclists. the SPD compatible step-in system flips over to a concave, stable pedaling platform&#xa;Pedals feature durable chromoly spindles with 8mm Allen wrench mounts and low-maintenance sealed-bearing-cartridge axles"
+        identifier="eqbisumxs"
+        inventory="231"
+        margin="0.35"
+        price="{Decimal}65"
+        rating="4"
+        reviews="&#xa;By GTI_Driver&#xa;from Switzerland&#xa;I have a hybrid bike. These pedals suit perfectly my needs. Daily comute to work with a solid base, intuitive to position your foot without looking too much. When going to the hills using the cleats they are also reliable and shape helps to quickly find the correct side! Cleats don't come off even on a quite-loose set up.&#xa;&#xa;Also like the design &amp; weight.&#xa;For a hybrid these are ok. Don't think them for a mountain bike or a full road one."
+        summary="MX121 Sport Pedals work with cleats and without you decide whether to clip in or to flip pedals and crank on the wide platform.">
+        <image
+            jcr:lastModified="{Date}2015-09-08T17:10:12.289-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/we-retail/products/equipment/MX121.jpg"/>
+        <assets jcr:primaryType="nt:unstructured">
+            <asset
+                jcr:lastModified="{Date}2015-09-08T17:10:12.289-07:00"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="commerce/components/product/image"
+                fileReference="/content/dam/we-retail/products/equipment/MX121 Detail.jpg"/>
+        </assets>
+        <size-one-size
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.290-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="One size"/>
+    </eqbisumxs>
+    <eqbisuset
+        cq:commerceType="product"
+        cq:productVariantAxes="[size]"
+        cq:tags="[we-retail:season/summer,we-retail:activity/biking,we-retail:apparel/helmet]"
+        jcr:description="helmet"
+        jcr:lastModified="{Date}2015-09-08T17:10:12.290-07:00"
+        jcr:mixinTypes="[cq:Taggable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Sequoia Bike Helmet"
+        sling:resourceType="commerce/components/product"
+        features="A massive 18 vents channel cooling airflow across your cranium&#xa;Removable visor blocks sun and other elements, or can be removed for a streamlined look&#xa;Meets or exceeds U.S. CPSC standards for bicycle helmets"
+        identifier="eqbisuset"
+        inventory="561"
+        margin="0.55"
+        price="{Decimal}75"
+        rating="5"
+        reviews="By MTBxplorer&#xa;from Orange County, California&#xa;I dislike wearing any thing on my head (hat, helmet, etc.) However, I enjoy the comfort of this helmet. Excellent choice for anyone who don't like to wear helmet, but feels it is necessary.&#xa;&#xa;By HaGau&#xa;from Seattle, WA&#xa;This is a great helmet. I liked it so much that I bought it again after my first one cracked. The helmet has lots of ventilation holes which make it easy to mount lights to both the front and back of it. It also has a nice fitting/padding system which allows it to fit nicely to your head."
+        summary="As close as you can get to air-conditioned head protection on the single track--and top-of-the-line performance features too!">
+        <image
+            jcr:lastModified="{Date}2015-09-08T17:10:12.290-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product/image"
+            fileReference="/content/dam/we-retail/products/equipment/Sequoia.jpg"/>
+        <assets jcr:primaryType="nt:unstructured">
+            <asset
+                jcr:lastModified="{Date}2015-09-08T17:10:12.290-07:00"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="commerce/components/product/image"
+                fileReference="/content/dam/we-retail/products/equipment/Sequoia Back.jpg"/>
+            <asset0
+                jcr:lastModified="{Date}2015-09-08T17:10:12.291-07:00"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="commerce/components/product/image"
+                fileReference="/content/dam/we-retail/products/equipment/Sequoia Side.jpg"/>
+        </assets>
+        <size-s
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.291-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="S"/>
+        <size-m
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.292-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="M"/>
+        <size-l
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.292-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="L"/>
+        <size-xl
+            cq:commerceType="variant"
+            jcr:lastModified="{Date}2015-09-08T17:10:12.292-07:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/product"
+            size="XL"/>
+    </eqbisuset>
+</jcr:root>
