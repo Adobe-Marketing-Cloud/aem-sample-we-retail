@@ -14,37 +14,13 @@
     limitations under the License.
 */-->
 
-<!--/* TODO: Remove all inline styling  */-->
-<div class="we-CommunitySection we-Section" style="background-image: url('/content/dam/we-retail/images/bg-community-section.jpg'); margin: 20px -10%;">
-    <div class="container">
-        <div class="row">
-            <h2 class="we-Header">Discover our community</h2>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="we-CommunityTeaser">
-                    <a href="#" class="we-CommunityTeaser-link" style="background-image:url('/content/dam/we-retail/images/bg-community-1.jpg')"> <span>Andreas Fransson on the Mont Blanc</span> </a> 
-                    <div class="we-CommunityTeaser-author"> <img src="/content/dam/we-retail/images/author-1.jpg" alt="Daniel R."> Daniel R. <time>2 days ago</time> </div>
-                </div>
-                <!-- /.we-CommunityTeaser --> 
-            </div>
-            <div class="col-md-4">
-                <div class="we-CommunityTeaser">
-                    <a href="#" class="we-CommunityTeaser-link" style="background-image:url('/content/dam/we-retail/images/bg-community-2.jpg')"> <span>Andreas Fransson on the Mont Blanc</span> </a> 
-                    <div class="we-CommunityTeaser-author"> <img src="/content/dam/we-retail/images/author-1.jpg" alt="Daniel R."> Daniel R. <time>2 days ago</time> </div>
-                </div>
-                <!-- /.we-CommunityTeaser --> 
-            </div>
-            <div class="col-md-4">
-                <div class="we-CommunityTeaser">
-                    <a href="#" class="we-CommunityTeaser-link" style="background-image:url('/content/dam/we-retail/images/bg-community-3.jpg')"> <span>Andreas Fransson on the Mont Blanc</span> </a> 
-                    <div class="we-CommunityTeaser-author"> <img src="/content/dam/we-retail/images/author-1.jpg" alt="Daniel R."> Daniel R. <time>2 days ago</time> </div>
-                </div>
-                <!-- /.we-CommunityTeaser --> 
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4 text-center"> <a href="" class="btn btn-action btn-primary">More stories</a> </div>
-        </div>
-    </div>
+<div class="we-CommunityTeaser">
+	<a href="#" class="we-CommunityTeaser-link" style="background-image: url('${properties.fileReference @ context='attribute'}')">
+		<span>${properties.title}</span>
+	</a> 
+	
+	<div class="we-CommunityTeaser-author">
+		<img src="/content/dam/we-retail/images/author-1.jpg" alt="Daniel R."> Daniel R. <time>2 days ago</time>
+	</div>
 </div>
+<!-- /.we-CommunityTeaser --> 
