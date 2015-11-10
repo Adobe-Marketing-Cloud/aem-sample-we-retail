@@ -53,7 +53,7 @@
 </template>
 
 <template data-sly-template.products="${@ renderItem}">
-    <div class="col-md-2">
+    <div class="col-md-2" data-sly-use>
         <div class="we-Product">
             <div class="we-Product-image">
             	<img data-sly-test="${renderItem.hasimage}" src="${renderItem.item.path}/jcr:content.thumbnail.319.319.jpg" alt="${renderItem.itemName}"/> 
@@ -64,7 +64,7 @@
             <span class="we-Product-subtitle">${renderItem.item.description}</span>
             
             <strong class="we-Product-price">
-            	<span>$399.95</span>
+                <span>${renderItem.itemPrice}</span>
             	<span class="we-Product-price-new"></span>
             	<s class="we-Product-price-old"></s>
            	</strong>
