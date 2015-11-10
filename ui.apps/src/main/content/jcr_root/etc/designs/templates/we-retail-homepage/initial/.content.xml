@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:template="/etc/designs/templates/we-retail-homepage"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="we-retail/components/structure/page"/>
+        sling:resourceType="we-retail/components/structure/templated-page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <image_i
+                jcr:created="2015-11-10T22:10:15.106+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="2015-11-10T22:10:15.106+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/image"
+                file_x005f_x0040_Delete="true"
+                fileName=""
+                fileReference="/content/dam/we-retail/images/bg-jumbotron-1.jpg"
+                imageCrop=""
+                imageCrop_x005f_x0040_Delete=""
+                imageMap=""
+                imageMap_x005f_x0040_Delete=""
+                imageRotate=""
+                imageRotate_x005f_x0040_Delete=""/>
+        </root>
+    </jcr:content>
 </jcr:root>

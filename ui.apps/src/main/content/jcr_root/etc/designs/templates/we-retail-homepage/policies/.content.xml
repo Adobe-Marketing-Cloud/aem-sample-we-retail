@@ -5,7 +5,7 @@
         jcr:primaryType="nt:unstructured"
         sling:resourceType="wcm/core/components/policies/mappings">
         <root
-            cq:policy="/etc/designs/policies/default/we-retail/components/structure/page"
+            cq:policy="/etc/designs/policies/default/we-retail/components/structure/templated-page"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/core/components/policies/mapping"/>
     </jcr:content>

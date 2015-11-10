@@ -13,17 +13,8 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<!doctype html>
-<html lang="en">
-    <head>
-        <sly data-sly-include="partials/head.html" data-sly-unwrap/>
-        <sly data-sly-include="partials/headlibs.html" data-sly-unwrap/>
-    </head>
-    <body class="page ${currentPage.template.name}">
-        <sly data-sly-include="partials/header.html" data-sly-unwrap/>
-        <sly data-sly-include="partials/main.html" data-sly-unwrap/>
-        <sly data-sly-include="partials/footer.html" data-sly-unwrap/>
+<!--/* Include the site client libraries (loading only the JS in the footer, CSS was loaded in the header) */-->
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientlib.js @ categories='we-retail.demo'}"/>
 
-        <sly data-sly-include="partials/footlibs.html" data-sly-unwrap/>
-    </body>
-</html>
+<!--/* Include Adobe Dynamic Tag Management libraries for the footer */-->
+<sly data-sly-resource="${@ resourceType='cq/cloudserviceconfigs/components/servicecomponents'}"/>

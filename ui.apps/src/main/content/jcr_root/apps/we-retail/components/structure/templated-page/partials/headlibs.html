@@ -14,17 +14,17 @@
     limitations under the License.
 */-->
 <!--/* Include the site client libraries (loading only the CSS in the header, JS will be loaded in the footer) */-->
-<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.css @ categories='we-retail.all'}" data-sly-unwrap/>
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.css @ categories='we-retail.demo'}"/>
 
 <!--/* Include Adobe Dynamic Tag Management libraries for the header */-->
-<sly data-sly-include="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp" data-sly-unwrap/>
+<sly data-sly-include="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp"/>
 
 <!--/* Initializes the Experience Manager authoring UI */-->
-<sly data-sly-include="/libs/wcm/core/components/init/init.jsp" data-sly-unwrap/>
+<sly data-sly-include="/libs/wcm/core/components/init/init.jsp"/>
 
 <!--/* Initializes the mobile simulator UI */-->
-<sly data-sly-include="/libs/wcm/core/browsermap/browsermap.jsp" data-sly-unwrap/>
-<sly data-sly-include="/libs/wcm/mobile/components/simulator/simulator.jsp" data-sly-unwrap/>
+<sly data-sly-include="/libs/wcm/core/browsermap/browsermap.jsp"/>
+<sly data-sly-include="/libs/wcm/mobile/components/simulator/simulator.jsp"/>
 
 <!--/* Initialize Context Hub  */-->
 <sly data-sly-resource="${@ path='contexthub', resourceType='granite/contexthub/components/contexthub'}"/>
