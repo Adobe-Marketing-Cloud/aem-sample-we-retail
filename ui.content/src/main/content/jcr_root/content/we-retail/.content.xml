@@ -5,7 +5,7 @@
         cq:designPath="/etc/designs/we-retail"
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
         jcr:primaryType="nt:unstructured"
-        jcr:title="we.RETAIL"
+        jcr:title="We.Retail"
         sling:redirect="{Boolean}true"
         sling:redirectStatus="{Long}302"
         sling:resourceType="foundation/components/redirect"

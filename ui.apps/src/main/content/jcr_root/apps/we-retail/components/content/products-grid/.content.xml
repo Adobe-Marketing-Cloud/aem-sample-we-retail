@@ -3,4 +3,4 @@
     jcr:primaryType="cq:Component"
     jcr:title="Products Grid"
     sling:resourceSuperType="wcm/foundation/components/list/v2/list"
-    componentGroup="we.RETAIL"/>
+    componentGroup="We.Retail"/>

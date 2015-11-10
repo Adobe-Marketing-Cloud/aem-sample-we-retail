@@ -3,4 +3,4 @@
     jcr:primaryType="cq:Component"
     jcr:title="Section Title"
     sling:resourceSuperType="wcm/foundation/components/parbase"
-    componentGroup="we.RETAIL"/>
+    componentGroup="We.Retail"/>
