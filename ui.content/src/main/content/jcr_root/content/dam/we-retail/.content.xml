@@ -5,7 +5,7 @@
     jcr:primaryType="sling:OrderedFolder">
     <jcr:content
         jcr:primaryType="nt:unstructured"
-        jcr:title="we.RETAIL">
+        jcr:title="We.Retail">
         <folderThumbnail/>
     </jcr:content>
     <images/>

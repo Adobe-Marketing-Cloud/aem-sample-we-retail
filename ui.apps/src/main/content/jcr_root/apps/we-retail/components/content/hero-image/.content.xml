@@ -3,4 +3,4 @@
     jcr:primaryType="cq:Component"
     jcr:title="Hero Image"
     sling:resourceSuperType="wcm/foundation/components/parbase"
-    componentGroup="we.RETAIL"/>
+    componentGroup="We.Retail"/>

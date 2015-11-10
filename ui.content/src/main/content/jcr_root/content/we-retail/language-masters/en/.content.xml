@@ -128,7 +128,7 @@
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/section-title"
-                text="The latest on we.RETAIL"/>
+                text="The latest on We.Retail"/>
             <article_teaser
                 jcr:created="{Date}2015-11-04T00:31:31.216+01:00"
                 jcr:createdBy="admin"
