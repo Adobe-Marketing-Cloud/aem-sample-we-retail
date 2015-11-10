@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Policy of the default root parsys"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Html5page Root Parsys Policy"
+    sling:resourceType="wcm/core/components/policy/policy"
+    components="[group:General,group:We.Retail]">
+    <cq:authoring jcr:primaryType="nt:unstructured">
+        <assetToComponentMapping jcr:primaryType="nt:unstructured">
+            <image
+                jcr:primaryType="nt:unstructured"
+                assetGroup="media"
+                assetMimetype="image/*"
+                droptarget="image"
+                resourceType="foundation/components/image"
+                type="Images"/>
+            <product
+                jcr:primaryType="nt:unstructured"
+                assetGroup="product"
+                droptarget="product-data-reference"
+                resourceType="commerce/components/product"
+                type="Products"/>
+            <flash
+                jcr:primaryType="nt:unstructured"
+                assetGroup="media"
+                assetMimetype="application/x-shockwave-flash"
+                droptarget="flash"
+                resourceType="foundation/components/flash"
+                type="Images"/>
+            <document
+                jcr:primaryType="nt:unstructured"
+                assetGroup="media"
+                assetMimetype="[application/vnd.openxmlformats,application/msword,application/vnd.ms-powerpoint,application/mspowerpoint,application/powerpoint,application/x-mspowerpoint,application/x-msexcel,application/x-excel,application/excel,application/vnd.ms-excel,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document]"
+                droptarget="file"
+                resourceType="foundation/components/download"
+                type="Images"/>
+            <video
+                jcr:primaryType="nt:unstructured"
+                assetGroup="media"
+                assetMimetype="video/*"
+                droptarget="video"
+                resourceType="foundation/components/video"
+                type="Images"/>
+        </assetToComponentMapping>
+    </cq:authoring>
+</jcr:root>
