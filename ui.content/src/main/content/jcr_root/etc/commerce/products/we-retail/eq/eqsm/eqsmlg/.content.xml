@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     cq:commerceType="product"
     cq:productVariantAxes="[size]"
-    cq:tags="[we-retail:season/summer\,we-retail:activity/surfing]"
+    cq:tags="[we-retail:season/summer,we-retail:activity/surfing]"
     jcr:description="Fiberglass Surfboard"
     jcr:lastModified="{Date}2015-09-23T22:39:02.680+02:00"
     jcr:mixinTypes="[cq:Taggable]"

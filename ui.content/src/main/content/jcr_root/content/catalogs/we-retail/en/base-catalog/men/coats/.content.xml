@@ -2,10 +2,12 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2012-01-23T11:05:28.592+01:00"
+        cq:lastModified="{Date}2015-11-10T14:21:29.313+01:00"
         cq:lastModifiedBy="admin"
         cq:template="/libs/commerce/templates/section"
         jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2015-11-10T14:21:29.311+01:00"
+        jcr:lastModifiedBy="admin"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Coats"
@@ -17,5 +19,6 @@
         <filter
             jcr:primaryType="nt:unstructured"
             matchTags="[we-retail:gender/men,we-retail:apparel/coat]"/>
+        <templates jcr:primaryType="nt:unstructured"/>
     </jcr:content>
 </jcr:root>

@@ -1,97 +1,12 @@
 @import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
 
-.we-Product {
-  padding: @padding-base-horizontal @padding-small-horizontal;
-
-  //margin: 0 -(@grid-gutter-width/2);
-  //margin-bottom: 25px;
-
-  text-align: center;
-
-  position: relative;
-
-  &:hover {
-    .we-Product-link {
-      border-color: fade(@gray-base, 5);
-    }
-  }
-
-  &-link {
-    transition: border-color @transition-default;
-
-    border: 5px solid transparent;
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    z-index: 10;
-  }
-
-  &-image {
-    img {
-      &:extend(.img-responsive);
-
-      margin: 0 auto;
-    }
-  }
-
-  &-title {
-    &:extend(.h4);
-
-    margin: 20px auto 5px;
-  }
-
-  &-subtitle {
-    &:extend(.small.text-muted);
-
-    display: block;
-
-    margin: 0 auto 10px;
-
-    line-height: 1;
-  }
-
-  &-price {
-    font-weight: 400;
-    font-size: 18px;
-
-    white-space: nowrap;
-
-    span {
-      display: inline-block;
-    }
-  }
-
-  &-price-new {
-    color: @brand-primary;
-  }
-
-  &-price-old {
-    text-decoration: line-through;
-    text-decoration-color: @gray-lighter;
-  }
-
-  &-discount {
-    display: block;
-
-    padding: 0 5px;
-
-    background-color: @brand-primary;
-
-    font-size: @font-size-small;
-    color: #fff;
-
-    position: absolute;
-    top: 25px;
-    right: 0;
-
-    z-index: 11;
-
-    span {
-      font-weight: 700;
-    }
-  }
+div.product div {
+    margin-top: 120px;
+    float:left;
+    width: 60%
+}
+div.product img {
+    margin-top:120px;
+    width: 40%;
+    float: right;
 }
