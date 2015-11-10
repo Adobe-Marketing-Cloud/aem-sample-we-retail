@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:lastModified="{Date}2012-11-08T00:03:42.669Z"
@@ -16,7 +16,7 @@
             jcr_title="Equipment"/>
         <filter
             jcr:primaryType="nt:unstructured"
-            matchTags="[]"
+            matchTags="[\0]"
             search="/jcr:root/etc/commerce/products/we-retail//element(*, cq:Taggable)[@cq:tags = 'we-retail:season/summer' and jcr:like(@cq:tags, 'we-retail:activity/%') and not(@cq:tags = 'we-retail:apparel/hat')]"
             searchType="xpath"/>
         <templates jcr:primaryType="nt:unstructured"/>
