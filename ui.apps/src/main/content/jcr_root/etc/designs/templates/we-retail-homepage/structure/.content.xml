@@ -5,10 +5,16 @@
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
         cq:template="/etc/designs/templates/we-retail-homepage"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="we-retail/components/structure/page">
+        sling:resourceType="we-retail/components/structure/templated-page">
+        <header
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="we-retail/components/structure/header"/>
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid"/>
+        <footer
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="we-retail/components/structure/footer"/>
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
                 <phone

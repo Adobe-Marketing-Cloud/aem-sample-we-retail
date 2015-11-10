@@ -16,14 +16,11 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <sly data-sly-include="partials/head.html" data-sly-unwrap/>
-        <sly data-sly-include="partials/headlibs.html" data-sly-unwrap/>
+        <sly data-sly-include="partials/head.html"/>
+        <sly data-sly-include="partials/headlibs.html"/>
     </head>
-    <body class="page ${currentPage.template.name}">
-        <sly data-sly-include="partials/header.html" data-sly-unwrap/>
-        <sly data-sly-include="partials/main.html" data-sly-unwrap/>
-        <sly data-sly-include="partials/footer.html" data-sly-unwrap/>
-
+    <body class="page container ${currentPage.template.name}">
+        <sly data-sly-resource="${page.resourcePath @ resourceType='wcm/foundation/components/templatedcontainer'}"/>
         <sly data-sly-include="partials/footlibs.html" data-sly-unwrap/>
     </body>
 </html>

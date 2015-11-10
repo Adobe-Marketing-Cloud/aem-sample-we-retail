@@ -13,17 +13,16 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<!doctype html>
-<html lang="en">
-    <head>
-        <sly data-sly-include="partials/head.html" data-sly-unwrap/>
-        <sly data-sly-include="partials/headlibs.html" data-sly-unwrap/>
-    </head>
-    <body class="page ${currentPage.template.name}">
-        <sly data-sly-include="partials/header.html" data-sly-unwrap/>
-        <sly data-sly-include="partials/main.html" data-sly-unwrap/>
-        <sly data-sly-include="partials/footer.html" data-sly-unwrap/>
+<meta charset="utf-8" data-sly-use.head="head.js">
 
-        <sly data-sly-include="partials/footlibs.html" data-sly-unwrap/>
-    </body>
-</html>
+<title>${currentPage.title || currentPage.name}</title>
+
+<meta name="keywords" content="${head.keywords}"/>
+<meta name="description" content="${properties.jcr:description}"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link data-sly-test="${head.favIcon}" rel="icon" href="${head.favIcon}"/>
+
+<script src="https://use.typekit.net/pqg4scy.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
