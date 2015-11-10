@@ -9,10 +9,8 @@
         cq:lastReplicationAction="Activate"
         cq:template="/apps/we-retail/templates/page-content"
         jcr:isCheckedOut="{Boolean}true"
-        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="English"
-        jcr:uuid="2b148edb-fe55-47c9-8d8c-0a8356ca147f"
         sling:resourceType="we-retail/components/structure/page">
         <logo
             jcr:primaryType="nt:unstructured"

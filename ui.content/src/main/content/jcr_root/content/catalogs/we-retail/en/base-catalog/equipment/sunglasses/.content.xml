@@ -6,10 +6,8 @@
         cq:lastModifiedBy="admin"
         cq:template="/libs/commerce/templates/section"
         jcr:isCheckedOut="{Boolean}true"
-        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Sunglasses"
-        jcr:uuid="6b2730c1-9f58-478b-b6cc-016d1003f771"
         sling:resourceType="commerce/components/section">
         <target
             jcr:primaryType="nt:unstructured"

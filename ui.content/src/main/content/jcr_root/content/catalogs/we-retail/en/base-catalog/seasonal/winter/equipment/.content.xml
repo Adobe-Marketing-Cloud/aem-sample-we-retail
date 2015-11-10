@@ -8,10 +8,8 @@
         jcr:isCheckedOut="{Boolean}true"
         jcr:lastModified="{Date}2012-11-08T00:02:59.218Z"
         jcr:lastModifiedBy="admin"
-        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Winter Equipment"
-        jcr:uuid="bbb46bf5-43d3-4fc2-b78f-77665941f07c"
         sling:resourceType="commerce/components/section">
         <target
             jcr:primaryType="nt:unstructured"

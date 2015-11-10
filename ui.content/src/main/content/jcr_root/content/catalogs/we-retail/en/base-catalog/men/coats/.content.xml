@@ -8,10 +8,8 @@
         jcr:isCheckedOut="{Boolean}true"
         jcr:lastModified="{Date}2015-11-10T14:21:29.311+01:00"
         jcr:lastModifiedBy="admin"
-        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Coats"
-        jcr:uuid="e863b296-b239-4cd5-8ec2-96fd847bea29"
         sling:resourceType="commerce/components/section">
         <target
             jcr:primaryType="nt:unstructured"

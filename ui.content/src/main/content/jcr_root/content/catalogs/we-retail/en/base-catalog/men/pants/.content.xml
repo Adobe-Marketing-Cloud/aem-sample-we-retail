@@ -6,10 +6,8 @@
         cq:lastModifiedBy="admin"
         cq:template="/libs/commerce/templates/section"
         jcr:isCheckedOut="{Boolean}true"
-        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Pants"
-        jcr:uuid="bd11b80d-cb91-4d39-8f77-ecb89612e5a9"
         sling:resourceType="commerce/components/section">
         <target
             jcr:primaryType="nt:unstructured"

@@ -6,10 +6,8 @@
         cq:lastModifiedBy="admin"
         cq:template="/libs/commerce/templates/section"
         jcr:isCheckedOut="{Boolean}true"
-        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Coats"
-        jcr:uuid="09c7f8c1-3062-43d5-9403-5bb1609ddb26"
         sling:resourceType="commerce/components/section">
         <target
             jcr:primaryType="nt:unstructured"

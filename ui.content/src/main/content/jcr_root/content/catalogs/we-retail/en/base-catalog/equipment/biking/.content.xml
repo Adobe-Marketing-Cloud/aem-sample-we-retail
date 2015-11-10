@@ -6,10 +6,8 @@
         cq:lastModifiedBy="admin"
         cq:template="/libs/commerce/templates/section"
         jcr:isCheckedOut="{Boolean}true"
-        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Biking"
-        jcr:uuid="2263e1fb-0604-4cb5-8850-0d6783f4ccba"
         sling:resourceType="commerce/components/section">
         <target
             jcr:primaryType="nt:unstructured"

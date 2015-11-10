@@ -6,10 +6,8 @@
         cq:lastModifiedBy="admin"
         cq:template="/libs/commerce/templates/section"
         jcr:isCheckedOut="{Boolean}true"
-        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Swimming"
-        jcr:uuid="1cae7733-09bb-41c4-996c-96e15c40fba4"
         sling:resourceType="commerce/components/section">
         <target
             jcr:primaryType="nt:unstructured"
