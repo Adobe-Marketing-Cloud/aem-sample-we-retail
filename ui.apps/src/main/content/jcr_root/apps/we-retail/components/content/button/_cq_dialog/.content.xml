@@ -24,9 +24,9 @@
                     <linkTo
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
-                        rootPath="/content"
                         fieldLabel="Link to"
                         name="./linkTo"
+                        rootPath="/content"
                         suffix=".html"/>
                 </items>
             </column>

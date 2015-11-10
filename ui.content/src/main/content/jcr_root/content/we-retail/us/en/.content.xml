@@ -35,7 +35,7 @@
                 textIsRich="true"/>
         </par>
         <cq:LiveSyncConfig
-            cq:excludedPaths="[]"
+            cq:excludedPaths="[\0]"
             cq:isDeep="{Boolean}true"
             cq:master="/content/we-retail/language-masters/en"
             cq:rolloutConfigs="[/etc/msm/rolloutconfigs/default]"
