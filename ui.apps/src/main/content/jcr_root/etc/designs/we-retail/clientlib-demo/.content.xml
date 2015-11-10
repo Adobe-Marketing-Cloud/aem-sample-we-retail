@@ -3,4 +3,4 @@
     jcr:description="temporary demo client library for the template editor"
     jcr:primaryType="cq:ClientLibraryFolder"
     categories="[we-retail.demo]"
-    embed="[we-retail.all]"/>
+    dependencies="[we-retail.all]"/>

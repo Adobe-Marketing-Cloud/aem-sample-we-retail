@@ -2,6 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2015-11-11T00:07:31.082+01:00"
+        cq:lastModifiedBy="admin"
         cq:template="/etc/designs/templates/we-retail-homepage"
         jcr:primaryType="cq:PageContent"
         sling:resourceType="we-retail/components/structure/templated-page">
@@ -11,19 +13,19 @@
             <image_i
                 jcr:created="2015-11-10T22:10:15.106+01:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="2015-11-10T22:10:15.106+01:00"
+                jcr:lastModified="{Date}2015-11-11T00:07:31.081+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="foundation/components/image"
-                file_x005f_x0040_Delete="true"
-                fileName=""
+                file_x005f_x005f_x005f_x0040_Delete="true"
                 fileReference="/content/dam/we-retail/images/bg-jumbotron-1.jpg"
                 imageCrop=""
-                imageCrop_x005f_x0040_Delete=""
+                imageCrop_x005f_x005f_x005f_x0040_Delete=""
                 imageMap=""
-                imageMap_x005f_x0040_Delete=""
+                imageMap_x005f_x005f_x005f_x0040_Delete=""
                 imageRotate=""
-                imageRotate_x005f_x0040_Delete=""/>
+                imageRotate_x005f_x005f_x005f_x0040_Delete=""
+                width="1200"/>
         </root>
     </jcr:content>
 </jcr:root>

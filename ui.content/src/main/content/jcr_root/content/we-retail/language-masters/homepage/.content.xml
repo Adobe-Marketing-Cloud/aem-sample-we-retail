@@ -7,7 +7,7 @@
         cq:lastModifiedBy="admin"
         cq:template="/etc/designs/templates/we-retail-homepage"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Test"
+        jcr:title="We.Retail Homepage"
         sling:resourceType="we-retail/components/structure/templated-page">
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured"/>
