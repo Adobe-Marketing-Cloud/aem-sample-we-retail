@@ -6,10 +6,8 @@
         cq:lastModifiedBy="admin"
         cq:template="/libs/commerce/templates/section"
         jcr:isCheckedOut="{Boolean}true"
-        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Winter"
-        jcr:uuid="9be6731c-9dac-43e6-bf2b-ebaecc01b0c6"
         sling:resourceType="commerce/components/section">
         <target
             jcr:primaryType="nt:unstructured"

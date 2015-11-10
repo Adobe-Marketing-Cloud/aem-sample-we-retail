@@ -8,10 +8,8 @@
         jcr:isCheckedOut="{Boolean}true"
         jcr:lastModified="{Date}2012-11-08T00:03:42.665Z"
         jcr:lastModifiedBy="admin"
-        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Summer Equipment"
-        jcr:uuid="e3d300d4-05d2-462a-9a83-e9702b856503"
         sling:resourceType="commerce/components/section">
         <target
             jcr:primaryType="nt:unstructured"

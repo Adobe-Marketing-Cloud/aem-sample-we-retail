@@ -6,10 +6,8 @@
         cq:lastModifiedBy="admin"
         cq:template="/libs/commerce/templates/section"
         jcr:isCheckedOut="{Boolean}true"
-        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Hiking"
-        jcr:uuid="a1a0f3a2-2308-44f3-bb51-d81b0c27da2f"
         sling:resourceType="commerce/components/section">
         <target
             jcr:primaryType="nt:unstructured"

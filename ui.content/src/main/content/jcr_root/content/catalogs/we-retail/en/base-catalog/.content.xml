@@ -9,10 +9,8 @@
         jcr:isCheckedOut="{Boolean}true"
         jcr:lastModified="{Date}2015-11-10T14:57:01.571+01:00"
         jcr:lastModifiedBy="admin"
-        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Base Catalog"
-        jcr:uuid="40e0013e-4ff8-4a1a-8022-23a2ba02cfcc"
         sling:resourceType="commerce/components/catalog">
         <target
             jcr:primaryType="nt:unstructured"

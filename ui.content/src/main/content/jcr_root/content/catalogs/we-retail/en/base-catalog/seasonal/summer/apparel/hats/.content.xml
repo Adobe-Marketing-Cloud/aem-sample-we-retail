@@ -6,10 +6,8 @@
         cq:lastModifiedBy="admin"
         cq:template="/libs/commerce/templates/section"
         jcr:isCheckedOut="{Boolean}true"
-        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Summer Hats"
-        jcr:uuid="48f3f56f-cc6a-48b2-826c-eee1700e83b0"
         sling:resourceType="commerce/components/section">
         <target
             jcr:primaryType="nt:unstructured"

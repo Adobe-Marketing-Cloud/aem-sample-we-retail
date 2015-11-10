@@ -6,10 +6,8 @@
         cq:lastModifiedBy="admin"
         cq:template="/libs/commerce/templates/section"
         jcr:isCheckedOut="{Boolean}true"
-        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Winter Apparel"
-        jcr:uuid="d760d80c-aabd-46d8-91a5-f49c44ea0aff"
         sling:resourceType="commerce/components/section">
         <target
             jcr:primaryType="nt:unstructured"

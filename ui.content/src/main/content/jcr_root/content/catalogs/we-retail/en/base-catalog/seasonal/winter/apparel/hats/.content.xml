@@ -6,10 +6,8 @@
         cq:lastModifiedBy="admin"
         cq:template="/libs/commerce/templates/section"
         jcr:isCheckedOut="{Boolean}true"
-        jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Winter Hats"
-        jcr:uuid="b2a49610-4fa8-434c-b77c-666e9659a6b9"
         sling:resourceType="commerce/components/section">
         <target
             jcr:primaryType="nt:unstructured"
