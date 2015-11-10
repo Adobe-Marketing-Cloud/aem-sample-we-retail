@@ -7,5 +7,4 @@
     <filter root="/etc/tags/we-retail"/>
     <filter root="/etc/designs/we-retail"/>
     <filter root="/etc/clientlibs/we-retail"/>
-    <filter root="/etc/commerce/products/we-retail"/>
 </workspaceFilter>

@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     cq:commerceType="product"
     cq:productVariantAxes="[color,size]"
-    cq:tags="[we-retail:apparel/footwear\,we-retail:activity/running\,we-retail:season/summer]"
+    cq:tags="[we-retail:apparel/footwear,we-retail:activity/running,we-retail:season/summer]"
     jcr:description="Men's Sport Footwear"
     jcr:lastModified="{Date}2015-09-23T22:40:21.112+02:00"
     jcr:mixinTypes="[cq:Taggable]"

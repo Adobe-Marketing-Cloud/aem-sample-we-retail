@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     cq:commerceType="product"
     cq:productVariantAxes="[color,size]"
-    cq:tags="[we-retail:gender/women\,we-retail:apparel/shirt\,we-retail:season/summer]"
+    cq:tags="[we-retail:gender/women,we-retail:apparel/shirt,we-retail:season/summer]"
     jcr:description="Women's Cotton Shirt"
     jcr:description.ga="Léine Cadás do na Mná"
     jcr:lastModified="{Date}2015-09-23T22:44:07.698+02:00"

@@ -3,10 +3,12 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:catalogVersion="561"
-        cq:lastModified="{Date}2012-01-23T11:05:28.592+01:00"
+        cq:lastModified="{Date}2015-11-10T14:57:01.574+01:00"
         cq:lastModifiedBy="admin"
         cq:template="/libs/commerce/templates/catalog"
         jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2015-11-10T14:57:01.571+01:00"
+        jcr:lastModifiedBy="admin"
         jcr:mixinTypes="[mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Base Catalog"

@@ -1,1 +1,9 @@
-style.less
+<div data-sly-use.product="product.js">
+    <p>Name: ${product.name @context='html'}</p>
+    <p>Description: ${product.description @context='html'}</p>
+    <p>Price: ${product.price}</p>
+    <p>Summary: ${product.summary @context='html'}</p>
+    <p>Features: ${product.features @context='html'}</p>
+
+</div>
+	<img src="${product.image}" />
