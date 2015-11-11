@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
-        cq:lastModified="{Date}2015-11-10T23:54:35.595+01:00"
+        cq:lastModified="{Date}2015-11-11T12:25:32.954+01:00"
         cq:lastModifiedBy="admin"
         cq:template="/etc/designs/templates/we-retail-homepage"
         jcr:primaryType="cq:PageContent"
@@ -15,15 +15,77 @@
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
-            <image
-                jcr:created="{Date}2015-11-10T22:44:33.666+01:00"
+            <responsivegrid_s
+                jcr:created="2015-11-11T11:36:32.781+01:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-10T23:54:35.593+01:00"
+                jcr:lastModified="2015-11-11T11:36:32.781+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="foundation/components/image"
-                fileReference="/content/dam/we-retail/images/bg-jumbotron-1.jpg"
-                width="1200"/>
+                sling:resourceType="wcm/foundation/components/responsivegrid"
+                _x0040_CopyFrom="/libs/wcm/foundation/components/responsivegrid/v1/responsivegrid/cq:template">
+                <section-title_s
+                    jcr:created="2015-11-11T11:59:52.750+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2015-11-11T12:25:32.953+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/section-title"
+                    text="Fight the cold with the world's finest gear"/>
+                <category_teaser
+                    jcr:created="{Date}2015-11-03T23:52:30.703+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2015-11-09T22:10:33.523+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/category-teaser"
+                    buttonLabel="Women"
+                    fileReference="/content/dam/we-retail/images/bg-women.png">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            width="4"/>
+                        <phone
+                            jcr:primaryType="nt:unstructured"
+                            width="12"/>
+                    </cq:responsive>
+                </category_teaser>
+                <category_teaser_859708776
+                    jcr:created="{Date}2015-11-04T00:10:12.400+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2015-11-09T22:10:41.662+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/category-teaser"
+                    buttonLabel="Men"
+                    fileReference="/content/dam/we-retail/images/bg-men.png">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            width="4"/>
+                        <phone
+                            jcr:primaryType="nt:unstructured"
+                            width="12"/>
+                    </cq:responsive>
+                </category_teaser_859708776>
+                <category_teaser_465639357
+                    jcr:created="{Date}2015-11-04T00:10:50.268+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2015-11-09T22:10:52.160+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/category-teaser"
+                    buttonLabel="Equipment"
+                    fileReference="/content/dam/we-retail/images/bg-equipment.png">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            width="4"/>
+                        <phone
+                            jcr:primaryType="nt:unstructured"
+                            width="12"/>
+                    </cq:responsive>
+                </category_teaser_465639357>
+            </responsivegrid_s>
         </root>
     </jcr:content>
 </jcr:root>
