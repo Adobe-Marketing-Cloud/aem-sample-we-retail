@@ -13,17 +13,26 @@
 }
 
 .header .container {
-	padding: 0 24px 0 0;
+	padding: 0 24px 2px 0;
+}
+
+.footer .we-Footer {
+    margin-top: 20px;
+    height: 455px;
+}
+
+.footer .we-Footer-nav--inline ul > li {
+    padding-right: 0;
 }
 
 .aem-Grid {
     margin-top: 0;
 }
 
-.root.responsivegrid {
-    margin-bottom: 20px;
-}
-
 .root .image img {
     width: 100%;
+}
+
+.we-HeroImage {
+    margin: 0 !important;
 }

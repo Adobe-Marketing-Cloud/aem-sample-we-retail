@@ -4,7 +4,7 @@
     jcr:primaryType="nt:unstructured"
     jcr:title="We.Retail Templated Page Policy"
     sling:resourceType="wcm/core/components/policy/policy"
-    components="[group:General,group:We.Retail]">
+    components="[group:General,group:We.Retail,group:We.Retail.Structure]">
     <cq:authoring jcr:primaryType="nt:unstructured">
         <assetToComponentMapping jcr:primaryType="nt:unstructured">
             <image
