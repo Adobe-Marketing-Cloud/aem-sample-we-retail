@@ -1,8 +1,29 @@
 
-.header > .container {
+.page.container {
+    padding-top: 0 !important;
+}
+
+.header .navbar-fixed-top {
+}
+
+.header nav.navbar {
+    position: relative;
+    top: 0;
+    margin-top: 60px;
+}
+
+.header .container {
 	padding: 0 24px 0 0;
 }
 
+.aem-Grid {
+    margin-top: 0;
+}
+
 .root.responsivegrid {
-    margin-top: 90px;
+    margin-bottom: 20px;
+}
+
+.root .image img {
+    width: 100%;
 }
