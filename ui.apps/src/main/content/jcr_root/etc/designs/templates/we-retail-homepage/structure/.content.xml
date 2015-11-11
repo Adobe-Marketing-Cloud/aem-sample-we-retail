@@ -31,32 +31,13 @@
                 fileReference="/content/dam/we-retail/images/bg-jumbotron-1.jpg"
                 heading="All-new winter collection 2016"
                 title="Built for the coldest winter on earth"/>
-            <category_teaser_465639357
-                jcr:created="{Date}2015-11-04T00:10:50.268+01:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-09T22:10:52.160+01:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/category-teaser"
-                buttonLabel="Equipment"
-                fileReference="/content/dam/we-retail/images/bg-equipment.png">
-                <cq:responsive jcr:primaryType="nt:unstructured">
-                    <default
-                        jcr:primaryType="nt:unstructured"
-                        width="4"/>
-                    <phone
-                        jcr:primaryType="nt:unstructured"
-                        width="12"/>
-                </cq:responsive>
-            </category_teaser_465639357>
             <responsivegrid_s
                 jcr:created="2015-11-11T11:36:32.781+01:00"
                 jcr:createdBy="admin"
                 jcr:lastModified="2015-11-11T11:36:32.781+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid"
-                _x005f_x0040_CopyFrom="/libs/wcm/foundation/components/responsivegrid/v1/responsivegrid/cq:template">
+                sling:resourceType="wcm/foundation/components/responsivegrid">
                 <section-title_s
                     jcr:created="2015-11-11T11:59:52.750+01:00"
                     jcr:createdBy="admin"
@@ -66,50 +47,6 @@
                     sling:resourceType="we-retail/components/content/section-title"
                     text="Fight the cold with the world's finest gear"/>
             </responsivegrid_s>
-            <section_title_496791378
-                jcr:created="{Date}2015-11-04T00:47:33.815+01:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-09T21:42:03.989+01:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/section-title"
-                text="Fight the cold with the world's finest gear"/>
-            <category_teaser
-                jcr:created="{Date}2015-11-03T23:52:30.703+01:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-09T22:10:33.523+01:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/category-teaser"
-                buttonLabel="Women"
-                fileReference="/content/dam/we-retail/images/bg-women.png">
-                <cq:responsive jcr:primaryType="nt:unstructured">
-                    <default
-                        jcr:primaryType="nt:unstructured"
-                        width="4"/>
-                    <phone
-                        jcr:primaryType="nt:unstructured"
-                        width="12"/>
-                </cq:responsive>
-            </category_teaser>
-            <category_teaser_859708776
-                jcr:created="{Date}2015-11-04T00:10:12.400+01:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-09T22:10:41.662+01:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/category-teaser"
-                buttonLabel="Men"
-                fileReference="/content/dam/we-retail/images/bg-men.png">
-                <cq:responsive jcr:primaryType="nt:unstructured">
-                    <default
-                        jcr:primaryType="nt:unstructured"
-                        width="4"/>
-                    <phone
-                        jcr:primaryType="nt:unstructured"
-                        width="12"/>
-                </cq:responsive>
-            </category_teaser_859708776>
             <footer_s
                 jcr:created="2015-11-11T11:36:22.204+01:00"
                 jcr:createdBy="admin"
