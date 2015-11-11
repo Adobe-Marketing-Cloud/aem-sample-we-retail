@@ -37,16 +37,7 @@
                 jcr:lastModified="2015-11-11T11:36:32.781+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid">
-                <section-title_s
-                    jcr:created="2015-11-11T11:59:52.750+01:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-11T12:00:04.644+01:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/section-title"
-                    text="Fight the cold with the world's finest gear"/>
-            </responsivegrid_s>
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <footer_s
                 jcr:created="2015-11-11T11:36:22.204+01:00"
                 jcr:createdBy="admin"
