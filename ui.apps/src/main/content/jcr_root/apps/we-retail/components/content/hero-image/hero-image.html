@@ -14,15 +14,17 @@
     limitations under the License.
 */-->
 
-<div class="we-HeroImage ratio-16by9" style="background-image: url('${properties.fileReference @ context='attribute'}')">
-    <div class="container">
-        <div class="we-HeroImage-wrapper">
-            <p>${properties.heading}</p>
-            <strong class="we-HeroImage-title">${properties.title}</strong>
-             
-            <p data-sly-test="${properties.buttonLabel && properties.buttonLinkTo}">
-            	<a class="btn btn-primary btn-action" href="${properties.buttonLinkTo}" role="button">${properties.buttonLabel}</a>
-            </p>
+<sly data-sly-use.heroImage="hero-image.js">
+    <div class="we-HeroImage ratio-16by9" style="background-image: url(${heroImage.image.src @ context='styleString'});">
+        <div class="container">
+            <div class="we-HeroImage-wrapper">
+                <p>${properties.heading}</p>
+                <strong class="we-HeroImage-title">${properties.title}</strong>
+
+                <p data-sly-test="${properties.buttonLabel && properties.buttonLinkTo}">
+                    <a class="btn btn-primary btn-action" href="${properties.buttonLinkTo}" role="button">${properties.buttonLabel}</a>
+                </p>
+            </div>
         </div>
     </div>
-</div>
+</sly>
