@@ -95,3 +95,27 @@
 .light {
   font-weight: 300;
 }
+
+.width-full {
+  margin: 0 -10%;
+  margin: 0 (@grid-gutter-width/-2);
+
+  @media (min-width: @screen-sm-min) {
+    margin: 0 ~'calc((100vw - @{container-sm} + @{grid-gutter-width}) / -2)';
+  }
+
+  @media (min-width: @screen-md-min) {
+    margin: 0 ~'calc((100vw - @{container-md} + @{grid-gutter-width}) / -2)';
+  }
+
+  @media (min-width: @screen-lg-min) {
+    margin: 0 ~'calc((100vw - @{container-lg} + @{grid-gutter-width}) / -2)';
+  }
+}
+
+.ratio-16by9 {
+  height: auto;
+
+  padding: 0 @jumbotron-padding percentage(9/16);
+  padding: 0 @jumbotron-padding ~'calc(100vw * 9 / 16)';
+}

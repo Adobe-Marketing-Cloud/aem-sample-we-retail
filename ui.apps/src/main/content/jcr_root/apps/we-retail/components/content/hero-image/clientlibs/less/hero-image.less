@@ -3,8 +3,7 @@
 .we-HeroImage {
   &:extend(.jumbotron);
 
-  height: 100vh;
-  margin: 0 -10%;
+  height: 640px;
 
   padding: @jumbotron-padding 0;
 
@@ -12,12 +11,6 @@
   background-size: cover;
 
   position: relative;
-
-  &.ratio-16by9 {
-    height: auto;
-
-    padding: 0 @jumbotron-padding percentage(9/16);
-  }
 
   .navbar {
     margin-top: @jumbotron-padding;
@@ -39,7 +32,7 @@
 
     position: absolute;
     top: 50%;
-    right: 30%;
+    left: 0;
   }
 
   &-title {
