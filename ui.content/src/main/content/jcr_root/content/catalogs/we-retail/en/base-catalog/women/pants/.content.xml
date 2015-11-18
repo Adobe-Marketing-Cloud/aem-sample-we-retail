@@ -5,7 +5,7 @@
         cq:lastModified="{Date}2015-09-23T23:03:32.244+02:00"
         cq:lastModifiedBy="admin"
         cq:template="/libs/commerce/templates/section"
-        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Pants"
         sling:resourceType="commerce/components/section">

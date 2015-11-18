@@ -10,7 +10,15 @@
         sling:resourceType="we-retail/components/structure/page">
         <par
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="wcm/foundation/components/responsivegrid"/>
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <section-products
+                jcr:created="{Date}2015-11-10T15:00:43.278+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-10T15:00:43.278+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/section-products"/>
+        </par>
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
                 <phone

@@ -4,10 +4,10 @@
     <jcr:content
         cq:catalogBlueprint="/content/catalogs/we-retail/en/base-catalog/seasonal/winter/apparel/scarves"
         cq:commerceType="section"
-        cq:lastModified="{Date}2015-11-10T15:20:05.719+01:00"
+        cq:lastModified="{Date}2015-11-18T15:54:38.814+01:00"
         cq:lastModifiedBy="admin"
         cq:lastPropertyRollout="{Date}2015-11-10T14:18:07.471+01:00"
-        cq:lastRolledout="{Date}2015-11-10T15:20:05.746+01:00"
+        cq:lastRolledout="{Date}2015-11-18T15:54:38.852+01:00"
         cq:lastRolledoutBy="admin"
         cq:template="/apps/we-retail/templates/page-section"
         jcr:mixinTypes="[cq:LiveSync]"
@@ -15,30 +15,41 @@
         jcr:title="Scarves"
         sling:resourceType="we-retail/components/structure/page">
         <par
-            cq:lastRolledout="{Date}2015-11-10T15:20:05.738+01:00"
+            cq:lastRolledout="{Date}2015-11-18T15:54:38.839+01:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="wcm/foundation/components/responsivegrid"/>
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <section-products
+                cq:lastRolledout="{Date}2015-11-18T15:54:38.842+01:00"
+                cq:lastRolledoutBy="admin"
+                jcr:created="{Date}2015-11-10T15:00:43.278+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-10T15:00:43.278+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/section-products"/>
+        </par>
         <cq:responsive
-            cq:lastRolledout="{Date}2015-11-10T15:20:05.739+01:00"
+            cq:lastRolledout="{Date}2015-11-18T15:54:38.843+01:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured">
             <breakpoints
-                cq:lastRolledout="{Date}2015-11-10T15:20:05.741+01:00"
+                cq:lastRolledout="{Date}2015-11-18T15:54:38.846+01:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured">
                 <phone
-                    cq:lastRolledout="{Date}2015-11-10T15:20:05.746+01:00"
+                    cq:lastRolledout="{Date}2015-11-18T15:54:38.852+01:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     title="Phone"
                     width="{Decimal}650"/>
                 <tablet
-                    cq:lastRolledout="{Date}2015-11-10T15:20:05.746+01:00"
+                    cq:lastRolledout="{Date}2015-11-18T15:54:38.852+01:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
@@ -53,4 +64,6 @@
             cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
             jcr:primaryType="cq:LiveCopy"/>
     </jcr:content>
+    <halifax-winter/>
+    <sherbrooke-winter/>
 </jcr:root>

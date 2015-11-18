@@ -6,10 +6,10 @@
         cq:commerceProvider="geometrixx"
         cq:commerceType="section"
         cq:designPath="/etc/designs/we-retail"
-        cq:lastModified="{Date}2015-11-10T15:19:59.859+01:00"
+        cq:lastModified="{Date}2015-11-18T15:54:32.580+01:00"
         cq:lastModifiedBy="admin"
-        cq:lastPropertyRollout="{Date}2015-11-10T15:19:59.859+01:00"
-        cq:lastRolledout="{Date}2015-11-10T15:19:59.880+01:00"
+        cq:lastPropertyRollout="{Date}2015-11-18T15:54:32.580+01:00"
+        cq:lastRolledout="{Date}2015-11-18T15:54:32.599+01:00"
         cq:lastRolledoutBy="admin"
         cq:template="/apps//templates/page-catalog"
         jcr:language="en"
@@ -19,24 +19,24 @@
         sling:resourceType="we-retail/components/structure/page"
         pageTitle="We.Retail">
         <cq:responsive
-            cq:lastRolledout="{Date}2015-11-10T15:19:59.868+01:00"
+            cq:lastRolledout="{Date}2015-11-18T15:54:32.588+01:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured">
             <breakpoints
-                cq:lastRolledout="{Date}2015-11-10T15:19:59.871+01:00"
+                cq:lastRolledout="{Date}2015-11-18T15:54:32.592+01:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured">
                 <phone
-                    cq:lastRolledout="{Date}2015-11-10T15:19:59.879+01:00"
+                    cq:lastRolledout="{Date}2015-11-18T15:54:32.598+01:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     title="Phone"
                     width="{Decimal}650"/>
                 <tablet
-                    cq:lastRolledout="{Date}2015-11-10T15:19:59.879+01:00"
+                    cq:lastRolledout="{Date}2015-11-18T15:54:32.598+01:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
@@ -45,7 +45,7 @@
             </breakpoints>
         </cq:responsive>
         <par
-            cq:lastRolledout="{Date}2015-11-10T15:19:59.880+01:00"
+            cq:lastRolledout="{Date}2015-11-18T15:54:32.599+01:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"

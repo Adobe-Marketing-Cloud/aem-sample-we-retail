@@ -5,9 +5,9 @@
         cq:lastModified="{Date}2012-11-08T00:02:59.220Z"
         cq:lastModifiedBy="admin"
         cq:template="/libs/commerce/templates/section"
-        jcr:isCheckedOut="{Boolean}true"
         jcr:lastModified="{Date}2012-11-08T00:02:59.218Z"
         jcr:lastModifiedBy="admin"
+        jcr:mixinTypes="[]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Winter Equipment"
         sling:resourceType="commerce/components/section">
