@@ -1,0 +1,63 @@
+	.sections, .products, .filters, .results {
+        width: 100%;
+        margin-top: 50px;
+    }
+    /*temp*/
+	.sections {
+    	margin-top: 150px;
+    }
+	.filter {
+        width: 180px;
+        margin-right: 20px;
+        display: inline-block;
+        float:left;
+    	height: 120px;
+    }
+	.filter.tags {
+    	width:400px;
+    }
+	.filter.tags div {
+    	width: 150px;
+		display: inline-block;
+    	float: left;
+    	width: 100px;
+    }
+	#search {
+    	float:right;
+	}
+    .filter label, .filter input {
+
+    }
+    .result-wrapper {
+    	float:left;
+        text-align: center;
+        cursor: pointer;
+        display:inline-block;
+        width:200px;
+        height: 250px;
+        margin: 5px;
+    }
+    .result {
+		width: 190px;
+        margin: 5px;
+        border: grey solid;
+        border-width: 0px;
+    }
+    .result:hover {
+		border-width: 5px;
+        margin: 0px;
+    }
+    .result .img-wrapper {
+		width:180px;
+        height: 160px;
+        clear:both;
+        margin: 0px;
+    }
+    .result img {
+		width:180px;
+        margin: 0px;
+    }
+    .result p, .result a, .result b {
+		width: 180px;
+        margin: 0px;
+    }

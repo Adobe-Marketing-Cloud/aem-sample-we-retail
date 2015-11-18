@@ -5,9 +5,9 @@
         cq:lastModified="{Date}2012-11-08T00:03:42.669Z"
         cq:lastModifiedBy="admin"
         cq:template="/libs/commerce/templates/section"
-        jcr:isCheckedOut="{Boolean}true"
         jcr:lastModified="{Date}2012-11-08T00:03:42.665Z"
         jcr:lastModifiedBy="admin"
+        jcr:mixinTypes="[]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Summer Equipment"
         sling:resourceType="commerce/components/section">
