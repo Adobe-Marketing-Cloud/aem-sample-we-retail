@@ -4,10 +4,10 @@
     <jcr:content
         cq:catalogBlueprint="/content/catalogs/we-retail/en/base-catalog/seasonal/winter/apparel"
         cq:commerceType="section"
-        cq:lastModified="{Date}2015-11-18T15:54:38.673+01:00"
+        cq:lastModified="{Date}2015-11-19T17:37:15.887+01:00"
         cq:lastModifiedBy="admin"
         cq:lastPropertyRollout="{Date}2015-11-10T14:18:07.457+01:00"
-        cq:lastRolledout="{Date}2015-11-18T15:54:38.704+01:00"
+        cq:lastRolledout="{Date}2015-11-19T17:37:15.918+01:00"
         cq:lastRolledoutBy="admin"
         cq:template="/apps/we-retail/templates/page-section"
         jcr:mixinTypes="[cq:LiveSync]"
@@ -15,41 +15,42 @@
         jcr:title="Apparel"
         sling:resourceType="we-retail/components/structure/page">
         <par
-            cq:lastRolledout="{Date}2015-11-18T15:54:38.693+01:00"
+            cq:lastRolledout="{Date}2015-11-19T17:37:15.907+01:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
-            <section-products
-                cq:lastRolledout="{Date}2015-11-18T15:54:38.696+01:00"
+            <product-grid
+                cq:lastRolledout="{Date}2015-11-19T17:37:15.910+01:00"
                 cq:lastRolledoutBy="admin"
                 jcr:created="{Date}2015-11-10T15:00:43.278+01:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-10T15:00:43.278+01:00"
+                jcr:lastModified="{Date}2015-11-19T17:37:15.874+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/section-products"/>
+                sling:resourceType="we-retail/components/content/products-grid"
+                displayAs="products"/>
         </par>
         <cq:responsive
-            cq:lastRolledout="{Date}2015-11-18T15:54:38.696+01:00"
+            cq:lastRolledout="{Date}2015-11-19T17:37:15.910+01:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured">
             <breakpoints
-                cq:lastRolledout="{Date}2015-11-18T15:54:38.699+01:00"
+                cq:lastRolledout="{Date}2015-11-19T17:37:15.913+01:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured">
                 <phone
-                    cq:lastRolledout="{Date}2015-11-18T15:54:38.704+01:00"
+                    cq:lastRolledout="{Date}2015-11-19T17:37:15.918+01:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     title="Phone"
                     width="{Decimal}650"/>
                 <tablet
-                    cq:lastRolledout="{Date}2015-11-18T15:54:38.704+01:00"
+                    cq:lastRolledout="{Date}2015-11-19T17:37:15.918+01:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"

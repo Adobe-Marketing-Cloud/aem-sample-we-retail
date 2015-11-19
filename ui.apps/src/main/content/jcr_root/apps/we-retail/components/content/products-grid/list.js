@@ -178,11 +178,63 @@ use([
                         if (imageResourceFile) {
                             return true;
                         }
+                        /*else {
+                            productImageResource = resolver.getResource(jcrContentProperties.get('cq:productMaster')+'/image');
+                            productImageResourceProperties = ResourceUtils.getResourceProperties(productImageResource);
+                            if(productImageResourceProperties.get('fileReference')) {
+								return productImageResourceProperties.get('fileReference');
+                            }
+                            else {
+								productAssetResource = resolver.getResource(jcrContentProperties.get('cq:productMaster')+'/assets/asset0');
+                            	productAssetResourceProperties = ResourceUtils.getResourceProperties(productImageResource);
+								if(productAssetResourceProperties.get('fileReference')) {
+									return productAssetResourceProperties.get('fileReference');
+                            	}
+                            }
+                        }*/
                     }
                 }
             }
             return false;
         };
+
+        /*var _getImage = function (resource) {
+			var jcrContent           = resolver.getResource(resource, Constants.JCR_CONTENT),
+                jcrContentProperties = ResourceUtils.getResourceProperties(jcrContent),
+                imageResource        = resolver.getResource(jcrContent, 'image'),
+                imageResourceProperties,
+                imageResourceFile;
+            if (jcrContentProperties.get('fileReference')) {
+                return jcrContentProperties.get('fileReference');
+            } else {
+                if (imageResource) {
+                    imageResourceProperties = ResourceUtils.getResourceProperties(imageResource);
+                    if (imageResourceProperties.get('fileReference')) {
+                        return imageResourceProperties.get('fileReference');
+                    } else {
+                        imageResourceFile = resolver.getResource(imageResource, 'file');
+                        if (imageResourceFile) {
+                            return imageResourceFile;
+                        }
+                        else {
+                            productImageResource = resolver.getResource(jcrContentProperties.get('cq:productMaster')+'/image');
+                            productImageResourceProperties = ResourceUtils.getResourceProperties(productImageResource);
+                            if(productImageResourceProperties.get('fileReference')) {
+								return productImageResourceProperties.get('fileReference');
+                            }
+                            else {
+								productAssetResource = resolver.getResource(jcrContentProperties.get('cq:productMaster')+'/assets/asset0');
+                            	productAssetResourceProperties = ResourceUtils.getResourceProperties(productImageResource);
+								if(productAssetResourceProperties.get('fileReference')) {
+									return productAssetResourceProperties.get('fileReference');
+                            	}
+                            }
+                        }
+                    }
+                }
+            }
+            return false;
+        };*/
 
         var _getRequestQueryString = function (replacedParameter, replacedParameterValue) {
             var queryString       = '',
@@ -349,6 +401,7 @@ use([
                 count     = 0,
                 page,
                 pageProperties,
+                productPath,
                 product;
             if (!itemList) {
                 return;
@@ -368,7 +421,27 @@ use([
                 }
                 page           = ResourceUtils.getContainingPage(item);
                 pageProperties = ResourceUtils.getPageProperties(page);
-                product = commerceService.getProduct(pageProperties.get("cq:productMaster", java.lang.String));
+                productPath = pageProperties.get("cq:productMaster", java.lang.String);
+
+                var colorVariants = [];
+                var tags = [];
+                var price;
+                if(productPath) {
+                    product = commerceService.getProduct(productPath);
+                    colorIterator = product.getVariants(new com.adobe.cq.commerce.common.EnumerateAxisFilter("color"));
+                    while(colorIterator.hasNext()) {
+                        colorVariants.push(colorIterator.next().getProperty("color", java.lang.String));
+                    }
+                    price = commerceSession.getProductPrice(product);
+					var productResource = resolver.getResource(productPath);
+                    var productResourceProperties = ResourceUtils.getResourceProperties(productResource);
+                    tags = productResourceProperties.get('cq:tags');
+
+                }
+                else {
+					colorVariants.push('none');
+                    tags.push('none');
+                }
                 count++;
                 collector.push({
                     item     : {
@@ -376,10 +449,13 @@ use([
                         orderByData: pageProperties.get(configuration.orderBy),
                         description: pageProperties.get(Constants.JCR_DESCRIPTION, '')
                     },
+                    /*img 	 : _getImage(item),*/
                     itemName : pageProperties.get(Constants.JCR_TITLE),
                     modifdate: _getModifiedDate(page),
                     hasimage : _hasImage(page),
-                    itemPrice: commerceSession.getProductPrice(product)
+                    itemPrice: price,
+                    colors	 : colorVariants,
+                    tags     : tags
                 });
             }
             if (collector.length > 0) {
