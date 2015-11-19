@@ -2,9 +2,9 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2015-11-18T15:54:33.235+01:00"
+        cq:lastModified="{Date}2015-11-19T17:37:11.750+01:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2015-11-18T15:54:33.262+01:00"
+        cq:lastRolledout="{Date}2015-11-19T17:37:11.787+01:00"
         cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/mn/mnap/mnapms"
         cq:template="/apps/we-retail/templates/page-product"
@@ -14,41 +14,41 @@
         jcr:title="Marka Sport"
         sling:resourceType="we-retail/components/structure/page">
         <par
-            cq:lastRolledout="{Date}2015-11-18T15:54:33.250+01:00"
+            cq:lastRolledout="{Date}2015-11-19T17:37:11.773+01:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <product
-                cq:lastRolledout="{Date}2015-11-18T15:54:33.253+01:00"
+                cq:lastRolledout="{Date}2015-11-19T17:37:11.777+01:00"
                 cq:lastRolledoutBy="admin"
                 jcr:created="{Date}2015-11-10T15:00:43.278+01:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-18T15:54:33.220+01:00"
+                jcr:lastModified="{Date}2015-11-19T17:37:11.735+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/product"/>
         </par>
         <cq:responsive
-            cq:lastRolledout="{Date}2015-11-18T15:54:33.253+01:00"
+            cq:lastRolledout="{Date}2015-11-19T17:37:11.777+01:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured">
             <breakpoints
-                cq:lastRolledout="{Date}2015-11-18T15:54:33.256+01:00"
+                cq:lastRolledout="{Date}2015-11-19T17:37:11.780+01:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured">
                 <phone
-                    cq:lastRolledout="{Date}2015-11-18T15:54:33.261+01:00"
+                    cq:lastRolledout="{Date}2015-11-19T17:37:11.787+01:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     title="Phone"
                     width="{Decimal}650"/>
                 <tablet
-                    cq:lastRolledout="{Date}2015-11-18T15:54:33.261+01:00"
+                    cq:lastRolledout="{Date}2015-11-19T17:37:11.787+01:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"

@@ -54,7 +54,7 @@
 
 <template data-sly-template.products="${@ renderItem}">
     <div class="col-md-2" data-sly-use>
-        <div class="we-Product">
+        <div class="we-Product" data-price="${renderItem.itemPrice}" data-test="ok" data-colors="${renderItem.colors}" data-tags="${renderItem.tags}">
             <div class="we-Product-image">
             	<img data-sly-test="${renderItem.hasimage}" src="${renderItem.item.path}/jcr:content.thumbnail.319.319.jpg" alt="${renderItem.itemName}"/> 
             	<img data-sly-test="${!renderItem.hasimage}" src="http://placehold.it/300/c0c0c1/ffffff"/>
@@ -68,7 +68,7 @@
             	<span class="we-Product-price-new"></span>
             	<s class="we-Product-price-old"></s>
            	</strong>
-           	
+
            	<span class="we-Product-discount hidden"><span></span>off</span>
            	<a href="${renderItem.item.path}.html" class="we-Product-link"></a> 
         </div>
