@@ -43,7 +43,7 @@
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/section-title"
-                text="Fight the cold with the world's finest gear"/>
+                jcr:title="Fight the cold with the world's finest gear"/>
             <category_teaser
                 jcr:created="{Date}2015-11-03T23:52:30.703+01:00"
                 jcr:createdBy="admin"
@@ -105,7 +105,7 @@
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/section-title"
-                text="Featured products"/>
+                jcr:title="Featured products"/>
             <products_grid
                 jcr:created="{Date}2015-11-03T23:39:56.441+01:00"
                 jcr:createdBy="admin"
@@ -129,7 +129,7 @@
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/section-title"
-                text="The latest on We.Retail"/>
+                jcr:title="The latest on We.Retail"/>
             <article_teaser
                 jcr:created="{Date}2015-11-04T00:31:31.216+01:00"
                 jcr:createdBy="admin"
@@ -224,7 +224,7 @@
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/section-title"
-                text="New arrivals"/>
+                jcr:title="New arrivals"/>
             <products_grid_1773541649
                 jcr:created="{Date}2015-11-04T00:51:55.043+01:00"
                 jcr:createdBy="admin"
@@ -260,7 +260,7 @@
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/content/section-title"
-                        text="Discover our community"/>
+                        jcr:title="Discover our community"/>
                     <community_teaser
                         jcr:created="{Date}2015-11-09T22:48:13.875+01:00"
                         jcr:createdBy="admin"
