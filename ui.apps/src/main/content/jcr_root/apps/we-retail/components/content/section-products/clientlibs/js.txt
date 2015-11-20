@@ -1,2 +1,2 @@
 #base=js
-main.js
+#main.js
