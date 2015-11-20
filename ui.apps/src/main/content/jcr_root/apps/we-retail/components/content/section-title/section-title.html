@@ -18,5 +18,5 @@
 <sly data-sly-call="${clientLib.all @ categories='we-retail.components.section-title'}" data-sly-unwrap></sly>
 
 <div class="row">
-	<h2 class="we-Header">${properties.text || 'Section Title'}</h2>
+	<h2 data-sly-use.title="title.js" data-sly-element="${title.element}" class="we-Header">${title.text || 'Section Title'}</h2>
 </div>
