@@ -25,25 +25,49 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <hero_image
-                jcr:created="{Date}2015-11-04T00:14:44.088+01:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-09T21:55:13.720+01:00"
+                cq:targetEngine="cq_contexthub"
+                jcr:lastModified="{Date}2015-11-23T20:45:02.128+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/hero-image"
-                buttonLabel="Shop now"
-                buttonLinkTo="/content/we-retail/language-masters/en/discover"
-                fileReference="/content/dam/we-retail/images/bg-jumbotron-1.jpg"
-                heading="All-new winter collection 2016"
-                title="Built for the coldest winter on earth"/>
+                sling:resourceType="cq/personalization/components/target"
+                accurateTargeting="true"
+                location="we-retail-home-page-hero"
+                strategyName="first"
+                strategyPath="cq/personalization/clientlib/source/strategies/list/first.js">
+                <default
+                    jcr:created="{Date}2015-11-04T00:14:44.088+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2015-11-09T21:55:13.720+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/hero-image"
+                    buttonLabel="Shop now"
+                    buttonLinkTo="/content/we-retail/language-masters/en/discover"
+                    fileReference="/content/dam/we-retail/images/bg-jumbotron-1.jpg"
+                    heading="All-new winter collection 2016"
+                    title="Built for the coldest winter on earth">
+                    <default
+                        jcr:created="{Date}2015-11-04T00:14:44.088+01:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2015-11-09T21:55:13.720+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/content/hero-image"
+                        buttonLabel="Shop now"
+                        buttonLinkTo="/content/we-retail/language-masters/en/discover"
+                        fileReference="/content/dam/we-retail/images/bg-jumbotron-1.jpg"
+                        heading="All-new winter collection 2016"
+                        title="Built for the coldest winter on earth"/>
+                </default>
+            </hero_image>
             <section_title_496791378
                 jcr:created="{Date}2015-11-04T00:47:33.815+01:00"
                 jcr:createdBy="admin"
                 jcr:lastModified="{Date}2015-11-09T21:42:03.989+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/section-title"
-                jcr:title="Fight the cold with the world's finest gear"/>
+                jcr:title="Fight the cold with the world's finest gear"
+                sling:resourceType="we-retail/components/content/section-title"/>
             <category_teaser
                 jcr:created="{Date}2015-11-03T23:52:30.703+01:00"
                 jcr:createdBy="admin"
@@ -104,8 +128,8 @@
                 jcr:lastModified="{Date}2015-11-04T00:47:09.764+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/section-title"
-                jcr:title="Featured products"/>
+                jcr:title="Featured products"
+                sling:resourceType="we-retail/components/content/section-title"/>
             <products_grid
                 jcr:created="{Date}2015-11-03T23:39:56.441+01:00"
                 jcr:createdBy="admin"
@@ -128,8 +152,8 @@
                 jcr:lastModified="{Date}2015-11-04T00:51:20.147+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/section-title"
-                jcr:title="The latest on We.Retail"/>
+                jcr:title="The latest on We.Retail"
+                sling:resourceType="we-retail/components/content/section-title"/>
             <article_teaser
                 jcr:created="{Date}2015-11-04T00:31:31.216+01:00"
                 jcr:createdBy="admin"
@@ -223,8 +247,8 @@
                 jcr:lastModified="{Date}2015-11-04T00:51:50.624+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/section-title"
-                jcr:title="New arrivals"/>
+                jcr:title="New arrivals"
+                sling:resourceType="we-retail/components/content/section-title"/>
             <products_grid_1773541649
                 jcr:created="{Date}2015-11-04T00:51:55.043+01:00"
                 jcr:createdBy="admin"
@@ -259,8 +283,8 @@
                         jcr:lastModified="{Date}2015-11-09T18:18:35.911+01:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/section-title"
-                        jcr:title="Discover our community"/>
+                        jcr:title="Discover our community"
+                        sling:resourceType="we-retail/components/content/section-title"/>
                     <community_teaser
                         jcr:created="{Date}2015-11-09T22:48:13.875+01:00"
                         jcr:createdBy="admin"
