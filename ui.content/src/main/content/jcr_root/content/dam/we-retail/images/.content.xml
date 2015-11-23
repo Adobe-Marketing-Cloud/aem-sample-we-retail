@@ -3,7 +3,9 @@
     jcr:primaryType="sling:OrderedFolder">
     <jcr:content
         jcr:primaryType="nt:unstructured"
-        jcr:title="Images"/>
+        jcr:title="Images">
+        <folderThumbnail/>
+    </jcr:content>
     <author-1.jpg/>
     <bg-community-3.jpg/>
     <bg-community-section.jpg/>
@@ -16,4 +18,7 @@
     <bg-equipment.png/>
     <bg-women.png/>
     <bg-men.png/>
+    <bg-jumbotron-2.jpg/>
+    <article1.jpg/>
+    <article2.jpg/>
 </jcr:root>
