@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2015-11-23T18:44:32.642+01:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/personalization/templates/teaser"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Winter, Male Under 30"
+        sling:resourceType="cq/personalization/components/teaserpage">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <hero_image
+                jcr:created="{Date}2015-11-04T00:14:44.088+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-23T18:19:24.199+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/hero-image"
+                buttonLabel="Shop now"
+                buttonLinkTo="/content/we-retail/language-masters/en/discover"
+                fileReference="/content/dam/we-retail/images/bg-jumbotron-1.jpg"
+                heading="All-new winter collection 2016"
+                title="Winter, Male Under 30"/>
+        </par>
+    </jcr:content>
+</jcr:root>

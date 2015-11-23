@@ -3,6 +3,7 @@
     <filter root="/content/we-retail"/>
     <filter root="/content/dam/we-retail"/>
     <filter root="/content/catalogs/we-retail"/>
+    <filter root="/content/campaigns/we-retail"/>
     
     <filter root="/etc/commerce/products/we-retail"/>
 </workspaceFilter>
