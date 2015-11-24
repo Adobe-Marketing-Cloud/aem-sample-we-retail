@@ -19,7 +19,8 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/hero-image"
                 fileReference="/content/dam/we-retail/images/bg-jumbotron-1.jpg"
-                title="Tanner Hall's Redemption Road"/>
+                title="Tanner Hall's Redemption Road"
+                useFullWidth="true"/>
             <article_teaser
                 jcr:created="{Date}2015-11-23T21:44:37.256+01:00"
                 jcr:createdBy="admin"
