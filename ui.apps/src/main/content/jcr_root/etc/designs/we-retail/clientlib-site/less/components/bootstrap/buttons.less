@@ -233,13 +233,22 @@
     line-height: 42px;
 
     .we-Icon {
-      font-size: 42px;
       line-height: 1;
     }
 
     &:hover, &.hover,
     &:focus, &.focus {
+      background-color: transparent;
+
+      box-shadow: none;
+
       color: @brand-primary-hover;
+    }
+
+    &.btn-square {
+      .we-Icon {
+        font-size: 42px;
+      }
     }
   }
 }

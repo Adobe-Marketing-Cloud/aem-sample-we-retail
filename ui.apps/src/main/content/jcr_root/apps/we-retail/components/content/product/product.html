@@ -1,9 +1,120 @@
-<div data-sly-use.product="product.js">
-    <p>Name: ${product.name @context='html'}</p>
-    <p>Description: ${product.description @context='html'}</p>
-    <p>Price: ${product.price}</p>
-    <p>Summary: ${product.summary @context='html'}</p>
-    <p>Features: ${product.features @context='html'}</p>
+<div class="we-Product" data-sly-use.product="product.js">
+
+    <div class="row">
+
+        <div class="col-md-1">
+            <ul class="we-Product-photos"> <!-- TODO: add list of product's thumbnails -->
+                <li class="active"><img src="${product.image}"/></li>
+                <li><img src="${product.image}"/></li>
+            </ul>
+        </div>
+
+        <div class="col-md-4 col-md-offset-1">
+            <div class="we-Product-visual"> <!-- TODO: add zoom and slider -->
+                <img src="${product.image}"/>
+
+                <a href="#" class="we-Product-visual-zoom"><i class="we-Icon we-Icon--zoom-plus"></i> View larger</a>
+            </div>
+        </div>
+
+        <div class="col-md-5 col-md-offset-1">
+            <div class="row">
+                <div class="col-md-6">
+                    <strong class="we-Product-brand">Brand</strong> <!-- TODO: add product.brand reference -->
+                </div>
+                <div class="col-md-6 text-right">
+                    <span class="we-Product-code">SKU: AROB-25</span> <!-- TODO: add product.code reference -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="we-Product-name">${product.name @context='html'}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <strong class="we-Product-price">${product.price}</strong>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="we-Rating"> <!-- TODO: add product-rating component -->
+                        <i class="we-Star active"></i> <i class="we-Star active"></i> <i class="we-Star active"></i> <i class="we-Star active"></i> <i class="we-Star"></i>
+                        <span class="we-Rating-desc">3 reviews</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="we-Product-description separator">${product.description @context='html'}</p>
+                </div>
+            </div>
+            <form action="#"> <!-- TODO: add form properties -->
+                <div class="form-group">
+                    <label>Colors</label>
+                </div>
+                <div class="form-group">
+                    <div class="we-Product-radio marker radio-inline">
+                        <label>
+                            <input type="radio" name="color" value="957a5b" title="Brown" style="background-color:#957a5b;">
+                        </label>
+                    </div>
+                    <div class="we-Product-radio marker radio-inline">
+                        <label>
+                            <input type="radio" name="color" value="333333" title="Gray dark" style="background-color:#333333;" checked>
+                        </label>
+                    </div>
+                    <div class="we-Product-radio marker radio-inline">
+                        <label>
+                            <input type="radio" name="color" value="c9c9c9" title="Gray light" style="background-color:#c9c9c9;">
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Sizes</label>
+                </div>
+                <div class="form-group separator">
+                    <div class="we-Product-radio radio-inline">
+                        <label>
+                            <input type="radio" name="size" value="xs"> <span>XS</span>
+                        </label>
+                    </div>
+                    <div class="we-Product-radio radio-inline">
+                        <label>
+                            <input type="radio" name="size" value="s"> <span>S</span>
+                        </label>
+                    </div>
+                    <div class="we-Product-radio radio-inline">
+                        <label>
+                            <input type="radio" name="size" value="m"> <span>M</span>
+                        </label>
+                    </div>
+                    <div class="we-Product-radio radio-inline">
+                        <label>
+                            <input type="radio" name="size" value="l" checked> <span>L</span>
+                        </label>
+                    </div>
+                    <div class="we-Product-radio radio-inline">
+                        <label>
+                            <input type="radio" name="size" value="xl"> <span>XL</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <span class="we-Product-status text-success">In stock</span>
+                        </div>
+                        <div class="col-md-8 text-right">
+                            <a href="#" class="btn btn-action btn-primary">Add to card</a>
+                            <a href="#" class="btn btn-icon btn-primary"><i class="we-Icon we-Icon--heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
 
 </div>
-	<img src="${product.image}" />
+<!-- /.we-Product -->

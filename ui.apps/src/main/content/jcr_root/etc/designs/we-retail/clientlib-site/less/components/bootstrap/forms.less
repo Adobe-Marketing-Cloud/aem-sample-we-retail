@@ -14,12 +14,18 @@ label {
   text-transform: uppercase;
 
   .radio &,
-  .checkbox & {
+  .radio-inline &,
+  .checkbox &,
+  .checkbox-inline & {
     padding-left: 30px;
 
     font-weight: 700;
 
     text-transform: none;
+
+    &::after {
+      content: '\200b';
+    }
   }
 
   &.h2 {
@@ -54,7 +60,8 @@ label {
 .checkbox-inline input[type=checkbox] {
   transition: background-color @transition-default;
 
-  appearance: none;
+  //appearance: none;
+  .appearance(none);
 
   width: 16px;
   height: 16px;
