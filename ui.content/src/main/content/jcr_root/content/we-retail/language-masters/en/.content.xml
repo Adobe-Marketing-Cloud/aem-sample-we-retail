@@ -44,7 +44,9 @@
                     buttonLinkTo="/content/we-retail/language-masters/en/discover"
                     fileReference="/content/dam/we-retail/images/bg-jumbotron-1.jpg"
                     heading="All-new winter collection 2016"
-                    title="Built for the coldest winter on earth">
+                    title="Built for the coldest winter on earth"
+                    useFullWidth="true"
+                    keepRatio="true">
                     <default
                         jcr:created="{Date}2015-11-04T00:14:44.088+01:00"
                         jcr:createdBy="admin"

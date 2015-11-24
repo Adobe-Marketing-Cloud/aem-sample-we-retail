@@ -120,8 +120,12 @@
 }
 
 .ratio-16by9 {
-  height: auto;
+  height: auto !important;
+  min-height: 0 !important;
 
-  padding: 0 @jumbotron-padding percentage(9/16);
-  padding: 0 @jumbotron-padding ~'calc(100vw * 9 / 16)' !important;
+  padding: 0 @jumbotron-padding percentage(9/16) !important;
+
+  &.width-full {
+    padding: 0 @jumbotron-padding ~'calc(100vw * 9 / 16)' !important;
+  }
 }

@@ -52,6 +52,20 @@
                         name="./buttonLinkTo"
                         rootPath="/content"
                         suffix=".html"/>
+                    <useFullWidth
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                        text="Full width"
+                        fieldDescription="Overlap grid to have full width background"
+                        name="./useFullWidth"
+                        value="true"/>
+                    <keepRatio
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                        text="Keep 16:9 ratio"
+                        fieldDescription="Set component height to in 16:9 aspect ratio"
+                        name="./keepRatio"
+                        value="true"/>
                 </items>
             </column>
         </items>
