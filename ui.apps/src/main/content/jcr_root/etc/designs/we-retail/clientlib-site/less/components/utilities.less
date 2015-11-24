@@ -37,6 +37,12 @@
   }
 }
 
+.appearance(@val: none) {
+  -webkit-appearance: @val;
+  -moz-appearance: @val;
+  appearance: @val;
+}
+
 //== helper classes
 
 .link-underline {
@@ -117,5 +123,5 @@
   height: auto;
 
   padding: 0 @jumbotron-padding percentage(9/16);
-  padding: 0 @jumbotron-padding ~'calc(100vw * 9 / 16)';
+  padding: 0 @jumbotron-padding ~'calc(100vw * 9 / 16)' !important;
 }

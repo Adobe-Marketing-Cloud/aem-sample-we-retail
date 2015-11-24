@@ -1,0 +1,18 @@
+.we-Container {
+  &--top {
+    position: relative;
+
+    .navbar {
+      width: 100%;
+
+      position: absolute;
+      top: 70px;
+    }
+  }
+
+  &--main {
+    padding-top: (@navbar-height + 70px); // navbar height + top
+
+    //margin-top: -(@navbar-height + 70px);
+  }
+}

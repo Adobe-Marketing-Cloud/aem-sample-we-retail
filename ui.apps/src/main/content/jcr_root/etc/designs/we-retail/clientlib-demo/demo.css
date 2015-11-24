@@ -6,11 +6,11 @@
 .header .navbar-fixed-top {
 }
 
-.header nav.navbar {
-    position: relative;
-    top: 0;
-    margin-top: 60px;
-}
+/*.header nav.navbar {*/
+    /*position: relative;*/
+    /*top: 0;*/
+    /*margin-top: 60px;*/
+/*}*/
 
 .header .container {
 	padding: 0 24px 2px 0;
