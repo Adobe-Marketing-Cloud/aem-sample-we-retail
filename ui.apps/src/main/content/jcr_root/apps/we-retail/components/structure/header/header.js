@@ -34,7 +34,10 @@ use(function () {
         });
     }
 
+    var theme = granite.resource.properties['theme'] || 'default';
+
     return {
-        items: items
+        items: items,
+        theme: theme
     };
 });
