@@ -49,7 +49,7 @@
                     <p class="we-Product-description separator">${product.description @context='html'}</p>
                 </div>
             </div>
-            <form action="#"> <!-- TODO: add form properties -->
+            <form class="we-Product-form" action="#"> <!-- TODO: add form properties -->
                 <div class="form-group">
                     <label>Colors</label>
                 </div>
@@ -114,6 +114,24 @@
             </form>
         </div>
 
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div data-sly-resource="${'.' @resourceType='we-retail/components/content/social-share'}"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="we-Product-subtitle">Features</h2>
+            <ul class="we-Product-features" data-sly-list.feature="${product.features}">
+                <li>${feature}</li>
+            </ul>
+        </div>
+        <div class="col-md-6"> <!-- TODO: add product video/visual -->
+            <img src="http://placehold.it/586x330" alt="" class="img-responsive">
+        </div>
     </div>
 
 </div>
