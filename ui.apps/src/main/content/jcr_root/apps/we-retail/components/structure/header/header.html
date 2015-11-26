@@ -40,7 +40,7 @@
     </div>
 
     <div class="container we-Container--top-navbar">
-        <nav class="navbar navbar-inverse navbar-absolute-top">
+        <nav class="navbar navbar-${header.theme} navbar-absolute-top">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target="#we-example-navbar-collapse-inverse" aria-expanded="false">
@@ -64,7 +64,7 @@
             </div>
             <!-- /.navbar-collapse -->
             <div class="navbar-right-outside">
-                <a href="#" class="btn btn-primary">
+                <a href="#" class="btn ${header.theme == 'inverse' ? 'btn-primary' : ''}">
                     <span class="sr-only">Search</span><span class="we-Icon we-Icon--search" aria-hidden="true"></span>
                 </a>
             </div>
