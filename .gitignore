@@ -24,7 +24,6 @@ maven-eclipse.xml
 *.jar
 
 cq5dam.*
-comments/
 generated
 
 ui.apps/src/main/content/jcr_root/apps/.content.xml

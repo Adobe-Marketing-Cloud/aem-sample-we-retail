@@ -1,11 +1,11 @@
 @import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
 
 .we-Product {
-  padding-bottom: 80px;
+  padding-bottom: 50px;
 
-  border-bottom: 1px solid fade(#000, 10);
+  border-bottom: 1px solid fade(@gray-base, 10);
 
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 
   &-photos {
     .list-unstyled;
@@ -20,7 +20,7 @@
       margin-bottom: 5px;
 
       &.active, &:hover {
-        border-color: fade(#000, 5);
+        border-color: fade(@gray-base, 5);
       }
     }
 
@@ -50,7 +50,7 @@
       font-weight: 700;
 
       &:hover, &:focus {
-        color: fade(#000, 60);
+        color: fade(@gray-base, 60);
 
         text-decoration: none;
       }
@@ -178,6 +178,18 @@
     }
   }
 
+  &-form {}
+
+  &-subtitle {
+    margin: 0 auto 20px;
+
+    text-transform: uppercase;
+  }
+
+  &-features {
+    .list-unstyled;
+  }
+
   .form-group {
     margin-bottom: 12px;
 
@@ -199,6 +211,15 @@
   .separator {
     padding-bottom: 14px;
 
-    border-bottom: 1px solid fade(#000, 10);
+    border-bottom: 1px solid fade(@gray-base, 10);
+  }
+
+  .we-SocialShare {
+    padding-top: 40px;
+
+    border-top: 1px solid fade(@gray-base, 10);
+
+    margin-top: 80px;
+    margin-bottom: 40px;
   }
 }

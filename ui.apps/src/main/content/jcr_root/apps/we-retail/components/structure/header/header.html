@@ -17,55 +17,59 @@
 <sly data-sly-use.clientlib="${'/libs/granite/sightly/templates/clientlib.html'}"
      data-sly-call="${clientLib.all @ categories='we-retail.header'}"/>
 
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <ul class="nav navbar-nav navbar-left">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                   aria-expanded="false">EN</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">EN</a></li>
-                    <li><a href="#">PL</a></li>
-                    <li><a href="#">DE</a></li>
-                </ul>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Sign in</a></li>
-            <li><a href="#"><i class="fa fa-heart-o"></i> Wishlist <span class="badge">0</span></a></li>
-            <li><a href="#"><i class="fa fa-shopping-cart"></i> My cart <span class="badge active">2</span></a></li>
-        </ul>
-    </div>
-</div>
-
-<div class="container we-Container--top-navbar">
-    <nav class="navbar navbar-inverse navbar-absolute-top">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#we-example-navbar-collapse-inverse" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span> <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">we.<strong>Retail</strong></a>
-        </div>
-        <!-- /.navbar-header -->
-        <div class="collapse navbar-collapse" id="we-example-navbar-collapse-inverse">
-            <ul class="nav navbar-nav navbar-center">
-                <li><a href="#">Experience</a></li>
-                <li><a href="#">Man</a></li>
-                <li><a href="#">Woman</a></li>
-                <li><a href="#">Activities</a></li>
-                <li><a href="#">Comunity</a></li>
-                <li><a href="#">About us</a></li>
+<sly data-sly-use.header="header.js">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">EN</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">EN</a></li>
+                        <li><a href="#">PL</a></li>
+                        <li><a href="#">DE</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Sign in</a></li>
+                <li><a href="#"><i class="fa fa-heart-o"></i> Wishlist <span class="badge">0</span></a></li>
+                <li><a href="#"><i class="fa fa-shopping-cart"></i> My cart <span class="badge active">2</span></a></li>
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
-        <div class="navbar-right-outside">
-            <a href="#" class="btn btn-primary">
-                <span class="sr-only">Search</span><span class="we-Icon we-Icon--search" aria-hidden="true"></span>
-            </a>
-        </div>
-        <!-- /.navbar-right-outside -->
-    </nav>
-    <!-- /.navbar -->
-</div>
+    </div>
+
+    <div class="container we-Container--top-navbar">
+        <nav class="navbar navbar-inverse navbar-absolute-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#we-example-navbar-collapse-inverse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">we.<strong>Retail</strong></a>
+            </div>
+            <!-- /.navbar-header -->
+            <div class="collapse navbar-collapse" id="we-example-navbar-collapse-inverse">
+                <ul class="nav navbar-nav navbar-center">
+                    <li><a href="#">Experience</a></li>
+                    <li><a href="#">Man</a></li>
+                    <li><a href="#">Woman</a></li>
+                    <li><a href="#">Activities</a></li>
+                    <li><a href="#">Comunity</a></li>
+                    <li><a href="#">About us</a></li>
+
+                    <li data-sly-list.item="${header.items}">${item.page @context='unsafe'}</li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+            <div class="navbar-right-outside">
+                <a href="#" class="btn btn-primary">
+                    <span class="sr-only">Search</span><span class="we-Icon we-Icon--search" aria-hidden="true"></span>
+                </a>
+            </div>
+            <!-- /.navbar-right-outside -->
+        </nav>
+        <!-- /.navbar -->
+    </div>
+</sly>

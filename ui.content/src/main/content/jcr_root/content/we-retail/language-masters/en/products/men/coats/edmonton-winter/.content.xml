@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2015-11-19T17:37:11.213+01:00"
+        cq:lastModified="{Date}2015-11-26T16:05:23.726+01:00"
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2015-11-19T17:37:11.243+01:00"
         cq:lastRolledoutBy="admin"
@@ -29,6 +29,21 @@
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/product"/>
+            <section_title
+                jcr:created="{Date}2015-11-26T16:04:57.376+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-26T16:05:12.344+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Reviews"
+                sling:resourceType="we-retail/components/content/section-title"/>
+            <comments
+                jcr:created="{Date}2015-11-26T16:05:23.725+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-26T16:05:23.725+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/comments"/>
         </par>
         <cq:responsive
             cq:lastRolledout="{Date}2015-11-19T17:37:11.235+01:00"
