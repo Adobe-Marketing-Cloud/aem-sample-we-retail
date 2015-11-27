@@ -2,8 +2,9 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Template">
     <jcr:content
-        cq:lastModified="{Date}2015-11-10T21:06:56.782+01:00"
+        cq:lastModified="{Date}2015-11-27T13:26:29.350+01:00"
         cq:lastModifiedBy="admin"
         jcr:primaryType="cq:PageContent"
-        jcr:title="We.Retail Homepage"/>
+        jcr:title="We.Retail Homepage"
+        status="enabled"/>
 </jcr:root>

@@ -3,11 +3,10 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
-        cq:lastModified="{Date}2015-11-11T12:25:32.954+01:00"
+        cq:lastModified="{Date}2015-11-27T13:25:23.621+01:00"
         cq:lastModifiedBy="admin"
         cq:template="/etc/designs/templates/we-retail/we-retail-homepage"
         jcr:primaryType="cq:PageContent"
-        jcr:title="We.Retail Homepage"
         sling:resourceType="we-retail/components/structure/templated-page">
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
@@ -35,7 +34,7 @@
                 buttonLinkTo="/content/we-retail/language-masters/en/products"
                 fileReference="/content/dam/we-retail/images/bg-jumbotron-1.jpg"
                 heading="A new winter collection 2016"
-                title="built for the coldest winter on earth"/>
+                title="built for the cold"/>
             <responsivegrid
                 jcr:created="{Date}2015-11-27T13:13:42.373+01:00"
                 jcr:createdBy="admin"

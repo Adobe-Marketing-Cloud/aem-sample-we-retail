@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:description="Policy of the default root parsys"
+    jcr:description="Policy of the root paragraph system for templates"
     jcr:primaryType="nt:unstructured"
-    jcr:title="We.Retail Templated Page Policy"
+    jcr:title="Template"
     sling:resourceType="wcm/core/components/policy/policy"
-    components="[group:General,group:We.Retail,group:We.Retail.Structure]">
+    components="[group:We.Retail,group:We.Retail.Structure,/libs/wcm/foundation/components/text,/libs/wcm/foundation/components/image,/libs/wcm/foundation/components/title,/libs/wcm/foundation/components/list,/libs/wcm/foundation/components/responsivegrid]">
     <cq:authoring jcr:primaryType="nt:unstructured">
         <assetToComponentMapping jcr:primaryType="nt:unstructured">
             <image
@@ -12,7 +12,7 @@
                 assetGroup="media"
                 assetMimetype="image/*"
                 droptarget="image"
-                resourceType="foundation/components/image"
+                resourceType="wcm/foundation/components/image"
                 type="Images"/>
             <product
                 jcr:primaryType="nt:unstructured"
@@ -20,13 +20,6 @@
                 droptarget="product-data-reference"
                 resourceType="commerce/components/product"
                 type="Products"/>
-            <flash
-                jcr:primaryType="nt:unstructured"
-                assetGroup="media"
-                assetMimetype="application/x-shockwave-flash"
-                droptarget="flash"
-                resourceType="foundation/components/flash"
-                type="Images"/>
             <document
                 jcr:primaryType="nt:unstructured"
                 assetGroup="media"
