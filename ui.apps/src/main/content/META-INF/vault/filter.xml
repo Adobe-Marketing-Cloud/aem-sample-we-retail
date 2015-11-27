@@ -6,7 +6,7 @@
     
     <filter root="/etc/tags/we-retail"/>
     <filter root="/etc/clientlibs/we-retail"/>
-    <filter root="/etc/designs/templates/we-retail-homepage"/>
-    <filter root="/etc/designs/policies/default/we-retail"/>
+    <filter root="/etc/designs/templates/we-retail"/>
+    <filter root="/etc/designs/policies/we-retail"/>
     <filter root="/etc/designs/we-retail"/>
 </workspaceFilter>

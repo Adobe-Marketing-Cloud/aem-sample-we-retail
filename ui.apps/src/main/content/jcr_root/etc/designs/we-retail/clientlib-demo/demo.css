@@ -3,17 +3,12 @@
     padding-top: 0 !important;
 }
 
-.header .navbar-fixed-top {
+.header .container {
+	padding: 70px 24px 2px 0;
 }
 
-/*.header nav.navbar {*/
-    /*position: relative;*/
-    /*top: 0;*/
-    /*margin-top: 60px;*/
-/*}*/
-
-.header .container {
-	padding: 0 24px 2px 0;
+.header .container nav.navbar {
+    top: 0;
 }
 
 .footer .we-Footer {
@@ -35,4 +30,9 @@
 
 .we-HeroImage {
     margin: 0 !important;
+}
+
+.we-CategoryTeaser img {
+    min-height: 100px;
+	background: #ddd;
 }

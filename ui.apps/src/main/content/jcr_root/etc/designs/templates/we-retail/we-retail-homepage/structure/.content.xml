@@ -3,46 +3,43 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
-        cq:lastModified="{Date}2015-11-11T12:00:04.646+01:00"
+        cq:lastModified="{Date}2015-11-27T14:08:37.590+01:00"
         cq:lastModifiedBy="admin"
-        cq:template="/etc/designs/templates/we-retail-homepage"
+        cq:template="/etc/designs/templates/we-retail/we-retail-homepage"
         jcr:primaryType="cq:PageContent"
         sling:resourceType="we-retail/components/structure/templated-page">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
-            <header_s
-                jcr:created="2015-11-11T11:36:25.061+01:00"
+            <header
+                jcr:created="{Date}2015-11-27T14:07:49.256+01:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="2015-11-11T11:36:36.683+01:00"
+                jcr:lastModified="{Date}2015-11-27T14:07:49.256+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/header"/>
-            <hero-image_s
-                jcr:created="2015-11-11T11:54:45.424+01:00"
+            <hero_image
+                jcr:created="{Date}2015-11-27T14:08:32.529+01:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-11T11:55:36.713+01:00"
+                jcr:lastModified="{Date}2015-11-27T14:08:32.529+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/hero-image"
-                buttonLabel="Shop now"
-                buttonLinkTo="/content/we-retail/language-masters/en/discover"
-                editable="true"
-                fileReference="/content/dam/we-retail/images/bg-jumbotron-1.jpg"
-                heading="All-new winter collection 2016"
-                title="Built for the coldest winter on earth"/>
-            <responsivegrid_s
-                jcr:created="2015-11-11T11:36:32.781+01:00"
+                editable="{Boolean}true"/>
+            <responsivegrid
+                jcr:created="{Date}2015-11-27T14:08:37.589+01:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="2015-11-11T11:36:32.781+01:00"
+                jcr:lastModified="{Date}2015-11-27T14:08:37.589+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                editable="true"
-                sling:resourceType="wcm/foundation/components/responsivegrid"/>
-            <footer_s
-                jcr:created="2015-11-11T11:36:22.204+01:00"
+                sling:resourceType="wcm/foundation/components/responsivegrid"
+                editable="{Boolean}true">
+                <cq:responsive jcr:primaryType="nt:unstructured"/>
+            </responsivegrid>
+            <footer
+                jcr:created="{Date}2015-11-27T14:08:25.942+01:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="2015-11-11T11:36:39.570+01:00"
+                jcr:lastModified="{Date}2015-11-27T14:08:25.942+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/footer"/>
