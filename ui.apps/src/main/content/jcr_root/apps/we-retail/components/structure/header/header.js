@@ -18,23 +18,27 @@
 use(function () {
     var items = [];
     var root = currentPage.getAbsoluteParent(2);
-    var currentNavPath = currentPage.getAbsoluteParent(3).getPath();
-    var it = root.listChildren(new Packages.com.day.cq.wcm.api.PageFilter());
+    var currentNav = currentPage.getAbsoluteParent(3);
+    
+    if (root && currentNav) {
+        var currentNavPath = currentNav && currentNav.getPath();
+        var it = root.listChildren(new Packages.com.day.cq.wcm.api.PageFilter());
 
-    while (it.hasNext()) {
-        var page = it.next();
+        while (it.hasNext()) {
+            var page = it.next();
 
-        // No strict comparison, because the types returned from the Java APIs
-        // don't strictly match the JavaScript types
-        var selected = (page.getPath() == currentNavPath);
+            // No strict comparison, because the types returned from the Java APIs
+            // don't strictly match the JavaScript types
+            var selected = (page.getPath() == currentNavPath);
 
-        items.push({
-            page: page,
-            selected : selected
-        });
+            items.push({
+                page: page,
+                selected : selected
+            });
+        }
     }
 
-    var theme = granite.resource.properties['theme'] || 'default';
+    var theme = properties.get("theme", "default");
 
     return {
         items: items,
