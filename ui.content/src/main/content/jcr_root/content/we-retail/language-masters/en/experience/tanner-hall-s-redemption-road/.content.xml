@@ -119,6 +119,11 @@
                 pages="[/content/geometrixx-outdoors/en/seasonal/winter/equipment/blackcomb-snow,/content/geometrixx-outdoors/en/seasonal/winter/equipment/calgary-winter,/content/geometrixx-outdoors/en/seasonal/winter/equipment/saskatoon-parka,/content/geometrixx-outdoors/en/seasonal/winter/equipment/banff-snow,/content/geometrixx-outdoors/en/seasonal/winter/apparel/hats/montreal-snow,/content/geometrixx-outdoors/en/seasonal/winter/equipment/fernie-snow]"
                 tagsMatch="any"/>
         </par>
+
+        <image
+                jcr:primaryType="nt:unstructured"
+                fileReference="/content/dam/we-retail/images/bg-jumbotron-2.jpg"/>
+
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
                 <phone
