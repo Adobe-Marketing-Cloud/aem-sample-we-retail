@@ -2,4 +2,4 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:ClientLibraryFolder"
     categories="[we-retail.all]"
-    embed="[cq.jquery,we-retail.site,we-retail.structure,we-retail.components]"/>
+    embed="[cq.jquery,we-retail.bootstrap.js,we-retail.site,we-retail.structure,we-retail.components]"/>
