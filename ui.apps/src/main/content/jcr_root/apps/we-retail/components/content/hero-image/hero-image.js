@@ -2,7 +2,7 @@
 
 var global = this;
 
-use(['/libs/wcm/foundation/components/image/v2/image/image.js'], function (image) {
+use(['image.js'], function (image) {
     var CONST = {
         FULL_WIDTH: 'useFullWidth',
         KEEP_RATIO: 'keepRatio'
