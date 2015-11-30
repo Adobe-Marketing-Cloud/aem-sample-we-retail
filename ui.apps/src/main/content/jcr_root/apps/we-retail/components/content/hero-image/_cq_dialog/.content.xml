@@ -12,9 +12,16 @@
             margin="{Boolean}false"
             type="nav"/>
         <items jcr:primaryType="nt:unstructured">
+            <image
+                    jcr:primaryType="nt:unstructured"
+                    sling:hideResource="{Boolean}true"/>
+            <accessibility
+                    jcr:primaryType="nt:unstructured"
+                    sling:hideResource="{Boolean}true"/>
             <column
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/foundation/container">
+
                 <items jcr:primaryType="nt:unstructured">
                     <image
                         jcr:primaryType="nt:unstructured"
