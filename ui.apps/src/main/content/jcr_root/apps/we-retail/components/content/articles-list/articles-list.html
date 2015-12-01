@@ -1,0 +1,47 @@
+<!--/*
+
+  ADOBE CONFIDENTIAL
+  __________________
+
+   Copyright 2014 Adobe Systems Incorporated
+   All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+
+  Sightly list component
+*/-->
+<div class="we-ArticlesList we-ArticlesList--${listComponent.type}"
+     data-sly-use.listComponent="list.js"
+     data-sly-use.emptyRenderer="emptylist.html"
+     data-sly-use.itemTemplate="listitem.html"
+     data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"
+     id="${listComponent.listId}">
+    <sly data-sly-call="${clientLib.all @ categories='wcm.foundation.components.list'}" />
+    <sly data-sly-call="${emptyRenderer.emptylisttemplate @ list=listComponent}" />
+    <link data-sly-test="${properties.feedEnabled}" rel="alternate" type="application/atom+xml" title="Atom 1.0 (List)" href="${resource.path}.feed" />
+
+    <div class="we-ArticlesList__filter">
+        FILTER
+    </div>
+
+    <ul data-sly-element="${listComponent.element}" data-sly-list.listItem="${listComponent.list}" class="we-ArticlesList__list row">
+        <li data-sly-call="${itemTemplate[listComponent.type] @ renderItem=listItem}" class="we-ArticlesList__item col-md-4"></li>
+    </ul>
+    <div data-sly-test="${!listComponent.isEmpty && listComponent.isPaginating}" class="pagination">
+        <div data-sly-test="${listComponent.previousLink}" class="previous">
+            <a href="${listComponent.previousLink}" onclick="CQ_Analytics.record({event: 'listPreviousPage', values: { listPageStart: '${listComponent.pageStart @ context='scriptString'}' }, collect:  false, options: { obj: this }, componentPath: '${resource.resourceType @ context='scriptString'}'}); return CQ.WCM.List.linkClick(this, '${listComponent.listId @ context='scriptString'}');" aria-describedby="${listComponent.accessiblePreviousDescriptionId}">&laquo; ${"Previous" @ i18n}</a>
+            <span class="cq-wcm-foundation-aria-description" data-sly-test="${properties.accessiblePrevious}" data-sly-text="${properties.accessiblePrevious}" data-sly-attribute.id="${listComponent.accessiblePreviousDescriptionId}"></span>
+        </div>
+        <div data-sly-test="${listComponent.nextLink}" class="next">
+            <a href="${listComponent.nextLink}" onclick="CQ_Analytics.record({event: 'listNextPage', values: { listPageStart: '${listComponent.pageStart @ context='scriptString'}' }, collect:  false, options: { obj: this }, componentPath: '${resource.resourceType @ context='scriptString'}>'}); return CQ.WCM.List.linkClick(this, '${listComponent.listId @ context='scriptString'}');" aria-describedby="${listComponent.accessibleNextDescriptionId}">${"Next" @ i18n} &raquo;</a>
+            <span class="cq-wcm-foundation-aria-description" data-sly-test="${properties.accessibleNext}" data-sly-text="${properties.accessibleNext}" data-sly-attribute.id="${listComponent.accessibleNextDescriptionId}"></span>
+        </div>
+    </div>
+</div>
