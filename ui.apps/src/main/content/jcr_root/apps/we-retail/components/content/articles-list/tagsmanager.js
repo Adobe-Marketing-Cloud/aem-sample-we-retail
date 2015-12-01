@@ -15,7 +15,6 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
     };
 
     TagsManager.prototype.resolve = function(tagId) {
-        console.error("tagid: " + tagId);
         return this.tagManager.resolve(tagId);
     };
 
