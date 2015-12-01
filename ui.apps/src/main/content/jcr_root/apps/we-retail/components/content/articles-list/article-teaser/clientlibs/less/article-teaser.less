@@ -30,6 +30,12 @@
     line-height: 29px;
   }
 
+  &-description {
+    padding: 0 @padding-large-horizontal;
+
+    margin: @padding-large-horizontal auto;
+  }
+
   &-category {
     padding: 5px @padding-small-horizontal 4px;
 
@@ -57,12 +63,7 @@
 
   &-author {
     &:extend(.text-muted);
-
-    display: block;
-
-    padding: 0 @padding-large-horizontal;
-
-    margin-bottom: 12px;
+    font-weight: 600;
   }
 
   &-text {
