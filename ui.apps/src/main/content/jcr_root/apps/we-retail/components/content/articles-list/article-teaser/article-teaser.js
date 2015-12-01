@@ -8,7 +8,8 @@ var global = this;
 use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
      "/libs/wcm/foundation/components/utils/ResourceUtils.js",
      "/libs/sightly/js/3rd-party/q.js",
-     "../tagsmanager.js"], function (AuthoringUtils, ResourceUtils, Q, TagsManager) {
+     "../tagsmanager.js",
+     "../profilemanager.js"], function (AuthoringUtils, ResourceUtils, Q, TagsManager, ProfileManager) {
 
     var def = Q.defer(),
         ret = {
@@ -19,9 +20,18 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
 
 
     ResourceUtils.getPageProperties(granite.resource).then(function(pageProperties) {
+        var defs = [];
         ret.properties = pageProperties;
         ret.properties.tags = tagsManager.resolveAll(pageProperties['cq:tags']);
-        def.resolve();
+
+        defs.push(ProfileManager.getProfile(pageProperties['articleAuthor']).then(function(authorData) {
+            ret.properties.author = authorData;
+        }));
+
+        Q.all(defs).then(function() {
+            def.resolve();
+        });
+
     });
 
     return def.promise.then(function() {
