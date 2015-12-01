@@ -1,3 +1,2 @@
 #base=less
 products-grid.less
-product.less
