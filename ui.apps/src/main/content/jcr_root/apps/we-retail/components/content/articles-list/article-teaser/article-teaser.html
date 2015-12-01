@@ -13,15 +13,21 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
+<div class="we-ArticleTeaser" data-sly-use.article="article-teaser.js">
 
-<!--/* TODO: Remove all inline styling  */-->
-<div class="we-ArticleTeaser" style="margin: 10px;">
-    <a href="#" class="we-ArticleTeaser-visual">
-        <img src="http://placehold.it/384x252/385375/ffffff" alt="Rapaport and Windstedt document the realities of  Alaskan skiing in new video">
+    <a href="${resource.path}.html" class="we-ArticleTeaser-visual"
+       onclick="CQ_Analytics.record({event: 'listTeaserItemClicked', values: { listItemPath: '${resource.path @ context='scriptString'}' }, collect:  false, options: { obj: this }, componentPath: '${resource.resourceType @ context='scriptString'}'})">
+        <img src="${ resource.path }.thumb.319.319.jpg" alt="${ article.properties.jcr:title }">
     </a>
      
-    <h3 class="we-ArticleTeaser-title">${ properties.jcr:title }</h3>
+    <h3 class="we-ArticleTeaser-title">${ article.properties.jcr:title }</h3>
     
-    <strong class="we-ArticleTeaser-category">Sports</strong>
-    <span class="we-ArticleTeaser-date">October 27, 2015</span> 
+    <strong class="we-ArticleTeaser-category">
+        <sly data-sly-list.tag="${ article.properties.tags }">${ tag.name }</sly>
+    </strong>
+    <span class="we-ArticleTeaser-author">Author Name</span>
+    <span class="we-ArticleTeaser-date">October 27, 2015</span>
+    <div class="we-ArticleTeaser-description" data-sly-test="${ article.properties.jcr:description }">
+        ${ article.properties.jcr:description }
+    </div>
 </div>
