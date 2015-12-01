@@ -13,7 +13,9 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<div class="we-ArticleTeaser" data-sly-use.article="article-teaser.js">
+<div class="we-ArticleTeaser"
+     data-sly-use.article="article-teaser.js"
+     >
 
     <a href="${resource.path}.html" class="we-ArticleTeaser-visual"
        onclick="CQ_Analytics.record({event: 'listTeaserItemClicked', values: { listItemPath: '${resource.path @ context='scriptString'}' }, collect:  false, options: { obj: this }, componentPath: '${resource.resourceType @ context='scriptString'}'})">
@@ -25,7 +27,7 @@
     <strong class="we-ArticleTeaser-category">
         <sly data-sly-list.tag="${ article.properties.tags }">${ tag.name }</sly>
     </strong>
-    <span class="we-ArticleTeaser-author">Author Name</span>
+    <span class="we-ArticleTeaser-author">${ article.properties.author.name }</span>
     <span class="we-ArticleTeaser-date">October 27, 2015</span>
     <div class="we-ArticleTeaser-description" data-sly-test="${ article.properties.jcr:description }">
         ${ article.properties.jcr:description }
