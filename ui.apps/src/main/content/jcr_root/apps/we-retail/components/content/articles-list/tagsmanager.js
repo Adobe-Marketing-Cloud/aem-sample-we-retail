@@ -5,9 +5,7 @@ var global = this;
 /**
  *
  */
-use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
-     "/libs/wcm/foundation/components/utils/ResourceUtils.js",
-     "/libs/sightly/js/3rd-party/q.js"], function (AuthoringUtils, ResourceUtils, Q) {
+use(function () {
 
     var TagsManager = function(resource) {
         var resourceResolver = resource.getResourceResolver();
