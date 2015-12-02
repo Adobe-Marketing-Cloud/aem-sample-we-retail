@@ -21,71 +21,20 @@
                 fileReference="/content/dam/we-retail/images/bg-jumbotron-1.jpg"
                 title="Tanner Hall's Redemption Road"
                 useFullWidth="true"/>
-            <article_teaser
-                jcr:created="{Date}2015-11-23T21:44:37.256+01:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-23T21:44:37.256+01:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/article-teaser">
-                <cq:responsive jcr:primaryType="nt:unstructured">
-                    <default
-                        jcr:primaryType="nt:unstructured"
-                        width="4"/>
-                </cq:responsive>
-            </article_teaser>
-            <article_teaser_150031194
-                jcr:created="{Date}2015-11-23T21:45:30.416+01:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-23T21:45:30.416+01:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/article-teaser">
-                <cq:responsive jcr:primaryType="nt:unstructured">
-                    <default
-                        jcr:primaryType="nt:unstructured"
-                        width="8"/>
-                </cq:responsive>
-            </article_teaser_150031194>
-            <article_teaser_959157125
-                jcr:created="{Date}2015-11-23T21:46:38.811+01:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-23T21:46:38.811+01:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/article-teaser">
-                <cq:responsive jcr:primaryType="nt:unstructured">
-                    <default
-                        jcr:primaryType="nt:unstructured"
-                        width="4"/>
-                </cq:responsive>
-            </article_teaser_959157125>
-            <article_teaser_767406041
-                jcr:created="{Date}2015-11-23T21:46:51.632+01:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-23T21:46:51.632+01:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/article-teaser">
-                <cq:responsive jcr:primaryType="nt:unstructured">
-                    <default
-                        jcr:primaryType="nt:unstructured"
-                        width="4"/>
-                </cq:responsive>
-            </article_teaser_767406041>
-            <article_teaser_1329367246
-                jcr:created="{Date}2015-11-23T21:47:00.278+01:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-23T21:47:00.278+01:00"
-                jcr:lastModifiedBy="admin"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/article-teaser">
-                <cq:responsive jcr:primaryType="nt:unstructured">
-                    <default
-                        jcr:primaryType="nt:unstructured"
-                        width="4"/>
-                </cq:responsive>
-            </article_teaser_1329367246>
+            <articles_list
+                    jcr:created="{Date}2015-11-23T21:44:37.256+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2015-11-23T21:44:37.256+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/articles-list"
+                    displayAs="teaser"
+                    feedEnabled="true"
+                    listFrom="children"
+                    limit="0"
+                    pageMax="0"
+                    orderBy="cq:lastModified"
+                    tagsMatch="any"/>
         </par>
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
