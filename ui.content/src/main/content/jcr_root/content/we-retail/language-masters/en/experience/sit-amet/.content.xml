@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2015-11-23T23:01:30.803+01:00"
+        cq:lastModifiedBy="admin"
+        cq:tags="[we-retail:activity/skiing]"
+        cq:template="/apps/we-retail/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Nulla interdum purus sem. Vivamus non ipsum libero."
+        jcr:description="Cras blandit, diam ac ultrices imperdiet, urna ex eleifend arcu, vel porttitor metus dolor ac velit. Sed vehicula at enim in congue. Aliquam sit amet aliquet arcu, eu mollis urna. Sed rhoncus maximus arcu in convallis. Praesent quis ultricies urna. Vestibulum ullamcorper erat ut magna suscipit semper. Morbi et urna ante. Donec non pellentesque urna, vel varius dui."
+        sling:resourceType="we-retail/components/structure/page">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+        </par>
+
+        <image
+                jcr:primaryType="nt:unstructured"
+                fileReference="/content/dam/we-retail/images/article2.jpg"/>
+
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Phone"
+                    width="{Decimal}650"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Decimal}1200"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>
