@@ -22,14 +22,11 @@
      data-sly-use.emptyRenderer="emptylist.html"
      data-sly-use.itemTemplate="listitem.html"
      data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"
+     data-sly-use.articlesList="${ 'articles-list.js' @ articles = listComponent.list }"
      id="${listComponent.listId}">
     <sly data-sly-call="${clientLib.all @ categories='wcm.foundation.components.list'}" />
     <sly data-sly-call="${emptyRenderer.emptylisttemplate @ list=listComponent}" />
     <link data-sly-test="${properties.feedEnabled}" rel="alternate" type="application/atom+xml" title="Atom 1.0 (List)" href="${resource.path}.feed" />
-
-    <div class="we-ArticlesList__filter">
-        FILTER
-    </div>
 
     <ul data-sly-element="${listComponent.element}" data-sly-list.listItem="${listComponent.list}" class="we-ArticlesList__list row">
         <li data-sly-call="${itemTemplate[listComponent.type] @ renderItem=listItem}" class="we-ArticlesList__item col-md-4"></li>
