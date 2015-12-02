@@ -2,7 +2,7 @@
 
 var global = this;
 
-use(['/libs/wcm/foundation/components/utils/v2/ResourceUtils.js'], function (ResourceUtils) {
+use(['/libs/wcm/foundation/components/utils/ResourceUtils.js'], function (ResourceUtils) {
     var CONST = {
         FACEBOOK: 'facebookShare',
         TWITTER: 'twitterShare',
