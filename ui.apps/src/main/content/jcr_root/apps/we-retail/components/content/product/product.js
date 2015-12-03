@@ -1,7 +1,8 @@
 'use strict';
 
-use(['/etc/clientlibs/granite/lodash/modern/source/lodash-2.4.1.js'], function (_) {
+use(function () {
     var product = {};
+
     var resolver = resource.getResourceResolver();
     var commerceService = resource.adaptTo(com.adobe.cq.commerce.api.CommerceService);
     var commerceSession = commerceService.login(request, response);
