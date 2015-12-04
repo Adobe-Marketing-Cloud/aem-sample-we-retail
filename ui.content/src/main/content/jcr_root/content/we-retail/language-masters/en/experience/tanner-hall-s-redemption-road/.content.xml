@@ -122,7 +122,7 @@
 
         <image
                 jcr:primaryType="nt:unstructured"
-                fileReference="/content/dam/we-retail/images/bg-jumbotron-2.jpg"/>
+                fileReference="/content/dam/we-retail/images/bg-teaser-3.jpg"/>
 
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
