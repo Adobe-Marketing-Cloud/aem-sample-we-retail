@@ -18,12 +18,12 @@
   Defines list item templates
 */-->
 <template data-sly-template.default="${@ renderItem, item}">
-    <div class="we-Carousel-item item ${renderItem.first && 'active'}" style="background-image: url('${item.item.path @ context='attribute'}.image.940.340.high.jpg')">
+    <a href="${item.item.path}.html" class="we-Carousel-item item ${renderItem.first && 'active'}" style="background-image: url('${item.item.path @ context='attribute'}.image.940.340.high.jpg')">
         <div class="carousel-caption">
             <h3>${item.item.title}</h3>
             <p>${item.item.description}</p>
         </div>
-    </div>
+    </a>
 </template>
 
 <template data-sly-template.images="${@ renderItem, item}">
