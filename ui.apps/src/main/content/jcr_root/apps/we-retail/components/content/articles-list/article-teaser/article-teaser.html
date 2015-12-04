@@ -14,22 +14,21 @@
     limitations under the License.
 */-->
 <div class="we-ArticleTeaser"
-     data-sly-use.article="article-teaser.js"
-     >
+     data-sly-use.article="we.retail.core.Article">
 
     <a href="${resource.path}.html" class="we-ArticleTeaser-visual"
        onclick="CQ_Analytics.record({event: 'listTeaserItemClicked', values: { listItemPath: '${resource.path @ context='scriptString'}' }, collect:  false, options: { obj: this }, componentPath: '${resource.resourceType @ context='scriptString'}'})">
         <img src="${ resource.path }.thumb.319.319.jpg" alt="${ article.properties.jcr:title }">
     </a>
      
-    <h3 class="we-ArticleTeaser-title">${ article.properties.jcr:title }</h3>
+    <h3 class="we-ArticleTeaser-title">${ article.title }</h3>
     
-    <strong class="we-ArticleTeaser-category">
-        <sly data-sly-list.tag="${ article.properties.tags }">${ tag.name }</sly>
+    <strong class="we-ArticleTeaser-category" data-sly-test="${ article.tags }">
+        <sly data-sly-list.tag="${ article.tags }">${ tag.name }</sly>
     </strong>
-    <span class="we-ArticleTeaser-author">${ article.properties.author.name }</span>
+    <span class="we-ArticleTeaser-author">${ article.authorName }</span>
     <span class="we-ArticleTeaser-date">October 27, 2015</span>
-    <div class="we-ArticleTeaser-description" data-sly-test="${ article.properties.jcr:description }">
-        ${ article.properties.jcr:description }
+    <div class="we-ArticleTeaser-description" data-sly-test="${ article.description }">
+        ${ article.description }
     </div>
 </div>
