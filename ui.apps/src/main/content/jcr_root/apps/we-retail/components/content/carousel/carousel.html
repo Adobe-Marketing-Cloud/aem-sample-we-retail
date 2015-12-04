@@ -25,7 +25,6 @@
      data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"
      id="${listComponent.listId}">
     <sly data-sly-call="${emptyRenderer.emptylisttemplate @ list=listComponent}" />
-    <link data-sly-test="${properties.feedEnabled}" rel="alternate" type="application/atom+xml" title="Atom 1.0 (List)" href="${resource.path}.feed" />
 
     <ol data-sly-list="${listComponent.list}" class="we-Carousel-indicators carousel-indicators">
         <li data-target="#${listComponent.listId}" data-slide-to="${itemList.index}" class="${itemList.first && 'active'}"></li>
