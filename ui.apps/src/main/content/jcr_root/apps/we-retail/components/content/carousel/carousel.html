@@ -1,0 +1,47 @@
+<!--/*
+
+  ADOBE CONFIDENTIAL
+  __________________
+
+   Copyright 2014 Adobe Systems Incorporated
+   All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+
+  Sightly carousel component
+*/-->
+<div class="we-Carousel carousel slide"
+     data-ride="carousel"
+     data-sly-use.listComponent="list.js"
+     data-sly-use.emptyRenderer="emptylist.html"
+     data-sly-use.itemTemplate="listitem.html"
+     data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"
+     id="${listComponent.listId}">
+    <sly data-sly-call="${emptyRenderer.emptylisttemplate @ list=listComponent}" />
+
+    <ol data-sly-list="${listComponent.list}" class="we-Carousel-indicators carousel-indicators">
+        <li data-target="#${listComponent.listId}" data-slide-to="${itemList.index}" class="${itemList.first && 'active'}"></li>
+    </ol>
+
+    <div class="carousel-inner we-Carousel-inner" role="listbox" data-sly-list="${listComponent.list}">
+        <sly data-sly-call="${itemTemplate[listComponent.type] @ renderItem=itemList, item=item}"></sly>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+</div>
