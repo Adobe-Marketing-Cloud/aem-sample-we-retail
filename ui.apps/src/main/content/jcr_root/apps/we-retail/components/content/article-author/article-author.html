@@ -1,0 +1,32 @@
+<!--/*
+
+  ADOBE CONFIDENTIAL
+  __________________
+
+   Copyright 2014 Adobe Systems Incorporated
+   All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+
+*/-->
+<div class="row we-ArticleAuthor"
+     data-sly-use.article="article-author.js">
+    <div class="col-md-6 we-ArticleAuthor-details">
+        <div class="we-ArticleAuthor-avatar"
+             style="background-image: url('${ article.author.profileImage.path || '/etc/designs/default/images/social/avatar.png' @ context='attribute' }.prof.thumbnail.40.jpg')"
+             alt="${article.author.name || 'Anonumous'}"></div>
+        <strong class="we-ArticleAuthor-name">${article.author.name || 'Anonumous'}</strong>
+
+    </div><div class="col-md-6 we-ArticleAuthor-bio">
+        <h4>About the author</h4>
+        <p>${article.author.aboutMe}</p>
+        <p>Loro consectetur adipiscing elit. Duis eu laoreet ante. Proin rhoncus odio vitae enim tincidunt, et volutpat metus elementum. Sed feugiat ullamcorper nisl eu facilisis. Morbi dolor sem, congue nec leo ut, aliquet laoreet felis. Donec ut sem ex. Donec posuere massa a magna pretium, placerat imperdiet ante tempor. Suspendisse condimentum eros a risus convallis tristique. Quisque in mi laoreet, laoreet lorem eu, pharetra mi. Duis at libero vel nisi vehicula commodo vitae quis orci. Donec commodo ut dolor in vehicula.</p>
+    </div>
+</div>

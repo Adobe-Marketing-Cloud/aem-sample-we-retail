@@ -1,0 +1,38 @@
+@import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
+
+@article-author-avatar-size: 60px;
+
+.we-ArticleAuthor {
+
+    margin: 30px 0;
+    padding: 30px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+
+    &-avatar {
+        border-radius: 50%;
+        overflow: hidden;
+        background-position: cover;
+        width: @article-author-avatar-size;
+        height: @article-author-avatar-size;
+        background-size: @article-author-avatar-size + 16px;
+        background-position: -8px -8px;
+
+        margin: 10px auto;
+    }
+
+    &-name {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    &-bio, &-details {
+        display: inline-block;
+        float: none;
+        vertical-align: middle;
+    }
+
+    &-details {
+        text-align: center;
+    }
+}
