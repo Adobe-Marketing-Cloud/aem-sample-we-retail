@@ -39,7 +39,7 @@
   &-category {
     padding: 5px @padding-small-horizontal 4px;
 
-    margin: auto @padding-large-horizontal;
+    margin: auto 0 auto @padding-large-horizontal;
 
     background-color: fade(@gray-base, 15);
 
@@ -64,6 +64,8 @@
   &-author {
     &:extend(.text-muted);
     font-weight: 600;
+
+    margin: auto 0 auto @padding-large-horizontal;
   }
 
   &-text {
