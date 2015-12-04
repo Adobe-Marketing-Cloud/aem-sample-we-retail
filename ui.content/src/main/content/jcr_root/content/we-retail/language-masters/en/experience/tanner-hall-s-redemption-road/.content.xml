@@ -80,6 +80,7 @@
                 jcr:lastModified="{Date}2015-11-23T22:56:37.577+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
+                jcr:description="Tanner blasting through a line Retallack Lodge. BC in 2012. Photo by Dave Heath."
                 sling:resourceType="wcm/foundation/components/image"
                 fileReference="/content/dam/we-retail/images/article2.jpg">
                 <cq:responsive jcr:primaryType="nt:unstructured">
