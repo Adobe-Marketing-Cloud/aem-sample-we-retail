@@ -31,12 +31,7 @@
     </ol>
 
     <div class="carousel-inner we-Carousel-inner" role="listbox" data-sly-list="${listComponent.list}">
-        <div class="we-Carousel-item item ${itemList.first && 'active'}" style="background-image: url('${item.item.path @ context='attribute'}.image.940.340.high.jpg')">
-            <div class="carousel-caption">
-                <h3>${item.item.title}</h3>
-                <p>${item.item.description}</p>
-            </div>
-        </div>
+        <sly data-sly-call="${itemTemplate[listComponent.type] @ renderItem=itemList, item=item}"></sly>
     </div>
 
     <!-- Controls -->
