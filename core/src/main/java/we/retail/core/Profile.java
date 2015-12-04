@@ -1,10 +1,12 @@
 package we.retail.core;
 
+import com.day.cq.commons.jcr.JcrConstants;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.models.annotations.*;
+import org.apache.sling.models.annotations.injectorspecific.ResourcePath;
 import org.apache.sling.models.annotations.injectorspecific.Self;
 
 import javax.inject.Inject;
@@ -28,6 +30,15 @@ public class Profile {
     @Optional
     public String familyName;
 
+    @Inject
+    @Named("profile/aboutMe")
+    @Optional
+    public String aboutMe;
+
+    @Inject
+    @Named("profile/photos/primary/image")
+    @Optional
+    public Resource profileImage;
 
     public String getName() {
         List<String> ret = new ArrayList<String>();
