@@ -17,7 +17,7 @@
 
         <image
                 jcr:primaryType="nt:unstructured"
-                fileReference="/content/dam/we-retail/images/article2.jpg"/>
+                fileReference="/content/dam/we-retail/images/bg-teaser-2.jpg"/>
 
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
