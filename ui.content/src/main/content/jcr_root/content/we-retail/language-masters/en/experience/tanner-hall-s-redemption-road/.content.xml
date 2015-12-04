@@ -8,6 +8,7 @@
         cq:template="/apps/we-retail/templates/page-content"
         jcr:primaryType="cq:PageContent"
         jcr:title="Tanner Hall's Redemption Road"
+        articleAuthor="/home/users/geometrixx/aparker@geometrixx.info"
         sling:resourceType="we-retail/components/structure/page">
         <par
             jcr:primaryType="nt:unstructured"
@@ -91,6 +92,14 @@
                         width="3"/>
                 </cq:responsive>
             </image>
+            <article_author
+                    jcr:created="{Date}2015-11-23T23:00:59.459+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2015-11-23T23:01:30.797+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/article-author">
+            </article_author>
             <section_title
                 jcr:created="{Date}2015-11-23T23:00:59.459+01:00"
                 jcr:createdBy="admin"
