@@ -26,10 +26,6 @@ import java.util.List;
 @Model(adaptables = {Resource.class, SlingHttpServletRequest.class})
 public class Article {
 
-    private static String PROP_GIVEN_NAME = "givenName";
-    private static String PROP_FAMILY_NAME = "familyName";
-    private static String DEFAULT_NAME = "Anonymous";
-
     @Inject
     @SlingObject
     private ResourceResolver resourceResolver;
@@ -49,8 +45,7 @@ public class Article {
     public String[] cqTags;
 
     @ResourcePath(name=JcrConstants.JCR_CONTENT + "/articleAuthor", optional = true)
-    @Optional
-    private Resource articleAuthor;
+    public Profile author;
 
     public List<Tag> getTags() {
         List<Tag> tags = new ArrayList<Tag>();
@@ -60,24 +55,5 @@ public class Article {
         }
 
         return tags;
-    }
-
-    public String getAuthorName() {
-        List<String> ret = new ArrayList<String>();
-        if (articleAuthor != null) {
-            ValueMap vm = articleAuthor.getValueMap();
-            if (vm.containsKey(PROP_GIVEN_NAME)) {
-                ret.add(vm.get(PROP_GIVEN_NAME, String.class));
-            }
-            if (vm.containsKey(PROP_FAMILY_NAME)) {
-                ret.add(vm.get(PROP_FAMILY_NAME, String.class));
-            }
-        }
-
-        if (ret.isEmpty()) {
-            ret.add(DEFAULT_NAME);
-        }
-
-        return StringUtils.join(ret, " ");
     }
 }
