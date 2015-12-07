@@ -27,12 +27,7 @@
             <root
                 cq:policy="/etc/designs/policies/we-retail/components/structure/responsivegrid/root"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/core/components/policies/mapping">
-                <responsivegrid
-                    cq:policy="/etc/designs/policies/we-retail/components/structure/responsivegrid/default"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/core/components/policies/mapping"/>
-            </root>
+                sling:resourceType="wcm/core/components/policies/mapping"/>
         </jcr:content>
     </policies>
     <structure jcr:primaryType="nt:unstructured">
