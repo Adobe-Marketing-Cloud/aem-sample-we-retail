@@ -1,6 +1,8 @@
 (function () {
     'use strict';
 
+    Vue.config.debug = true;
+
     Vue.component('product-variant', {
         props: [
             'isBase',
@@ -27,6 +29,14 @@
 
             self.$parent.variants.push(data);
 
+            console.warn(data);
+
+            if (typeof data.color !== 'undefined') {
+                var colorVariants = self.$parent.colorVariants[data.color];
+
+                self.$parent.colorVariants[data.color] = colorVariants ? colorVariants + 1 : 1;
+            }
+
             if (!!parseInt(self.isBase, 10)) {
                 self.$parent.product = data;
             }
@@ -37,6 +47,7 @@
         el: '.we-Product',
         data: {
             variants: [],
+            colorVariants: {},
             product: null,
 
             isChecked: function (productSku) {
@@ -52,6 +63,9 @@
                         self.product = product;
                     }
                 });
+            },
+            showSizes: function () {
+                return this.colorVariants[this.product.color] > 1 || Object.keys(this.colorVariants).length === 0;
             }
         }
     });
