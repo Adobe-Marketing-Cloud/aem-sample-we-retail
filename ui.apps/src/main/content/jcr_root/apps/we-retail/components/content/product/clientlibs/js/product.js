@@ -1,8 +1,6 @@
 (function () {
     'use strict';
 
-    Vue.config.debug = true;
-
     Vue.component('product-variant', {
         props: [
             'isBase',
