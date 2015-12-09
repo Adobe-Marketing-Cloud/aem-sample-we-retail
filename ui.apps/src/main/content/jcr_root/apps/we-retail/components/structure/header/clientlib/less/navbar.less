@@ -100,6 +100,13 @@ nav.navbar {
       }
     }
 
+    @media (max-width: @screen-sm-max) {
+      & > a {
+        padding-right: @padding-small-horizontal;
+        padding-left: @padding-small-horizontal;
+      }
+    }
+      
     @media (max-width: @grid-float-breakpoint-max) {
       & > a {
         display: inline-block;
