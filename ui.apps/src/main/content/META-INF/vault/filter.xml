@@ -3,10 +3,8 @@
     <filter root="/apps/we-retail">
         <exclude pattern="/apps/we-retail/install" />
     </filter>
-    
+    <filter root="/conf/we-retail"/>
     <filter root="/etc/tags/we-retail"/>
     <filter root="/etc/clientlibs/we-retail"/>
-    <filter root="/etc/designs/templates/we-retail"/>
-    <filter root="/etc/designs/policies/we-retail"/>
     <filter root="/etc/designs/we-retail"/>
 </workspaceFilter>
