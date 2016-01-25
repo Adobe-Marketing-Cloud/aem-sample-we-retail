@@ -7,7 +7,7 @@
         cq:lastReplicated="{Date}2015-09-20T19:51:21.401+02:00"
         cq:lastReplicatedBy="admin"
         cq:lastReplicationAction="Activate"
-        cq:template="/conf/we-retail/settings/wcm/templates/homepage"
+        cq:template="/conf/we-retail/settings/wcm/templates/hero-page"
         cq:templateType="/conf/we-retail/settings/wcm/template-types/html5page"
         jcr:primaryType="cq:PageContent"
         jcr:title="English"
