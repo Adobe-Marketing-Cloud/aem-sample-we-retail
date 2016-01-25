@@ -47,21 +47,18 @@
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span> <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">we.<strong>Retail</strong></a>
+                <a class="navbar-brand" href="${header.languageRoot}.html">we.<strong>Retail</strong></a>
             </div>
+            
             <!-- /.navbar-header -->
             <div class="collapse navbar-collapse" id="we-example-navbar-collapse-inverse">
-                <ul class="nav navbar-nav navbar-center">
-                    <li><a href="#">Experience</a></li>
-                    <li><a href="#">Man</a></li>
-                    <li><a href="#">Woman</a></li>
-                    <li><a href="#">Activities</a></li>
-                    <li><a href="#">Comunity</a></li>
-                    <li><a href="#">About us</a></li>
-
-                    <li data-sly-list.item="${header.items}">${item.page @context='unsafe'}</li>
+                <ul data-sly-list.item="${header.items}" class="nav navbar-nav navbar-center">
+                    <li class="${item.selected ? 'active' : ''}">
+                    	<a href="${item.page.path @ context='uri'}.html">${item.page.title}</a>
+                   	</li>
                 </ul>
             </div>
+            
             <!-- /.navbar-collapse -->
             <div class="navbar-right-outside">
                 <a href="#" class="btn ${header.theme == 'inverse' ? 'btn-primary' : ''}" data-toggle="modal" data-target="#navbar-search">
