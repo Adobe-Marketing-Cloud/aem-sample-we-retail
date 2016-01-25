@@ -17,10 +17,10 @@
 // Server-side JavaScript for the topnav logic
 use(function () {
     var items = [];
-    var root = currentPage.getAbsoluteParent(2);
-    var currentNav = currentPage.getAbsoluteParent(3);
+    var root = currentPage.getAbsoluteParent(3);
+    var currentNav = currentPage.getAbsoluteParent(4);
     
-    if (root && currentNav) {
+    if (root) {
         var currentNavPath = currentNav && currentNav.getPath();
         var it = root.listChildren(new Packages.com.day.cq.wcm.api.PageFilter());
 
@@ -42,6 +42,7 @@ use(function () {
 
     return {
         items: items,
-        theme: theme
+        theme: theme,
+        languageRoot: root
     };
 });
