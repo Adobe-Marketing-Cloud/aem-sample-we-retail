@@ -32,6 +32,7 @@ public class Article {
 
     @Inject
     @Named(JcrConstants.JCR_CONTENT + "/" + JcrConstants.JCR_TITLE)
+    @Default(values = "")
     public String title;
 
     @Inject
