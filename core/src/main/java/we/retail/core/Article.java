@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * Created by Daniel on 03/12/15.
  */
-@Model(adaptables = {Resource.class, SlingHttpServletRequest.class})
+@Model(adaptables = {Resource.class})
 public class Article {
 
     @Inject
