@@ -3,5 +3,5 @@
     cq:policy="/etc/designs/policies/default/we-retail/components/structure/page"
     jcr:primaryType="cq:Component"
     jcr:title="We.Retail Page"
-    sling:resourceSuperType="wcm/foundation/components/templatedpage"
+    sling:resourceSuperType="wcm/foundation/components/page"
     componentGroup=".hidden"/>
