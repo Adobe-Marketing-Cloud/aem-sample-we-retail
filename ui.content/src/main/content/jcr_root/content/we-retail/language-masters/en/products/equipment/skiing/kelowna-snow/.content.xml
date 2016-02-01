@@ -2,54 +2,51 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2015-11-19T17:37:14.282+01:00"
+        cq:lastModified="{Date}2016-02-01T22:05:41.631+01:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2015-11-19T17:37:14.308+01:00"
-        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/eq/eqwn/eqwnkl"
-        cq:template="/apps/we-retail/templates/page-product"
+        cq:template="/conf/we-retail/settings/wcm/templates/content-page"
+        cq:templateType="/conf/we-retail/settings/wcm/template-types/html5page"
         jcr:language="en"
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Kelowna Snow"
-        sling:resourceType="we-retail/components/structure/page">
-        <par
-            cq:lastRolledout="{Date}2015-11-19T17:37:14.296+01:00"
-            cq:lastRolledoutBy="admin"
+        sling:resourceType="we-retail/components/structure/templated-page">
+        <root
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
-            <product
-                cq:lastRolledout="{Date}2015-11-19T17:37:14.299+01:00"
-                cq:lastRolledoutBy="admin"
-                jcr:created="{Date}2015-11-10T15:00:43.278+01:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-19T17:37:14.270+01:00"
-                jcr:lastModifiedBy="admin"
+            <responsivegrid
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/product"/>
-        </par>
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <product
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/product"/>
+                <section_title
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Reviews"
+                    sling:resourceType="we-retail/components/content/section-title"/>
+                <comments
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/comments"/>
+            </responsivegrid>
+        </root>
         <cq:responsive
-            cq:lastRolledout="{Date}2015-11-19T17:37:14.299+01:00"
-            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured">
             <breakpoints
-                cq:lastRolledout="{Date}2015-11-19T17:37:14.302+01:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured">
                 <phone
-                    cq:lastRolledout="{Date}2015-11-19T17:37:14.307+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     title="Phone"
                     width="{Decimal}650"/>
                 <tablet
-                    cq:lastRolledout="{Date}2015-11-19T17:37:14.307+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     title="Tablet"
@@ -57,7 +54,6 @@
             </breakpoints>
         </cq:responsive>
         <cq:LiveSyncConfig
-            cq:excludedPaths="[]"
             cq:isDeep="{Boolean}false"
             cq:master="/content/catalogs/we-retail/en/template-pages/product-page-template"
             cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"

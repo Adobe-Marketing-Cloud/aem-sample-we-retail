@@ -4,54 +4,39 @@
     <jcr:content
         cq:catalogBlueprint="/content/catalogs/we-retail/en/base-catalog/equipment/swimming"
         cq:commerceType="section"
-        cq:lastModified="{Date}2015-11-19T17:37:15.297+01:00"
+        cq:lastModified="{Date}2016-02-01T22:05:42.304+01:00"
         cq:lastModifiedBy="admin"
-        cq:lastPropertyRollout="{Date}2015-11-10T14:18:07.391+01:00"
-        cq:lastRolledout="{Date}2015-11-19T17:37:15.327+01:00"
-        cq:lastRolledoutBy="admin"
+        cq:lastPropertyRollout="{Date}2016-02-01T22:05:42.302+01:00"
         cq:template="/apps/we-retail/templates/page-section"
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Swimming"
         sling:resourceType="we-retail/components/structure/page">
         <par
-            cq:lastRolledout="{Date}2015-11-19T17:37:15.317+01:00"
-            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
-            <product-grid
-                cq:lastRolledout="{Date}2015-11-19T17:37:15.319+01:00"
-                cq:lastRolledoutBy="admin"
+            <section-products
                 jcr:created="{Date}2015-11-10T15:00:43.278+01:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-19T17:37:15.284+01:00"
+                jcr:lastModified="{Date}2015-11-10T15:00:43.278+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/products-grid"
-                displayAs="products"/>
+                sling:resourceType="we-retail/components/content/section-products"/>
         </par>
         <cq:responsive
-            cq:lastRolledout="{Date}2015-11-19T17:37:15.320+01:00"
-            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured">
             <breakpoints
-                cq:lastRolledout="{Date}2015-11-19T17:37:15.322+01:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured">
                 <phone
-                    cq:lastRolledout="{Date}2015-11-19T17:37:15.327+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     title="Phone"
                     width="{Decimal}650"/>
                 <tablet
-                    cq:lastRolledout="{Date}2015-11-19T17:37:15.327+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     title="Tablet"
@@ -59,7 +44,6 @@
             </breakpoints>
         </cq:responsive>
         <cq:LiveSyncConfig
-            cq:excludedPaths="[]"
             cq:isDeep="{Boolean}false"
             cq:master="/content/catalogs/we-retail/en/template-pages/section-page-template"
             cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"

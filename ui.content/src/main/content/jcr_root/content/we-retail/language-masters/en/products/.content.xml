@@ -6,11 +6,9 @@
         cq:commerceProvider="geometrixx"
         cq:commerceType="section"
         cq:designPath="/etc/designs/we-retail"
-        cq:lastModified="{Date}2015-11-19T17:37:10.788+01:00"
+        cq:lastModified="{Date}2016-02-01T22:06:00.736+01:00"
         cq:lastModifiedBy="admin"
-        cq:lastPropertyRollout="{Date}2015-11-19T17:37:10.788+01:00"
-        cq:lastRolledout="{Date}2015-11-19T17:37:10.806+01:00"
-        cq:lastRolledoutBy="admin"
+        cq:lastPropertyRollout="{Date}2016-02-01T22:05:39.358+01:00"
         cq:template="/apps//templates/page-catalog"
         jcr:language="en"
         jcr:mixinTypes="[cq:LiveSync]"
@@ -19,25 +17,17 @@
         sling:resourceType="we-retail/components/structure/page"
         pageTitle="We.Retail">
         <cq:responsive
-            cq:lastRolledout="{Date}2015-11-19T17:37:10.797+01:00"
-            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured">
             <breakpoints
-                cq:lastRolledout="{Date}2015-11-19T17:37:10.801+01:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured">
                 <phone
-                    cq:lastRolledout="{Date}2015-11-19T17:37:10.806+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     title="Phone"
                     width="{Decimal}650"/>
                 <tablet
-                    cq:lastRolledout="{Date}2015-11-19T17:37:10.806+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     title="Tablet"
@@ -45,13 +35,10 @@
             </breakpoints>
         </cq:responsive>
         <par
-            cq:lastRolledout="{Date}2015-11-19T17:37:10.806+01:00"
-            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid"/>
         <cq:LiveSyncConfig
-            cq:excludedPaths="[]"
             cq:isDeep="{Boolean}false"
             cq:master="/content/catalogs/we-retail/en/template-pages/catalog-page-template"
             cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
