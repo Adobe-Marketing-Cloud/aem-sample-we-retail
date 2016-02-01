@@ -2,13 +2,20 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2014-04-01T13:22:16.380+03:00"
-        cq:lastModifiedBy="admin"
-        cq:template="/apps//templates/page-catalog"
+        cq:template="/conf/we-retail/settings/wcm/templates/content-page"
+        cq:templateType="/conf/we-retail/settings/wcm/template-types/html5page"
         jcr:language="en"
         jcr:primaryType="cq:PageContent"
         jcr:title="Catalog Page Template"
-        sling:resourceType="we-retail/components/structure/page">
+        sling:resourceType="we-retail/components/structure/templated-page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+        	</responsivegrid>
+        </root>
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
                 <phone
@@ -21,8 +28,5 @@
                     width="{Decimal}1200"/>
             </breakpoints>
         </cq:responsive>
-        <par
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="wcm/foundation/components/responsivegrid"/>
     </jcr:content>
 </jcr:root>
