@@ -414,6 +414,12 @@
                 <version>4.2.0</version>
                 <scope>provided</scope>
             </dependency>
+            <dependency>
+                <groupId>javax.inject</groupId>
+                <artifactId>javax.inject</artifactId>
+                <version>1</version>
+                <scope>provided</scope>
+            </dependency>
             <!-- Logging Dependencies -->
             <dependency>
                 <groupId>org.slf4j</groupId>
