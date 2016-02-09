@@ -3,11 +3,14 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:allowedTemplates="[/conf/we-retail/settings/wcm/templates/.*,/apps/we-retail/templates/.*]"
+        cq:cloudserviceconfigs="[/etc/cloudservices/dynamictagmanagement/we-retail-dtm]"
         cq:designPath="/etc/designs/we-retail"
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2016-02-09T00:05:48.520+01:00"
+        cq:lastModifiedBy="admin"
         jcr:primaryType="nt:unstructured"
         jcr:title="We.Retail"
-        sling:redirect="{Boolean}true"
+        sling:redirect="true"
         sling:redirectStatus="{Long}302"
         sling:resourceType="foundation/components/redirect"
         branding-global-less="/etc/designs/we-retail/global.less"

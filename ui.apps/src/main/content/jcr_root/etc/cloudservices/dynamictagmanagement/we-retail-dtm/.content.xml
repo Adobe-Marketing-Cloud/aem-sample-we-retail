@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:cloudservicename="dynamictagmanagement"
+        cq:lastModified="{Date}2016-02-09T00:03:58.413+01:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/dtm/templates/dynamictagmanagement"
+        jcr:lastModified="{Date}2016-02-09T00:03:58.389+01:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="We.Retail DTM"
+        sling:resourceType="cq/dtm/components/dynamictagmanagementpage"
+        company="d6b136b41d08124d4359bc37d8a459725f102464"
+        companyDisplayValue="Adobe Internal - we.Retail"
+        productionBundleURL="http://assets.adobedtm.com/d6b136b41d08124d4359bc37d8a459725f102464/satelliteLib-ebef5af58887e67c7b9c7200f49465fb315eb815.js"
+        productionDownloadWorkflow="/etc/workflow/models/cloudservices/DTM_bundle_download/jcr:content/model"
+        property="ebef5af58887e67c7b9c7200f49465fb315eb815"
+        propertyDisplayValue="We.Retail Main Website"
+        stagingBundleURL="http://assets.adobedtm.com/d6b136b41d08124d4359bc37d8a459725f102464/satelliteLib-ebef5af58887e67c7b9c7200f49465fb315eb815-staging.js"
+        stagingDownloadWorkflow="/etc/workflow/models/cloudservices/DTM_bundle_download/jcr:content/model"
+        token="\{64d3535891a30f5eba5b604f886c24c83519163fb0771f1fe6602a65f7a36ed7ad74b4fa260a0d48bb8080fd58764732cbc7bc281a2c85c548ac33de3c3a50f3}">
+        <public
+            jcr:primaryType="nt:unstructured"
+            productionUseSelfHosting="true"
+            stagingUseSelfHosting="true"/>
+    </jcr:content>
+</jcr:root>
