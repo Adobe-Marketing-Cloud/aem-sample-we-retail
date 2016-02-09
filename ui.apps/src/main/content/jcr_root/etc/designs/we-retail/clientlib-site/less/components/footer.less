@@ -3,12 +3,27 @@
 
   color: #fff;
 
+  padding-top: 50px;
+
+  text-align: center;
+
   .text-muted {
-    color: fade(#fff, 20);
+    color: fade(#fff, 40);
   }
 
-  &-separator {
-    padding-top: 75px;
+  &-section {
+    padding: 30px 0;
+
+    &--sub {
+        border-top: 1px solid fade(#fff, 5);
+        margin: 0 10%;
+        text-align: center;
+    }
+
+    &-item {
+        display: block;
+        margin: 0 1em;
+    }
   }
 
   &-nav {
@@ -62,4 +77,24 @@
   .we-Logo {
     margin: 15px 0;
   }
+}
+
+@media (min-width: @screen-md-min) {
+    .we-Footer {
+        text-align: left;
+
+        &-section {
+            padding: inherit;
+
+            &--sub {
+                padding: 30px 0;
+                border: 0;
+            }
+
+            &-item {
+                display: inline-block;
+            }
+        }
+
+    }
 }
