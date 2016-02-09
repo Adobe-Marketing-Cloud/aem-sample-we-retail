@@ -126,84 +126,21 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="The latest on We.Retail"
                     sling:resourceType="we-retail/components/content/section-title"/>
-                <article_teaser
-                    jcr:created="{Date}2015-11-04T00:31:31.216+01:00"
+                <articles_list
+                    jcr:created="{Date}2015-11-23T21:44:37.256+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-04T00:31:31.216+01:00"
+                    jcr:lastModified="{Date}2015-11-23T21:44:37.256+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/article-teaser">
-                    <cq:responsive jcr:primaryType="nt:unstructured">
-                        <default
-                            jcr:primaryType="nt:unstructured"
-                            width="4"/>
-                    </cq:responsive>
-                </article_teaser>
-                <article_teaser_810360091
-                    jcr:created="{Date}2015-11-04T00:31:41.312+01:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-04T00:31:41.312+01:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/article-teaser">
-                    <cq:responsive jcr:primaryType="nt:unstructured">
-                        <default
-                            jcr:primaryType="nt:unstructured"
-                            width="4"/>
-                    </cq:responsive>
-                </article_teaser_810360091>
-                <article_teaser_49623094
-                    jcr:created="{Date}2015-11-04T00:31:46.320+01:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-04T00:31:46.320+01:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/article-teaser">
-                    <cq:responsive jcr:primaryType="nt:unstructured">
-                        <default
-                            jcr:primaryType="nt:unstructured"
-                            width="4"/>
-                    </cq:responsive>
-                </article_teaser_49623094>
-                <article_teaser_2099972854
-                    jcr:created="{Date}2015-11-04T00:33:46.025+01:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-04T00:33:46.025+01:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/article-teaser">
-                    <cq:responsive jcr:primaryType="nt:unstructured">
-                        <default
-                            jcr:primaryType="nt:unstructured"
-                            width="4"/>
-                    </cq:responsive>
-                </article_teaser_2099972854>
-                <article_teaser_1776029550
-                    jcr:created="{Date}2015-11-04T00:33:49.217+01:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-04T00:33:49.217+01:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/article-teaser">
-                    <cq:responsive jcr:primaryType="nt:unstructured">
-                        <default
-                            jcr:primaryType="nt:unstructured"
-                            width="4"/>
-                    </cq:responsive>
-                </article_teaser_1776029550>
-                <article_teaser_2066798396
-                    jcr:created="{Date}2015-11-04T00:33:52.939+01:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-04T00:33:52.939+01:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/article-teaser">
-                    <cq:responsive jcr:primaryType="nt:unstructured">
-                        <default
-                            jcr:primaryType="nt:unstructured"
-                            width="4"/>
-                    </cq:responsive>
-                </article_teaser_2066798396>
+                    sling:resourceType="we-retail/components/content/articles-list"
+                    displayAs="default"
+                    feedEnabled="true"
+                    limit="6"
+                    listFrom="children"
+                    parentPage="/content/we-retail/language-masters/en/experience"
+                    orderBy="cq:lastModified"
+                    pageMax="0"
+                    tagsMatch="any"/>
                 <button
                     jcr:created="{Date}2015-11-09T22:32:54.989+01:00"
                     jcr:createdBy="admin"
@@ -212,7 +149,7 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/button"
                     label="More stories"
-                    linkTo="/content"/>
+                    linkTo="/content/we-retail/language-masters/en/experience.html"/>
                 <section_title_239098915
                     jcr:created="{Date}2015-11-04T00:51:38.275+01:00"
                     jcr:createdBy="admin"
