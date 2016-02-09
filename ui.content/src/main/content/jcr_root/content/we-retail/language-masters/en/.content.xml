@@ -27,7 +27,8 @@
                 fileReference="/content/dam/we-retail/images/bg-jumbotron-1.jpg"
                 heading="All-new winter collection 2016"
                 title="Built for the coldest winter on earth"
-                useFullWidth="true"/>
+                useFullWidth="true"
+                keepRatio="true"/>
             <responsivegrid
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
