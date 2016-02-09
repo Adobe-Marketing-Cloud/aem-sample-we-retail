@@ -18,7 +18,7 @@
   Defines list item templates
 */-->
 <template data-sly-template.default="${@ renderItem}">
-    <sly data-sly-resource="${ renderItem.item.path @ resourceType='we-retail/components/content/articles-list/article-teaser'}"></sly>
+    <sly data-sly-resource="${ renderItem.item.path @ resourceType='we-retail/components/content/articles-list/article-teaser', selectors='short'}"></sly>
 </template>
 <template data-sly-template.news="${@ renderItem}">
     <sly data-sly-resource="${ renderItem.item.path @ resourceType='we-retail/components/content/articles-list/article-teaser'}"></sly>
