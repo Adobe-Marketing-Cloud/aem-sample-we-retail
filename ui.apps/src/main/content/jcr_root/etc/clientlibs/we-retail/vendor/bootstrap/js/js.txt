@@ -1,0 +1,14 @@
+#base=../src/js
+
+affix.js
+alert.js
+dropdown.js
+tooltip.js
+modal.js
+transition.js
+button.js
+popover.js
+carousel.js
+scrollspy.js
+collapse.js
+tab.js
