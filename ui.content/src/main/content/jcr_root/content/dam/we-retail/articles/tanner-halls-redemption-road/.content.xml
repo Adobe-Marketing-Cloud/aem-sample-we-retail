@@ -2,8 +2,7 @@
 <jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:isCheckedOut="{Boolean}true"
     jcr:mixinTypes="[mix:versionable]"
-    jcr:primaryType="dam:Asset"
-    jcr:uuid="4b309201-8886-4efa-aeda-8be0d9821b73">
+    jcr:primaryType="dam:Asset">
     <jcr:content
         cq:name="tanner-halls-redemption-road"
         cq:parentPath="/content/dam/we-retail/articles"
@@ -27,7 +26,7 @@
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
-            author="admin"/>
+            author="andrew.schaeffer@trashymail.com"/>
         <related jcr:primaryType="nt:unstructured"/>
     </jcr:content>
     <associated

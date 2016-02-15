@@ -1,23 +1,20 @@
 package we.retail.core;
 
-import com.day.cq.commons.jcr.JcrConstants;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.sling.api.SlingHttpServletRequest;
-import org.apache.sling.api.resource.Resource;
-import org.apache.sling.api.resource.ValueMap;
-import org.apache.sling.models.annotations.*;
-import org.apache.sling.models.annotations.injectorspecific.ResourcePath;
-import org.apache.sling.models.annotations.injectorspecific.Self;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 import javax.inject.Named;
-import java.util.ArrayList;
-import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
+import org.apache.sling.api.resource.Resource;
+import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.Optional;
 
 /**
  * Created by Daniel on 04/12/15.
  */
-@Model(adaptables = {Resource.class, SlingHttpServletRequest.class})
+@Model(adaptables = {Resource.class})
 public class Profile {
 
     @Inject
