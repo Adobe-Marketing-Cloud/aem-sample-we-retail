@@ -1,0 +1,76 @@
+{{!
+
+ ADOBE CONFIDENTIAL
+ __________________
+
+  Copyright 2014 Adobe Systems Incorporated
+  All Rights Reserved.
+
+ NOTICE:  All information contained herein is, and remains
+ the property of Adobe Systems Incorporated and its suppliers,
+ if any.  The intellectual and technical concepts contained
+ herein are proprietary to Adobe Systems Incorporated and its
+ suppliers and are protected by trade secret or copyright law.
+ Dissemination of this information or reproduction of this material
+ is strictly forbidden unless prior written permission is obtained
+ from Adobe Systems Incorporated.
+
+}}
+
+<div class="scf-commentsystem we-Comments" data-component-id="{{id}}" data-scf-component="we-retail/components/hbs/comments">
+    <div>
+        {{#each items}}
+            {{#if isVisible}}
+                {{include this resourceType='we-retail/components/hbs/comments/comment'}}
+            {{/if}}
+        {{/each}}
+    </div>
+
+    <div>
+        <ul>
+            {{#pages pageInfo}}
+                <li>
+                    <a class="scf-page{{#if currentPage}} scf-currentPage{{/if}}" data-page-suffix="{{suffix}}" evt="click=navigate">{{pageNumber}}</a>
+                </li>
+            {{/pages}}
+        </ul>
+    </div>
+
+    {{#if mayPost}}
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <button class="btn btn-action btn-primary" evt="click=expandComposer">Write a review</button>
+            </div>
+        </div>
+
+        <div class="scf-composer-block we-Comments-composer scf-is-collapsed scf-js-composer-block">
+            <img class="scf-composer-avatar" src="{{loggedInUser.avatarUrl}}"/>
+
+            <form evt="submit=addComment" class="scf-composer">
+                {{#if configuration.isRTEEnabled}}
+                    <textarea class="scf-composer-msg scf-rte-placeholder" placeholder="{{i18n "Write a comment"}}" evt="click=expandComposer"></textarea>
+                    <div class="scf-rte-composer">
+                        <textarea class="scf-composer-msg" data-attrib="message" data-field-type="rte" name="message" placeholder="{{i18n "Write a comment"}}"></textarea>
+                    </div>
+                {{else}}
+                    <textarea class="scf-composer-msg" data-attrib="message" name="message" placeholder="{{i18n "Write a comment"}}" evt="click=expandComposer"></textarea>
+                {{/if}}
+                <div class='scf-composer-toolbar'>
+                    {{#if configuration.isAttachmentAllowed}}
+                        <button class="scf-composer-action scf-composer-attach" evt="click=openAttachmentDialog">{{i18n "Attach"}}</button>
+                        <input class="scf-comment-attachment-input scf-js-cmt-att-input" type="file" data-attrib='attachment' name="attachment" multiple evt="change=renderAttachmentList" />
+                    {{/if}}
+                    <div class="scf-composer-actions">
+                        <button type="reset" class="scf-composer-action" evt="click=cancelComposer">{{i18n "Cancel"}}</button>
+                        <input type="submit" value="{{i18n "Post"}}" evt="submit=addComment" />
+                    </div>
+                    {{#if configuration.isAttachmentAllowed}}
+                        <div class="scf-composer-attachments">
+                            <ul class="scf-attachment-list scf-js-composer-att"></ul>
+                        </div>
+                    {{/if}}
+                </div>
+            </form>
+        </div>
+    {{/if}}
+</div>

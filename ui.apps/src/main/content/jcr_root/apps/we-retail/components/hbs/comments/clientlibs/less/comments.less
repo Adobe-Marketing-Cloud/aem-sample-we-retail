@@ -1,0 +1,83 @@
+@import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
+
+.we-Comments {
+  margin-top: 35px;
+  margin-bottom: 25px;
+
+  &-avatar {
+    .img-center;
+
+    border-radius: 50%;
+  }
+
+  &-name {
+    .h5;
+
+    display: block;
+
+    margin: 0 auto 13px;
+  }
+
+  &-date {
+    .text-muted;
+
+    font-weight: 700;
+  }
+
+  &-title {
+    .h2;
+
+    margin-top: 0;
+  }
+
+  &-content {
+    p {
+      margin-bottom: 9px;
+    }
+  }
+
+  &-ratings {
+    .list-unstyled;
+
+    margin-bottom: 0;
+
+    li {
+      text-align: right;
+    }
+
+    .we-Rating-desc {
+      margin-right: 20px;
+    }
+  }
+
+  &-reactions {
+    .list-inline;
+
+    .we-Icon {
+      vertical-align: baseline;
+
+      font-size: 17px;
+
+      margin-right: 10px;
+    }
+
+    span {
+      display: inline-block;
+
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+
+  &-item {
+    border-bottom: 1px solid fade(@gray-base, 10);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+  }
+
+  &-composer {
+    &.scf-is-collapsed {
+        display: none;
+    }
+  }
+}
