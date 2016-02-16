@@ -76,11 +76,9 @@
                             {{/if}}
                         {{/if}}
                     </div>
-                    <ul class="we-Comments-reactions">
-                        <div class="scf-comment-votes">
-                            {{include this.votes resourceType='social/tally/components/hbs/voting'}}
-                        </div>
-                    </ul>
+                    <div class="we-Comments-reactions">
+                        {{include this.id path='votes' resourceType='we-retail/components/hbs/voting'}}
+                    </div>
                 </div>
                 <div class="col-md-3">
                     <ul class="we-Comments-ratings">
