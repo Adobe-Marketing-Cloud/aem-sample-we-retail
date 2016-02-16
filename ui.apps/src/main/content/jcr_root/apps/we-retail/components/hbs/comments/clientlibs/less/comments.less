@@ -47,7 +47,6 @@
   }
 
   &-reactions {
-    .list-inline;
 
     .we-Icon {
       vertical-align: baseline;
@@ -55,6 +54,27 @@
       font-size: 17px;
 
       margin-right: 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &[data-voting-value="unset"] {
+        color: #000;
+
+        &:hover {
+            color: fade(#000, 50);
+        }
+      }
+
+      &[data-voting-value="1"] {
+        color: fade(#000, 50);
+
+        &:hover {
+            color: #000;
+        }
+      }
+
     }
 
     span {
