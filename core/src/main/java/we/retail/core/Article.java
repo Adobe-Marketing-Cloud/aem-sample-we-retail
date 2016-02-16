@@ -1,8 +1,12 @@
 package we.retail.core;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import javax.inject.Inject;
@@ -107,6 +111,26 @@ public class Article {
 		}
     	
     	return author;
+    }
+    
+    public String getModified() {
+    	String result = null;
+    	
+    	try {
+	    	Resource contentFragmentResource = getContentFragment();
+	    	
+	    	if(contentFragmentResource != null) {
+		    	ValueMap contentFragmentMetadata = contentFragmentResource.adaptTo(ValueMap.class);	
+		    	Date modified = contentFragmentMetadata.get("dc:modified", Date.class);
+		    	
+		    	result = new SimpleDateFormat("MMM dd, YYYY", Locale.US).format(modified);
+	    	}
+	    }
+		catch (RepositoryException ex) {
+			LOGGER.error("Error getting article creation date", ex);
+		}
+    	
+    	return result;
     }
     
     private Resource getContentFragment() throws RepositoryException {
