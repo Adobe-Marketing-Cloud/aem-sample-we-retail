@@ -30,7 +30,7 @@
                     <a class="we-Comments-name" href="{{author.profileUrl}}">{{author.name}}</a>
                 </div>
                 <div class="col-sm-4 text-right">
-                    <time class="we-Comments-date">{{pretty-time created}}</time>
+                    {{#if created}}<time class="we-Comments-date">{{pretty-time created}}</time>{{/if}}
                 </div>
             </div>
             <div class="row">
