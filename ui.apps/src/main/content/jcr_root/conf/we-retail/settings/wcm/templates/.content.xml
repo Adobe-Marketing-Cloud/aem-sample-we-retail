@@ -3,4 +3,5 @@
     jcr:primaryType="cq:Page">
     <hero-page/>
     <content-page/>
+    <article-page/>
 </jcr:root>

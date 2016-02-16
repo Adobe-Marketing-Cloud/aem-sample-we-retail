@@ -26,8 +26,8 @@
     <strong class="we-ArticleTeaser-category" data-sly-test="${ article.tags }">
         <sly data-sly-list.tag="${ article.tags }">${ tag.name }</sly>
     </strong>
-    <span class="we-ArticleTeaser-author">${ article.authorName }</span>
-    <span class="we-ArticleTeaser-date">October 27, 2015</span>
+    
+    <span class="we-ArticleTeaser-date">${ article.created }</span>
     <div class="we-ArticleTeaser-description" data-sly-test="${ article.description }">
         ${ article.description }
     </div>
