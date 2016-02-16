@@ -55,6 +55,7 @@ use(function () {
     }
     else {
         baseProductProperties = variants[0];
+        baseProductProperties.path = baseProduct.getPath();
     }
 
     product.base = baseProductProperties;
