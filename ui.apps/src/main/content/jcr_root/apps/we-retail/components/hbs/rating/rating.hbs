@@ -1,0 +1,40 @@
+{{!
+
+ ADOBE CONFIDENTIAL
+ __________________
+
+  Copyright 2014 Adobe Systems Incorporated
+  All Rights Reserved.
+
+ NOTICE:  All information contained herein is, and remains
+ the property of Adobe Systems Incorporated and its suppliers,
+ if any.  The intellectual and technical concepts contained
+ herein are proprietary to Adobe Systems Incorporated and its
+ suppliers and are protected by trade secret or copyright law.
+ Dissemination of this information or reproduction of this material
+ is strictly forbidden unless prior written permission is obtained
+ from Adobe Systems Incorporated.
+
+}}
+<div class="scf scf-ratings" data-component-id="{{id}}" data-scf-component="we-retail/components/hbs/rating">
+    {{#if currentUserResponse}}
+    {{else}}
+        {{#if loggedInUser.loggedIn}}
+            {{i18n "Rate this:"}}
+        {{/if}}
+    {{/if}}
+    <div>
+        <div>
+            {{#if loggedInUser.loggedIn}}
+                <div class="we-Starsbar" data-rating-shown="{{xss-htmlAttr currentUserResponse.rating}}">
+                    <i class="we-Star" data-rating-value="5 " evt="click=rate,mouseenter=highlight "></i>
+                    <i class="we-Star" data-rating-value="4 " evt="click=rate,mouseenter=highlight "></i>
+                    <i class="we-Star" data-rating-value="3 " evt="click=rate,mouseenter=highlight "></i>
+                    <i class="we-Star" data-rating-value="2 " evt="click=rate,mouseenter=highlight "></i>
+                    <i class="we-Star" data-rating-value="1 " evt="click=rate,mouseenter=highlight "></i>
+                </div>
+                <span class="we-Rating-desc">{{totalNumberOfResponses}} reviews</span>
+            {{/if}}
+        </div>
+    </div>
+</div>
