@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
-    <lorem-ipsum/>
-    <sit-amet/>
     <jcr:content
         cq:lastModified="{Date}2015-11-23T21:47:27.108+01:00"
         cq:lastModifiedBy="admin"
@@ -51,6 +49,7 @@
             </breakpoints>
         </cq:responsive>
     </jcr:content>
-    <tanner-hall-s-redemption-road/>
-    <article1/>
+    <the-history-of-freestyle-snowboarding-at-whistler/>
+    <how-to-film-yourself-snowboarding/>
+    <all-the-gear-you-need-for-a-terrain-park-tour/>
 </jcr:root>

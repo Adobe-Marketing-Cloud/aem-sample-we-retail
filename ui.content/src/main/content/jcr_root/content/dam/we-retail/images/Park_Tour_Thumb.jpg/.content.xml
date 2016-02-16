@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="9b5f60d9-a295-42b5-9a7e-3ddc3ab54f52">
+    <jcr:content
+        dam:assetID="9b5f60d9-a295-42b5-9a7e-3ddc3ab54f52"
+        dam:relativePath="we-retail/images/Park_Tour_Thumb.jpg"
+        jcr:lastModified="{Date}2016-02-16T01:26:38.714+01:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2016-02-16T01:26:38.565+01:00"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}-1"
+            dam:Physicalheightininches="{Decimal}-1.0"
+            dam:Physicalwidthindpi="{Long}-1"
+            dam:Physicalwidthininches="{Decimal}-1.0"
+            dam:Progressive="no"
+            dam:sha1="c4a7b0ce05c703ada807e7518d179526e8033f2d"
+            dam:size="{Long}45868"
+            dc:format="image/jpeg"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}251"
+            tiff:ImageWidth="{Long}447"
+            xmp:CreatorTool="Adobe Photoshop CC Macintosh"
+            xmpMM:DocumentID="xmp.did:85D2035AB86411E5AC73CB107D2A584B"
+            xmpMM:InstanceID="xmp.iid:F9EFB090B80D11E5AC73CB107D2A584B">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="xmp.did:F9EFB08FB80D11E5AC73CB107D2A584B"
+                stRef:instanceID="xmp.iid:F9EFB08EB80D11E5AC73CB107D2A584B"
+                xmpNodeType="xmpStruct"/>
+        </metadata>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>
