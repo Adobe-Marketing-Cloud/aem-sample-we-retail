@@ -18,21 +18,15 @@
 }}
 <div class="scf scf-ratings" data-component-id="{{id}}" data-scf-template="display">
     <div>
-        <div class="scf-ratings-bar-empty">
-        <div class="scf-ratings-bar scf-js-ratings-bar {{#if currentUserResponse}}scf-ratings-bar-selected" data-rating-shown="{{xss-htmlAttr currentUserResponse.rating}}" {{else}} scf-ratings-bar-full " data-rating-shown=" {{xss-htmlAttr averageRating}} "
+        {{#if loggedInUser.loggedIn}}
+            <div class="we-Starsbar" data-rating-shown="{{#if currentUserResponse}}{{xss-htmlAttr currentUserResponse.rating}}{{else}}{{xss-htmlAttr averageRating}}{{/if}}">
+                <i class="we-Star" data-rating-value="5 "></i>
+                <i class="we-Star" data-rating-value="4 "></i>
+                <i class="we-Star" data-rating-value="3 "></i>
+                <i class="we-Star" data-rating-value="2 "></i>
+                <i class="we-Star" data-rating-value="1 "></i>
+            </div>
         {{/if}}
-            title=" {{averageRating}} of 5 stars ">
-            {{#if loggedInUser.loggedIn}}
-                <div class="scf-rating-trigger-bar ">
-                    <div class="scf-ratings-star " data-rating-value="1 "></div>
-                    <div class="scf-ratings-star " data-rating-value="2 "></div>
-                    <div class="scf-ratings-star " data-rating-value="3 "></div>
-                    <div class="scf-ratings-star " data-rating-value="4 "></div>
-                    <div class="scf-ratings-star " data-rating-value="5 "></div>
-                </div>
-            {{/if}}
-        </div>
     </div>
-    <p class="scf-ratings-text scf-quiet ">{{formattedAverageRating}} {{i18n "out of 5 stars"}} ({{totalNumberOfResponses}})</p>
 </div>
 </div>
