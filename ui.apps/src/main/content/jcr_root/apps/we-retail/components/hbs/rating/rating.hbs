@@ -17,12 +17,6 @@
 
 }}
 <div class="scf scf-ratings" data-component-id="{{id}}" data-scf-component="we-retail/components/hbs/rating">
-    {{#if currentUserResponse}}
-    {{else}}
-        {{#if loggedInUser.loggedIn}}
-            {{i18n "Rate this:"}}
-        {{/if}}
-    {{/if}}
     <div>
         <div>
             {{#if loggedInUser.loggedIn}}
