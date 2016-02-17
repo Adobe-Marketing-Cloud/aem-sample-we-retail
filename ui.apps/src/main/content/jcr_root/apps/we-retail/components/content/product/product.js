@@ -1,6 +1,6 @@
 'use strict';
 
-use(function () {
+use(["commerce_init.js"], function (commerceInit) {
     var product = {};
 
     var resolver = resource.getResourceResolver();
@@ -55,8 +55,8 @@ use(function () {
     }
     else {
         baseProductProperties = variants[0];
-        baseProductProperties.path = baseProduct.getPath();
     }
+    baseProductProperties.productTrackingPath = request.getAttribute("cq.commerce.productTrackingPath");
 
     product.base = baseProductProperties;
     product.variants = variants;
