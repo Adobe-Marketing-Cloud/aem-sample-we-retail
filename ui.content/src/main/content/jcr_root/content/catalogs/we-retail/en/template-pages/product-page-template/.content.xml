@@ -13,6 +13,7 @@
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <responsivegrid
                 jcr:primaryType="nt:unstructured"
+                cq:commerceType="product"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
 	            <product
 	                jcr:primaryType="nt:unstructured"
