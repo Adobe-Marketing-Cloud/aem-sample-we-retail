@@ -500,6 +500,13 @@
                 <version>1.4</version>
                 <scope>test</scope>
             </dependency>
+
+            <dependency>
+                <groupId>com.adobe.cq.commerce</groupId>
+                <artifactId>cq-commerce-core</artifactId>
+                <version>5.14.84</version>
+                <scope>provided</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
