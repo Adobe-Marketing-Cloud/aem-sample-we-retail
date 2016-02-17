@@ -1,0 +1,31 @@
+<!--/*
+
+  ADOBE CONFIDENTIAL
+  __________________
+
+   Copyright 2014 Adobe Systems Incorporated
+   All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+
+  ==============================================================================
+
+  AEM Recommendation component.
+
+  Shows list of recommended products
+
+  ==============================================================================
+
+*/-->
+<div data-sly-use.clientlib="${'/libs/granite/sightly/templates/clientlib.html'}" data-sly-unwrap></div>
+<ul class="recommendations-viewer foundation-ordered-list-container products-grid" data-relationship-type="${resource.relationshipType}" data-max-count="${resource.max}">
+    <div data-sly-include="defaultcontent.html" data-sly-unwrap/>
+    <div data-sly-include="producttemplate.html" data-sly-unwrap/>
+</ul>
