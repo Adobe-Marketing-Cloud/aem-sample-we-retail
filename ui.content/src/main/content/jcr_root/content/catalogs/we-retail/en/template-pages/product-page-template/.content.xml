@@ -18,13 +18,22 @@
 	                jcr:primaryType="nt:unstructured"
                     cq:commerceType="product"
 	                sling:resourceType="we-retail/components/content/product"/>
-	            <section_title
+	            <reviews_section_title
                 	jcr:primaryType="nt:unstructured"
                 	jcr:title="Reviews"
                 	sling:resourceType="we-retail/components/content/section-title"/>
             	<reviews
                 	jcr:primaryType="nt:unstructured"
                 	sling:resourceType="we-retail/components/content/product/reviews"/>
+                <similar_section_title
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="You may also like"
+                    sling:resourceType="we-retail/components/content/section-title"/>
+                <similar_products
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/product/recommendation"
+                    max="6"
+                    relationshipType="relatedproducts:info.we-retail.similar-to-current"/>
             </responsivegrid>
         </root>
         <cq:responsive jcr:primaryType="nt:unstructured">
