@@ -6,8 +6,17 @@
         sling:resourceType="wcm/core/components/policies/mappings"
         pageProperties="[foundation/components/page/cq:dialog/content/items/tabs/items/basic,foundation/components/page/cq:dialog/content/items/tabs/items/advanced,foundation/components/page/cq:dialog/content/items/tabs/items/thumbnail,foundation/components/page/cq:dialog/content/items/tabs/items/cloudservices,foundation/components/page/cq:dialog/content/items/tabs/items/target,foundation/components/page/cq:dialog/content/items/tabs/items/permissions,foundation/components/page/cq:dialog/content/items/tabs/items/blueprint,foundation/components/page/cq:dialog/content/items/tabs/items/livecopy]">
         <root
-            cq:policy="/conf/we-retail/settings/wcm/policies/responsivegrid-structure"
+            cq:policy="wcm/foundation/components/responsivegrid/responsivegrid-structure"
+            jcr:lastModified="{Date}2016-02-16T21:38:49.301+01:00"
+            jcr:lastModifiedBy="admin"
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="wcm/core/components/policies/mapping"/>
+            sling:resourceType="wcm/core/components/policies/mapping">
+            <responsivegrid
+                cq:policy="wcm/foundation/components/responsivegrid/responsivegrid-default"
+                jcr:lastModified="{Date}2016-02-16T21:39:02.041+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping"/>
+        </root>
     </jcr:content>
 </jcr:root>
