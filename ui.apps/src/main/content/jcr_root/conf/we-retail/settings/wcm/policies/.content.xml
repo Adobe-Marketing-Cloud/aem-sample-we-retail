@@ -1,100 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
-    <responsivegrid-default
-        jcr:description="Policy for editable paragraph systems"
-        jcr:lastModified="2016-01-13T15:56:35.671+01:00"
-        jcr:lastModifiedBy="admin"
-        jcr:primaryType="nt:unstructured"
-        jcr:title="Default"
-        sling:resourceType="wcm/core/components/policy/policy"
-        components="[group:We.Retail,/libs/wcm/foundation/components/text,/libs/wcm/foundation/components/image,/libs/wcm/foundation/components/title,/libs/wcm/foundation/components/list,/libs/wcm/foundation/components/responsivegrid]"
-        policyResourceType="wcm/foundation/components/responsivegrid">
-        <cq:authoring jcr:primaryType="nt:unstructured">
-            <assetToComponentMapping jcr:primaryType="nt:unstructured">
-                <image
-                    jcr:primaryType="nt:unstructured"
-                    assetGroup="media"
-                    assetMimetype="image/*"
-                    droptarget="image"
-                    resourceType="wcm/foundation/components/image"
-                    type="Images"/>
-                <product
-                    jcr:primaryType="nt:unstructured"
-                    assetGroup="product"
-                    droptarget="product-data-reference"
-                    resourceType="commerce/components/product"
-                    type="Products"/>
-                <flash
-                    jcr:primaryType="nt:unstructured"
-                    assetGroup="media"
-                    assetMimetype="application/x-shockwave-flash"
-                    droptarget="flash"
-                    resourceType="foundation/components/flash"
-                    type="Images"/>
-                <document
-                    jcr:primaryType="nt:unstructured"
-                    assetGroup="media"
-                    assetMimetype="[application/vnd.openxmlformats,application/msword,application/vnd.ms-powerpoint,application/mspowerpoint,application/powerpoint,application/x-mspowerpoint,application/x-msexcel,application/x-excel,application/excel,application/vnd.ms-excel,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document]"
-                    droptarget="file"
-                    resourceType="foundation/components/download"
-                    type="Images"/>
-                <video
-                    jcr:primaryType="nt:unstructured"
-                    assetGroup="media"
-                    assetMimetype="video/*"
-                    droptarget="video"
-                    resourceType="foundation/components/video"
-                    type="Images"/>
-            </assetToComponentMapping>
-        </cq:authoring>
-    </responsivegrid-default>
-    <responsivegrid-structure
-        jcr:description="Policy for page root parsys to allow structure components"
-        jcr:lastModified="2016-01-13T14:15:40.196+01:00"
-        jcr:lastModifiedBy="admin"
-        jcr:primaryType="nt:unstructured"
-        jcr:title="Structure"
-        sling:resourceType="wcm/core/components/policy/policy"
-        components="[group:We.Retail,group:We.Retail.Structure,/libs/wcm/foundation/components/text,/libs/wcm/foundation/components/image,/libs/wcm/foundation/components/title,/libs/wcm/foundation/components/list,/libs/wcm/foundation/components/responsivegrid]"
-        policyResourceType="wcm/foundation/components/responsivegrid">
-        <cq:authoring jcr:primaryType="nt:unstructured">
-            <assetToComponentMapping jcr:primaryType="nt:unstructured">
-                <image
-                    jcr:primaryType="nt:unstructured"
-                    assetGroup="media"
-                    assetMimetype="image/*"
-                    droptarget="image"
-                    resourceType="wcm/foundation/components/image"
-                    type="Images"/>
-                <product
-                    jcr:primaryType="nt:unstructured"
-                    assetGroup="product"
-                    droptarget="product-data-reference"
-                    resourceType="commerce/components/product"
-                    type="Products"/>
-                <flash
-                    jcr:primaryType="nt:unstructured"
-                    assetGroup="media"
-                    assetMimetype="application/x-shockwave-flash"
-                    droptarget="flash"
-                    resourceType="foundation/components/flash"
-                    type="Images"/>
-                <document
-                    jcr:primaryType="nt:unstructured"
-                    assetGroup="media"
-                    assetMimetype="[application/vnd.openxmlformats,application/msword,application/vnd.ms-powerpoint,application/mspowerpoint,application/powerpoint,application/x-mspowerpoint,application/x-msexcel,application/x-excel,application/excel,application/vnd.ms-excel,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document]"
-                    droptarget="file"
-                    resourceType="foundation/components/download"
-                    type="Images"/>
-                <video
-                    jcr:primaryType="nt:unstructured"
-                    assetGroup="media"
-                    assetMimetype="video/*"
-                    droptarget="video"
-                    resourceType="foundation/components/video"
-                    type="Images"/>
-            </assetToComponentMapping>
-        </cq:authoring>
-    </responsivegrid-structure>
+    <wcm jcr:primaryType="nt:unstructured">
+        <foundation jcr:primaryType="nt:unstructured">
+            <components jcr:primaryType="nt:unstructured">
+                <responsivegrid jcr:primaryType="nt:unstructured">
+                    <responsivegrid-default
+                        jcr:description="Policy for editable paragraph systems"
+                        jcr:lastModified="{Date}2016-02-16T21:39:02.041+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Retail Default"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[group:We.Retail,/libs/wcm/foundation/components/text,/libs/wcm/foundation/components/image,/libs/wcm/foundation/components/title,/libs/wcm/foundation/components/list,/libs/wcm/foundation/components/responsivegrid]"
+                        policyResourceType="wcm/foundation/components/responsivegrid">
+                        <cq:authoring jcr:primaryType="nt:unstructured">
+                            <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                                <image
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="image/*"
+                                    droptarget="image"
+                                    resourceType="wcm/foundation/components/image"
+                                    type="Images"/>
+                                <product
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="product"
+                                    droptarget="product-data-reference"
+                                    resourceType="commerce/components/product"
+                                    type="Products"/>
+                                <flash
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="application/x-shockwave-flash"
+                                    droptarget="flash"
+                                    resourceType="foundation/components/flash"
+                                    type="Images"/>
+                                <document
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="[application/vnd.openxmlformats,application/msword,application/vnd.ms-powerpoint,application/mspowerpoint,application/powerpoint,application/x-mspowerpoint,application/x-msexcel,application/x-excel,application/excel,application/vnd.ms-excel,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document]"
+                                    droptarget="file"
+                                    resourceType="foundation/components/download"
+                                    type="Images"/>
+                                <video
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="video/*"
+                                    droptarget="video"
+                                    resourceType="foundation/components/video"
+                                    type="Images"/>
+                            </assetToComponentMapping>
+                        </cq:authoring>
+                    </responsivegrid-default>
+                    <responsivegrid-structure
+                        jcr:description="Policy for page root parsys to allow structure components"
+                        jcr:lastModified="{Date}2016-02-16T21:38:49.301+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Retail Structure"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[group:We.Retail,group:We.Retail.Structure,/libs/wcm/foundation/components/text,/libs/wcm/foundation/components/image,/libs/wcm/foundation/components/title,/libs/wcm/foundation/components/list,/libs/wcm/foundation/components/responsivegrid]"
+                        policyResourceType="wcm/foundation/components/responsivegrid">
+                        <cq:authoring jcr:primaryType="nt:unstructured">
+                            <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                                <image
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="image/*"
+                                    droptarget="image"
+                                    resourceType="wcm/foundation/components/image"
+                                    type="Images"/>
+                                <product
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="product"
+                                    droptarget="product-data-reference"
+                                    resourceType="commerce/components/product"
+                                    type="Products"/>
+                                <flash
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="application/x-shockwave-flash"
+                                    droptarget="flash"
+                                    resourceType="foundation/components/flash"
+                                    type="Images"/>
+                                <document
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="[application/vnd.openxmlformats,application/msword,application/vnd.ms-powerpoint,application/mspowerpoint,application/powerpoint,application/x-mspowerpoint,application/x-msexcel,application/x-excel,application/excel,application/vnd.ms-excel,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document]"
+                                    droptarget="file"
+                                    resourceType="foundation/components/download"
+                                    type="Images"/>
+                                <video
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="video/*"
+                                    droptarget="video"
+                                    resourceType="foundation/components/video"
+                                    type="Images"/>
+                            </assetToComponentMapping>
+                        </cq:authoring>
+                    </responsivegrid-structure>
+                </responsivegrid>
+            </components>
+        </foundation>
+    </wcm>
 </jcr:root>
