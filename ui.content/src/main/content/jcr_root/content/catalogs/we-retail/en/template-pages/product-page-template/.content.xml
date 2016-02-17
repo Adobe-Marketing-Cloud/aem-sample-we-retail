@@ -21,9 +21,9 @@
                 	jcr:primaryType="nt:unstructured"
                 	jcr:title="Reviews"
                 	sling:resourceType="we-retail/components/content/section-title"/>
-            	<comments
+            	<reviews
                 	jcr:primaryType="nt:unstructured"
-                	sling:resourceType="we-retail/components/content/comments"/>
+                	sling:resourceType="we-retail/components/content/product/reviews"/>
             </responsivegrid>
         </root>
         <cq:responsive jcr:primaryType="nt:unstructured">
