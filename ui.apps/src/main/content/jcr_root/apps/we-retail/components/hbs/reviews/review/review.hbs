@@ -81,18 +81,20 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class='we-Comments-ratings'>
-                        <ul>
-                            {{#each ratingResponses}}
-                                <li>
-                                    {{#if ../compositeRating}}{{@key}}{{/if}}
-                                    <div class='we-Rating'>
-                                        {{include this resourceType='we-retail/components/hbs/rating'}}
-                                    </div>
-                                </li>
-                            {{/each}}
-                        </ul>
-                    </div>
+                    <ul class='we-Comments-ratings we-Rating'>
+                        {{#each ratingResponses}}
+                            <li>
+                                {{#if ../compositeRating}}{{@key}}{{/if}}
+                                <div class="we-Starsbar" data-rating-shown="{{#if this}}{{xss-htmlAttr this}}{{else}}0{{/if}}">
+                                    <i class="we-Star"></i>
+                                    <i class="we-Star"></i>
+                                    <i class="we-Star"></i>
+                                    <i class="we-Star"></i>
+                                    <i class="we-Star"></i>
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ul>
                 </div>
             </div>
         </div>
