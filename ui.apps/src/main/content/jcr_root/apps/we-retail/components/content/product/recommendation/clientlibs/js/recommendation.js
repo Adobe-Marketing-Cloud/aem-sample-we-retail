@@ -7,7 +7,7 @@
                 $template = $viewer.find("script[type='text/x-handlebars-template']"),
                 store = null;
 
-            $viewer.find(".product-recommendation").remove();
+            $viewer.find(".recommendations-content").empty();
 
             if (relationshipType) {
                 relationshipType = relationshipType.split(":");
@@ -25,12 +25,13 @@
                 template = Handlebars.compile($template.html());
 
             $viewer.find(".recommendations-default").toggle(relationships.length == 0);
+            $viewer.find(".recommendations-content").toggle(relationships.length > 0);
 
             var html = [];
             for (var i = 0; i < relationships.length; i++) {
                 html.push(template(relationships[i]));
             }
-            $viewer.html(html.join(""));
+            $viewer.find(".recommendations-content").html(html.join(""));
         });
     }
 
