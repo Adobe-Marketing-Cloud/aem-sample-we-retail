@@ -94,6 +94,68 @@
                             width="12"/>
                     </cq:responsive>
                 </category_teaser_465639357>
+
+                <site_feature
+                        jcr:created="{Date}2015-11-03T23:52:30.703+01:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2015-11-09T22:10:33.523+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/content/site-feature"
+                        jcr:title="Free delivery"
+                        jcr:description="And free return"
+                        icon="shoping-cart-alt">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                                jcr:primaryType="nt:unstructured"
+                                width="4"/>
+                        <phone
+                                jcr:primaryType="nt:unstructured"
+                                width="12"/>
+                    </cq:responsive>
+                </site_feature>
+
+                <site_feature_465639357
+                        jcr:created="{Date}2015-11-04T00:10:50.268+01:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2015-11-09T22:10:52.160+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/content/site-feature"
+                        jcr:title="Order tracking"
+                        jcr:description="Worldwide shipping"
+                        icon="compass">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                                jcr:primaryType="nt:unstructured"
+                                width="4"/>
+                        <phone
+                                jcr:primaryType="nt:unstructured"
+                                width="12"/>
+                    </cq:responsive>
+                </site_feature_465639357>
+
+                <site_feature_859708776
+                        jcr:created="{Date}2015-11-04T00:10:12.400+01:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2015-11-09T22:10:41.662+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/content/site-feature"
+                        jcr:title="Online support"
+                        jcr:description="With our outdoor specialist"
+                        icon="headphones">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                                jcr:primaryType="nt:unstructured"
+                                width="4"/>
+                        <phone
+                                jcr:primaryType="nt:unstructured"
+                                width="12"/>
+                    </cq:responsive>
+                </site_feature_859708776>
+
+
                 <section_title
                     jcr:created="{Date}2015-11-04T00:47:00.581+01:00"
                     jcr:createdBy="admin"
