@@ -3,14 +3,6 @@
     padding-top: 0 !important;
 }
 
-.header .container {
-	padding: 70px 24px 2px 0;
-}
-
-.header .container nav.navbar {
-    top: 0;
-}
-
 .footer .we-Footer-nav--inline ul > li {
     padding-right: 0;
 }
