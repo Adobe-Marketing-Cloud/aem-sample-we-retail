@@ -8,14 +8,19 @@
         margin-bottom: 2rem;
     }
 
-    .modal-body {
-        padding: 15px 50px;
+    .modal-dialog {
+        width: 90%;
     }
+
 
     // Scale up the modal
     @media (min-width: @screen-sm-min) {
-        .modal-content {
+        .modal-dialog {
             width: 400px;
+        }
+
+        .modal-body {
+            padding: 15px 50px;
         }
     }
 }
