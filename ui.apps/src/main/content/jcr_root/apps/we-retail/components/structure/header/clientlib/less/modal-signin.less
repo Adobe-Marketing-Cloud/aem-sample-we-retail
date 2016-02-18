@@ -1,0 +1,21 @@
+@import (reference) "/etc/designs/we-retail/common/variables.less";
+
+.we-SignInModal {
+    text-align: center;
+
+    &-form {
+        border-bottom: 1px solid rgb(229, 229, 229);
+        margin-bottom: 2rem;
+    }
+
+    .modal-body {
+        padding: 15px 50px;
+    }
+
+    // Scale up the modal
+    @media (min-width: @screen-sm-min) {
+        .modal-content {
+            width: 400px;
+        }
+    }
+}

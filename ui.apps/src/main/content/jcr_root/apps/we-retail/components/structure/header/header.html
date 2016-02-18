@@ -18,6 +18,7 @@
      data-sly-call="${clientLib.all @ categories='we-retail.header'}"/>
 
 <sly data-sly-use.header="header.js">
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <ul class="nav navbar-nav navbar-left">
@@ -32,7 +33,7 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Sign in</a></li>
+                <li><a href="#" data-toggle="modal" data-target=".we-SignInModal">Sign in</a></li>
                 <li><a href="#"><i class="fa fa-heart-o"></i> Wishlist <span class="badge">0</span></a></li>
                 <li><a href="#"><i class="fa fa-shopping-cart"></i> My cart <span class="badge active">2</span></a></li>
             </ul>
@@ -219,4 +220,46 @@
         </div>
     </div>
     <!-- /.we-SearchModal -->
+
+    <div class="we-SignInModal modal fade" tabindex="-1" role="dialog" data-color="primary">
+        <div class="modal-dialog modal-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">LOGIN</h3>
+                </div>
+                <div class="modal-body">
+                    <form class="we-SignInModal-form">
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="email address"/>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="password" placeholder="password"/>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-action">Login</button>
+                        </div>
+                        <div class="form-group">
+                            <a href="#" class="">Forgot your password?</a>
+                        </div>
+                    </form>
+
+                    <div>
+                        <div class="form-group">
+                            <h4 class="modal-title text-uppercase">Don't have an account?</h4>
+                        </div>
+                        <div class="form-group">
+                            <a href="#" class="btn btn-primary btn-action">Register</a>
+                        </div>
+                        <div class="form-group">
+                            <a href="#" class="">Sign in with facebook</a>
+                        </div>
+                        <div class="form-group">
+                            <a href="#" class="">Sign in with twitter</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- /.we-SignInModal -->
 </sly>
