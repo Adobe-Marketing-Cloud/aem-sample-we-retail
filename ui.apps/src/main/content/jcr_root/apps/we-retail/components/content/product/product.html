@@ -19,17 +19,21 @@
 
     <div class="row">
 
+		<!--/*
         <div class="col-md-1">
-            <ul class="we-Product-photos"> <!-- TODO: add list of product's thumbnails -->
+            <ul class="we-Product-photos">
                 <li class="active"><img src="${product.base.image}" v-bind:src="product.image"/></li>
             </ul>
         </div>
-
+		*/-->
+		
         <div class="col-md-4 col-md-offset-1">
             <div class="we-Product-visual"> <!-- TODO: add zoom and slider -->
                 <img src="${product.base.image}" v-bind:src="product.image"/>
-
+				
+				<!--/*
                 <a href="#" class="we-Product-visual-zoom"><i class="we-Icon we-Icon--zoom-plus"></i> View larger</a>
+                */-->
             </div>
         </div>
 
@@ -64,7 +68,14 @@
                     <div class="we-Product-description separator" v-html="product.summary">${product.base.summary @context='html'}</div>
                 </div>
             </div>
-            <form class="we-Product-form" action="#"> <!-- TODO: add form properties -->
+            
+            <form class="we-Product-form"
+            	  action="${currentPage.path}.commerce.addcartentry.html"
+            	  method="POST">
+            	<input type="hidden" name="product-quantity" value="1">
+            	<input type="hidden" name="product-path" value="${product.base.path}">
+            	<input type="hidden" name="redirect" value="${currentPage.path}.html">
+            	
                 <div class="form-group" data-sly-test="${product.variations.type == 'color'}">
                     <label>Colors</label>
                 </div>
@@ -121,10 +132,12 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-md-4">
+                        	<!--/*
                             <span class="we-Product-status text-success">In stock</span>
+                            */-->
                         </div>
                         <div class="col-md-8 text-right"> <!-- TODO: add some logic -->
-                            <a href="#" class="btn btn-action btn-primary">Add to cart</a>
+                            <button type="submit" class="btn btn-action btn-primary">Add to cart</button>
                             <a href="#" class="btn btn-icon btn-primary"><i class="we-Icon we-Icon--heart"></i></a>
                         </div>
                     </div>
