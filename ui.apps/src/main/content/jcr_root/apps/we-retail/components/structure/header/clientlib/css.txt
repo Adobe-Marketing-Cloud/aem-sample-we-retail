@@ -1,5 +1,6 @@
 #base=less
 
 navbar.less
+header.less
 modal-search.less
 modal-signin.less
