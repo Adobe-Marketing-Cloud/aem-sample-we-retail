@@ -9,11 +9,19 @@
 
   &-visual {
     display: block;
-
+    height: @article-teaser-visual-height;
+    position: relative;
+    overflow: hidden;
+    
     img {
       &:extend(.img-responsive);
 
-      width: 100%;
+      min-width: 100%;
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 
