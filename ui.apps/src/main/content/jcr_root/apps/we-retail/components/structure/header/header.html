@@ -19,7 +19,7 @@
 
 <sly data-sly-use.header="header.js">
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top hidden-xs">
         <div class="container-fluid">
             <ul class="nav navbar-nav navbar-left">
                 <li class="dropdown">
@@ -49,14 +49,18 @@
                     <span class="icon-bar"></span> <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="${header.languageRoot.path}.html">we.<strong>Retail</strong></a>
+                <!--<a href="#" class="navbar-btn btn navbar-right"><i class="fa fa-shopping-cart"></i></a>-->
             </div>
             
             <!-- /.navbar-header -->
-            <div class="collapse navbar-collapse" id="we-example-navbar-collapse-inverse">
-                <ul data-sly-list.item="${header.items}" class="nav navbar-nav navbar-center">
-                    <li class="${item.selected ? 'active' : ''}">
-                    	<a href="${item.page.path @ context='uri'}.html">${item.page.title}</a>
-                   	</li>
+            <div class="collapse navbar-collapse width" id="we-example-navbar-collapse-inverse">
+                <ul  class="nav navbar-nav navbar-center">
+                    <li class="visible-xs"><a href="${header.languageRoot.path}.html">we.<strong>Retail</strong></a></li>
+                    <sly data-sly-list.item="${header.items}">
+                        <li class="${item.selected ? 'active' : ''}">
+                            <a href="${item.page.path @ context='uri'}.html">${item.page.title}</a>
+                        </li>
+                    </sly>
                 </ul>
             </div>
             
