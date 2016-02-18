@@ -16,13 +16,13 @@
 
 @import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
  
- .navbar {
+.navbar {
   margin-right: @navbar-height + 2;
 
   border-width: 0 0 1px;
 
   font-weight: 700;
-  font-size: @font-size-small;
+  font-size: @font-size-base;
 
   text-transform: uppercase;
 
@@ -225,4 +225,83 @@ nav.navbar {
     }
   }
 }
- 
+
+@media (max-width: @screen-sm-max) {
+    .header {
+
+        .navbar-brand {
+            float: left;
+            margin-left: 50px;
+        }
+
+        .navbar-collapse {
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: @navbar-inverse-bg;
+            width: 0px;
+            height: 100%;
+            z-index: 1000;
+            overflow: hidden;
+
+            transition: width 0.35s;
+
+            padding: 0;
+
+            .nav {
+                display: none;
+            }
+        }
+
+        .navbar-collapse.collapse.in,   {
+            width: ~'calc(100% - 50px)';
+            padding: 0 50px;
+            display: block;
+            .nav {
+                display: block;
+            }
+        }
+
+
+        .navbar-inverse .navbar-toggle:hover,
+        .navbar-inverse .navbar-toggle:focus {
+            background-color: @brand-primary;
+        }
+
+        .navbar-inverse .navbar-toggle.collapsed:hover,
+        .navbar-inverse .navbar-toggle.collapsed:focus {
+            background-color: @navbar-inverse-bg;
+        }
+
+        .navbar-toggle {
+            position: fixed;
+            margin: 0;
+            padding-top: ((@navbar-height - 34px) / 2) + 10px;
+            padding-bottom: ((@navbar-height - 34px) / 2) + 10px;
+
+            background-color: @brand-primary;
+
+            right: 0;
+            left: ~'calc(100% - 50px)';
+            transition: left 0.35s, right 0.35s, background-color .35s;
+            transition-delay: .35s, .35s, .35s;
+            width: 50px;
+            z-index: 1000;
+        }
+
+        .navbar-toggle.collapsed {
+            background-color: @navbar-inverse-bg;
+            left: 16px;
+            right: 100%;
+            width: auto;
+            transition-delay: 0s;
+        }
+
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    .navbar {
+      font-size: @font-size-small;
+    }
+}
