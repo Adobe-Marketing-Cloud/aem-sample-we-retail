@@ -25,9 +25,11 @@
 
     <span class="we-ArticleTeaser-date">${ article.created }</span>
 
-    <strong class="we-ArticleTeaser-category" data-sly-test="${ article.tags }">
-        <sly data-sly-list.tag="${ article.tags }">${ tag.name }</sly>
-    </strong>
+    <sly data-sly-list.tag="${ article.tags }">
+        <strong class="we-ArticleTeaser-category">
+            ${ tag.name }
+        </strong>
+    </sly>
 
     <div class="we-ArticleTeaser-description" data-sly-test="${ article.description }">
         ${ article.description }
