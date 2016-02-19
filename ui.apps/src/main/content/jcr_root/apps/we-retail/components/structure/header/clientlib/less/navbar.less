@@ -270,21 +270,17 @@ nav.navbar {
         }
 
 
-        .navbar-inverse .navbar-toggle:hover,
-        .navbar-inverse .navbar-toggle:focus {
+        .navbar-inverse .navbar-toggle-close:hover,
+        .navbar-inverse .navbar-toggle-close:focus {
             background-color: @brand-primary;
         }
 
-        .navbar-inverse .navbar-toggle.collapsed:hover,
-        .navbar-inverse .navbar-toggle.collapsed:focus {
-            background-color: @navbar-inverse-bg;
-        }
-
-        .navbar-toggle {
+        .navbar-toggle-close {
+            color: #fff;
             position: fixed;
             margin: 0;
-            padding-top: ((@navbar-height - 34px) / 2) + 10px;
-            padding-bottom: ((@navbar-height - 34px) / 2) + 10px;
+            padding-top: ((@navbar-height - 34px) / 2) + 4px;
+            padding-bottom: ((@navbar-height - 34px) / 2) + 4px;
 
             background-color: @brand-primary;
 
@@ -296,11 +292,9 @@ nav.navbar {
             z-index: 1000;
         }
 
-        .navbar-toggle.collapsed {
-            position: absolute;
+        .navbar-toggle-close.collapsed {
             background-color: @navbar-inverse-bg;
-            left: 16px;
-            right: 100%;
+            left: 100%;
             width: auto;
             transition-delay: 0s;
         }
