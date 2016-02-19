@@ -21,12 +21,12 @@
     </a>
      
     <h3 class="we-ArticleTeaser-title">${ article.title }</h3>
-    
+
+    <span class="we-ArticleTeaser-date">${ article.modified }</span>
+
     <sly data-sly-list.tag="${ article.tags }">
 	    <strong class="we-ArticleTeaser-category">
 	        ${ tag.name }
 	    </strong>
     </sly>
-    
-    <span class="we-ArticleTeaser-date">${ article.modified }</span>
 </div>
