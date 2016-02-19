@@ -9,9 +9,60 @@
   .foundation-list-item {
     .list-unstyled;
     .make-md-column(2);
+    .make-xs-column(6);
+
   }
 
-  .pagination {
+  &-mobilePagination {
+    text-align: center;
+
+    a {
+        text-indent: -99999px;
+        margin: 0 .5rem;
+        display: inline-block;
+        text-decoration: none;
+        border-radius: 50%;
+        border: 1px solid @brand-primary;
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+
+        &.active {
+            background-color: @brand-primary;
+        }
+    }
+  }
+}
+
+.start(@s) when (@s > 0) {
+  &:nth-child(-n + @{s}) {
     display: none;
+  }
+}
+
+.end(@e) {
+  &:nth-child(n + @{e}) {
+    display: none;
+  }
+}
+
+.generate-mobile-pagination(@itemsPerPage, @pages, @i: 0) when (@i <= @pages) {
+  @start: @itemsPerPage * @i;
+  @end: @itemsPerPage * (@i + 1) + 1;
+
+  &[data-page="@{i}"] {
+    .foundation-list-item {
+        .start(@start);
+        .end(@end);
+    }
+  }
+
+  .generate-mobile-pagination(@itemsPerPage, @pages, (@i + 1));
+}
+
+//== Mobile pagination
+@media (max-width: @screen-sm-max) {
+  .products-grid {
+    .generate-mobile-pagination(2, 5);
   }
 }
