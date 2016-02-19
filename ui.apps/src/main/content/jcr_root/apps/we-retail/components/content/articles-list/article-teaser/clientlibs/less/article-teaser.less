@@ -16,6 +16,7 @@
     img {
       &:extend(.img-responsive);
 
+      min-height: 100%;
       min-width: 100%;
       position: absolute;
       display: block;
@@ -27,13 +28,20 @@
 
   &-title {
     &:extend(.h3);
-
-    padding: 0 @padding-large-horizontal;
-
-    margin: @padding-large-horizontal auto;
+    margin: 0;
+    padding: @padding-small-vertical @padding-small-horizontal;
 
     font-weight: 700;
     line-height: 29px;
+
+    @media (min-width: @screen-sm-min) {
+        padding: @padding-base-vertical @padding-small-horizontal;
+    }
+
+    @media (min-width: @screen-md-min) {
+        padding: @padding-large-vertical @padding-small-horizontal;
+    }
+
   }
 
   &-description {
@@ -46,6 +54,8 @@
     padding: 5px @padding-small-horizontal 4px;
 
     margin: auto 0 auto @padding-small-horizontal;
+
+    line-height: 2rem;
 
     background-color: fade(@gray-base, 15);
 
@@ -62,7 +72,7 @@
     margin: auto @padding-large-horizontal;
 
     font-size: 13px;
-    line-height: 26px;
+    line-height: 2rem;
 
     text-transform: uppercase;
   }
