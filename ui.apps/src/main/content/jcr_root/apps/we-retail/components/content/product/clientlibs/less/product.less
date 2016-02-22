@@ -110,6 +110,15 @@
 
       line-height: 30px;
 
+      //.radio &,
+      //.radio-inline &,
+      //.checkbox &,
+      //.checkbox-inline & {
+      //}
+      &::after {
+        content: '\200b';
+      }
+
       span {
         line-height: 30px;
         color: #fff;
@@ -125,7 +134,8 @@
       }
     }
 
-    input[type=radio] {
+    input[type=radio],
+    input[type=checkbox] {
       width: 30px;
       height: 30px;
 
@@ -148,7 +158,8 @@
     }
 
     &.marker {
-      input[type=radio]:checked {
+      input[type=radio]:checked,
+      input[type=checkbox]:checked {
         &::after {
           content: @we-Icon--var-check;
 
