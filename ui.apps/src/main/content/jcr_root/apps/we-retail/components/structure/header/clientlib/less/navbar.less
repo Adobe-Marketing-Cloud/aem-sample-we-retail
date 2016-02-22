@@ -13,10 +13,11 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-
 @import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
- 
+
 .navbar {
+  .make-row();
+
   margin-right: @navbar-height + 2;
 
   border-width: 0 0 1px;
@@ -27,12 +28,21 @@
   text-transform: uppercase;
 
   .navbar-center {
-    float: none;
-    display: inline-block;
-    vertical-align: top;
-    // position: relative;
+    .make-md-column(8);
+    .make-md-column-offset(1);
+
+    position: static;
+
+    //display: inline-block;
+    //vertical-align: top;
+
+    //float: none;
+
+    //position: relative;
   }
 }
+
+.navbar-default {}
 
 .navbar-inverse {
   border-bottom: none;
@@ -62,7 +72,7 @@
 }
 
 .navbar-collapse {
-  text-align: center;
+  //text-align: center;
 
   @media (max-width: @grid-float-breakpoint-max) {
     //  margin-right: -(@navbar-height + 2);
@@ -72,12 +82,11 @@
 
 .navbar-nav {
   .divider {
-     height: 1px;
-     margin: 11px -50px;
-     overflow: hidden;
-     background-color: #666;
+    height: 1px;
+    margin: 11px -50px;
+    overflow: hidden;
+    background-color: #666;
   }
-
 
   & > li {
 
@@ -88,10 +97,10 @@
       padding-left: @padding-base-horizontal;
 
       &::after {
-          bottom: -3px;
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
+        bottom: -3px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
 
@@ -115,7 +124,7 @@
         padding-left: @padding-small-horizontal;
       }
     }
-      
+
     @media (max-width: @grid-float-breakpoint-max) {
       & > a {
         display: inline-block;
@@ -125,7 +134,12 @@
 }
 
 .navbar-header {
+  .make-md-column(2);
+
+  margin-left: -@grid-gutter-width/2;
+
   position: relative;
+
   @media (max-width: @grid-float-breakpoint-max) {
     text-align: center;
   }
@@ -205,11 +219,17 @@
 
   //position: absolute;
 
+  &:before {}
+
+  &:hover {
+
+  }
+
   .navbar-nav {
     margin: auto;
 
-    &> li {
-      &> a {
+    & > li {
+      & > a {
         padding: 8px @padding-small-horizontal;
 
         &::after {
@@ -237,134 +257,207 @@
 }
 
 .navbar-nav-subitems {
-    display: none;
+  display: none;
 
-    position: absolute;
-    left: -50px;
-    right: -115px;
-    top: 100%;
-    margin-top: 1px;
+  .list-unstyled;
+  .make-row();
 
-    li {
-        text-align: left;
+  padding: 70px 0;
+
+  border-top: 1px solid transparent;
+
+  position: absolute;
+  top: 100%;
+  right: @grid-gutter-width/2;
+  left: @grid-gutter-width/2;
+
+  li {
+    .make-md-column(2);
+    .make-md-column-offset(1);
+
+    text-align: left;
+
+    &:nth-of-type(3n+1) {
+      .make-md-column-offset(3);
+
+      clear: left;
     }
 
-    .navbar-default & {
-        background-color: #fff;
-        border-bottom: 1px solid #000;
+    &> a {
+      display: block;
 
-        a {
-            color: #000;
-        }
+      padding: 8px 0;
+
+      font-size: 16px;
+      line-height: 1.1;
+
+      text-transform: none;
+    }
+  }
+
+  .navbar-default & {
+    border-top-color: @navbar-default-border;
+
+    background-color: #fff;
+    //border-bottom: 1px solid #000;
+
+    a {
+      color: #000;
+    }
+  }
+
+  .navbar-inverse & {
+    border-top-color: fade(#fff, 20);
+
+    background-color: @navbar-inverse-bg;
+
+    a {
+      color: #fff;
     }
 
-    .navbar-inverse & {
-        background-color: @navbar-inverse-bg;
+    &::before, &::after {
+      content: '';
 
-        a {
-            color: #fff;
-        }
+      display: block;
 
-        &:before {
-            content: " ";
-            display: block;
-            position: absolute;
-            top: -100px;
-            left: 0;
-            right: 0;
-            bottom: 100%;
-            z-index: -1;
+      background-color: @navbar-inverse-bg;
 
-            background-color: @navbar-inverse-bg;
-        }
+      position: absolute;
+      top: 0;
+      bottom: 0;
+
+      z-index: -1;
     }
+
+    &::before {
+      right: 100%;
+      left: -9999em;
+      left: ~'calc((100vw - @{container-large-desktop} + @{grid-gutter-width}) / -2)';
+    }
+
+    &::after {
+      left: 100%;
+      right: -9999em;
+      right: ~'calc((100vw - @{container-large-desktop} + @{grid-gutter-width}) / -2 - @{navbar-height})';
+    }
+  }
 }
 
-
-
 nav.navbar-absolute-top {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    right: 50px;
-    z-index: 1;
+  position: absolute;
+  top: 50px;
+  left: @grid-gutter-width/2;
+  right: 0;
+
+  z-index: 1;
+
+  &.navbar-inverse {
+    &::after {
+      content: '';
+
+      display: block;
+
+      background-color: fade(@gray-base, 0);
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      z-index: -1;
+    }
+
+    &.submenu-opened { //add class for submenu opened
+      background-color: fade(@gray-base, 0);
+
+      &:after {
+        background-color: @navbar-inverse-bg;
+
+        top: -50px;
+        bottom: -1px;
+        right: -9999em;
+        right: ~'calc((100vw - @{container-large-desktop} + @{grid-gutter-width}) / -2 - @{navbar-height})';
+        left: -9999em;
+        left: ~'calc((100vw - @{container-large-desktop} + @{grid-gutter-width}) / -2)';
+      }
+    }
+  }
 }
 
 .navbar-nav li:hover .navbar-nav-subitems,
 .navbar-nav .navbar-nav-subitems:hover {
-    display: block;
+  display: block;
 }
 
 @media (max-width: @screen-sm-max) {
-    .header {
-
-        .navbar-brand {
-            float: left;
-        }
-
-        .navbar-collapse {
-            position: fixed;
-            left: 0;
-            top: 0;
-            background-color: @navbar-inverse-bg;
-            width: 0px;
-            height: 100%;
-            z-index: 1000;
-            overflow: hidden;
-
-            transition: width 0.35s;
-
-            padding: 0;
-
-            .nav {
-                display: none;
-            }
-        }
-
-        .navbar-collapse.collapse.in,   {
-            width: ~'calc(100% - 50px)';
-            padding: 0 50px;
-            display: block;
-            .nav {
-                display: block;
-            }
-        }
-
-
-        .navbar-inverse .navbar-toggle-close:hover,
-        .navbar-inverse .navbar-toggle-close:focus {
-            background-color: @brand-primary;
-        }
-
-        .navbar-toggle-close {
-            color: #fff;
-            position: fixed;
-            margin: 0;
-            padding-top: ((@navbar-height - 34px) / 2) + 4px;
-            padding-bottom: ((@navbar-height - 34px) / 2) + 4px;
-
-            background-color: @brand-primary;
-
-            right: 0;
-            left: ~'calc(100% - 50px)';
-            transition: left 0.35s, right 0.35s, background-color .35s;
-            transition-delay: .35s, .35s, .35s;
-            width: 50px;
-            z-index: 1000;
-        }
-
-        .navbar-toggle-close.collapsed {
-            background-color: @navbar-inverse-bg;
-            left: 100%;
-            width: auto;
-            transition-delay: 0s;
-        }
-
+  .header {
+    .navbar-brand {
+      float: left;
     }
+
+    .navbar-collapse {
+      position: fixed;
+      left: 0;
+      top: 0;
+      background-color: @navbar-inverse-bg;
+      width: 0px;
+      height: 100%;
+      z-index: 1000;
+      overflow: hidden;
+
+      transition: width 0.35s;
+
+      padding: 0;
+
+      .nav {
+        display: none;
+      }
+    }
+
+    .navbar-collapse.collapse.in {
+      width: ~'calc(100% - 50px)';
+      padding: 0 50px;
+      display: block;
+      .nav {
+        display: block;
+      }
+    }
+
+    .navbar-inverse .navbar-toggle-close:hover,
+    .navbar-inverse .navbar-toggle-close:focus {
+      background-color: @brand-primary;
+    }
+
+    .navbar-toggle-close {
+      color: #fff;
+      position: fixed;
+      margin: 0;
+      padding-top: ((@navbar-height - 34px) / 2) + 4px;
+      padding-bottom: ((@navbar-height - 34px) / 2) + 4px;
+
+      background-color: @brand-primary;
+
+      right: 0;
+      left: ~'calc(100% - 50px)';
+      transition: left 0.35s, right 0.35s, background-color .35s;
+      transition-delay: .35s, .35s, .35s;
+      width: 50px;
+      z-index: 1000;
+    }
+
+    .navbar-toggle-close.collapsed {
+      background-color: @navbar-inverse-bg;
+      left: 100%;
+      width: auto;
+      transition-delay: 0s;
+    }
+
+  }
 }
 
 @media (min-width: @screen-sm-min) {
-    .navbar {
-      font-size: @font-size-small;
-    }
+  .navbar {
+    font-size: @font-size-small;
+  }
 }
