@@ -56,7 +56,7 @@
                 </button>
 
                 <a class="navbar-brand" href="${header.languageRoot.path}.html">we.<strong>Retail</strong></a>
-                <!--<a href="#" class="navbar-btn btn navbar-right"><i class="fa fa-shopping-cart"></i></a>-->
+                <a href="#" class="navbar-btn btn btn-default navbar-right visible-xs"><i class="fa fa-shopping-cart"></i></a>
             </div>
             
             <!-- /.navbar-header -->
@@ -66,6 +66,12 @@
                     <sly data-sly-list.item="${header.items}">
                         <li class="${item.selected ? 'active' : ''}">
                             <a href="${item.page.path @ context='uri'}.html">${item.page.title}</a>
+
+                            <ul data-sly-list.subitem="${item.children}" class="navbar-nav-subitems">
+                                <li class="${subitem.selected ? 'active' : ''}">
+                                    <a href="${subitem.page.path @ context='uri'}.html">${subitem.page.title}</a>
+                                </li>
+                            </ul>
                         </li>
                     </sly>
                     <li class="visible-xs divider" role="separator"></li>
