@@ -10,7 +10,7 @@
             <par
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/parsys"
-                components="[group:We.Retail]">
+                components="[/libs/wcm/foundation/components/responsivegrid,group:We.Retail]">
                 <cq:authoring jcr:primaryType="nt:unstructured">
                     <assetToComponentMapping jcr:primaryType="nt:unstructured">
                         <image
