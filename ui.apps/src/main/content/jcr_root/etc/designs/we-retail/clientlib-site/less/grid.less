@@ -1,3 +1,4 @@
+@import (reference) "/etc/designs/we-retail/common/variables.less";
 @import "/etc/clientlibs/wcm/foundation/grid/grid_base.less";
 
 /* maximum amount of grid cells to be provided */
@@ -6,6 +7,11 @@
 /* default breakpoint */
 .aem-Grid {
   .generate-grid(default, @max_col);
+
+  width: auto;
+
+  margin-right: -@grid-gutter-width/2;
+  margin-left: -@grid-gutter-width/2;
 }
  
 /* phone breakpoint */
@@ -20,6 +26,10 @@
   .aem-Grid {
     .generate-grid(tablet, @max_col);
   }
+}
+
+.aem-GridColumn {
+  padding: 0 @grid-gutter-width/2;
 }
 
 /* TODO: find a better place for this */
