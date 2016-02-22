@@ -1,4 +1,5 @@
 @import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
+@import (reference) "/etc/designs/we-retail/clientlib-site/less/grid.less";
 
 .products-grid {
   .foundation-ordered-list-container {
@@ -9,27 +10,44 @@
   .foundation-list-item {
     .list-unstyled;
     .make-md-column(2);
-    .make-xs-column(6);
+    //.make-xs-column(6);
 
+    &:nth-of-type(6n+1) {
+      clear: left;
+    }
   }
 
   &-mobilePagination {
     text-align: center;
 
     a {
-        text-indent: -99999px;
-        margin: 0 .5rem;
-        display: inline-block;
-        text-decoration: none;
-        border-radius: 50%;
-        border: 1px solid @brand-primary;
-        width: 10px;
-        height: 10px;
-        cursor: pointer;
+      text-indent: -99999px;
+      margin: 0 .5rem;
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 50%;
+      border: 1px solid @brand-primary;
+      width: 10px;
+      height: 10px;
+      cursor: pointer;
 
-        &.active {
-            background-color: @brand-primary;
-        }
+      &.active {
+        background-color: @brand-primary;
+      }
+    }
+  }
+
+  &.aem-GridColumn--default--10 {
+    .foundation-list-item {
+      width: percentage(@max_col/5/@max_col);
+
+      &:nth-of-type(6n+1) {
+        clear: none;
+      }
+
+      &:nth-of-type(5n+1) {
+        clear: left;
+      }
     }
   }
 }

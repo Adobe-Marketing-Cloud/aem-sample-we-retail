@@ -1,2 +1,3 @@
 #base=js
 products-grid.js
+product-item.js
