@@ -1,7 +1,7 @@
 <div class="we-Product" data-sly-use.product="product.js">
 
     <sly data-sly-list.item="${product.variants}">
-        <product-variant
+        <we-product-variant
                 is-base="${itemList.first ? 1 : 0}"
                 path="${item.path}"
                 variants="${item.variants}"
@@ -14,7 +14,7 @@
                 price="${item.price}"
                 summary="${item.summary}"
                 features="${item.features}"
-                image="${item.image}"></product-variant>
+                image="${item.image}"></we-product-variant>
     </sly>
 
     <div class="row">
