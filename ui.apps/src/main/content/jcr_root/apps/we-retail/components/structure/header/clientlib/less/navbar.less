@@ -28,19 +28,10 @@
 
   .navbar-center {
     float: none;
-
     display: inline-block;
     vertical-align: top;
+    // position: relative;
   }
-}
-
-nav.navbar {
-	position: relative;
-    z-index: 100;
-    top: 70px;
-}
-
-.navbar-default {
 }
 
 .navbar-inverse {
@@ -87,10 +78,21 @@ nav.navbar {
      background-color: #666;
   }
 
+
   & > li {
+
+    position: static;
+
     & > a {
       padding-right: @padding-base-horizontal;
       padding-left: @padding-base-horizontal;
+
+      &::after {
+          bottom: -3px;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+      }
     }
 
     &.active > a {
@@ -123,6 +125,7 @@ nav.navbar {
 }
 
 .navbar-header {
+  position: relative;
   @media (max-width: @grid-float-breakpoint-max) {
     text-align: center;
   }
@@ -231,6 +234,65 @@ nav.navbar {
       }
     }
   }
+}
+
+.navbar-nav-subitems {
+    display: none;
+
+    position: absolute;
+    left: -50px;
+    right: -115px;
+    top: 100%;
+    margin-top: 1px;
+
+    li {
+        text-align: left;
+    }
+
+    .navbar-default & {
+        background-color: #fff;
+        border-bottom: 1px solid #000;
+
+        a {
+            color: #000;
+        }
+    }
+
+    .navbar-inverse & {
+        background-color: @navbar-inverse-bg;
+
+        a {
+            color: #fff;
+        }
+
+        &:before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: -100px;
+            left: 0;
+            right: 0;
+            bottom: 100%;
+            z-index: -1;
+
+            background-color: @navbar-inverse-bg;
+        }
+    }
+}
+
+
+
+nav.navbar-absolute-top {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    z-index: 1;
+}
+
+.navbar-nav li:hover .navbar-nav-subitems,
+.navbar-nav .navbar-nav-subitems:hover {
+    display: block;
 }
 
 @media (max-width: @screen-sm-max) {
