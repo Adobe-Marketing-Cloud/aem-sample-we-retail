@@ -19,23 +19,31 @@ use(function () {
     var items = [];
     var root = currentPage.getAbsoluteParent(3);
     var currentNav = currentPage.getAbsoluteParent(4);
-    
-    if (root) {
-        var currentNavPath = currentNav && currentNav.getPath();
-        var it = root.listChildren(new Packages.com.day.cq.wcm.api.PageFilter());
+    var currentNavPath = currentNav && currentNav.getPath();
+
+    var getPages = function(_root, level) {
+        if (level === 0) {
+            return null;
+        }
+        var it = _root.listChildren(new Packages.com.day.cq.wcm.api.PageFilter());
+        var _items = [], page, selected;
 
         while (it.hasNext()) {
-            var page = it.next();
+            page = it.next();
+            selected = (currentNavPath && currentNavPath.contains(page.getPath()));
 
-            // No strict comparison, because the types returned from the Java APIs
-            // don't strictly match the JavaScript types
-            var selected = (page.getPath() == currentNavPath);
-
-            items.push({
+            _items.push({
                 page: page,
-                selected : selected
+                selected: selected,
+                children: getPages(page, level - 1)
             });
         }
+
+        return _items;
+    }
+
+    if (root) {
+        items = getPages(root, 2);
     }
 
     var theme = properties.get("theme", "default");
