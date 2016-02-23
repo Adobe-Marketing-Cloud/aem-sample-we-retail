@@ -251,7 +251,7 @@
       clear: left;
     }
 
-    &> a {
+    & > a {
       display: block;
 
       padding: 8px 0;
@@ -264,12 +264,11 @@
   }
 
   .navbar-default & {
-    border-top-color: @navbar-default-border;
-
-    a {
-      color: #000;
+      a {
+        color: #fff;
+      }
     }
-  }
+
 
   .navbar-inverse & {
     border-top-color: fade(#fff, 20);
@@ -284,6 +283,14 @@
       top: 100%;
       right: @grid-gutter-width/2;
       left: @grid-gutter-width/2;
+
+      .navbar-default & {
+        border-top-color: @navbar-default-border;
+
+        a {
+          color: #000;
+        }
+      }
   }
 }
 
