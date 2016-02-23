@@ -18,7 +18,7 @@
 
     a {
         text-indent: -99999px;
-        margin: 0 .5rem;
+        margin: 0 1rem;
         display: inline-block;
         text-decoration: none;
         border-radius: 50%;
@@ -32,28 +32,17 @@
         }
     }
   }
-}
 
-.start(@s) when (@s > 0) {
-  &:nth-child(-n + @{s}) {
-    display: none;
-  }
-}
-
-.end(@e) {
-  &:nth-child(n + @{e}) {
+  .pagination {
     display: none;
   }
 }
 
 .generate-mobile-pagination(@itemsPerPage, @pages, @i: 0) when (@i <= @pages) {
-  @start: @itemsPerPage * @i;
-  @end: @itemsPerPage * (@i + 1) + 1;
 
   &[data-page="@{i}"] {
-    .foundation-list-item {
-        .start(@start);
-        .end(@end);
+    .foundation-ordered-list-container {
+      left: @i * -100vw;
     }
   }
 
@@ -63,6 +52,20 @@
 //== Mobile pagination
 @media (max-width: @screen-sm-max) {
   .products-grid {
+    .foundation-ordered-list-container {
+        left: 0;
+        width: 9999em;
+        overflow: hidden;
+        position: relative;
+
+        transition: left .25s;
+    }
+
+    .foundation-list-item {
+        width: 50vw;
+        display: inline-block;
+    }
+
     .generate-mobile-pagination(2, 5);
   }
 }
