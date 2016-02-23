@@ -6,7 +6,7 @@
             .on('mouseenter', '.navbar-center li:has(.navbar-nav-subitems)', function (e) {
                 e.target.classList.add('hover');
                 e.delegateTarget.classList.add('submenu-opened');
-                $navbarShutter.height($(e.target).next('.navbar-nav-subitems').innerHeight(true));
+                $navbarShutter.height($(e.target).next('.navbar-nav-subitems').innerHeight());
             })
             .on('mouseleave', '.navbar-center li:has(.navbar-nav-subitems)', function (e) {
                 (e.target.tagName === 'UL' ? e.target.previousElementSibling : e.target).classList.remove('hover');
