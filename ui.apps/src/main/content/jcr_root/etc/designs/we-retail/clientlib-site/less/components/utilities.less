@@ -79,9 +79,11 @@
     }
   }
 
-  &.btn-inverse, [class*=inverse] & {
-    &::after {
-      border-top-color: #fff;
+  @media (min-width: @screen-sm-min) {
+    &.btn-inverse, [class*=inverse] & {
+      &::after {
+        border-top-color: #fff;
+      }
     }
   }
 }
