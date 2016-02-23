@@ -7,8 +7,8 @@
         return (
             rect.top >= 0 &&
             rect.left >= 0 &&
-            rect.bottom <= document.documentElement.clientHeight &&
-            rect.right <= document.documentElement.clientWidth
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
     }
 
@@ -33,7 +33,7 @@
             var $el = $(this.$el),
                 $items = $el.find('.foundation-list-item'),
                 $visibleItems = $items.filter(isElementInViewport),
-                pagesCount = Math.ceil($items.length / $visibleItems.length);
+                pagesCount = Math.ceil($items.length / ($visibleItems.length || $items.length));
 
             // initialize mobile pagination with calculated pages
             this.pages = _.range(pagesCount);
