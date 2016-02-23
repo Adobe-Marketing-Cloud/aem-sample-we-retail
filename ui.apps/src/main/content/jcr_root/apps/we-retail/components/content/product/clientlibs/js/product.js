@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    Vue.component('product-variant', {
+    Vue.component('we-product-variant', {
         props: [
             'isBase',
 
@@ -27,8 +27,6 @@
 
             self.$parent.variants.push(data);
 
-            console.warn(data);
-
             if (typeof data.color !== 'undefined') {
                 var colorVariants = self.$parent.colorVariants[data.color];
 
@@ -41,31 +39,34 @@
         }
     });
 
-    new Vue({
-        el: '.we-Product',
-        data: {
-            variants: [],
-            colorVariants: {},
-            product: null,
+    if (document.querySelector('.we-Product')) {
+        new Vue({
+            name: 'we-Product',
+            el: '.we-Product',
+            data: {
+                variants: [],
+                colorVariants: {},
+                product: null,
 
-            isChecked: function (productSku) {
-                return productSku === this.product.sku;
-            }
-        },
-        methods: {
-            setProduct: function (event) {
-                var self = this;
-
-                self.variants.forEach(function (product) {
-                    if (product.sku === event.currentTarget.attributes['data-sku'].value) {
-                        self.product = product;
-                    }
-                });
+                isChecked: function (productSku) {
+                    return productSku === this.product.sku;
+                }
             },
-            showSizes: function () {
-                return this.colorVariants[this.product.color] > 1 || Object.keys(this.colorVariants).length === 0;
+            methods: {
+                setProduct: function (event) {
+                    var self = this;
+
+                    self.variants.forEach(function (product) {
+                        if (product.sku === event.currentTarget.attributes['data-sku'].value) {
+                            self.product = product;
+                        }
+                    });
+                },
+                showSizes: function () {
+                    return this.colorVariants[this.product.color] > 1 || Object.keys(this.colorVariants).length === 0;
+                }
             }
-        }
-    });
+        });
+    }
 
 }).call(this);
