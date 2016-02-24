@@ -8,7 +8,6 @@
         cq:template="/libs/commerce/templates/catalog"
         jcr:lastModified="{Date}2015-11-10T14:57:01.571+01:00"
         jcr:lastModifiedBy="admin"
-        jcr:mixinTypes="[]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Base Catalog"
         sling:resourceType="commerce/components/catalog">
@@ -28,6 +27,10 @@
         <cq:CatalogSyncConfig jcr:primaryType="cq:CatalogSyncConfig">
             <catalog
                 cq:catalogPath="/content/we-retail/language-masters/en/products"
+                cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
+                jcr:primaryType="nt:unstructured"/>
+            <catalog0
+                cq:catalogPath="/content/we-retail/language-masters/products"
                 cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
                 jcr:primaryType="nt:unstructured"/>
         </cq:CatalogSyncConfig>
