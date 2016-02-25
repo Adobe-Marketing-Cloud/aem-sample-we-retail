@@ -5,14 +5,14 @@
         <foundation jcr:primaryType="nt:unstructured">
             <components jcr:primaryType="nt:unstructured">
                 <responsivegrid jcr:primaryType="nt:unstructured">
-                    <responsivegrid-default
+                    <default
                         jcr:description="Policy for editable paragraph systems"
                         jcr:lastModified="{Date}2016-02-16T21:39:02.041+01:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="We.Retail Default"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[group:We.Retail,/libs/wcm/foundation/components/text,/libs/wcm/foundation/components/image,/libs/wcm/foundation/components/title,/libs/wcm/foundation/components/list,/libs/wcm/foundation/components/responsivegrid]"
+                        components="[group:We.Retail,/libs/wcm/foundation/components/text,/libs/wcm/foundation/components/image,/libs/wcm/foundation/components/title,/libs/wcm/foundation/components/list,/libs/wcm/foundation/components/responsivegrid,/libs/dam/cfm/components/contentfragment]"
                         policyResourceType="wcm/foundation/components/responsivegrid">
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -50,17 +50,24 @@
                                     droptarget="video"
                                     resourceType="foundation/components/video"
                                     type="Images"/>
+                                <fragment
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="text/html"
+                                    droptarget="fragment"
+                                    resourceType="dam/cfm/components/contentfragment"
+                                    type="Content Fragment"/>
                             </assetToComponentMapping>
                         </cq:authoring>
-                    </responsivegrid-default>
-                    <responsivegrid-structure
+                    </default>
+                    <structure
                         jcr:description="Policy for page root parsys to allow structure components"
                         jcr:lastModified="{Date}2016-02-16T21:38:49.301+01:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="We.Retail Structure"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[group:We.Retail,group:We.Retail.Structure,/libs/wcm/foundation/components/text,/libs/wcm/foundation/components/image,/libs/wcm/foundation/components/title,/libs/wcm/foundation/components/list,/libs/wcm/foundation/components/responsivegrid]"
+                        components="[group:We.Retail,group:We.Retail.Structure,/libs/wcm/foundation/components/text,/libs/wcm/foundation/components/image,/libs/wcm/foundation/components/title,/libs/wcm/foundation/components/list,/libs/wcm/foundation/components/responsivegrid,/libs/dam/cfm/components/contentfragment]"
                         policyResourceType="wcm/foundation/components/responsivegrid">
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -98,9 +105,16 @@
                                     droptarget="video"
                                     resourceType="foundation/components/video"
                                     type="Images"/>
+                                <fragment
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="text/html"
+                                    droptarget="fragment"
+                                    resourceType="dam/cfm/components/contentfragment"
+                                    type="Content Fragment"/>
                             </assetToComponentMapping>
                         </cq:authoring>
-                    </responsivegrid-structure>
+                    </structure>
                 </responsivegrid>
             </components>
         </foundation>
