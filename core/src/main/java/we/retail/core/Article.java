@@ -66,6 +66,26 @@ public class Article {
     public Article(Resource resource) {
     	this.resource = resource;
     }
+    
+    public String getImagePath() {
+    	String path = resource.getPath() + ".thumb.319.319.jpg";
+    	
+    	Resource heroImageResource = resource.getChild(JcrConstants.JCR_CONTENT + "/root/hero_image");
+    	String heroFileReference = heroImageResource.adaptTo(ValueMap.class).get("fileReference", String.class);
+    	
+    	if(heroFileReference != null) {
+    		path = heroFileReference;
+    	}
+    	
+    	Resource thumbnailImageResource = resource.getChild(JcrConstants.JCR_CONTENT + "/image");
+    	String thumbnailFileReference = thumbnailImageResource.adaptTo(ValueMap.class).get("fileReference", String.class);
+    	
+    	if(thumbnailFileReference != null) {
+    		path = thumbnailFileReference;
+    	}
+    	
+    	return path;
+    }
 
     public List<Tag> getTags() {
         List<Tag> tags = new ArrayList<Tag>();
@@ -97,8 +117,9 @@ public class Article {
 	    	Resource contentFragmentResource = getContentFragment();
 	    	
 	    	if(contentFragmentResource != null) {
-		    	ValueMap contentFragmentMetadata = contentFragmentResource.adaptTo(ValueMap.class);	
-		    	String authorId = contentFragmentMetadata.get("author", String.class);
+		    	ValueMap contentFragmentMetadata = contentFragmentResource.adaptTo(ValueMap.class);
+		    	// TODO: find the right property to get the author id from
+		    	String authorId = contentFragmentMetadata.get(JcrConstants.JCR_LAST_MODIFIED_BY, String.class);
 		    	
 				UserManager userManager = resourceResolver.adaptTo(UserManager.class);
 				String authorPath = userManager.getAuthorizable(authorId).getPath();
