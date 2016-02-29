@@ -1,4 +1,4 @@
-<ul data-sly-use.breadcrumb="breadcrumb.js"
+<ol data-sly-use.breadcrumb="breadcrumb.js"
     class="breadcrumb"
     data-sly-list.listItem="${breadcrumb.crumbs}">
     <li>
@@ -6,4 +6,4 @@
     </li>
     <li class="breadcrumb-delim" data-sly-test="${!listItemList.last && breadcrumb.delim}">${breadcrumb.delim}</li>
     <li class="breadcrumb-item we-Breadcrumb-trail" data-sly-test="${listItemList.last && breadcrumb.trail}">${breadcrumb.trail}</li>
-</ul>
+</ol>
