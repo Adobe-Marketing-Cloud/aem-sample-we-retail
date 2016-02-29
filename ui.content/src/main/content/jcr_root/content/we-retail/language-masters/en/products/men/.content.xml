@@ -3,28 +3,55 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:catalogBlueprint="/content/catalogs/we-retail/en/base-catalog/men"
+        cq:commerceProvider="geometrixx"
         cq:commerceType="section"
-        cq:lastModified="{Date}2016-02-01T22:05:39.408+01:00"
+        cq:lastModified="{Date}2016-02-25T22:18:53.173+01:00"
         cq:lastModifiedBy="admin"
-        cq:lastPropertyRollout="{Date}2016-02-01T22:05:39.407+01:00"
-        cq:template="/apps/we-retail/templates/page-section"
+        cq:lastPropertyRollout="{Date}2016-02-25T22:18:53.172+01:00"
+        cq:template="/conf/we-retail/settings/wcm/templates/hero-page"
+        cq:templateType="/conf/we-retail/settings/wcm/template-types/html5page"
+        jcr:language="en"
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Men's"
-        sling:resourceType="we-retail/components/structure/page">
-        <par
+        jcr:title="Men"
+        sling:resourceType="we-retail/components/structure/templated-page">
+        <root
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
-            <section-products
-                jcr:created="{Date}2015-11-10T15:00:43.278+01:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-10T15:00:43.278+01:00"
-                jcr:lastModifiedBy="admin"
+            <hero_image
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/section-products"/>
-        </par>
+                sling:resourceType="we-retail/components/content/hero-image"
+                useFullWidth="true"/>
+            <responsivegrid
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <section_title
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/section-title"
+                    type="h4"/>
+                <section_title_2
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Featured products"
+                    sling:resourceType="we-retail/components/content/section-title"/>
+                <products_grid_1773541649
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/products-grid"
+                    displayAs="products"
+                    feedEnabled="{Boolean}true"
+                    limit="6"
+                    listCSSClass="row"
+                    listFrom="static"
+                    orderBy="jcr:title"
+                    pageMax="0"
+                    pages="[/content/we-retail/language-masters/en/products/equipment/skiing/banff-snow,/content/we-retail/language-masters/en/products/seasonal/winter/apparel/hats/montreal-snow,/content/we-retail/language-masters/en/products/equipment/skiing/calgary-winter,/content/we-retail/language-masters/en/products/women/coats/saskatoon-parka,/content/we-retail/language-masters/en/products/equipment/skiing/tobermory-snow,/content/we-retail/language-masters/en/products/equipment/skiing/mont-tremblant]"/>
+            </responsivegrid>
+        </root>
         <cq:responsive
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured">
@@ -45,7 +72,7 @@
         </cq:responsive>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"
-            cq:master="/content/catalogs/we-retail/en/template-pages/section-page-template"
+            cq:master="/content/catalogs/we-retail/en/template-pages/catalog-page-template"
             cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
             jcr:primaryType="cq:LiveCopy"/>
     </jcr:content>

@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2015-11-09T22:50:23.150+01:00"
+        cq:lastModified="{Date}2016-02-25T22:29:14.788+01:00"
         cq:lastModifiedBy="admin"
         cq:lastReplicated="{Date}2015-09-20T19:51:21.401+02:00"
         cq:lastReplicatedBy="admin"
@@ -26,9 +26,9 @@
                 buttonLinkTo="/content/we-retail/language-masters/en/products/seasonal/winter"
                 fileReference="/content/dam/we-retail/images/bg-jumbotron-1.jpg"
                 heading="All-new winter collection 2016"
+                keepRatio="true"
                 title="Built for the coldest winter on earth"
-                useFullWidth="true"
-                keepRatio="true"/>
+                useFullWidth="true"/>
             <responsivegrid
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
@@ -43,11 +43,12 @@
                 <category_teaser
                     jcr:created="{Date}2015-11-03T23:52:30.703+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-09T22:10:33.523+01:00"
+                    jcr:lastModified="{Date}2016-02-25T22:28:48.332+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/category-teaser"
                     buttonLabel="Women"
+                    buttonLinkTo="/content/we-retail/language-masters/en/products/women"
                     fileReference="/content/dam/we-retail/images/bg-women.png">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
@@ -61,11 +62,12 @@
                 <category_teaser_859708776
                     jcr:created="{Date}2015-11-04T00:10:12.400+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-09T22:10:41.662+01:00"
+                    jcr:lastModified="{Date}2016-02-25T22:29:02.436+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/category-teaser"
                     buttonLabel="Men"
+                    buttonLinkTo="/content/we-retail/language-masters/en/products/men"
                     fileReference="/content/dam/we-retail/images/bg-men.png">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
@@ -79,11 +81,12 @@
                 <category_teaser_465639357
                     jcr:created="{Date}2015-11-04T00:10:50.268+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-09T22:10:52.160+01:00"
+                    jcr:lastModified="{Date}2016-02-25T22:29:14.783+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/category-teaser"
                     buttonLabel="Equipment"
+                    buttonLinkTo="/content/we-retail/language-masters/en/products/equipment"
                     fileReference="/content/dam/we-retail/images/bg-equipment.png">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
@@ -94,68 +97,63 @@
                             width="12"/>
                     </cq:responsive>
                 </category_teaser_465639357>
-
                 <site_feature
-                        jcr:created="{Date}2015-11-03T23:52:30.703+01:00"
-                        jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2015-11-09T22:10:33.523+01:00"
-                        jcr:lastModifiedBy="admin"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/site-feature"
-                        jcr:title="Free delivery"
-                        jcr:description="And free return"
-                        icon="shoping-cart-alt">
+                    jcr:created="{Date}2015-11-03T23:52:30.703+01:00"
+                    jcr:createdBy="admin"
+                    jcr:description="And free return"
+                    jcr:lastModified="{Date}2015-11-09T22:10:33.523+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Free delivery"
+                    sling:resourceType="we-retail/components/content/site-feature"
+                    icon="shoping-cart-alt">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
-                                jcr:primaryType="nt:unstructured"
-                                width="4"/>
+                            jcr:primaryType="nt:unstructured"
+                            width="4"/>
                         <phone
-                                jcr:primaryType="nt:unstructured"
-                                width="12"/>
+                            jcr:primaryType="nt:unstructured"
+                            width="12"/>
                     </cq:responsive>
                 </site_feature>
-
                 <site_feature_465639357
-                        jcr:created="{Date}2015-11-04T00:10:50.268+01:00"
-                        jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2015-11-09T22:10:52.160+01:00"
-                        jcr:lastModifiedBy="admin"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/site-feature"
-                        jcr:title="Order tracking"
-                        jcr:description="Worldwide shipping"
-                        icon="compass">
+                    jcr:created="{Date}2015-11-04T00:10:50.268+01:00"
+                    jcr:createdBy="admin"
+                    jcr:description="Worldwide shipping"
+                    jcr:lastModified="{Date}2015-11-09T22:10:52.160+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Order tracking"
+                    sling:resourceType="we-retail/components/content/site-feature"
+                    icon="compass">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
-                                jcr:primaryType="nt:unstructured"
-                                width="4"/>
+                            jcr:primaryType="nt:unstructured"
+                            width="4"/>
                         <phone
-                                jcr:primaryType="nt:unstructured"
-                                width="12"/>
+                            jcr:primaryType="nt:unstructured"
+                            width="12"/>
                     </cq:responsive>
                 </site_feature_465639357>
-
                 <site_feature_859708776
-                        jcr:created="{Date}2015-11-04T00:10:12.400+01:00"
-                        jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2015-11-09T22:10:41.662+01:00"
-                        jcr:lastModifiedBy="admin"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/site-feature"
-                        jcr:title="Online support"
-                        jcr:description="With our outdoor specialist"
-                        icon="headphones">
+                    jcr:created="{Date}2015-11-04T00:10:12.400+01:00"
+                    jcr:createdBy="admin"
+                    jcr:description="With our outdoor specialist"
+                    jcr:lastModified="{Date}2015-11-09T22:10:41.662+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Online support"
+                    sling:resourceType="we-retail/components/content/site-feature"
+                    icon="headphones">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
-                                jcr:primaryType="nt:unstructured"
-                                width="4"/>
+                            jcr:primaryType="nt:unstructured"
+                            width="4"/>
                         <phone
-                                jcr:primaryType="nt:unstructured"
-                                width="12"/>
+                            jcr:primaryType="nt:unstructured"
+                            width="12"/>
                     </cq:responsive>
                 </site_feature_859708776>
-
-
                 <section_title
                     jcr:created="{Date}2015-11-04T00:47:00.581+01:00"
                     jcr:createdBy="admin"
@@ -199,9 +197,9 @@
                     feedEnabled="true"
                     limit="6"
                     listFrom="children"
-                    parentPage="/content/we-retail/language-masters/en/experience"
                     orderBy="cq:lastModified"
                     pageMax="0"
+                    parentPage="/content/we-retail/language-masters/en/experience"
                     tagsMatch="any"/>
                 <button
                     jcr:created="{Date}2015-11-09T22:32:54.989+01:00"
@@ -337,7 +335,6 @@
     </jcr:content>
     <experience/>
     <products/>
-    <discover/>
     <communities/>
     <about-us/>
 </jcr:root>

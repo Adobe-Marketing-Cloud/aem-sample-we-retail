@@ -6,7 +6,7 @@
         sling:resourceType="wcm/core/components/policies/mappings"
         pageProperties="[foundation/components/page/cq:dialog/content/items/tabs/items/basic,foundation/components/page/cq:dialog/content/items/tabs/items/advanced,foundation/components/page/cq:dialog/content/items/tabs/items/thumbnail,foundation/components/page/cq:dialog/content/items/tabs/items/cloudservices,foundation/components/page/cq:dialog/content/items/tabs/items/target,foundation/components/page/cq:dialog/content/items/tabs/items/permissions,foundation/components/page/cq:dialog/content/items/tabs/items/blueprint,foundation/components/page/cq:dialog/content/items/tabs/items/livecopy]">
         <root
-            cq:policy="/conf/we-retail/settings/wcm/policies/responsivegrid-structure"
+            cq:policy="wcm/foundation/components/responsivegrid/structure"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/core/components/policies/mapping"/>
     </jcr:content>

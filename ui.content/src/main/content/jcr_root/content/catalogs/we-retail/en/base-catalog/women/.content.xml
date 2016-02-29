@@ -4,14 +4,13 @@
     <jcr:content
         cq:lastModified="{Date}2012-01-23T11:05:28.592+01:00"
         cq:lastModifiedBy="admin"
-        cq:template="/libs/commerce/templates/section"
-        jcr:mixinTypes="[]"
+        cq:template="/libs/commerce/templates/catalog"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Women's"
-        sling:resourceType="commerce/components/section">
+        jcr:title="Women"
+        sling:resourceType="commerce/components/catalog">
         <target
             jcr:primaryType="nt:unstructured"
-            jcr_title="Women's"/>
+            jcr_title="Women"/>
     </jcr:content>
     <coats/>
     <pants/>

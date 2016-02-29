@@ -14,8 +14,11 @@
     limitations under the License.
 */-->
 
-<!--/* TODO: Remove all inline styling  */-->
-<div class="we-CategoryTeaser" style="padding: 0; margin: 10px;">
-    <img src="${properties.fileReference}" style="width:100%"/>
-    <a href="${properties.buttonLinkTo}" class="btn btn-action btn-primary">${properties.buttonLabel}</a>
+<div data-sly-use.categoryTeaser="category-teaser.js" class="we-CategoryTeaser">
+    <img src="${properties.fileReference}"/>
+    
+    <h2>${properties.heading}</h2>
+    <h3>${properties.subheading}</h3>
+    
+    <a href="${categoryTeaser.buttonLinkTo}" class="btn btn-action btn-primary">${properties.buttonLabel}</a>
 </div>

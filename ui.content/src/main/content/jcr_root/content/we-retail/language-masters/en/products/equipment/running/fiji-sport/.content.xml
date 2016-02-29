@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-02-01T22:05:41.197+01:00"
+        cq:lastModified="{Date}2016-02-25T22:18:54.242+01:00"
         cq:lastModifiedBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/wm/wmap/wmapfs"
         cq:template="/conf/we-retail/settings/wcm/templates/content-page"
@@ -21,18 +21,181 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
                 <product
-                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    cq:commerceType="product"
+                    jcr:lastModified="{Date}2016-02-25T22:18:54.241+01:00"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product"/>
-                <section_title
+                    sling:resourceType="we-retail/components/content/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmapfs"
+                    variationAxis="color"
+                    variationTitle="Color">
+                    <wmapfs_b-xs
+                        cq:commerceType="variant"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/content/product"
+                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapfs/wmapfs.b/size-xs">
+                        <image
+                            jcr:lastModified="{Date}2015-01-26T12:28:08.471Z"
+                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="commerce/components/product/image"
+                            fileReference="/content/dam/geometrixx-outdoors/products/shorts/Fiji Blue.jpg"/>
+                        <assets
+                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="we-retail/components/content/product/assets"/>
+                    </wmapfs_b-xs>
+                    <wmapfs_b-s
+                        cq:commerceType="variant"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/content/product"
+                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapfs/wmapfs.b/size-s">
+                        <image
+                            jcr:lastModified="{Date}2015-01-26T12:28:08.471Z"
+                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="commerce/components/product/image"
+                            fileReference="/content/dam/geometrixx-outdoors/products/shorts/Fiji Blue.jpg"/>
+                        <assets
+                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="we-retail/components/content/product/assets"/>
+                    </wmapfs_b-s>
+                    <wmapfs_b-m
+                        cq:commerceType="variant"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/content/product"
+                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapfs/wmapfs.b/size-m">
+                        <image
+                            jcr:lastModified="{Date}2015-01-26T12:28:08.471Z"
+                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="commerce/components/product/image"
+                            fileReference="/content/dam/geometrixx-outdoors/products/shorts/Fiji Blue.jpg"/>
+                        <assets
+                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="we-retail/components/content/product/assets"/>
+                    </wmapfs_b-m>
+                    <wmapfs_b-l
+                        cq:commerceType="variant"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/content/product"
+                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapfs/wmapfs.b/size-l">
+                        <image
+                            jcr:lastModified="{Date}2015-01-26T12:28:08.471Z"
+                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="commerce/components/product/image"
+                            fileReference="/content/dam/geometrixx-outdoors/products/shorts/Fiji Blue.jpg"/>
+                        <assets
+                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="we-retail/components/content/product/assets"/>
+                    </wmapfs_b-l>
+                    <wmapfs_b-xl
+                        cq:commerceType="variant"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/content/product"
+                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapfs/wmapfs.b/size-xl">
+                        <image
+                            jcr:lastModified="{Date}2015-01-26T12:28:08.471Z"
+                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="commerce/components/product/image"
+                            fileReference="/content/dam/geometrixx-outdoors/products/shorts/Fiji Blue.jpg"/>
+                        <assets
+                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="we-retail/components/content/product/assets"/>
+                    </wmapfs_b-xl>
+                    <wmapfs_r-s
+                        cq:commerceType="variant"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/content/product"
+                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapfs/wmapfs.r/size-s">
+                        <image
+                            jcr:lastModified="{Date}2015-01-26T12:28:08.473Z"
+                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="commerce/components/product/image"
+                            fileReference="/content/dam/geometrixx-outdoors/products/shorts/Fiji Red.jpg"/>
+                        <assets
+                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="we-retail/components/content/product/assets"/>
+                    </wmapfs_r-s>
+                    <wmapfs_r-m
+                        cq:commerceType="variant"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/content/product"
+                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapfs/wmapfs.r/size-m">
+                        <image
+                            jcr:lastModified="{Date}2015-01-26T12:28:08.473Z"
+                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="commerce/components/product/image"
+                            fileReference="/content/dam/geometrixx-outdoors/products/shorts/Fiji Red.jpg"/>
+                        <assets
+                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="we-retail/components/content/product/assets"/>
+                    </wmapfs_r-m>
+                    <wmapfs_r-l
+                        cq:commerceType="variant"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/content/product"
+                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapfs/wmapfs.r/size-l">
+                        <image
+                            jcr:lastModified="{Date}2015-01-26T12:28:08.473Z"
+                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="commerce/components/product/image"
+                            fileReference="/content/dam/geometrixx-outdoors/products/shorts/Fiji Red.jpg"/>
+                        <assets
+                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="we-retail/components/content/product/assets"/>
+                    </wmapfs_r-l>
+                    <image
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.471Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/shorts/Fiji Blue.jpg"/>
+                    <assets
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/content/product/assets"/>
+                </product>
+                <reviews_section_title
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Reviews"
                     sling:resourceType="we-retail/components/content/section-title"/>
-                <comments
+                <reviews
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/comments"/>
+                    sling:resourceType="we-retail/components/content/product/reviews"/>
+                <similar_section_title
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="You may also like"
+                    sling:resourceType="we-retail/components/content/section-title"/>
+                <similar_products
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/product/recommendation"
+                    max="6"
+                    relationshipType="relatedproducts:info.we-retail.similar-to-current"/>
             </responsivegrid>
         </root>
         <cq:responsive
@@ -58,5 +221,8 @@
             cq:master="/content/catalogs/we-retail/en/template-pages/product-page-template"
             cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
             jcr:primaryType="cq:LiveCopy"/>
+        <image
+            jcr:primaryType="nt:unstructured"
+            fileReference="/content/dam/geometrixx-outdoors/products/shorts/Fiji Blue.jpg"/>
     </jcr:content>
 </jcr:root>
