@@ -1,8 +1,9 @@
-<div data-sly-use.breadcrumb="breadcrumb.js"
-     class="we-Breadcrumb">
-    <sly data-sly-list.listItem="${breadcrumb.crumbs}">
-        <a class="we-Breadcrumb-item" href="${listItem.trail.path}">${listItem.title}</a>
-        <span class="we-Breadcrumb-delim" data-sly-test="${!listItemList.last && breadcrumb.delim}">${breadcrumb.delim}</span>
-        <span class="we-Breadcrumb-item we-Breadcrumb-trail" data-sly-test="${listItemList.last && breadcrumb.trail}">${breadcrumb.trail}</span>
-    </sly>
-</div>
+<ul data-sly-use.breadcrumb="breadcrumb.js"
+    class="breadcrumb"
+    data-sly-list.listItem="${breadcrumb.crumbs}">
+    <li>
+        <a href="${listItem.trail.path}">${listItem.title}</a>
+    </li>
+    <li class="breadcrumb-delim" data-sly-test="${!listItemList.last && breadcrumb.delim}">${breadcrumb.delim}</li>
+    <li class="breadcrumb-item we-Breadcrumb-trail" data-sly-test="${listItemList.last && breadcrumb.trail}">${breadcrumb.trail}</li>
+</ul>
