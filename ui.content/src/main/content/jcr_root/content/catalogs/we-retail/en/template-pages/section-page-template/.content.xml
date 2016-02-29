@@ -18,55 +18,55 @@
                     sling:resourceType="wcm/foundation/components/responsivegrid">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
-                                jcr:primaryType="nt:unstructured"
-                                width="2"/>
+                            jcr:primaryType="nt:unstructured"
+                            width="2"/>
                     </cq:responsive>
                     <product_filter0
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product-filter"
-                            type="toggle"/>
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/content/product-filter"
+                        type="toggle"/>
                     <product_filter1
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product-filter"
-                            type="color"/>
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/content/product-filter"
+                        type="color"/>
                     <product_filter2
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product-filter"
-                            type="price"/>
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/content/product-filter"
+                        type="price"/>
                 </responsivegrid>
                 <section_title
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/section-title">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/section-title">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
-                                jcr:primaryType="nt:unstructured"
-                                width="8"/>
+                            jcr:primaryType="nt:unstructured"
+                            width="8"/>
                     </cq:responsive>
                 </section_title>
                 <product_filter
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product-filter"
-                        type="sort">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/product-filter"
+                    type="sort">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
-                                jcr:primaryType="nt:unstructured"
-                                width="2"/>
+                            jcr:primaryType="nt:unstructured"
+                            width="2"/>
                     </cq:responsive>
                 </product_filter>
                 <product-grid
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/products-grid"
-                        displayAs="products"
-                        listFrom="children"
-                        orderBy="jcr:title"
-                        pageMax="0">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/products-grid"
+                    displayAs="products"
+                    listFrom="children"
+                    orderBy="jcr:title"
+                    pageMax="0">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
-                                jcr:primaryType="nt:unstructured"
-                                width="10"/>
+                            jcr:primaryType="nt:unstructured"
+                            width="10"/>
                     </cq:responsive>
                 </product-grid>
-        	</responsivegrid>
+            </responsivegrid>
         </root>
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">

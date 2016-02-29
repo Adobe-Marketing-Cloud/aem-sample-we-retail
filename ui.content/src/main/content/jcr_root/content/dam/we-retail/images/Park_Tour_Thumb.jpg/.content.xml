@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:mixinTypes="[mix:referenceable]"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="9b5f60d9-a295-42b5-9a7e-3ddc3ab54f52">
+    jcr:uuid="8128c582-de29-473c-ad35-555b33143447">
     <jcr:content
+        cq:name="Park_Tour_Thumb.jpg"
+        cq:parentPath="/content/dam/we-retail/images"
         dam:assetID="9b5f60d9-a295-42b5-9a7e-3ddc3ab54f52"
         dam:relativePath="we-retail/images/Park_Tour_Thumb.jpg"
-        jcr:lastModified="{Date}2016-02-16T01:26:38.714+01:00"
+        jcr:lastModified="{Date}2016-02-29T19:30:02.253+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"
-            dam:extracted="{Date}2016-02-16T01:26:38.565+01:00"
+            dam:extracted="{Date}2016-02-29T19:30:01.888+01:00"
             dam:Fileformat="JPEG"
             dam:MIMEtype="image/jpeg"
             dam:Numberofimages="{Long}1"
@@ -24,6 +27,9 @@
             dam:sha1="c4a7b0ce05c703ada807e7518d179526e8033f2d"
             dam:size="{Long}45868"
             dc:format="image/jpeg"
+            dc:modified="{Date}2016-02-29T17:46:03.419+01:00"
+            jcr:lastModified="{Date}2016-02-29T19:18:12.305+01:00"
+            jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
             tiff:ImageLength="{Long}251"

@@ -7,7 +7,6 @@
         cq:template="/libs/commerce/templates/section"
         jcr:lastModified="{Date}2015-11-10T14:21:29.311+01:00"
         jcr:lastModifiedBy="admin"
-        jcr:mixinTypes="[]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Coats"
         sling:resourceType="commerce/components/section">

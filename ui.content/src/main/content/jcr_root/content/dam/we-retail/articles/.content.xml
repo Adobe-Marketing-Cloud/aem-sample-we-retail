@@ -4,7 +4,5 @@
     <jcr:content
         dam:relativePath="we-retail/articles"
         jcr:primaryType="nt:unstructured"
-        jcr:title="Articles">
-        <folderThumbnail/>
-    </jcr:content>
+        jcr:title="Articles"/>
 </jcr:root>

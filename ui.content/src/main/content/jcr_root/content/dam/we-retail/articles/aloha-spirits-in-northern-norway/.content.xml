@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:isCheckedOut="{Boolean}true"
-    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:mixinTypes="[mix:referenceable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="985dd492-4077-498e-a06b-bad315002966">
+    jcr:uuid="c633cbb2-ebfa-4fd5-9c8d-a3193ba41775">
     <jcr:content
         cq:name="aloha-spirits-in-northern-norway"
         cq:parentPath="/content/dam/we-retail/articles"
         dam:assetID="985dd492-4077-498e-a06b-bad315002966"
         dam:compoundType="contentFragment"
         dam:relativePath="we-retail/articles/aloha-spirits-in-northern-norway"
-        jcr:lastModified="{Date}2016-02-25T23:53:59.904+01:00"
+        jcr:lastModified="{Date}2016-02-29T19:30:04.211+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent"
         jcr:title="Aloha spirits in Northern Norway">
         <metadata
             cq:tags="[we-retail:activity/surfing,we-retail:season/winter]"
-            dam:extracted="{Date}2016-02-25T23:53:28.318+01:00"
+            dam:extracted="{Date}2016-02-29T19:30:04.126+01:00"
             dam:sha1="4fad4814bb24feb2051254a69f1534cf56f2ac09"
             dam:size="{Long}5675"
             dc:format="text/html"
             dc:modified="{Date}2016-02-25T23:53:59.904+01:00"
-            jcr:lastModified="{Date}2016-02-25T23:53:59.904+01:00"
+            jcr:lastModified="{Date}2016-02-29T19:18:03.275+01:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>

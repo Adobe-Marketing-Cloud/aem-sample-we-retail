@@ -13,15 +13,14 @@
             type="nav"/>
         <items jcr:primaryType="nt:unstructured">
             <image
-                    jcr:primaryType="nt:unstructured"
-                    sling:hideResource="{Boolean}true"/>
+                jcr:primaryType="nt:unstructured"
+                sling:hideResource="{Boolean}true"/>
             <accessibility
-                    jcr:primaryType="nt:unstructured"
-                    sling:hideResource="{Boolean}true"/>
+                jcr:primaryType="nt:unstructured"
+                sling:hideResource="{Boolean}true"/>
             <column
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/foundation/container">
-
                 <items jcr:primaryType="nt:unstructured">
                     <image
                         jcr:primaryType="nt:unstructured"
@@ -62,16 +61,16 @@
                     <useFullWidth
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                        text="Full width"
                         fieldDescription="Overlap grid to have full width background"
                         name="./useFullWidth"
+                        text="Full width"
                         value="true"/>
                     <keepRatio
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                        text="Keep 16:9 ratio"
                         fieldDescription="Set component height to in 16:9 aspect ratio"
                         name="./keepRatio"
+                        text="Keep 16:9 ratio"
                         value="true"/>
                 </items>
             </column>
