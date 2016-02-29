@@ -21,7 +21,7 @@ use(function () {
     var currentNav = currentPage.getAbsoluteParent(4);
     var currentNavPath = currentNav && currentNav.getPath();
     var languageRoot = "#";
-    var languages = [];
+    var languages = [], currentLanguage = {};
 
     var getPages = function(_root, level) {
         if (level === 0) {
@@ -64,7 +64,7 @@ use(function () {
                 selected: rootPath.equals(page.getPath())
             });
         }
-
+ 
         return items;
     };
 
@@ -76,6 +76,10 @@ use(function () {
         }
 
         languages = getLanguages(root);
+        currentLanguage = {
+            code: root.getName(),
+            name: root.getTitle()
+        };
     }
 
 
@@ -85,6 +89,7 @@ use(function () {
         items: items,
         theme: theme,
         languageRoot: languageRoot,
-        languages: languages
+        languages: languages,
+        currentLanguage: currentLanguage
     };
 });
