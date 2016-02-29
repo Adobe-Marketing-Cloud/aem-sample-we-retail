@@ -1,2 +1,20 @@
 @import (reference) "/etc/designs/we-retail/common/variables.less";
 
+.breadcrumb {
+    text-align: center;
+
+    li {
+        & > a {
+            font-weight: 600;
+            color: @breadcrumb-color;
+        }
+
+        &.active > a {
+            color: @breadcrumb-active-color;
+        }
+
+        &.breadcrumb-delim {
+            color: @breadcrumb-delim-color;
+        }
+    }
+}
