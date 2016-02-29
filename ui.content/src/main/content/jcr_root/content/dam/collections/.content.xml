@@ -5,7 +5,6 @@
     sling:resourceType="dam/collection">
     <rep:policy/>
     <a/>
-    <w/>
     <we-retail jcr:primaryType="nt:unstructured">
         <tanner_hall_s_redemptionroad
             jcr:created="{Date}2016-02-01T18:27:42.289+01:00"
@@ -34,8 +33,59 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resource="/content/dam/we-retail/articles/tanner-halls-redemption-road"/>
             </sling:members>
-            <rep:policy/>
             <folderThumbnail/>
         </tanner_hall_s_redemptionroad>
+        <aloha_spirits_innorthernnorway
+            jcr:created="{Date}2016-02-25T23:50:48.997+01:00"
+            jcr:createdBy="admin"
+            jcr:description=""
+            jcr:lastModified="{Date}2016-02-25T23:51:36.268+01:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[rep:AccessControllable]"
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Aloha spirits in Northern Norway"
+            sling:resourceSuperType="sling/collection"
+            sling:resourceType="dam/collection">
+            <sling:members
+                jcr:primaryType="nt:unstructured"
+                sling:resources="[/content/dam/we-retail/articles/photos/lofoten/_B6A5652.jpg,/content/dam/we-retail/articles/photos/lofoten/_B6A5663.jpg,/content/dam/we-retail/articles/photos/lofoten/_B6A5010.jpg,/content/dam/we-retail/articles/photos/lofoten/_B6A4589.jpg,/content/dam/we-retail/articles/photos/lofoten/_B6A4244.jpg,/content/dam/we-retail/articles/photos/lofoten/_B6A4252.jpg,/content/dam/we-retail/articles/photos/lofoten/_B6A4191.jpg,/content/dam/we-retail/articles/photos/lofoten/_B6A4270.jpg,/content/dam/we-retail/articles/photos/lofoten/_B6A4379.jpg,/content/dam/we-retail/articles/photos/lofoten/_B6A4438.jpg,/content/dam/we-retail/articles/aloha-spirits-in-northern-norway]">
+                <_B6A5652.jpg
+                    jcr:primaryType="nt:unstructured"
+                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A5652.jpg"/>
+                <_B6A5663.jpg
+                    jcr:primaryType="nt:unstructured"
+                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A5663.jpg"/>
+                <_B6A5010.jpg
+                    jcr:primaryType="nt:unstructured"
+                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A5010.jpg"/>
+                <_B6A4589.jpg
+                    jcr:primaryType="nt:unstructured"
+                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A4589.jpg"/>
+                <_B6A4244.jpg
+                    jcr:primaryType="nt:unstructured"
+                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A4244.jpg"/>
+                <_B6A4252.jpg
+                    jcr:primaryType="nt:unstructured"
+                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A4252.jpg"/>
+                <_B6A4191.jpg
+                    jcr:primaryType="nt:unstructured"
+                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A4191.jpg"/>
+                <_B6A4270.jpg
+                    jcr:primaryType="nt:unstructured"
+                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A4270.jpg"/>
+                <_B6A4379.jpg
+                    jcr:primaryType="nt:unstructured"
+                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A4379.jpg"/>
+                <_B6A4438.jpg
+                    jcr:primaryType="nt:unstructured"
+                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A4438.jpg"/>
+                <aloha-spirits-in-northern-norway
+                    jcr:primaryType="nt:unstructured"
+                    sling:resource="/content/dam/we-retail/articles/aloha-spirits-in-northern-norway"/>
+            </sling:members>
+            <rep:policy/>
+            <folderThumbnail/>
+        </aloha_spirits_innorthernnorway>
     </we-retail>
+    <W/>
 </jcr:root>

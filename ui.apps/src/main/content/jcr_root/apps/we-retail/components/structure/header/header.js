@@ -20,6 +20,7 @@ use(function () {
     var root = currentPage.getAbsoluteParent(3);
     var currentNav = currentPage.getAbsoluteParent(4);
     var currentNavPath = currentNav && currentNav.getPath();
+    var languageRoot = "#";
 
     var getPages = function(_root, level) {
         if (level === 0) {
@@ -44,13 +45,18 @@ use(function () {
 
     if (root) {
         items = getPages(root, 2);
+
+        if (root.path.substring(0, 6) != "/conf/") {
+            languageRoot = root.path + ".html";
+        }
     }
+
 
     var theme = properties.get("theme", "default");
 
     return {
         items: items,
         theme: theme,
-        languageRoot: root
+        languageRoot: languageRoot
     };
 });

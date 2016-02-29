@@ -1,7 +1,8 @@
 @import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
 
 .we-CategoryTeaser {
-  padding-bottom: percentage(9/16);
+  padding: 0;
+  margin: 10px;
 
   background: 50% no-repeat;
   background-size: cover;
@@ -12,5 +13,29 @@
     position: absolute;
     bottom: @padding-base-horizontal;
     left: @padding-base-horizontal;
+  }
+  
+  img {
+  	width: 100%;
+  }
+  
+  h2 {
+    &:extend(.text-uppercase);
+
+	font-size: @font-size-h2;
+	font-weight: 900;
+	color: @jumbotron-color;
+    display: block;
+
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 20px;
+  }
+
+  p {
+    &:extend(.h3);
+
+    margin: 0 auto;
   }
 }
