@@ -7,7 +7,7 @@
         props: ['type']
     });
 
-    document.querySelectorAll('.product-filter').forEach(function (el, index) {
+    _.each(document.querySelectorAll('.product-filter'), function (el, index) {
         new Vue({
             parent: we.app,
             name: 'product-filter',
