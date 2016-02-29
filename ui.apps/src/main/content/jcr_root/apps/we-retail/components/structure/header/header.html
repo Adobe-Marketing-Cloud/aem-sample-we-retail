@@ -22,15 +22,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top hidden-xs">
         <div class="container-fluid">
             <ul class="nav navbar-nav navbar-left">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">EN</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">EN</a></li>
-                        <li><a href="#">PL</a></li>
-                        <li><a href="#">DE</a></li>
-                    </ul>
-                </li>
+                <li><a href="#" data-toggle="modal" data-target=".we-LanguageModal">EN</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#" data-toggle="modal" data-target=".we-SignInModal">Login</a></li>
@@ -286,13 +278,18 @@
     </div><!-- /.we-SignInModal -->
 
     <div class="we-LanguageModal modal fade" tabindex="-1" role="dialog" data-color="primary">
-        <div class="modal-dialog modal-center">
+        <div class="modal-dialog modal-center modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title">CHOOSE YOUR COUNTRY</h3>
+                    <h3 class="modal-title text-center">CHOOSE YOUR COUNTRY</h3>
                 </div>
                 <div class="modal-body">
-
+                    <ul class="we-LanguagesList" data-sly-list.language="${header.languages}">
+                        <li class="${language.selected ? 'active' : ''}">
+                            <i class="we-lang-icon we-lang-icon-${language.code}"></i>
+                            <a href="${language.path}.html">${language.name}</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

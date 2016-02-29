@@ -1,0 +1,25 @@
+@import (reference) "/etc/designs/we-retail/common/variables.less";
+
+.we-LanguagesList {
+    list-style: none;
+
+    li {
+        > a {
+            vertical-align: middle;
+            color: @gray-dark;
+            text-decoration: none;
+            padding-left: 1rem;
+
+            &:hover {
+                color: @brand-primary;
+                text-decoration: underline;
+            }
+        }
+
+        &.active {
+            > a {
+                font-weight: 800;
+            }
+        }
+    }
+}
