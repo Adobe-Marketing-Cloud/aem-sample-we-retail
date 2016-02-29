@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:isCheckedOut="{Boolean}true"
-    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
-    jcr:primaryType="dam:Asset">
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="0c16ea15-2a7b-4557-9aac-19213667d741">
     <jcr:content
         cq:name="the-history-of-freestyle-snowboarding-at-whistler"
         cq:parentPath="/content/dam/we-retail/articles"
@@ -10,18 +10,18 @@
         dam:assetID="816ff1bb-2333-491a-a143-9aeabb8c2dc0"
         dam:compoundType="contentFragment"
         dam:relativePath="we-retail/articles/the-history-of-freestyle-snowboarding-at-whistler"
-        jcr:lastModified="{Date}2016-02-16T01:09:04.223+01:00"
+        jcr:lastModified="{Date}2016-02-29T19:30:01.217+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent"
         jcr:title="The History of Freestyle Snowboarding at Whistler">
         <metadata
             cq:tags="[we-retail:season/winter,we-retail:activity/snowboarding]"
-            dam:extracted="{Date}2016-02-16T00:40:44.632+01:00"
+            dam:extracted="{Date}2016-02-29T19:30:01.132+01:00"
             dam:sha1="e12b87ee3cb2df99ffe2dcd11db77a775d2d1be2"
             dam:size="{Long}1688"
             dc:format="text/html"
             dc:modified="{Date}2016-02-16T00:43:18.759+01:00"
-            jcr:lastModified="{Date}2016-02-16T01:09:04.223+01:00"
+            jcr:lastModified="{Date}2016-02-29T19:18:05.140+01:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>

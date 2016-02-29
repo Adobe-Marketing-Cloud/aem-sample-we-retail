@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:mixinTypes="[mix:referenceable]"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:versionable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="ecfa3828-8402-46cf-af26-a8a03196f45c">
+    jcr:uuid="8b80a78e-5991-40f0-8d6c-a5bcdecd66ec">
     <jcr:content
+        cq:name="01_SNBP151100_MAMM21_Mammoth_NickHamilton_R2.jpg"
+        cq:parentPath="/content/dam/we-retail/images"
         dam:assetID="ecfa3828-8402-46cf-af26-a8a03196f45c"
         dam:relativePath="we-retail/images/01_SNBP151100_MAMM21_Mammoth_NickHamilton_R2.jpg"
-        jcr:lastModified="{Date}2016-02-16T01:24:46.192+01:00"
+        jcr:lastModified="{Date}2016-02-29T19:30:03.438+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"
-            dam:extracted="{Date}2016-02-16T01:24:45.732+01:00"
+            dam:extracted="{Date}2016-02-29T19:30:02.903+01:00"
             dam:Fileformat="JPEG"
             dam:MIMEtype="image/jpeg"
             dam:Numberofimages="{Long}1"
@@ -24,6 +27,9 @@
             dam:sha1="1fd428e3a23ecb65b48f4447dba8100884a51032"
             dam:size="{Long}1217102"
             dc:format="image/jpeg"
+            dc:modified="{Date}2016-02-29T17:46:06.135+01:00"
+            jcr:lastModified="{Date}2016-02-29T19:18:08.398+01:00"
+            jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
             tiff:ImageLength="{Long}1076"

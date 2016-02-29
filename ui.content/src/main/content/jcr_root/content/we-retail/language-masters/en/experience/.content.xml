@@ -6,7 +6,6 @@
         cq:lastModifiedBy="admin"
         cq:template="/conf/we-retail/settings/wcm/templates/hero-page"
         cq:templateType="/conf/we-retail/settings/wcm/template-types/html5page"
-        jcr:mixinTypes="[]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Experience"
         sling:resourceType="we-retail/components/structure/templated-page">

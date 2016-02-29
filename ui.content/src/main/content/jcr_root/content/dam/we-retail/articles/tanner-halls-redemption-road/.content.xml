@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:isCheckedOut="{Boolean}true"
-    jcr:mixinTypes="[mix:versionable]"
-    jcr:primaryType="dam:Asset">
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="d51ae8d9-3885-46aa-80ca-ff068a4a58db">
     <jcr:content
         cq:name="tanner-halls-redemption-road"
         cq:parentPath="/content/dam/we-retail/articles"
         dam:assetID="aaid:d64bf66fde144fe3bdcb2e9c86890ed8"
         dam:compoundType="contentFragment"
         dam:relativePath="we-retail/articles/tanner-halls-redemption-road"
-        jcr:lastModified="{Date}2016-02-01T18:31:42.748+01:00"
+        jcr:lastModified="{Date}2016-02-29T19:30:01.851+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent"
         jcr:title="Tanner Hall's Redemption Road">
         <metadata
             cq:tags="[we-retail:season/winter,we-retail:activity/skiing]"
-            dam:extracted="{Date}2016-02-01T18:30:44.406+01:00"
+            dam:extracted="{Date}2016-02-29T19:30:01.626+01:00"
             dam:sha1="50d034fe0e3099f0fbb041e0f3c8e639539529bc"
             dam:size="{Long}3520"
             dam:WordCount="{Long}534"
             dc:format="text/plain"
             dc:modified="{Date}2016-02-01T18:30:14.046+01:00"
             dc:title="Tanner+Hall's+Redemption+Road"
-            jcr:lastModified="{Date}2016-02-01T18:31:42.748+01:00"
+            jcr:lastModified="{Date}2016-02-29T19:18:06.333+01:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"

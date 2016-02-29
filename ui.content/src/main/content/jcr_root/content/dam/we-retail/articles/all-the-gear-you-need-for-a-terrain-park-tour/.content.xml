@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:isCheckedOut="{Boolean}true"
-    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
-    jcr:primaryType="dam:Asset">
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="d5818a23-615e-4d96-8e4d-0b1a6d3b0ce2">
     <jcr:content
         cq:name="all-the-gear-you-need-for-a-terrain-park-tour"
         cq:parentPath="/content/dam/we-retail/articles"
@@ -10,18 +10,18 @@
         dam:compoundType="contentFragment"
         dam:relativePath="we-retail/articles/all-the-gear-you-need-for-a-terrain-park-tour"
         jcr:description=""
-        jcr:lastModified="{Date}2016-02-16T01:18:02.835+01:00"
+        jcr:lastModified="{Date}2016-02-29T19:30:03.180+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent"
         jcr:title="All the Gear You Need for a Terrain Park Tour">
         <metadata
             cq:tags="[we-retail:season/winter,we-retail:activity/snowboarding]"
-            dam:extracted="{Date}2016-02-16T00:43:01.986+01:00"
+            dam:extracted="{Date}2016-02-29T19:30:02.969+01:00"
             dam:sha1="ba71c3c3004e9a8bdf6b2686201351bbf9b2f815"
             dam:size="{Long}872"
             dc:format="text/html"
             dc:modified="{Date}2016-02-16T01:06:01.672+01:00"
-            jcr:lastModified="{Date}2016-02-16T01:18:02.834+01:00"
+            jcr:lastModified="{Date}2016-02-29T19:18:02.377+01:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"

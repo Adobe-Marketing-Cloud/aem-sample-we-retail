@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-          jcr:primaryType="nt:unstructured"
-          jcr:title="Social Share"
-          sling:resourceType="cq/gui/components/authoring/dialog">
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Social Share"
+    sling:resourceType="cq/gui/components/authoring/dialog">
     <content
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="granite/ui/components/foundation/container">
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
         <layout
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
-                margin="{Boolean}false"
-                type="nav"/>
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+            margin="{Boolean}false"
+            type="nav"/>
         <items jcr:primaryType="nt:unstructured">
             <column
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="granite/ui/components/foundation/container">
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
                     <facebookShare
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                            text="Facebook"
-                            name="./facebookShare"
-                            value="true"/>
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                        name="./facebookShare"
+                        text="Facebook"
+                        value="true"/>
                     <twitterShare
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                            text="Twitter"
-                            name="./twitterShare"
-                            value="true"/>
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                        name="./twitterShare"
+                        text="Twitter"
+                        value="true"/>
                     <googlePlusShare
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                            text="Google+"
-                            name="./googlePlusShare"
-                            value="true"/>
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                        name="./googlePlusShare"
+                        text="Google+"
+                        value="true"/>
                     <pinterestShare
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                            text="Pinterest"
-                            name="./pinterestShare"
-                            value="true"/>
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                        name="./pinterestShare"
+                        text="Pinterest"
+                        value="true"/>
                 </items>
             </column>
         </items>

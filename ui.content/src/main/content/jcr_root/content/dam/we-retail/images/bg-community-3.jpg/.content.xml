@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="dam:Asset">
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="83ccf94a-8419-45d3-b4d2-6a5a98ac0bef">
     <jcr:content
-        jcr:lastModified="{Date}2015-11-03T23:49:45.619+01:00"
+        cq:name="bg-community-3.jpg"
+        cq:parentPath="/content/dam/we-retail/images"
+        dam:assetID="69296579-40b1-48a2-a14e-7c1890a78ef7"
+        dam:relativePath="we-retail/images/bg-community-3.jpg"
+        jcr:lastModified="{Date}2016-02-29T19:30:04.279+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"
-            dam:extracted="{Date}2015-11-03T23:49:45.152+01:00"
+            dam:extracted="{Date}2016-02-29T19:30:04.177+01:00"
             dam:Fileformat="JPEG"
             dam:MIMEtype="image/jpeg"
             dam:Numberofimages="{Long}1"
@@ -20,6 +27,9 @@
             dam:sha1="902c60d641ddab165ba4f8f06522811612772044"
             dam:size="{Long}44131"
             dc:format="image/jpeg"
+            dc:modified="{Date}2016-02-29T17:46:01.461+01:00"
+            jcr:lastModified="{Date}2016-02-29T19:18:09.980+01:00"
+            jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
             tiff:ImageLength="{Long}220"
