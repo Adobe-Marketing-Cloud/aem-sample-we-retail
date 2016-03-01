@@ -286,8 +286,7 @@
                 <div class="modal-body">
                     <ul class="we-LanguagesList" data-sly-list.language="${header.languages}">
                         <li class="${language.selected ? 'active' : ''}">
-                            <i class="we-lang-icon we-lang-icon-${language.code}"></i>
-                            <a href="${language.path}.html">${language.name}</a>
+                            <a href="${language.path}.html"><i class="we-lang-icon we-lang-icon-${language.code}"></i>${language.name}</a>
                         </li>
                     </ul>
                 </div>
