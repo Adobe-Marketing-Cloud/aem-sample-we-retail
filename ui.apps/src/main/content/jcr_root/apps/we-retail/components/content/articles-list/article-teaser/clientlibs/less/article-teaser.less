@@ -78,10 +78,14 @@
   }
 
   &-author {
-    &:extend(.text-muted);
+    color: fade(@gray-base, 40);
+
+    margin: auto 0 auto @padding-small-horizontal;
+
     font-weight: 600;
 
-    margin: auto 0 auto @padding-large-horizontal;
+    line-height: 2rem;
+
   }
 
   &-text {
