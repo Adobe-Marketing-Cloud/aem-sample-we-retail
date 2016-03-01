@@ -4,7 +4,7 @@
 .for(@i, @n) {.-each(@i)}
 .for(@n)     when (isnumber(@n)) {.for(1, @n)}
 .for(@i, @n) when not (@i = @n)  {
-  .for((@i + (@n - @i) / abs(@n - @i)), @n);
+    .for((@i + (@n - @i) / abs(@n - @i)), @n);
 }
 
 // ............................................................
@@ -18,16 +18,16 @@
 // .font-face
 
 .font-face(@name, @family, @weight: normal, @style: normal, @version: 1.0) {
-  @font-face {
-    font-family: '@{family}';
-    src: url('../fonts/@{name}.eot?v=@{version}');
-    src: url('../fonts/@{name}.eot?#iefix&v=@{version}') format('embedded-opentype'),
-    url('../fonts/@{name}.woff2?v=@{version}') format('woff2'),
-    url('../fonts/@{name}.woff?v=@{version}') format('woff'),
-    url('../fonts/@{name}.ttf?v=@{version}') format('truetype'),
-    url('../fonts/@{name}.svg?v=@{version}#@{name}') format('svg');
-    //  src: url('@{name}/FontAwesome.otf') format('opentype'); // used when developing fonts
-    font-weight: @weight;
-    font-style: @style;
-  }
+    @font-face {
+        font-family: '@{family}';
+        src: url('../fonts/@{name}.eot?v=@{version}');
+        src: url('../fonts/@{name}.eot?#iefix&v=@{version}') format('embedded-opentype'),
+        url('../fonts/@{name}.woff2?v=@{version}') format('woff2'),
+        url('../fonts/@{name}.woff?v=@{version}') format('woff'),
+        url('../fonts/@{name}.ttf?v=@{version}') format('truetype'),
+        url('../fonts/@{name}.svg?v=@{version}#@{name}') format('svg');
+        //  src: url('@{name}/FontAwesome.otf') format('opentype'); // used when developing fonts
+        font-weight: @weight;
+        font-style: @style;
+    }
 }
