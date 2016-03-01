@@ -1,168 +1,168 @@
 .navbar {
-  margin-right: @navbar-height + 2;
+    margin-right: @navbar-height + 2;
 
-  border-width: 0 0 1px;
+    border-width: 0 0 1px;
 
-  font-weight: 700;
-  font-size: @font-size-small;
+    font-weight: 700;
+    font-size: @font-size-small;
 
-  text-transform: uppercase;
+    text-transform: uppercase;
 
-  .navbar-center {
-    float: none;
+    .navbar-center {
+        float: none;
 
-    display: inline-block;
-    vertical-align: top;
-  }
+        display: inline-block;
+        vertical-align: top;
+    }
 }
 
 .navbar-default {
 }
 
 .navbar-inverse {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 .navbar-collapse {
-  text-align: center;
+    text-align: center;
 
-  @media (max-width: @grid-float-breakpoint-max) {
-    text-align: left;
-  }
+    @media (max-width: @grid-float-breakpoint-max) {
+        text-align: left;
+    }
 }
 
 .navbar-nav {
-  & > li {
-    & > a {
-      padding-right: @padding-base-horizontal;
-      padding-left: @padding-base-horizontal;
-    }
-
-    &.active > a {
-      .navbar-default & {
-        &:hover::after {
-          border-top-color: @navbar-default-link-active-color;
+    & > li {
+        & > a {
+            padding-right: @padding-base-horizontal;
+            padding-left: @padding-base-horizontal;
         }
-      }
 
-      .navbar-inverse & {
-        &:hover::after {
-          border-top-color: @navbar-inverse-link-active-color;
+        &.active > a {
+            .navbar-default & {
+                &:hover::after {
+                    border-top-color: @navbar-default-link-active-color;
+                }
+            }
+
+            .navbar-inverse & {
+                &:hover::after {
+                    border-top-color: @navbar-inverse-link-active-color;
+                }
+            }
         }
-      }
-    }
 
-    @media (max-width: @grid-float-breakpoint-max) {
-      & > a {
-        display: inline-block;
-      }
+        @media (max-width: @grid-float-breakpoint-max) {
+            & > a {
+                display: inline-block;
+            }
+        }
     }
-  }
 }
 
 .navbar-header {
-  @media (max-width: @grid-float-breakpoint-max) {
-    text-align: center;
-  }
+    @media (max-width: @grid-float-breakpoint-max) {
+        text-align: center;
+    }
 }
 
 .navbar-brand {
-  font-size: inherit;
+    font-size: inherit;
 
-  letter-spacing: 2px;
+    letter-spacing: 2px;
 
-  strong {
-    color: @brand-primary;
-  }
+    strong {
+        color: @brand-primary;
+    }
 
-  @media (max-width: @grid-float-breakpoint-max) {
-    float: none;
+    @media (max-width: @grid-float-breakpoint-max) {
+        float: none;
 
-    display: inline-block;
-    vertical-align: top;
-  }
+        display: inline-block;
+        vertical-align: top;
+    }
 }
 
 .navbar-toggle {
-  float: left;
+    float: left;
 
-  .navbar-vertical-align(30.5px);
-  margin-right: auto;
-  margin-left: @padding-small-horizontal;
+    .navbar-vertical-align(30.5px);
+    margin-right: auto;
+    margin-left: @padding-small-horizontal;
 
-  .icon-bar {
-    border-radius: 2px;
-  }
+    .icon-bar {
+        border-radius: 2px;
+    }
 
-  .icon-bar + .icon-bar {
-    margin-top: (13px/2);
-  }
+    .icon-bar + .icon-bar {
+        margin-top: (13px/2);
+    }
 }
 
 .navbar-right-outside {
-  transform: translateX(100%);
+    transform: translateX(100%);
 
-  position: absolute;
-  top: 0;
-  right: -2px;
+    position: absolute;
+    top: 0;
+    right: -2px;
 
-  .btn {
-    min-width: @navbar-height;
+    .btn {
+        min-width: @navbar-height;
 
-    padding-top: ((@navbar-height - (@font-size-base * @line-height-base)) / 2 - 1);
-    padding-bottom: ((@navbar-height - (@font-size-base * @line-height-base)) / 2 - 1);
+        padding-top: ((@navbar-height - (@font-size-base * @line-height-base)) / 2 - 1);
+        padding-bottom: ((@navbar-height - (@font-size-base * @line-height-base)) / 2 - 1);
 
-    .navbar-default & {
-      padding-bottom: ((@navbar-height - (@font-size-base * @line-height-base)) / 2);
+        .navbar-default & {
+            padding-bottom: ((@navbar-height - (@font-size-base * @line-height-base)) / 2);
 
-      border-bottom: 1px solid @navbar-default-border;
+            border-bottom: 1px solid @navbar-default-border;
 
-      &:hover, &.hover,
-      &:focus, &.focus {
-        color: @brand-primary-hover;
-      }
+            &:hover, &.hover,
+            &:focus, &.focus {
+                color: @brand-primary-hover;
+            }
 
-      &:active, &.active {
-        box-shadow: none;
-      }
+            &:active, &.active {
+                box-shadow: none;
+            }
+        }
     }
-  }
 }
 
 .navbar-fixed-top {
-  min-height: 40px;
+    min-height: 40px;
 
-  margin: 0;
+    margin: 0;
 
-  background-color: @gray-base;
+    background-color: @gray-base;
 
-  .navbar-nav {
-    margin: auto;
+    .navbar-nav {
+        margin: auto;
 
-    &> li {
-      &> a {
-        padding: 8px @padding-small-horizontal;
+        &> li {
+            &> a {
+                padding: 8px @padding-small-horizontal;
 
-        &::after {
-          display: none;
+                &::after {
+                    display: none;
+                }
+
+                .fa {
+                    opacity: .2;
+
+                    vertical-align: text-bottom;
+
+                    margin-right: 10px;
+
+                    font-size: 16px;
+                }
+
+                .badge {
+                    vertical-align: baseline;
+
+                    margin-left: 10px;
+                }
+            }
         }
-
-        .fa {
-          opacity: .2;
-
-          vertical-align: text-bottom;
-
-          margin-right: 10px;
-
-          font-size: 16px;
-        }
-
-        .badge {
-          vertical-align: baseline;
-
-          margin-left: 10px;
-        }
-      }
     }
-  }
 }

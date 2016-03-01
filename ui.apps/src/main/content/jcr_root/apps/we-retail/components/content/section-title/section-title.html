@@ -13,10 +13,6 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-
-<sly data-sly-use.clientlib="${'/libs/granite/sightly/templates/clientlib.html'}"></sly>
-<sly data-sly-call="${clientLib.all @ categories='we-retail.components.section-title'}" data-sly-unwrap></sly>
-
-<div data-sly-use.title="title.js" class="row">
-	<h2 data-sly-element="${title.element}" class="we-Header">${title.text || 'Section Title'}</h2>
+<div class="row" data-sly-use.title="title.js">
+    <h2 data-sly-element="${title.element}" class="we-Header">${title.text || 'Section Title'}</h2>
 </div>

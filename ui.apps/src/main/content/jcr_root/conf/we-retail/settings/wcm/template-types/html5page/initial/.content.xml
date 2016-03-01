@@ -4,5 +4,5 @@
     <jcr:content
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="we-retail/components/structure/templated-page"/>
+        sling:resourceType="we-retail/components/structure/page"/>
 </jcr:root>

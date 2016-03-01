@@ -5,7 +5,6 @@
         cq:lastModified="{Date}2012-01-23T11:05:28.592+01:00"
         cq:lastModifiedBy="admin"
         cq:template="/libs/commerce/templates/section"
-        jcr:mixinTypes="[]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Shirts"
         sling:resourceType="commerce/components/section">

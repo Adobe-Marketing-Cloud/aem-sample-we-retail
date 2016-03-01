@@ -6,36 +6,36 @@
  
 /* default breakpoint */
 .aem-Grid {
-  .generate-grid(default, @max_col);
+    .generate-grid(default, @max_col);
 
-  width: auto;
+    width: auto;
 
-  margin-right: -@grid-gutter-width/2;
-  margin-left: -@grid-gutter-width/2;
+    margin-right: -@grid-gutter-width/2;
+    margin-left: -@grid-gutter-width/2;
 }
  
 /* phone breakpoint */
 @media (max-width: 650px) {
-  .aem-Grid {
-    .generate-grid(phone, @max_col);
-  }
+    .aem-Grid {
+        .generate-grid(phone, @max_col);
+    }
 }
  
 /* tablet breakpoint */
 @media (min-width: 651px) and (max-width: 1200px) {
-  .aem-Grid {
-    .generate-grid(tablet, @max_col);
-  }
+    .aem-Grid {
+        .generate-grid(tablet, @max_col);
+    }
 }
 
 .aem-GridColumn {
-  padding: 0 @grid-gutter-width/2;
+    padding: 0 @grid-gutter-width/2;
 }
 
 /* TODO: find a better place for this */
 /* additional styling for components in grid */ 
 
 .aem-GridColumn.text.parbase p {
-	padding: 0 20px;
+    *padding: 0 20px;
     text-align: justify;
 }

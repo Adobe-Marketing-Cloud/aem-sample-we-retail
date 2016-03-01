@@ -2,16 +2,14 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:deviceGroups="[/etc/mobile/groups/responsive]"
         cq:lastModified="{Date}2016-02-16T01:27:38.634+01:00"
         cq:lastModifiedBy="admin"
-        cq:template="/conf/we-retail/settings/wcm/templates/article-page"
-        cq:templateType="/conf/we-retail/settings/wcm/template-types/html5page"
+        cq:template="/conf/we-retail/settings/wcm/templates/experience-page"
         jcr:lastModified="{Date}2016-02-16T01:27:38.631+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="cq:PageContent"
         jcr:title="The History of Freestyle Snowboarding at Whistler"
-        sling:resourceType="we-retail/components/structure/templated-page">
+        sling:resourceType="we-retail/components/structure/page">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
@@ -22,7 +20,6 @@
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
-                <cq:responsive jcr:primaryType="nt:unstructured"/>
                 <content_fragment
                     jcr:lastModified="{Date}2016-02-16T01:04:06.750+01:00"
                     jcr:lastModifiedBy="admin"

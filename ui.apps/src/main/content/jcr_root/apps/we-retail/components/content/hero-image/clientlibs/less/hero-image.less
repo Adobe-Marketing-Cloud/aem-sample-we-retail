@@ -1,83 +1,83 @@
 @import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
 
 .we-HeroImage {
-  &:extend(.jumbotron);
+    &:extend(.jumbotron);
 
-  min-height: 460px;
+    min-height: 460px;
 
-  padding: @jumbotron-padding 0;
+    padding: @jumbotron-padding 0;
 
-  background: @gray 50% no-repeat;
-  background-size: cover;
+    background: @gray 50% no-repeat;
+    background-size: cover;
 
-  position: relative;
+    position: relative;
 
-  text-align: center;
+    text-align: center;
 
-  .navbar {
-    margin-top: @jumbotron-padding;
-  }
-
-  &-title {
-    &:extend(.h1);
-    &:extend(.text-uppercase);
-
-    display: block;
-
-    margin: 0 auto 20px;
-  }
-
-  p {
-    &:extend(.h3);
-
-    margin: 0 auto;
-  }
-
-  &-title, p {
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.5);
-
-    .btn {
-        text-shadow: none;
+    .navbar {
+        margin-top: @jumbotron-padding;
     }
-  }
+
+    &-title {
+        &:extend(.h1);
+        &:extend(.text-uppercase);
+
+        display: block;
+
+        margin: 0 auto 20px;
+    }
+
+    p {
+        &:extend(.h3);
+
+        margin: 0 auto;
+    }
+
+    &-title, p {
+        text-shadow: 2px 4px 3px rgba(0,0,0,0.5);
+
+        .btn {
+                text-shadow: none;
+        }
+    }
 }
 
 .hero-page .hero-image, .article-page .hero-image {
-	position: relative;
-	top: -92px;
-	margin-bottom: -92px;
+        position: relative;
+        top: -92px;
+        margin-bottom: -92px;
 }
 
 @media (min-width: @screen-sm-min) {
-    .we-HeroImage {
-      text-align: left;
+        .we-HeroImage {
+            text-align: left;
 
-      .container {
-        transform: translateX(-50%);
+            .container {
+                transform: translateX(-50%);
 
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-      }
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 50%;
+            }
 
-      &-wrapper {
-        transform: translateY(-50%);
+            &-wrapper {
+                transform: translateY(-50%);
 
-        .make-md-column-offset(2);
+                .make-md-column-offset(2);
 
-        position: absolute;
-        top: 50%;
-        left: 0;
-      }
-    }
+                position: absolute;
+                top: 50%;
+                left: 0;
+            }
+        }
 }
 
 @media (max-width: @screen-sm-max) {
-    .we-HeroImage {
-      &.ratio-16by9.width-full,
-      &.width-full {
-        padding: 180px 0 70px;
-      }
-    }
+        .we-HeroImage {
+            &.ratio-16by9.width-full,
+            &.width-full {
+                padding: 180px 0 70px;
+            }
+        }
 }

@@ -1,0 +1,5 @@
+<div class="container we-Container--main"
+     data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer">
+    <sly data-sly-repeat="${templatedContainer.structureResources}"
+         data-sly-resource="${item.path @ resourceType=item.resourceType, decorationTagName='div'}"/>
+</div>

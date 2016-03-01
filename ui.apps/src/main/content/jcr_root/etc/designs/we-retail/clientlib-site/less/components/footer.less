@@ -1,82 +1,82 @@
 .we-Footer {
-  background-color: fade(@gray-base, 90);
+    background-color: fade(@gray-base, 90);
 
-  color: #fff;
+    color: #fff;
 
-  padding-top: 50px;
+    padding-top: 50px;
 
-  text-align: center;
+    text-align: center;
 
-  .text-muted {
-    color: fade(#fff, 40);
-  }
-
-  &-section {
-    padding: 30px 0;
-
-    &--sub {
-        border-top: 1px solid fade(#fff, 5);
-        margin: 0 10%;
-        text-align: center;
+    .text-muted {
+        color: fade(#fff, 40);
     }
 
-    &-item {
-        display: block;
-        margin: 0 1em;
-    }
-  }
+    &-section {
+        padding: 30px 0;
 
-  &-nav {
-     .list-unstyled;
-
-    ul {
-       .list-unstyled;
-
-      li {
-        margin-bottom: @padding-base-vertical;
-      }
-    }
-
-    h2 {
-      .h4;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    &--inline {
-      margin-left: -@grid-gutter-width/2;
-
-      ul {
-         .list-inline;
-
-        //white-space: nowrap;
-
-        &> li {
-          padding: 0 3px;
-        }
-      }
-
-      .btn-icon {
-        min-width: 0;
-        width: 38px;
-
-        .we-Icon {
-          font-size: 38px;
-          //&::before {
-          //  line-height: 1;
-          //}
+        &--sub {
+            border-top: 1px solid fade(#fff, 5);
+            margin: 0 10%;
+            text-align: center;
         }
 
-        //padding: 6px 0;
-      }
+        &-item {
+            display: block;
+            margin: 0 1em;
+        }
     }
-  }
 
-  .we-Logo {
-    margin: 15px 0;
-  }
+    &-nav {
+         .list-unstyled;
+
+        ul {
+             .list-unstyled;
+
+            li {
+                margin-bottom: @padding-base-vertical;
+            }
+        }
+
+        h2 {
+            .h4;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        &--inline {
+            margin-left: -@grid-gutter-width/2;
+
+            ul {
+                 .list-inline;
+
+                //white-space: nowrap;
+
+                &> li {
+                    padding: 0 3px;
+                }
+            }
+
+            .btn-icon {
+                min-width: 0;
+                width: 38px;
+
+                .we-Icon {
+                    font-size: 38px;
+                    //&::before {
+                    //  line-height: 1;
+                    //}
+                }
+
+                //padding: 6px 0;
+            }
+        }
+    }
+
+    .we-Logo {
+        margin: 15px 0;
+    }
 }
 
 @media (min-width: @screen-md-min) {

@@ -6,12 +6,12 @@ use(function () {
     var linkTo = properties.get("buttonLinkTo", "");
 
     if(linkTo == "") {
-    	linkTo = "#";
+        linkTo = "#";
     } else {
-    	linkTo = linkTo + ".html";
+        linkTo = linkTo + ".html";
     }
     
     return {
-    	buttonLinkTo: linkTo
+        buttonLinkTo: linkTo
     };
 });
