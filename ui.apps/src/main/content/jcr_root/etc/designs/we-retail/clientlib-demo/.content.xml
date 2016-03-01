@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    jcr:description="temporary demo client library for the template editor"
-    jcr:primaryType="cq:ClientLibraryFolder"
-    categories="[we-retail.demo]"
-    dependencies="[we-retail.all]"/>

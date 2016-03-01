@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="dam:Asset">
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="7f8a01c7-b226-4462-8e72-73e4f994c9ed">
     <jcr:content
-        jcr:lastModified="{Date}2015-11-09T22:09:27.500+01:00"
+        cq:name="bg-women.png"
+        cq:parentPath="/content/dam/we-retail/images"
+        dam:assetID="9bea8852-47b7-4858-8ea0-ccf8dab888ff"
+        dam:relativePath="we-retail/images/bg-women.png"
+        jcr:lastModified="{Date}2016-02-29T19:30:04.476+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}32"
-            dam:extracted="{Date}2015-11-09T22:09:27.081+01:00"
+            dam:extracted="{Date}2016-02-29T19:30:04.416+01:00"
             dam:Fileformat="PNG"
             dam:MIMEtype="image/png"
             dam:Numberofimages="{Long}1"
@@ -20,6 +27,9 @@
             dam:sha1="98ae450c5ead605e8d19d864e795fd83a2809eac"
             dam:size="{Long}156474"
             dc:format="image/png"
+            dc:modified="{Date}2016-02-29T17:46:08.859+01:00"
+            jcr:lastModified="{Date}2016-02-29T19:18:12.576+01:00"
+            jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
             tiff:ImageLength="{Long}220"

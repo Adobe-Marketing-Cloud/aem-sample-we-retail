@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:crs="http://ns.adobe.com/camera-raw-settings/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:psAux="http://ns.adobe.com/exif/1.0/aux/" xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#" xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:mixinTypes="[mix:referenceable]"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:versionable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="122f23b0-2d3f-41a6-a29d-b785106eb65b">
+    jcr:uuid="a02f7412-ba43-45e8-a080-9a88d3919499">
     <jcr:content
+        cq:name="_B6A4252.jpg"
+        cq:parentPath="/content/dam/we-retail/articles/photos/lofoten"
         dam:assetID="122f23b0-2d3f-41a6-a29d-b785106eb65b"
         dam:relativePath="we-retail/articles/photos/lofoten/_B6A4252.jpg"
-        jcr:lastModified="{Date}2016-02-25T23:49:45.492+01:00"
+        jcr:lastModified="{Date}2016-02-29T19:30:02.507+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -121,11 +124,11 @@
             crs:WhiteBalance="Custom"
             crs:Whites2012="{Long}15"
             dam:Bitsperpixel="{Long}24"
-            dam:extracted="{Date}2016-02-25T23:49:42.655+01:00"
+            dam:extracted="{Date}2016-02-29T19:30:01.744+01:00"
             dam:Fileformat="JPEG"
             dam:FocalPlaneResolutionUnit="{Long}3"
-            dam:FocalPlaneXResolution="1 600"
-            dam:FocalPlaneYResolution="1 600"
+            dam:FocalPlaneXResolution="1,600"
+            dam:FocalPlaneYResolution="1,600"
             dam:MIMEtype="image/jpeg"
             dam:Numberofimages="{Long}1"
             dam:Numberoftextualcomments="{Long}0"
@@ -140,16 +143,17 @@
             dc:date="[20150929]"
             dc:date_xmpArrayType="rdf:Bag"
             dc:format="image/jpeg"
-            exif:ApertureValue="633985/100000 (6,34)"
+            dc:modified="{Date}2016-02-29T17:46:01.889+01:00"
+            exif:ApertureValue="633985/100000 (6.34)"
             exif:ColorSpace="{Long}-1"
             exif:CustomRendered="{Long}0"
             exif:DateTimeDigitized="{Date}2015-09-29T14:09:13.000+02:00"
             exif:DateTimeOriginal="{Date}2015-09-29T14:09:13.000+02:00"
             exif:ExifOffset="{Long}312"
-            exif:ExposureCompensation="-2/3 (-0,667)"
+            exif:ExposureCompensation="-2/3 (-0.667)"
             exif:ExposureMode="{Long}0"
             exif:ExposureProgram="{Long}4"
-            exif:ExposureTime="1/1000 (0,001)"
+            exif:ExposureTime="1/1000 (0.001)"
             exif:Flash="{Long}16"
             exif:FNumber="9"
             exif:FocalLength="280"
@@ -158,9 +162,11 @@
             exif:PixelXDimension="{Long}5760"
             exif:PixelYDimension="{Long}3840"
             exif:SceneCaptureType="{Long}0"
-            exif:ShutterSpeedValue="9965784/1000000 (9,966)"
+            exif:ShutterSpeedValue="9965784/1000000 (9.966)"
             exif:SubSecTimeOriginal="{Long}38"
             exif:WhiteBalance="{Long}1"
+            jcr:lastModified="{Date}2016-02-29T19:18:01.162+01:00"
+            jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
             photoshop:ColorMode="{Long}3"
@@ -198,6 +204,12 @@
             xmpMM:DocumentID="adobe:docid:photoshop:36dcac40-1ca0-1179-bb7e-8cf8d7e5419a"
             xmpMM:InstanceID="xmp.iid:cbb8c736-8cb6-4650-a112-026f0d83c1e7"
             xmpMM:OriginalDocumentID="42F4CC316EBE19DD6084D41EEF83163A">
+            <xmpMM:DerivedFrom
+                jcr:primaryType="nt:unstructured"
+                stRef:documentID="adobe:docid:photoshop:6382d3b5-0fbe-1179-b2d2-b8ea086d21c9"
+                stRef:instanceID="xmp.iid:6e0e75a8-3bd6-4f7a-9784-a51e1ae4469e"
+                stRef:originalDocumentID="42F4CC316EBE19DD6084D41EEF83163A"
+                xmpNodeType="xmpStruct"/>
             <xmpMM:History
                 jcr:primaryType="nt:unstructured"
                 xmpArraySize="{Long}11"
@@ -283,12 +295,6 @@
                     stEvt:when="{Date}2016-02-25T23:47:47.000+01:00"
                     xmpNodeType="xmpStruct"/>
             </xmpMM:History>
-            <xmpMM:DerivedFrom
-                jcr:primaryType="nt:unstructured"
-                stRef:documentID="adobe:docid:photoshop:6382d3b5-0fbe-1179-b2d2-b8ea086d21c9"
-                stRef:instanceID="xmp.iid:6e0e75a8-3bd6-4f7a-9784-a51e1ae4469e"
-                stRef:originalDocumentID="42F4CC316EBE19DD6084D41EEF83163A"
-                xmpNodeType="xmpStruct"/>
         </metadata>
         <related jcr:primaryType="nt:unstructured"/>
         <usages

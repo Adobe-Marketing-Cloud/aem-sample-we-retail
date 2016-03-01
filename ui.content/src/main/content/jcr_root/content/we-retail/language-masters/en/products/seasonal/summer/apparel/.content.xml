@@ -8,11 +8,10 @@
         cq:lastModifiedBy="admin"
         cq:lastPropertyRollout="{Date}2016-02-25T22:18:55.075+01:00"
         cq:template="/conf/we-retail/settings/wcm/templates/content-page"
-        cq:templateType="/conf/we-retail/settings/wcm/template-types/html5page"
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Apparel"
-        sling:resourceType="we-retail/components/structure/templated-page">
+        sling:resourceType="we-retail/components/structure/page">
         <root
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"

@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="dam:Asset">
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="f76134af-f49d-4f1f-848f-a005f23ad427">
     <jcr:content
-        jcr:lastModified="{Date}2015-11-03T23:49:45.908+01:00"
+        cq:name="bg-community-section.jpg"
+        cq:parentPath="/content/dam/we-retail/images"
+        dam:assetID="020909ad-ee4e-4b6b-8756-265a2a254127"
+        dam:relativePath="we-retail/images/bg-community-section.jpg"
+        jcr:lastModified="{Date}2016-02-29T19:30:03.811+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"
-            dam:extracted="{Date}2015-11-03T23:49:45.150+01:00"
+            dam:extracted="{Date}2016-02-29T19:30:03.631+01:00"
             dam:Fileformat="JPEG"
             dam:MIMEtype="image/jpeg"
             dam:Numberofimages="{Long}1"
@@ -20,6 +27,9 @@
             dam:sha1="fbc09e32c481e5a6d17214ca911846f0fc1526d9"
             dam:size="{Long}164757"
             dc:format="image/jpeg"
+            dc:modified="{Date}2016-02-29T17:46:04.043+01:00"
+            jcr:lastModified="{Date}2016-02-29T19:18:12.947+01:00"
+            jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
             tiff:ImageLength="{Long}609"

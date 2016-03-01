@@ -1,96 +1,94 @@
 @import (reference) "/etc/designs/we-retail/common/variables.less";
 
 .we-ArticleTeaser {
-  padding-bottom: @padding-large-vertical;
+    padding-bottom: @padding-large-vertical;
 
-  background: fade(@gray-base, 5);
+    background: fade(@gray-base, 5);
 
-  position: relative;
-
-  &-visual {
-    display: block;
-    height: @article-teaser-visual-height;
     position: relative;
-    overflow: hidden;
-    
-    img {
-      &:extend(.img-responsive);
 
-      min-height: 100%;
-      width: 100%;
-      position: absolute;
-      display: block;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
+    &-visual {
+        display: block;
+        height: @article-teaser-visual-height;
+        position: relative;
+        overflow: hidden;
 
-  &-title {
-    &:extend(.h3);
-    margin: 0;
-    padding: @padding-small-vertical @padding-small-horizontal;
+        img {
+            &:extend(.img-responsive);
 
-    font-weight: 700;
-    line-height: 29px;
-
-    @media (min-width: @screen-sm-min) {
-        padding: @padding-base-vertical @padding-small-horizontal;
+            min-height: 100%;
+            width: 100%;
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 
-    @media (min-width: @screen-md-min) {
-        padding: @padding-large-vertical @padding-small-horizontal;
+    &-title {
+        &:extend(.h3);
+        margin: 0;
+        padding: @padding-small-vertical @padding-small-horizontal;
+
+        font-weight: 700;
+        line-height: 29px;
+
+        @media (min-width: @screen-sm-min) {
+            padding: @padding-base-vertical @padding-small-horizontal;
+        }
+
+        @media (min-width: @screen-md-min) {
+            padding: @padding-large-vertical @padding-small-horizontal;
+        }
+
     }
 
-  }
+    &-description {
+        padding: 0 @padding-large-horizontal;
 
-  &-description {
-    padding: 0 @padding-large-horizontal;
+        margin: @padding-large-horizontal auto;
+    }
 
-    margin: @padding-large-horizontal auto;
-  }
+    &-category {
+        padding: 5px @padding-small-horizontal 4px;
 
-  &-category {
-    padding: 5px @padding-small-horizontal 4px;
+        margin: auto 0 auto @padding-small-horizontal;
 
-    margin: auto 0 auto @padding-small-horizontal;
+        line-height: 2rem;
 
-    line-height: 2rem;
+        background-color: fade(@gray-base, 15);
 
-    background-color: fade(@gray-base, 15);
+        color: #fff;
 
-    color: #fff;
+        text-transform: uppercase;
+    }
 
-    text-transform: uppercase;
-  }
+    &-date {
+        &:extend(.text-muted);
 
-  &-date {
-    &:extend(.text-muted);
+        float: right;
 
-    float: right;
+        margin: auto @padding-large-horizontal;
 
-    margin: auto @padding-large-horizontal;
+        font-size: 13px;
+        line-height: 2rem;
 
-    font-size: 13px;
-    line-height: 2rem;
+        text-transform: uppercase;
+    }
 
-    text-transform: uppercase;
-  }
+    &-author {
+        color: fade(@gray-base, 40);
 
-  &-author {
-    color: fade(@gray-base, 40);
+        margin: auto 0 auto @padding-small-horizontal;
 
-    margin: auto 0 auto @padding-small-horizontal;
+        font-weight: 600;
+        line-height: 2rem;
+    }
 
-    font-weight: 600;
+    &-text {
+        padding: 0 @padding-large-horizontal;
 
-    line-height: 2rem;
-
-  }
-
-  &-text {
-    padding: 0 @padding-large-horizontal;
-
-    line-height: normal;
-  }
+        line-height: normal;
+    }
 }

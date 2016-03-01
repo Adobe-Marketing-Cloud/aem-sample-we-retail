@@ -12,7 +12,6 @@
             jcr:description=""
             jcr:lastModified="{Date}2016-02-01T18:29:35.183+01:00"
             jcr:lastModifiedBy="admin"
-            jcr:mixinTypes="[rep:AccessControllable]"
             jcr:primaryType="nt:unstructured"
             jcr:title="Tanner Hall's Redemption Road"
             sling:resourceSuperType="sling/collection"
@@ -83,9 +82,6 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resource="/content/dam/we-retail/articles/aloha-spirits-in-northern-norway"/>
             </sling:members>
-            <rep:policy/>
-            <folderThumbnail/>
         </aloha_spirits_innorthernnorway>
     </we-retail>
-    <W/>
 </jcr:root>

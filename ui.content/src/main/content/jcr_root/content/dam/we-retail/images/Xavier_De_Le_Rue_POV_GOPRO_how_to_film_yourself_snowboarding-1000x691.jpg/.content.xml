@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:mixinTypes="[mix:referenceable]"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="3a399d14-dc99-47be-8261-44258197d04c">
+    jcr:uuid="26317af5-6bb0-4228-bb22-9851baca2665">
     <jcr:content
+        cq:name="Xavier_De_Le_Rue_POV_GOPRO_how_to_film_yourself_snowboarding-1000x691.jpg"
+        cq:parentPath="/content/dam/we-retail/images"
         dam:assetID="3a399d14-dc99-47be-8261-44258197d04c"
         dam:relativePath="we-retail/images/Xavier_De_Le_Rue_POV_GOPRO_how_to_film_yourself_snowboarding-1000x691.jpg"
-        jcr:lastModified="{Date}2016-02-16T01:26:04.948+01:00"
+        jcr:lastModified="{Date}2016-02-29T19:30:03.237+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
             dam:Bitsperpixel="{Long}24"
             dam:Comments="CREATOR: gd-jpeg v1.0 (using IJG JPEG v62), quality = 90&#xa;&#xa;"
-            dam:extracted="{Date}2016-02-16T01:26:04.782+01:00"
+            dam:extracted="{Date}2016-02-29T19:30:02.896+01:00"
             dam:Fileformat="JPEG"
             dam:MIMEtype="image/jpeg"
             dam:Numberofimages="{Long}1"
@@ -25,6 +28,9 @@
             dam:sha1="9e7c7807d46cc889cbbd3ce315c042109f5f12d6"
             dam:size="{Long}149095"
             dc:format="image/jpeg"
+            dc:modified="{Date}2016-02-29T17:46:09.007+01:00"
+            jcr:lastModified="{Date}2016-02-29T19:18:12.773+01:00"
+            jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
             tiff:ImageLength="{Long}691"

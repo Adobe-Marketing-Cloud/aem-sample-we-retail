@@ -21,10 +21,8 @@
      data-sly-use.listComponent="list.js"
      data-sly-use.emptyRenderer="emptylist.html"
      data-sly-use.itemTemplate="listitem.html"
-     data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"
-     data-sly-use.articlesList="${ 'articles-list.js' @ articles = listComponent.list }"
+     data-sly-use.articlesList="${'articles-list.js' @ articles=listComponent.list}"
      id="${listComponent.listId}">
-    <sly data-sly-call="${clientLib.all @ categories='wcm.foundation.components.list'}" />
     <sly data-sly-call="${emptyRenderer.emptylisttemplate @ list=listComponent}" />
     <link data-sly-test="${properties.feedEnabled}" rel="alternate" type="application/atom+xml" title="Atom 1.0 (List)" href="${resource.path}.feed" />
 
@@ -34,11 +32,11 @@
     <div data-sly-test="${!listComponent.isEmpty && listComponent.isPaginating}" class="pagination">
         <div data-sly-test="${listComponent.previousLink}" class="previous">
             <a href="${listComponent.previousLink}" onclick="CQ_Analytics.record({event: 'listPreviousPage', values: { listPageStart: '${listComponent.pageStart @ context='scriptString'}' }, collect:  false, options: { obj: this }, componentPath: '${resource.resourceType @ context='scriptString'}'}); return CQ.WCM.List.linkClick(this, '${listComponent.listId @ context='scriptString'}');" aria-describedby="${listComponent.accessiblePreviousDescriptionId}">&laquo; ${"Previous" @ i18n}</a>
-            <span class="cq-wcm-foundation-aria-description" data-sly-test="${properties.accessiblePrevious}" data-sly-text="${properties.accessiblePrevious}" data-sly-attribute.id="${listComponent.accessiblePreviousDescriptionId}"></span>
+            <span id="${listComponent.accessiblePreviousDescriptionId}" class="cq-wcm-foundation-aria-description" data-sly-test="${properties.accessiblePrevious}">${properties.accessiblePrevious}</span>
         </div>
         <div data-sly-test="${listComponent.nextLink}" class="next">
             <a href="${listComponent.nextLink}" onclick="CQ_Analytics.record({event: 'listNextPage', values: { listPageStart: '${listComponent.pageStart @ context='scriptString'}' }, collect:  false, options: { obj: this }, componentPath: '${resource.resourceType @ context='scriptString'}>'}); return CQ.WCM.List.linkClick(this, '${listComponent.listId @ context='scriptString'}');" aria-describedby="${listComponent.accessibleNextDescriptionId}">${"Next" @ i18n} &raquo;</a>
-            <span class="cq-wcm-foundation-aria-description" data-sly-test="${properties.accessibleNext}" data-sly-text="${properties.accessibleNext}" data-sly-attribute.id="${listComponent.accessibleNextDescriptionId}"></span>
+            <span id="${listComponent.accessibleNextDescriptionId}" class="cq-wcm-foundation-aria-description" data-sly-test="${properties.accessibleNext}">${properties.accessibleNext}</span>
         </div>
     </div>
 </div>

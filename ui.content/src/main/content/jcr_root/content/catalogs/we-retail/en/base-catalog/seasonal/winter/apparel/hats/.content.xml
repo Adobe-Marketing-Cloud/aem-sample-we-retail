@@ -5,7 +5,6 @@
         cq:lastModified="{Date}2015-09-23T23:03:32.243+02:00"
         cq:lastModifiedBy="admin"
         cq:template="/libs/commerce/templates/section"
-        jcr:mixinTypes="[]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Winter Hats"
         sling:resourceType="commerce/components/section">

@@ -1,245 +1,245 @@
 @import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
 
 .we-Product {
-  padding-top: 50px;
-  
-  padding-bottom: 50px;
+    padding-top: 50px;
+    
+    padding-bottom: 50px;
 
-  border-bottom: 1px solid fade(@gray-base, 10);
+    border-bottom: 1px solid fade(@gray-base, 10);
 
-  margin-bottom: 45px;
+    margin-bottom: 45px;
 
-  &-photos {
-    .list-unstyled;
+    &-photos {
+        .list-unstyled;
 
-    li {
-      transition: border-color @transition-default;
+        li {
+            transition: border-color @transition-default;
 
-      padding: @padding-large-vertical 0;
+            padding: @padding-large-vertical 0;
 
-      border: 1.5px solid transparent;
+            border: 1.5px solid transparent;
 
-      margin-bottom: 5px;
+            margin-bottom: 5px;
 
-      &.active, &:hover {
-        border-color: fade(@gray-base, 5);
-      }
+            &.active, &:hover {
+                border-color: fade(@gray-base, 5);
+            }
+        }
+
+        img {
+            .img-responsive;
+
+            cursor: pointer;
+        }
     }
 
-    img {
-      .img-responsive;
+    &-visual {
+        text-align: center;
 
-      cursor: pointer;
+        img {
+            .img-responsive;
+        }
+
+        &-zoom {
+            .text-muted;
+
+            transition: color @transition-default;
+
+            display: inline-block;
+
+            margin-top: 60px;
+
+            font-weight: 700;
+
+            &:hover, &:focus {
+                color: fade(@gray-base, 60);
+
+                text-decoration: none;
+            }
+
+            .we-Icon {
+                font-size: 17px;
+
+                margin-right: 10px;
+            }
+        }
     }
-  }
 
-  &-visual {
-    text-align: center;
-
-    img {
-      .img-responsive;
+    &-brand {
+        .h4;
     }
 
-    &-zoom {
-      .text-muted;
+    &-code {
+        .text-muted;
 
-      transition: color @transition-default;
+        font-weight: 700;
+        font-size: 13px;
 
-      display: inline-block;
-
-      margin-top: 60px;
-
-      font-weight: 700;
-
-      &:hover, &:focus {
-        color: fade(@gray-base, 60);
-
-        text-decoration: none;
-      }
-
-      .we-Icon {
-        font-size: 17px;
-
-        margin-right: 10px;
-      }
+        text-transform: uppercase;
     }
-  }
 
-  &-brand {
-    .h4;
-  }
+    &-name {
+        margin-top: 0;
+        margin-bottom: 6px;
+    }
 
-  &-code {
-    .text-muted;
+    &-price {
+        .h2;
 
-    font-weight: 700;
-    font-size: 13px;
+        display: inline-block;
 
-    text-transform: uppercase;
-  }
+        margin: 0 auto 15px;
+    }
 
-  &-name {
-    margin-top: 0;
-    margin-bottom: 6px;
-  }
+    &-description {
+        margin-bottom: 12px;
+    }
 
-  &-price {
-    .h2;
+    &-radio {
+        padding-left: 0;
 
-    display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 8px;
 
-    margin: 0 auto 15px;
-  }
+        & + & {
+            margin-left: 0;
+        }
 
-  &-description {
-    margin-bottom: 12px;
-  }
+        label {
+            margin-bottom: 0;
 
-  &-radio {
-    padding-left: 0;
+            line-height: 30px;
 
-    margin-right: 5px;
-    margin-bottom: 8px;
+            //.radio &,
+            //.radio-inline &,
+            //.checkbox &,
+            //.checkbox-inline & {
+            //}
+            &::after {
+                content: '\200b';
+            }
 
-    & + & {
-      margin-left: 0;
+            span {
+                line-height: 30px;
+                color: #fff;
+
+                text-align: center;
+
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+
+                cursor: pointer;
+            }
+        }
+
+        input[type=radio],
+        input[type=checkbox] {
+            width: 30px;
+            height: 30px;
+
+            border: 0;
+            border-radius: 0;
+
+            margin-top: 0;
+
+            background-color: @gray-dark;
+
+            cursor: pointer;
+
+            &:checked {
+                background-color: @brand-primary;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        &.marker {
+            input[type=radio]:checked,
+            input[type=checkbox]:checked {
+                &::after {
+                    content: @we-Icon--var-check;
+
+                    display: inline-block;
+
+                    width: auto;
+                    height: auto;
+
+                    border-radius: 0;
+
+                    background: none;
+
+                    font: normal normal normal 11px/30px "we-icons";
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &-status {
+        font-weight: 700;
+        line-height: 42px;
+
+        text-transform: uppercase;
+
+        &:before {
+            content: '\2022';
+
+            display: inline-block;
+
+            margin-right: 5px;
+
+            font-size: 16px;
+        }
+    }
+
+    &-form {}
+
+    &-subtitle {
+        margin: 0 auto 20px;
+
+        text-transform: uppercase;
+    }
+
+    &-features {
+        ul {
+            .list-unstyled;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+
+        &.separator {
+            margin-bottom: 22px;
+        }
     }
 
     label {
-      margin-bottom: 0;
+        .text-muted;
 
-      line-height: 30px;
-
-      //.radio &,
-      //.radio-inline &,
-      //.checkbox &,
-      //.checkbox-inline & {
-      //}
-      &::after {
-        content: '\200b';
-      }
-
-      span {
-        line-height: 30px;
-        color: #fff;
-
-        text-align: center;
-
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-
-        cursor: pointer;
-      }
+        text-transform: none;
     }
 
-    input[type=radio],
-    input[type=checkbox] {
-      width: 30px;
-      height: 30px;
-
-      border: 0;
-      border-radius: 0;
-
-      margin-top: 0;
-
-      background-color: @gray-dark;
-
-      cursor: pointer;
-
-      &:checked {
-        background-color: @brand-primary;
-
-        &::after {
-          display: none;
-        }
-      }
+    .we-Rating {
+        margin-bottom: 8px;
     }
 
-    &.marker {
-      input[type=radio]:checked,
-      input[type=checkbox]:checked {
-        &::after {
-          content: @we-Icon--var-check;
+    .separator {
+        padding-bottom: 14px;
 
-          display: inline-block;
-
-          width: auto;
-          height: auto;
-
-          border-radius: 0;
-
-          background: none;
-
-          font: normal normal normal 11px/30px "we-icons";
-          color: #fff;
-        }
-      }
+        border-bottom: 1px solid fade(@gray-base, 10);
     }
-  }
 
-  &-status {
-    font-weight: 700;
-    line-height: 42px;
+    .we-SocialShare {
+        padding-top: 40px;
 
-    text-transform: uppercase;
+        border-top: 1px solid fade(@gray-base, 10);
 
-    &:before {
-      content: '\2022';
-
-      display: inline-block;
-
-      margin-right: 5px;
-
-      font-size: 16px;
+        margin-top: 80px;
+        margin-bottom: 40px;
     }
-  }
-
-  &-form {}
-
-  &-subtitle {
-    margin: 0 auto 20px;
-
-    text-transform: uppercase;
-  }
-
-  &-features {
-    ul {
-      .list-unstyled;
-    }
-  }
-
-  .form-group {
-    margin-bottom: 12px;
-
-    &.separator {
-      margin-bottom: 22px;
-    }
-  }
-
-  label {
-    .text-muted;
-
-    text-transform: none;
-  }
-
-  .we-Rating {
-    margin-bottom: 8px;
-  }
-
-  .separator {
-    padding-bottom: 14px;
-
-    border-bottom: 1px solid fade(@gray-base, 10);
-  }
-
-  .we-SocialShare {
-    padding-top: 40px;
-
-    border-top: 1px solid fade(@gray-base, 10);
-
-    margin-top: 80px;
-    margin-bottom: 40px;
-  }
 }

@@ -17,17 +17,5 @@
                 text="&lt;p>This is a content page&lt;/p>"
                 textIsRich="true"/>
         </par>
-        <cq:responsive jcr:primaryType="nt:unstructured">
-            <breakpoints jcr:primaryType="nt:unstructured">
-                <phone
-                    jcr:primaryType="nt:unstructured"
-                    title="Phone"
-                    width="{Decimal}650"/>
-                <tablet
-                    jcr:primaryType="nt:unstructured"
-                    title="Tablet"
-                    width="{Decimal}1200"/>
-            </breakpoints>
-        </cq:responsive>
     </jcr:content>
 </jcr:root>

@@ -18,35 +18,35 @@
                         <items jcr:primaryType="nt:unstructured">
                             <displayAs jcr:primaryType="nt:unstructured">
                                 <items jcr:primaryType="nt:unstructured">
-                                    <links jcr:primaryType="nt:unstructured"></links>
-                                    <teasers jcr:primaryType="nt:unstructured"></teasers>
-                                    <news jcr:primaryType="nt:unstructured"></news>
+                                    <links jcr:primaryType="nt:unstructured"/>
+                                    <teasers jcr:primaryType="nt:unstructured"/>
+                                    <news jcr:primaryType="nt:unstructured"/>
                                     <pages
-                                            jcr:primaryType="nt:unstructured"
-                                            text="Pages"
-                                            value="default"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Pages"
+                                        value="default"/>
                                     <images
-                                            jcr:primaryType="nt:unstructured"
-                                            text="Images"
-                                            value="images"/>
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Images"
+                                        value="images"/>
                                 </items>
                             </displayAs>
                             <limit
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:hideResource="{Boolean}true"/>
+                                jcr:primaryType="nt:unstructured"
+                                sling:hideResource="{Boolean}true"/>
                             <feed
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:hideResource="{Boolean}true"/>
+                                jcr:primaryType="nt:unstructured"
+                                sling:hideResource="{Boolean}true"/>
                             <pagination
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:hideResource="{Boolean}true"/>
+                                jcr:primaryType="nt:unstructured"
+                                sling:hideResource="{Boolean}true"/>
                         </items>
                     </column>
                 </items>
             </settings>
             <accessibility
-                    jcr:primaryType="nt:unstructured"
-                    sling:hideResource="{Boolean}true"/>
+                jcr:primaryType="nt:unstructured"
+                sling:hideResource="{Boolean}true"/>
         </items>
     </content>
 </jcr:root>
