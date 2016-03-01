@@ -7,7 +7,7 @@
         cq:segments="[/etc/segmentation/contexthub/winter-female-under-30]"
         cq:template="/libs/cq/personalization/templates/experience"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Winter, Female Under 30"
+        jcr:title="Winter, Female, Under 30"
         sling:resourceType="cq/personalization/components/experiencepage"/>
     <en_hero_image/>
 </jcr:root>

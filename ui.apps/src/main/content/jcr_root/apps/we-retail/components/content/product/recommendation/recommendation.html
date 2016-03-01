@@ -24,11 +24,8 @@
   ==============================================================================
 
 */-->
-<div data-sly-use.clientlib="${'/libs/granite/sightly/templates/clientlib.html'}" data-sly-unwrap></div>
 <ul class="recommendations-viewer" data-relationship-type="${resource.relationshipType}" data-max-count="${resource.max}">
-    <div data-sly-include="defaultcontent.html" data-sly-unwrap/>
-    <div data-sly-include="producttemplate.html" data-sly-unwrap/>
-    <ul class="recommendations-content foundation-ordered-list-container products-grid">
-
-    </ul>
+    <sly data-sly-include="defaultcontent.html"/>
+    <sly data-sly-include="producttemplate.html"/>
+    <ul class="recommendations-content foundation-ordered-list-container products-grid"></ul>
 </ul>

@@ -4,9 +4,8 @@
     <jcr:content
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
         cq:template="/conf/we-retail/settings/wcm/templates/hero-page"
-        cq:templateType="/conf/we-retail/settings/wcm/template-types/html5page"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="we-retail/components/structure/templated-page">
+        sling:resourceType="we-retail/components/structure/page">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">

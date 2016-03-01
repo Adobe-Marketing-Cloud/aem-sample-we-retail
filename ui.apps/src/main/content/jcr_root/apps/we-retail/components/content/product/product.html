@@ -1,22 +1,20 @@
 <div class="we-Product" data-sly-use.product="product.js">
-
-    <sly data-sly-list.item="${product.variants}">
-        <we-product-variant
-                is-base="${itemList.first ? 1 : 0}"
-                path="${item.path}"
-                variants="${item.variants}"
-                sku="${item.sku}"
-                title="${item.title}"
-                description="${item.description}"
-                color="${item.color}"
-                color-class="${item.colorClass}"
-                size="${item.size}"
-                price="${item.price}"
-                summary="${item.summary}"
-                features="${item.features}"
-                image="${item.image}"></we-product-variant>
-    </sly>
-
+    <we-product-variant
+        data-sly-repeat.item="${product.variants}"
+        is-base="${itemList.first ? 1 : 0}"
+        path="${item.path}"
+        variants="${item.variants}"
+        sku="${item.sku}"
+        title="${item.title}"
+        description="${item.description}"
+        color="${item.color}"
+        color-class="${item.colorClass}"
+        size="${item.size}"
+        price="${item.price}"
+        summary="${item.summary}"
+        features="${item.features}"
+        image="${item.image}"></we-product-variant>
+    
     <div class="row">
 
 		<!--/*
@@ -79,19 +77,19 @@
                 <div class="form-group" data-sly-test="${product.variations.type == 'color'}">
                     <label>Colors</label>
                 </div>
-                <div class="form-group" data-sly-test="${product.variations.type == 'color'}">
-                    <sly data-sly-list.color="${product.variations.colors}">
-                        <div class="we-Product-radio marker radio-inline">
-                            <label>
-                                <input type="radio" name="product.color"
-                                       value="${color}" title="${color}"
-                                       style="background-color:${color @context='styleString'};"
-                                       data-sly-attribute.checked="${product.base.colorClass == color}"
-                                       data-sly-attribute.data-sku="${product.variations.colors[color][0].sku}"
-                                       v-on:click="setProduct">
-                            </label>
-                        </div>
-                    </sly>
+                <div class="form-group"
+                     data-sly-test="${product.variations.type == 'color'}"
+                     data-sly-repeat.color="${product.variations.colors}">
+                    <div class="we-Product-radio marker radio-inline">
+                        <label>
+                            <input type="radio" name="product.color"
+                                   value="${color}" title="${color}"
+                                   style="background-color:${color @context='styleString'};"
+                                   checked="${product.base.colorClass == color}"
+                                   data-sku="${product.variations.colors[color][0].sku}"
+                                   v-on:click="setProduct"/>
+                        </label>
+                    </div>
                 </div>
                 <div class="form-group" data-sly-test="${product.variations.type}"
                      v-show="showSizes()" v-cloak>
@@ -105,7 +103,7 @@
                             <div class="we-Product-radio radio-inline">
                                 <label>
                                     <input type="radio" name="product.sku" value="${item.sku}"
-                                           data-sly-attribute.data-sku="${item.sku}"
+                                           data-sku="${item.sku}"
                                            v-bind:checked="isChecked('${item.sku}')"
                                            v-on:click="setProduct">
                                     <span>${item.size}</span>
@@ -120,7 +118,7 @@
                             <div class="we-Product-radio radio-inline">
                                 <label>
                                     <input type="radio" name="product.sku" value="${item.sku}"
-                                           data-sly-attribute.data-sku="${item.sku}"
+                                           data-sku="${item.sku}"
                                            v-bind:checked="isChecked('${item.sku}')"
                                            v-on:click="setProduct">
                                     <span>${item.size}</span>

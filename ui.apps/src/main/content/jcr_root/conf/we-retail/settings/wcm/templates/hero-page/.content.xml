@@ -4,6 +4,7 @@
     <jcr:content
         cq:lastModified="{Date}2016-01-13T15:57:47.557+01:00"
         cq:lastModifiedBy="admin"
+        cq:templateType="/conf/we-retail/settings/wcm/template-types/html5page"
         jcr:primaryType="cq:PageContent"
         jcr:title="Hero Page"
         status="enabled"/>
