@@ -2,13 +2,17 @@
 
 .we-LanguagesList {
     list-style: none;
-
+    padding: 0;
+    margin: 0 25%;
+    
     li {
         > a {
-            vertical-align: middle;
             color: @gray-dark;
             text-decoration: none;
-            padding-left: 1rem;
+
+            .we-lang-icon {
+                margin-right: 1rem;
+            }
 
             &:hover {
                 color: @brand-primary;
