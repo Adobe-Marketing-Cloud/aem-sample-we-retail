@@ -1,13 +1,17 @@
 .we-lang-icon {
-  display: inline-block;
-  vertical-align: middle;
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
 
-  line-height: @line-height-base;
-  width: @font-size-base;
-  height: @font-size-base;
+    position: relative;
+    display: inline-block;
 
-  background: transparent no-repeat 50% 50%;
-  background-size: contain;
+    width: 1.33333333em;
+    line-height: 1em;
+}
+
+.we-lang-icon:before {
+    content: "\00a0";
 }
 
 .we-lang-icon-en {
