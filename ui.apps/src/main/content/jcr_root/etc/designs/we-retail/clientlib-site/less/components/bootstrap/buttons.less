@@ -1,254 +1,254 @@
 .btn {
-  transition: background-color @transition-default, color @transition-default;
+    transition: background-color @transition-default, color @transition-default;
 
-  font-size: 16px;
-  line-height: 24px;
+    font-size: 16px;
+    line-height: 24px;
 
-  text-transform: uppercase;
+    text-transform: uppercase;
 
-  &:focus, &.focus {
-    outline-color: @brand-primary;
-  }
+    &:focus, &.focus {
+        outline-color: @brand-primary;
+    }
 }
 
 .btn-default {
-  .btn-extend(@btn-default-color, @gray-dark);
+    .btn-extend(@btn-default-color, @gray-dark);
 }
 
 .btn-primary {
-  .btn-extend(@btn-default-color, @brand-primary-hover);
+    .btn-extend(@btn-default-color, @brand-primary-hover);
 }
 
 .btn-link {
-  &:extend(.link-underline all);
+    &:extend(.link-underline all);
 
-  border: none;
-
-  background-color: transparent;
-
-  margin-right: (@padding-base-horizontal + @padding-small-horizontal);
-
-  font-weight: 700;
-  color: @gray-base;
-
-  position: relative;
-
-  &:before {
-    .btn;
-    .we-Icon;
-    //&:extend(.btn);
-    //&:extend(.we-Icon);
-
-    content: @we-Icon--var-arrow-right-circle;
-
-    transform: translateX(100%);
-
-    padding-right: @padding-small-horizontal;
-    padding-left: @padding-small-horizontal;
-
-    margin-right: @padding-base-horizontal;
-
-    font: normal normal normal 20px/@fa-line-height-base "we-icons";
-
-    position: absolute;
-    top: 1px;
-    right: 0;
-  }
-
-  &:hover, &.hover,
-  &:focus, &.focus {
-    color: @gray-dark;
-  }
-
-  &:active:hover, &.active:hover {
-    background-color: inherit;
-  }
-
-  &.btn-primary {
-    background-color: transparent;
-
-    color: @brand-primary;
-
-    &:hover, &.hover,
-    &:focus, &.focus {
-      color: @brand-primary-hover;
-    }
-  }
-
-  &.btn-inverse {
-    background-color: transparent;
-
-    color: #fff;
-
-    &:hover, &.hover,
-    &:focus, &.focus {
-      color: #fff;
-    }
-  }
-}
-
-.btn-action {
-  margin-right: (@padding-base-vertical * 2 + @font-size-base * @line-height-base + 4); // btn height + 2px
-
-  position: relative;
-
-  &:empty {
-    padding: 0;
-
-    border: 0;
-
-    &::after {
-      transform: none;
-
-      position: static;
-    }
-  }
-
-  &::after {
-    //&:extend(.btn);
-    .btn;
-
-    transition: background-color @transition-default, color @transition-default;
-
-    content: @we-Icon--var-arrow-right;
-
-    transform: translateX(100%);
-
-    min-width: (@padding-base-vertical * 2 + @font-size-base * @line-height-base + 2); // btn height
-
-    padding-right: @padding-small-horizontal;
-    padding-left: @padding-small-horizontal;
-
-    margin-left: 1px;
-    margin-right: 0;
-
-    font: normal normal normal 14px/24px "we-icons";
-
-    position: absolute;
-    top: -1px;
-    right: -3px;
-  }
-
-  &:hover, &.hover,
-  &:focus, &.focus {
-    &::after {
-      background-color: inherit;
-    }
-  }
-
-  &.btn-default {
-    &::after {
-      //&:extend(.btn-default all);
-      .btn-default;
-    }
-
-    &:hover, &.hover,
-    &:focus, &.focus {
-      &::after {
-        background-color: @gray-dark;
-      }
-    }
-  }
-
-  &.btn-primary {
-    &::after {
-      //&:extend(.btn-primary all);
-      .btn-primary;
-    }
-
-    &:hover, &.hover,
-    &:focus, &.focus {
-      &::after {
-        background-color: @brand-primary-hover;
-      }
-    }
-  }
-
-  &-up {
-    &::after {
-      content: @we-Icon--var-arrow-up;
-    }
-  }
-
-  &-down {
-    &::after {
-      content: @we-Icon--var-arrow-down;
-    }
-  }
-
-  &-left {
-    &::after {
-      content: @we-Icon--var-arrow-left;
-    }
-  }
-}
-
-.btn-icon {
-  min-width: (@padding-base-vertical * 2 + @font-size-base * @line-height-base + 4);
-
-  //padding-right: @padding-small-horizontal;
-  //padding-left: @padding-small-horizontal;
-
-  padding-right: 0;
-  padding-left: 0;
-
-  border: transparent;
-
-  line-height: 24px;
-
-  .we-Icon {
-    display: block;
-
-    font-size: 26px;
-    line-height: 24px;
-  }
-
-  &.btn-default {
-    border-color: transparent;
+    border: none;
 
     background-color: transparent;
 
-    color: @btn-default-bg;
+    margin-right: (@padding-base-horizontal + @padding-small-horizontal);
+
+    font-weight: 700;
+    color: @gray-base;
+
+    position: relative;
+
+    &:before {
+        .btn;
+        .we-Icon;
+        //&:extend(.btn);
+        //&:extend(.we-Icon);
+
+        content: @we-Icon--var-arrow-right-circle;
+
+        transform: translateX(100%);
+
+        padding-right: @padding-small-horizontal;
+        padding-left: @padding-small-horizontal;
+
+        margin-right: @padding-base-horizontal;
+
+        font: normal normal normal 20px/@fa-line-height-base "we-icons";
+
+        position: absolute;
+        top: 1px;
+        right: 0;
+    }
 
     &:hover, &.hover,
     &:focus, &.focus {
-      border-color: transparent;
-
-      color: @gray-dark;
+        color: @gray-dark;
     }
 
     &:active:hover, &.active:hover {
-      background-color: transparent;
-
-      box-shadow: none;
+        background-color: inherit;
     }
-  }
 
-  &.btn-primary {
-    padding: 0;
+    &.btn-primary {
+        background-color: transparent;
 
-    background-color: transparent;
+        color: @brand-primary;
 
-    color: @btn-primary-bg;
-    line-height: 42px;
+        &:hover, &.hover,
+        &:focus, &.focus {
+            color: @brand-primary-hover;
+        }
+    }
 
-    .we-Icon {
-      line-height: 1;
+    &.btn-inverse {
+        background-color: transparent;
+
+        color: #fff;
+
+        &:hover, &.hover,
+        &:focus, &.focus {
+            color: #fff;
+        }
+    }
+}
+
+.btn-action {
+    margin-right: (@padding-base-vertical * 2 + @font-size-base * @line-height-base + 4); // btn height + 2px
+
+    position: relative;
+
+    &:empty {
+        padding: 0;
+
+        border: 0;
+
+        &::after {
+            transform: none;
+
+            position: static;
+        }
+    }
+
+    &::after {
+        //&:extend(.btn);
+        .btn;
+
+        transition: background-color @transition-default, color @transition-default;
+
+        content: @we-Icon--var-arrow-right;
+
+        transform: translateX(100%);
+
+        min-width: (@padding-base-vertical * 2 + @font-size-base * @line-height-base + 2); // btn height
+
+        padding-right: @padding-small-horizontal;
+        padding-left: @padding-small-horizontal;
+
+        margin-left: 1px;
+        margin-right: 0;
+
+        font: normal normal normal 14px/24px "we-icons";
+
+        position: absolute;
+        top: -1px;
+        right: -3px;
     }
 
     &:hover, &.hover,
     &:focus, &.focus {
-      background-color: transparent;
-
-      box-shadow: none;
-
-      color: @brand-primary-hover;
+        &::after {
+            background-color: inherit;
+        }
     }
 
-    &.btn-square {
-      .we-Icon {
-        font-size: 42px;
-      }
+    &.btn-default {
+        &::after {
+            //&:extend(.btn-default all);
+            .btn-default;
+        }
+
+        &:hover, &.hover,
+        &:focus, &.focus {
+            &::after {
+                background-color: @gray-dark;
+            }
+        }
     }
-  }
+
+    &.btn-primary {
+        &::after {
+            //&:extend(.btn-primary all);
+            .btn-primary;
+        }
+
+        &:hover, &.hover,
+        &:focus, &.focus {
+            &::after {
+                background-color: @brand-primary-hover;
+            }
+        }
+    }
+
+    &-up {
+        &::after {
+            content: @we-Icon--var-arrow-up;
+        }
+    }
+
+    &-down {
+        &::after {
+            content: @we-Icon--var-arrow-down;
+        }
+    }
+
+    &-left {
+        &::after {
+            content: @we-Icon--var-arrow-left;
+        }
+    }
+}
+
+.btn-icon {
+    min-width: (@padding-base-vertical * 2 + @font-size-base * @line-height-base + 4);
+
+    //padding-right: @padding-small-horizontal;
+    //padding-left: @padding-small-horizontal;
+
+    padding-right: 0;
+    padding-left: 0;
+
+    border: transparent;
+
+    line-height: 24px;
+
+    .we-Icon {
+        display: block;
+
+        font-size: 26px;
+        line-height: 24px;
+    }
+
+    &.btn-default {
+        border-color: transparent;
+
+        background-color: transparent;
+
+        color: @btn-default-bg;
+
+        &:hover, &.hover,
+        &:focus, &.focus {
+            border-color: transparent;
+
+            color: @gray-dark;
+        }
+
+        &:active:hover, &.active:hover {
+            background-color: transparent;
+
+            box-shadow: none;
+        }
+    }
+
+    &.btn-primary {
+        padding: 0;
+
+        background-color: transparent;
+
+        color: @btn-primary-bg;
+        line-height: 42px;
+
+        .we-Icon {
+            line-height: 1;
+        }
+
+        &:hover, &.hover,
+        &:focus, &.focus {
+            background-color: transparent;
+
+            box-shadow: none;
+
+            color: @brand-primary-hover;
+        }
+
+        &.btn-square {
+            .we-Icon {
+                font-size: 42px;
+            }
+        }
+    }
 }
