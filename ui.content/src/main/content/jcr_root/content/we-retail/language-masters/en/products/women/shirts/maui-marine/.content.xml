@@ -6,12 +6,11 @@
         cq:lastModifiedBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/wm/wmap/wmapmm"
         cq:template="/conf/we-retail/settings/wcm/templates/content-page"
-        cq:templateType="/conf/we-retail/settings/wcm/template-types/html5page"
         jcr:language="en"
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Maui Marine"
-        sling:resourceType="we-retail/components/structure/templated-page">
+        sling:resourceType="we-retail/components/structure/page">
         <root
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"

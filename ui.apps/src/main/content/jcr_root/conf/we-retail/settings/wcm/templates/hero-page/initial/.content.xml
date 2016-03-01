@@ -2,11 +2,9 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:deviceGroups="[/etc/mobile/groups/responsive]"
         cq:template="/conf/we-retail/settings/wcm/templates/hero-page"
-        cq:templateType="/conf/we-retail/settings/wcm/template-types/html5page"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="we-retail/components/structure/templated-page">
+        sling:resourceType="we-retail/components/structure/page">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
@@ -30,7 +28,6 @@
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
-                <cq:responsive jcr:primaryType="nt:unstructured"/>
                 <category_teaser
                     jcr:created="{Date}2016-01-13T16:00:19.769+01:00"
                     jcr:createdBy="admin"
