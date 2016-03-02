@@ -55,5 +55,12 @@
                 defaultContent=""
                 name="main"/>
         </elements>
+        <variations jcr:primaryType="nt:unstructured">
+            <main
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Teaser"
+                defaultContent=""
+                name="teaser"/>
+        </variations>
     </model>
 </jcr:root>
