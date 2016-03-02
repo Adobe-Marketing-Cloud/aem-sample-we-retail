@@ -37,7 +37,7 @@ public class Article {
 	private static final String CONTENT_FRAGMENT_REF_PATH = "root/responsivegrid/content_fragment/fileReference";
 
 	private static final String METADATA_PATH = "jcr:content/metadata";
-	private static final String AUTHOR_REF_PATH = METADATA_PATH + "/author";
+	private static final String AUTHOR_REF_PATH = METADATA_PATH + "/" + JcrConstants.JCR_LAST_MODIFIED_BY;
 	private static final String LAST_MODIFIED_PATH = METADATA_PATH + "/" + DamConstants.DC_MODIFIED;
 
 	private static final String MAIN_ELEMENT = "main";
