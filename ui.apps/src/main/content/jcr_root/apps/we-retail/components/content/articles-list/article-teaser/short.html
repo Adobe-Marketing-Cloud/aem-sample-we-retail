@@ -16,11 +16,14 @@
 <div class="we-ArticleTeaser"
      data-sly-use.article="we.retail.core.Article">
 
-    <a href="${ resource.path }.html" class="we-ArticleTeaser-visual">
-        <img src="${ article.imagePath }" alt="${ article.properties.jcr:title }">
+    <a href="${ resource.path }.html" class="we-ArticleTeaser-link"
+       onclick="CQ_Analytics.record({event: 'listTeaserItemClicked', values: { listItemPath: '${resource.path @ context='scriptString'}' }, collect:  false, options: { obj: this }, componentPath: '${resource.resourceType @ context='scriptString'}'})">
+        <div class="we-ArticleTeaser-visual">
+            <img src="${ article.imagePath }" alt="${ article.title }">
+        </div>
+
+        <h3 class="we-ArticleTeaser-title">${ article.title }</h3>
     </a>
-     
-    <h3 class="we-ArticleTeaser-title">${ article.title }</h3>
 
     <span class="we-ArticleTeaser-date">${ article.modified }</span>
 
