@@ -34,6 +34,8 @@
         font-weight: 700;
         line-height: 29px;
 
+        color: #000;
+
         @media (min-width: @screen-sm-min) {
             padding: @padding-base-vertical @padding-small-horizontal;
         }
@@ -90,5 +92,14 @@
         padding: 0 @padding-large-horizontal;
 
         line-height: normal;
+    }
+
+    &-link {
+        text-decoration: none;
+
+        &:hover {
+            color: fade(#000, 70);
+            text-decoration: none;
+        }
     }
 }
