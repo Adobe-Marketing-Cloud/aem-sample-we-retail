@@ -56,7 +56,7 @@
                 name="main"/>
         </elements>
         <variations jcr:primaryType="nt:unstructured">
-            <main
+            <teaser
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Teaser"
                 defaultContent=""
