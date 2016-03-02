@@ -91,11 +91,13 @@ public class Article {
     	}
     	
     	Resource thumbnailImageResource = resource.getChild(JcrConstants.JCR_CONTENT + "/image");
-    	String thumbnailFileReference = thumbnailImageResource.adaptTo(ValueMap.class).get("fileReference", String.class);
-    	
-    	if(thumbnailFileReference != null) {
-    		path = thumbnailFileReference;
-    	}
+		if (thumbnailImageResource != null) {
+			String thumbnailFileReference = thumbnailImageResource.adaptTo(ValueMap.class).get("fileReference", String.class);
+
+			if (thumbnailFileReference != null) {
+				path = thumbnailFileReference;
+			}
+		}
     	
     	return path;
     }
