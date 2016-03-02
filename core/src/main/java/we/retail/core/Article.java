@@ -1,36 +1,28 @@
 package we.retail.core;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 import javax.jcr.RepositoryException;
-import javax.jcr.Session;
 
+import com.adobe.cq.dam.cfm.ContentElement;
+import com.adobe.cq.dam.cfm.ContentFragment;
+import com.adobe.cq.dam.cfm.ContentVariation;
+import com.day.cq.dam.api.DamConstants;
 import org.apache.jackrabbit.api.security.user.UserManager;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.Model;
-import org.apache.sling.models.annotations.Optional;
+import org.apache.sling.models.annotations.injectorspecific.ResourcePath;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.day.cq.commons.jcr.JcrConstants;
-import com.day.cq.search.PredicateGroup;
-import com.day.cq.search.Query;
-import com.day.cq.search.QueryBuilder;
-import com.day.cq.search.result.Hit;
-import com.day.cq.search.result.SearchResult;
 import com.day.cq.tagging.Tag;
 import com.day.cq.tagging.TagManager;
 
@@ -41,7 +33,16 @@ import com.day.cq.tagging.TagManager;
 public class Article {
 	
 	static Logger LOGGER = LoggerFactory.getLogger(Article.class); 
-	
+
+	private static final String CONTENT_FRAGMENT_REF_PATH = "root/responsivegrid/content_fragment/fileReference";
+
+	private static final String METADATA_PATH = "jcr:content/metadata";
+	private static final String AUTHOR_REF_PATH = METADATA_PATH + "/author";
+	private static final String LAST_MODIFIED_PATH = METADATA_PATH + "/" + DamConstants.DC_MODIFIED;
+
+	private static final String MAIN_ELEMENT = "main";
+	private static final String TEASER_VARIATION = "teaser";
+
     @Inject
     @SlingObject
     private ResourceResolver resourceResolver;
@@ -51,22 +52,34 @@ public class Article {
     @Default(values = "")
     public String title;
 
-    @Inject
-    @Named(JcrConstants.JCR_CONTENT + "/" + JcrConstants.JCR_DESCRIPTION)
-    @Optional
-    public String description;
+	@ResourcePath(name=JcrConstants.JCR_CONTENT + "/" + CONTENT_FRAGMENT_REF_PATH, optional = true)
+	protected ContentFragment contentFragment;
 
-    @Inject
-    @Named(JcrConstants.JCR_CONTENT + "/cq:tags")
-    @Default(values = {})
-    public String[] cqTags;
-    
     public Resource resource;
     
     public Article(Resource resource) {
     	this.resource = resource;
     }
-    
+
+	public String getTeaser() {
+		String teaser = null;
+
+		if (contentFragment != null) {
+			ContentElement element = contentFragment.getElement(MAIN_ELEMENT);
+			if (element != null) {
+				ContentVariation variation = element.getVariation(TEASER_VARIATION);
+
+				if (variation != null) {
+					teaser = variation.getContent();
+				}
+			}
+		}
+
+		return teaser;
+	}
+
+
+
     public String getImagePath() {
     	String path = resource.getPath() + ".thumb.319.319.jpg";
     	
@@ -91,90 +104,52 @@ public class Article {
         List<Tag> tags = new ArrayList<Tag>();
         TagManager tagManager = resourceResolver.adaptTo(TagManager.class);
         
-        try {
-	    	Resource contentFragmentResource = getContentFragment();
-	    	
-	    	if(contentFragmentResource != null) {
-		    	ValueMap contentFragmentMetadata = contentFragmentResource.adaptTo(ValueMap.class);
-		    	String[] tagIds = contentFragmentMetadata.get("cq:tags", String[].class);
-		    	
-		    	for (String cqTag : tagIds) {
-		            tags.add(tagManager.resolve(cqTag));
-		        }
-	    	}
-	    }
-		catch (RepositoryException ex) {
-			LOGGER.error("Error getting article tags", ex);
-		}
+		if(contentFragment != null) {
+			Object[] tagIds = (Object[]) contentFragment.getMetaData().get("cq:tags");
 
+			for (Object cqTag : tagIds) {
+				tags.add(tagManager.resolve(cqTag.toString()));
+			}
+		}
         return tags;
     }
     
     public Profile getAuthor() {
     	Profile author = null;
-    	
+
     	try {
-	    	Resource contentFragmentResource = getContentFragment();
-	    	
-	    	if(contentFragmentResource != null) {
-		    	ValueMap contentFragmentMetadata = contentFragmentResource.adaptTo(ValueMap.class);
+	    	if(contentFragment != null) {
 		    	// TODO: find the right property to get the author id from
-		    	String authorId = contentFragmentMetadata.get(JcrConstants.JCR_LAST_MODIFIED_BY, String.class);
-		    	
-				UserManager userManager = resourceResolver.adaptTo(UserManager.class);
-				String authorPath = userManager.getAuthorizable(authorId).getPath();
-				
-				author = resourceResolver.getResource(authorPath).adaptTo(Profile.class);
+				Resource contentFragmentResource = contentFragment.adaptTo(Resource.class);
+				ValueMap contentFragmentProperties = contentFragmentResource.getValueMap();
+
+		    	String authorId = contentFragmentProperties.get(AUTHOR_REF_PATH, String.class);
+
+				if (authorId != null) {
+					UserManager userManager = resourceResolver.adaptTo(UserManager.class);
+					String authorPath = userManager.getAuthorizable(authorId).getPath();
+
+					author = resourceResolver.getResource(authorPath).adaptTo(Profile.class);
+				}
 	    	}
 	    }
 		catch (RepositoryException ex) {
 			LOGGER.error("Error getting article author", ex);
 		}
-    	
+
     	return author;
     }
     
     public String getModified() {
     	String result = null;
-    	
-    	try {
-	    	Resource contentFragmentResource = getContentFragment();
-	    	
-	    	if(contentFragmentResource != null) {
-		    	ValueMap contentFragmentMetadata = contentFragmentResource.adaptTo(ValueMap.class);	
-		    	Date modified = contentFragmentMetadata.get("dc:modified", Date.class);
-		    	
-		    	result = new SimpleDateFormat("MMM dd, YYYY", Locale.US).format(modified);
-	    	}
-	    }
-		catch (RepositoryException ex) {
-			LOGGER.error("Error getting article creation date", ex);
+
+		if(contentFragment != null) {
+			Resource contentFragmentResource = contentFragment.adaptTo(Resource.class);
+			ValueMap contentFragmentProperties = contentFragmentResource.getValueMap();
+
+			Date modified = contentFragmentProperties.get(LAST_MODIFIED_PATH, Date.class);
+			result = new SimpleDateFormat("MMM dd, YYYY", Locale.US).format(modified);
 		}
-    	
-    	return result;
-    }
-    
-    private Resource getContentFragment() throws RepositoryException {
-    	Resource result = null;
-    			
-    	Map<String, String> params = new HashMap<String, String>();
-    	params.put("path", resource.getPath());
-    	params.put("property", "sling:resourceType");
-    	params.put("property.value", "dam/cfm/components/contentfragment");
-    	
-		QueryBuilder queryBuilder = resourceResolver.adaptTo(QueryBuilder.class);
-    	Query query = queryBuilder.createQuery(PredicateGroup.create(params), resourceResolver.adaptTo(Session.class));                   
-        SearchResult searchResult = query.getResult();
-    	List<Hit> hits = searchResult.getHits();
-    	
-        if(hits.size() > 0) {
-        	ValueMap fragmentProperties = hits.get(0).getResource().adaptTo(ValueMap.class);
-        	String fragmentReference = fragmentProperties.get("fileReference", String.class);
-        	
-        	if(fragmentReference != null) {
-        		result = resourceResolver.getResource(fragmentReference + "/jcr:content/metadata");
-        	}
-        }
     	
     	return result;
     }

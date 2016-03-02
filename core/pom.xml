@@ -107,6 +107,12 @@
             <groupId>com.adobe.cq.commerce</groupId>
             <artifactId>cq-commerce-core</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.adobe.cq.dam</groupId>
+            <artifactId>cq-dam-cfm-api</artifactId>
+        </dependency>
+
+
         <!-- Other Dependencies -->
         <dependency>
             <groupId>org.slf4j</groupId>
