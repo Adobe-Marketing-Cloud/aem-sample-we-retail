@@ -33,7 +33,7 @@
 
     <span class="we-ArticleTeaser-author">${ article.author.name }</span>
 
-    <div class="we-ArticleTeaser-description" data-sly-test="${ article.description }">
-        ${ article.description }
+    <div class="we-ArticleTeaser-teaser">
+        ${ article.teaser @ context='html' }
     </div>
 </div>
