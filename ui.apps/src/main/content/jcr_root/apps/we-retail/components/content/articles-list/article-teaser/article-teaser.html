@@ -20,7 +20,7 @@
        class="we-ArticleTeaser-link"
        onclick="CQ_Analytics.record({event: 'listTeaserItemClicked', values: { listItemPath: '${resource.path @ context='scriptString'}' }, collect:  false, options: { obj: this }, componentPath: '${resource.resourceType @ context='scriptString'}'})">
         <div class="we-ArticleTeaser-visual">
-            <img src="${ resource.path }.thumb.319.319.jpg" alt="${ article.properties.jcr:title }">
+            <img src="${ article.imagePath }" alt="${ article.title }">
         </div>
 
         <h3 class="we-ArticleTeaser-title">${ article.title }</h3>
