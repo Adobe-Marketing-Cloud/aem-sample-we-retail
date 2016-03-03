@@ -1,0 +1,120 @@
+@import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
+
+.we-Cart-entryCol {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.we-Cart {
+
+    &-content {
+        position: fixed;
+        left: 100%;
+        top: 0;
+
+        background-color: #fff;
+        width: 300px;
+        height: 100vh;
+
+        transition: top .2s;
+    }
+
+    &-button {
+        display: block;
+        padding: 8px @padding-small-horizontal;
+
+        &:hover, &:focus {
+            text-decoration: none;
+        }
+
+        .navbar-inverse & {
+            color: #fff;
+        }
+    }
+
+    &-header {
+        .clearfix;
+
+        background-color: @brand-primary;
+        color: #fff;
+
+        min-height: @navbar-fixed-height;
+
+        text-transform: uppercase;
+
+        padding: 8px @padding-small-horizontal;
+
+        a {
+            color: #fff;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &-headerLeft {
+        float: left;
+    }
+
+    &-headerRight {
+        float: right;
+    }
+
+    &-entry {
+        margin-bottom: 20px;
+    }
+
+
+    &-image {
+        &:extend(.we-Cart-entryCol);
+        width: 35%;
+        padding: 1rem;
+    }
+
+    &-entryContent {
+        &:extend(.we-Cart-entryCol);
+        width: 40%;
+
+        a {
+            color: #000;
+        }
+    }
+
+    &-remove {
+        &:extend(.we-Cart-entryCol);
+        width: 25%;
+        text-align: center;
+    }
+
+    &-footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        border-top: 1px solid #000;
+
+        padding: @padding-large-vertical @padding-large-horizontal;
+    }
+
+    &-subtotal {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        margin-bottom: @padding-large-vertical;
+    }
+}
+
+
+.we-Cart-expandable {
+    transition: transform .5s;
+
+    &.expanded {
+        transform: translateX(-300px);
+        margin-right: 0;
+
+        .we-CartContent {
+            display: block;
+        }
+    }
+}
