@@ -22,7 +22,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#" data-toggle="modal" data-target=".we-SignInModal">Login</a></li>
                 <li><a href="#"><i class="fa fa-heart-o"></i> Wishlist <span class="badge">0</span></a></li>
-                <li><a href="#"><i class="fa fa-shopping-cart"></i> My cart <span class="badge active">2</span></a></li>
+                <li data-sly-resource="${@ resourceType='we-retail/components/content/cart'}"></li>
             </ul>
         </div>
     </div>
