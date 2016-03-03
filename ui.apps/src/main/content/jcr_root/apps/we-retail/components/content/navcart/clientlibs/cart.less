@@ -8,21 +8,28 @@
 .we-Cart {
 
     &-content {
+
         position: fixed;
         left: 100%;
         top: 0;
 
         background-color: #fff;
-        width: 300px;
-        height: 100vh;
 
+        height: 100vh;
+        width: 100%;
         transition: top .2s;
+
+        z-index: 1000;
+
+        @media(min-width: @screen-sm-min) {
+            width: 300px;
+        }
     }
 
     &-button {
         display: block;
-        padding: 8px @padding-small-horizontal;
         line-height: 24px;
+        padding: @navbar-padding-vertical 0;
 
         &:hover, &:focus {
             text-decoration: none;
@@ -30,6 +37,10 @@
 
         .navbar-inverse & {
             color: #fff;
+        }
+
+        @media(min-width: @screen-sm-min) {
+            padding: 8px @padding-small-horizontal;
         }
     }
 
@@ -104,18 +115,17 @@
         font-size: 1.4rem;
         margin-bottom: @padding-large-vertical;
     }
-}
 
+    &-expandable {
+        transition: transform .5s;
 
-.we-Cart-expandable {
-    transition: transform .5s;
+        &.expanded {
+            transform: translateX(-100%);
+            margin-right: 0;
 
-    &.expanded {
-        transform: translateX(-300px);
-        margin-right: 0;
-
-        .we-CartContent {
-            display: block;
+            @media(min-width: @screen-sm-min) {
+                transform: translateX(-300px);
+            }
         }
     }
 }
