@@ -51,7 +51,7 @@
                 <div class="we-Cart-subtotal">
                     sub-total: ${ cart.total }
                 </div>
-                <a class="btn btn-primary btn-action pull-right" href="${ cart.checkoutPage }">${ 'Checkout' @ i18n }</a>
+                <a data-sly-test="${ cart.checkoutPage }" class="btn btn-primary btn-action pull-right" href="${ cart.checkoutPage }">${ 'Checkout' @ i18n }</a>
             </div>
         </div>
     </cart-content>
