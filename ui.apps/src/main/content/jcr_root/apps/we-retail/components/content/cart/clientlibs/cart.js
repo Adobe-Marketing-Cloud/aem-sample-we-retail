@@ -37,7 +37,6 @@
             'cartExpandable'
         ],
         ready: function() {
-            console.log('cart vue!!!');
             this.$expandable = $(this.$el).closest(this.cartExpandable);
             this.$expandable.addClass(EXPANDABLE_CLASS);
         },
