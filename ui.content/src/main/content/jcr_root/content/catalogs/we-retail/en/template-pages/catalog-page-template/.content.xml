@@ -27,7 +27,7 @@
                     sling:resourceType="we-retail/components/content/section-title"/>
                 <products_grid_1773541649
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/products-grid"
+                    sling:resourceType="we-retail/components/content/product-grid"
                     displayAs="products"
                     feedEnabled="{Boolean}true"
                     limit="6"
