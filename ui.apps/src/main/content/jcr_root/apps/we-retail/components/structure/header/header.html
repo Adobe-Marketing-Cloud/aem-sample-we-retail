@@ -36,13 +36,14 @@
                     <span class="icon-bar"></span> <span class="icon-bar"></span>
                 </button>
 
-                <button type="button" class="navbar-toggle navbar-toggle-close collapsed visible-xs" data-toggle="collapse"
+                <button type="button" class="navbar-toggle navbar-toggle-close collapsed" data-toggle="collapse"
                         data-target="#we-example-navbar-collapse-inverse" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <i class="we-Icon we-Icon--close"></i>
                 </button>
 
                 <a class="navbar-brand" href="${header.languageRoot}">we.<strong>Retail</strong></a>
+                <div class="pull-right visible-xs" data-sly-resource="${@ resourceType='we-retail/components/content/navcart', selectors='mobilebutton'}"></div>
             </div>
             
             <!-- /.navbar-header -->
