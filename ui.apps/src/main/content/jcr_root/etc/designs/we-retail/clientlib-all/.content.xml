@@ -3,4 +3,4 @@
     jcr:primaryType="cq:ClientLibraryFolder"
     categories="[we-retail.all]"
     dependencies="[cq.underscore,cq.social.scf,cq.social.hbs.voting,cq.social.hbs.reviews,cq.foundation]"
-    embed="[we-retail.jquery,we-retail.bootstrap.js,we-retail.vue,we-retail.site,we-retail.structure,we-retail.component]"/>
+    embed="[we-retail.jquery,we-retail.bootstrap.js,we-retail.vue,we-retail.site,we-retail.structure,we-retail.components]"/>
