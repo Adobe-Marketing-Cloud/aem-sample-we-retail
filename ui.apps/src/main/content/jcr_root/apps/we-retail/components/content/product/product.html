@@ -70,10 +70,11 @@
             <form class="we-Product-form"
                   action="${currentPage.path}.commerce.addcartentry.html"
                   method="POST">
+                <input type="hidden" name="redirect" value="${product.redirect}.html">
+                <input type="hidden" name="redirect-product-not-found" value="${product.errorRedirect}.html"/>
                 <input type="hidden" name="product-quantity" value="1">
-                <input type="hidden" name="product-path" value="${product.base.path}">
-                <input type="hidden" name="redirect" value="${currentPage.path}.html">
-                
+                <input type="hidden" name="product-path" value="${product.path}">
+
                 <div class="form-group" data-sly-test="${product.variations.type == 'color'}">
                     <label>Colors</label>
                 </div>
