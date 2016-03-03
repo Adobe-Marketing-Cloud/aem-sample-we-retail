@@ -119,4 +119,28 @@
             </components>
         </foundation>
     </wcm>
+    <we-retail
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="nt:unstructured">
+        <components
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nt:unstructured">
+            <structure
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nt:unstructured">
+                <page
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nt:unstructured">
+                    <product
+                        jcr:description="Policy for product pages"
+                        jcr:lastModified="{Date}2016-03-03T18:52:44.719+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Product Page"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="[cq.underscore,cq.social.scf,cq.social.hbs.voting,cq.social.hbs.reviews]"/>
+                </page>
+            </structure>
+        </components>
+    </we-retail>
 </jcr:root>
