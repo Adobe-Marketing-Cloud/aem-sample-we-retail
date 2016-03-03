@@ -118,7 +118,7 @@
                     <filterSource>${basedir}/META-INF/vault/filter.xml</filterSource>
                     <verbose>true</verbose>
                     <failOnError>true</failOnError>
-                    <group>We.Retail</group>
+                    <group>adobe/aem6/sample</group>
                     <embeddeds>
                         <embedded>
                             <groupId>we</groupId>
