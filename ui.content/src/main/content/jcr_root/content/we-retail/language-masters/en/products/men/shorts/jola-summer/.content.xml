@@ -5,7 +5,7 @@
         cq:lastModified="{Date}2016-02-25T22:18:53.468+01:00"
         cq:lastModifiedBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/mn/mnap/mnapjs"
-        cq:template="/conf/we-retail/settings/wcm/templates/content-page"
+        cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
@@ -166,7 +166,7 @@
                 <reviews
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product/reviews"/>
+                    sling:resourceType="we-retail/components/content/product-reviews"/>
                 <similar_section_title
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
