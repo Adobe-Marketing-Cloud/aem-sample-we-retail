@@ -2,7 +2,9 @@
     'use strict';
 
     var EXPANDABLE_CLASS = 'we-Cart-expandable',
-        EXPAND_VALUE = 'expanded';
+        EXPAND_VALUE = 'expanded',
+
+        EXPANDABLE_SELECTOR = 'body';
 
     var _fixed = null;
 
@@ -25,35 +27,50 @@
         this.$window.off('scroll', this._onScroll);
     };
 
-
-    Vue.component('cart-content', {});
-
-
-    new Vue({
-        parent: we.app,
-        el: '.we-Cart',
-        name: 'cart',
-        props: [
-            'cartExpandable'
-        ],
+    Vue.component('cart-content', {
         ready: function() {
-            this.$expandable = $(this.$el).closest(this.cartExpandable);
+            // move cart contents to body
+            // so we won't interfere with any mobile styles
+            document.body.appendChild(this.$el);
+        },
+        events: {
+            'cart-button-expand': function(show) {
+                // handle fixed in js
+                // position fixed in css doesn't work with transform
+                this._fixed = this._fixed || new Fixed(this.$el);
+                if (show) {
+                    this._fixed.on();
+                } else {
+                    this._fixed.off();
+                }
+            }
+        }
+    });
+
+    Vue.component('cart-button', {});
+
+    var CartComponent = Vue.extend({
+        ready: function() {
+            this.$expandable = $(this.$el).closest(EXPANDABLE_SELECTOR);
             this.$expandable.addClass(EXPANDABLE_CLASS);
         },
         methods: {
             toggle: function() {
                 var $el = this.$expandable;
-                _fixed = _fixed || new Fixed(this.$refs.content.$el);
 
                 if ($el.hasClass(EXPAND_VALUE)) {
                     $el.removeClass(EXPAND_VALUE);
-                    _fixed.off();
+                    this.$root.$broadcast('cart-button-expand', false);
                 } else {
                     $el.addClass(EXPAND_VALUE);
-                    _fixed.on();
+                    this.$root.$broadcast('cart-button-expand', true);
                 }
             }
         }
+    });
+
+    $('.we-Cart').each(function() {
+        new CartComponent().$mount(this);
     });
 
 }).call(this);

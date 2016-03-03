@@ -1,13 +1,12 @@
 <div class="we-Cart"
-     data-sly-use.cart="cart.js"
-     cart-expandable="body">
+     data-sly-use.cart="cart.js">
 
     <a class="we-Cart-button"
        href="#"
        v-on:click="toggle"><i class="fa fa-shopping-cart"></i> My cart <span class="badge active">${ cart.entries.length }</span>
     </a>
 
-    <cart-content inline-template v-ref:content>
+    <cart-content inline-template>
         <div class="we-Cart-content">
             <div class="we-Cart-header">
                 <div class="we-Cart-headerLeft">
