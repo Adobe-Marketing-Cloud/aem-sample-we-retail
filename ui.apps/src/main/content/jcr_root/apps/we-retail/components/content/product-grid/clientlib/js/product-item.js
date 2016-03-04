@@ -13,6 +13,7 @@
             'isVisible'
         ],
         compiled: function () {
+            console.log('...');
             var vm = this;
 
             Object.keys(vm._props).forEach(function (filter) {
@@ -100,13 +101,14 @@
         }
     });
 
-    if (document.querySelector('.products-grid')) {
-        new Vue({
+    if (document.querySelector('.product-grid')) {
+        var ProductsGrid = Vue.extend({
             parent: we.app,
             name: 'products-grid',
-            el: '.products-grid',
-            data: {
-                filters: {}
+            data: function() {
+                return {
+                    filters: {}
+                };
             },
             ready: function () {
                 if (this.filters.price) {
@@ -117,8 +119,12 @@
 
                 parentEl = this.$el.querySelector('.foundation-ordered-list-container');
 
-                console.log('.products-grid ready', this);
+                console.log('.product-grid ready', this);
             }
+        });
+
+        _.each(document.querySelectorAll('.product-grid'), function(item) {
+            new ProductsGrid().$mount(item);
         });
     }
 
