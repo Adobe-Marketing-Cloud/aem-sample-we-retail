@@ -4,6 +4,7 @@
     window.we = window.we || {};
 
     var parentEl;
+    Vue.config.debug = true
 
     Vue.component('we-product-item', {
         props: [
@@ -101,14 +102,13 @@
         }
     });
 
-    if (document.querySelector('.product-grid')) {
-        var ProductsGrid = Vue.extend({
+    _.each(document.querySelectorAll('.product-grid'), function (el, index) {
+        new Vue({
             parent: we.app,
-            name: 'products-grid',
-            data: function() {
-                return {
-                    filters: {}
-                };
+            name: 'product-grid',
+            el: el,
+            data: {
+                filters: {}
             },
             ready: function () {
                 if (this.filters.price) {
@@ -122,11 +122,7 @@
                 console.log('.product-grid ready', this);
             }
         });
-
-        _.each(document.querySelectorAll('.product-grid'), function(item) {
-            new ProductsGrid().$mount(item);
-        });
-    }
+    });
 
     function getPriceList(prices) {
         var list = []
