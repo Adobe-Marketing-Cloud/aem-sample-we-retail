@@ -25,9 +25,6 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"
                 editable="{Boolean}true"/>
-            <article_author
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/article-author"/>
             <footer
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/footer"/>
