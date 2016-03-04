@@ -1,7 +1,7 @@
 @import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
 @import (reference) "/etc/designs/we-retail/clientlib-site/less/grid.less";
 
-.products-grid {
+.product-grid {
     .foundation-ordered-list-container {
         .list-unstyled;
         .make-row();
@@ -37,7 +37,8 @@
         }
     }
 
-    &.aem-GridColumn--default--10 {
+    &.aem-GridColumn--default--10,
+    &.aem-GridColumn--default--12 {
         .foundation-list-item {
             width: percentage(@max_col/5/@max_col);
 
