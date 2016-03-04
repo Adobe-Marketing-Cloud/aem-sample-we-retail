@@ -3,10 +3,10 @@
 
 use(function() {
     // get starting point of trail
-    var level = currentStyle.get("absParent", 2);
-    var endLevel = currentStyle.get("relParent", 1);
-    var delimStr = currentStyle.get("delim", "/");
-    var trailStr = currentStyle.get("trail", "");
+    var level = properties.get("absParent", 2);
+    var endLevel = properties.get("relParent", 0);
+    var delimStr = properties.get("delim", "/");
+    var trailStr = properties.get("trail", "");
     var currentLevel = currentPage.getDepth();
 
     var ret = {
