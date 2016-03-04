@@ -54,14 +54,6 @@
                             orderBy="jcr:title"
                             pages="[/content/dam/we-retail/articles/photos/lofoten/_B6A5663.jpg,/content/dam/we-retail/articles/photos/lofoten/_B6A5010.jpg]"/>
                     </par4>
-                    <par6
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="foundation/components/parsys">
-                        <image
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="wcm/foundation/components/image"
-                            fileReference="/content/dam/we-retail/articles/photos/lofoten/_B6A4438.jpg"/>
-                    </par6>
                 </content_fragment>
             </responsivegrid>
             <hero_image
