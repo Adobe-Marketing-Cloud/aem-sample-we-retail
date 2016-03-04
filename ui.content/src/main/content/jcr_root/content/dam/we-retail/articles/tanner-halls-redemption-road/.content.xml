@@ -55,9 +55,9 @@
         </elements>
         <variations jcr:primaryType="nt:unstructured">
             <teaser
+                jcr:description=""
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Teaser"
-                defaultContent=""
                 name="teaser"/>
         </variations>
     </model>
