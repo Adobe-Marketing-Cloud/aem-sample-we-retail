@@ -138,7 +138,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Product Page"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        clientlibs="[cq.underscore,cq.social.scf,cq.social.hbs.voting,cq.social.hbs.reviews]"/>
+                        clientlibs="[we-retail.product-page,]"/>
                 </page>
             </structure>
         </components>
