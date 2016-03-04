@@ -13,8 +13,6 @@ use(function () {
 
     var types = properties.get("types") || [];
     var filter = new com.adobe.cq.commerce.common.PriceFilter(types);
-    log.error("FILTER ");
-    log.error("FILTER " + filter + ", " + types);
     var orderId = request.getParameter("orderId");
     var entries, allPromotions;
     var _entries = [], total;
@@ -39,14 +37,6 @@ use(function () {
     var iter = entries.iterator();
     while(iter.hasNext()) {
         var entry = iter.next();
-        /*
-        log.error("entry " + entry.getEntryIndex());
-        log.error("productData" + entry.product.getBaseProduct().getProperty("productData", java.lang.String));
-        log.error("pagePath" + entry.product.getBaseProduct().getPagePath());
-
-        log.error("productData" + entry.product.getProperty("productData", java.lang.String));
-        log.error("pagePath" + entry.product.getPagePath());
-        */
         var productImage = resolver.getResource(entry.product.getImage().getPath());
 
         _entries.push({
