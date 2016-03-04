@@ -2,4 +2,4 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:ClientLibraryFolder"
     categories="[we-retail.product-page]"
-    embed="[cq.shared,cq.jquery,moment,cq.backbone,cq.handlebars,cq.social.scf,cq.social.hbs.rating,cq.social.hbs.voting,cq.social.hbs.reviews,we-retail.components.social]"/>
+    embed="[moment,cq.underscore,cq.backbone,cq.handlebars,cq.social.scf,cq.social.author.hbs.voting,cq.social.hbs.voting,cq.social.hbs.rating,cq.social.author.hbs.rating,cq.social.author.hbs.subscriptions,cq.social.hbs.subscriptions,cq.social.author.hbs.comments,cq.social.hbs.comments,cq.social.hbs.reviews,cq.social.author.hbs.reviews,we-retail.components.social]"/>
