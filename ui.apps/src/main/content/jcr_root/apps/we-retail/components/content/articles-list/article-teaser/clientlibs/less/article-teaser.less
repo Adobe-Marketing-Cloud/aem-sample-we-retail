@@ -1,6 +1,8 @@
-@import (reference) "/etc/designs/we-retail/common/variables.less";
+@import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
 
 .we-ArticleTeaser {
+    .clearfix;
+
     padding-bottom: @padding-large-vertical;
 
     background: fade(@gray-base, 5);
@@ -41,7 +43,7 @@
         }
 
         @media (min-width: @screen-md-min) {
-            padding: @padding-large-vertical @padding-small-horizontal;
+            padding: @padding-large-horizontal @padding-large-horizontal;
         }
 
     }
