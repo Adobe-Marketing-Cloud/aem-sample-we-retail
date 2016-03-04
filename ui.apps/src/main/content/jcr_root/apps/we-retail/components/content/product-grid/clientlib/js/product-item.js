@@ -14,7 +14,6 @@
             'isVisible'
         ],
         compiled: function () {
-            console.log('...');
             var vm = this;
 
             Object.keys(vm._props).forEach(function (filter) {
@@ -118,8 +117,6 @@
                 this.$parent.filters = this.filters;
 
                 parentEl = this.$el.querySelector('.foundation-ordered-list-container');
-
-                console.log('.product-grid ready', this);
             }
         });
     });
