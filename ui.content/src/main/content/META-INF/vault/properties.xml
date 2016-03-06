@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>FileVault Package Properties</comment>
+<entry key="createdBy">admin</entry>
+<entry key="name">Assets</entry>
+<entry key="lastModified">2016-03-06T22:53:56.231+01:00</entry>
+<entry key="lastModifiedBy">admin</entry>
+<entry key="created">2016-03-06T22:53:58.053+01:00</entry>
+<entry key="buildCount">2</entry>
+<entry key="version"/>
+<entry key="dependencies"/>
+<entry key="packageFormatVersion">2</entry>
+<entry key="description"/>
+<entry key="lastWrapped">2016-03-06T22:53:56.231+01:00</entry>
+<entry key="group">my_packages</entry>
+<entry key="lastWrappedBy">admin</entry>
+</properties>
