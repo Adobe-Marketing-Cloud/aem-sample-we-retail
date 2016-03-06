@@ -32,7 +32,6 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resource="/content/dam/we-retail/articles/tanner-halls-redemption-road"/>
             </sling:members>
-            <folderThumbnail/>
         </tanner_hall_s_redemptionroad>
         <aloha_spirits_innorthernnorway
             jcr:created="{Date}2016-02-25T23:50:48.997+01:00"
