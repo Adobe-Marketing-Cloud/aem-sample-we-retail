@@ -6,6 +6,7 @@
             'isBase',
 
             'path',
+            'pagePath',
             'variants',
             'sku',
             'title',
@@ -52,18 +53,48 @@
                     return productSku === this.product.sku;
                 }
             },
+            props: [
+                'sku',
+                'title',
+                'pagePath'
+            ],
+            ready: function() {
+                this.trackView();
+            },
             methods: {
-                setProduct: function (event) {
+                _setProduct: function(sku) {
                     var self = this;
 
                     self.variants.forEach(function (product) {
-                        if (product.sku === event.currentTarget.attributes['data-sku'].value) {
+                        if (product.sku === sku) {
                             self.product = product;
                         }
                     });
                 },
+                setProduct: function (event) {
+                    this._setProduct(event.currentTarget.attributes['data-sku'].value);
+                },
                 showSizes: function () {
                     return this.colorVariants[this.product.color] > 1 || Object.keys(this.colorVariants).length === 0;
+                },
+                trackView: function() {
+                    if (window.ContextHub && ContextHub.getStore("recentlyviewed")) {
+                        ContextHub.getStore("recentlyviewed").record(
+                            this.pagePath,
+                            this.product.title,
+                            this.product.image,
+                            this.product.price
+                        );
+                    }
+
+                    if (window.CQ_Analytics && CQ_Analytics.ViewedProducts) {
+                        CQ_Analytics.ViewedProducts.record(
+                            this.pagePath,
+                            this.product.title,
+                            this.product.image,
+                            this.product.price
+                        );
+                    }
                 }
             }
         });
