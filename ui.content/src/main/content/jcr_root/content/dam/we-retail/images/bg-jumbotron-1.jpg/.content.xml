@@ -7,8 +7,7 @@
     <jcr:content
         cq:name="bg-jumbotron-1.jpg"
         cq:parentPath="/content/dam/we-retail/images"
-        dam:assetID="656b3707-f069-4f77-9eb8-91a54c34d9ea"
-        dam:relativePath="we-retail/images/bg-jumbotron-1.jpg"
+        dam:relativePath="we-retail/images/bg-jumbotorn-1.jpg"
         jcr:lastModified="{Date}2016-02-29T19:30:03.441+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">

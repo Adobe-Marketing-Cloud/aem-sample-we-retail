@@ -7,7 +7,6 @@
     <jcr:content
         cq:name="forest-trail.jpg"
         cq:parentPath="/content/dam/we-retail/activities/biking"
-        dam:assetID="8c18286d-c218-4efc-aa07-35d846406079"
         dam:relativePath="we-retail/activities/biking/forest-trail.jpg"
         jcr:lastModified="{Date}2016-03-06T22:52:29.185+01:00"
         jcr:lastModifiedBy="admin"

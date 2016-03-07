@@ -7,7 +7,6 @@
     <jcr:content
         cq:name="hiker-himalayas.jpg"
         cq:parentPath="/content/dam/we-retail/activities/hiking-camping"
-        dam:assetID="69b5bec1-6a68-4535-bff0-a219fa6a24d9"
         dam:relativePath="we-retail/activities/hiking-camping/hiker-himalayas.jpg"
         jcr:lastModified="{Date}2016-03-06T22:48:48.323+01:00"
         jcr:lastModifiedBy="admin"
