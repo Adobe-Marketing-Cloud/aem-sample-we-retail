@@ -1,9 +1,13 @@
 <div class="we-Product cq-dd-product-data-reference"
-     data-sly-use.product="product.js">
+     data-sly-use.product="product.js"
+     sku="${ product.baseProduct.SKU }"
+     page-path="${ product.baseProduct.pagePath }">
+
     <we-product-variant
         data-sly-repeat.item="${product.variants}"
         is-base="${itemList.first ? 1 : 0}"
         path="${item.path}"
+        page-path="${item.pagePath}"
         variants="${item.variants}"
         sku="${item.sku}"
         title="${item.title}"
