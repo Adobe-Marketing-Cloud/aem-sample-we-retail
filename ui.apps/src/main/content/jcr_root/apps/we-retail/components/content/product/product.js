@@ -75,14 +75,13 @@ use(["commerce_init.js"], function (commerceInit) {
 
     if (!variants.length) {
         variants.push(baseProductProperties);
-    }
-    else {
+    } else {
         baseProductProperties = variants[0];
     }
     baseProductProperties.productTrackingPath = request.getAttribute("cq.commerce.productTrackingPath");
-    baseProductProperties.pagePath = baseProduct.getPagePath();
 
     product.base = baseProductProperties;
+    product.baseProduct = baseProduct;
     product.variants = variants;
     product.variations = variations;
 
@@ -93,6 +92,7 @@ use(["commerce_init.js"], function (commerceInit) {
     product.redirect = redirect;
     product.errorRedirect = errorRedirect;
     product.addToCartUrl = addToCartUrl;
+    product.resourceType = resource.resourceType;
 
     return product;
 
