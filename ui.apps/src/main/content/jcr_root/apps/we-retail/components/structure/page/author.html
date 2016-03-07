@@ -39,3 +39,6 @@
 </script>
 <!--/* WCM initialization code end */-->
 <sly data-sly-test="${!wcmInit.wcmmode.disabled}" data-sly-call="${clientLib.all @ categories='cq.wcm.foundation-main'}" />
+
+<!--/* Temporary fix for missing CQ.shared on some pages */-->
+<sly data-sly-test="${!wcmInit.wcmmode.disabled && wcmInit.isTouchAuthoring}" data-sly-call="${clientLib.all @ categories='cq.shared'}" />
