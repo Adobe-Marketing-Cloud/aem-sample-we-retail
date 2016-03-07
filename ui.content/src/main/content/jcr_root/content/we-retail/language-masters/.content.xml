@@ -4,9 +4,10 @@
     <jcr:content
         cq:lastModified="{Date}2015-10-12T23:10:09.098+02:00"
         cq:lastModifiedBy="admin"
+        cq:template="/conf/we-retail/settings/wcm/templates/redirect-page"
         jcr:primaryType="cq:PageContent"
         jcr:title="Language Masters"
-        sling:redirect="true"
+        sling:redirect="{Boolean}true"
         sling:redirectStatus="{Long}302"
         sling:resourceType="foundation/components/redirect"
         branding-global-less="/etc/designs/we-retail/global.less"
