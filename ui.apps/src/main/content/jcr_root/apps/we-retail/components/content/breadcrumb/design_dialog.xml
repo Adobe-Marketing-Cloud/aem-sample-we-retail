@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Breadcrumb (Design)"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <absParent
+            jcr:primaryType="nt:unstructured"
+            fieldDescription="(eg: 1 for /content/site)"
+            fieldLabel="Parent Level (absolute)"
+            name="./absParent"
+            xtype="textfield"/>
+        <relParent
+            jcr:primaryType="nt:unstructured"
+            fieldDescription="(eg: 0 for current page)"
+            fieldLabel="Relative stop level"
+            name="./relParent"
+            xtype="textfield"/>
+        <delim
+            jcr:primaryType="nt:unstructured"
+            fieldLabel="Delimiter"
+            name="./delim"
+            xtype="textfield"/>
+        <trail
+            jcr:primaryType="nt:unstructured"
+            fieldLabel="Trailing Delimiter"
+            name="./trail"
+            xtype="textfield"/>
+    </items>
+</jcr:root>
