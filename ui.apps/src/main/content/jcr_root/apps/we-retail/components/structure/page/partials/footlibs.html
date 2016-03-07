@@ -13,9 +13,14 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-use.wcmInit="wcm/foundation/components/page/initwcm.js">
 
-<!--/* Include the site client libraries (loading only the JS in the footer, CSS were loaded in the header) */-->
-<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientlib.js @ categories='we-retail.all'}"/>
+    <!--/* Include the site client libraries (loading only the JS in the footer, CSS were loaded in the header) */-->
+    <sly data-sly-call="${clientlib.js @ categories='we-retail.base'}"/>
+    <sly data-sly-call="${clientLib.js @ categories=wcmInit.templateCategories}" />
 
-<!--/* Initialize Cloud Services */-->
-<sly data-sly-resource="${@ resourceType='cq/cloudserviceconfigs/components/servicecomponents'}"/>
+    <!--/* Initialize Cloud Services */-->
+    <sly data-sly-resource="${@ resourceType='cq/cloudserviceconfigs/components/servicecomponents'}"/>
+</sly>
+
