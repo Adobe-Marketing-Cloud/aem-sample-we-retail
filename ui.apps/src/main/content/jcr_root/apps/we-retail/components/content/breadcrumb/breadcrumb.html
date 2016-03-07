@@ -1,9 +1,13 @@
-<ol class="breadcrumb"
-    data-sly-use.breadcrumb="breadcrumb.js"
-    data-sly-list.listItem="${breadcrumb.crumbs}">
-    <li>
-        <a href="${listItem.trail.path}">${listItem.title}</a>
-    </li>
-    <li class="breadcrumb-delim" data-sly-test="${!listItemList.last && breadcrumb.delim}">${breadcrumb.delim}</li>
-    <li class="breadcrumb-item we-Breadcrumb-trail" data-sly-test="${listItemList.last && breadcrumb.trail}">${breadcrumb.trail}</li>
-</ol>
+<sly data-sly-use.breadcrumb="breadcrumb.js">
+
+    <div data-sly-test="${ wcmmode.edit && !breadcrumb.crumbsList }" class="cq-placeholder" data-emptytext="Breadcrumb"></div>
+
+    <ol class="breadcrumb"
+        data-sly-list.listItem="${breadcrumb.crumbs}">
+        <li>
+            <a href="${listItem.trail.path}">${listItem.title}</a>
+        </li>
+        <li class="breadcrumb-delim" data-sly-test="${!listItemList.last && breadcrumb.delim}">${breadcrumb.delim}</li>
+        <li class="breadcrumb-item we-Breadcrumb-trail" data-sly-test="${listItemList.last && breadcrumb.trail}">${breadcrumb.trail}</li>
+    </ol>
+</sly>
