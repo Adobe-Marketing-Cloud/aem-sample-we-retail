@@ -69,7 +69,7 @@
             </div>
             
             <form class="we-Product-form"
-                  action="${currentPage.path}.commerce.addcartentry.html"
+                  action="${ product.addToCartUrl }"
                   method="POST">
                 <input type="hidden" name="redirect" value="${product.redirect}.html">
                 <input type="hidden" name="redirect-product-not-found" value="${product.errorRedirect}.html"/>
