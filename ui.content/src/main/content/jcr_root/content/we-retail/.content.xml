@@ -3,7 +3,6 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:allowedTemplates="[/conf/we-retail/settings/wcm/templates/.*]"
-        cq:cloudserviceconfigs="[/etc/cloudservices/dynamictagmanagement/we-retail-dtm]"
         cq:designPath="/etc/designs/we-retail"
         cq:lastModified="{Date}2016-02-09T00:05:48.520+01:00"
         cq:lastModifiedBy="admin"
