@@ -8,7 +8,7 @@ use(["commerce_init.js"], function (commerceInit) {
     var commerceSession = commerceService.login(request, response);
     var productPath = currentPage.getProperties().get("cq:productMaster", java.lang.String);
     var baseProduct = commerceService.getProduct(productPath);
-    var redirect, errorRedirect;
+    var redirect, errorRedirect, addToCartUrl;
 
     var baseProductProperties = getProductProperties(baseProduct);
 
@@ -24,8 +24,7 @@ use(["commerce_init.js"], function (commerceInit) {
         sizes: []
     };
 
-    if (request
-            && request.getAttribute) {
+    if (request && request.getAttribute) {
         addToCartUrl = request.getAttribute("cq.commerce.addToCartUrl");
         redirect = request.getAttribute("cq.commerce.redirect");
         errorRedirect = request.getAttribute("cq.commerce.errorRedirect");
@@ -93,6 +92,7 @@ use(["commerce_init.js"], function (commerceInit) {
     product.path = baseProduct.getPath();
     product.redirect = redirect;
     product.errorRedirect = errorRedirect;
+    product.addToCartUrl = addToCartUrl;
 
     return product;
 
