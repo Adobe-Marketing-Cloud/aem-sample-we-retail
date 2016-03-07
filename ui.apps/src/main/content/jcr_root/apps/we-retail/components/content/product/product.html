@@ -155,5 +155,26 @@
         </div>
     </div>
 
+    <script type="text/javascript">
+        (function() {
+            "use strict";
+            if (window.ContextHub && ContextHub.getStore("recentlyviewed")) {
+                ContextHub.getStore("recentlyviewed").record(
+                    "${product.base.pagePath @ context='scriptString'}",
+                    "${product.base.title @ context='scriptString'}",
+                    "${product.base.image @ context='scriptString'}",
+                    "${product.base.price @ context='scriptString'}"
+                );
+            }
+            if (CQ_Analytics && CQ_Analytics.ViewedProducts) {
+                CQ_Analytics.ViewedProducts.record(
+                    "${product.base.pagePath @ context='scriptString'}",
+                    "${product.base.title @ context='scriptString'}",
+                    "${product.base.image @ context='scriptString'}",
+                    "${product.base.price @ context='scriptString'}"
+                );
+            }
+        }).call(this);
+    </script>
 </div>
 <!-- /.we-Product -->

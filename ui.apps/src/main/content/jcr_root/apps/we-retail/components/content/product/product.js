@@ -81,6 +81,7 @@ use(["commerce_init.js"], function (commerceInit) {
         baseProductProperties = variants[0];
     }
     baseProductProperties.productTrackingPath = request.getAttribute("cq.commerce.productTrackingPath");
+    baseProductProperties.pagePath = baseProduct.getPagePath();
 
     product.base = baseProductProperties;
     product.variants = variants;
@@ -100,6 +101,7 @@ use(["commerce_init.js"], function (commerceInit) {
 
         return {
             path: product.getPath(),
+            pagePath: product.getPagePath(),
             variants: product.getVariantAxes(),
             sku: product.getSKU(),
             title: product.getTitle(),
