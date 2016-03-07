@@ -81,15 +81,17 @@ public class Article {
 
 
     public String getImagePath() {
-    	String path = resource.getPath() + ".thumb.319.319.jpg";
-    	
+    	String path = resource.getPath() + ".thumb.319.319.png";
+
     	Resource heroImageResource = resource.getChild(JcrConstants.JCR_CONTENT + "/root/hero_image");
-    	String heroFileReference = heroImageResource.adaptTo(ValueMap.class).get("fileReference", String.class);
-    	
-    	if(heroFileReference != null) {
-    		path = heroFileReference;
-    	}
-    	
+		if (heroImageResource != null) {
+			String heroFileReference = heroImageResource.adaptTo(ValueMap.class).get("fileReference", String.class);
+
+			if (heroFileReference != null) {
+				path = heroFileReference;
+			}
+		}
+
     	Resource thumbnailImageResource = resource.getChild(JcrConstants.JCR_CONTENT + "/image");
 		if (thumbnailImageResource != null) {
 			String thumbnailFileReference = thumbnailImageResource.adaptTo(ValueMap.class).get("fileReference", String.class);
@@ -98,7 +100,7 @@ public class Article {
 				path = thumbnailFileReference;
 			}
 		}
-    	
+		
     	return path;
     }
 
