@@ -22,9 +22,9 @@
 var global = this;
 (function(){
 
-    if (wcm && wcm.currentPage && global.Packages) {
-        var addToCartUrl = wcm.currentPage.path + ".commerce.addcartentry.html";
-        var addToSmartListUrl = wcm.currentPage.path + ".commerce.smartlist.management.html";
+    if (currentPage && global.Packages) {
+        var addToCartUrl = currentPage.path + ".commerce.addcartentry.html";
+        var addToSmartListUrl = currentPage.path + ".commerce.smartlist.management.html";
         var redirect = global.Packages.com.adobe.cq.commerce.common.CommerceHelper.mapPathToCurrentLanguage(global.currentPage, currentStyle.get("addToCartRedirect", ""));
         var errorRedirect = global.Packages.com.adobe.cq.commerce.common.CommerceHelper.mapPathToCurrentLanguage(global.currentPage, currentStyle.get("cartErrorRedirect", ""));
         var smartListRedirect = global.Packages.com.adobe.cq.commerce.common.CommerceHelper.mapPathToCurrentLanguage(global.currentPage,
@@ -38,13 +38,13 @@ var global = this;
             addToCartUrl = request.getAttribute(global.Packages.com.adobe.cq.commerce.api.CommerceConstants.REQ_ATTR_CARTOBJECT) + ".add.html";
         }
         if (redirect == "" || redirect == ".") {
-            redirect = wcm.currentPage.path;
+            redirect = currentPage.path;
         }
         if (errorRedirect == "") {
-            errorRedirect = wcm.currentPage.path;
+            errorRedirect = currentPage.path;
         }
         if (smartListRedirect == "") {
-            smartListRedirect = wcm.currentPage.path;
+            smartListRedirect = currentPage.path;
         }
 
         var baseProduct = null;
