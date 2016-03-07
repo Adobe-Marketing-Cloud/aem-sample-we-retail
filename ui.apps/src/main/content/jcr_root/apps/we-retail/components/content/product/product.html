@@ -16,7 +16,7 @@
         features="${item.features}"
         image="${item.image}"></we-product-variant>
     
-    <div class="row">
+    <div class="row separator separator-lg">
 
         <!--/*
         <div class="col-md-1">
@@ -136,21 +136,13 @@
                             <span class="we-Product-status text-success">In stock</span>
                             */-->
                         </div>
-                        <div class="col-md-8 text-right"> <!-- TODO: add some logic -->
+                        <div class="col-md-8 text-right">
                             <button type="submit" class="btn btn-action btn-primary">Add to cart</button>
                             <a href="#" class="btn btn-icon btn-primary"><i class="we-Icon we-Icon--heart"></i></a>
                         </div>
                     </div>
                 </div>
             </form>
-        </div>
-
-    </div>
-
-    <!--/*
-    <div class="row">
-        <div class="col-md-12">
-            <div data-sly-resource="${'.' @resourceType='we-retail/components/content/social-share'}"></div>
         </div>
     </div>
 
@@ -161,12 +153,7 @@
                 ${product.base.features @context='html'}
             </div>
         </div>
-        <div class="col-md-6">
-            <img src="http://placehold.it/586x330" alt="" class="img-responsive">
-        </div>
     </div>
-    */-->
-
 
 </div>
 <!-- /.we-Product -->
