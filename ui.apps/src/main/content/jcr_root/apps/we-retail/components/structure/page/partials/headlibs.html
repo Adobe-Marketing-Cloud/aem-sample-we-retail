@@ -28,5 +28,8 @@
 <!--/* Initialize the Authoring UI */-->
 <sly data-sly-include="author.html" />
 
+<!--/* Include Context Hub */-->
+<sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}" />
+
 <!--/* Initialize Cloud Services */-->
 <sly data-sly-include="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp" />
