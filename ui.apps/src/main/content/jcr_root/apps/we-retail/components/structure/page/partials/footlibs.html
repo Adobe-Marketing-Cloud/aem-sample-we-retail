@@ -16,6 +16,9 @@
 
 <!--/* Include the site client libraries (loading only the JS in the footer, CSS were loaded in the header) */-->
 <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientlib.js @ categories='we-retail.base'}"/>
+<sly data-sly-use.wcmInit="wcm/foundation/components/page/initwcm.js"
+     data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientLib.js @ categories=wcmInit.templateCategories}" />
 
 <!--/* Initialize Cloud Services */-->
 <sly data-sly-resource="${@ resourceType='cq/cloudserviceconfigs/components/servicecomponents'}"/>
