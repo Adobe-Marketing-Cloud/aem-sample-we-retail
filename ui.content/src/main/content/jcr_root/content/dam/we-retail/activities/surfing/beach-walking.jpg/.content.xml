@@ -7,7 +7,6 @@
     <jcr:content
         cq:name="beach-walking.jpg"
         cq:parentPath="/content/dam/we-retail/activities/surfing"
-        dam:assetID="d5dba0c4-746b-439a-8a53-8c6299efcdbb"
         dam:relativePath="we-retail/activities/surfing/beach-walking.jpg"
         jcr:lastModified="{Date}2016-03-06T22:18:26.394+01:00"
         jcr:lastModifiedBy="admin"

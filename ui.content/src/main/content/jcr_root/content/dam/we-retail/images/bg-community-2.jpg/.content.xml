@@ -7,7 +7,6 @@
     <jcr:content
         cq:name="bg-community-2.jpg"
         cq:parentPath="/content/dam/we-retail/images"
-        dam:assetID="01b27358-f3a6-42f0-8c63-0b4b8bf0e598"
         dam:relativePath="we-retail/images/bg-community-2.jpg"
         jcr:lastModified="{Date}2016-02-29T19:30:02.381+01:00"
         jcr:lastModifiedBy="admin"

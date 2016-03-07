@@ -7,7 +7,6 @@
     <jcr:content
         cq:name="freeride-extreme.jpg"
         cq:parentPath="/content/dam/we-retail/activities/skiing"
-        dam:assetID="207ca4ec-246e-404b-b465-e04638d9bcd4"
         dam:relativePath="we-retail/activities/skiing/freeride-extreme.jpg"
         jcr:lastModified="{Date}2016-03-06T20:36:59.575+01:00"
         jcr:lastModifiedBy="admin"

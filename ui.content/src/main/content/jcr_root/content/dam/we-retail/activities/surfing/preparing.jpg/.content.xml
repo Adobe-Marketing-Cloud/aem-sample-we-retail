@@ -7,8 +7,7 @@
     <jcr:content
         cq:name="preparing.jpg"
         cq:parentPath="/content/dam/we-retail/activities/surfing"
-        dam:assetID="184725fb-e988-4d1c-b8a5-e6fd9720fd0d"
-        dam:relativePath="we-retail/surfing/preparing.jpg"
+        dam:relativePath="we-retail/activities/surfing/preparing.jpg"
         jcr:lastModified="{Date}2016-03-06T18:57:33.108+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">

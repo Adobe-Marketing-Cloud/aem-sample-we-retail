@@ -7,8 +7,7 @@
     <jcr:content
         cq:name="freeride-powder.jpg"
         cq:parentPath="/content/dam/we-retail/activities/skiing"
-        dam:assetID="8e3ba9ed-a4cf-4a97-abb7-32d768fa99b1"
-        dam:relativePath="we-retail/skiing/freeride-powder.jpg"
+        dam:relativePath="we-retail/activities/skiing/freeride-powder.jpg"
         jcr:lastModified="{Date}2016-03-06T20:36:59.684+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">

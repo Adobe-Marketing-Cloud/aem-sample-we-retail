@@ -7,7 +7,6 @@
     <jcr:content
         cq:name="ice-climbing.jpg"
         cq:parentPath="/content/dam/we-retail/activities/skiing"
-        dam:assetID="868c2a49-c1a3-46e7-b606-a962534ba1fc"
         dam:relativePath="we-retail/activities/skiing/ice-climbing.jpg"
         jcr:lastModified="{Date}2016-03-06T22:27:38.563+01:00"
         jcr:lastModifiedBy="admin"

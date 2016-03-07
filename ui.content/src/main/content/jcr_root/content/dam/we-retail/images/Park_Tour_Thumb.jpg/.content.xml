@@ -7,7 +7,6 @@
     <jcr:content
         cq:name="Park_Tour_Thumb.jpg"
         cq:parentPath="/content/dam/we-retail/images"
-        dam:assetID="9b5f60d9-a295-42b5-9a7e-3ddc3ab54f52"
         dam:relativePath="we-retail/images/Park_Tour_Thumb.jpg"
         jcr:lastModified="{Date}2016-02-29T19:30:02.253+01:00"
         jcr:lastModifiedBy="admin"

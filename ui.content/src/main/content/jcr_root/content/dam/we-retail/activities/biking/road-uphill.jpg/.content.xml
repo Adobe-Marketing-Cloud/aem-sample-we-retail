@@ -3,12 +3,10 @@
     jcr:isCheckedOut="{Boolean}true"
     jcr:mixinTypes="[mix:referenceable,mix:versionable]"
     jcr:primaryType="dam:Asset"
-    jcr:uuid="934f8342-17ec-4011-9f91-701191f46461">
+    jcr:uuid="9262fbd8-373c-4640-a353-df1b776085c2">
     <jcr:content
         cq:name="road-uphill.jpg"
         cq:parentPath="/content/dam/we-retail/biking"
-        dam:assetID="934f8342-17ec-4011-9f91-701191f46461"
-        dam:relativePath="we-retail/biking/road-uphill.jpg"
         jcr:lastModified="{Date}2016-03-04T13:33:35.717+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
