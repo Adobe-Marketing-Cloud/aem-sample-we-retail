@@ -23,7 +23,7 @@
 
             // add mobile pagination template
             this.$el.innerHTML += [
-                '<div class="products-grid-mobilePagination" v-if="pages.length > 1">',
+                '<div class="product-grid-mobilePagination" v-if="pages.length > 1">',
                     '<a v-for="index in pages" v-on:click="page = index" :class="{active: (page == index)}">{{ index }}</a>',
                 '</div>'].join('');
         },
@@ -39,7 +39,7 @@
     });
 
     // attach component to all occurances of .products-grid element
-    $('.products-grid').each(function() {
+    $('.product-grid').each(function() {
         new component().$mount(this);
     });
 
