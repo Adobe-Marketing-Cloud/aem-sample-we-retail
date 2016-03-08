@@ -19,7 +19,7 @@
                 <product
                     cq:commerceType="product"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product"/>
+                    sling:resourceType="we-retail/components/structure/product"/>
                 <reviews_section_title
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Reviews"
