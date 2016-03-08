@@ -6,7 +6,6 @@
     <jcr:content
         cq:name="aloha-spirits-in-northern-norway"
         cq:parentPath="/content/dam/we-retail/articles"
-        dam:assetID="985dd492-4077-498e-a06b-bad315002966"
         dam:compoundType="contentFragment"
         dam:relativePath="we-retail/articles/aloha-spirits-in-northern-norway"
         jcr:lastModified="{Date}2016-02-29T19:30:04.211+01:00"

@@ -6,7 +6,6 @@
     <jcr:content
         cq:name="how-to-film-yourself-snowboarding"
         cq:parentPath="/content/dam/we-retail/articles"
-        dam:assetID="5e07fd88-5156-4020-9ed2-ce46f14198dc"
         dam:compoundType="contentFragment"
         dam:relativePath="we-retail/articles/how-to-film-yourself-snowboarding"
         jcr:lastModified="{Date}2016-02-29T19:30:04.054+01:00"

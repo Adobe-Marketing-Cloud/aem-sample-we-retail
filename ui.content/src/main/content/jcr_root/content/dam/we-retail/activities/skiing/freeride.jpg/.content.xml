@@ -6,9 +6,8 @@
     jcr:uuid="d48c27bf-52dd-496e-81f0-010c104b2437">
     <jcr:content
         cq:name="freeride.jpg"
-        cq:parentPath="/content/dam/we-retail/skiing"
-        dam:assetID="d48c27bf-52dd-496e-81f0-010c104b2437"
-        dam:relativePath="we-retail/skiing/freeride.jpg"
+        cq:parentPath="/content/dam/we-retail/activities/skiing"
+        dam:relativePath="we-retail/activities/skiing/freeride.jpg"
         jcr:lastModified="{Date}2016-03-06T20:36:57.376+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">

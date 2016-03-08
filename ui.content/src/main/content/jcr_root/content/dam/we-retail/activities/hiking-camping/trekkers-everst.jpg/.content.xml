@@ -7,8 +7,7 @@
     <jcr:content
         cq:name="trekkers-everst.jpg"
         cq:parentPath="/content/dam/we-retail/activities/hiking-camping"
-        dam:assetID="c14d1646-b2d8-4f53-b248-30a798082a1a"
-        dam:relativePath="we-retail/hiking-camping/trekkers-everst.jpg"
+        dam:relativePath="we-retail/activities/hiking-camping/trekkers-everst.jpg"
         jcr:lastModified="{Date}2016-03-06T20:37:16.014+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">

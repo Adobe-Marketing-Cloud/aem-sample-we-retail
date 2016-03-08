@@ -7,8 +7,7 @@
     <jcr:content
         cq:name="wave-huge.jpg"
         cq:parentPath="/content/dam/we-retail/activities/surfing"
-        dam:assetID="520282c6-3a1a-4b10-a9b2-4ff50ad8c758"
-        dam:relativePath="we-retail/surfing/wave-huge.jpg"
+        dam:relativePath="we-retail/activities/surfing/wave-huge.jpg"
         jcr:lastModified="{Date}2016-03-06T18:52:45.633+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
