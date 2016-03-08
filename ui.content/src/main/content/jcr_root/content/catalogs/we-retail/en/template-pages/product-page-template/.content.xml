@@ -15,7 +15,7 @@
                 sling:resourceType="wcm/foundation/components/responsivegrid">
                 <breadcrumb
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/breadcrumb"/>
+                    sling:resourceType="we-retail/components/structure/breadcrumb"/>
                 <product
                     cq:commerceType="product"
                     jcr:primaryType="nt:unstructured"
@@ -23,14 +23,14 @@
                 <reviews_section_title
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Reviews"
-                    sling:resourceType="we-retail/components/content/section-title"/>
+                    sling:resourceType="we-retail/components/content/title"/>
                 <reviews
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/product-reviews"/>
                 <similar_section_title
                     jcr:primaryType="nt:unstructured"
                     jcr:title="You may also like"
-                    sling:resourceType="we-retail/components/content/section-title"/>
+                    sling:resourceType="we-retail/components/content/title"/>
                 <similar_products
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/product-recommendation"
@@ -42,7 +42,7 @@
                         jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/content-container"
+                        sling:resourceType="we-retail/components/content/layout-container-bg"
                         containerCSSClass="we-FooterSection width-full">
                     <par
                             jcr:primaryType="nt:unstructured"
