@@ -16,6 +16,22 @@
 
 // Server-side JavaScript for the topnav logic
 use(function () {
+	// Checking if the Community area has been setup or not on this instance
+	var communityEnabled = false;
+	var communitySetup = '/bin/SetupCommunities?contentPath=/etc/community/we-retail';
+	var communitySignin = '/content/we-retail/community/en/signin';
+	var communityHome = '/content/we-retail/community/en';
+	var communityBlog = '/content/we-retail/community/en/blog';
+	var communityQA = '/content/we-retail/community/en/questions';
+	var communityRoot = resolver.getResource('/content/we-retail/community');
+	if (communityRoot != null) {
+		communityEnabled = true;
+	} else {
+		communityHome = communitySetup + '&returnURL=' + communityHome + '.html#top';
+		communitySignin = communitySetup + '&returnURL=' + communitySignin + '.html#top';
+		communityBlog = communitySetup + '&returnURL=' + communityBlog + '.html#top';
+		communityQA = communitySetup + '&returnURL=' + communityQA + '.html#top';
+	}
     var items = [];
     var root = currentPage.getAbsoluteParent(3);
     var currentNav = currentPage.getAbsoluteParent(4);
@@ -86,6 +102,11 @@ use(function () {
     var theme = properties.get("theme", "default");
 
     return {
+		communityEnabled: communityEnabled,
+		communityHome: communityHome,
+		communitySignin: communitySignin,
+		communityBlog: communityBlog,
+		communityQA: communityQA,
         items: items,
         theme: theme,
         languageRoot: languageRoot,
