@@ -179,7 +179,7 @@
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Reviews"
-                    sling:resourceType="we-retail/components/content/section-title"/>
+                    sling:resourceType="we-retail/components/content/title"/>
                 <reviews
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
@@ -188,7 +188,7 @@
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="You may also like"
-                    sling:resourceType="we-retail/components/content/section-title"/>
+                    sling:resourceType="we-retail/components/content/title"/>
                 <similar_products
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
