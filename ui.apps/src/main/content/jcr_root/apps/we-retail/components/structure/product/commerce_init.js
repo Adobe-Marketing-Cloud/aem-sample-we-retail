@@ -59,19 +59,24 @@ var global = this;
             baseProduct = resource.adaptTo(global.Packages.com.adobe.cq.commerce.api.Product);
         }
 
-        var productTrackingPath = baseProduct.getProperty("productData", global.Packages.java.lang.String);
-        if (productTrackingPath == null) {
-            productTrackingPath = baseProduct.getPagePath();
+        if (baseProduct) {
+            var productTrackingPath = baseProduct.getProperty("productData", global.Packages.java.lang.String);
+            if (productTrackingPath == null) {
+                productTrackingPath = baseProduct.getPagePath();
+            }
+
+            request.setAttribute("cq.commerce.addToCartUrl", addToCartUrl);
+            request.setAttribute("cq.commerce.addToSmartListUrl", addToSmartListUrl);
+            request.setAttribute("cq.commerce.redirect", redirect);
+            request.setAttribute("cq.commerce.smartListRedirect", smartListRedirect);
+            request.setAttribute("cq.commerce.errorRedirect", errorRedirect);
+            request.setAttribute("cq.commerce.product", baseProduct);
+            request.setAttribute("cq.commerce.productPagePath", baseProduct.getPagePath());
+            request.setAttribute("cq.commerce.productTrackingPath", productTrackingPath);
         }
 
-        request.setAttribute("cq.commerce.addToCartUrl", addToCartUrl);
-        request.setAttribute("cq.commerce.addToSmartListUrl", addToSmartListUrl);
-        request.setAttribute("cq.commerce.redirect", redirect);
-        request.setAttribute("cq.commerce.smartListRedirect", smartListRedirect);
-        request.setAttribute("cq.commerce.errorRedirect", errorRedirect);
-        request.setAttribute("cq.commerce.product", baseProduct);
-        request.setAttribute("cq.commerce.productPagePath", baseProduct.getPagePath());
-        request.setAttribute("cq.commerce.productTrackingPath", productTrackingPath);
+
+
     }
 
     return {
