@@ -35,7 +35,7 @@
                 </responsivegrid>
                 <section_title
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/section-title">
+                    sling:resourceType="we-retail/components/content/title">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
                             jcr:primaryType="nt:unstructured"
