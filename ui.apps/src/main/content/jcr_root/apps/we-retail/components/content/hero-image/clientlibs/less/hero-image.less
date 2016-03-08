@@ -46,12 +46,11 @@
     }
 }
 
-.hero-page .hero-image,
-.article-page .hero-image,
-.experience-page .hero-image {
+// Put hero image under header component if placed below it
+.header ~ .hero-image {
     position: relative;
-    top: -92px;
-    margin-bottom: -92px;
+    top: -1 * @header-height;
+    margin-bottom: -1 * @header-height;
     overflow: visible;
 }
 
