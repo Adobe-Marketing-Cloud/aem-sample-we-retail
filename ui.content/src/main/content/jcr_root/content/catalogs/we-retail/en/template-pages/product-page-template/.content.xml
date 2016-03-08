@@ -23,14 +23,14 @@
                 <reviews_section_title
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Reviews"
-                    sling:resourceType="we-retail/components/content/section-title"/>
+                    sling:resourceType="we-retail/components/content/title"/>
                 <reviews
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/product-reviews"/>
                 <similar_section_title
                     jcr:primaryType="nt:unstructured"
                     jcr:title="You may also like"
-                    sling:resourceType="we-retail/components/content/section-title"/>
+                    sling:resourceType="we-retail/components/content/title"/>
                 <similar_products
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/product-recommendation"
