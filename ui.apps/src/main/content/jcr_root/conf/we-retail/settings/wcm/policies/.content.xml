@@ -159,7 +159,7 @@
                             jcr:primaryType="nt:unstructured"
                             jcr:title="Product Page Breadcrumb"
                             sling:resourceType="wcm/core/components/policy/policy"
-                            absParent="3"
+                            absParent="5"
                             relParent="1"/>
                 </breadcrumb>
             </structure>
