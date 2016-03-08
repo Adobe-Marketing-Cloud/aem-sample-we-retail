@@ -3,4 +3,4 @@
     jcr:primaryType="cq:Component"
     jcr:title="Product"
     sling:resourceSuperType="commerce/components/product_reference"
-    componentGroup="We.Retail"/>
+    componentGroup="We.Retail.Structure"/>
