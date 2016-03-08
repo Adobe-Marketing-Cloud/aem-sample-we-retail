@@ -3,4 +3,4 @@
     jcr:primaryType="cq:Component"
     jcr:title="Product Reviews"
     sling:resourceSuperType="wcm/foundation/components/parbase"
-    componentGroup="We.Retail"/>
+    componentGroup="We.Retail.Structure"/>

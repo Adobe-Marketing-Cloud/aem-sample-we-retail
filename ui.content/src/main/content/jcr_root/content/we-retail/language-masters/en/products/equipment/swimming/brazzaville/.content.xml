@@ -24,7 +24,7 @@
                     jcr:lastModified="{Date}2016-02-25T22:18:55.014+01:00"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product"
+                    sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wm/wmap/wmapbz"
                     variationAxis="color"
                     variationTitle="Color">
@@ -32,7 +32,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/wm/wmap/wmapbz/wmapbz.w/size-s">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.410Z"
@@ -49,7 +49,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/wm/wmap/wmapbz/wmapbz.w/size-m">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.410Z"
@@ -66,7 +66,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/wm/wmap/wmapbz/wmapbz.w/size-l">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.410Z"
@@ -83,7 +83,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/wm/wmap/wmapbz/wmapbz.c/size-s">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.413Z"
@@ -115,7 +115,7 @@
                 <reviews
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product-reviews"/>
+                    sling:resourceType="we-retail/components/structure/product-reviews"/>
                 <similar_section_title
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
@@ -124,7 +124,7 @@
                 <similar_products
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product/recommendation"
+                    sling:resourceType="we-retail/components/structure/product-recommendation"
                     max="6"
                     relationshipType="relatedproducts:info.we-retail.similar-to-current"/>
             </responsivegrid>
