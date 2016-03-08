@@ -5,11 +5,9 @@
         cq:catalogBlueprint="/content/catalogs/we-retail/en/base-catalog/men"
         cq:commerceProvider="geometrixx"
         cq:commerceType="section"
-        cq:lastModified="{Date}2016-03-08T14:48:33.687+01:00"
+        cq:lastModified="{Date}2016-03-08T17:04:26.004+01:00"
         cq:lastModifiedBy="admin"
-        cq:lastPropertyRollout="{Date}2016-02-25T22:18:53.172+01:00"
-        cq:lastRolledout="{Date}2016-03-08T14:48:33.738+01:00"
-        cq:lastRolledoutBy="admin"
+        cq:lastPropertyRollout="{Date}2016-03-08T17:04:26.003+01:00"
         cq:template="/conf/we-retail/settings/wcm/templates/hero-page"
         jcr:language="en"
         jcr:mixinTypes="[cq:LiveSync]"
@@ -17,41 +15,29 @@
         jcr:title="Men"
         sling:resourceType="we-retail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-03-08T14:48:33.710+01:00"
-            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <hero_image
-                cq:lastRolledout="{Date}2016-03-08T14:48:33.725+01:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/hero-image"
                 useFullWidth="true"/>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-03-08T14:48:33.725+01:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
                 <section_title
-                    cq:lastRolledout="{Date}2016-03-08T14:48:33.738+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/title"
                     type="h4"/>
                 <section_title_2
-                    cq:lastRolledout="{Date}2016-03-08T14:48:33.738+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Featured products"
                     sling:resourceType="we-retail/components/content/title"/>
                 <products_grid_1773541649
-                    cq:lastRolledout="{Date}2016-03-08T14:48:33.738+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/product-grid"
