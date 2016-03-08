@@ -22,15 +22,15 @@
                     </cq:responsive>
                     <product_filter0
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product-filter"
+                        sling:resourceType="we-retail/components/structure/product-filter"
                         type="toggle"/>
                     <product_filter1
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product-filter"
+                        sling:resourceType="we-retail/components/structure/product-filter"
                         type="color"/>
                     <product_filter2
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product-filter"
+                        sling:resourceType="we-retail/components/structure/product-filter"
                         type="price"/>
                 </responsivegrid>
                 <section_title
@@ -44,7 +44,7 @@
                 </section_title>
                 <product_filter
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product-filter"
+                    sling:resourceType="we-retail/components/structure/product-filter"
                     type="sort">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
