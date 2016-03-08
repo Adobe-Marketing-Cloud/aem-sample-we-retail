@@ -2,8 +2,10 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-02-25T22:18:54.993+01:00"
+        cq:lastModified="{Date}2016-03-08T14:49:01.713+01:00"
         cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2016-03-08T14:49:01.840+01:00"
+        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/wm/wmap/wmapaw"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -12,15 +14,27 @@
         jcr:title="Abidjan Water"
         sling:resourceType="we-retail/components/structure/page">
         <root
+            cq:lastRolledout="{Date}2016-03-08T14:49:01.736+01:00"
+            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <responsivegrid
+                cq:lastRolledout="{Date}2016-03-08T14:49:01.751+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
+                <breadcrumb
+                    cq:lastRolledout="{Date}2016-03-08T14:49:01.772+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/breadcrumb"/>
                 <product
                     cq:commerceType="product"
+                    cq:lastRolledout="{Date}2016-03-08T14:49:01.773+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2016-02-25T22:18:54.992+01:00"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
@@ -30,157 +44,212 @@
                     variationTitle="Color">
                     <wmapaw_r-s
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:49:01.795+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/wm/wmap/wmapaw/wmapaw.r/size-s">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:49:01.801+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.403Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/swimming/Abidjan Red.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:49:01.801+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </wmapaw_r-s>
                     <wmapaw_r-m
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:49:01.801+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/wm/wmap/wmapaw/wmapaw.r/size-m">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:49:01.807+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.403Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/swimming/Abidjan Red.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:49:01.807+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </wmapaw_r-m>
                     <wmapaw_r-l
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:49:01.808+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/wm/wmap/wmapaw/wmapaw.r/size-l">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:49:01.813+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.403Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/swimming/Abidjan Red.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:49:01.813+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </wmapaw_r-l>
                     <wmapaw_b-s
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:49:01.814+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/wm/wmap/wmapaw/wmapaw.b/size-s">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:49:01.819+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.407Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/swimming/Abidjan Blue.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:49:01.820+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </wmapaw_b-s>
                     <wmapaw_b-m
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:49:01.820+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/wm/wmap/wmapaw/wmapaw.b/size-m">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:49:01.826+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.407Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/swimming/Abidjan Blue.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:49:01.826+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </wmapaw_b-m>
                     <wmapaw_b-l
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:49:01.826+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/wm/wmap/wmapaw/wmapaw.b/size-l">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:49:01.832+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.407Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/swimming/Abidjan Blue.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:49:01.832+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </wmapaw_b-l>
                     <image
+                        cq:lastRolledout="{Date}2016-03-08T14:49:01.832+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.403Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/swimming/Abidjan Red.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-08T14:49:01.833+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product/assets"/>
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
                 </product>
                 <reviews_section_title
+                    cq:lastRolledout="{Date}2016-03-08T14:49:01.833+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Reviews"
                     sling:resourceType="we-retail/components/content/title"/>
                 <reviews
+                    cq:lastRolledout="{Date}2016-03-08T14:49:01.833+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product-reviews"/>
                 <similar_section_title
+                    cq:lastRolledout="{Date}2016-03-08T14:49:01.833+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="You may also like"
                     sling:resourceType="we-retail/components/content/title"/>
                 <similar_products
+                    cq:lastRolledout="{Date}2016-03-08T14:49:01.833+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product-recommendation"
                     max="6"
                     relationshipType="relatedproducts:info.we-retail.similar-to-current"/>
+                <footer_content_container
+                    cq:lastRolledout="{Date}2016-03-08T14:49:01.834+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/layout-container-bg"
+                    containerCSSClass="we-FooterSection width-full">
+                    <par
+                        cq:lastRolledout="{Date}2016-03-08T14:49:01.837+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:mixinTypes="[cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <find_store
+                            cq:lastRolledout="{Date}2016-03-08T14:49:01.840+01:00"
+                            cq:lastRolledoutBy="admin"
+                            jcr:mixinTypes="[cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="we-retail/components/content/find-store"/>
+                    </par>
+                </footer_content_container>
             </responsivegrid>
         </root>
-        <cq:responsive
-            jcr:mixinTypes="[cq:LiveRelationship]"
-            jcr:primaryType="nt:unstructured">
-            <breakpoints
-                jcr:mixinTypes="[cq:LiveRelationship]"
-                jcr:primaryType="nt:unstructured">
-                <phone
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    title="Phone"
-                    width="{Decimal}650"/>
-                <tablet
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    title="Tablet"
-                    width="{Decimal}1200"/>
-            </breakpoints>
-        </cq:responsive>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"
             cq:master="/content/catalogs/we-retail/en/template-pages/product-page-template"

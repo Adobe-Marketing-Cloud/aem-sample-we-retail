@@ -2,8 +2,10 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-02-25T22:18:54.729+01:00"
+        cq:lastModified="{Date}2016-03-08T14:48:58.422+01:00"
         cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2016-03-08T14:48:58.515+01:00"
+        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/eq/eqwn/eqwnmt"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -12,15 +14,27 @@
         jcr:title="Mont Tremblant"
         sling:resourceType="we-retail/components/structure/page">
         <root
+            cq:lastRolledout="{Date}2016-03-08T14:48:58.446+01:00"
+            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <responsivegrid
+                cq:lastRolledout="{Date}2016-03-08T14:48:58.452+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
+                <breadcrumb
+                    cq:lastRolledout="{Date}2016-03-08T14:48:58.472+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/breadcrumb"/>
                 <product
                     cq:commerceType="product"
+                    cq:lastRolledout="{Date}2016-03-08T14:48:58.473+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2016-02-25T22:18:54.728+01:00"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
@@ -28,106 +42,143 @@
                     productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnmt">
                     <eqwnmt-s
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:58.487+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnmt/size-s">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:58.493+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.384Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/gloves/Mont Tremblant.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:58.494+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqwnmt-s>
                     <eqwnmt-m
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:58.494+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnmt/size-m">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:58.500+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.384Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/gloves/Mont Tremblant.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:58.500+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqwnmt-m>
                     <eqwnmt-l
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:58.500+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnmt/size-l">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:58.507+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.384Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/gloves/Mont Tremblant.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:58.507+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqwnmt-l>
                     <image
+                        cq:lastRolledout="{Date}2016-03-08T14:48:58.507+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.384Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/gloves/Mont Tremblant.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-08T14:48:58.507+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product/assets"/>
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
                 </product>
                 <reviews_section_title
+                    cq:lastRolledout="{Date}2016-03-08T14:48:58.508+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Reviews"
                     sling:resourceType="we-retail/components/content/title"/>
                 <reviews
+                    cq:lastRolledout="{Date}2016-03-08T14:48:58.508+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product-reviews"/>
                 <similar_section_title
+                    cq:lastRolledout="{Date}2016-03-08T14:48:58.508+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="You may also like"
                     sling:resourceType="we-retail/components/content/title"/>
                 <similar_products
+                    cq:lastRolledout="{Date}2016-03-08T14:48:58.508+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product-recommendation"
                     max="6"
                     relationshipType="relatedproducts:info.we-retail.similar-to-current"/>
+                <footer_content_container
+                    cq:lastRolledout="{Date}2016-03-08T14:48:58.508+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/layout-container-bg"
+                    containerCSSClass="we-FooterSection width-full">
+                    <par
+                        cq:lastRolledout="{Date}2016-03-08T14:48:58.512+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:mixinTypes="[cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <find_store
+                            cq:lastRolledout="{Date}2016-03-08T14:48:58.515+01:00"
+                            cq:lastRolledoutBy="admin"
+                            jcr:mixinTypes="[cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="we-retail/components/content/find-store"/>
+                    </par>
+                </footer_content_container>
             </responsivegrid>
         </root>
-        <cq:responsive
-            jcr:mixinTypes="[cq:LiveRelationship]"
-            jcr:primaryType="nt:unstructured">
-            <breakpoints
-                jcr:mixinTypes="[cq:LiveRelationship]"
-                jcr:primaryType="nt:unstructured">
-                <phone
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    title="Phone"
-                    width="{Decimal}650"/>
-                <tablet
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    title="Tablet"
-                    width="{Decimal}1200"/>
-            </breakpoints>
-        </cq:responsive>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"
             cq:master="/content/catalogs/we-retail/en/template-pages/product-page-template"
