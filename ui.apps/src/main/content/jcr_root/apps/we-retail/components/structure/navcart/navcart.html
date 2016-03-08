@@ -3,7 +3,7 @@
 
     <a class="we-Cart-button"
        href="#"
-       v-on:click="toggle"><i class="fa fa-shopping-cart"></i> My cart <span class="badge active">${ cart.entries.length }</span>
+       v-on:click="toggle"><i class="fa fa-shopping-cart"></i> My cart <span class="badge active" data-sly-test="${ cart.entries.length > 0 }">${ cart.entries.length }</span>
     </a>
 
     <cart-content inline-template>
