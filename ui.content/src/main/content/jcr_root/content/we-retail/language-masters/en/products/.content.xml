@@ -32,13 +32,13 @@
                 <section_title
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/section-title"
+                    sling:resourceType="we-retail/components/content/title"
                     type="h4"/>
                 <section_title_2
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Featured products"
-                    sling:resourceType="we-retail/components/content/section-title"/>
+                    sling:resourceType="we-retail/components/content/title"/>
                 <products_grid_1773541649
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"

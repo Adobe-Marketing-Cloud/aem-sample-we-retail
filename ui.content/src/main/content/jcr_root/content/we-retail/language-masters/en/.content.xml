@@ -40,7 +40,7 @@
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Fight the cold with the world's finest gear"
-                    sling:resourceType="we-retail/components/content/section-title"/>
+                    sling:resourceType="we-retail/components/content/title"/>
                 <category_teaser
                     jcr:created="{Date}2015-11-03T23:52:30.703+01:00"
                     jcr:createdBy="admin"
@@ -162,7 +162,7 @@
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Featured products"
-                    sling:resourceType="we-retail/components/content/section-title"/>
+                    sling:resourceType="we-retail/components/content/title"/>
                 <products_grid
                     jcr:created="{Date}2015-11-03T23:39:56.441+01:00"
                     jcr:createdBy="admin"
@@ -186,7 +186,7 @@
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="The latest on We.Retail"
-                    sling:resourceType="we-retail/components/content/section-title"/>
+                    sling:resourceType="we-retail/components/content/title"/>
                 <articles_list
                     jcr:created="{Date}2015-11-23T21:44:37.256+01:00"
                     jcr:createdBy="admin"
@@ -218,7 +218,7 @@
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="New arrivals"
-                    sling:resourceType="we-retail/components/content/section-title"/>
+                    sling:resourceType="we-retail/components/content/title"/>
                 <products_grid_1773541649
                     jcr:created="{Date}2015-11-04T00:51:55.043+01:00"
                     jcr:createdBy="admin"
@@ -241,7 +241,7 @@
                     jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/content-container"
+                    sling:resourceType="we-retail/components/content/layout-container-bg"
                     containerCSSClass="we-CommunitySection width-full"
                     fileReference="/content/dam/we-retail/images/bg-community-section.jpg">
                     <par
@@ -254,7 +254,7 @@
                             jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
                             jcr:title="Discover our community"
-                            sling:resourceType="we-retail/components/content/section-title"/>
+                            sling:resourceType="we-retail/components/content/title"/>
                         <community_teaser
                             jcr:created="{Date}2015-11-09T22:48:13.875+01:00"
                             jcr:createdBy="admin"
@@ -325,7 +325,7 @@
                         jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/content-container"
+                        sling:resourceType="we-retail/components/content/layout-container-bg"
                         containerCSSClass="we-FooterSection width-full">
                     <par
                         jcr:primaryType="nt:unstructured"
