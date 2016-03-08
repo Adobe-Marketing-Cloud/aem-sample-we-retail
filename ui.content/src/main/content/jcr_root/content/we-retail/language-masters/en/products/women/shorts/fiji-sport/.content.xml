@@ -192,7 +192,7 @@
                 <similar_products
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product/recommendation"
+                    sling:resourceType="we-retail/components/structure/product-recommendation"
                     max="6"
                     relationshipType="relatedproducts:info.we-retail.similar-to-current"/>
             </responsivegrid>
