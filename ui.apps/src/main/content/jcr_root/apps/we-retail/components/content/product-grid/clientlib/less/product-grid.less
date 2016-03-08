@@ -10,7 +10,6 @@
     .foundation-list-item {
         .list-unstyled;
         .make-md-column(2);
-        //.make-xs-column(6);
 
         &:nth-of-type(6n+1) {
             clear: left;
@@ -69,24 +68,24 @@
 
 //== Mobile pagination
 @media (max-width: @screen-sm-max) {
-    .products-grid {
+    .product-grid {
 
         max-width: 100vw;
         overflow: hidden;
 
         .foundation-ordered-list-container {
-                left: 0;
-                width: 9999em;
-                overflow: hidden;
-                position: relative;
+            left: 0;
+            width: 9999em;
+            overflow: hidden;
+            position: relative;
 
-                transition: left .25s;
+            transition: left .25s;
         }
 
         .foundation-list-item {
-                width: 50vw;
-                float: left;
-                display: block;
+            width: 50vw;
+            float: left;
+            display: block;
         }
 
         .generate-mobile-pagination(2, 5);
