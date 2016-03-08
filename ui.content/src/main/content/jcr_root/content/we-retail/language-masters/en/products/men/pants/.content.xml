@@ -35,17 +35,17 @@
                     <product_filter0
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product-filter"
+                        sling:resourceType="we-retail/components/structure/product-filter"
                         type="toggle"/>
                     <product_filter1
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product-filter"
+                        sling:resourceType="we-retail/components/structure/product-filter"
                         type="color"/>
                     <product_filter2
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product-filter"
+                        sling:resourceType="we-retail/components/structure/product-filter"
                         type="price"/>
                 </responsivegrid>
                 <section_title
@@ -64,7 +64,7 @@
                 <product_filter
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product-filter"
+                    sling:resourceType="we-retail/components/structure/product-filter"
                     type="sort">
                     <cq:responsive
                         jcr:mixinTypes="[cq:LiveRelationship]"
