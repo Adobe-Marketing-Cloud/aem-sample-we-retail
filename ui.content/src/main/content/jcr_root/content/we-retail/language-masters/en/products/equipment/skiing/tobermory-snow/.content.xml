@@ -24,13 +24,13 @@
                     jcr:lastModified="{Date}2016-02-25T22:18:54.522+01:00"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product"
+                    sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb">
                     <eqwntb-7
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-7">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
@@ -47,7 +47,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-7_5">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
@@ -64,7 +64,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-8">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
@@ -81,7 +81,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-8_5">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
@@ -98,7 +98,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-9">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
@@ -115,7 +115,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-9_5">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
@@ -132,7 +132,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-10">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
@@ -149,7 +149,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-10_5">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
@@ -166,7 +166,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-11">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
@@ -183,7 +183,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-11_5">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
@@ -200,7 +200,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-12">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
@@ -217,7 +217,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-13">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"

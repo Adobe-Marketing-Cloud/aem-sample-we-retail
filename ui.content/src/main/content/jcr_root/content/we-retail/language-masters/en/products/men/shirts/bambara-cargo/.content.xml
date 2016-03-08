@@ -24,13 +24,13 @@
                     jcr:lastModified="{Date}2016-02-25T22:18:53.381+01:00"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product"
+                    sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/mn/mnap/mnapbc">
                     <mnapbc-xs
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/mn/mnap/mnapbc/size-xs">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.423Z"
@@ -47,7 +47,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/mn/mnap/mnapbc/size-s">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.423Z"
@@ -64,7 +64,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/mn/mnap/mnapbc/size-m">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.423Z"
@@ -81,7 +81,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/mn/mnap/mnapbc/size-l">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.423Z"
@@ -98,7 +98,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/mn/mnap/mnapbc/size-xl">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.423Z"
@@ -115,7 +115,7 @@
                         cq:commerceType="variant"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
+                        sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/mn/mnap/mnapbc/size-xxl">
                         <image
                             jcr:lastModified="{Date}2015-01-26T12:28:08.423Z"
