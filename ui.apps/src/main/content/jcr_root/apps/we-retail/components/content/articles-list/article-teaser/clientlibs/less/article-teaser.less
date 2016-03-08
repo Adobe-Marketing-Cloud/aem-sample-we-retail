@@ -45,7 +45,7 @@
         }
 
         @media (min-width: @screen-md-min) {
-            padding: @padding-large-horizontal @padding-large-horizontal;
+            padding: @padding-large-vertical @padding-base-horizontal;
         }
 
     }
@@ -68,6 +68,10 @@
         color: #fff;
 
         text-transform: uppercase;
+
+        @media (min-width: @screen-md-min) {
+            margin-left: @padding-base-horizontal;
+        }
     }
 
     &-date {
