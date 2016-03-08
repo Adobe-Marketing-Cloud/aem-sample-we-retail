@@ -241,7 +241,7 @@
                     jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/content-container"
+                    sling:resourceType="we-retail/components/content/layout-container-bg"
                     containerCSSClass="we-CommunitySection width-full"
                     fileReference="/content/dam/we-retail/images/bg-community-section.jpg">
                     <par
@@ -325,7 +325,7 @@
                         jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/content-container"
+                        sling:resourceType="we-retail/components/content/layout-container-bg"
                         containerCSSClass="we-FooterSection width-full">
                     <par
                         jcr:primaryType="nt:unstructured"
