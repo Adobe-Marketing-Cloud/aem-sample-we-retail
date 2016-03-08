@@ -19,7 +19,7 @@ use(function () {
 	// Checking if the Community area has been setup or not on this instance
 	var communityEnabled = false;
 	var communitySetup = '/bin/SetupCommunities?contentPath=/etc/community/we-retail';
-	var communitySignin = '/content/we-retail/community/en/signin';
+	var communitySignin = '/content/we-retail/community/en/signin/j_security_check';
 	var communityHome = '/content/we-retail/community/en';
 	var communityBlog = '/content/we-retail/community/en/blog';
 	var communityQA = '/content/we-retail/community/en/questions';
@@ -28,7 +28,7 @@ use(function () {
 		communityEnabled = true;
 	} else {
 		communityHome = communitySetup + '&returnURL=' + communityHome + '.html#top';
-		communitySignin = communitySetup + '&returnURL=' + communitySignin + '.html#top';
+		communitySignin = communitySetup + '.html#top';
 		communityBlog = communitySetup + '&returnURL=' + communityBlog + '.html#top';
 		communityQA = communitySetup + '&returnURL=' + communityQA + '.html#top';
 	}
@@ -107,7 +107,8 @@ use(function () {
 		communitySignin: communitySignin,
 		communityBlog: communityBlog,
 		communityQA: communityQA,
-        items: items,
+		currentPath: currentPage.getPath(),
+		items: items,
         theme: theme,
         languageRoot: languageRoot,
         languages: languages,
