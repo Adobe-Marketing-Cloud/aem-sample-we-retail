@@ -78,7 +78,7 @@
                     return this.colorVariants[this.product.color] > 1 || Object.keys(this.colorVariants).length === 0;
                 },
                 trackView: function() {
-                    if (window.ContextHub && ContextHub.getStore("recentlyviewed")) {
+                    if (this.product && window.ContextHub && ContextHub.getStore("recentlyviewed")) {
                         ContextHub.getStore("recentlyviewed").record(
                             this.pagePath,
                             this.product.title,
@@ -87,7 +87,7 @@
                         );
                     }
 
-                    if (window.CQ_Analytics && CQ_Analytics.ViewedProducts) {
+                    if (this.product && window.CQ_Analytics && CQ_Analytics.ViewedProducts) {
                         CQ_Analytics.ViewedProducts.record(
                             this.pagePath,
                             this.product.title,
