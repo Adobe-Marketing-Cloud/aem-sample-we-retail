@@ -8,7 +8,7 @@
         cq:name="alpinists-mer-de-glace.jpg"
         cq:parentPath="/content/dam/we-retail/activities/hiking-camping"
         dam:relativePath="we-retail/activities/hiking-camping/alpinists-mer-de-glace.jpg"
-        jcr:lastModified="{Date}2016-03-06T22:42:46.504+01:00"
+        jcr:lastModified="{Date}2016-03-09T00:50:40.146+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -34,7 +34,7 @@
             exif:ExifVersion="0221"
             exif:PixelXDimension="{Long}2880"
             exif:PixelYDimension="{Long}1920"
-            jcr:lastModified="{Date}2016-03-06T22:42:46.446+01:00"
+            jcr:lastModified="{Date}2016-03-09T00:50:39.404+01:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
@@ -52,10 +52,10 @@
             tiff:YResolution="300"
             xmp:CreateDate="{Date}2016-02-10T11:59:03.000+01:00"
             xmp:CreatorTool="Adobe Photoshop CC 2015"
-            xmp:MetadataDate="{Date}2016-03-04T12:38:46.000+01:00"
-            xmp:ModifyDate="{Date}2016-03-04T12:38:46.000+01:00"
-            xmpMM:DocumentID="adobe:docid:photoshop:1472b9e6-228c-1179-9fe2-dd6814746362"
-            xmpMM:InstanceID="xmp.iid:e5da1341-415e-4d6b-aaf0-10ad4192d620"
+            xmp:MetadataDate="{Date}2016-03-08T23:50:02.000+01:00"
+            xmp:ModifyDate="{Date}2016-03-08T23:50:02.000+01:00"
+            xmpMM:DocumentID="adobe:docid:photoshop:84dda120-260e-1179-a410-b2db021fd2b8"
+            xmpMM:InstanceID="xmp.iid:c933f5b8-5321-4afe-b23d-e31af63f3a58"
             xmpMM:OriginalDocumentID="5168A50755FC2E4DE7208DF31B25540C">
             <xmpMM:History
                 jcr:primaryType="nt:unstructured"
@@ -66,17 +66,17 @@
                     jcr:primaryType="nt:unstructured"
                     stEvt:action="saved"
                     stEvt:changed="/"
-                    stEvt:instanceID="xmp.iid:71b25d51-a257-4841-822a-54c070cd4f4d"
+                    stEvt:instanceID="xmp.iid:b16b0a8e-fb2e-46b4-9da0-bc61fb974799"
                     stEvt:softwareAgent="Adobe Photoshop CC 2015"
-                    stEvt:when="{Date}2016-03-04T12:38:46.000+01:00"
+                    stEvt:when="{Date}2016-03-08T23:50:02.000+01:00"
                     xmpNodeType="xmpStruct"/>
                 <_x0032_
                     jcr:primaryType="nt:unstructured"
                     stEvt:action="saved"
                     stEvt:changed="/"
-                    stEvt:instanceID="xmp.iid:e5da1341-415e-4d6b-aaf0-10ad4192d620"
+                    stEvt:instanceID="xmp.iid:c933f5b8-5321-4afe-b23d-e31af63f3a58"
                     stEvt:softwareAgent="Adobe Photoshop CC 2015"
-                    stEvt:when="{Date}2016-03-04T12:38:46.000+01:00"
+                    stEvt:when="{Date}2016-03-08T23:50:02.000+01:00"
                     xmpNodeType="xmpStruct"/>
             </xmpMM:History>
         </metadata>

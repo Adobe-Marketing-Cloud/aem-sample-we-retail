@@ -8,7 +8,7 @@
         cq:name="cross-jump.jpg"
         cq:parentPath="/content/dam/we-retail/activities/biking"
         dam:relativePath="we-retail/activities/biking/cross-jump.jpg"
-        jcr:lastModified="{Date}2016-03-06T20:36:37.110+01:00"
+        jcr:lastModified="{Date}2016-03-09T00:50:50.478+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -19,7 +19,7 @@
             dam:Numberofimages="{Long}1"
             dam:Numberoftextualcomments="{Long}0"
             dam:Physicalheightindpi="{Long}300"
-            dam:Physicalheightininches="{Decimal}7.199999809265137"
+            dam:Physicalheightininches="{Decimal}6.400000095367432"
             dam:Physicalwidthindpi="{Long}300"
             dam:Physicalwidthininches="{Decimal}9.600000381469727"
             dam:Progressive="no"
@@ -33,8 +33,8 @@
             exif:ExifOffset="{Long}236"
             exif:ExifVersion="0221"
             exif:PixelXDimension="{Long}2880"
-            exif:PixelYDimension="{Long}2160"
-            jcr:lastModified="{Date}2016-03-04T14:42:51.920+01:00"
+            exif:PixelYDimension="{Long}1920"
+            jcr:lastModified="{Date}2016-03-09T00:50:50.312+01:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
@@ -42,7 +42,7 @@
             photoshop:ColorMode="{Long}3"
             tiff:BitsPerSample="[8,8,8,8,8,8]"
             tiff:BitsPerSample_xmpArrayType="rdf:Seq"
-            tiff:ImageLength="{Long}2160"
+            tiff:ImageLength="{Long}1920"
             tiff:ImageWidth="{Long}2880"
             tiff:Orientation="{Long}1"
             tiff:PhotometricInterpretation="{Long}2"
@@ -52,10 +52,10 @@
             tiff:YResolution="300"
             xmp:CreateDate="{Date}2016-02-09T17:01:21.000+01:00"
             xmp:CreatorTool="Adobe Photoshop CC 2015"
-            xmp:MetadataDate="{Date}2016-03-04T12:38:32.000+01:00"
-            xmp:ModifyDate="{Date}2016-03-04T12:38:32.000+01:00"
-            xmpMM:DocumentID="adobe:docid:photoshop:0c836014-228c-1179-9fe2-dd6814746362"
-            xmpMM:InstanceID="xmp.iid:69520962-5342-481f-9bb0-fe0192ff2e05"
+            xmp:MetadataDate="{Date}2016-03-08T23:49:33.000+01:00"
+            xmp:ModifyDate="{Date}2016-03-08T23:49:33.000+01:00"
+            xmpMM:DocumentID="adobe:docid:photoshop:73c507a2-260e-1179-a410-b2db021fd2b8"
+            xmpMM:InstanceID="xmp.iid:4d7e9332-3de6-4e83-8de0-65898c3d36d0"
             xmpMM:OriginalDocumentID="F665ED95C7ADC4ED27A020F6F1A7B3F5">
             <xmpMM:History
                 jcr:primaryType="nt:unstructured"
@@ -66,17 +66,17 @@
                     jcr:primaryType="nt:unstructured"
                     stEvt:action="saved"
                     stEvt:changed="/"
-                    stEvt:instanceID="xmp.iid:811c0fe2-221a-461f-a241-c56f574b0e00"
+                    stEvt:instanceID="xmp.iid:91204350-de9a-4e9a-98d7-fc249cd542e7"
                     stEvt:softwareAgent="Adobe Photoshop CC 2015"
-                    stEvt:when="{Date}2016-03-04T12:38:32.000+01:00"
+                    stEvt:when="{Date}2016-03-08T23:49:33.000+01:00"
                     xmpNodeType="xmpStruct"/>
                 <_x0032_
                     jcr:primaryType="nt:unstructured"
                     stEvt:action="saved"
                     stEvt:changed="/"
-                    stEvt:instanceID="xmp.iid:69520962-5342-481f-9bb0-fe0192ff2e05"
+                    stEvt:instanceID="xmp.iid:4d7e9332-3de6-4e83-8de0-65898c3d36d0"
                     stEvt:softwareAgent="Adobe Photoshop CC 2015"
-                    stEvt:when="{Date}2016-03-04T12:38:32.000+01:00"
+                    stEvt:when="{Date}2016-03-08T23:49:33.000+01:00"
                     xmpNodeType="xmpStruct"/>
             </xmpMM:History>
         </metadata>
