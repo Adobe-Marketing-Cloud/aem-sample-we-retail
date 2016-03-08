@@ -2,10 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-03-08T14:48:58.134+01:00"
+        cq:lastModified="{Date}2016-03-08T17:04:26.838+01:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-03-08T14:48:58.247+01:00"
-        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/eq/eqwn/eqwnwh"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -14,193 +12,142 @@
         jcr:title="Whistler Snow"
         sling:resourceType="we-retail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-03-08T14:48:58.156+01:00"
-            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
-            <responsivegrid
-                cq:lastRolledout="{Date}2016-03-08T14:48:58.173+01:00"
-                cq:lastRolledoutBy="admin"
+            <breadcrumb
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid">
-                <breadcrumb
-                    cq:lastRolledout="{Date}2016-03-08T14:48:58.193+01:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/breadcrumb"/>
-                <product
-                    cq:commerceType="product"
-                    cq:lastRolledout="{Date}2016-03-08T14:48:58.194+01:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:lastModified="{Date}2016-02-25T22:18:54.707+01:00"
+                sling:resourceType="we-retail/components/structure/breadcrumb"/>
+            <product
+                cq:commerceType="product"
+                jcr:lastModified="{Date}2016-03-08T17:04:26.838+01:00"
+                jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/structure/product"
+                productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnwh">
+                <eqwnwh-130cm
+                    cq:commerceType="variant"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnwh">
-                    <eqwnwh-130cm
-                        cq:commerceType="variant"
-                        cq:lastRolledout="{Date}2016-03-08T14:48:58.211+01:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product"
-                        productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnwh/size-130cm">
-                        <image
-                            cq:lastRolledout="{Date}2016-03-08T14:48:58.217+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.391Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/equipment/Whistler.jpg"/>
-                        <assets
-                            cq:lastRolledout="{Date}2016-03-08T14:48:58.217+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/structure/product/assets"/>
-                    </eqwnwh-130cm>
-                    <eqwnwh-140cm
-                        cq:commerceType="variant"
-                        cq:lastRolledout="{Date}2016-03-08T14:48:58.218+01:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product"
-                        productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnwh/size-140cm">
-                        <image
-                            cq:lastRolledout="{Date}2016-03-08T14:48:58.226+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.391Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/equipment/Whistler.jpg"/>
-                        <assets
-                            cq:lastRolledout="{Date}2016-03-08T14:48:58.226+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/structure/product/assets"/>
-                    </eqwnwh-140cm>
-                    <eqwnwh-150cm
-                        cq:commerceType="variant"
-                        cq:lastRolledout="{Date}2016-03-08T14:48:58.226+01:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product"
-                        productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnwh/size-150cm">
-                        <image
-                            cq:lastRolledout="{Date}2016-03-08T14:48:58.232+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.391Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/equipment/Whistler.jpg"/>
-                        <assets
-                            cq:lastRolledout="{Date}2016-03-08T14:48:58.232+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/structure/product/assets"/>
-                    </eqwnwh-150cm>
-                    <eqwnwh-160cm
-                        cq:commerceType="variant"
-                        cq:lastRolledout="{Date}2016-03-08T14:48:58.233+01:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product"
-                        productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnwh/size-160cm">
-                        <image
-                            cq:lastRolledout="{Date}2016-03-08T14:48:58.239+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.391Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/equipment/Whistler.jpg"/>
-                        <assets
-                            cq:lastRolledout="{Date}2016-03-08T14:48:58.239+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/structure/product/assets"/>
-                    </eqwnwh-160cm>
+                    productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnwh/size-130cm">
                     <image
-                        cq:lastRolledout="{Date}2016-03-08T14:48:58.239+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.391Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/equipment/Whistler.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-08T14:48:58.239+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
-                </product>
-                <reviews_section_title
-                    cq:lastRolledout="{Date}2016-03-08T14:48:58.240+01:00"
-                    cq:lastRolledoutBy="admin"
+                </eqwnwh-130cm>
+                <eqwnwh-140cm
+                    cq:commerceType="variant"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnwh/size-140cm">
+                    <image
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.391Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/equipment/Whistler.jpg"/>
+                    <assets
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </eqwnwh-140cm>
+                <eqwnwh-150cm
+                    cq:commerceType="variant"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnwh/size-150cm">
+                    <image
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.391Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/equipment/Whistler.jpg"/>
+                    <assets
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </eqwnwh-150cm>
+                <eqwnwh-160cm
+                    cq:commerceType="variant"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnwh/size-160cm">
+                    <image
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.391Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/equipment/Whistler.jpg"/>
+                    <assets
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </eqwnwh-160cm>
+                <image
+                    jcr:lastModified="{Date}2015-01-26T12:28:08.391Z"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="commerce/components/product/image"
+                    fileReference="/content/dam/geometrixx-outdoors/products/equipment/Whistler.jpg"/>
+                <assets
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product/assets"/>
+            </product>
+            <responsivegrid
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+            <reviews_section_title
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Reviews"
+                sling:resourceType="we-retail/components/content/title"/>
+            <reviews
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/structure/product-reviews"/>
+            <similar_section_title
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="You may also like"
+                sling:resourceType="we-retail/components/content/title"/>
+            <similar_products
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/structure/product-recommendation"
+                max="6"
+                relationshipType="relatedproducts:info.we-retail.similar-to-current"/>
+            <footer_content_container
+                jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/layout-container-bg"
+                containerCSSClass="we-FooterSection width-full">
+                <par
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    jcr:title="Reviews"
-                    sling:resourceType="we-retail/components/content/title"/>
-                <reviews
-                    cq:lastRolledout="{Date}2016-03-08T14:48:58.240+01:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product-reviews"/>
-                <similar_section_title
-                    cq:lastRolledout="{Date}2016-03-08T14:48:58.240+01:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    jcr:title="You may also like"
-                    sling:resourceType="we-retail/components/content/title"/>
-                <similar_products
-                    cq:lastRolledout="{Date}2016-03-08T14:48:58.240+01:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product-recommendation"
-                    max="6"
-                    relationshipType="relatedproducts:info.we-retail.similar-to-current"/>
-                <footer_content_container
-                    cq:lastRolledout="{Date}2016-03-08T14:48:58.240+01:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/layout-container-bg"
-                    containerCSSClass="we-FooterSection width-full">
-                    <par
-                        cq:lastRolledout="{Date}2016-03-08T14:48:58.244+01:00"
-                        cq:lastRolledoutBy="admin"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <find_store
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="wcm/foundation/components/responsivegrid">
-                        <find_store
-                            cq:lastRolledout="{Date}2016-03-08T14:48:58.247+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/find-store"/>
-                    </par>
-                </footer_content_container>
-            </responsivegrid>
+                        sling:resourceType="we-retail/components/content/find-store"/>
+                </par>
+            </footer_content_container>
         </root>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"
