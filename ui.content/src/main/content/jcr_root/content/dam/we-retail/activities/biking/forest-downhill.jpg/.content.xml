@@ -7,7 +7,6 @@
     <jcr:content
         cq:name="forest-downhill.jpg"
         cq:parentPath="/content/dam/we-retail/activities/biking"
-        dam:assetID="fcce371f-0e87-4900-a60e-50ac83019884"
         dam:relativePath="we-retail/activities/biking/forest-downhill.jpg"
         jcr:lastModified="{Date}2016-03-06T22:53:24.106+01:00"
         jcr:lastModifiedBy="admin"

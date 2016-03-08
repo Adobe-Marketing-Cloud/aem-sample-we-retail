@@ -6,7 +6,6 @@
     <jcr:content
         cq:name="tanner-halls-redemption-road"
         cq:parentPath="/content/dam/we-retail/articles"
-        dam:assetID="aaid:d64bf66fde144fe3bdcb2e9c86890ed8"
         dam:compoundType="contentFragment"
         dam:relativePath="we-retail/articles/tanner-halls-redemption-road"
         jcr:lastModified="{Date}2016-02-29T19:30:01.851+01:00"

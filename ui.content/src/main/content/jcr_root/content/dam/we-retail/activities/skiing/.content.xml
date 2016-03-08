@@ -4,7 +4,6 @@
     <jcr:content
         cq:lastModified="{Date}2016-03-04T13:35:11.408+01:00"
         cq:lastModifiedBy="admin"
-        dam:relativePath="we-retail/activities/skiing"
         jcr:primaryType="nt:unstructured"
         jcr:title="Skiing"/>
 </jcr:root>

@@ -7,7 +7,6 @@
     <jcr:content
         cq:name="mountain-biking.jpg"
         cq:parentPath="/content/dam/we-retail/activities/biking"
-        dam:assetID="3ecd0448-4b54-4238-b865-dd909ef879b9"
         dam:relativePath="we-retail/activities/biking/mountain-biking.jpg"
         jcr:lastModified="{Date}2016-03-06T22:53:39.838+01:00"
         jcr:lastModifiedBy="admin"

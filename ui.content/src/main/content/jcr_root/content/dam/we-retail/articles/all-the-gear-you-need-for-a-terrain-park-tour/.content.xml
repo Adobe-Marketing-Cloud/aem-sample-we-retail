@@ -6,7 +6,6 @@
     <jcr:content
         cq:name="all-the-gear-you-need-for-a-terrain-park-tour"
         cq:parentPath="/content/dam/we-retail/articles"
-        dam:assetID="708c2d1a-c761-4a06-896c-400de979da7e"
         dam:compoundType="contentFragment"
         dam:relativePath="we-retail/articles/all-the-gear-you-need-for-a-terrain-park-tour"
         jcr:description=""

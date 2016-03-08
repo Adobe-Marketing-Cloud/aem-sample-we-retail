@@ -6,8 +6,7 @@
     jcr:uuid="5372f9ed-5ce0-4ca6-8459-b0eaebc7877b">
     <jcr:content
         cq:name="cross-jump.jpg"
-        cq:parentPath="/content/dam/we-retail/biking"
-        dam:assetID="5372f9ed-5ce0-4ca6-8459-b0eaebc7877b"
+        cq:parentPath="/content/dam/we-retail/activities/biking"
         dam:relativePath="we-retail/activities/biking/cross-jump.jpg"
         jcr:lastModified="{Date}2016-03-06T20:36:37.110+01:00"
         jcr:lastModifiedBy="admin"
