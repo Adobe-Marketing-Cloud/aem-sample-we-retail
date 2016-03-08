@@ -22,7 +22,7 @@
         features="${item.features}"
         image="${item.image}"></we-product-variant>
     
-    <div class="row separator separator-lg">
+    <div class="row" data-sly-test="${ product.variants && product.base }">
 
         <!--/*
         <div class="col-md-1">
