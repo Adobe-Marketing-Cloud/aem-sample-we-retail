@@ -2,10 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-03-08T14:48:41.193+01:00"
+        cq:lastModified="{Date}2016-03-08T17:04:26.292+01:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-03-08T14:48:41.394+01:00"
-        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/wm/wmap/wmappl"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -14,333 +12,246 @@
         jcr:title="Palau Summer"
         sling:resourceType="we-retail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-03-08T14:48:41.242+01:00"
-            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
-            <responsivegrid
-                cq:lastRolledout="{Date}2016-03-08T14:48:41.245+01:00"
-                cq:lastRolledoutBy="admin"
+            <breadcrumb
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid">
-                <breadcrumb
-                    cq:lastRolledout="{Date}2016-03-08T14:48:41.266+01:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/breadcrumb"/>
-                <product
-                    cq:commerceType="product"
-                    cq:lastRolledout="{Date}2016-03-08T14:48:41.268+01:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:lastModified="{Date}2016-02-25T22:18:53.763+01:00"
+                sling:resourceType="we-retail/components/structure/breadcrumb"/>
+            <product
+                cq:commerceType="product"
+                jcr:lastModified="{Date}2016-03-08T17:04:26.291+01:00"
+                jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/structure/product"
+                productData="/etc/commerce/products/we-retail/wm/wmap/wmappl"
+                variationAxis="color"
+                variationTitle="Color">
+                <wmappl_1-xs
+                    cq:commerceType="variant"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wm/wmap/wmappl"
-                    variationAxis="color"
-                    variationTitle="Color">
-                    <wmappl_1-xs
-                        cq:commerceType="variant"
-                        cq:lastRolledout="{Date}2016-03-08T14:48:41.308+01:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.1/size-xs">
-                        <image
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.315+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.464Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Red.jpg"/>
-                        <assets
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.315+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/structure/product/assets"/>
-                    </wmappl_1-xs>
-                    <wmappl_1-s
-                        cq:commerceType="variant"
-                        cq:lastRolledout="{Date}2016-03-08T14:48:41.315+01:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.1/size-s">
-                        <image
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.322+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.464Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Red.jpg"/>
-                        <assets
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.323+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/structure/product/assets"/>
-                    </wmappl_1-s>
-                    <wmappl_1-m
-                        cq:commerceType="variant"
-                        cq:lastRolledout="{Date}2016-03-08T14:48:41.323+01:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.1/size-m">
-                        <image
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.332+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.464Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Red.jpg"/>
-                        <assets
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.332+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/structure/product/assets"/>
-                    </wmappl_1-m>
-                    <wmappl_1-l
-                        cq:commerceType="variant"
-                        cq:lastRolledout="{Date}2016-03-08T14:48:41.332+01:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.1/size-l">
-                        <image
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.339+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.464Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Red.jpg"/>
-                        <assets
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.339+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/structure/product/assets"/>
-                    </wmappl_1-l>
-                    <wmappl_1-xl
-                        cq:commerceType="variant"
-                        cq:lastRolledout="{Date}2016-03-08T14:48:41.340+01:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.1/size-xl">
-                        <image
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.347+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.464Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Red.jpg"/>
-                        <assets
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.347+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/structure/product/assets"/>
-                    </wmappl_1-xl>
-                    <wmappl_2-xs
-                        cq:commerceType="variant"
-                        cq:lastRolledout="{Date}2016-03-08T14:48:41.347+01:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.2/size-xs">
-                        <image
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.354+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.467Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Black.jpg"/>
-                        <assets
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.354+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/structure/product/assets"/>
-                    </wmappl_2-xs>
-                    <wmappl_2-s
-                        cq:commerceType="variant"
-                        cq:lastRolledout="{Date}2016-03-08T14:48:41.355+01:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.2/size-s">
-                        <image
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.362+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.467Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Black.jpg"/>
-                        <assets
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.362+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/structure/product/assets"/>
-                    </wmappl_2-s>
-                    <wmappl_2-m
-                        cq:commerceType="variant"
-                        cq:lastRolledout="{Date}2016-03-08T14:48:41.363+01:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.2/size-m">
-                        <image
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.369+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.467Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Black.jpg"/>
-                        <assets
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.369+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/structure/product/assets"/>
-                    </wmappl_2-m>
-                    <wmappl_2-l
-                        cq:commerceType="variant"
-                        cq:lastRolledout="{Date}2016-03-08T14:48:41.369+01:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.2/size-l">
-                        <image
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.376+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.467Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Black.jpg"/>
-                        <assets
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.377+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/structure/product/assets"/>
-                    </wmappl_2-l>
-                    <wmappl_2-xl
-                        cq:commerceType="variant"
-                        cq:lastRolledout="{Date}2016-03-08T14:48:41.377+01:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.2/size-xl">
-                        <image
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.384+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.467Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Black.jpg"/>
-                        <assets
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.385+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/structure/product/assets"/>
-                    </wmappl_2-xl>
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.1/size-xs">
                     <image
-                        cq:lastRolledout="{Date}2016-03-08T14:48:41.385+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.464Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Red.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-08T14:48:41.385+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
-                </product>
-                <reviews_section_title
-                    cq:lastRolledout="{Date}2016-03-08T14:48:41.385+01:00"
-                    cq:lastRolledoutBy="admin"
+                </wmappl_1-xs>
+                <wmappl_1-s
+                    cq:commerceType="variant"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.1/size-s">
+                    <image
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.464Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Red.jpg"/>
+                    <assets
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmappl_1-s>
+                <wmappl_1-m
+                    cq:commerceType="variant"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.1/size-m">
+                    <image
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.464Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Red.jpg"/>
+                    <assets
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmappl_1-m>
+                <wmappl_1-l
+                    cq:commerceType="variant"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.1/size-l">
+                    <image
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.464Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Red.jpg"/>
+                    <assets
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmappl_1-l>
+                <wmappl_1-xl
+                    cq:commerceType="variant"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.1/size-xl">
+                    <image
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.464Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Red.jpg"/>
+                    <assets
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmappl_1-xl>
+                <wmappl_2-xs
+                    cq:commerceType="variant"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.2/size-xs">
+                    <image
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.467Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Black.jpg"/>
+                    <assets
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmappl_2-xs>
+                <wmappl_2-s
+                    cq:commerceType="variant"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.2/size-s">
+                    <image
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.467Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Black.jpg"/>
+                    <assets
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmappl_2-s>
+                <wmappl_2-m
+                    cq:commerceType="variant"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.2/size-m">
+                    <image
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.467Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Black.jpg"/>
+                    <assets
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmappl_2-m>
+                <wmappl_2-l
+                    cq:commerceType="variant"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.2/size-l">
+                    <image
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.467Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Black.jpg"/>
+                    <assets
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmappl_2-l>
+                <wmappl_2-xl
+                    cq:commerceType="variant"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmappl/wmappl.2/size-xl">
+                    <image
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.467Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Black.jpg"/>
+                    <assets
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmappl_2-xl>
+                <image
+                    jcr:lastModified="{Date}2015-01-26T12:28:08.464Z"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="commerce/components/product/image"
+                    fileReference="/content/dam/geometrixx-outdoors/products/shirt/Palau Red.jpg"/>
+                <assets
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product/assets"/>
+            </product>
+            <responsivegrid
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+            <reviews_section_title
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Reviews"
+                sling:resourceType="we-retail/components/content/title"/>
+            <reviews
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/structure/product-reviews"/>
+            <similar_section_title
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="You may also like"
+                sling:resourceType="we-retail/components/content/title"/>
+            <similar_products
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/structure/product-recommendation"
+                max="6"
+                relationshipType="relatedproducts:info.we-retail.similar-to-current"/>
+            <footer_content_container
+                jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/layout-container-bg"
+                containerCSSClass="we-FooterSection width-full">
+                <par
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    jcr:title="Reviews"
-                    sling:resourceType="we-retail/components/content/title"/>
-                <reviews
-                    cq:lastRolledout="{Date}2016-03-08T14:48:41.385+01:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product-reviews"/>
-                <similar_section_title
-                    cq:lastRolledout="{Date}2016-03-08T14:48:41.386+01:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    jcr:title="You may also like"
-                    sling:resourceType="we-retail/components/content/title"/>
-                <similar_products
-                    cq:lastRolledout="{Date}2016-03-08T14:48:41.386+01:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product-recommendation"
-                    max="6"
-                    relationshipType="relatedproducts:info.we-retail.similar-to-current"/>
-                <footer_content_container
-                    cq:lastRolledout="{Date}2016-03-08T14:48:41.386+01:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/layout-container-bg"
-                    containerCSSClass="we-FooterSection width-full">
-                    <par
-                        cq:lastRolledout="{Date}2016-03-08T14:48:41.389+01:00"
-                        cq:lastRolledoutBy="admin"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <find_store
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="wcm/foundation/components/responsivegrid">
-                        <find_store
-                            cq:lastRolledout="{Date}2016-03-08T14:48:41.393+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/find-store"/>
-                    </par>
-                </footer_content_container>
-            </responsivegrid>
+                        sling:resourceType="we-retail/components/content/find-store"/>
+                </par>
+            </footer_content_container>
         </root>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"
