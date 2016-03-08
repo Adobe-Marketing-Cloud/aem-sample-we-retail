@@ -10,6 +10,7 @@ use(["commerce_init.js"], function (commerceInit) {
     var baseProduct = commerceService.getProduct(productPath);
     var redirect, errorRedirect, addToCartUrl;
     var variants = [];
+    var baseProductImagePath;
 
     if (baseProduct) {
         var baseProductProperties = getProductProperties(baseProduct);
@@ -101,7 +102,11 @@ use(["commerce_init.js"], function (commerceInit) {
         if (!product) {
             return null;
         }
-        var productImage = resolver.getResource(product.getImage().getPath());
+        var productImage;
+        var image = product.getImage()
+        if (image) {
+            productImage = resolver.getResource(image.getPath());
+        }
 
         return {
             path: product.getPath(),
