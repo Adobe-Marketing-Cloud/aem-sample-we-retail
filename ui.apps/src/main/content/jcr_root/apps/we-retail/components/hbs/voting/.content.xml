@@ -3,4 +3,4 @@
     jcr:primaryType="cq:Component"
     jcr:title="Voting"
     sling:resourceSuperType="social/tally/components/hbs/voting"
-    componentGroup="We.Retail"/>
+    componentGroup=".hidden"/>
