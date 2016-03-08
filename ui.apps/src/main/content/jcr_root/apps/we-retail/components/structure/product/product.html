@@ -3,6 +3,8 @@
      sku="${ product.baseProduct.SKU }"
      page-path="${ product.baseProduct.pagePath }">
 
+    <div data-sly-test="${ wcmmode.edit && !product.variants && !product.base }" class="cq-placeholder" data-emptytext="Product Component"></div>
+
     <we-product-variant
         data-sly-repeat.item="${product.variants}"
         is-base="${itemList.first ? 1 : 0}"
