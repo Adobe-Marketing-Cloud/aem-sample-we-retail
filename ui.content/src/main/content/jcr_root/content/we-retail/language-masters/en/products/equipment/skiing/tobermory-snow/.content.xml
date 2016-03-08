@@ -2,8 +2,10 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-02-25T22:18:54.523+01:00"
+        cq:lastModified="{Date}2016-03-08T14:48:55.646+01:00"
         cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2016-03-08T14:48:55.919+01:00"
+        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/eq/eqwn/eqwntb"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -12,15 +14,27 @@
         jcr:title="Tobermory Snow"
         sling:resourceType="we-retail/components/structure/page">
         <root
+            cq:lastRolledout="{Date}2016-03-08T14:48:55.690+01:00"
+            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <responsivegrid
+                cq:lastRolledout="{Date}2016-03-08T14:48:55.694+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
+                <breadcrumb
+                    cq:lastRolledout="{Date}2016-03-08T14:48:55.726+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/breadcrumb"/>
                 <product
                     cq:commerceType="product"
+                    cq:lastRolledout="{Date}2016-03-08T14:48:55.727+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2016-02-25T22:18:54.522+01:00"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
@@ -28,259 +42,350 @@
                     productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb">
                     <eqwntb-7
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:55.782+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-7">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.790+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Tobermory.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.790+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqwntb-7>
                     <eqwntb-7_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:55.791+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-7_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.798+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Tobermory.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.799+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqwntb-7_5>
                     <eqwntb-8
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:55.799+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-8">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.807+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Tobermory.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.807+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqwntb-8>
                     <eqwntb-8_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:55.808+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-8_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.817+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Tobermory.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.818+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqwntb-8_5>
                     <eqwntb-9
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:55.818+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-9">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.829+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Tobermory.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.830+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqwntb-9>
                     <eqwntb-9_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:55.830+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-9_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.839+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Tobermory.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.840+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqwntb-9_5>
                     <eqwntb-10
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:55.840+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-10">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.849+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Tobermory.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.849+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqwntb-10>
                     <eqwntb-10_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:55.850+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-10_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.873+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Tobermory.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.873+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqwntb-10_5>
                     <eqwntb-11
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:55.874+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-11">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.883+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Tobermory.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.884+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqwntb-11>
                     <eqwntb-11_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:55.884+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-11_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.893+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Tobermory.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.893+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqwntb-11_5>
                     <eqwntb-12
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:55.893+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-12">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.901+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Tobermory.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.901+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqwntb-12>
                     <eqwntb-13
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:55.901+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqwn/eqwntb/size-13">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.909+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Tobermory.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.909+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqwntb-13>
                     <image
+                        cq:lastRolledout="{Date}2016-03-08T14:48:55.909+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.386Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Tobermory.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-08T14:48:55.910+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product/assets"/>
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
                 </product>
                 <reviews_section_title
+                    cq:lastRolledout="{Date}2016-03-08T14:48:55.910+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Reviews"
                     sling:resourceType="we-retail/components/content/title"/>
                 <reviews
+                    cq:lastRolledout="{Date}2016-03-08T14:48:55.910+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product-reviews"/>
                 <similar_section_title
+                    cq:lastRolledout="{Date}2016-03-08T14:48:55.910+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="You may also like"
                     sling:resourceType="we-retail/components/content/title"/>
                 <similar_products
+                    cq:lastRolledout="{Date}2016-03-08T14:48:55.911+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product-recommendation"
                     max="6"
                     relationshipType="relatedproducts:info.we-retail.similar-to-current"/>
+                <footer_content_container
+                    cq:lastRolledout="{Date}2016-03-08T14:48:55.911+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/layout-container-bg"
+                    containerCSSClass="we-FooterSection width-full">
+                    <par
+                        cq:lastRolledout="{Date}2016-03-08T14:48:55.915+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:mixinTypes="[cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <find_store
+                            cq:lastRolledout="{Date}2016-03-08T14:48:55.918+01:00"
+                            cq:lastRolledoutBy="admin"
+                            jcr:mixinTypes="[cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="we-retail/components/content/find-store"/>
+                    </par>
+                </footer_content_container>
             </responsivegrid>
         </root>
-        <cq:responsive
-            jcr:mixinTypes="[cq:LiveRelationship]"
-            jcr:primaryType="nt:unstructured">
-            <breakpoints
-                jcr:mixinTypes="[cq:LiveRelationship]"
-                jcr:primaryType="nt:unstructured">
-                <phone
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    title="Phone"
-                    width="{Decimal}650"/>
-                <tablet
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    title="Tablet"
-                    width="{Decimal}1200"/>
-            </breakpoints>
-        </cq:responsive>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"
             cq:master="/content/catalogs/we-retail/en/template-pages/product-page-template"

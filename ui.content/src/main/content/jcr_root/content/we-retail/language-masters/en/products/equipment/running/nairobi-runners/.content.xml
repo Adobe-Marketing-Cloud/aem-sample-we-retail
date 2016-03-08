@@ -2,8 +2,10 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-02-25T22:18:54.411+01:00"
+        cq:lastModified="{Date}2016-03-08T14:48:52.568+01:00"
         cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2016-03-08T14:48:53.248+01:00"
+        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -12,15 +14,27 @@
         jcr:title="Nairobi Runners"
         sling:resourceType="we-retail/components/structure/page">
         <root
+            cq:lastRolledout="{Date}2016-03-08T14:48:52.627+01:00"
+            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <responsivegrid
+                cq:lastRolledout="{Date}2016-03-08T14:48:52.631+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
+                <breadcrumb
+                    cq:lastRolledout="{Date}2016-03-08T14:48:52.657+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/breadcrumb"/>
                 <product
                     cq:commerceType="product"
+                    cq:lastRolledout="{Date}2016-03-08T14:48:52.658+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2016-02-25T22:18:54.410+01:00"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
@@ -30,684 +44,925 @@
                     variationTitle="Color">
                     <eqsmnr_b-7
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:52.807+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.b/size-7">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.818+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.349Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Blue.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.818+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_b-7>
                     <eqsmnr_b-7_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:52.819+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.b/size-7_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.828+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.349Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Blue.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.829+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_b-7_5>
                     <eqsmnr_b-8
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:52.829+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.b/size-8">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.838+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.349Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Blue.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.838+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_b-8>
                     <eqsmnr_b-8_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:52.838+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.b/size-8_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.847+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.349Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Blue.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.847+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_b-8_5>
                     <eqsmnr_b-9
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:52.848+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.b/size-9">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.883+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.349Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Blue.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.884+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_b-9>
                     <eqsmnr_b-9_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:52.884+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.b/size-9_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.893+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.349Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Blue.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.893+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_b-9_5>
                     <eqsmnr_b-10
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:52.893+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.b/size-10">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.904+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.349Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Blue.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.904+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_b-10>
                     <eqsmnr_b-10_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:52.905+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.b/size-10_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.915+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.349Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Blue.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.916+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_b-10_5>
                     <eqsmnr_b-11
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:52.916+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.b/size-11">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.928+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.349Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Blue.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.928+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_b-11>
                     <eqsmnr_b-11_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:52.929+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.b/size-11_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.938+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.349Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Blue.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.938+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_b-11_5>
                     <eqsmnr_b-12
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:52.939+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.b/size-12">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.946+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.349Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Blue.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.947+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_b-12>
                     <eqsmnr_b-13
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:52.947+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.b/size-13">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.956+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.349Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Blue.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.956+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_b-13>
                     <eqsmnr_g-7
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:52.956+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.g/size-7">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.965+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.355Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Green.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.965+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_g-7>
                     <eqsmnr_g-7_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:52.966+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.g/size-7_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.983+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.355Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Green.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.984+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_g-7_5>
                     <eqsmnr_g-8
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:52.984+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.g/size-8">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.993+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.355Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Green.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:52.994+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_g-8>
                     <eqsmnr_g-8_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:52.994+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.g/size-8_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.003+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.355Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Green.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.004+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_g-8_5>
                     <eqsmnr_g-9
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.004+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.g/size-9">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.015+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.355Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Green.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.016+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_g-9>
                     <eqsmnr_g-9_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.016+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.g/size-9_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.028+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.355Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Green.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.028+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_g-9_5>
                     <eqsmnr_g-10
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.028+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.g/size-10">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.038+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.355Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Green.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.038+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_g-10>
                     <eqsmnr_g-10_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.039+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.g/size-10_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.050+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.355Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Green.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.050+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_g-10_5>
                     <eqsmnr_g-11
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.050+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.g/size-11">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.059+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.355Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Green.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.060+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_g-11>
                     <eqsmnr_g-11_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.060+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.g/size-11_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.070+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.355Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Green.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.070+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_g-11_5>
                     <eqsmnr_g-12
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.070+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.g/size-12">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.079+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.355Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Green.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.079+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_g-12>
                     <eqsmnr_g-13
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.079+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.g/size-13">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.087+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.355Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Green.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.088+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_g-13>
                     <eqsmnr_p-5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.088+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.p/size-5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.095+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.361Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Pink.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.095+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_p-5>
                     <eqsmnr_p-5_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.096+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.p/size-5_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.103+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.361Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Pink.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.103+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_p-5_5>
                     <eqsmnr_p-6
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.104+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.p/size-6">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.111+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.361Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Pink.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.111+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_p-6>
                     <eqsmnr_p-6_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.111+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.p/size-6_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.121+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.361Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Pink.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.122+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_p-6_5>
                     <eqsmnr_p-7
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.122+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.p/size-7">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.133+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.361Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Pink.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.134+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_p-7>
                     <eqsmnr_p-7_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.134+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.p/size-7_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.153+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.361Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Pink.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.154+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_p-7_5>
                     <eqsmnr_p-8
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.154+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.p/size-8">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.160+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.361Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Pink.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.160+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_p-8>
                     <eqsmnr_p-8_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.161+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.p/size-8_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.169+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.361Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Pink.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.169+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_p-8_5>
                     <eqsmnr_p-9
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.170+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.p/size-9">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.176+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.361Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Pink.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.177+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_p-9>
                     <eqsmnr_p-9_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.177+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.p/size-9_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.199+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.361Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Pink.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.200+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_p-9_5>
                     <eqsmnr_p-10
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.200+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.p/size-10">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.207+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.361Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Pink.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.208+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_p-10>
                     <eqsmnr_p-10_5
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.208+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.p/size-10_5">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.215+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.361Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Pink.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.215+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_p-10_5>
                     <eqsmnr_p-11
                         cq:commerceType="variant"
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.215+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product"
                         productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmnr/eqsmnr.p/size-11">
                         <image
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.226+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2015-01-26T12:28:08.361Z"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="commerce/components/product/image"
                             fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Pink.jpg"/>
                         <assets
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.227+01:00"
+                            cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
+                            sling:resourceType="we-retail/components/structure/product/assets"/>
                     </eqsmnr_p-11>
                     <image
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.227+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.349Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Nairobi Blue.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.228+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product/assets"/>
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
                 </product>
                 <reviews_section_title
+                    cq:lastRolledout="{Date}2016-03-08T14:48:53.229+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Reviews"
                     sling:resourceType="we-retail/components/content/title"/>
                 <reviews
+                    cq:lastRolledout="{Date}2016-03-08T14:48:53.229+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product-reviews"/>
                 <similar_section_title
+                    cq:lastRolledout="{Date}2016-03-08T14:48:53.232+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="You may also like"
                     sling:resourceType="we-retail/components/content/title"/>
                 <similar_products
+                    cq:lastRolledout="{Date}2016-03-08T14:48:53.233+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product-recommendation"
                     max="6"
                     relationshipType="relatedproducts:info.we-retail.similar-to-current"/>
+                <footer_content_container
+                    cq:lastRolledout="{Date}2016-03-08T14:48:53.234+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/layout-container-bg"
+                    containerCSSClass="we-FooterSection width-full">
+                    <par
+                        cq:lastRolledout="{Date}2016-03-08T14:48:53.241+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:mixinTypes="[cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <find_store
+                            cq:lastRolledout="{Date}2016-03-08T14:48:53.247+01:00"
+                            cq:lastRolledoutBy="admin"
+                            jcr:mixinTypes="[cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="we-retail/components/content/find-store"/>
+                    </par>
+                </footer_content_container>
             </responsivegrid>
         </root>
-        <cq:responsive
-            jcr:mixinTypes="[cq:LiveRelationship]"
-            jcr:primaryType="nt:unstructured">
-            <breakpoints
-                jcr:mixinTypes="[cq:LiveRelationship]"
-                jcr:primaryType="nt:unstructured">
-                <phone
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    title="Phone"
-                    width="{Decimal}650"/>
-                <tablet
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    title="Tablet"
-                    width="{Decimal}1200"/>
-            </breakpoints>
-        </cq:responsive>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"
             cq:master="/content/catalogs/we-retail/en/template-pages/product-page-template"

@@ -6,9 +6,11 @@
         cq:commerceProvider="geometrixx"
         cq:commerceType="section"
         cq:designPath="/etc/designs/we-retail"
-        cq:lastModified="{Date}2016-02-25T22:19:54.168+01:00"
+        cq:lastModified="{Date}2016-03-08T14:48:33.552+01:00"
         cq:lastModifiedBy="admin"
-        cq:lastPropertyRollout="{Date}2016-02-25T22:18:53.153+01:00"
+        cq:lastPropertyRollout="{Date}2016-03-08T14:48:33.552+01:00"
+        cq:lastRolledout="{Date}2016-03-08T14:48:33.598+01:00"
+        cq:lastRolledoutBy="admin"
         cq:template="/conf/we-retail/settings/wcm/templates/hero-page"
         jcr:language="en"
         jcr:mixinTypes="[cq:LiveSync]"
@@ -17,29 +19,41 @@
         sling:resourceType="we-retail/components/structure/page"
         pageTitle="We.Retail">
         <root
+            cq:lastRolledout="{Date}2016-03-08T14:48:33.568+01:00"
+            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <hero_image
+                cq:lastRolledout="{Date}2016-03-08T14:48:33.582+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/hero-image"
                 useFullWidth="true"/>
             <responsivegrid
+                cq:lastRolledout="{Date}2016-03-08T14:48:33.582+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
                 <section_title
+                    cq:lastRolledout="{Date}2016-03-08T14:48:33.597+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/title"
                     type="h4"/>
                 <section_title_2
+                    cq:lastRolledout="{Date}2016-03-08T14:48:33.597+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Featured products"
                     sling:resourceType="we-retail/components/content/title"/>
                 <products_grid_1773541649
+                    cq:lastRolledout="{Date}2016-03-08T14:48:33.598+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/product-grid"
@@ -53,24 +67,6 @@
                     pages="[/content/we-retail/language-masters/en/products/equipment/skiing/banff-snow,/content/we-retail/language-masters/en/products/seasonal/winter/apparel/hats/montreal-snow,/content/we-retail/language-masters/en/products/equipment/skiing/calgary-winter,/content/we-retail/language-masters/en/products/women/coats/saskatoon-parka,/content/we-retail/language-masters/en/products/equipment/skiing/tobermory-snow,/content/we-retail/language-masters/en/products/equipment/skiing/mont-tremblant]"/>
             </responsivegrid>
         </root>
-        <cq:responsive
-            jcr:mixinTypes="[cq:LiveRelationship]"
-            jcr:primaryType="nt:unstructured">
-            <breakpoints
-                jcr:mixinTypes="[cq:LiveRelationship]"
-                jcr:primaryType="nt:unstructured">
-                <phone
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    title="Phone"
-                    width="{Decimal}650"/>
-                <tablet
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    title="Tablet"
-                    width="{Decimal}1200"/>
-            </breakpoints>
-        </cq:responsive>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"
             cq:master="/content/catalogs/we-retail/en/template-pages/catalog-page-template"
