@@ -2,10 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-03-08T14:48:40.555+01:00"
+        cq:lastModified="{Date}2016-03-08T17:04:26.273+01:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-03-08T14:48:40.698+01:00"
-        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/wm/wmap/wmapmm"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -14,216 +12,159 @@
         jcr:title="Maui Marine"
         sling:resourceType="we-retail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-03-08T14:48:40.597+01:00"
-            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
-            <responsivegrid
-                cq:lastRolledout="{Date}2016-03-08T14:48:40.601+01:00"
-                cq:lastRolledoutBy="admin"
+            <breadcrumb
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid">
-                <breadcrumb
-                    cq:lastRolledout="{Date}2016-03-08T14:48:40.626+01:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/breadcrumb"/>
-                <product
-                    cq:commerceType="product"
-                    cq:lastRolledout="{Date}2016-03-08T14:48:40.627+01:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:lastModified="{Date}2016-02-25T22:18:53.727+01:00"
+                sling:resourceType="we-retail/components/structure/breadcrumb"/>
+            <product
+                cq:commerceType="product"
+                jcr:lastModified="{Date}2016-03-08T17:04:26.273+01:00"
+                jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/structure/product"
+                productData="/etc/commerce/products/we-retail/wm/wmap/wmapmm">
+                <wmapmm-xs
+                    cq:commerceType="variant"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wm/wmap/wmapmm">
-                    <wmapmm-xs
-                        cq:commerceType="variant"
-                        cq:lastRolledout="{Date}2016-03-08T14:48:40.650+01:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapmm/size-xs">
-                        <image
-                            cq:lastRolledout="{Date}2016-03-08T14:48:40.658+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.461Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shirt/Maui.jpg"/>
-                        <assets
-                            cq:lastRolledout="{Date}2016-03-08T14:48:40.658+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/structure/product/assets"/>
-                    </wmapmm-xs>
-                    <wmapmm-s
-                        cq:commerceType="variant"
-                        cq:lastRolledout="{Date}2016-03-08T14:48:40.658+01:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapmm/size-s">
-                        <image
-                            cq:lastRolledout="{Date}2016-03-08T14:48:40.665+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.461Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shirt/Maui.jpg"/>
-                        <assets
-                            cq:lastRolledout="{Date}2016-03-08T14:48:40.665+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/structure/product/assets"/>
-                    </wmapmm-s>
-                    <wmapmm-m
-                        cq:commerceType="variant"
-                        cq:lastRolledout="{Date}2016-03-08T14:48:40.666+01:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapmm/size-m">
-                        <image
-                            cq:lastRolledout="{Date}2016-03-08T14:48:40.672+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.461Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shirt/Maui.jpg"/>
-                        <assets
-                            cq:lastRolledout="{Date}2016-03-08T14:48:40.672+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/structure/product/assets"/>
-                    </wmapmm-m>
-                    <wmapmm-l
-                        cq:commerceType="variant"
-                        cq:lastRolledout="{Date}2016-03-08T14:48:40.673+01:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapmm/size-l">
-                        <image
-                            cq:lastRolledout="{Date}2016-03-08T14:48:40.679+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.461Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shirt/Maui.jpg"/>
-                        <assets
-                            cq:lastRolledout="{Date}2016-03-08T14:48:40.679+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/structure/product/assets"/>
-                    </wmapmm-l>
-                    <wmapmm-xl
-                        cq:commerceType="variant"
-                        cq:lastRolledout="{Date}2016-03-08T14:48:40.680+01:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapmm/size-xl">
-                        <image
-                            cq:lastRolledout="{Date}2016-03-08T14:48:40.686+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.461Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shirt/Maui.jpg"/>
-                        <assets
-                            cq:lastRolledout="{Date}2016-03-08T14:48:40.686+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/structure/product/assets"/>
-                    </wmapmm-xl>
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmapmm/size-xs">
                     <image
-                        cq:lastRolledout="{Date}2016-03-08T14:48:40.687+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.461Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/shirt/Maui.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-08T14:48:40.687+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
-                </product>
-                <reviews_section_title
-                    cq:lastRolledout="{Date}2016-03-08T14:48:40.687+01:00"
-                    cq:lastRolledoutBy="admin"
+                </wmapmm-xs>
+                <wmapmm-s
+                    cq:commerceType="variant"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmapmm/size-s">
+                    <image
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.461Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/shirt/Maui.jpg"/>
+                    <assets
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmapmm-s>
+                <wmapmm-m
+                    cq:commerceType="variant"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmapmm/size-m">
+                    <image
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.461Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/shirt/Maui.jpg"/>
+                    <assets
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmapmm-m>
+                <wmapmm-l
+                    cq:commerceType="variant"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmapmm/size-l">
+                    <image
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.461Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/shirt/Maui.jpg"/>
+                    <assets
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmapmm-l>
+                <wmapmm-xl
+                    cq:commerceType="variant"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmapmm/size-xl">
+                    <image
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.461Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/shirt/Maui.jpg"/>
+                    <assets
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmapmm-xl>
+                <image
+                    jcr:lastModified="{Date}2015-01-26T12:28:08.461Z"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="commerce/components/product/image"
+                    fileReference="/content/dam/geometrixx-outdoors/products/shirt/Maui.jpg"/>
+                <assets
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product/assets"/>
+            </product>
+            <responsivegrid
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+            <reviews_section_title
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Reviews"
+                sling:resourceType="we-retail/components/content/title"/>
+            <reviews
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/structure/product-reviews"/>
+            <similar_section_title
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="You may also like"
+                sling:resourceType="we-retail/components/content/title"/>
+            <similar_products
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/structure/product-recommendation"
+                max="6"
+                relationshipType="relatedproducts:info.we-retail.similar-to-current"/>
+            <footer_content_container
+                jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/layout-container-bg"
+                containerCSSClass="we-FooterSection width-full">
+                <par
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    jcr:title="Reviews"
-                    sling:resourceType="we-retail/components/content/title"/>
-                <reviews
-                    cq:lastRolledout="{Date}2016-03-08T14:48:40.687+01:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product-reviews"/>
-                <similar_section_title
-                    cq:lastRolledout="{Date}2016-03-08T14:48:40.688+01:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    jcr:title="You may also like"
-                    sling:resourceType="we-retail/components/content/title"/>
-                <similar_products
-                    cq:lastRolledout="{Date}2016-03-08T14:48:40.688+01:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product-recommendation"
-                    max="6"
-                    relationshipType="relatedproducts:info.we-retail.similar-to-current"/>
-                <footer_content_container
-                    cq:lastRolledout="{Date}2016-03-08T14:48:40.688+01:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/layout-container-bg"
-                    containerCSSClass="we-FooterSection width-full">
-                    <par
-                        cq:lastRolledout="{Date}2016-03-08T14:48:40.691+01:00"
-                        cq:lastRolledoutBy="admin"
+                    sling:resourceType="wcm/foundation/components/responsivegrid">
+                    <find_store
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="wcm/foundation/components/responsivegrid">
-                        <find_store
-                            cq:lastRolledout="{Date}2016-03-08T14:48:40.698+01:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/find-store"/>
-                    </par>
-                </footer_content_container>
-            </responsivegrid>
+                        sling:resourceType="we-retail/components/content/find-store"/>
+                </par>
+            </footer_content_container>
         </root>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"
