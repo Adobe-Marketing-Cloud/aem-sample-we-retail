@@ -1,1 +1,1 @@
-section-title.less
+title.less
