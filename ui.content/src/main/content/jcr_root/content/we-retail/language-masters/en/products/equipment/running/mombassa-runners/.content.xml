@@ -2,10 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-03-09T16:39:16.296+01:00"
+        cq:lastModified="{Date}2016-03-09T18:14:57.842+01:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-03-09T16:39:16.724+01:00"
-        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -14,22 +12,16 @@
         jcr:title="Mombassa Runners"
         sling:resourceType="we-retail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-03-09T16:39:16.338+01:00"
-            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
-                cq:lastRolledout="{Date}2016-03-09T16:39:16.386+01:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
-                cq:lastRolledout="{Date}2016-03-09T16:39:16.388+01:00"
-                cq:lastRolledoutBy="admin"
-                jcr:lastModified="{Date}2016-03-08T17:04:26.637+01:00"
+                jcr:lastModified="{Date}2016-03-09T18:14:57.841+01:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product"
@@ -38,669 +30,492 @@
                 variationTitle="Color">
                 <eqsmmr_1-5
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.488+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.1/size-5">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.506+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.337Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Pink.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.506+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_1-5>
                 <eqsmmr_1-5_5
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.507+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.1/size-5_5">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.514+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.337Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Pink.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.514+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_1-5_5>
                 <eqsmmr_1-6
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.515+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.1/size-6">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.522+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.337Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Pink.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.522+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_1-6>
                 <eqsmmr_1-6_5
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.522+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.1/size-6_5">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.528+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.337Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Pink.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.529+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_1-6_5>
                 <eqsmmr_1-7
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.529+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.1/size-7">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.535+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.337Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Pink.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.535+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_1-7>
                 <eqsmmr_1-7_5
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.536+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.1/size-7_5">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.543+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.337Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Pink.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.544+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_1-7_5>
                 <eqsmmr_1-8
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.544+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.1/size-8">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.550+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.337Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Pink.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.550+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_1-8>
                 <eqsmmr_1-8_5
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.550+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.1/size-8_5">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.556+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.337Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Pink.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.556+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_1-8_5>
                 <eqsmmr_1-9
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.557+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.1/size-9">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.563+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.337Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Pink.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.563+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_1-9>
                 <eqsmmr_1-9_5
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.564+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.1/size-9_5">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.571+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.337Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Pink.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.571+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_1-9_5>
                 <eqsmmr_1-10
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.572+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.1/size-10">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.580+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.337Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Pink.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.580+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_1-10>
                 <eqsmmr_1-10_5
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.580+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.1/size-10_5">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.587+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.337Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Pink.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.587+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_1-10_5>
                 <eqsmmr_1-11
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.588+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.1/size-11">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.597+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.337Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Pink.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.598+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_1-11>
                 <eqsmmr_2-5
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.598+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.2/size-5">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.605+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.344Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Purple.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.605+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_2-5>
                 <eqsmmr_2-5_5
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.605+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.2/size-5_5">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.612+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.344Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Purple.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.612+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_2-5_5>
                 <eqsmmr_2-6
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.612+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.2/size-6">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.624+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.344Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Purple.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.625+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_2-6>
                 <eqsmmr_2-6_5
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.629+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.2/size-6_5">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.638+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.344Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Purple.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.638+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_2-6_5>
                 <eqsmmr_2-7
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.638+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.2/size-7">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.645+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.344Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Purple.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.645+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_2-7>
                 <eqsmmr_2-7_5
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.646+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.2/size-7_5">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.652+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.344Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Purple.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.652+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_2-7_5>
                 <eqsmmr_2-8
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.653+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.2/size-8">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.659+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.344Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Purple.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.659+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_2-8>
                 <eqsmmr_2-8_5
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.659+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.2/size-8_5">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.680+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.344Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Purple.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.681+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_2-8_5>
                 <eqsmmr_2-9
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.681+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.2/size-9">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.688+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.344Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Purple.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.688+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_2-9>
                 <eqsmmr_2-9_5
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.689+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.2/size-9_5">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.695+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.344Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Purple.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.695+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_2-9_5>
                 <eqsmmr_2-10
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.696+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.2/size-10">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.702+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.344Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Purple.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.702+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_2-10>
                 <eqsmmr_2-10_5
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.702+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.2/size-10_5">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.709+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.344Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Purple.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.709+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_2-10_5>
                 <eqsmmr_2-11
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.710+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmmr/eqsmmr.2/size-11">
                     <image
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.716+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.344Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Purple.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.716+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmmr_2-11>
                 <image
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.716+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2015-01-26T12:28:08.337Z"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="commerce/components/product/image"
                     fileReference="/content/dam/geometrixx-outdoors/products/footwear/Mombassa Pink.jpg"/>
                 <assets
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.716+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/assets"/>
             </product>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-03-09T16:39:16.717+01:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
-                cq:lastRolledout="{Date}2016-03-09T16:39:16.717+01:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
-                cq:lastRolledout="{Date}2016-03-09T16:39:16.717+01:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
-                cq:lastRolledout="{Date}2016-03-09T16:39:16.717+01:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
-                cq:lastRolledout="{Date}2016-03-09T16:39:16.717+01:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-recommendation"/>
             <footer_content_container
-                cq:lastRolledout="{Date}2016-03-09T16:39:16.718+01:00"
-                cq:lastRolledoutBy="admin"
                 jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2016-03-09T16:39:16.284+01:00"
+                jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/layout-container-bg"
-                containerCSSClass="we-FooterSection width-full">
+                sling:resourceType="we-retail/components/content/layout-container-bg">
                 <par
-                    cq:lastRolledout="{Date}2016-03-09T16:39:16.721+01:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="wcm/foundation/components/responsivegrid">
                     <find_store
-                        cq:lastRolledout="{Date}2016-03-09T16:39:16.724+01:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/content/find-store"/>
