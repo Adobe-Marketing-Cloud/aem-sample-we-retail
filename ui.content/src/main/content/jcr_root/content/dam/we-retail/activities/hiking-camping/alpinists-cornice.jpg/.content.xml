@@ -7,9 +7,8 @@
     <jcr:content
         cq:name="alpinists-cornice.jpg"
         cq:parentPath="/content/dam/we-retail/activities/hiking-camping"
-        dam:assetID="e4fb340b-1a28-4f7b-a58c-509d45664138"
         dam:relativePath="we-retail/activities/hiking-camping/alpinists-cornice.jpg"
-        jcr:lastModified="{Date}2016-03-06T22:38:16.001+01:00"
+        jcr:lastModified="{Date}2016-03-09T00:50:48.087+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -32,10 +31,11 @@
             exif:ExifVersion="0221"
             exif:PixelXDimension="{Long}2880"
             exif:PixelYDimension="{Long}1920"
-            jcr:lastModified="{Date}2016-03-06T22:38:15.937+01:00"
+            jcr:lastModified="{Date}2016-03-09T00:50:31.993+01:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
+            jcr:title="Alpinists Cornice"
             photoshop:ColorMode="{Long}3"
             tiff:BitsPerSample="[8,8,8,8,8,8]"
             tiff:BitsPerSample_xmpArrayType="rdf:Seq"

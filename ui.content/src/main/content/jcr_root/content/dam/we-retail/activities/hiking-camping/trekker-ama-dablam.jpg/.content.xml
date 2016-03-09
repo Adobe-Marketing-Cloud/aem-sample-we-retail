@@ -7,9 +7,8 @@
     <jcr:content
         cq:name="trekker-ama-dablam.jpg"
         cq:parentPath="/content/dam/we-retail/activities/hiking-camping"
-        dam:assetID="32be3886-00ae-4f8d-912a-854b13882a50"
         dam:relativePath="we-retail/activities/hiking-camping/trekker-ama-dablam.jpg"
-        jcr:lastModified="{Date}2016-03-06T22:46:48.454+01:00"
+        jcr:lastModified="{Date}2016-03-09T00:50:51.596+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -32,10 +31,11 @@
             exif:ExifVersion="0221"
             exif:PixelXDimension="{Long}2880"
             exif:PixelYDimension="{Long}1920"
-            jcr:lastModified="{Date}2016-03-06T22:46:48.399+01:00"
+            jcr:lastModified="{Date}2016-03-09T00:50:37.526+01:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
+            jcr:title="Trekker Ama Dablam"
             photoshop:ColorMode="{Long}3"
             tiff:BitsPerSample="[8,8,8,8,8,8]"
             tiff:BitsPerSample_xmpArrayType="rdf:Seq"

@@ -4,7 +4,6 @@
     <jcr:content
         cq:lastModified="{Date}2016-03-04T13:35:13.961+01:00"
         cq:lastModifiedBy="admin"
-        dam:relativePath="we-retail/activities/hiking-camping"
         jcr:primaryType="nt:unstructured"
         jcr:title="Hiking Camping"/>
 </jcr:root>

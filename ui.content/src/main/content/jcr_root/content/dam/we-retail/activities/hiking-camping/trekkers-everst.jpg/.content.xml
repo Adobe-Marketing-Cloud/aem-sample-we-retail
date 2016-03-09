@@ -7,9 +7,8 @@
     <jcr:content
         cq:name="trekkers-everst.jpg"
         cq:parentPath="/content/dam/we-retail/activities/hiking-camping"
-        dam:assetID="c14d1646-b2d8-4f53-b248-30a798082a1a"
-        dam:relativePath="we-retail/hiking-camping/trekkers-everst.jpg"
-        jcr:lastModified="{Date}2016-03-06T20:37:16.014+01:00"
+        dam:relativePath="we-retail/activities/hiking-camping/trekkers-everst.jpg"
+        jcr:lastModified="{Date}2016-03-09T00:50:37.363+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -20,7 +19,7 @@
             dam:Numberofimages="{Long}1"
             dam:Numberoftextualcomments="{Long}0"
             dam:Physicalheightindpi="{Long}300"
-            dam:Physicalheightininches="{Decimal}6.4066667556762695"
+            dam:Physicalheightininches="{Decimal}6.400000095367432"
             dam:Physicalwidthindpi="{Long}300"
             dam:Physicalwidthininches="{Decimal}9.600000381469727"
             dam:Progressive="no"
@@ -34,15 +33,15 @@
             exif:ExifOffset="{Long}236"
             exif:ExifVersion="0221"
             exif:PixelXDimension="{Long}2880"
-            exif:PixelYDimension="{Long}1922"
-            jcr:lastModified="{Date}2016-03-06T20:37:15.825+01:00"
+            exif:PixelYDimension="{Long}1920"
+            jcr:lastModified="{Date}2016-03-09T00:50:36.701+01:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
             photoshop:ColorMode="{Long}3"
             tiff:BitsPerSample="[8,8,8,8,8,8]"
             tiff:BitsPerSample_xmpArrayType="rdf:Seq"
-            tiff:ImageLength="{Long}1922"
+            tiff:ImageLength="{Long}1920"
             tiff:ImageWidth="{Long}2880"
             tiff:Orientation="{Long}1"
             tiff:PhotometricInterpretation="{Long}2"
@@ -52,10 +51,10 @@
             tiff:YResolution="300"
             xmp:CreateDate="{Date}2016-03-02T15:58:25.000+01:00"
             xmp:CreatorTool="Adobe Photoshop CC 2015"
-            xmp:MetadataDate="{Date}2016-03-04T12:38:42.000+01:00"
-            xmp:ModifyDate="{Date}2016-03-04T12:38:42.000+01:00"
-            xmpMM:DocumentID="adobe:docid:photoshop:1286d432-228c-1179-9fe2-dd6814746362"
-            xmpMM:InstanceID="xmp.iid:94986711-2247-4f7b-8695-3210dad1a081"
+            xmp:MetadataDate="{Date}2016-03-08T23:49:52.000+01:00"
+            xmp:ModifyDate="{Date}2016-03-08T23:49:52.000+01:00"
+            xmpMM:DocumentID="adobe:docid:photoshop:7ee17a94-260e-1179-a410-b2db021fd2b8"
+            xmpMM:InstanceID="xmp.iid:9d52a441-afb8-45c2-8f58-6c2259c0f83b"
             xmpMM:OriginalDocumentID="E3C292B227206BB902E2431D62E74FB1">
             <xmpMM:History
                 jcr:primaryType="nt:unstructured"
@@ -66,17 +65,17 @@
                     jcr:primaryType="nt:unstructured"
                     stEvt:action="saved"
                     stEvt:changed="/"
-                    stEvt:instanceID="xmp.iid:c22ab129-3863-4a9b-b183-301fa56e2a1e"
+                    stEvt:instanceID="xmp.iid:ac89f723-325c-41d5-8426-c9418d6c3e24"
                     stEvt:softwareAgent="Adobe Photoshop CC 2015"
-                    stEvt:when="{Date}2016-03-04T12:38:42.000+01:00"
+                    stEvt:when="{Date}2016-03-08T23:49:52.000+01:00"
                     xmpNodeType="xmpStruct"/>
                 <_x0032_
                     jcr:primaryType="nt:unstructured"
                     stEvt:action="saved"
                     stEvt:changed="/"
-                    stEvt:instanceID="xmp.iid:94986711-2247-4f7b-8695-3210dad1a081"
+                    stEvt:instanceID="xmp.iid:9d52a441-afb8-45c2-8f58-6c2259c0f83b"
                     stEvt:softwareAgent="Adobe Photoshop CC 2015"
-                    stEvt:when="{Date}2016-03-04T12:38:42.000+01:00"
+                    stEvt:when="{Date}2016-03-08T23:49:52.000+01:00"
                     xmpNodeType="xmpStruct"/>
             </xmpMM:History>
         </metadata>

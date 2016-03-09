@@ -7,9 +7,8 @@
     <jcr:content
         cq:name="wave-diving.jpg"
         cq:parentPath="/content/dam/we-retail/activities/surfing"
-        dam:assetID="a07f22eb-9113-491b-a61c-5eaf10bf6f3c"
         dam:relativePath="we-retail/activities/surfing/wave-diving.jpg"
-        jcr:lastModified="{Date}2016-03-06T22:19:25.090+01:00"
+        jcr:lastModified="{Date}2016-03-09T00:50:51.425+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -53,10 +52,10 @@
             tiff:YResolution="300"
             xmp:CreateDate="{Date}2016-02-09T16:22:05.000+01:00"
             xmp:CreatorTool="Adobe Photoshop CC 2015"
-            xmp:MetadataDate="{Date}2016-03-04T12:39:15.000+01:00"
-            xmp:ModifyDate="{Date}2016-03-04T12:39:15.000+01:00"
-            xmpMM:DocumentID="adobe:docid:photoshop:25cd9a72-228c-1179-9fe2-dd6814746362"
-            xmpMM:InstanceID="xmp.iid:496291be-d9d3-4d8d-b73a-7a4c05200ef9"
+            xmp:MetadataDate="{Date}2016-03-08T23:50:43.000+01:00"
+            xmp:ModifyDate="{Date}2016-03-08T23:50:43.000+01:00"
+            xmpMM:DocumentID="adobe:docid:photoshop:9d77b7bc-260e-1179-a410-b2db021fd2b8"
+            xmpMM:InstanceID="xmp.iid:790a99e0-29c2-46dd-b959-261e4758c777"
             xmpMM:OriginalDocumentID="BE0AA89F482D8839B473805DA8BE3064">
             <xmpMM:History
                 jcr:primaryType="nt:unstructured"
@@ -67,17 +66,17 @@
                     jcr:primaryType="nt:unstructured"
                     stEvt:action="saved"
                     stEvt:changed="/"
-                    stEvt:instanceID="xmp.iid:cd712f30-b859-4b30-b699-fa517007fb6d"
+                    stEvt:instanceID="xmp.iid:ec71dcd2-1fc3-41a3-a421-d4e397d23e9b"
                     stEvt:softwareAgent="Adobe Photoshop CC 2015"
-                    stEvt:when="{Date}2016-03-04T12:39:15.000+01:00"
+                    stEvt:when="{Date}2016-03-08T23:50:43.000+01:00"
                     xmpNodeType="xmpStruct"/>
                 <_x0032_
                     jcr:primaryType="nt:unstructured"
                     stEvt:action="saved"
                     stEvt:changed="/"
-                    stEvt:instanceID="xmp.iid:496291be-d9d3-4d8d-b73a-7a4c05200ef9"
+                    stEvt:instanceID="xmp.iid:790a99e0-29c2-46dd-b959-261e4758c777"
                     stEvt:softwareAgent="Adobe Photoshop CC 2015"
-                    stEvt:when="{Date}2016-03-04T12:39:15.000+01:00"
+                    stEvt:when="{Date}2016-03-08T23:50:43.000+01:00"
                     xmpNodeType="xmpStruct"/>
             </xmpMM:History>
         </metadata>
