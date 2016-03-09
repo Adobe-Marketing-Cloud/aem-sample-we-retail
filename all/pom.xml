@@ -33,9 +33,9 @@
     <!-- ====================================================================== -->
     <!-- P R O J E C T  D E S C R I P T I O N                                   -->
     <!-- ====================================================================== -->
-    <artifactId>we.retail.package</artifactId>
+    <artifactId>we.retail.all</artifactId>
     <packaging>content-package</packaging>
-    <name>We.Retail - Package</name>
+    <name>We.Retail - All</name>
     <description>Combined package for We.Retail</description>
 
     <build>
