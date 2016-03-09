@@ -2,8 +2,10 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-03-08T17:04:26.708+01:00"
+        cq:lastModified="{Date}2016-03-09T16:39:18.956+01:00"
         cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2016-03-09T16:39:19.069+01:00"
+        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/mn/mnap/mnapew"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -12,15 +14,21 @@
         jcr:title="Edmonton Winter"
         sling:resourceType="we-retail/components/structure/page">
         <root
+            cq:lastRolledout="{Date}2016-03-09T16:39:18.982+01:00"
+            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
+                cq:lastRolledout="{Date}2016-03-09T16:39:19.004+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
+                cq:lastRolledout="{Date}2016-03-09T16:39:19.005+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:lastModified="{Date}2016-03-08T17:04:26.707+01:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
@@ -28,138 +36,186 @@
                 productData="/etc/commerce/products/we-retail/mn/mnap/mnapew">
                 <mnapew-s
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-09T16:39:19.025+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/mn/mnap/mnapew/size-s">
                     <image
+                        cq:lastRolledout="{Date}2016-03-09T16:39:19.031+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.414Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/coat/Edmonton.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-09T16:39:19.031+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mnapew-s>
                 <mnapew-m
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-09T16:39:19.031+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/mn/mnap/mnapew/size-m">
                     <image
+                        cq:lastRolledout="{Date}2016-03-09T16:39:19.037+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.414Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/coat/Edmonton.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-09T16:39:19.037+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mnapew-m>
                 <mnapew-l
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-09T16:39:19.038+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/mn/mnap/mnapew/size-l">
                     <image
+                        cq:lastRolledout="{Date}2016-03-09T16:39:19.044+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.414Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/coat/Edmonton.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-09T16:39:19.044+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mnapew-l>
                 <mnapew-xl
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-09T16:39:19.044+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/mn/mnap/mnapew/size-xl">
                     <image
+                        cq:lastRolledout="{Date}2016-03-09T16:39:19.053+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.414Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/coat/Edmonton.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-09T16:39:19.054+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mnapew-xl>
                 <mnapew-2xl
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-09T16:39:19.054+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/mn/mnap/mnapew/size-2xl">
                     <image
+                        cq:lastRolledout="{Date}2016-03-09T16:39:19.061+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.414Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/coat/Edmonton.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-09T16:39:19.061+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mnapew-2xl>
                 <image
+                    cq:lastRolledout="{Date}2016-03-09T16:39:19.061+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2015-01-26T12:28:08.414Z"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="commerce/components/product/image"
                     fileReference="/content/dam/geometrixx-outdoors/products/coat/Edmonton.jpg"/>
                 <assets
+                    cq:lastRolledout="{Date}2016-03-09T16:39:19.061+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/assets"/>
             </product>
             <responsivegrid
+                cq:lastRolledout="{Date}2016-03-09T16:39:19.062+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
+                cq:lastRolledout="{Date}2016-03-09T16:39:19.062+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
+                cq:lastRolledout="{Date}2016-03-09T16:39:19.062+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
+                cq:lastRolledout="{Date}2016-03-09T16:39:19.062+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
+                cq:lastRolledout="{Date}2016-03-09T16:39:19.062+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/structure/product-recommendation"
-                max="6"
-                relationshipType="relatedproducts:info.we-retail.similar-to-current"/>
+                sling:resourceType="we-retail/components/structure/product-recommendation"/>
             <footer_content_container
+                cq:lastRolledout="{Date}2016-03-09T16:39:19.063+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
+                jcr:lastModified="{Date}2016-03-09T16:39:18.945+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/layout-container-bg"
                 containerCSSClass="we-FooterSection width-full">
                 <par
+                    cq:lastRolledout="{Date}2016-03-09T16:39:19.066+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="wcm/foundation/components/responsivegrid">
                     <find_store
+                        cq:lastRolledout="{Date}2016-03-09T16:39:19.069+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/content/find-store"/>
