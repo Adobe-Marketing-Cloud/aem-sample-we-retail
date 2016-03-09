@@ -11,6 +11,7 @@ The main parts of the template are:
 * ui.content: contains sample content using the components from the ui.apps
 * it.tests: Java bundle containing JUnit tests that are executed server-side. This bundle is not to be deployed onto production.
 * it.launcher: contains glue code that deploys the ui.tests bundle (and dependent bundles) to the server and triggers the remote JUnit execution
+* all: additional module to build a single package embedding ui.apps and ui.content
 
 ## How to build
 
@@ -29,6 +30,14 @@ Or to deploy it to a publish instance, run
 Or to deploy only the bundle to the author, run
 
     mvn clean install -PautoInstallBundle
+
+To build a single package
+
+    mvn clean install -PbuildSinglePackage
+
+To install single package on an AEM instance
+
+	mvn clean install -PbuildSinglePackage -PautoInstallSinglePackage
 
 ## Testing
 
