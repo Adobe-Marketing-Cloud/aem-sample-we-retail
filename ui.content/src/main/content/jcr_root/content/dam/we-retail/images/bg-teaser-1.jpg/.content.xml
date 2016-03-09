@@ -7,7 +7,6 @@
     <jcr:content
         cq:name="bg-teaser-1.jpg"
         cq:parentPath="/content/dam/we-retail/images"
-        dam:assetID="94329d5f-991e-4f56-9147-8f16f707753a"
         dam:relativePath="we-retail/images/bg-teaser-1.jpg"
         jcr:lastModified="{Date}2016-02-29T19:30:03.930+01:00"
         jcr:lastModifiedBy="admin"

@@ -7,9 +7,8 @@
     <jcr:content
         cq:name="wave-huge.jpg"
         cq:parentPath="/content/dam/we-retail/activities/surfing"
-        dam:assetID="520282c6-3a1a-4b10-a9b2-4ff50ad8c758"
-        dam:relativePath="we-retail/surfing/wave-huge.jpg"
-        jcr:lastModified="{Date}2016-03-06T18:52:45.633+01:00"
+        dam:relativePath="we-retail/activities/surfing/wave-huge.jpg"
+        jcr:lastModified="{Date}2016-03-09T00:50:42.244+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -35,7 +34,7 @@
             exif:ExifVersion="0221"
             exif:PixelXDimension="{Long}2880"
             exif:PixelYDimension="{Long}1920"
-            jcr:lastModified="{Date}2016-03-06T18:52:45.566+01:00"
+            jcr:lastModified="{Date}2016-03-09T00:50:41.636+01:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
@@ -52,10 +51,10 @@
             tiff:YResolution="300"
             xmp:CreateDate="{Date}2016-02-09T16:22:10.000+01:00"
             xmp:CreatorTool="Adobe Photoshop CC 2015"
-            xmp:MetadataDate="{Date}2016-03-04T12:39:14.000+01:00"
-            xmp:ModifyDate="{Date}2016-03-04T12:39:14.000+01:00"
-            xmpMM:DocumentID="adobe:docid:photoshop:254c4ac6-228c-1179-9fe2-dd6814746362"
-            xmpMM:InstanceID="xmp.iid:6d5c2615-02f6-4020-b77c-d8a17b0b8d05"
+            xmp:MetadataDate="{Date}2016-03-08T23:50:42.000+01:00"
+            xmp:ModifyDate="{Date}2016-03-08T23:50:42.000+01:00"
+            xmpMM:DocumentID="adobe:docid:photoshop:9ce67306-260e-1179-a410-b2db021fd2b8"
+            xmpMM:InstanceID="xmp.iid:c3997d21-7e43-4d37-8af1-e69cf77db4ec"
             xmpMM:OriginalDocumentID="04787BDD01FCF8FA3205C68F8E4B9B7C">
             <xmpMM:History
                 jcr:primaryType="nt:unstructured"
@@ -66,17 +65,17 @@
                     jcr:primaryType="nt:unstructured"
                     stEvt:action="saved"
                     stEvt:changed="/"
-                    stEvt:instanceID="xmp.iid:cce34e39-b9d0-4f8c-b6b4-c4f6760fd1bc"
+                    stEvt:instanceID="xmp.iid:6b9c4b45-11d0-4071-81d7-6e38513cfe7c"
                     stEvt:softwareAgent="Adobe Photoshop CC 2015"
-                    stEvt:when="{Date}2016-03-04T12:39:14.000+01:00"
+                    stEvt:when="{Date}2016-03-08T23:50:42.000+01:00"
                     xmpNodeType="xmpStruct"/>
                 <_x0032_
                     jcr:primaryType="nt:unstructured"
                     stEvt:action="saved"
                     stEvt:changed="/"
-                    stEvt:instanceID="xmp.iid:6d5c2615-02f6-4020-b77c-d8a17b0b8d05"
+                    stEvt:instanceID="xmp.iid:c3997d21-7e43-4d37-8af1-e69cf77db4ec"
                     stEvt:softwareAgent="Adobe Photoshop CC 2015"
-                    stEvt:when="{Date}2016-03-04T12:39:14.000+01:00"
+                    stEvt:when="{Date}2016-03-08T23:50:42.000+01:00"
                     xmpNodeType="xmpStruct"/>
             </xmpMM:History>
         </metadata>

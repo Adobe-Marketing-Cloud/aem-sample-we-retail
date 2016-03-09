@@ -7,7 +7,6 @@
     <jcr:content
         cq:name="article2.jpg"
         cq:parentPath="/content/dam/we-retail/images"
-        dam:assetID="9a68d97a-d921-4d7e-adbe-b627fc52a5e4"
         dam:relativePath="we-retail/images/article2.jpg"
         jcr:lastModified="{Date}2016-02-29T19:30:02.389+01:00"
         jcr:lastModifiedBy="admin"

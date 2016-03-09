@@ -6,10 +6,9 @@
     jcr:uuid="d48c27bf-52dd-496e-81f0-010c104b2437">
     <jcr:content
         cq:name="freeride.jpg"
-        cq:parentPath="/content/dam/we-retail/skiing"
-        dam:assetID="d48c27bf-52dd-496e-81f0-010c104b2437"
-        dam:relativePath="we-retail/skiing/freeride.jpg"
-        jcr:lastModified="{Date}2016-03-06T20:36:57.376+01:00"
+        cq:parentPath="/content/dam/we-retail/activities/skiing"
+        dam:relativePath="we-retail/activities/skiing/freeride.jpg"
+        jcr:lastModified="{Date}2016-03-09T00:50:49.828+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -20,9 +19,9 @@
             dam:Numberofimages="{Long}1"
             dam:Numberoftextualcomments="{Long}0"
             dam:Physicalheightindpi="{Long}300"
-            dam:Physicalheightininches="{Decimal}14.399999618530273"
+            dam:Physicalheightininches="{Decimal}9.600000381469727"
             dam:Physicalwidthindpi="{Long}300"
-            dam:Physicalwidthininches="{Decimal}9.600000381469727"
+            dam:Physicalwidthininches="{Decimal}6.400000095367432"
             dam:Progressive="no"
             dam:sha1="b9082a960a89551a174695ac304e428811652e08"
             dam:size="{Long}2356024"
@@ -33,17 +32,17 @@
             exif:ColorSpace="{Long}-1"
             exif:ExifOffset="{Long}236"
             exif:ExifVersion="0221"
-            exif:PixelXDimension="{Long}2880"
-            exif:PixelYDimension="{Long}4320"
-            jcr:lastModified="{Date}2016-03-06T18:15:35.095+01:00"
+            exif:PixelXDimension="{Long}1920"
+            exif:PixelYDimension="{Long}2880"
+            jcr:lastModified="{Date}2016-03-09T00:50:49.036+01:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
             photoshop:ColorMode="{Long}3"
             tiff:BitsPerSample="[8,8,8,8,8,8]"
             tiff:BitsPerSample_xmpArrayType="rdf:Seq"
-            tiff:ImageLength="{Long}4320"
-            tiff:ImageWidth="{Long}2880"
+            tiff:ImageLength="{Long}2880"
+            tiff:ImageWidth="{Long}1920"
             tiff:Orientation="{Long}1"
             tiff:PhotometricInterpretation="{Long}2"
             tiff:ResolutionUnit="{Long}2"
@@ -52,31 +51,23 @@
             tiff:YResolution="300"
             xmp:CreateDate="{Date}2016-03-03T15:32:12.000+01:00"
             xmp:CreatorTool="Adobe Photoshop CC 2015"
-            xmp:MetadataDate="{Date}2016-03-04T12:39:12.000+01:00"
-            xmp:ModifyDate="{Date}2016-03-04T12:39:12.000+01:00"
-            xmpMM:DocumentID="adobe:docid:photoshop:24527c58-228c-1179-9fe2-dd6814746362"
-            xmpMM:InstanceID="xmp.iid:a98dce7d-4de1-4f0d-a05a-5e211d29163a"
-            xmpMM:OriginalDocumentID="500E6221610545C8B8604D61FCD3869B">
+            xmp:MetadataDate="{Date}2016-03-09T00:37:44.000+01:00"
+            xmp:ModifyDate="{Date}2016-03-09T00:37:44.000+01:00"
+            xmpMM:DocumentID="C738604493C4D887C1BACCBF0D2F3018"
+            xmpMM:InstanceID="xmp.iid:f4e0eff0-74e3-4c41-8b77-58c21abbf1b0"
+            xmpMM:OriginalDocumentID="C738604493C4D887C1BACCBF0D2F3018">
             <xmpMM:History
                 jcr:primaryType="nt:unstructured"
-                xmpArraySize="{Long}2"
+                xmpArraySize="{Long}1"
                 xmpArrayType="rdf:Seq"
                 xmpNodeType="xmpArray">
                 <_x0031_
                     jcr:primaryType="nt:unstructured"
                     stEvt:action="saved"
                     stEvt:changed="/"
-                    stEvt:instanceID="xmp.iid:4770e100-b1f4-444e-9e7a-0d86b12edac3"
+                    stEvt:instanceID="xmp.iid:f4e0eff0-74e3-4c41-8b77-58c21abbf1b0"
                     stEvt:softwareAgent="Adobe Photoshop CC 2015"
-                    stEvt:when="{Date}2016-03-04T12:39:12.000+01:00"
-                    xmpNodeType="xmpStruct"/>
-                <_x0032_
-                    jcr:primaryType="nt:unstructured"
-                    stEvt:action="saved"
-                    stEvt:changed="/"
-                    stEvt:instanceID="xmp.iid:a98dce7d-4de1-4f0d-a05a-5e211d29163a"
-                    stEvt:softwareAgent="Adobe Photoshop CC 2015"
-                    stEvt:when="{Date}2016-03-04T12:39:12.000+01:00"
+                    stEvt:when="{Date}2016-03-09T00:37:44.000+01:00"
                     xmpNodeType="xmpStruct"/>
             </xmpMM:History>
         </metadata>

@@ -7,9 +7,8 @@
     <jcr:content
         cq:name="forest-trail.jpg"
         cq:parentPath="/content/dam/we-retail/activities/biking"
-        dam:assetID="8c18286d-c218-4efc-aa07-35d846406079"
         dam:relativePath="we-retail/activities/biking/forest-trail.jpg"
-        jcr:lastModified="{Date}2016-03-06T22:52:29.185+01:00"
+        jcr:lastModified="{Date}2016-03-09T00:50:50.023+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -32,7 +31,7 @@
             exif:ExifVersion="0221"
             exif:PixelXDimension="{Long}2880"
             exif:PixelYDimension="{Long}1920"
-            jcr:lastModified="{Date}2016-03-06T22:52:29.129+01:00"
+            jcr:lastModified="{Date}2016-03-09T00:50:48.747+01:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
@@ -49,10 +48,10 @@
             tiff:YResolution="300"
             xmp:CreateDate="{Date}2016-03-03T09:56:31.000+01:00"
             xmp:CreatorTool="Adobe Photoshop CC 2015"
-            xmp:MetadataDate="{Date}2016-03-04T12:38:36.000+01:00"
-            xmp:ModifyDate="{Date}2016-03-04T12:38:36.000+01:00"
-            xmpMM:DocumentID="adobe:docid:photoshop:0edaca50-228c-1179-9fe2-dd6814746362"
-            xmpMM:InstanceID="xmp.iid:379b29d4-37ed-4cb0-8390-4970512cffe5"
+            xmp:MetadataDate="{Date}2016-03-08T23:49:38.000+01:00"
+            xmp:ModifyDate="{Date}2016-03-08T23:49:38.000+01:00"
+            xmpMM:DocumentID="adobe:docid:photoshop:77091afc-260e-1179-a410-b2db021fd2b8"
+            xmpMM:InstanceID="xmp.iid:92a056f0-30ca-4e51-8148-329edcaad942"
             xmpMM:OriginalDocumentID="1410A96666ECC7917EE104E8A046ED78">
             <xmpMM:History
                 jcr:primaryType="nt:unstructured"
@@ -63,17 +62,17 @@
                     jcr:primaryType="nt:unstructured"
                     stEvt:action="saved"
                     stEvt:changed="/"
-                    stEvt:instanceID="xmp.iid:fd69a45a-a961-412a-976f-f52bacf7de43"
+                    stEvt:instanceID="xmp.iid:5ad454dd-ed94-43e9-a887-e01d9e058a1b"
                     stEvt:softwareAgent="Adobe Photoshop CC 2015"
-                    stEvt:when="{Date}2016-03-04T12:38:36.000+01:00"
+                    stEvt:when="{Date}2016-03-08T23:49:38.000+01:00"
                     xmpNodeType="xmpStruct"/>
                 <_x0032_
                     jcr:primaryType="nt:unstructured"
                     stEvt:action="saved"
                     stEvt:changed="/"
-                    stEvt:instanceID="xmp.iid:379b29d4-37ed-4cb0-8390-4970512cffe5"
+                    stEvt:instanceID="xmp.iid:92a056f0-30ca-4e51-8148-329edcaad942"
                     stEvt:softwareAgent="Adobe Photoshop CC 2015"
-                    stEvt:when="{Date}2016-03-04T12:38:36.000+01:00"
+                    stEvt:when="{Date}2016-03-08T23:49:38.000+01:00"
                     xmpNodeType="xmpStruct"/>
             </xmpMM:History>
         </metadata>

@@ -7,9 +7,8 @@
     <jcr:content
         cq:name="climber-la-torre-di-toblin.jpg"
         cq:parentPath="/content/dam/we-retail/activities/hiking-camping"
-        dam:assetID="e8076ab2-895b-4580-bdb9-6b7edf551646"
         dam:relativePath="we-retail/activities/hiking-camping/climber-la-torre-di-toblin.jpg"
-        jcr:lastModified="{Date}2016-03-06T22:45:10.967+01:00"
+        jcr:lastModified="{Date}2016-03-09T00:50:42.696+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="dam:AssetContent">
         <metadata
@@ -35,7 +34,7 @@
             exif:ExifVersion="0221"
             exif:PixelXDimension="{Long}2880"
             exif:PixelYDimension="{Long}1920"
-            jcr:lastModified="{Date}2016-03-06T22:45:10.905+01:00"
+            jcr:lastModified="{Date}2016-03-09T00:50:42.397+01:00"
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
@@ -53,10 +52,10 @@
             tiff:YResolution="300"
             xmp:CreateDate="{Date}2016-03-03T13:09:22.000+01:00"
             xmp:CreatorTool="Adobe Photoshop CC 2015"
-            xmp:MetadataDate="{Date}2016-03-04T12:38:40.000+01:00"
-            xmp:ModifyDate="{Date}2016-03-04T12:38:40.000+01:00"
-            xmpMM:DocumentID="adobe:docid:photoshop:111843ba-228c-1179-9fe2-dd6814746362"
-            xmpMM:InstanceID="xmp.iid:b7f6dc36-edf6-429c-bb4b-4b58e1f109a3"
+            xmp:MetadataDate="{Date}2016-03-08T23:49:46.000+01:00"
+            xmp:ModifyDate="{Date}2016-03-08T23:49:46.000+01:00"
+            xmpMM:DocumentID="adobe:docid:photoshop:7bd62ebc-260e-1179-a410-b2db021fd2b8"
+            xmpMM:InstanceID="xmp.iid:1cc43c03-3ff3-473e-9105-ec194b82966e"
             xmpMM:OriginalDocumentID="BA7DA32DB128E8552F8692823447B32A">
             <xmpMM:History
                 jcr:primaryType="nt:unstructured"
@@ -67,17 +66,17 @@
                     jcr:primaryType="nt:unstructured"
                     stEvt:action="saved"
                     stEvt:changed="/"
-                    stEvt:instanceID="xmp.iid:e98a7c1a-9aea-4106-84f8-908ece75ddc1"
+                    stEvt:instanceID="xmp.iid:ba996e7f-9185-4ffa-a9be-cf0143f1bd00"
                     stEvt:softwareAgent="Adobe Photoshop CC 2015"
-                    stEvt:when="{Date}2016-03-04T12:38:40.000+01:00"
+                    stEvt:when="{Date}2016-03-08T23:49:46.000+01:00"
                     xmpNodeType="xmpStruct"/>
                 <_x0032_
                     jcr:primaryType="nt:unstructured"
                     stEvt:action="saved"
                     stEvt:changed="/"
-                    stEvt:instanceID="xmp.iid:b7f6dc36-edf6-429c-bb4b-4b58e1f109a3"
+                    stEvt:instanceID="xmp.iid:1cc43c03-3ff3-473e-9105-ec194b82966e"
                     stEvt:softwareAgent="Adobe Photoshop CC 2015"
-                    stEvt:when="{Date}2016-03-04T12:38:40.000+01:00"
+                    stEvt:when="{Date}2016-03-08T23:49:46.000+01:00"
                     xmpNodeType="xmpStruct"/>
             </xmpMM:History>
         </metadata>
