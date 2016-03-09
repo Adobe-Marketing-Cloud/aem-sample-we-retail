@@ -119,13 +119,6 @@
                     <verbose>true</verbose>
                     <failOnError>true</failOnError>
                     <group>adobe/aem6/sample</group>
-                    <embeddeds>
-                        <embedded>
-                            <groupId>we</groupId>
-                            <artifactId>we.retail.core</artifactId>
-                            <target>/apps/we-retail/install</target>
-                        </embedded>
-                    </embeddeds>
                 </configuration>
             </plugin>
         </plugins>
