@@ -49,7 +49,8 @@
 }
 
 // Put hero image under header component if placed below it
-.header ~ .hero-image {
+.header ~ .hero-image,
+.header ~ .target .hero-image {
     position: relative;
     top: -1 * @header-height;
     margin-bottom: -1 * @header-height;
