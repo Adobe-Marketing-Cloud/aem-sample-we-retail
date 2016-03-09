@@ -89,7 +89,7 @@ public class SimilarToCurrentRelationshipsProvider implements ProductRelationshi
         if (currentPage != null) {
             InheritanceValueMap properties = new HierarchyNodeInheritanceValueMap(currentPage.getContentResource());
             String commerceProvider = properties.getInherited(CommerceConstants.PN_COMMERCE_PROVIDER, String.class);
-            if (commerceProvider != null && !commerceProvider.equals("geometrixx")) {
+            if (commerceProvider != null && !commerceProvider.equals("we-retail")) {
                 return null;
             }
         }
