@@ -3,7 +3,7 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:catalogBlueprint="/content/catalogs/we-retail/en/base-catalog"
-        cq:commerceProvider="geometrixx"
+        cq:commerceProvider="we-retail"
         cq:commerceType="section"
         cq:designPath="/etc/designs/we-retail"
         cq:lastModified="{Date}2016-03-08T14:48:33.552+01:00"
