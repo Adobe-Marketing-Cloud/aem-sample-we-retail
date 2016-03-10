@@ -2,8 +2,16 @@
     text-align: center;
 
     .form-control {
-        width: auto;
         display: inline-block;
         vertical-align: middle;
+
+        width: 60%;
+    }
+}
+
+@media (min-width: @screen-md-min) {
+    .we-FindStore .form-control {
+        width: auto;
+        min-width: 290px;
     }
 }
