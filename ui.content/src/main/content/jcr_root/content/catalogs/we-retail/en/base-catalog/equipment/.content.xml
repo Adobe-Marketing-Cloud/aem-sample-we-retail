@@ -11,11 +11,11 @@
         <target
             jcr:primaryType="nt:unstructured"
             jcr_title="Equipment">
-            <par jcr:primaryType="nt:unstructured">
-                <banner
+            <root jcr:primaryType="nt:unstructured">
+                <hero_image
                     jcr:primaryType="nt:unstructured"
-                    fileReference="/content/dam/geometrixx-outdoors/banners/snowboard-action.jpg"/>
-            </par>
+                    fileReference="/content/dam/we-retail/images/bg-jumbotron-2.jpg"/>
+            </root>
         </target>
     </jcr:content>
     <biking/>
