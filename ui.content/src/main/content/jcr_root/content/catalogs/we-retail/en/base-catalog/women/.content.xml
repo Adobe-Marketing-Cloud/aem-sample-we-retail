@@ -10,7 +10,13 @@
         sling:resourceType="commerce/components/catalog">
         <target
             jcr:primaryType="nt:unstructured"
-            jcr_title="Women"/>
+            jcr_title="Women">
+            <root jcr:primaryType="nt:unstructured">
+                <hero_image
+                    jcr:primaryType="nt:unstructured"
+                    fileReference="/content/dam/we-retail/images/bg-jumbotron-2.jpg"/>
+            </root>
+        </target>
     </jcr:content>
     <coats/>
     <pants/>
