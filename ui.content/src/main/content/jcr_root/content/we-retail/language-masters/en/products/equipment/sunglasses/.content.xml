@@ -4,9 +4,9 @@
     <jcr:content
         cq:catalogBlueprint="/content/catalogs/we-retail/en/base-catalog/equipment/sunglasses"
         cq:commerceType="section"
-        cq:lastModified="{Date}2016-03-09T18:14:58.109+01:00"
+        cq:lastModified="{Date}2016-03-10T13:08:16.817+01:00"
         cq:lastModifiedBy="admin"
-        cq:lastPropertyRollout="{Date}2016-03-09T18:14:58.109+01:00"
+        cq:lastPropertyRollout="{Date}2016-03-10T13:08:16.817+01:00"
         cq:template="/conf/we-retail/settings/wcm/templates/section-page"
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
@@ -27,6 +27,10 @@
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         width="2"/>
+                    <phone
+                        jcr:mixinTypes="[cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        width="12"/>
                 </cq:responsive>
                 <product_filter0
                     jcr:mixinTypes="[cq:LiveRelationship]"
@@ -51,6 +55,7 @@
                 displayAs="products"
                 listFrom="children"
                 orderBy="jcr:title"
+                ordered="{Boolean}true"
                 pageMax="0">
                 <cq:responsive
                     jcr:mixinTypes="[cq:LiveRelationship]"
@@ -59,6 +64,10 @@
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         width="10"/>
+                    <phone
+                        jcr:mixinTypes="[cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        width="12"/>
                 </cq:responsive>
             </product-grid>
             <responsivegrid
