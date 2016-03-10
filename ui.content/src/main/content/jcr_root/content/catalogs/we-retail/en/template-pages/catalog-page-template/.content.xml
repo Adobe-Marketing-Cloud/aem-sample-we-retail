@@ -21,6 +21,14 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/title"
                     type="h4"/>
+                <sections_list
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/foundation/components/list"
+                    displayAs="default"
+                    feedEnabled="{Boolean}true"
+                    listFrom="children"
+                    orderBy="jcr:title"
+                    pageMax="0"/>
                 <section_title_2
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Featured products"
