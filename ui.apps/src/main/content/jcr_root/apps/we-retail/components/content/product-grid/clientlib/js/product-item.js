@@ -131,7 +131,10 @@
         }
 
         prices.forEach(function (price) {
-            list[(parseInt(price / step, 10))].list.push(price);
+            var pos = Math.round(price / step, 10);
+            if (list[pos]) {
+                list[pos].list.push(price);
+            }
         });
 
         return list;
