@@ -7,15 +7,32 @@
         props: ['type']
     });
 
+    class FiltersStore {
+      constructor (data) {
+        this.data = data || {
+            color: [],
+            price: [],
+            size: []
+        }
+      }
+    };
+
+    we.filterStore = we.filterStore || new FiltersStore();
+
+
+    // Vue.config.debug = true;
+
     _.each(document.querySelectorAll('.product-filter'), function (el, index) {
         new Vue({
             parent: we.app,
             name: 'product-filter',
             el: el,
+            data: {
+                filters: we.filterStore.data
+            },
             ready: function () {
                 var vm = this;
 
-                vm.filters = vm.$parent.filters;
                 vm.$parent.activeFilters = {};
 
                 if (index === 0) {
@@ -38,6 +55,14 @@
                     }
 
                     this.$dispatch('show-product-item', this.$parent.activeFilters);
+                }
+            },
+            events: {
+                'grid-ready': function(filters) {
+                    console.log('grid ready', filters.color, this.filters);
+                    // this.filters.push(this.filters, filters.color);
+                    // debugger;
+
                 }
             }
         });

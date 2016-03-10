@@ -34,7 +34,7 @@
                 </span>
             </div>
             <div class="we-ProductFilter-values">
-                <div class="we-Product-radio marker checkbox-inline" v-for="color in $parent.filters.color" v-cloak>
+                <div class="we-Product-radio marker checkbox-inline" v-for="color in filters.color" v-cloak>
                     <label>
                         <input type="checkbox" name="product.color"
                                v-on:click="onFilterClick('color', color, $event)"
@@ -59,7 +59,7 @@
         </span>
             </div>
             <div class="we-ProductFilter-values">
-                <div class="checkbox" v-for="price in $parent.filters.price">
+                <div class="checkbox" v-for="price in filters.price">
                     <label>
                         <input type="checkbox"
                                v-on:click="onFilterClick('price', price.list, $event)">
@@ -81,7 +81,7 @@
         </span>
         </div>
         <div class="we-ProductFilter-values">
-            <div class="checkbox" v-for="size in $parent.filters.size">
+            <div class="checkbox" v-for="size in filters.size">
                 <label>
                     <input type="checkbox"
                            v-on:click="onFilterClick('size', size, $event)">
