@@ -4,9 +4,9 @@
     <jcr:content
         cq:catalogBlueprint="/content/catalogs/we-retail/en/base-catalog/equipment/sunglasses"
         cq:commerceType="section"
-        cq:lastModified="{Date}2016-03-10T13:38:10.789+01:00"
+        cq:lastModified="{Date}2016-03-10T13:44:55.871+01:00"
         cq:lastModifiedBy="admin"
-        cq:lastPropertyRollout="{Date}2016-03-10T13:38:10.789+01:00"
+        cq:lastPropertyRollout="{Date}2016-03-10T13:44:55.871+01:00"
         cq:template="/conf/we-retail/settings/wcm/templates/section-page"
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"

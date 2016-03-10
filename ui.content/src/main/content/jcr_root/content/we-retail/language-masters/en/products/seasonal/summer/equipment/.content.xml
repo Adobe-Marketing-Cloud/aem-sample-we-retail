@@ -4,9 +4,9 @@
     <jcr:content
         cq:catalogBlueprint="/content/catalogs/we-retail/en/base-catalog/seasonal/summer/equipment"
         cq:commerceType="section"
-        cq:lastModified="{Date}2016-03-10T13:38:10.954+01:00"
+        cq:lastModified="{Date}2016-03-10T13:44:56.036+01:00"
         cq:lastModifiedBy="admin"
-        cq:lastPropertyRollout="{Date}2016-03-10T13:38:10.953+01:00"
+        cq:lastPropertyRollout="{Date}2016-03-10T13:44:56.035+01:00"
         cq:template="/conf/we-retail/settings/wcm/templates/section-page"
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
