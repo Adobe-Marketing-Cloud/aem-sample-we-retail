@@ -37,6 +37,12 @@
         }
     }
 
+    &.aem-GridColumn {
+        .foundation-list-item {
+            width: percentage(@max_col/6/@max_col);
+        }
+    }
+
     &.aem-GridColumn--default--10 {
         .foundation-list-item {
             width: percentage(@max_col/5/@max_col);
@@ -44,12 +50,6 @@
             @media (max-width: @screen-sm-max) {
                 width: percentage(@max_col/2/@max_col);
             }
-        }
-    }
-
-    &.aem-GridColumn--default--12 {
-        .foundation-list-item {
-            width: percentage(@max_col/6/@max_col);
         }
     }
 
