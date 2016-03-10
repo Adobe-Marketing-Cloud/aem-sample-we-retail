@@ -137,8 +137,42 @@
     &--status {
         border-top: 0;
 
-        margin: 35px 0;
+        padding: 35px 0;
 
         line-height: 24px;
+
+        @media(max-width: @screen-sm-max) {
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 10px 0;
+            margin: 0;
+        }
+
+
+    }
+
+    @media(max-width: @screen-sm-max) {
+        .checkbox input[type=checkbox] {
+            background-color: rgba(255, 255, 255, 0.5);
+
+            &:checked {
+                background-color: @brand-primary;
+            }
+        }
+
+        &-collapsible:first-of-type {
+            display: none;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+
+            .product-filter-visible & {
+                display: block;
+            }
+        }
     }
 }

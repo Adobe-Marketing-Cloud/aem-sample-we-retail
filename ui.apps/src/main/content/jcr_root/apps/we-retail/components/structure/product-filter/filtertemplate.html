@@ -1,5 +1,5 @@
 <template data-sly-template.toggle="${@ item}">
-    <div class="we-ProductFilter we-ProductFilter--status">
+    <div class="we-ProductFilter we-ProductFilter--status" v-on:click="toggle">
         Filtering: <span class="we-ProductFilter-status">on</span>
     </div>
     <!-- /.we-ProductFilter--status -->
@@ -26,7 +26,7 @@
 
 <template data-sly-template.color="${@ item}">
     <we-product-filter type="color">
-        <div class="we-ProductFilter">
+        <div class="we-ProductFilter we-ProductFilter-collapsible">
             <div class="we-ProductFilter-header">
                 <span class="we-ProductFilter-name">Colors</span>
                 <span class="we-ProductFilter-toggle">
@@ -51,7 +51,7 @@
 
 <template data-sly-template.price="${@ item}">
     <we-product-filter type="price">
-        <div class="we-ProductFilter">
+        <div class="we-ProductFilter we-ProductFilter-collapsible">
             <div class="we-ProductFilter-header">
                 <span class="we-ProductFilter-name">Price</span>
         <span class="we-ProductFilter-toggle">
@@ -73,7 +73,7 @@
 </template>
 
 <template data-sly-template.size="${@ item}">
-    <div class="we-ProductFilter">
+    <div class="we-ProductFilter we-ProductFilter-collapsible">
         <div class="we-ProductFilter-header">
             <span class="we-ProductFilter-name">Sizes</span>
         <span class="we-ProductFilter-toggle">
