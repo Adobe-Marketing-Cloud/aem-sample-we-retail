@@ -55,14 +55,14 @@
                     }
 
                     this.$dispatch('show-product-item', this.$parent.activeFilters);
+                },
+                toggle: function() {
+                    we.app.$broadcast('toggle-filters');
                 }
             },
             events: {
-                'grid-ready': function(filters) {
-                    console.log('grid ready', filters.color, this.filters);
-                    // this.filters.push(this.filters, filters.color);
-                    // debugger;
-
+                'toggle-filters': function(filters) {
+                    this.$el.classList.toggle('product-filter-visible');
                 }
             }
         });
