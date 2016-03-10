@@ -29,13 +29,7 @@
             <filters_grid
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"
-                editable="{Boolean}true">
-                <cq:responsive jcr:primaryType="nt:unstructured">
-                    <default
-                        jcr:primaryType="nt:unstructured"
-                        width="2"/>
-                </cq:responsive>
-            </filters_grid>
+                editable="{Boolean}true"/>
 
             <section_title
                 jcr:primaryType="nt:unstructured"
@@ -45,6 +39,9 @@
                     <default
                         jcr:primaryType="nt:unstructured"
                         width="8"/>
+                    <phone
+                        jcr:primaryType="nt:unstructured"
+                        width="12"/>
                 </cq:responsive>
             </section_title>
 
@@ -57,6 +54,9 @@
                     <default
                         jcr:primaryType="nt:unstructured"
                         width="2"/>
+                    <phone
+                        jcr:primaryType="nt:unstructured"
+                        behavior="hide"/>
                 </cq:responsive>
             </product_filter>
 

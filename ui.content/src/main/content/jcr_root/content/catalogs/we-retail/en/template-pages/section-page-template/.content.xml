@@ -17,6 +17,9 @@
                     <default
                         jcr:primaryType="nt:unstructured"
                         width="2"/>
+                    <phone
+                        jcr:primaryType="nt:unstructured"
+                        width="12"/>
                 </cq:responsive>
                 <product_filter0
                     jcr:primaryType="nt:unstructured"
@@ -38,11 +41,15 @@
                     displayAs="products"
                     listFrom="children"
                     orderBy="jcr:title"
+                    ordered="{Boolean}true"
                     pageMax="0">
                 <cq:responsive jcr:primaryType="nt:unstructured">
                     <default
-                            jcr:primaryType="nt:unstructured"
-                            width="10"/>
+                        jcr:primaryType="nt:unstructured"
+                        width="10"/>
+                    <phone
+                        jcr:primaryType="nt:unstructured"
+                        width="12"/>
                 </cq:responsive>
             </product-grid>
 
