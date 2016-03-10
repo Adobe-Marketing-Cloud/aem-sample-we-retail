@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-03-10T13:38:10.693+01:00"
+        cq:lastModified="{Date}2016-03-10T13:44:55.778+01:00"
         cq:lastModifiedBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/eq/eqwn/eqwnkl"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"

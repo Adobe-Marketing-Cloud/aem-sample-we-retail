@@ -14,6 +14,7 @@
             <root jcr:primaryType="nt:unstructured">
                 <hero_image
                     jcr:primaryType="nt:unstructured"
+                    title="Seasonal"
                     fileReference="/content/dam/we-retail/images/bg-jumbotron-2.jpg"/>
             </root>
         </target>
