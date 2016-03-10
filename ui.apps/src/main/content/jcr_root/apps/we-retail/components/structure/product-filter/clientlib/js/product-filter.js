@@ -7,14 +7,12 @@
         props: ['type']
     });
 
-    class FiltersStore {
-      constructor (data) {
+    var FiltersStore = function(data) {
         this.data = data || {
             color: [],
             price: [],
             size: []
         }
-      }
     };
 
     we.filterStore = we.filterStore || new FiltersStore();
