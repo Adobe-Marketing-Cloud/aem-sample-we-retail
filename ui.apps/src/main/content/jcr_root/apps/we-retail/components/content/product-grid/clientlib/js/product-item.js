@@ -4,7 +4,7 @@
     window.we = window.we || {};
 
     var parentEl;
-    Vue.config.debug = true
+    // Vue.config.debug = true
 
     Vue.component('we-product-item', {
         props: [
@@ -91,11 +91,8 @@
 
                 if (vm.isVisible) {
                     vm.$el.parentNode.classList.remove('hidden');
-                    //parentEl.appendChild(vm.$el.parentNode);
-                }
-                else {
+                } else {
                     vm.$el.parentNode.classList.add('hidden');
-                    //vm.$el.parentNode.remove();
                 }
             }
         }
@@ -107,14 +104,12 @@
             name: 'product-grid',
             el: el,
             data: {
-                filters: {}
+                filters: we.filterStore.data
             },
             ready: function () {
                 if (this.filters.price) {
                     this.filters.price = getPriceList(this.filters.price);
                 }
-
-                this.$parent.filters = this.filters;
 
                 parentEl = this.$el.querySelector('.foundation-ordered-list-container');
             }
