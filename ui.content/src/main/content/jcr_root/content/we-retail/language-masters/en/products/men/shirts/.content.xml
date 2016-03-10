@@ -4,9 +4,9 @@
     <jcr:content
         cq:catalogBlueprint="/content/catalogs/we-retail/en/base-catalog/men/shirts"
         cq:commerceType="section"
-        cq:lastModified="{Date}2016-03-10T13:44:55.092+01:00"
+        cq:lastModified="{Date}2016-03-10T14:21:11.438+01:00"
         cq:lastModifiedBy="admin"
-        cq:lastPropertyRollout="{Date}2016-03-10T13:44:55.091+01:00"
+        cq:lastPropertyRollout="{Date}2016-03-10T14:21:11.438+01:00"
         cq:template="/conf/we-retail/settings/wcm/templates/section-page"
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
