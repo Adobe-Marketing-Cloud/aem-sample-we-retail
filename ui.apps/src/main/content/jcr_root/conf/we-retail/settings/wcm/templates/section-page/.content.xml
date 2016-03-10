@@ -6,6 +6,6 @@
         cq:lastModifiedBy="admin"
         cq:templateType="/conf/we-retail/settings/wcm/template-types/html5page"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Product Page"
+        jcr:title="Section Page"
         status="enabled"/>
 </jcr:root>
