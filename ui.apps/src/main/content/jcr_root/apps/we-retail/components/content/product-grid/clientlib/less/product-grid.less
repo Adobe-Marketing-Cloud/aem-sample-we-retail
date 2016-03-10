@@ -73,20 +73,25 @@
         max-width: 100vw;
         overflow: hidden;
 
-        .foundation-ordered-list-container {
+        ul.foundation-ordered-list-container {
             left: 0;
             width: 9999em;
             overflow: hidden;
             position: relative;
+            font-size: @font-size-base;
+            margin: 0 (@grid-gutter-width/-2);
 
             transition: left .25s;
+
+            .foundation-list-item {
+                width: 50vw;
+                float: left;
+                display: block;
+                clear: none;
+            }
         }
 
-        .foundation-list-item {
-            width: 50vw;
-            float: left;
-            display: block;
-        }
+
 
         .generate-mobile-pagination(2, 5);
     }
