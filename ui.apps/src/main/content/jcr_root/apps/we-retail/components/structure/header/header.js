@@ -37,7 +37,7 @@ use(function () {
     var pageManager = resolver.adaptTo(com.day.cq.wcm.api.PageManager);
     var resourcePage = pageManager.getContainingPage(resource);
 
-    var rootLevel = properties.get("rootLevel") || currentStyle.get("rootLevel") || 3;
+    var rootLevel = properties.get("rootLevel", 3);
 
     var root = resourcePage.getAbsoluteParent(rootLevel);
     var currentNavPath = currentPage && currentPage.getPath();
