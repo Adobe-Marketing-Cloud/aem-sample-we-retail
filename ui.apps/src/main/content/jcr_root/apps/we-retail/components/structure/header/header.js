@@ -37,6 +37,10 @@ use(function () {
     var pageManager = resolver.adaptTo(com.day.cq.wcm.api.PageManager);
     var resourcePage = pageManager.getContainingPage(resource);
 
+    if (resourcePage.getPath().startsWith("/conf/")) {
+        resourcePage = currentPage;
+    }
+
     var rootLevel = properties.get("rootLevel", 3);
 
     var root = resourcePage.getAbsoluteParent(rootLevel);
