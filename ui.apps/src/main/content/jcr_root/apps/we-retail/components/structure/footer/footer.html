@@ -29,47 +29,23 @@
 				</div>
 			</div>
 
-			<div class="col-md-2 col-xs-4">
-				<ul class="we-Footer-nav">
-					<li>
-						<h2>
-							<a href="#">Store</a>
-						</h2>
-						<ul>
-							<li><a href="#">Man</a></li>
-							<li><a href="#">Woman</a></li>
-							<li><a href="#">Activities</a></li>
-						</ul>
-					</li>
-				</ul>
+			<div class="col-md-6 col-xs-12">
+				<sly data-sly-list.item="${footer.items}">
+					<div class="col-lg-3 col-md-3 col-xs-4">
+						<div class="we-Footer-nav">
+							<h2>
+								<a href="${ item.page.path }.html">${item.page.title}</a>
+							</h2>
+							<ul data-sly-list.subitem="${item.children}">
+								<li>
+									<a href="${ subitem.page.path }.html">${subitem.page.title}</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</sly>
 			</div>
-			<div class="col-md-2 col-xs-4">
-				<ul class="we-Footer-nav">
-					<li>
-						<h2>
-							<a href="${footer.communityHome}.html">Community</a>
-						</h2>
-						<ul>
-							<li><a href="${footer.communityBlog}.html">Blogs</a></li>
-							<li><a href="${footer.communityForum}.html">Discussions</a></li>
-							<li><a href="#">Product reviews</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<div class="col-md-2 col-xs-4">
-				<ul class="we-Footer-nav">
-					<li>
-						<h2>
-							<a href="#">About</a>
-						</h2>
-						<ul>
-							<li><a href="#">Brand</a></li>
-							<li><a href="${footer.communitySupport}.html">Support</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
+
 			<div class="col-md-2 col-xs-12 we-Footer-section">
 				<ul class="we-Footer-nav we-Footer-nav--inline">
 					<li>
