@@ -22,6 +22,16 @@
                         name="./theme"
                         text="Use dark theme"
                         value="inverse"/>
+                    <rootLevel
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                        min="0"
+                        max="100"
+                        step="1"
+                        fieldDescription="(eg: 1 for /content/site)"
+                        name="./rootLevel"
+                        value="3"
+                        fieldLabel="Absolute root level"/>
                 </items>
             </column>
         </items>
