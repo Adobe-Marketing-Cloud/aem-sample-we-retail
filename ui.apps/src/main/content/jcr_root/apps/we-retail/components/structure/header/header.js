@@ -33,12 +33,22 @@ use(function () {
 		communityQA = communitySetup + '&returnURL=' + communityQA + '.html#top';
 	}
     var items = [];
-    var root = currentPage.getAbsoluteParent(3);
-    var currentNav = currentPage.getAbsoluteParent(4);
-    var currentNavPath = currentNav && currentNav.getPath();
+
+    var pageManager = resolver.adaptTo(com.day.cq.wcm.api.PageManager);
+    var resourcePage = pageManager.getContainingPage(resource);
+
+    var rootLevel = properties.get("rootLevel") || currentStyle.get("rootLevel") || 3;
+
+    var root = resourcePage.getAbsoluteParent(rootLevel);
+    var currentNavPath = currentPage && currentPage.getPath();
     var languageRoot = "#";
     var languages = [], currentLanguage = {};
 
+    /**
+     * Get list of pages
+     * _root - root node to start listing from
+     * level - how deep to get into the tree
+     */
     var getPages = function(_root, level) {
         if (level === 0) {
             return null;
@@ -80,7 +90,7 @@ use(function () {
                 selected: rootPath.equals(page.getPath())
             });
         }
- 
+
         return items;
     };
 
