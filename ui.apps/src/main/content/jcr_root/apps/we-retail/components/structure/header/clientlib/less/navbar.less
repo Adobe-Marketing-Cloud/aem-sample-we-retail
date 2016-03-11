@@ -261,6 +261,14 @@
 
             text-transform: none;
         }
+        &.active > a {
+            .navbar-default & {
+                color: @navbar-default-link-active-color;
+            }
+            .navbar-inverse & {
+                color: @navbar-inverse-link-active-color;
+            }
+        }
     }
 
     .navbar-default & {
