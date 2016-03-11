@@ -75,6 +75,15 @@
                                                     renderReadOnly="{Boolean}true"
                                                     text="Hide Sub Items in Navigation"
                                                     value="true"/>
+                                            <navroot
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    allowBulkEdit="{Boolean}true"
+                                                    cq-msm-lockable="navRoot"
+                                                    name="./navRoot"
+                                                    renderReadOnly="{Boolean}true"
+                                                    text="Navigation Root Node"
+                                                    value="true"/>
                                             <charset
                                                     jcr:primaryType="nt:unstructured"
                                                     sling:resourceType="granite/ui/components/foundation/form/hidden"
