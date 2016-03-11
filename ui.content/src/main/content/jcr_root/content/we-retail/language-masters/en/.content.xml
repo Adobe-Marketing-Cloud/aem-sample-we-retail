@@ -340,7 +340,10 @@
         </root>
     </jcr:content>
     <experience/>
-    <products/>
+    <equipment/>
+    <men/>
+    <women/>
     <communities/>
     <about-us/>
+    <products/>
 </jcr:root>
