@@ -23,6 +23,7 @@ use(function () {
     var PROP_HIDE_IN_NAV = "hideInNav";
     var PROP_HIDE_SUB_IN_NAV = "hideSubItemsInNav";
 
+    var PROP_NAV_ROOT = "navRoot";
 
     var items = [];
 
@@ -33,12 +34,22 @@ use(function () {
         resourcePage = currentPage;
     }
 
-    var rootLevel = properties.get("rootLevel", 3);
+    var isRoot = function(page) {
+        var res = page.getContentResource(),
+            vm = res.adaptTo(org.apache.sling.api.resource.ValueMap);
 
-    var root = resourcePage.getAbsoluteParent(rootLevel);
-    var currentNavPath = currentPage && currentPage.getPath();
-    var languageRoot = "#";
-    var languages = [], currentLanguage = {};
+        return vm.get(PROP_NAV_ROOT, java.lang.Boolean);
+    }
+
+    var findRoot = function(resourcePage) {
+        var currentPage = resourcePage;
+
+        while(currentPage && !isRoot(currentPage)) {
+            currentPage = currentPage.getParent();
+        }
+
+        return currentPage;
+    }
 
     /**
      * Get list of pages
@@ -79,7 +90,6 @@ use(function () {
 
     var resolveRedirect = function(pageValueMap) {
         var path = pageValueMap.get(PROP_REDIRECT_TARGET);
-        log.error("Redirect " + path);
         return pageManager.getPage(path);
     };
 
@@ -106,6 +116,12 @@ use(function () {
 
         return items;
     };
+
+
+    var root = findRoot(resourcePage);
+    var currentNavPath = currentPage && currentPage.getPath();
+    var languageRoot = "#";
+    var languages = [], currentLanguage = {};
 
     if (root) {
         items = getPages(root, 2);
