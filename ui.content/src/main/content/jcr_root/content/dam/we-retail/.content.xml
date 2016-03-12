@@ -6,9 +6,7 @@
     <jcr:content
         jcr:primaryType="nt:unstructured"
         jcr:title="We.Retail"/>
-    <images/>
     <articles/>
     <experiences/>
-    <activities/>
     <products/>
 </jcr:root>

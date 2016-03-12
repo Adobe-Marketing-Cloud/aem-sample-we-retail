@@ -6,7 +6,7 @@
 	<filter root="/content/we-retail/community" mode="merge" />
 
 	<filter root="/content/dam/we-retail" />
-	<filter root="/content/dam/collections/we-retail" />
+	<filter root="/content/dam/collections/w/we-retail" />
 
 	<filter root="/content/catalogs/we-retail" />
 	<filter root="/content/campaigns/we-retail" />
