@@ -15,7 +15,7 @@
                 <hero_image
                     jcr:primaryType="nt:unstructured"
                     title="Equipment"
-                    fileReference="/content/dam/we-retail/images/bg-jumbotron-2.jpg"/>
+                    fileReference="/content/dam/we-retail/activities/hiking-camping/trekker-ama-dablam.jpg"/>
             </root>
         </target>
     </jcr:content>
