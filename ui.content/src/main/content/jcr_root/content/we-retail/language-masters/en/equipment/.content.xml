@@ -1,14 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-03-07T17:32:10.926+01:00"
+        cq:lastModified="{Date}2016-03-13T22:49:58.125+01:00"
         cq:lastModifiedBy="admin"
-        cq:template="/conf/we-retail/settings/wcm/templates/redirect-page"
+        cq:template="/conf/we-retail/settings/wcm/templates/hero-page"
         jcr:primaryType="cq:PageContent"
         jcr:title="Equipment"
-        sling:redirect="{Boolean}true"
-        sling:redirectStatus="{Long}302"
-        sling:resourceType="foundation/components/redirect"
-        redirectTarget="/content/we-retail/language-masters/en/products/equipment"/>
+        sling:resourceType="we-retail/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <hero_image
+                jcr:created="{Date}2016-01-13T15:58:04.452+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-03-13T22:08:41.293+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/hero-image"
+                fileReference="/content/dam/we-retail/activities/biking/forest-trail.jpg"
+                useFullWidth="true"/>
+            <responsivegrid
+                jcr:created="{Date}2016-01-13T15:58:09.854+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="2016-01-13T15:58:50.877+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <title
+                    jcr:created="{Date}2016-03-13T22:23:47.781+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-03-13T22:24:20.515+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Welcome our finest equipment"
+                    sling:resourceType="we-retail/components/content/title"/>
+                <category_teaser
+                    jcr:created="{Date}2016-03-13T22:24:38.037+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-03-13T22:33:35.441+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/category-teaser"
+                    buttonLinkTo="/content/we-retail/language-masters/en/products/equipment/hiking"
+                    fileReference="/content/dam/we-retail/activities/hiking-camping/hiker-anapurna.jpg">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            width="6"/>
+                    </cq:responsive>
+                </category_teaser>
+                <category_teaser_2082536754
+                    jcr:created="{Date}2016-03-13T22:26:12.795+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-03-13T22:33:53.251+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/category-teaser"
+                    buttonLinkTo="/content/we-retail/language-masters/en/products/equipment/running"
+                    fileReference="/content/dam/we-retail/activities/running/running-trail-man.jpg">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            width="6"/>
+                    </cq:responsive>
+                </category_teaser_2082536754>
+                <category_teaser_647414391
+                    jcr:created="{Date}2016-03-13T22:34:05.050+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-03-13T22:34:47.379+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/category-teaser"
+                    buttonLinkTo="/content/we-retail/language-masters/en/products/equipment/biking"
+                    fileReference="/content/dam/we-retail/activities/biking/enduro-trail-jump.jpg">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            width="4"/>
+                    </cq:responsive>
+                </category_teaser_647414391>
+                <category_teaser_1341949589
+                    jcr:created="{Date}2016-03-13T22:34:06.967+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-03-13T22:36:22.801+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/category-teaser"
+                    buttonLinkTo="/content/we-retail/language-masters/en/products/equipment/surfing"
+                    fileReference="/content/dam/we-retail/activities/surfing/wave-nicaragua.jpg">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            width="4"/>
+                    </cq:responsive>
+                </category_teaser_1341949589>
+                <category_teaser_1398042708
+                    jcr:created="{Date}2016-03-13T22:34:08.754+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-03-13T22:38:09.647+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/category-teaser"
+                    buttonLinkTo="/content/we-retail/language-masters/en/products/equipment/skiing"
+                    fileReference="/content/dam/we-retail/activities/skiing/freeride-steep.jpg">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            width="4"/>
+                    </cq:responsive>
+                </category_teaser_1398042708>
+                <title_2112313717
+                    jcr:created="{Date}2016-03-13T22:38:53.025+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-03-13T22:39:24.153+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Featured products"
+                    sling:resourceType="we-retail/components/content/title"/>
+                <product_grid
+                    jcr:created="{Date}2016-03-13T22:39:31.722+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-03-13T22:49:58.120+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/product-grid"
+                    displayAs="products"
+                    feedEnabled="{Boolean}true"
+                    limit="6"
+                    listFrom="static"
+                    orderBy="jcr:title"
+                    pageMax="0"
+                    pages="[/content/we-retail/language-masters/en/products/equipment/biking/sparrow,/content/we-retail/language-masters/en/products/equipment/running/mombassa-runners,/content/we-retail/language-masters/en/products/equipment/biking/tacna,/content/we-retail/language-masters/en/products/equipment/sunglasses/timor,/content/we-retail/language-masters/en/products/equipment/surfing/lagos-mini-longboard,/content/we-retail/language-masters/en/products/equipment/running/marka-sport]"
+                    tagsMatch="any"/>
+                <title_419694046
+                    jcr:created="{Date}2016-03-13T22:38:54.789+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-03-13T22:46:39.371+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Winter is coming, get ready"
+                    sling:resourceType="we-retail/components/content/title"/>
+                <category_teaser_643606949
+                    jcr:created="{Date}2016-03-13T22:42:30.581+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-03-13T22:43:37.689+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/category-teaser"
+                    buttonLinkTo="/content/we-retail/language-masters/en/products/equipment/skiing"
+                    fileReference="/content/dam/we-retail/activities/skiing/freeride-extreme.jpg">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            width="6"/>
+                    </cq:responsive>
+                </category_teaser_643606949>
+                <category_teaser_883210151
+                    jcr:created="{Date}2016-03-13T22:42:33.168+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-03-13T22:44:29.149+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/category-teaser"
+                    buttonLabel="Snowboarding"
+                    buttonLinkTo="/content/we-retail/language-masters/en/products/equipment/skiing"
+                    fileReference="/content/dam/we-retail/activities/skiing/freeride-siberia.jpg">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            width="6"/>
+                    </cq:responsive>
+                </category_teaser_883210151>
+            </responsivegrid>
+        </root>
+    </jcr:content>
 </jcr:root>
