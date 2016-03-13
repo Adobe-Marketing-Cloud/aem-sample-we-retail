@@ -48,7 +48,7 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/category-teaser"
                     buttonLabel="Women"
-                    buttonLinkTo="/content/we-retail/language-masters/en/products/women"
+                    buttonLinkTo="/content/we-retail/language-masters/en/women"
                     fileReference="/content/dam/we-retail/activities/running/running-woods-woman.jpg">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
@@ -67,7 +67,7 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/category-teaser"
                     buttonLabel="Men"
-                    buttonLinkTo="/content/we-retail/language-masters/en/products/men"
+                    buttonLinkTo="/content/we-retail/language-masters/en/men"
                     fileReference="/content/dam/we-retail/activities/biking/rocks-downhill.jpg">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
@@ -86,7 +86,7 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/category-teaser"
                     buttonLabel="Equipment"
-                    buttonLinkTo="/content/we-retail/language-masters/en/products/equipment"
+                    buttonLinkTo="/content/we-retail/language-masters/en/equipment"
                     fileReference="/content/dam/we-retail/activities/climbing/climber-gear-rope.jpg">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
