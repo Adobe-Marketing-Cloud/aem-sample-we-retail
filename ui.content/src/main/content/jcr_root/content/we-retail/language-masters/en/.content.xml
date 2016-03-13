@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
-    <activitystreams/>
-    <commmunities/>
     <jcr:content
-        cq:lastModified="{Date}2016-02-25T22:29:14.788+01:00"
+        cq:lastModified="{Date}2016-03-13T00:27:22.874+01:00"
         cq:lastModifiedBy="admin"
         cq:lastReplicated="{Date}2015-09-20T19:51:21.401+02:00"
         cq:lastReplicatedBy="admin"
@@ -20,14 +18,14 @@
             <hero_image
                 jcr:created="{Date}2016-01-13T15:58:04.452+01:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2016-01-13T15:59:53.549+01:00"
+                jcr:lastModified="{Date}2016-03-12T22:55:47.756+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/hero-image"
                 buttonLabel="Shop Now"
                 buttonLinkTo="/content/we-retail/language-masters/en/products/seasonal/winter"
-                fileReference="/content/dam/we-retail/images/bg-jumbotron-1.jpg"
-                heading="All-new winter collection 2016"
+                fileReference="/content/dam/we-retail/activities/hiking-camping/trekker-khumbu-valley.jpg"
+                heading="All-new winter collection"
                 keepRatio="true"
                 title="Built for the coldest winter on earth"
                 useFullWidth="true"/>
@@ -37,21 +35,21 @@
                 <section_title_496791378
                     jcr:created="{Date}2015-11-04T00:47:33.815+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-09T21:42:03.989+01:00"
+                    jcr:lastModified="{Date}2016-03-12T23:00:08.594+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    jcr:title="Fight the cold with the world's finest gear"
+                    jcr:title="Discover the Finest Gear"
                     sling:resourceType="we-retail/components/content/title"/>
                 <category_teaser
                     jcr:created="{Date}2015-11-03T23:52:30.703+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-02-25T22:28:48.332+01:00"
+                    jcr:lastModified="{Date}2016-03-12T23:27:34.034+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/category-teaser"
                     buttonLabel="Women"
                     buttonLinkTo="/content/we-retail/language-masters/en/products/women"
-                    fileReference="/content/dam/we-retail/images/bg-women.png">
+                    fileReference="/content/dam/we-retail/activities/running/running-woods-woman.jpg">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
                             jcr:primaryType="nt:unstructured"
@@ -64,13 +62,13 @@
                 <category_teaser_859708776
                     jcr:created="{Date}2015-11-04T00:10:12.400+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-02-25T22:29:02.436+01:00"
+                    jcr:lastModified="{Date}2016-03-12T22:58:28.666+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/category-teaser"
                     buttonLabel="Men"
                     buttonLinkTo="/content/we-retail/language-masters/en/products/men"
-                    fileReference="/content/dam/we-retail/images/bg-men.png">
+                    fileReference="/content/dam/we-retail/activities/biking/rocks-downhill.jpg">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
                             jcr:primaryType="nt:unstructured"
@@ -83,13 +81,13 @@
                 <category_teaser_465639357
                     jcr:created="{Date}2015-11-04T00:10:50.268+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-02-25T22:29:14.783+01:00"
+                    jcr:lastModified="{Date}2016-03-12T22:58:59.708+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/category-teaser"
                     buttonLabel="Equipment"
                     buttonLinkTo="/content/we-retail/language-masters/en/products/equipment"
-                    fileReference="/content/dam/we-retail/images/bg-equipment.png">
+                    fileReference="/content/dam/we-retail/activities/climbing/climber-gear-rope.jpg">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
                             jcr:primaryType="nt:unstructured"
@@ -159,10 +157,10 @@
                 <section_title
                     jcr:created="{Date}2015-11-04T00:47:00.581+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-04T00:47:09.764+01:00"
+                    jcr:lastModified="{Date}2016-03-12T22:59:54.084+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    jcr:title="Featured products"
+                    jcr:title="Featured Products"
                     sling:resourceType="we-retail/components/content/title"/>
                 <products_grid
                     jcr:created="{Date}2015-11-03T23:39:56.441+01:00"
@@ -183,10 +181,10 @@
                 <section_title_431279162
                     jcr:created="{Date}2015-11-04T00:51:12.388+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-04T00:51:20.147+01:00"
+                    jcr:lastModified="{Date}2016-03-12T22:59:27.898+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    jcr:title="The latest on We.Retail"
+                    jcr:title="Our Top Stories"
                     sling:resourceType="we-retail/components/content/title"/>
                 <articles_list
                     jcr:created="{Date}2015-11-23T21:44:37.256+01:00"
@@ -203,15 +201,6 @@
                     pageMax="0"
                     parentPage="/content/we-retail/language-masters/en/experience"
                     tagsMatch="any"/>
-                <button
-                    jcr:created="{Date}2015-11-09T22:32:54.989+01:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-09T22:35:32.943+01:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/button"
-                    label="More stories"
-                    linkTo="/content/we-retail/language-masters/en/experience.html"/>
                 <section_title_239098915
                     jcr:created="{Date}2015-11-04T00:51:38.275+01:00"
                     jcr:createdBy="admin"
@@ -236,106 +225,68 @@
                     pageMax="0"
                     pages="[/content/we-retail/language-masters/en/products/equipment/skiing/banff-snow,/content/we-retail/language-masters/en/products/seasonal/winter/apparel/hats/montreal-snow,/content/we-retail/language-masters/en/products/equipment/skiing/calgary-winter,/content/we-retail/language-masters/en/products/women/coats/saskatoon-parka,/content/we-retail/language-masters/en/products/equipment/skiing/tobermory-snow,/content/we-retail/language-masters/en/products/equipment/skiing/mont-tremblant]"
                     tagsMatch="any"/>
-                <content_container
-                    jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
+                <section_title_239098
+                    jcr:created="{Date}2015-11-04T00:51:38.275+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
+                    jcr:lastModified="{Date}2016-03-12T23:01:01.238+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/layout-container-bg"
-                    containerCSSClass="we-CommunitySection width-full"
-                    fileReference="/content/dam/we-retail/images/bg-community-section.jpg">
-                    <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="wcm/foundation/components/responsivegrid">
-                        <section_title
-                            jcr:created="{Date}2015-11-09T18:18:29.185+01:00"
-                            jcr:createdBy="admin"
-                            jcr:lastModified="{Date}2015-11-09T18:18:35.911+01:00"
-                            jcr:lastModifiedBy="admin"
+                    jcr:title="Join our Community"
+                    sling:resourceType="we-retail/components/content/title"/>
+                <category_teaser_984780047
+                    jcr:created="{Date}2016-03-12T23:01:13.861+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-03-12T23:01:57.017+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/category-teaser"
+                    buttonLabel="Blog"
+                    fileReference="/content/dam/we-retail/activities/hiking-camping/camp-summer-night.jpg">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="Discover our community"
-                            sling:resourceType="we-retail/components/content/title"/>
-                        <community_teaser
-                            jcr:created="{Date}2015-11-09T22:48:13.875+01:00"
-                            jcr:createdBy="admin"
-                            jcr:lastModified="{Date}2015-11-09T22:49:07.567+01:00"
-                            jcr:lastModifiedBy="admin"
+                            width="4"/>
+                        <phone
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/community-teaser"
-                            buttonLabel="Andreas Fransson on the Mont Blanc"
-                            fileReference="/content/dam/we-retail/images/bg-community-1.jpg">
-                            <cq:responsive jcr:primaryType="nt:unstructured">
-                                <default
-                                    jcr:primaryType="nt:unstructured"
-                                    width="4"/>
-                                <phone
-                                    jcr:primaryType="nt:unstructured"
-                                    width="12"/>
-                            </cq:responsive>
-                        </community_teaser>
-                        <community_teaser_284461310
-                            jcr:created="{Date}2015-11-09T22:49:18.827+01:00"
-                            jcr:createdBy="admin"
-                            jcr:lastModified="{Date}2015-11-09T22:49:36.695+01:00"
-                            jcr:lastModifiedBy="admin"
+                            width="12"/>
+                    </cq:responsive>
+                </category_teaser_984780047>
+                <category_teaser_305030210
+                    jcr:created="{Date}2016-03-12T23:01:15.249+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-03-12T23:02:33.924+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/category-teaser"
+                    buttonLabel="Forum"
+                    fileReference="/content/dam/we-retail/activities/climbing/ice-climbing-group.jpg">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/community-teaser"
-                            buttonLabel="Andreas Fransson on the Mont Blanc"
-                            fileReference="/content/dam/we-retail/images/bg-community-2.jpg">
-                            <cq:responsive jcr:primaryType="nt:unstructured">
-                                <default
-                                    jcr:primaryType="nt:unstructured"
-                                    width="4"/>
-                                <phone
-                                    jcr:primaryType="nt:unstructured"
-                                    behavior="hide"/>
-                            </cq:responsive>
-                        </community_teaser_284461310>
-                        <community_teaser_2140519054
-                            jcr:created="{Date}2015-11-09T22:49:24.359+01:00"
-                            jcr:createdBy="admin"
-                            jcr:lastModified="{Date}2015-11-09T22:49:44.198+01:00"
-                            jcr:lastModifiedBy="admin"
+                            width="4"/>
+                        <phone
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/community-teaser"
-                            buttonLabel="Andreas Fransson on the Mont Blanc"
-                            fileReference="/content/dam/we-retail/images/bg-community-3.jpg">
-                            <cq:responsive jcr:primaryType="nt:unstructured">
-                                <default
-                                    jcr:primaryType="nt:unstructured"
-                                    width="4"/>
-                                <phone
-                                    jcr:primaryType="nt:unstructured"
-                                    behavior="hide"/>
-                            </cq:responsive>
-                        </community_teaser_2140519054>
-                        <button
-                            jcr:created="{Date}2015-11-09T22:42:05.600+01:00"
-                            jcr:createdBy="admin"
-                            jcr:lastModified="{Date}2015-11-09T22:42:12.458+01:00"
-                            jcr:lastModifiedBy="admin"
+                            width="12"/>
+                    </cq:responsive>
+                </category_teaser_305030210>
+                <category_teaser_1388037983
+                    jcr:created="{Date}2016-03-12T23:01:16.541+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-03-12T23:03:13.208+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/content/category-teaser"
+                    buttonLabel="Q&amp;A"
+                    fileReference="/content/dam/we-retail/activities/biking/group-mountain-bikers.jpg">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/button"
-                            label="More stories"/>
-                    </par>
-                </content_container>
-                <footer_content_container
-                        jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
-                        jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
-                        jcr:lastModifiedBy="admin"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/layout-container-bg"
-                        containerCSSClass="width-full">
-                    <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="wcm/foundation/components/responsivegrid">
-                        <find_store
+                            width="4"/>
+                        <phone
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/find-store"/>
-                    </par>
-                </footer_content_container>
+                            width="12"/>
+                    </cq:responsive>
+                </category_teaser_1388037983>
             </responsivegrid>
         </root>
     </jcr:content>

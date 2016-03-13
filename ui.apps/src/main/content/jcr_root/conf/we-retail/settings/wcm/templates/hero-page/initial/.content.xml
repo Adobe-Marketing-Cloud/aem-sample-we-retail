@@ -11,12 +11,10 @@
             <hero_image
                 jcr:created="{Date}2016-01-13T15:58:04.452+01:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2016-03-09T01:08:46.649+01:00"
+                jcr:lastModified="{Date}2016-03-12T23:51:43.533+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/hero-image"
-                fileReference="/content/dam/we-retail/activities/hiking-camping/trekker-ama-dablam.jpg"
-                title="Hero Page"
                 useFullWidth="true"/>
             <responsivegrid
                 jcr:created="{Date}2016-01-13T15:58:09.854+01:00"
@@ -24,71 +22,7 @@
                 jcr:lastModified="2016-01-13T15:58:50.877+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid">
-                <category_teaser
-                    jcr:created="{Date}2016-01-13T16:00:19.769+01:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-03-09T01:10:08.858+01:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/category-teaser"
-                    buttonLabel="Section 1"
-                    fileReference="/content/dam/we-retail/activities/hiking-camping/alpinists-himalayas.jpg">
-                    <cq:responsive jcr:primaryType="nt:unstructured">
-                        <default
-                            jcr:primaryType="nt:unstructured"
-                            width="4"/>
-                        <tablet
-                            jcr:primaryType="nt:unstructured"
-                            width="6"/>
-                        <phone
-                            jcr:primaryType="nt:unstructured"
-                            width="12"/>
-                    </cq:responsive>
-                </category_teaser>
-                <category_teaser_1139395855
-                    jcr:created="{Date}2016-01-13T16:00:21.904+01:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-03-09T01:13:29.345+01:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/category-teaser"
-                    buttonLabel="Section 2"
-                    fileReference="/content/dam/we-retail/activities/hiking-camping/alpinists-rochefort-ridge.jpg">
-                    <cq:responsive jcr:primaryType="nt:unstructured">
-                        <default
-                            jcr:primaryType="nt:unstructured"
-                            width="4"/>
-                        <tablet
-                            jcr:primaryType="nt:unstructured"
-                            width="6"/>
-                        <phone
-                            jcr:primaryType="nt:unstructured"
-                            width="12"/>
-                    </cq:responsive>
-                </category_teaser_1139395855>
-                <category_teaser_1523558966
-                    jcr:created="{Date}2016-01-13T16:00:25.184+01:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-03-09T01:12:48.222+01:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/category-teaser"
-                    buttonLabel="Section 3"
-                    fileReference="/content/dam/we-retail/activities/hiking-camping/trekker-khumbu-valley.jpg">
-                    <cq:responsive jcr:primaryType="nt:unstructured">
-                        <default
-                            jcr:primaryType="nt:unstructured"
-                            width="4"/>
-                        <tablet
-                            jcr:primaryType="nt:unstructured"
-                            width="12"/>
-                        <phone
-                            jcr:primaryType="nt:unstructured"
-                            width="12"/>
-                    </cq:responsive>
-                </category_teaser_1523558966>
-            </responsivegrid>
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
         </root>
     </jcr:content>
 </jcr:root>
