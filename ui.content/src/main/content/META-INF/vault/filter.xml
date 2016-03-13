@@ -12,6 +12,7 @@
 	<filter root="/content/campaigns/we-retail" />
 
 	<filter root="/etc/commerce/products/we-retail" />
+    <filter root="/etc/tags/we-retail"/>
 	<filter root="/etc/community/we-retail" />
 
 </workspaceFilter>
