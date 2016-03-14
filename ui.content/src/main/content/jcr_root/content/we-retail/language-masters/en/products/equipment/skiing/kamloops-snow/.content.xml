@@ -2,8 +2,10 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-03-10T14:21:12.132+01:00"
+        cq:lastModified="{Date}2016-03-14T21:31:25.199+01:00"
         cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2016-03-14T21:31:25.403+01:00"
+        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/eq/eqwn/eqwnkm"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -12,15 +14,21 @@
         jcr:title="Kamloops Snow"
         sling:resourceType="we-retail/components/structure/page">
         <root
+            cq:lastRolledout="{Date}2016-03-14T21:31:25.236+01:00"
+            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
+                cq:lastRolledout="{Date}2016-03-14T21:31:25.268+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
+                cq:lastRolledout="{Date}2016-03-14T21:31:25.269+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:lastModified="{Date}2016-03-10T14:21:12.132+01:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
@@ -28,174 +36,212 @@
                 productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnkm">
                 <eqwnkm-7
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:25.324+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnkm/size-7">
                     <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:25.333+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.377Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Kamloops.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:25.334+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqwnkm-7>
                 <eqwnkm-8
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:25.334+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnkm/size-8">
                     <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:25.344+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.377Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Kamloops.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:25.345+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqwnkm-8>
                 <eqwnkm-9
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:25.345+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnkm/size-9">
                     <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:25.355+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.377Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Kamloops.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:25.356+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqwnkm-9>
                 <eqwnkm-10
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:25.356+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnkm/size-10">
                     <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:25.366+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.377Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Kamloops.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:25.367+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqwnkm-10>
                 <eqwnkm-11
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:25.367+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnkm/size-11">
                     <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:25.377+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.377Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Kamloops.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:25.377+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqwnkm-11>
                 <eqwnkm-12
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:25.378+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnkm/size-12">
                     <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:25.388+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.377Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Kamloops.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:25.388+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqwnkm-12>
                 <eqwnkm-13
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:25.389+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/eqwn/eqwnkm/size-13">
                     <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:25.399+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.377Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/footwear/Kamloops.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:25.399+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqwnkm-13>
                 <image
+                    cq:lastRolledout="{Date}2016-03-14T21:31:25.400+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2015-01-26T12:28:08.377Z"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="commerce/components/product/image"
                     fileReference="/content/dam/geometrixx-outdoors/products/footwear/Kamloops.jpg"/>
                 <assets
+                    cq:lastRolledout="{Date}2016-03-14T21:31:25.400+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/assets"/>
             </product>
             <responsivegrid
+                cq:lastRolledout="{Date}2016-03-14T21:31:25.401+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
+                cq:lastRolledout="{Date}2016-03-14T21:31:25.401+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
+                cq:lastRolledout="{Date}2016-03-14T21:31:25.401+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
+                cq:lastRolledout="{Date}2016-03-14T21:31:25.402+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
+                cq:lastRolledout="{Date}2016-03-14T21:31:25.402+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-recommendation"/>
-            <footer_content_container
-                jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
-                jcr:lastModifiedBy="admin"
-                jcr:mixinTypes="[cq:LiveRelationship]"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/layout-container-bg">
-                <par
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/foundation/components/responsivegrid">
-                    <find_store
-                        jcr:mixinTypes="[cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/find-store"/>
-                </par>
-            </footer_content_container>
         </root>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"
