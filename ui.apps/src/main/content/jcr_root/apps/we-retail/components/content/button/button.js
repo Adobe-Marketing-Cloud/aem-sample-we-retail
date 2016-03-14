@@ -15,13 +15,13 @@
  */
 
 use(function () {
-	var linkTo = properties.get("linkTo", "#");
+    var linkTo = properties.get("linkTo", "#");
 
-	if (linkTo != "#") {
-		linkTo += ".html";
-	}
-	
+    if (linkTo != "#") {
+        linkTo += ".html";
+    }
+    
     return {
-    	linkTo: linkTo
+        linkTo: linkTo
     };
 });

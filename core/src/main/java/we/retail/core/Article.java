@@ -31,17 +31,17 @@ import com.day.cq.tagging.TagManager;
  */
 @Model(adaptables = {Resource.class})
 public class Article {
-	
-	static Logger LOGGER = LoggerFactory.getLogger(Article.class); 
+    
+    static Logger LOGGER = LoggerFactory.getLogger(Article.class); 
 
-	private static final String CONTENT_FRAGMENT_REF_PATH = "root/responsivegrid/content_fragment/fileReference";
+    private static final String CONTENT_FRAGMENT_REF_PATH = "root/responsivegrid/content_fragment/fileReference";
 
-	private static final String METADATA_PATH = "jcr:content/metadata";
-	private static final String AUTHOR_REF_PATH = METADATA_PATH + "/" + JcrConstants.JCR_LAST_MODIFIED_BY;
-	private static final String LAST_MODIFIED_PATH = METADATA_PATH + "/" + DamConstants.DC_MODIFIED;
+    private static final String METADATA_PATH = "jcr:content/metadata";
+    private static final String AUTHOR_REF_PATH = METADATA_PATH + "/" + JcrConstants.JCR_LAST_MODIFIED_BY;
+    private static final String LAST_MODIFIED_PATH = METADATA_PATH + "/" + DamConstants.DC_MODIFIED;
 
-	private static final String MAIN_ELEMENT = "main";
-	private static final String TEASER_VARIATION = "teaser";
+    private static final String MAIN_ELEMENT = "main";
+    private static final String TEASER_VARIATION = "teaser";
 
     @Inject
     @SlingObject
@@ -52,109 +52,109 @@ public class Article {
     @Default(values = "")
     public String title;
 
-	@ResourcePath(name=JcrConstants.JCR_CONTENT + "/" + CONTENT_FRAGMENT_REF_PATH, optional = true)
-	protected ContentFragment contentFragment;
+    @ResourcePath(name=JcrConstants.JCR_CONTENT + "/" + CONTENT_FRAGMENT_REF_PATH, optional = true)
+    protected ContentFragment contentFragment;
 
     public Resource resource;
     
     public Article(Resource resource) {
-    	this.resource = resource;
+        this.resource = resource;
     }
 
-	public String getTeaser() {
-		String teaser = null;
+    public String getTeaser() {
+        String teaser = null;
 
-		if (contentFragment != null) {
-			ContentElement element = contentFragment.getElement(MAIN_ELEMENT);
-			if (element != null) {
-				ContentVariation variation = element.getVariation(TEASER_VARIATION);
+        if (contentFragment != null) {
+            ContentElement element = contentFragment.getElement(MAIN_ELEMENT);
+            if (element != null) {
+                ContentVariation variation = element.getVariation(TEASER_VARIATION);
 
-				if (variation != null) {
-					teaser = variation.getContent();
-				}
-			}
-		}
+                if (variation != null) {
+                    teaser = variation.getContent();
+                }
+            }
+        }
 
-		return teaser;
-	}
+        return teaser;
+    }
 
 
 
     public String getImagePath() {
-    	String path = resource.getPath() + ".thumb.319.319.png";
+        String path = resource.getPath() + ".thumb.319.319.png";
 
-    	Resource heroImageResource = resource.getChild(JcrConstants.JCR_CONTENT + "/root/hero_image");
-		if (heroImageResource != null) {
-			String heroFileReference = heroImageResource.adaptTo(ValueMap.class).get("fileReference", String.class);
+        Resource heroImageResource = resource.getChild(JcrConstants.JCR_CONTENT + "/root/hero_image");
+        if (heroImageResource != null) {
+            String heroFileReference = heroImageResource.adaptTo(ValueMap.class).get("fileReference", String.class);
 
-			if (heroFileReference != null) {
-				path = heroFileReference;
-			}
-		}
+            if (heroFileReference != null) {
+                path = heroFileReference;
+            }
+        }
 
-    	Resource thumbnailImageResource = resource.getChild(JcrConstants.JCR_CONTENT + "/image");
-		if (thumbnailImageResource != null) {
-			String thumbnailFileReference = thumbnailImageResource.adaptTo(ValueMap.class).get("fileReference", String.class);
+        Resource thumbnailImageResource = resource.getChild(JcrConstants.JCR_CONTENT + "/image");
+        if (thumbnailImageResource != null) {
+            String thumbnailFileReference = thumbnailImageResource.adaptTo(ValueMap.class).get("fileReference", String.class);
 
-			if (thumbnailFileReference != null) {
-				path = thumbnailFileReference;
-			}
-		}
-		
-    	return path;
+            if (thumbnailFileReference != null) {
+                path = thumbnailFileReference;
+            }
+        }
+        
+        return path;
     }
 
     public List<Tag> getTags() {
         List<Tag> tags = new ArrayList<Tag>();
         TagManager tagManager = resourceResolver.adaptTo(TagManager.class);
         
-		if(contentFragment != null) {
-			Object[] tagIds = (Object[]) contentFragment.getMetaData().get("cq:tags");
+        if(contentFragment != null) {
+            Object[] tagIds = (Object[]) contentFragment.getMetaData().get("cq:tags");
 
-			for (Object cqTag : tagIds) {
-				tags.add(tagManager.resolve(cqTag.toString()));
-			}
-		}
+            for (Object cqTag : tagIds) {
+                tags.add(tagManager.resolve(cqTag.toString()));
+            }
+        }
         return tags;
     }
     
     public Profile getAuthor() {
-    	Profile author = null;
+        Profile author = null;
 
-    	try {
-	    	if(contentFragment != null) {
-		    	// TODO: find the right property to get the author id from
-				Resource contentFragmentResource = contentFragment.adaptTo(Resource.class);
-				ValueMap contentFragmentProperties = contentFragmentResource.getValueMap();
+        try {
+            if(contentFragment != null) {
+                // TODO: find the right property to get the author id from
+                Resource contentFragmentResource = contentFragment.adaptTo(Resource.class);
+                ValueMap contentFragmentProperties = contentFragmentResource.getValueMap();
 
-		    	String authorId = contentFragmentProperties.get(AUTHOR_REF_PATH, String.class);
+                String authorId = contentFragmentProperties.get(AUTHOR_REF_PATH, String.class);
 
-				if (authorId != null) {
-					UserManager userManager = resourceResolver.adaptTo(UserManager.class);
-					String authorPath = userManager.getAuthorizable(authorId).getPath();
+                if (authorId != null) {
+                    UserManager userManager = resourceResolver.adaptTo(UserManager.class);
+                    String authorPath = userManager.getAuthorizable(authorId).getPath();
 
-					author = resourceResolver.getResource(authorPath).adaptTo(Profile.class);
-				}
-	    	}
-	    }
-		catch (RepositoryException ex) {
-			LOGGER.error("Error getting article author", ex);
-		}
+                    author = resourceResolver.getResource(authorPath).adaptTo(Profile.class);
+                }
+            }
+        }
+        catch (RepositoryException ex) {
+            LOGGER.error("Error getting article author", ex);
+        }
 
-    	return author;
+        return author;
     }
     
     public String getModified() {
-    	String result = null;
+        String result = null;
 
-		if(contentFragment != null) {
-			Resource contentFragmentResource = contentFragment.adaptTo(Resource.class);
-			ValueMap contentFragmentProperties = contentFragmentResource.getValueMap();
+        if(contentFragment != null) {
+            Resource contentFragmentResource = contentFragment.adaptTo(Resource.class);
+            ValueMap contentFragmentProperties = contentFragmentResource.getValueMap();
 
-			Date modified = contentFragmentProperties.get(LAST_MODIFIED_PATH, Date.class);
-			result = new SimpleDateFormat("MMM dd, YYYY", Locale.US).format(modified);
-		}
-    	
-    	return result;
+            Date modified = contentFragmentProperties.get(LAST_MODIFIED_PATH, Date.class);
+            result = new SimpleDateFormat("MMM dd, YYYY", Locale.US).format(modified);
+        }
+        
+        return result;
     }
 }
