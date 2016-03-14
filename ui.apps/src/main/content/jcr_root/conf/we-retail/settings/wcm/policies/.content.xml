@@ -12,7 +12,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="We.Retail Default Layout Container"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[group:We.Retail,/libs/wcm/foundation/components/text,/libs/wcm/foundation/components/image,/libs/wcm/foundation/components/title,/libs/wcm/foundation/components/list,/libs/wcm/foundation/components/responsivegrid,/libs/dam/cfm/components/contentfragment]"
+                        components="[group:We.Retail,/libs/wcm/foundation/components/text,/libs/wcm/foundation/components/image,/libs/wcm/foundation/components/title,/libs/wcm/foundation/components/list,/libs/wcm/foundation/components/responsivegrid,/apps/we-retail/components/content/content-fragment]"
                         policyResourceType="wcm/foundation/components/responsivegrid">
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -55,7 +55,7 @@
                                     assetGroup="media"
                                     assetMimetype="text/html"
                                     droptarget="fragment"
-                                    resourceType="dam/cfm/components/contentfragment"
+                                    resourceType="we-retail/components/content/content-fragment"
                                     type="Content Fragment"/>
                             </assetToComponentMapping>
                         </cq:authoring>
@@ -67,7 +67,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="We.Retail Structure"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[group:We.Retail,group:We.Retail.Structure,/libs/wcm/foundation/components/text,/libs/wcm/foundation/components/image,/libs/wcm/foundation/components/title,/libs/wcm/foundation/components/list,/libs/wcm/foundation/components/responsivegrid,/libs/dam/cfm/components/contentfragment]"
+                        components="[group:We.Retail,group:We.Retail.Structure,/libs/wcm/foundation/components/text,/libs/wcm/foundation/components/image,/libs/wcm/foundation/components/title,/libs/wcm/foundation/components/list,/libs/wcm/foundation/components/responsivegrid,/apps/we-retail/components/content/content-fragment]"
                         policyResourceType="wcm/foundation/components/responsivegrid">
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -110,7 +110,7 @@
                                     assetGroup="media"
                                     assetMimetype="text/html"
                                     droptarget="fragment"
-                                    resourceType="dam/cfm/components/contentfragment"
+                                    resourceType="we-retail/components/content/content-fragment"
                                     type="Content Fragment"/>
                             </assetToComponentMapping>
                         </cq:authoring>

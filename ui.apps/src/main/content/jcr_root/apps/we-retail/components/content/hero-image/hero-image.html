@@ -20,7 +20,7 @@
         <div class="container cq-dd-image">
             <div class="we-HeroImage-wrapper">
                 <p>${properties.heading}</p>
-                <strong class="we-HeroImage-title">${properties.title}</strong>
+                <strong class="we-HeroImage-title">${properties.title || currentPage.title}</strong>
 
                 <p data-sly-test="${properties.buttonLabel && properties.buttonLinkTo}">
                     <a class="btn btn-primary btn-action" href="${properties.buttonLinkTo}.html" role="button">${properties.buttonLabel}</a>

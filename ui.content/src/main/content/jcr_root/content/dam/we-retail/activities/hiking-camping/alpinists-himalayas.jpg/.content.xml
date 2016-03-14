@@ -38,7 +38,6 @@
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
-            jcr:title="Alpinists Himalayas"
             photoshop:ColorMode="{Long}3"
             tiff:BitsPerSample="[8,8,8,8,8,8]"
             tiff:BitsPerSample_xmpArrayType="rdf:Seq"
@@ -51,7 +50,7 @@
             tiff:XResolution="300"
             tiff:YResolution="300"
             xmp:CreateDate="{Date}2016-03-02T15:57:16.000+01:00"
-            xmp:CreatorTool="Adobe Photoshop CC 2015"
+            xmp:CreatorTool="Adobe Photoshop CC 2015 (Macintosh)"
             xmp:MetadataDate="{Date}2016-03-04T12:38:44.000+01:00"
             xmp:ModifyDate="{Date}2016-03-04T12:38:44.000+01:00"
             xmpMM:DocumentID="adobe:docid:photoshop:133acc4e-228c-1179-9fe2-dd6814746362"
@@ -67,7 +66,7 @@
                     stEvt:action="saved"
                     stEvt:changed="/"
                     stEvt:instanceID="xmp.iid:e52a4079-46a9-47e6-829c-24cd32e3f441"
-                    stEvt:softwareAgent="Adobe Photoshop CC 2015"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2015 (Macintosh)"
                     stEvt:when="{Date}2016-03-04T12:38:44.000+01:00"
                     xmpNodeType="xmpStruct"/>
                 <_x0032_
@@ -75,7 +74,7 @@
                     stEvt:action="saved"
                     stEvt:changed="/"
                     stEvt:instanceID="xmp.iid:0e4ef9f1-d0aa-49d1-ac64-2d2d712c7363"
-                    stEvt:softwareAgent="Adobe Photoshop CC 2015"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2015 (Macintosh)"
                     stEvt:when="{Date}2016-03-04T12:38:44.000+01:00"
                     xmpNodeType="xmpStruct"/>
             </xmpMM:History>

@@ -5,7 +5,6 @@
     </filter>
     
     <filter root="/conf/we-retail"/>
-    <filter root="/etc/tags/we-retail"/>
     <filter root="/etc/designs/we-retail"/>
     <filter root="/etc/clientlibs/we-retail"/>
     <filter root="/etc/cloudservices/dynamictagmanagement/we-retail-dtm"/>

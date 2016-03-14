@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Arctic Surfing in Lofoten">
+        <folderThumbnail/>
+    </jcr:content>
+    <arctic-surfing-in-lofoten/>
+    <camp-fire.jpg/>
+    <camp-tent.jpg/>
+    <fjord-waves.jpg/>
+    <inspecting-surfboard.jpg/>
+    <majestic-rainbow.jpg/>
+    <northern-lights.jpg/>
+    <surfer-back-from-the-ocean.jpg/>
+    <surfer-ready-to-go.jpg/>
+    <surfer-wave-01.jpg/>
+    <surfer-wave-02.jpg/>
+</jcr:root>

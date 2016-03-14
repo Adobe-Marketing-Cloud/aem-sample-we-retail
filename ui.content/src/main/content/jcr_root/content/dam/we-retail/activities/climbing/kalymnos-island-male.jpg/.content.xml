@@ -38,7 +38,6 @@
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
-            jcr:title="Kalymnos Island"
             photoshop:ColorMode="{Long}3"
             tiff:BitsPerSample="[8,8,8,8,8,8]"
             tiff:BitsPerSample_xmpArrayType="rdf:Seq"
@@ -51,7 +50,7 @@
             tiff:XResolution="300"
             tiff:YResolution="300"
             xmp:CreateDate="{Date}2016-02-09T15:39:19.000+01:00"
-            xmp:CreatorTool="Adobe Photoshop CC 2015"
+            xmp:CreatorTool="Adobe Photoshop CC 2015 (Macintosh)"
             xmp:MetadataDate="{Date}2016-03-08T23:49:39.000+01:00"
             xmp:ModifyDate="{Date}2016-03-08T23:49:39.000+01:00"
             xmpMM:DocumentID="adobe:docid:photoshop:775fb8f8-260e-1179-a410-b2db021fd2b8"
@@ -67,7 +66,7 @@
                     stEvt:action="saved"
                     stEvt:changed="/"
                     stEvt:instanceID="xmp.iid:0ecb7c33-ac44-44a0-bf97-71afce48b0ad"
-                    stEvt:softwareAgent="Adobe Photoshop CC 2015"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2015 (Macintosh)"
                     stEvt:when="{Date}2016-03-08T23:49:39.000+01:00"
                     xmpNodeType="xmpStruct"/>
                 <_x0032_
@@ -75,7 +74,7 @@
                     stEvt:action="saved"
                     stEvt:changed="/"
                     stEvt:instanceID="xmp.iid:78f3b340-1d80-4956-b93d-c1b28e2a56cd"
-                    stEvt:softwareAgent="Adobe Photoshop CC 2015"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2015 (Macintosh)"
                     stEvt:when="{Date}2016-03-08T23:49:39.000+01:00"
                     xmpNodeType="xmpStruct"/>
             </xmpMM:History>

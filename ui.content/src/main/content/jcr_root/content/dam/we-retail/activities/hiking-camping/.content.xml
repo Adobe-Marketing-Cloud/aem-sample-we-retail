@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="sling:Folder">
-    <jcr:content
-        cq:lastModified="{Date}2016-03-04T13:35:13.961+01:00"
-        cq:lastModifiedBy="admin"
-        jcr:primaryType="nt:unstructured"
-        jcr:title="Hiking Camping"/>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <jcr:content/>
+    <alpinists-cornice.jpg/>
+    <alpinists-descending.jpg/>
+    <alpinists-himalayas.jpg/>
+    <alpinists-mer-de-glace.jpg/>
+    <alpinists-rochefort-ridge.jpg/>
+    <camp-larkya-pass.jpg/>
+    <camp-summer-night.jpg/>
+    <climber-la-torre-di-toblin.jpg/>
+    <hiker-altai.jpg/>
+    <hiker-anapurna.jpg/>
+    <hiker-himalayas.jpg/>
+    <trekker-ama-dablam.jpg/>
+    <trekker-khumbu-valley.jpg/>
+    <trekker-woman-smiling.jpg/>
+    <trekkers-everst.jpg/>
 </jcr:root>

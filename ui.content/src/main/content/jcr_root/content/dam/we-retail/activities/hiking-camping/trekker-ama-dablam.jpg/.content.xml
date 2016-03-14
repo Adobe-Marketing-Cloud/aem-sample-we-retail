@@ -35,7 +35,6 @@
             jcr:lastModifiedBy="admin"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"
-            jcr:title="Trekker Ama Dablam"
             photoshop:ColorMode="{Long}3"
             tiff:BitsPerSample="[8,8,8,8,8,8]"
             tiff:BitsPerSample_xmpArrayType="rdf:Seq"
@@ -48,7 +47,7 @@
             tiff:XResolution="300"
             tiff:YResolution="300"
             xmp:CreateDate="{Date}2016-03-02T16:03:09.000+01:00"
-            xmp:CreatorTool="Adobe Photoshop CC 2015"
+            xmp:CreatorTool="Adobe Photoshop CC 2015 (Macintosh)"
             xmp:MetadataDate="{Date}2016-03-04T12:38:41.000+01:00"
             xmp:ModifyDate="{Date}2016-03-04T12:38:41.000+01:00"
             xmpMM:DocumentID="adobe:docid:photoshop:11b39c0c-228c-1179-9fe2-dd6814746362"
@@ -64,7 +63,7 @@
                     stEvt:action="saved"
                     stEvt:changed="/"
                     stEvt:instanceID="xmp.iid:fe1377f4-1acf-4e1c-a89f-2008f51994ae"
-                    stEvt:softwareAgent="Adobe Photoshop CC 2015"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2015 (Macintosh)"
                     stEvt:when="{Date}2016-03-04T12:38:41.000+01:00"
                     xmpNodeType="xmpStruct"/>
                 <_x0032_
@@ -72,7 +71,7 @@
                     stEvt:action="saved"
                     stEvt:changed="/"
                     stEvt:instanceID="xmp.iid:7570c3e7-531e-4a04-823a-4c07d0c0bc8a"
-                    stEvt:softwareAgent="Adobe Photoshop CC 2015"
+                    stEvt:softwareAgent="Adobe Photoshop CC 2015 (Macintosh)"
                     stEvt:when="{Date}2016-03-04T12:38:41.000+01:00"
                     xmpNodeType="xmpStruct"/>
             </xmpMM:History>
