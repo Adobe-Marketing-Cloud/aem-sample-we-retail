@@ -25,6 +25,8 @@ use(function () {
 
     var PROP_NAV_ROOT = "navRoot";
 
+    var SIGN_IN_PATH = "/content/we-retail/community/en/signin/j_security_check";
+
     var items = [];
 
     var pageManager = resolver.adaptTo(com.day.cq.wcm.api.PageManager);
@@ -141,7 +143,8 @@ use(function () {
     var theme = properties.get("theme", "default");
 
     return {
-		currentPath: currentPage.getPath(),
+		currentPath: resourcePage.getPath(),
+		signInPath: SIGN_IN_PATH,
 		items: items,
         theme: theme,
         languageRoot: languageRoot,
