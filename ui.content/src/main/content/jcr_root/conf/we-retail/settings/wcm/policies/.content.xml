@@ -12,7 +12,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Default"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[group:We.Retail,/libs/wcm/foundation/components/text,/libs/wcm/foundation/components/image,/libs/wcm/foundation/components/title,/libs/wcm/foundation/components/list,/libs/wcm/foundation/components/responsivegrid,/apps/we-retail/components/content/content-fragment]"
+                        components="[group:We.Retail,/libs/wcm/foundation/components/responsivegrid]"
                         policyResourceType="wcm/foundation/components/responsivegrid">
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -21,7 +21,7 @@
                                     assetGroup="media"
                                     assetMimetype="image/*"
                                     droptarget="image"
-                                    resourceType="wcm/foundation/components/image"
+                                    resourceType="we-retail/components/content/image"
                                     type="Images"/>
                                 <product
                                     jcr:primaryType="nt:unstructured"
@@ -67,7 +67,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Structure"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[group:We.Retail,group:We.Retail.Structure,/libs/wcm/foundation/components/text,/libs/wcm/foundation/components/image,/libs/wcm/foundation/components/title,/libs/wcm/foundation/components/list,/libs/wcm/foundation/components/responsivegrid,/apps/we-retail/components/content/content-fragment]"
+                        components="[group:We.Retail,group:We.Retail.Structure,/libs/wcm/foundation/components/responsivegrid]"
                         policyResourceType="wcm/foundation/components/responsivegrid">
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -76,7 +76,7 @@
                                     assetGroup="media"
                                     assetMimetype="image/*"
                                     droptarget="image"
-                                    resourceType="wcm/foundation/components/image"
+                                    resourceType="we-retail/components/content/image"
                                     type="Images"/>
                                 <product
                                     jcr:primaryType="nt:unstructured"
