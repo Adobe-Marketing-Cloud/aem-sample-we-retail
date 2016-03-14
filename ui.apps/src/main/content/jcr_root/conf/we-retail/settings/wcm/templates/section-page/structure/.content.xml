@@ -16,7 +16,6 @@
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/header"/>
-
             <breadcrumb
                 jcr:created="{Date}2016-03-08T14:56:20.538+01:00"
                 jcr:createdBy="admin"
@@ -25,12 +24,10 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"
                 editable="{Boolean}false"/>
-
             <filters_grid
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"
                 editable="{Boolean}true"/>
-
             <section_title
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/title"
@@ -44,12 +41,11 @@
                         width="12"/>
                 </cq:responsive>
             </section_title>
-
             <product_filter
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-filter"
-                type="sort"
-                editable="{Boolean}false">
+                editable="{Boolean}false"
+                type="sort">
                 <cq:responsive jcr:primaryType="nt:unstructured">
                     <default
                         jcr:primaryType="nt:unstructured"
@@ -59,22 +55,20 @@
                         behavior="hide"/>
                 </cq:responsive>
             </product_filter>
-
             <product-grid
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/product-grid"
                 displayAs="products"
+                editable="{Boolean}true"
                 listFrom="children"
                 orderBy="jcr:title"
-                pageMax="0"
-                editable="{Boolean}true">
+                pageMax="0">
                 <cq:responsive jcr:primaryType="nt:unstructured">
                     <default
                         jcr:primaryType="nt:unstructured"
                         width="10"/>
                 </cq:responsive>
             </product-grid>
-
             <responsivegrid
                 jcr:created="{Date}2016-01-13T15:58:09.854+01:00"
                 jcr:createdBy="admin"
@@ -83,7 +77,6 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"
                 editable="{Boolean}true"/>
-
             <footer_content_container
                 jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
                 jcr:createdBy="admin"
@@ -93,7 +86,6 @@
                 sling:resourceType="we-retail/components/content/layout-container-bg"
                 containerCSSClass="we-FooterSection width-full"
                 editable="{Boolean}true"/>
-
             <footer
                 jcr:created="{Date}2016-01-13T15:58:16.080+01:00"
                 jcr:createdBy="admin"

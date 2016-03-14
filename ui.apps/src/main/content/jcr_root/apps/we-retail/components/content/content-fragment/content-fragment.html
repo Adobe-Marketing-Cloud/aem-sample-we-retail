@@ -1,0 +1,34 @@
+<!--/*
+
+  ADOBE CONFIDENTIAL
+  __________________
+
+   Copyright 2015 Adobe Systems Incorporated
+   All Rights Reserved.
+
+  NOTICE:  All information contained herein is, and remains
+  the property of Adobe Systems Incorporated and its suppliers,
+  if any.  The intellectual and technical concepts contained
+  herein are proprietary to Adobe Systems Incorporated and its
+  suppliers and are protected by trade secret or copyright law.
+  Dissemination of this information or reproduction of this material
+  is strictly forbidden unless prior written permission is obtained
+  from Adobe Systems Incorporated.
+
+  Displays an Element of Content Fragment
+*/-->
+<div data-sly-use.fragment="ContentFragmentUsePojo" class="${fragment.cssClass}" data-emptytext="Content Fragment">
+    <div data-sly-list="${fragment.paragraphs}">
+        <p>${item @ context="html"}</p>
+        <div data-sly-resource="${'par{0}' @ format=itemList.index, resourceType='wcm/foundation/components/responsivegrid'}"></div>
+    </div>
+    <span data-sly-test="${wcmmode.edit}" class="cq-contentfragment-details"
+          data-fragment-title="${fragment.title}"
+          data-fragment-path="${fragment.path}"
+          data-fragment-element="${fragment.element}"
+          data-fragment-variation="${fragment.variation}">
+        <span class="cq-contentfragment-associatedcontent" data-sly-list="${fragment.associatedContent}">
+            <span class="cq-contentfragment-associatedcontent-item" data-title="${item.title}" data-path="${item.path}"></span>
+        </span>
+    </span>
+</div>

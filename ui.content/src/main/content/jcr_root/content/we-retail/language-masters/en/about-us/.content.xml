@@ -2,23 +2,31 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2015-09-23T21:22:40.212+02:00"
+        cq:lastModified="{Date}2016-03-13T11:20:37.777+01:00"
         cq:lastModifiedBy="admin"
-        cq:template="/apps/we-retail/templates/page-content"
+        cq:template="/conf/we-retail/settings/wcm/templates/hero-page"
         jcr:primaryType="cq:PageContent"
         jcr:title="About Us"
         sling:resourceType="we-retail/components/structure/page">
-        <par
+        <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
-            <text
+            <hero_image
+                jcr:created="{Date}2016-01-13T15:58:04.452+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-03-13T11:20:37.776+01:00"
+                jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/text"
-                text="&lt;p>This is a content page&lt;/p>"
-                textIsRich="true"/>
-        </par>
+                sling:resourceType="we-retail/components/content/hero-image"
+                fileReference="/content/dam/we-retail/activities/hiking-camping/trekker-ama-dablam.jpg"
+                useFullWidth="true"/>
+            <responsivegrid
+                jcr:created="{Date}2016-01-13T15:58:09.854+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="2016-01-13T15:58:50.877+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+        </root>
     </jcr:content>
-    <contact-us/>
-    <press-releases/>
-    <investor-relations/>
 </jcr:root>
