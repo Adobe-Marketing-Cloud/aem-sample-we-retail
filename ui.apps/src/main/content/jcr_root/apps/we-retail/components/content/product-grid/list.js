@@ -445,7 +445,7 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
             if (query) {
                 var searchResult = query.getResult();
                 if (searchResult && searchResult.getHits) {
-                	var hitsIterator = searchResult.getHits().iterator();
+                    var hitsIterator = searchResult.getHits().iterator();
                     
                     _deferredCollectSearchItems(hitsIterator).then(function (itemList) {
                         _addItems(resultPromise, itemList, listConfig);
@@ -633,7 +633,7 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
             log.debug("Building list from child items");
             resultPromise = _addChildItems(listConfig);
         } else if (listConfig.source == CONST.SOURCE_DESCENDANTS) {
-        	log.debug("Building list from descendant items");
+            log.debug("Building list from descendant items");
             resultPromise = _addDescendantItems(listConfig);
         } else if (listConfig.source == CONST.SOURCE_SEARCH) {
             // simple search
