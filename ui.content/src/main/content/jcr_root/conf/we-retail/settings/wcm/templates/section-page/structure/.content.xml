@@ -35,26 +35,12 @@
                 <cq:responsive jcr:primaryType="nt:unstructured">
                     <default
                         jcr:primaryType="nt:unstructured"
-                        width="8"/>
+                        width="12"/>
                     <phone
                         jcr:primaryType="nt:unstructured"
                         width="12"/>
                 </cq:responsive>
             </section_title>
-            <product_filter
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/structure/product-filter"
-                editable="{Boolean}false"
-                type="sort">
-                <cq:responsive jcr:primaryType="nt:unstructured">
-                    <default
-                        jcr:primaryType="nt:unstructured"
-                        width="2"/>
-                    <phone
-                        jcr:primaryType="nt:unstructured"
-                        behavior="hide"/>
-                </cq:responsive>
-            </product_filter>
             <product-grid
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/product-grid"
