@@ -9,9 +9,15 @@ use(function () {
         , commerceService = resource.adaptTo(com.adobe.cq.commerce.api.CommerceService)
         , commerceSession = commerceService.login(request, response)
         , productPage = global.pageManager.getContainingPage(granite.resource.path)
-        , productPath = productPage.getProperties().get("cq:productMaster", java.lang.String)
-        , productResource = resolver.getResource(productPath)
-        , baseProduct = commerceService.getProduct(productPath)
+    	, productPath = productPage.getProperties().get("cq:productMaster", java.lang.String);
+    
+    var productResource = resolver.getResource(productPath);
+    
+    if(productResource == null) {
+    	return null; 
+	}
+
+    var baseProduct = commerceService.getProduct(productPath)
         , productData = productResource.adaptTo(org.apache.sling.api.resource.ValueMap)
         , imageResource = resolver.getResource(productPage.getProperties().get("cq:productMaster", java.lang.String) + "/image")
         , variationAxis = baseProduct.getProperty("cq:productVariantAxes", java.lang.String)
