@@ -181,3 +181,32 @@
 [v-cloak] {
     display: none;
 }
+
+//== Aspect Ratio
+.crop {
+
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+
+    &.crop-16_9:before {
+        padding-top: 56.25%;
+    }
+
+    &__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        text-align: center;
+        vertical-align: middle;
+    }
+}
