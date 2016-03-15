@@ -34,21 +34,37 @@
     img {
         width: 100%;
         min-height: 100%;
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
         background-color: @placeholder-bg-color;
     }
-    
-    h2 {
+
+    h2, h3 {
         &:extend(.text-uppercase);
 
-        font-size: @font-size-h2;
-        font-weight: 900;
         color: @jumbotron-color;
         display: block;
 
         margin: 0;
         position: absolute;
-        top: 20%;
+
         left: 20px;
+    }
+
+    h2 {
+        top: 25%;
+        font-size: @font-size-h2;
+        font-weight: 900;
+    }
+
+    h3 {
+        top: 30%;
+        font-size: @font-size-h3;
+        font-weight: 300;
     }
 
     p {
