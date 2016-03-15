@@ -34,22 +34,6 @@
             <similar_products
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-recommendation"/>
-            <footer_content_container
-                    jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/layout-container-bg"
-                    containerCSSClass="we-FooterSection width-full">
-                <par
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="wcm/foundation/components/responsivegrid">
-                    <find_store
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/find-store"/>
-                </par>
-            </footer_content_container>
         </root>
     </jcr:content>
 </jcr:root>

@@ -30,8 +30,8 @@ use(function () {
 
     var pageManager = resolver.adaptTo(com.day.cq.wcm.api.PageManager);
     var resourcePage = pageManager.getContainingPage(resource);
-	var Calendar = Packages.java.util.Calendar;
-	var currentYear = Calendar.getInstance().get(Calendar.YEAR);
+    var Calendar = Packages.java.util.Calendar;
+    var currentYear = Calendar.getInstance().get(Calendar.YEAR);
 
     if (resourcePage.getPath().startsWith("/conf/")) {
         resourcePage = currentPage;
@@ -144,8 +144,8 @@ use(function () {
     var theme = properties.get("theme", "default");
 
     return {
-		currentPath: currentPage.getPath(),
-		items: items,
+        currentPath: currentPage.getPath(),
+        items: items,
         theme: theme,
         languageRoot: languageRoot,
         languages: languages,
