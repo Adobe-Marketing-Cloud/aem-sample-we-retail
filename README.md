@@ -37,7 +37,7 @@ To build a single package
 
 To install single package on an AEM instance
 
-	mvn clean install -PbuildSinglePackage -PautoInstallSinglePackage
+    mvn clean install -PbuildSinglePackage -PautoInstallSinglePackage
 
 ## Testing
 

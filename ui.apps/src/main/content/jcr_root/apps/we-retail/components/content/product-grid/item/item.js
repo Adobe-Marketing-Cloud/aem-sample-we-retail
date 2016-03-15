@@ -1,4 +1,19 @@
 'use strict';
+/*
+ *  Copyright 2016 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
 
 var global = this;
 
@@ -9,9 +24,15 @@ use(function () {
         , commerceService = resource.adaptTo(com.adobe.cq.commerce.api.CommerceService)
         , commerceSession = commerceService.login(request, response)
         , productPage = global.pageManager.getContainingPage(granite.resource.path)
-        , productPath = productPage.getProperties().get("cq:productMaster", java.lang.String)
-        , productResource = resolver.getResource(productPath)
-        , baseProduct = commerceService.getProduct(productPath)
+        , productPath = productPage.getProperties().get("cq:productMaster", java.lang.String);
+    
+    var productResource = resolver.getResource(productPath);
+    
+    if(productResource == null) {
+        return null; 
+    }
+
+    var baseProduct = commerceService.getProduct(productPath)
         , productData = productResource.adaptTo(org.apache.sling.api.resource.ValueMap)
         , imageResource = resolver.getResource(productPage.getProperties().get("cq:productMaster", java.lang.String) + "/image")
         , variationAxis = baseProduct.getProperty("cq:productVariantAxes", java.lang.String)

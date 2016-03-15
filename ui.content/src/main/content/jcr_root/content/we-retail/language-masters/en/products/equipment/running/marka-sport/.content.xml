@@ -2,8 +2,10 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-03-10T14:21:11.889+01:00"
+        cq:lastModified="{Date}2016-03-14T21:31:15.408+01:00"
         cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2016-03-14T21:31:15.575+01:00"
+        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/mn/mnap/mnapms"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -12,15 +14,21 @@
         jcr:title="Marka Sport"
         sling:resourceType="we-retail/components/structure/page">
         <root
+            cq:lastRolledout="{Date}2016-03-14T21:31:15.444+01:00"
+            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
+                cq:lastRolledout="{Date}2016-03-14T21:31:15.474+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
+                cq:lastRolledout="{Date}2016-03-14T21:31:15.476+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:lastModified="{Date}2016-03-10T14:21:11.888+01:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
@@ -30,157 +38,189 @@
                 variationTitle="Color">
                 <mnapms_r-s
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:15.512+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/mn/mnap/mnapms/mnapms.r/size-s">
                     <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:15.521+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.432Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/shorts/Marka Red.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:15.521+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mnapms_r-s>
                 <mnapms_r-m
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:15.522+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/mn/mnap/mnapms/mnapms.r/size-m">
                     <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:15.531+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.432Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/shorts/Marka Red.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:15.532+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mnapms_r-m>
                 <mnapms_r-l
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:15.532+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/mn/mnap/mnapms/mnapms.r/size-l">
                     <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:15.541+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.432Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/shorts/Marka Red.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:15.542+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mnapms_r-l>
                 <mnapms_b-s
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:15.542+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/mn/mnap/mnapms/mnapms.b/size-s">
                     <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:15.552+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.434Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/shorts/Marka Blue.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:15.552+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mnapms_b-s>
                 <mnapms_b-m
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:15.553+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/mn/mnap/mnapms/mnapms.b/size-m">
                     <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:15.562+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.434Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/shorts/Marka Blue.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:15.562+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mnapms_b-m>
                 <mnapms_b-l
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:15.563+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/mn/mnap/mnapms/mnapms.b/size-l">
                     <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:15.572+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.434Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/shorts/Marka Blue.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:15.572+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mnapms_b-l>
                 <image
+                    cq:lastRolledout="{Date}2016-03-14T21:31:15.573+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2015-01-26T12:28:08.432Z"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="commerce/components/product/image"
                     fileReference="/content/dam/geometrixx-outdoors/products/shorts/Marka Red.jpg"/>
                 <assets
+                    cq:lastRolledout="{Date}2016-03-14T21:31:15.573+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/assets"/>
             </product>
             <responsivegrid
+                cq:lastRolledout="{Date}2016-03-14T21:31:15.574+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
+                cq:lastRolledout="{Date}2016-03-14T21:31:15.574+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
+                cq:lastRolledout="{Date}2016-03-14T21:31:15.574+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
+                cq:lastRolledout="{Date}2016-03-14T21:31:15.575+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
+                cq:lastRolledout="{Date}2016-03-14T21:31:15.575+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-recommendation"/>
-            <footer_content_container
-                jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
-                jcr:lastModifiedBy="admin"
-                jcr:mixinTypes="[cq:LiveRelationship]"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/layout-container-bg">
-                <par
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/foundation/components/responsivegrid">
-                    <find_store
-                        jcr:mixinTypes="[cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/find-store"/>
-                </par>
-            </footer_content_container>
         </root>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"

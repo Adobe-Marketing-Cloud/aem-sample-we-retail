@@ -4,51 +4,25 @@
     <jcr:content
         cq:catalogBlueprint="/content/catalogs/we-retail/en/base-catalog/men/coats"
         cq:commerceType="section"
-        cq:lastModified="{Date}2016-03-10T14:21:11.386+01:00"
+        cq:lastModified="{Date}2016-03-14T21:31:01.227+01:00"
         cq:lastModifiedBy="admin"
         cq:lastPropertyRollout="{Date}2016-03-10T14:21:11.385+01:00"
+        cq:lastRolledout="{Date}2016-03-14T21:31:01.290+01:00"
+        cq:lastRolledoutBy="admin"
         cq:template="/conf/we-retail/settings/wcm/templates/section-page"
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Coats"
         sling:resourceType="we-retail/components/structure/page">
         <root
+            cq:lastRolledout="{Date}2016-03-14T21:31:01.250+01:00"
+            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
-            <filters_grid
-                jcr:mixinTypes="[cq:LiveRelationship]"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid">
-                <cq:responsive
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured">
-                    <default
-                        jcr:mixinTypes="[cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        width="2"/>
-                    <phone
-                        jcr:mixinTypes="[cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        width="12"/>
-                </cq:responsive>
-                <product_filter0
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product-filter"
-                    type="toggle"/>
-                <product_filter1
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product-filter"
-                    type="color"/>
-                <product_filter2
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product-filter"
-                    type="price"/>
-            </filters_grid>
             <product-grid
+                cq:lastRolledout="{Date}2016-03-14T21:31:01.265+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/product-grid"
@@ -58,41 +32,30 @@
                 ordered="{Boolean}true"
                 pageMax="0">
                 <cq:responsive
+                    cq:lastRolledout="{Date}2016-03-14T21:31:01.269+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured">
                     <default
+                        cq:lastRolledout="{Date}2016-03-14T21:31:01.289+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        width="10"/>
+                        width="12"/>
                     <phone
+                        cq:lastRolledout="{Date}2016-03-14T21:31:01.289+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         width="12"/>
                 </cq:responsive>
             </product-grid>
             <responsivegrid
+                cq:lastRolledout="{Date}2016-03-14T21:31:01.290+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
-            <footer_content_container
-                jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
-                jcr:createdBy="admin"
-                jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
-                jcr:lastModifiedBy="admin"
-                jcr:mixinTypes="[cq:LiveRelationship]"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/layout-container-bg"
-                containerCSSClass="we-FooterSection width-full">
-                <par
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/foundation/components/responsivegrid">
-                    <find_store
-                        jcr:mixinTypes="[cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/find-store"/>
-                </par>
-            </footer_content_container>
         </root>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"

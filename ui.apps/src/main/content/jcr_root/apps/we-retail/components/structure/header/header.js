@@ -1,5 +1,5 @@
 /*
- *  Copyright 2015 Adobe Systems Incorporated
+ *  Copyright 2016 Adobe Systems Incorporated
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -143,9 +143,9 @@ use(function () {
     var theme = properties.get("theme", "default");
 
     return {
-		currentPath: resourcePage.getPath(),
-		signInPath: SIGN_IN_PATH,
-		items: items,
+        currentPath: resourcePage.getPath(),
+        signInPath: SIGN_IN_PATH,
+        items: items,
         theme: theme,
         languageRoot: languageRoot,
         languages: languages,
