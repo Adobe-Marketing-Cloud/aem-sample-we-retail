@@ -8,8 +8,8 @@
 	<filter root="/content/catalogs/we-retail"/>
 	<filter root="/content/dam/we-retail" mode="merge"/>
 	<filter root="/content/dam/collections/w/we-retail"/>
+	<filter root="/content/we-retail/community" mode="merge"/>
 	<filter root="/content/we-retail">
 		<exclude pattern="/content/we-retail/community(/.*)"/>
 	</filter>
-	<filter root="/content/we-retail/community" mode="merge"/>
 </workspaceFilter>
