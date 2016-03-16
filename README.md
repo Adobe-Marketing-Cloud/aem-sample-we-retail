@@ -11,6 +11,7 @@ The main parts of the template are:
 * ui.content: contains sample content using the components from the ui.apps
 * it.tests: Java bundle containing JUnit tests that are executed server-side. This bundle is not to be deployed onto production.
 * it.launcher: contains glue code that deploys the ui.tests bundle (and dependent bundles) to the server and triggers the remote JUnit execution
+* all: additional module to build a single package embedding ui.apps and ui.content
 
 ## How to build
 
@@ -30,6 +31,14 @@ Or to deploy only the bundle to the author, run
 
     mvn clean install -PautoInstallBundle
 
+To build a single package
+
+    mvn clean install -PbuildSinglePackage
+
+To install single package on an AEM instance
+
+    mvn clean install -PbuildSinglePackage -PautoInstallSinglePackage
+
 ## Testing
 
 There are three levels of testing contained in the project:
@@ -44,7 +53,7 @@ There are three levels of testing contained in the project:
 
 * client-side Hobbes.js tests: JavaScript-based browser-side tests that verify browser-side behavior. To test:
 
-    in the browser, open the page in 'Developer mode', open the left panel and switch to the 'Tests' tab and find the generated 'MyName Tests' and run them.
+    in the navigation, go the 'Operations' section and open the 'Testing' console; the left panel will allow you to run your tests.
 
 
 ## Maven settings

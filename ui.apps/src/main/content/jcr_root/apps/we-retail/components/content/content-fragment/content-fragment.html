@@ -1,0 +1,30 @@
+<!--/*
+    Copyright 2016 Adobe Systems Incorporated
+  
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+<div data-sly-use.fragment="ContentFragmentUsePojo" class="${fragment.cssClass}" data-emptytext="Content Fragment">
+    <div data-sly-list="${fragment.paragraphs}">
+        <p>${item @ context="html"}</p>
+        <div data-sly-resource="${'par{0}' @ format=itemList.index, resourceType='wcm/foundation/components/responsivegrid'}"></div>
+    </div>
+    <span data-sly-test="${wcmmode.edit}" class="cq-contentfragment-details"
+          data-fragment-title="${fragment.title}"
+          data-fragment-path="${fragment.path}"
+          data-fragment-element="${fragment.element}"
+          data-fragment-variation="${fragment.variation}">
+        <span class="cq-contentfragment-associatedcontent" data-sly-list="${fragment.associatedContent}">
+            <span class="cq-contentfragment-associatedcontent-item" data-title="${item.title}" data-path="${item.path}"></span>
+        </span>
+    </span>
+</div>

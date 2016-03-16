@@ -4,18 +4,19 @@
     <jcr:content
         cq:lastModified="{Date}2012-01-23T11:05:28.592+01:00"
         cq:lastModifiedBy="admin"
-        cq:template="/libs/commerce/templates/section"
+        cq:template="/libs/commerce/templates/catalog"
         jcr:primaryType="cq:PageContent"
         jcr:title="Equipment"
-        sling:resourceType="commerce/components/section">
+        sling:resourceType="commerce/components/catalog">
         <target
             jcr:primaryType="nt:unstructured"
             jcr_title="Equipment">
-            <par jcr:primaryType="nt:unstructured">
-                <banner
+            <root jcr:primaryType="nt:unstructured">
+                <hero_image
                     jcr:primaryType="nt:unstructured"
-                    fileReference="/content/dam/geometrixx-outdoors/banners/snowboard-action.jpg"/>
-            </par>
+                    title="Equipment"
+                    fileReference="/content/dam/we-retail/activities/hiking-camping/trekker-ama-dablam.jpg"/>
+            </root>
         </target>
     </jcr:content>
     <biking/>

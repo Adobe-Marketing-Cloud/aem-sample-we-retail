@@ -1,5 +1,5 @@
 <!--/*
-    Copyright 2015 Adobe Systems Incorporated
+    Copyright 2016 Adobe Systems Incorporated
   
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -13,4 +13,6 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<a class="btn btn-primary btn-action" href="${properties.linkTo || '#'}" role="button">${properties.label}</a>
+<a class="btn btn-primary btn-action cq-dd-linkTo"
+   data-sly-use.button="button.js"
+   href="${button.linkTo}" role="button">${properties.label}</a>

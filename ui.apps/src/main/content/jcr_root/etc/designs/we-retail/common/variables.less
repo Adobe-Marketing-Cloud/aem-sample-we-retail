@@ -1,3 +1,19 @@
+/*
+ *  Copyright 2016 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+
 @import "/etc/clientlibs/we-retail/vendor/font-awesome/src/less/variables.less";
 @import "/etc/clientlibs/we-retail/vendor/bootstrap/src/less/variables.less";
 
@@ -17,6 +33,8 @@
 @brand-primary-hover: darken(@brand-primary, 9.6%); // #c81017
 
 @brand-success: #39b54a;
+
+@placeholder-bg-color:  @gray-lighter;
 
 
 //== Animation
@@ -109,6 +127,13 @@
 
 @container-large-desktop: (1200px + @grid-gutter-width);
 
+//== Scaffolding
+//
+
+//** Global textual link color.
+@link-color:            #000;
+//** Link hover color set via `darken()` function.
+@link-hover-color:      darken(@brand-primary, 15%);
 
 //== Navbar
 //
@@ -236,3 +261,7 @@
 @breadcrumb-color:                            @gray-dark;
 @breadcrumb-active-color:                     @gray-dark;
 @breadcrumb-delim-color:                      @brand-primary;
+
+//== Header
+
+@header-height:                               100px;

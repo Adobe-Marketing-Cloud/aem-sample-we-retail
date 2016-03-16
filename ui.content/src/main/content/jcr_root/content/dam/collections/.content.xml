@@ -4,84 +4,56 @@
     jcr:primaryType="nt:unstructured"
     sling:resourceType="dam/collection">
     <rep:policy/>
-    <a/>
-    <we-retail jcr:primaryType="nt:unstructured">
-        <tanner_hall_s_redemptionroad
-            jcr:created="{Date}2016-02-01T18:27:42.289+01:00"
-            jcr:createdBy="admin"
-            jcr:description=""
-            jcr:lastModified="{Date}2016-02-01T18:29:35.183+01:00"
-            jcr:lastModifiedBy="admin"
-            jcr:primaryType="nt:unstructured"
-            jcr:title="Tanner Hall's Redemption Road"
-            sling:resourceSuperType="sling/collection"
-            sling:resourceType="dam/collection">
-            <sling:members
+    <w jcr:primaryType="nt:unstructured">
+        <we-retail jcr:primaryType="nt:unstructured">
+            <arctic_surfing_inlofoten
+                jcr:created="{Date}2016-03-12T21:02:02.039+01:00"
+                jcr:createdBy="admin"
+                jcr:description=""
+                jcr:lastModified="{Date}2016-03-12T21:02:06.664+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:mixinTypes="[rep:AccessControllable]"
                 jcr:primaryType="nt:unstructured"
-                sling:resources="[/content/dam/we-retail/images/bg-jumbotron-2.jpg,/content/dam/we-retail/images/article2.jpg,/content/dam/we-retail/images/article1.jpg,/content/dam/we-retail/articles/tanner-halls-redemption-road]">
-                <bg-jumbotron-2.jpg
+                jcr:title="Arctic Surfing In Lofoten"
+                sling:resourceSuperType="sling/collection"
+                sling:resourceType="dam/collection">
+                <sling:members
                     jcr:primaryType="nt:unstructured"
-                    sling:resource="/content/dam/we-retail/images/bg-jumbotron-2.jpg"/>
-                <article2.jpg
-                    jcr:primaryType="nt:unstructured"
-                    sling:resource="/content/dam/we-retail/images/article2.jpg"/>
-                <article1.jpg
-                    jcr:primaryType="nt:unstructured"
-                    sling:resource="/content/dam/we-retail/images/article1.jpg"/>
-                <tanner-halls-redemption-road
-                    jcr:primaryType="nt:unstructured"
-                    sling:resource="/content/dam/we-retail/articles/tanner-halls-redemption-road"/>
-            </sling:members>
-            <folderThumbnail/>
-        </tanner_hall_s_redemptionroad>
-        <aloha_spirits_innorthernnorway
-            jcr:created="{Date}2016-02-25T23:50:48.997+01:00"
-            jcr:createdBy="admin"
-            jcr:description=""
-            jcr:lastModified="{Date}2016-02-25T23:51:36.268+01:00"
-            jcr:lastModifiedBy="admin"
-            jcr:mixinTypes="[rep:AccessControllable]"
-            jcr:primaryType="nt:unstructured"
-            jcr:title="Aloha spirits in Northern Norway"
-            sling:resourceSuperType="sling/collection"
-            sling:resourceType="dam/collection">
-            <sling:members
-                jcr:primaryType="nt:unstructured"
-                sling:resources="[/content/dam/we-retail/articles/photos/lofoten/_B6A5652.jpg,/content/dam/we-retail/articles/photos/lofoten/_B6A5663.jpg,/content/dam/we-retail/articles/photos/lofoten/_B6A5010.jpg,/content/dam/we-retail/articles/photos/lofoten/_B6A4589.jpg,/content/dam/we-retail/articles/photos/lofoten/_B6A4244.jpg,/content/dam/we-retail/articles/photos/lofoten/_B6A4252.jpg,/content/dam/we-retail/articles/photos/lofoten/_B6A4191.jpg,/content/dam/we-retail/articles/photos/lofoten/_B6A4270.jpg,/content/dam/we-retail/articles/photos/lofoten/_B6A4379.jpg,/content/dam/we-retail/articles/photos/lofoten/_B6A4438.jpg,/content/dam/we-retail/articles/aloha-spirits-in-northern-norway]">
-                <_B6A5652.jpg
-                    jcr:primaryType="nt:unstructured"
-                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A5652.jpg"/>
-                <_B6A5663.jpg
-                    jcr:primaryType="nt:unstructured"
-                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A5663.jpg"/>
-                <_B6A5010.jpg
-                    jcr:primaryType="nt:unstructured"
-                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A5010.jpg"/>
-                <_B6A4589.jpg
-                    jcr:primaryType="nt:unstructured"
-                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A4589.jpg"/>
-                <_B6A4244.jpg
-                    jcr:primaryType="nt:unstructured"
-                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A4244.jpg"/>
-                <_B6A4252.jpg
-                    jcr:primaryType="nt:unstructured"
-                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A4252.jpg"/>
-                <_B6A4191.jpg
-                    jcr:primaryType="nt:unstructured"
-                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A4191.jpg"/>
-                <_B6A4270.jpg
-                    jcr:primaryType="nt:unstructured"
-                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A4270.jpg"/>
-                <_B6A4379.jpg
-                    jcr:primaryType="nt:unstructured"
-                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A4379.jpg"/>
-                <_B6A4438.jpg
-                    jcr:primaryType="nt:unstructured"
-                    sling:resource="/content/dam/we-retail/articles/photos/lofoten/_B6A4438.jpg"/>
-                <aloha-spirits-in-northern-norway
-                    jcr:primaryType="nt:unstructured"
-                    sling:resource="/content/dam/we-retail/articles/aloha-spirits-in-northern-norway"/>
-            </sling:members>
-        </aloha_spirits_innorthernnorway>
-    </we-retail>
+                    sling:resources="[/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/camp-fire.jpg,/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/camp-tent.jpg,/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/fjord-waves.jpg,/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/inspecting-surfboard.jpg,/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/majestic-rainbow.jpg,/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/northern-lights.jpg,/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/surfer-back-from-the-ocean.jpg,/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/surfer-ready-to-go.jpg,/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/surfer-wave-01.jpg,/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/surfer-wave-02.jpg]">
+                    <camp-fire.jpg
+                        jcr:primaryType="nt:unstructured"
+                        sling:resource="/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/camp-fire.jpg"/>
+                    <camp-tent.jpg
+                        jcr:primaryType="nt:unstructured"
+                        sling:resource="/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/camp-tent.jpg"/>
+                    <fjord-waves.jpg
+                        jcr:primaryType="nt:unstructured"
+                        sling:resource="/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/fjord-waves.jpg"/>
+                    <inspecting-surfboard.jpg
+                        jcr:primaryType="nt:unstructured"
+                        sling:resource="/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/inspecting-surfboard.jpg"/>
+                    <majestic-rainbow.jpg
+                        jcr:primaryType="nt:unstructured"
+                        sling:resource="/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/majestic-rainbow.jpg"/>
+                    <northern-lights.jpg
+                        jcr:primaryType="nt:unstructured"
+                        sling:resource="/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/northern-lights.jpg"/>
+                    <surfer-back-from-the-ocean.jpg
+                        jcr:primaryType="nt:unstructured"
+                        sling:resource="/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/surfer-back-from-the-ocean.jpg"/>
+                    <surfer-ready-to-go.jpg
+                        jcr:primaryType="nt:unstructured"
+                        sling:resource="/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/surfer-ready-to-go.jpg"/>
+                    <surfer-wave-01.jpg
+                        jcr:primaryType="nt:unstructured"
+                        sling:resource="/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/surfer-wave-01.jpg"/>
+                    <surfer-wave-02.jpg
+                        jcr:primaryType="nt:unstructured"
+                        sling:resource="/content/dam/we-retail/experiences/arctic-surfing-in-lofoten/surfer-wave-02.jpg"/>
+                </sling:members>
+                <rep:policy/>
+                <folderThumbnail/>
+            </arctic_surfing_inlofoten>
+        </we-retail>
+    </w>
 </jcr:root>

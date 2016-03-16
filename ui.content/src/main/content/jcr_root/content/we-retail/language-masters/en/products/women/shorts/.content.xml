@@ -4,114 +4,59 @@
     <jcr:content
         cq:catalogBlueprint="/content/catalogs/we-retail/en/base-catalog/women/shorts"
         cq:commerceType="section"
-        cq:lastModified="{Date}2016-02-25T22:18:53.829+01:00"
+        cq:lastModified="{Date}2016-03-14T21:31:09.375+01:00"
         cq:lastModifiedBy="admin"
-        cq:lastPropertyRollout="{Date}2016-02-25T22:18:53.829+01:00"
-        cq:template="/conf/we-retail/settings/wcm/templates/product-page"
+        cq:lastPropertyRollout="{Date}2016-03-10T14:21:11.690+01:00"
+        cq:lastRolledout="{Date}2016-03-14T21:31:09.438+01:00"
+        cq:lastRolledoutBy="admin"
+        cq:template="/conf/we-retail/settings/wcm/templates/section-page"
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Shorts"
         sling:resourceType="we-retail/components/structure/page">
         <root
+            cq:lastRolledout="{Date}2016-03-14T21:31:09.413+01:00"
+            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
-            <responsivegrid
+            <product-grid
+                cq:lastRolledout="{Date}2016-03-14T21:31:09.422+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid">
-                <responsivegrid
+                sling:resourceType="we-retail/components/content/product-grid"
+                displayAs="products"
+                listFrom="children"
+                orderBy="jcr:title"
+                ordered="{Boolean}true"
+                pageMax="0">
+                <cq:responsive
+                    cq:lastRolledout="{Date}2016-03-14T21:31:09.427+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/foundation/components/responsivegrid">
-                    <cq:responsive
-                        jcr:mixinTypes="[cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured">
-                        <default
-                            jcr:mixinTypes="[cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            width="2"/>
-                    </cq:responsive>
-                    <product_filter0
+                    jcr:primaryType="nt:unstructured">
+                    <default
+                        cq:lastRolledout="{Date}2016-03-14T21:31:09.437+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product-filter"
-                        type="toggle"/>
-                    <product_filter1
+                        width="12"/>
+                    <phone
+                        cq:lastRolledout="{Date}2016-03-14T21:31:09.438+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product-filter"
-                        type="color"/>
-                    <product_filter2
-                        jcr:mixinTypes="[cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product-filter"
-                        type="price"/>
-                </responsivegrid>
-                <section_title
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/section-title">
-                    <cq:responsive
-                        jcr:mixinTypes="[cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured">
-                        <default
-                            jcr:mixinTypes="[cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            width="8"/>
-                    </cq:responsive>
-                </section_title>
-                <product_filter
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product-filter"
-                    type="sort">
-                    <cq:responsive
-                        jcr:mixinTypes="[cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured">
-                        <default
-                            jcr:mixinTypes="[cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            width="2"/>
-                    </cq:responsive>
-                </product_filter>
-                <product-grid
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product-grid"
-                    displayAs="products"
-                    listFrom="children"
-                    orderBy="jcr:title"
-                    pageMax="0">
-                    <cq:responsive
-                        jcr:mixinTypes="[cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured">
-                        <default
-                            jcr:mixinTypes="[cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            width="10"/>
-                    </cq:responsive>
-                </product-grid>
-            </responsivegrid>
-        </root>
-        <cq:responsive
-            jcr:mixinTypes="[cq:LiveRelationship]"
-            jcr:primaryType="nt:unstructured">
-            <breakpoints
+                        width="12"/>
+                </cq:responsive>
+            </product-grid>
+            <responsivegrid
+                cq:lastRolledout="{Date}2016-03-14T21:31:09.438+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
-                jcr:primaryType="nt:unstructured">
-                <phone
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    title="Phone"
-                    width="{Decimal}650"/>
-                <tablet
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    title="Tablet"
-                    width="{Decimal}1200"/>
-            </breakpoints>
-        </cq:responsive>
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+        </root>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"
             cq:master="/content/catalogs/we-retail/en/template-pages/section-page-template"

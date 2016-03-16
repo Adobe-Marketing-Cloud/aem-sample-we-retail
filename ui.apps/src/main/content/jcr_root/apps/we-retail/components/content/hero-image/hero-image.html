@@ -1,5 +1,5 @@
 <!--/*
-    Copyright 2015 Adobe Systems Incorporated
+    Copyright 2016 Adobe Systems Incorporated
   
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -13,14 +13,13 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-
 <sly data-sly-use.heroImage="hero-image.js">
     <div class="${heroImage.classList}"
          style="background-image: url(${heroImage.image.src @ context='styleString'});">
-        <div class="container">
+        <div class="container cq-dd-image">
             <div class="we-HeroImage-wrapper">
                 <p>${properties.heading}</p>
-                <strong class="we-HeroImage-title">${properties.title}</strong>
+                <strong class="we-HeroImage-title">${properties.title || currentPage.title}</strong>
 
                 <p data-sly-test="${properties.buttonLabel && properties.buttonLinkTo}">
                     <a class="btn btn-primary btn-action" href="${properties.buttonLinkTo}.html" role="button">${properties.buttonLabel}</a>

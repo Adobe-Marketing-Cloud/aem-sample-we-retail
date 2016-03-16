@@ -1,5 +1,5 @@
 <!--/*
-    Copyright 2015 Adobe Systems Incorporated
+    Copyright 2016 Adobe Systems Incorporated
   
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -13,75 +13,76 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<footer class="we-Footer width-full">
-  <div class="container">
+<sly
+    data-sly-use.clientlib="${'/libs/granite/sightly/templates/clientlib.html'}"
+    data-sly-call="${clientLib.all @ categories='we-retail.footer'}" />
 
-    <div class="row">
+<sly data-sly-use.footer="footer.js"> <footer
+    class="we-Footer width-full">
+    <div class="container">
 
-      <div class="col-md-4 we-Footer-section">
-        <div class="we-Logo we-Logo--big">we.<strong>Active</strong></div>
-      </div>
+        <div class="row">
 
-      <div class="col-md-2 col-xs-4">
-        <ul class="we-Footer-nav">
-          <li>
-            <h2><a href="#">Store</a></h2>
-            <ul>
-              <li><a href="#">Man</a></li>
-              <li><a href="#">Woman</a></li>
-              <li><a href="#">Activities</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-2 col-xs-4">
-        <ul class="we-Footer-nav">
-          <li>
-            <h2><a href="#">Community</a></h2>
-            <ul>
-              <li><a href="#">Blogs</a></li>
-              <li><a href="#">Discussions</a></li>
-              <li><a href="#">Product reviews</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-2 col-xs-4">
-        <ul class="we-Footer-nav">
-          <li>
-            <h2><a href="#">About</a></h2>
-            <ul>
-              <li><a href="#">Brand</a></li>
-              <li><a href="#">Support</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-2 col-xs-12 we-Footer-section">
-        <ul class="we-Footer-nav we-Footer-nav--inline">
-          <li>
-            <h2>Stay connected</h2>
-            <ul>
-              <li><a href="#" class="btn btn-icon btn-primary"><i class="we-Icon we-Icon--facebook-square"></i></a></li>
-              <li><a href="#" class="btn btn-icon btn-primary"><i class="we-Icon we-Icon--twitter-square"></i></a></li>
-              <li><a href="#" class="btn btn-icon btn-primary"><i class="we-Icon we-Icon--instagram-square"></i></a></li>
-              <li><a href="#" class="btn btn-icon btn-primary"><i class="we-Icon we-Icon--youtube-square"></i></a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+            <div class="col-md-4 we-Footer-section">
+                <div class="we-Logo we-Logo--big">
+                    we.<strong>Active</strong>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xs-12">
+                <sly data-sly-list.item="${footer.items}">
+                    <div class="col-lg-3 col-md-3 col-xs-4">
+                        <div class="we-Footer-nav">
+                            <h2>
+                                <a href="${ item.page.path }.html">${item.page.title}</a>
+                            </h2>
+                            <!--/*
+                            <ul data-sly-list.subitem="${item.children}">
+                                <li>
+                                    <a href="${ subitem.page.path }.html">${subitem.page.title}</a>
+                                </li>
+                            </ul>
+                            */-->
+                        </div>
+                    </div>
+                </sly>
+            </div>
+
+            <div class="col-md-2 col-xs-12 we-Footer-section">
+                <ul class="we-Footer-nav we-Footer-nav--inline">
+                    <li>
+                        <h2>Stay connected</h2>
+                        <ul>
+                            <li><a href="#" class="btn btn-icon btn-primary"><i
+                                    class="we-Icon we-Icon--facebook-square"></i></a></li>
+                            <li><a href="#" class="btn btn-icon btn-primary"><i
+                                    class="we-Icon we-Icon--twitter-square"></i></a></li>
+                            <li><a href="#" class="btn btn-icon btn-primary"><i
+                                    class="we-Icon we-Icon--instagram-square"></i></a></li>
+                            <li><a href="#" class="btn btn-icon btn-primary"><i
+                                    class="we-Icon we-Icon--youtube-square"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row we-Footer-section we-Footer-section--sub">
+            <div class="we-Footer-section-item">
+                <span class="text-uppercase text-muted">&copy; ${ footer.year } All rights reserved</span>
+            </div>
+            <div class="we-Footer-section-item">
+                <a href="#" class="text-uppercase text-muted">Terms of use &amp; privacy policy</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center">
+                    <a href="#top" class="btn btn-action btn-action-up btn-primary">Ride to the top</a>
+                </div>
+            </div>
+        </div>
+
     </div>
-
-    <div class="row we-Footer-section we-Footer-section--sub">
-      <div class="we-Footer-section-item"><span class="text-uppercase text-muted">&copy; 2015 All rights reserved</span></div>
-      <div class="we-Footer-section-item"><a href="#" class="text-uppercase text-muted">Terms of use & privacy policy</a></div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12">
-        <div class="text-center"><a href="#top" class="btn btn-action btn-action-up btn-primary">Ride to the top</a></div>
-      </div>
-    </div>
-
-  </div>
-</footer>
+</footer> </sly>

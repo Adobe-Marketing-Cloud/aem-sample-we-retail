@@ -10,7 +10,14 @@
         sling:resourceType="commerce/components/catalog">
         <target
             jcr:primaryType="nt:unstructured"
-            jcr_title="Men"/>
+            jcr_title="Men">
+            <root jcr:primaryType="nt:unstructured">
+                <hero_image
+                    jcr:primaryType="nt:unstructured"
+                    title="Men"
+                    fileReference="/content/dam/we-retail/activities/hiking-camping/trekker-ama-dablam.jpg"/>
+            </root>
+        </target>
     </jcr:content>
     <coats/>
     <pants/>

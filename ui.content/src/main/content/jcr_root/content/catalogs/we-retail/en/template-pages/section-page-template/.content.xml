@@ -2,86 +2,33 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:template="/conf/we-retail/settings/wcm/templates/product-page"
+        cq:template="/conf/we-retail/settings/wcm/templates/section-page"
         jcr:primaryType="cq:PageContent"
         jcr:title="Section Page Template"
         sling:resourceType="we-retail/components/structure/page">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
+            <product-grid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/content/product-grid"
+                displayAs="products"
+                listFrom="children"
+                orderBy="jcr:title"
+                ordered="{Boolean}true"
+                pageMax="0">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        width="12"/>
+                    <phone
+                        jcr:primaryType="nt:unstructured"
+                        width="12"/>
+                </cq:responsive>
+            </product-grid>
             <responsivegrid
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid">
-                <responsivegrid
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wcm/foundation/components/responsivegrid">
-                    <cq:responsive jcr:primaryType="nt:unstructured">
-                        <default
-                            jcr:primaryType="nt:unstructured"
-                            width="2"/>
-                    </cq:responsive>
-                    <product_filter0
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product-filter"
-                        type="toggle"/>
-                    <product_filter1
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product-filter"
-                        type="color"/>
-                    <product_filter2
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product-filter"
-                        type="price"/>
-                </responsivegrid>
-                <section_title
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/section-title">
-                    <cq:responsive jcr:primaryType="nt:unstructured">
-                        <default
-                            jcr:primaryType="nt:unstructured"
-                            width="8"/>
-                    </cq:responsive>
-                </section_title>
-                <product_filter
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product-filter"
-                    type="sort">
-                    <cq:responsive jcr:primaryType="nt:unstructured">
-                        <default
-                            jcr:primaryType="nt:unstructured"
-                            width="2"/>
-                    </cq:responsive>
-                </product_filter>
-                <product-grid
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product-grid"
-                    displayAs="products"
-                    listFrom="children"
-                    orderBy="jcr:title"
-                    pageMax="0">
-                    <cq:responsive jcr:primaryType="nt:unstructured">
-                        <default
-                            jcr:primaryType="nt:unstructured"
-                            width="10"/>
-                    </cq:responsive>
-                </product-grid>
-                <footer_content_container
-                        jcr:created="{Date}2015-11-09T18:18:11.897+01:00"
-                        jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2015-11-09T18:18:21.360+01:00"
-                        jcr:lastModifiedBy="admin"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/content-container"
-                        containerCSSClass="we-FooterSection width-full">
-                    <par
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="wcm/foundation/components/responsivegrid">
-                        <find_store
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="we-retail/components/content/find-store"/>
-                    </par>
-                </footer_content_container>
-            </responsivegrid>
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
         </root>
     </jcr:content>
 </jcr:root>

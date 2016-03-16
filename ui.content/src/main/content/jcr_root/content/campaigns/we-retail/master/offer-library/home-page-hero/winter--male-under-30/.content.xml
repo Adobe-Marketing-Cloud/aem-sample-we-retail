@@ -20,8 +20,8 @@
                 sling:resourceType="we-retail/components/content/hero-image"
                 buttonLabel="Shop now"
                 buttonLinkTo="/content/we-retail/language-masters/en/discover"
-                fileReference="/content/dam/we-retail/images/bg-jumbotron-1.jpg"
-                heading="All-new winter collection 2016"
+                fileReference="/content/dam/we-retail/activities/hiking-camping/trekker-ama-dablam.jpg"
+                heading="All-new winter collection"
                 title="Winter, Male Under 30"/>
         </par>
     </jcr:content>

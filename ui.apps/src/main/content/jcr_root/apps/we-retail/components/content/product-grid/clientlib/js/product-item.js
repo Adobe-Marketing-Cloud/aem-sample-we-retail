@@ -1,9 +1,25 @@
+/*
+ *  Copyright 2016 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
 (function () {
     'use strict';
 
     window.we = window.we || {};
 
     var parentEl;
+    // Vue.config.debug = true
 
     Vue.component('we-product-item', {
         props: [
@@ -90,37 +106,30 @@
 
                 if (vm.isVisible) {
                     vm.$el.parentNode.classList.remove('hidden');
-                    //parentEl.appendChild(vm.$el.parentNode);
-                }
-                else {
+                } else {
                     vm.$el.parentNode.classList.add('hidden');
-                    //vm.$el.parentNode.remove();
                 }
             }
         }
     });
 
-    if (document.querySelector('.products-grid')) {
+    _.each(document.querySelectorAll('.product-grid'), function (el, index) {
         new Vue({
             parent: we.app,
-            name: 'products-grid',
-            el: '.products-grid',
+            name: 'product-grid',
+            el: el,
             data: {
-                filters: {}
+                filters: we.filterStore.data
             },
             ready: function () {
                 if (this.filters.price) {
                     this.filters.price = getPriceList(this.filters.price);
                 }
 
-                this.$parent.filters = this.filters;
-
                 parentEl = this.$el.querySelector('.foundation-ordered-list-container');
-
-                console.log('.products-grid ready', this);
             }
         });
-    }
+    });
 
     function getPriceList(prices) {
         var list = []
@@ -137,7 +146,10 @@
         }
 
         prices.forEach(function (price) {
-            list[(parseInt(price / step, 10))].list.push(price);
+            var pos = Math.round(price / step, 10);
+            if (list[pos]) {
+                list[pos].list.push(price);
+            }
         });
 
         return list;

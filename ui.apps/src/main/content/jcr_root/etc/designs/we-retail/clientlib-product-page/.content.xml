@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:ClientLibraryFolder"
+    categories="[we-retail.product-page]"
+    embed="[moment,cq.backbone,cq.social.scf,cq.social.commons,cq.collab.comments,cq.social.author.hbs.rating,cq.social.author.hbs.voting,cq.social.author.hbs.subscriptions,cq.social.author.hbs.comments,cq.social.author.hbs.reviews,we-retail.components.social]"/>

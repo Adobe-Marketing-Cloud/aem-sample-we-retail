@@ -2,8 +2,10 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-02-25T22:18:55.015+01:00"
+        cq:lastModified="{Date}2016-03-14T21:31:30.708+01:00"
         cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2016-03-14T21:31:30.844+01:00"
+        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/wm/wmap/wmapbz"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -12,141 +14,168 @@
         jcr:title="Brazzaville"
         sling:resourceType="we-retail/components/structure/page">
         <root
+            cq:lastRolledout="{Date}2016-03-14T21:31:30.735+01:00"
+            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
-            <responsivegrid
+            <breadcrumb
+                cq:lastRolledout="{Date}2016-03-14T21:31:30.772+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid">
-                <product
-                    cq:commerceType="product"
-                    jcr:lastModified="{Date}2016-02-25T22:18:55.014+01:00"
+                sling:resourceType="we-retail/components/structure/breadcrumb"/>
+            <product
+                cq:commerceType="product"
+                cq:lastRolledout="{Date}2016-03-14T21:31:30.774+01:00"
+                cq:lastRolledoutBy="admin"
+                jcr:lastModified="{Date}2016-03-10T14:21:12.307+01:00"
+                jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/structure/product"
+                productData="/etc/commerce/products/we-retail/wm/wmap/wmapbz"
+                variationAxis="color"
+                variationTitle="Color">
+                <wmapbz_w-s
+                    cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:30.801+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product"
-                    productData="/etc/commerce/products/we-retail/wm/wmap/wmapbz"
-                    variationAxis="color"
-                    variationTitle="Color">
-                    <wmapbz_w-s
-                        cq:commerceType="variant"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapbz/wmapbz.w/size-s">
-                        <image
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.410Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/swimming/Brazzaville Warm.jpg"/>
-                        <assets
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
-                    </wmapbz_w-s>
-                    <wmapbz_w-m
-                        cq:commerceType="variant"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapbz/wmapbz.w/size-m">
-                        <image
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.410Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/swimming/Brazzaville Warm.jpg"/>
-                        <assets
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
-                    </wmapbz_w-m>
-                    <wmapbz_w-l
-                        cq:commerceType="variant"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapbz/wmapbz.w/size-l">
-                        <image
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.410Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/swimming/Brazzaville Warm.jpg"/>
-                        <assets
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
-                    </wmapbz_w-l>
-                    <wmapbz_c-s
-                        cq:commerceType="variant"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapbz/wmapbz.c/size-s">
-                        <image
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.413Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/swimming/Brazzaville Cold.jpg"/>
-                        <assets
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
-                    </wmapbz_c-s>
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmapbz/wmapbz.w/size-s">
                     <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:30.811+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.410Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/swimming/Brazzaville Warm.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:30.811+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product/assets"/>
-                </product>
-                <reviews_section_title
-                    jcr:mixinTypes="[cq:LiveRelationship]"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmapbz_w-s>
+                <wmapbz_w-m
+                    cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:30.812+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    jcr:title="Reviews"
-                    sling:resourceType="we-retail/components/content/section-title"/>
-                <reviews
-                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmapbz/wmapbz.w/size-m">
+                    <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:30.820+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.410Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/swimming/Brazzaville Warm.jpg"/>
+                    <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:30.821+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmapbz_w-m>
+                <wmapbz_w-l
+                    cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:30.821+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product-reviews"/>
-                <similar_section_title
-                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmapbz/wmapbz.w/size-l">
+                    <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:30.831+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.410Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/swimming/Brazzaville Warm.jpg"/>
+                    <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:30.831+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmapbz_w-l>
+                <wmapbz_c-s
+                    cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:30.831+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    jcr:title="You may also like"
-                    sling:resourceType="we-retail/components/content/section-title"/>
-                <similar_products
-                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmapbz/wmapbz.c/size-s">
+                    <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:30.841+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.413Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/swimming/Brazzaville Cold.jpg"/>
+                    <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:30.841+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmapbz_c-s>
+                <image
+                    cq:lastRolledout="{Date}2016-03-14T21:31:30.842+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:lastModified="{Date}2015-01-26T12:28:08.410Z"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product/recommendation"
-                    max="6"
-                    relationshipType="relatedproducts:info.we-retail.similar-to-current"/>
-            </responsivegrid>
-        </root>
-        <cq:responsive
-            jcr:mixinTypes="[cq:LiveRelationship]"
-            jcr:primaryType="nt:unstructured">
-            <breakpoints
+                    sling:resourceType="commerce/components/product/image"
+                    fileReference="/content/dam/geometrixx-outdoors/products/swimming/Brazzaville Warm.jpg"/>
+                <assets
+                    cq:lastRolledout="{Date}2016-03-14T21:31:30.842+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product/assets"/>
+            </product>
+            <responsivegrid
+                cq:lastRolledout="{Date}2016-03-14T21:31:30.842+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
-                jcr:primaryType="nt:unstructured">
-                <phone
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    title="Phone"
-                    width="{Decimal}650"/>
-                <tablet
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    title="Tablet"
-                    width="{Decimal}1200"/>
-            </breakpoints>
-        </cq:responsive>
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+            <reviews_section_title
+                cq:lastRolledout="{Date}2016-03-14T21:31:30.843+01:00"
+                cq:lastRolledoutBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Reviews"
+                sling:resourceType="we-retail/components/content/title"/>
+            <reviews
+                cq:lastRolledout="{Date}2016-03-14T21:31:30.843+01:00"
+                cq:lastRolledoutBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/structure/product-reviews"/>
+            <similar_section_title
+                cq:lastRolledout="{Date}2016-03-14T21:31:30.844+01:00"
+                cq:lastRolledoutBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="You may also like"
+                sling:resourceType="we-retail/components/content/title"/>
+            <similar_products
+                cq:lastRolledout="{Date}2016-03-14T21:31:30.844+01:00"
+                cq:lastRolledoutBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/structure/product-recommendation"/>
+        </root>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"
             cq:master="/content/catalogs/we-retail/en/template-pages/product-page-template"

@@ -1,3 +1,18 @@
+/*
+ *  Copyright 2016 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
 (function () {
     'use strict';
     function isElementInViewport () {
@@ -23,7 +38,7 @@
 
             // add mobile pagination template
             this.$el.innerHTML += [
-                '<div class="products-grid-mobilePagination" v-if="pages.length > 1">',
+                '<div class="product-grid-mobilePagination" v-if="pages.length > 1">',
                     '<a v-for="index in pages" v-on:click="page = index" :class="{active: (page == index)}">{{ index }}</a>',
                 '</div>'].join('');
         },
@@ -39,7 +54,7 @@
     });
 
     // attach component to all occurances of .products-grid element
-    $('.products-grid').each(function() {
+    $('.product-grid').each(function() {
         new component().$mount(this);
     });
 

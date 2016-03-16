@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
     <filter root="/apps/we-retail">
-        <exclude pattern="/apps/we-retail/install" />
+        <exclude pattern="/apps/we-retail/install"/>
     </filter>
-    
-    <filter root="/conf/we-retail"/>
-    <filter root="/etc/tags/we-retail"/>
-    <filter root="/etc/designs/we-retail"/>
     <filter root="/etc/clientlibs/we-retail"/>
+    <filter root="/etc/designs/we-retail"/>
     <filter root="/etc/cloudservices/dynamictagmanagement/we-retail-dtm"/>
+    <filter root="/apps/social/console/components/hbs/sitepage"/>
+
 </workspaceFilter>

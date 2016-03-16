@@ -1,5 +1,5 @@
 /*
- *  Copyright 2015 Adobe Systems Incorporated
+ *  Copyright 2016 Adobe Systems Incorporated
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -16,32 +16,83 @@
 
 // Server-side JavaScript for the topnav logic
 use(function () {
-    var items = [];
-    var root = currentPage.getAbsoluteParent(3);
-    var currentNav = currentPage.getAbsoluteParent(4);
-    var currentNavPath = currentNav && currentNav.getPath();
-    var languageRoot = "#";
-    var languages = [], currentLanguage = {};
 
+    var REDIRECT_RESOURCE_TYPE = "foundation/components/redirect";
+    var PROP_REDIRECT_TARGET = "redirectTarget";
+
+    var PROP_HIDE_IN_NAV = "hideInNav";
+    var PROP_HIDE_SUB_IN_NAV = "hideSubItemsInNav";
+
+    var PROP_NAV_ROOT = "navRoot";
+
+    var SIGN_IN_PATH = "/content/we-retail/community/en/signin/j_security_check";
+
+    var items = [];
+
+    var pageManager = resolver.adaptTo(com.day.cq.wcm.api.PageManager);
+    var resourcePage = pageManager.getContainingPage(resource);
+
+    if (resourcePage.getPath().startsWith("/conf/")) {
+        resourcePage = currentPage;
+    }
+
+    var isRoot = function(page) {
+        var res = page.getContentResource(),
+            vm = res.adaptTo(org.apache.sling.api.resource.ValueMap);
+
+        return vm.get(PROP_NAV_ROOT, java.lang.Boolean);
+    }
+
+    var findRoot = function(resourcePage) {
+        var currentPage = resourcePage;
+
+        while(currentPage && !isRoot(currentPage)) {
+            currentPage = currentPage.getParent();
+        }
+
+        return currentPage;
+    }
+
+    /**
+     * Get list of pages
+     * _root - root node to start listing from
+     * level - how deep to get into the tree
+     */
     var getPages = function(_root, level) {
-        if (level === 0) {
+        if (level === 0 || !_root) {
             return null;
         }
         var it = _root.listChildren(new Packages.com.day.cq.wcm.api.PageFilter());
-        var _items = [], page, selected;
+        var _items = [], page, selected, pageContentResource, pageValueMap, pagePath, children;
 
         while (it.hasNext()) {
             page = it.next();
-            selected = (currentNavPath && currentNavPath.contains(page.getPath()));
+            pageContentResource = page.getContentResource();
+            pageValueMap = pageContentResource.adaptTo(org.apache.sling.api.resource.ValueMap);
+
+            if (pageValueMap.get(PROP_HIDE_IN_NAV, java.lang.Boolean)) {
+                continue;
+            }
+
+            if (REDIRECT_RESOURCE_TYPE.equals(pageContentResource.getResourceType())) {
+                page = resolveRedirect(pageValueMap);
+            }
+
+            selected = (currentNavPath && page && currentNavPath.contains(page.getPath()));
 
             _items.push({
                 page: page,
                 selected: selected,
-                children: getPages(page, level - 1)
+                children: pageValueMap.get(PROP_HIDE_SUB_IN_NAV, java.lang.Boolean) ? [] : getPages(page, level - 1)
             });
         }
 
         return _items;
+    };
+
+    var resolveRedirect = function(pageValueMap) {
+        var path = pageValueMap.get(PROP_REDIRECT_TARGET);
+        return pageManager.getPage(path);
     };
 
     var getLanguages = function(root) {
@@ -64,9 +115,15 @@ use(function () {
                 selected: rootPath.equals(page.getPath())
             });
         }
- 
+
         return items;
     };
+
+
+    var root = findRoot(resourcePage);
+    var currentNavPath = currentPage && currentPage.getPath();
+    var languageRoot = "#";
+    var languages = [], currentLanguage = {};
 
     if (root) {
         items = getPages(root, 2);
@@ -86,6 +143,8 @@ use(function () {
     var theme = properties.get("theme", "default");
 
     return {
+        currentPath: resourcePage.getPath(),
+        signInPath: SIGN_IN_PATH,
         items: items,
         theme: theme,
         languageRoot: languageRoot,

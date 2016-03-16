@@ -119,13 +119,6 @@
                     <verbose>true</verbose>
                     <failOnError>true</failOnError>
                     <group>adobe/aem6/sample</group>
-                    <embeddeds>
-                        <embedded>
-                            <groupId>we</groupId>
-                            <artifactId>we.retail.core</artifactId>
-                            <target>/apps/we-retail/install</target>
-                        </embedded>
-                    </embeddeds>
                 </configuration>
             </plugin>
         </plugins>
@@ -190,21 +183,4 @@
             </build>
         </profile>
     </profiles>
-
-    <!-- ====================================================================== -->
-    <!-- D E P E N D E N C I E S                                                -->
-    <!-- ====================================================================== -->
-    <dependencies>
-        <dependency>
-            <groupId>we</groupId>
-            <artifactId>we.retail.core</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.adobe.aem</groupId>
-            <artifactId>aem-api</artifactId>
-        </dependency>
-
-    </dependencies>
 </project>

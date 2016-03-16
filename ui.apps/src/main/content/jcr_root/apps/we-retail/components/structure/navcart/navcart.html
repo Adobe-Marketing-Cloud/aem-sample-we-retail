@@ -1,0 +1,72 @@
+<!--/*
+    Copyright 2016 Adobe Systems Incorporated
+  
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+<div class="we-Cart"
+     data-sly-use.cart="cart.js">
+
+    <a class="we-Cart-button"
+       href="#"
+       v-on:click="toggle"><i class="fa fa-shopping-cart"></i> My cart <span class="badge active" data-sly-test="${ cart.entries.length > 0 }">${ cart.entries.length }</span>
+    </a>
+
+    <cart-content inline-template>
+        <div class="we-Cart-content">
+            <div class="we-Cart-header">
+                <div class="we-Cart-headerLeft">
+                    <a href="#" v-on:click="$parent.toggle">
+                        <i class="we-Icon we-Icon--close"></i>
+                    </a>
+                </div>
+                <div class="we-Cart-headerRight">
+                    ${'{0} items in cart' @ i18n, format=[cart.entries.length]}
+                </div>
+            </div>
+
+            <div class="we-Cart-entries"
+                 data-sly-list.item="${ cart.entries }">
+                <div class="we-Cart-entry">
+                    <img class="we-Cart-image" src="${ item.image }" alt="${ item.product.title }"/><!--
+                    --><div class="we-Cart-entryContent">
+                        <a href="${ item.product.pagePath }">
+                            ${ item.product.title }
+                        </a>
+                        <div class="text-muted"><small>${ item.product.baseProduct.description }</small></div>
+                        <div>
+                            <span class="text-muted">Qty:</span>
+                            ${ item.entry.quantity }
+
+                            <strong>${ item.price }</strong>
+                        </div>
+                    </div><!--
+                    --><!--<div class="we-Cart-remove">
+                        <form method="POST" action="${ resource.path }.delete.html"
+                        onsubmit="return trackCartRemove('${ item.product.baseProduct.productData || item.product.baseProduct.pagePath }')">
+                            <input type="hidden" name="entryNumber" value="${ item.entry.entryIndex }"/>
+                            <input type="hidden" name="redirect" value="${ currentPage.path }.html"/>
+                            <button type="submit" class="btn btn-default btn-icon"><i class="fa fa-trash"></i></button>
+                        </form>
+                    </div>-->
+                </div>
+            </div>
+
+            <div class="we-Cart-footer">
+                <div class="we-Cart-subtotal">
+                    sub-total: ${ cart.total }
+                </div>
+                <a data-sly-test="${ cart.checkoutPage }" class="btn btn-primary btn-action pull-right" href="${ cart.checkoutPage }">${ 'Checkout' @ i18n }</a>
+            </div>
+        </div>
+    </cart-content>
+</div>

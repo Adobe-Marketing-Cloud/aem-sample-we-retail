@@ -1,5 +1,5 @@
 /*
- *  Copyright 2015 Adobe Systems Incorporated
+ *  Copyright 2016 Adobe Systems Incorporated
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
+
 @import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
 
 .navbar {
@@ -260,6 +261,14 @@
             line-height: 1.1;
 
             text-transform: none;
+        }
+        &.active > a {
+            .navbar-default & {
+                color: @navbar-default-link-active-color;
+            }
+            .navbar-inverse & {
+                color: @navbar-inverse-link-active-color;
+            }
         }
     }
 

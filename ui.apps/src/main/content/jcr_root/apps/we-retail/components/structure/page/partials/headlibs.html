@@ -1,5 +1,5 @@
 <!--/*
-    Copyright 2015 Adobe Systems Incorporated
+    Copyright 2016 Adobe Systems Incorporated
   
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -13,18 +13,23 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-
 <script>window.CQ = window.CQ || {}</script>
 
 <!--/* Include the site client libraries (loading only the CSS in the header, JS will be loaded in the footer) */-->
-<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientlib.css @ categories='we-retail.all'}"/>
+<sly data-sly-use.wcmInit="wcm/foundation/components/page/initwcm.js" data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientLib.css @ categories=wcmInit.templateCategories}" />
+    <sly data-sly-call="${clientlib.css @ categories='we-retail.base'}"/>
+</sly>
 
 <!--/* Initialize TypeKit Fonts */-->
 <script src="https://use.typekit.net/pqg4scy.js"></script>
 <script>try{Typekit.load({async:true});}catch(e){}</script>
 
-<!--/* Initialize Cloud Services */-->
-<sly data-sly-include="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp" />
-
 <!--/* Initialize the Authoring UI */-->
 <sly data-sly-include="author.html" />
+
+<!--/* Include Context Hub */-->
+<sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}" />
+
+<!--/* Initialize Cloud Services */-->
+<sly data-sly-include="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp" />

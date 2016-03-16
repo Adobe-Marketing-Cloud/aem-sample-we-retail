@@ -1,5 +1,5 @@
 <!--/*
-    Copyright 2015 Adobe Systems Incorporated
+    Copyright 2016 Adobe Systems Incorporated
   
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#" data-toggle="modal" data-target=".we-SignInModal">Login</a></li>
                 <li><a href="#"><i class="fa fa-heart-o"></i> Wishlist <span class="badge">0</span></a></li>
-                <li data-sly-resource="${@ resourceType='we-retail/components/content/navcart'}"></li>
+                <li data-sly-resource="${@ resourceType='we-retail/components/structure/navcart'}"></li>
             </ul>
         </div>
     </div>
@@ -43,7 +43,7 @@
                 </button>
 
                 <a class="navbar-brand" href="${header.languageRoot}">we.<strong>Retail</strong></a>
-                <div class="pull-right visible-xs" data-sly-resource="${@ resourceType='we-retail/components/content/navcart', selectors='mobilebutton'}"></div>
+                <div class="pull-right visible-xs" data-sly-resource="${@ resourceType='we-retail/components/structure/navcart', selectors='mobilebutton'}"></div>
             </div>
             
             <!-- /.navbar-header -->
@@ -52,11 +52,11 @@
                     <li class="visible-xs"><a href="${header.languageRoot.path}.html">we.<strong class="text-primary">Retail</strong></a></li>
                     <sly data-sly-list.item="${header.items}">
                         <li class="${item.selected ? 'active' : ''}">
-                            <a href="${item.page.path @ context='uri'}.html">${item.page.title}</a>
+                        <a href="${ item.page.path }.html">${item.page.title}</a>
 
                             <ul data-sly-list.subitem="${item.children}" class="navbar-nav-subitems">
                                 <li class="${subitem.selected ? 'active' : ''}">
-                                    <a href="${subitem.page.path @ context='uri'}.html">${subitem.page.title}</a>
+                                    <a href="${ subitem.page.path }.html">${subitem.page.title}</a>
                                 </li>
                             </ul>
                         </li>
@@ -238,12 +238,12 @@
                     <h3 class="modal-title">LOGIN</h3>
                 </div>
                 <div class="modal-body">
-                    <form class="we-SignInModal-form">
+                    <form class="we-SignInModal-form" method="POST" action="${header.signInPath}">
                         <div class="form-group">
-                            <input class="form-control" type="text" placeholder="email address"/>
+                            <input class="form-control" type="text" name="j_username" placeholder="email address"/>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" type="password" placeholder="password"/>
+                            <input class="form-control" type="password" name="j_password" placeholder="password"/>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-action">Login</button>
@@ -251,6 +251,7 @@
                         <div class="form-group">
                             <a href="#" class="">Forgot your password?</a>
                         </div>
+                        <input type="hidden" name="resource" value="${header.currentPath}.html"/>
                     </form>
 
                     <div>

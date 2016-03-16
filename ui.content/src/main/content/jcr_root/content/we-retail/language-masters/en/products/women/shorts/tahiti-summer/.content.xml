@@ -2,8 +2,10 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-02-25T22:18:53.888+01:00"
+        cq:lastModified="{Date}2016-03-14T21:31:10.579+01:00"
         cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2016-03-14T21:31:10.742+01:00"
+        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/wm/wmap/wmapth"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -12,156 +14,189 @@
         jcr:title="Tahiti Summer"
         sling:resourceType="we-retail/components/structure/page">
         <root
+            cq:lastRolledout="{Date}2016-03-14T21:31:10.620+01:00"
+            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
-            <responsivegrid
+            <breadcrumb
+                cq:lastRolledout="{Date}2016-03-14T21:31:10.656+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid">
-                <product
-                    cq:commerceType="product"
-                    jcr:lastModified="{Date}2016-02-25T22:18:53.887+01:00"
+                sling:resourceType="we-retail/components/structure/breadcrumb"/>
+            <product
+                cq:commerceType="product"
+                cq:lastRolledout="{Date}2016-03-14T21:31:10.658+01:00"
+                cq:lastRolledoutBy="admin"
+                jcr:lastModified="{Date}2016-03-10T14:21:11.724+01:00"
+                jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/structure/product"
+                productData="/etc/commerce/products/we-retail/wm/wmap/wmapth">
+                <wmapth-xs
+                    cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:10.688+01:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product"
-                    productData="/etc/commerce/products/we-retail/wm/wmap/wmapth">
-                    <wmapth-xs
-                        cq:commerceType="variant"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapth/size-xs">
-                        <image
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.476Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shorts/Tahiti.jpg"/>
-                        <assets
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
-                    </wmapth-xs>
-                    <wmapth-s
-                        cq:commerceType="variant"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapth/size-s">
-                        <image
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.476Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shorts/Tahiti.jpg"/>
-                        <assets
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
-                    </wmapth-s>
-                    <wmapth-m
-                        cq:commerceType="variant"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapth/size-m">
-                        <image
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.476Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shorts/Tahiti.jpg"/>
-                        <assets
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
-                    </wmapth-m>
-                    <wmapth-l
-                        cq:commerceType="variant"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapth/size-l">
-                        <image
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.476Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shorts/Tahiti.jpg"/>
-                        <assets
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
-                    </wmapth-l>
-                    <wmapth-xl
-                        cq:commerceType="variant"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product"
-                        productData="/etc/commerce/products/we-retail/wm/wmap/wmapth/size-xl">
-                        <image
-                            jcr:lastModified="{Date}2015-01-26T12:28:08.476Z"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/geometrixx-outdoors/products/shorts/Tahiti.jpg"/>
-                        <assets
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/product/assets"/>
-                    </wmapth-xl>
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmapth/size-xs">
                     <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:10.697+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2015-01-26T12:28:08.476Z"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/geometrixx-outdoors/products/shorts/Tahiti.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:10.698+01:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/content/product/assets"/>
-                </product>
-                <reviews_section_title
-                    jcr:mixinTypes="[cq:LiveRelationship]"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmapth-xs>
+                <wmapth-s
+                    cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:10.698+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    jcr:title="Reviews"
-                    sling:resourceType="we-retail/components/content/section-title"/>
-                <reviews
-                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmapth/size-s">
+                    <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:10.708+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.476Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/shorts/Tahiti.jpg"/>
+                    <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:10.708+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmapth-s>
+                <wmapth-m
+                    cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:10.709+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product-reviews"/>
-                <similar_section_title
-                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmapth/size-m">
+                    <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:10.718+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.476Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/shorts/Tahiti.jpg"/>
+                    <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:10.718+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmapth-m>
+                <wmapth-l
+                    cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:10.719+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    jcr:title="You may also like"
-                    sling:resourceType="we-retail/components/content/section-title"/>
-                <similar_products
-                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmapth/size-l">
+                    <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:10.728+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.476Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/shorts/Tahiti.jpg"/>
+                    <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:10.728+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmapth-l>
+                <wmapth-xl
+                    cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-03-14T21:31:10.729+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product/recommendation"
-                    max="6"
-                    relationshipType="relatedproducts:info.we-retail.similar-to-current"/>
-            </responsivegrid>
-        </root>
-        <cq:responsive
-            jcr:mixinTypes="[cq:LiveRelationship]"
-            jcr:primaryType="nt:unstructured">
-            <breakpoints
+                    sling:resourceType="we-retail/components/structure/product"
+                    productData="/etc/commerce/products/we-retail/wm/wmap/wmapth/size-xl">
+                    <image
+                        cq:lastRolledout="{Date}2016-03-14T21:31:10.738+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:lastModified="{Date}2015-01-26T12:28:08.476Z"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/geometrixx-outdoors/products/shorts/Tahiti.jpg"/>
+                    <assets
+                        cq:lastRolledout="{Date}2016-03-14T21:31:10.739+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                </wmapth-xl>
+                <image
+                    cq:lastRolledout="{Date}2016-03-14T21:31:10.739+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:lastModified="{Date}2015-01-26T12:28:08.476Z"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="commerce/components/product/image"
+                    fileReference="/content/dam/geometrixx-outdoors/products/shorts/Tahiti.jpg"/>
+                <assets
+                    cq:lastRolledout="{Date}2016-03-14T21:31:10.740+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="we-retail/components/structure/product/assets"/>
+            </product>
+            <responsivegrid
+                cq:lastRolledout="{Date}2016-03-14T21:31:10.740+01:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
-                jcr:primaryType="nt:unstructured">
-                <phone
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    title="Phone"
-                    width="{Decimal}650"/>
-                <tablet
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    title="Tablet"
-                    width="{Decimal}1200"/>
-            </breakpoints>
-        </cq:responsive>
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+            <reviews_section_title
+                cq:lastRolledout="{Date}2016-03-14T21:31:10.740+01:00"
+                cq:lastRolledoutBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Reviews"
+                sling:resourceType="we-retail/components/content/title"/>
+            <reviews
+                cq:lastRolledout="{Date}2016-03-14T21:31:10.741+01:00"
+                cq:lastRolledoutBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/structure/product-reviews"/>
+            <similar_section_title
+                cq:lastRolledout="{Date}2016-03-14T21:31:10.741+01:00"
+                cq:lastRolledoutBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="You may also like"
+                sling:resourceType="we-retail/components/content/title"/>
+            <similar_products
+                cq:lastRolledout="{Date}2016-03-14T21:31:10.742+01:00"
+                cq:lastRolledoutBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="we-retail/components/structure/product-recommendation"/>
+        </root>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"
             cq:master="/content/catalogs/we-retail/en/template-pages/product-page-template"
