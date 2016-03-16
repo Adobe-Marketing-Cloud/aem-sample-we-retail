@@ -2,8 +2,8 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Template">
     <jcr:content
-        jcr:description="Template for a pages that redirect elsewhere."
+        jcr:description="Template for pages that redirect"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Redirect Page"
+        jcr:title="We.Retail Redirect Page"
         status="enabled"/>
 </jcr:root>
