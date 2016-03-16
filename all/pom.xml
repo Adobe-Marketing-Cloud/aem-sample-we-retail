@@ -113,6 +113,20 @@
                             <targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
                             <failOnError>true</failOnError>
                             <failOnMissingEmbed>true</failOnMissingEmbed>
+                            <verbose>true</verbose>
+                            <group>adobe/aem6/sample</group>
+                            <subPackages>
+                                <subPackage>
+                                    <groupId>${project.groupId}</groupId>
+                                    <artifactId>we.retail.ui.apps</artifactId>
+                                    <filter>true</filter>
+                                </subPackage>
+                                <subPackage>
+                                    <groupId>${project.groupId}</groupId>
+                                    <artifactId>we.retail.ui.content</artifactId>
+                                    <filter>true</filter>
+                                </subPackage>
+                            </subPackages>
                         </configuration>
                      </plugin>
                  </plugins>
