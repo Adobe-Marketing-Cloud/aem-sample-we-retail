@@ -143,7 +143,7 @@ use(function () {
     var theme = properties.get("theme", "default");
 
     return {
-        currentPath: resourcePage.getPath(),
+        currentPath: currentPage.getPath(),
         signInPath: SIGN_IN_PATH,
         items: items,
         theme: theme,

@@ -15,77 +15,10 @@
 }}
 {{includeClientLib categories="we-retail.base"}}
 {{include this.id path="/content/we-retail/language-masters/en" resourceType="we-retail/components/structure/header"}}
-<nav class="scf-site-header navbar navbar-default hidden-xs" role="navigation">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <a class="navbar-brand scf-js-site-title" data-id="{{siteId}}" href="{{siteUrl}}.html">{{i18n siteTitle}}</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse">
-            {{#if loggedInUser.loggedIn}}
-                <ul class="nav navbar-nav">
-                    <li><a href="{{siteUrl}}/profile.html">{{i18n "Profile"}}</a></li>
-                    {{#if messagingAllowed}}
-                        <li>
-                            <script>
-                                var data = {};
-                                data["messageFolder"] = "inbox";
-                                var messagecount;
-                                $.ajax({
-                                    type: "GET",
-                                    url: "{{siteUrl}}" + "/messaging/jcr:content/content/primary/messagebox_5ab3.social.0.0.json",
-                                    async: true,
-                                    data: data,
-                                    success: function(json) {
-                                        messagecount = json["messageCounts"].nonDeletedUnreadCount;
-                                        $("a.messageBoxPrimaryLink").html($("a.messageBoxPrimaryLink").html() + " <span class=\"badge\">" + messagecount + "</span>");
-                                    }
-                                });
-
-                            </script>
-                            <a href="{{siteUrl}}/messaging.html" class="messageBoxPrimaryLink">{{i18n "Messages"}}</a>
-                        </li>
-                    {{/if}}
-                    <li>
-                        <a href="{{siteUrl}}/notifications.html">
-                          {{i18n "Notifications"}} <span class="badge" id="scf-js-notificationsUnreadCount" data-siteUrl="{{siteUrl}}">0</span>
-                       </a>
-                    </li>
-                </ul>
-
-            {{/if}}
-
-
-            <div class="nav navbar-right">
-                <form data-paths="{{this.ugcPath}}" class="scf-js-searchform navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" name="input_value" placeholder="{{i18n "Search..."}}" class="form-control scf-search-value, scf-js-search-value">
-                        <input style="display:none" type="checkbox" class="scf-js-search-jcrtitle" value="jcr:title" checked></input>
-                        <input style="display:none" type="checkbox" class="scf-js-search-jcrdescription" value="jcr:description" checked></input>
-                        <input style="display:none" type="checkbox" class="scf-js-search-tag" value="tag" checked></input>
-                        <input style="display:none" type="checkbox" class="scf-js-search-userIdentifier" value="userIdentifier" checked></input>
-                        <input type="hidden" name="resultPage" class="scf-js-seach-resultPage" value="{{searchPagePath}}"></input>
-                    </div>
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                    {{#unless loggedInUser.loggedIn}}
-                        <li><a href="{{siteUrl}}/signin.html">{{i18n "Log In"}}</a></li>
-                        {{else}}
-                            <li><a href="/system/sling/logout.html?resource={{siteUrl}}.html">{{i18n "Log Out"}}</a></li>
-                    {{/unless}}
-                </ul>
-            </div>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-</nav>
-
 {{include this.id path="groupnav" resourceType="social/console/components/hbs/groupnavbar"}}
-
 <div class="container-fluid scf-site-body-content-container">
     {{include this.id path="content"}}
 </div>
 {{include this.id path="/content/we-retail/language-masters/en" resourceType="we-retail/components/structure/footer"}}
-{{include this.id path="clientcontext" resourceType="cq/personalization/components/clientcontext"}} {{include this.id path="cloudservices" resourceType="cq/cloudserviceconfigs/components/servicecomponents"}}
+{{include this.id path="clientcontext" resourceType="cq/personalization/components/clientcontext"}}
+{{include this.id path="cloudservices" resourceType="cq/cloudserviceconfigs/components/servicecomponents"}}
