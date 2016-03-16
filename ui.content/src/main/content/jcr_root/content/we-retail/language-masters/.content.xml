@@ -11,6 +11,7 @@
         sling:redirectStatus="{Long}302"
         sling:resourceType="foundation/components/redirect"
         branding-global-less="/etc/designs/we-retail/global.less"
-        redirectTarget="/content/we-retail/language-masters/en"/>
+        redirectTarget="/content/we-retail/language-masters/en"
+        hideInNav="{Boolean}true"/>
     <en/>
 </jcr:root>
