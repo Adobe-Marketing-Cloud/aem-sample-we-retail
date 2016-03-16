@@ -19,27 +19,28 @@
 .we-LanguagesList {
     list-style: none;
     padding: 0;
-    margin: 0 25%;
+    margin: 0 10px;
     
     li {
-        > a {
+        .we-lang-icon {
+            margin-right: 1rem;
+        }
+
+        > span {
             color: @gray-dark;
             text-decoration: none;
+            margin-right: 0.5rem;
 
-            .we-lang-icon {
-                margin-right: 1rem;
-            }
-
-            &:hover {
+            a:hover {
                 color: @brand-primary;
                 text-decoration: underline;
             }
-        }
 
-        &.active {
-            > a {
+            a.active {
                 font-weight: 700;
             }
         }
+
+
     }
 }
