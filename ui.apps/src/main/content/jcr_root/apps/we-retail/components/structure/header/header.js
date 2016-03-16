@@ -95,25 +95,38 @@ use(function () {
         return pageManager.getPage(path);
     };
 
-    var getLanguages = function(root) {
-        var items = [], page, selected,
-            rootPath = root.getPath();
-
-        var parent = root.getParent();
-        if (parent == null) {
+    var getCountries = function(siteRoot) {
+        var items = [];
+        var countryroot = siteRoot.getParent(2);
+        if (countryroot == null) {
             return [];
         }
-        var it = parent.listChildren(new Packages.com.day.cq.wcm.api.PageFilter());
-
+        var it = countryroot.listChildren(new Packages.com.day.cq.wcm.api.PageFilter());
         while (it.hasNext()) {
-            page = it.next();
+            var countrypage = it.next();
+            items.push({
+                countrycode: countrypage.getName(),
+                languages: getLanguages(countrypage, siteRoot)
+            })
+        }
+
+        return items;
+    }
+
+    var getLanguages = function(countryRoot,siteRoot) {
+        var items = [];
+
+        var langIt = countryRoot.listChildren(new Packages.com.day.cq.wcm.api.PageFilter());
+        while (langIt.hasNext()) {
+            var langpage = langIt.next();
 
             items.push({
-                path: page.getPath(),
-                code: page.getName(),
-                name: page.getTitle(),
-                selected: rootPath.equals(page.getPath())
+                path: langpage.getPath(),
+                languagecode: langpage.getName(),
+                name: langpage.getTitle(),
+                selected: siteRoot.getPath().equals(langpage.getPath())
             });
+
         }
 
         return items;
@@ -123,7 +136,7 @@ use(function () {
     var root = findRoot(resourcePage);
     var currentNavPath = currentPage && currentPage.getPath();
     var languageRoot = "#";
-    var languages = [], currentLanguage = {};
+    var countries = [], currentLanguage = {};
 
     if (root) {
         items = getPages(root, 2);
@@ -132,9 +145,10 @@ use(function () {
             languageRoot = root.path + ".html";
         }
 
-        languages = getLanguages(root);
+        countries = getCountries(root);
         currentLanguage = {
-            code: root.getName(),
+            countrycode: root.getParent().getName(),
+            languagecode: root.getName(),
             name: root.getTitle()
         };
     }
@@ -148,7 +162,7 @@ use(function () {
         items: items,
         theme: theme,
         languageRoot: languageRoot,
-        languages: languages,
+        countries: countries,
         currentLanguage: currentLanguage
     };
 });
