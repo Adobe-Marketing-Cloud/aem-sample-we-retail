@@ -5,12 +5,12 @@
         <foundation jcr:primaryType="nt:unstructured">
             <components jcr:primaryType="nt:unstructured">
                 <responsivegrid jcr:primaryType="nt:unstructured">
-                    <default
-                        jcr:description="Policy for editable paragraph systems"
+                    <we-retail-default
+                        jcr:description="Policy for editable layout containers"
                         jcr:lastModified="{Date}2016-02-16T21:39:02.041+01:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Default"
+                        jcr:title="We.Retail Default"
                         sling:resourceType="wcm/core/components/policy/policy"
                         components="[group:We.Retail,/libs/wcm/foundation/components/responsivegrid]"
                         policyResourceType="wcm/foundation/components/responsivegrid">
@@ -59,13 +59,13 @@
                                     type="Content Fragment"/>
                             </assetToComponentMapping>
                         </cq:authoring>
-                    </default>
-                    <structure
-                        jcr:description="Policy for template structure to allow structure components"
+                    </we-retail-default>
+                    <we-retail-structure
+                        jcr:description="Policy for templates to allow structure components"
                         jcr:lastModified="{Date}2016-02-16T21:38:49.301+01:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Structure"
+                        jcr:title="We.Retail Structure"
                         sling:resourceType="wcm/core/components/policy/policy"
                         components="[group:We.Retail,group:We.Retail.Structure,/libs/wcm/foundation/components/responsivegrid]"
                         policyResourceType="wcm/foundation/components/responsivegrid">
@@ -114,7 +114,7 @@
                                     type="Content Fragment"/>
                             </assetToComponentMapping>
                         </cq:authoring>
-                    </structure>
+                    </we-retail-structure>
                 </responsivegrid>
             </components>
         </foundation>
@@ -131,33 +131,33 @@
                 <page
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="nt:unstructured">
-                    <product
+                    <we-retail-product-page
                         jcr:description="Policy for product pages"
                         jcr:lastModified="{Date}2016-03-03T18:52:44.719+01:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Product Page"
+                        jcr:title="We.Retail Product Page"
                         sling:resourceType="wcm/core/components/policy/policy"
                         clientlibs="[we-retail.product-page]"/>
                 </page>
                 <breadcrumb
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="nt:unstructured">
-                    <experience-page
+                    <we-retail-experience-page
                             jcr:description="Policy for breadcrumb on experience pages"
                             jcr:lastModified="{Date}2016-03-03T18:52:44.719+01:00"
                             jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="Experience Page Breadcrumb"
+                            jcr:title="We.Retail Experience Page Breadcrumb"
                             sling:resourceType="wcm/core/components/policy/policy"
                             absParent="3"
                             relParent="1"/>
-                    <product-page
+                    <we-retail-product-page
                             jcr:description="Policy for breadcrumb on product pages"
                             jcr:lastModified="{Date}2016-03-03T18:52:44.719+01:00"
                             jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="Product Page Breadcrumb"
+                            jcr:title="We.Retail Product Page Breadcrumb"
                             sling:resourceType="wcm/core/components/policy/policy"
                             absParent="5"
                             relParent="1"/>
