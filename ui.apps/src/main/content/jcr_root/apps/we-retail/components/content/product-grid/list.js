@@ -434,7 +434,7 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
             var queryBuilder = resourceResolver.adaptTo(global.Packages.com.day.cq.search.QueryBuilder);
             
             var params = {};
-            params["path"] = currentPage.getPath();
+            params["path"] = properties.get("path", currentPage.getPath());
             params["type"] = "cq:Page";
             params["p.offset"] = 0;
             params["p.limit"] = 500;
