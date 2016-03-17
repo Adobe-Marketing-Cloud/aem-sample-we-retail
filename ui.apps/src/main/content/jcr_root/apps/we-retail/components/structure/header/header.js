@@ -26,7 +26,11 @@ use(function () {
     var PROP_NAV_ROOT = "navRoot";
 
     var SIGN_IN_PATH = "/content/we-retail/community/en/signin/j_security_check";
-
+    var SIGN_UP_PATH = "/content/we-retail/community/en/signup";
+    var NOTIFICATION_PATH = "/content/we-retail/community/en/notifications";
+    var MESSAGING_PATH = "/content/we-retail/community/en/messaging";
+    var PROFILE_PATH = "/content/we-retail/community/en/profile";
+    
     var items = [];
 
     var pageManager = resolver.adaptTo(com.day.cq.wcm.api.PageManager);
@@ -143,8 +147,13 @@ use(function () {
     var theme = properties.get("theme", "default");
 
     return {
-        currentPath: resourcePage.getPath(),
+        isAnonymous: resolver.getUserID().equals("anonymous"),
+    	currentPath: currentPage.getPath(),
         signInPath: SIGN_IN_PATH,
+        signUpPath: SIGN_UP_PATH,
+        messagingPath: MESSAGING_PATH,
+        notificationPath: NOTIFICATION_PATH,
+        profilePath: PROFILE_PATH,
         items: items,
         theme: theme,
         languageRoot: languageRoot,

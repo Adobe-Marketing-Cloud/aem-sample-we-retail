@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2016-03-07T17:32:10.926+01:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/we-retail/settings/wcm/templates/redirect-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Notifications"
+        sling:redirect="{Boolean}true"
+        sling:redirectStatus="{Long}302"
+        sling:resourceType="foundation/components/redirect"
+        redirectTarget="/bin/SetupCommunities?contentPath=/etc/community/we-retail&amp;returnURL=/content/we-retail/community/en.html#top"/>
+</jcr:root>
