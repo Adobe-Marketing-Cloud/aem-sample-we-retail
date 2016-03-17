@@ -19,9 +19,13 @@
             <ul class="nav navbar-nav navbar-left">
                 <li><a href="#" data-toggle="modal" data-target=".we-LanguageModal" title="${header.currentLanguage.name}"><i class="we-lang-icon we-lang-icon-${header.currentLanguage.code}"></i> ${header.currentLanguage.code}</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" data-toggle="modal" data-target=".we-SignInModal">Login</a></li>
+           <ul class="nav navbar-nav navbar-right">
+                <li data-sly-test="${header.isAnonymous}"><a href="#" data-toggle="modal" data-target=".we-SignInModal">Login</a></li>
+                <li data-sly-test="${!header.isAnonymous}"><a href="/system/sling/logout.html?resource=${header.currentPath}.html">Log out</a></li>
+                <li data-sly-test="${!header.isAnonymous}"><a href="${header.profilePath}.html">Profile</a></li>
                 <li><a href="#"><i class="fa fa-heart-o"></i> Wishlist <span class="badge">0</span></a></li>
+                <li data-sly-test="${!header.isAnonymous}"><a href="${header.messagingPath}.html"><i class="fa fa-envelope-o"></i> Messages <span class="badge">0</span></a></li>
+                <li data-sly-test="${!header.isAnonymous}"><a href="${header.notificationPath}.html"><i class="fa fa-flag-o"></i> Notifications <span class="badge">0</span></a></li>
                 <li data-sly-resource="${@ resourceType='we-retail/components/structure/navcart'}"></li>
             </ul>
         </div>
@@ -61,13 +65,16 @@
                             </ul>
                         </li>
                     </sly>
-                    <li class="visible-xs divider" role="separator"></li>
-                    <li class="visible-xs"><a href="#" data-toggle="modal" data-target=".we-SignInModal">Login</a></li>
+                     <li class="visible-xs divider" role="separator"></li>
+                    <li class="visible-xs" data-sly-test="${header.isAnonymous}"><a href="#" data-toggle="modal" data-target=".we-SignInModal">Login</a></li>
+            	    <li class="visible-xs" data-sly-test="${!header.isAnonymous}"><a href="/system/sling/logout.html?resource=${header.currentPath}.html">Log out</a></li>
+                    <li class="visible-xs" data-sly-test="${!header.isAnonymous}"><a href="${header.profilePath}.html">Profile</a></li>
+                    <li class="visible-xs" data-sly-test="${!header.isAnonymous}"><a href="${header.messagingPath}.html" class="visible-xs">Messages <span class="badge pull-right">0</span></a></li>
+                    <li class="visible-xs" data-sly-test="${!header.isAnonymous}"><a href="${header.notificationPath}.html" class="visible-xs">Notifications <span class="badge pull-right">0</span></a></li>
                     <li class="visible-xs"><a href="#" class="visible-xs">Wishlist <span class="badge pull-right">0</span></a></li>
-                    <li class="visible-xs"><a href="#" data-toggle="modal" data-target=".we-LanguageModal"><i class="we-lang-icon we-lang-icon-${header.currentLanguage.code}"></i> ${header.currentLanguage.code}</a></li>
-                </ul>
+                    <li class="visible-xs"><a href="#" data-toggle="modal" data-target=".we-LanguageModal"><i class="we-lang-icon we-lang-icon-${header.currentLanguage.code}"></i> ${header.currentLanguage.code}</a></li>               </ul>
             </div>
-
+ 
             <!-- /.navbar-collapse -->
             <div class="navbar-right-outside">
                 <a href="#" class="btn ${header.theme == 'inverse' ? 'btn-primary' : ''}" data-toggle="modal" data-target="#navbar-search">
@@ -259,13 +266,7 @@
                             <h4 class="modal-title text-uppercase">Don't have an account?</h4>
                         </div>
                         <div class="form-group">
-                            <a href="#" class="btn btn-primary btn-action">Register</a>
-                        </div>
-                        <div class="form-group">
-                            <a href="#" class="">Sign in with facebook</a>
-                        </div>
-                        <div class="form-group">
-                            <a href="#" class="">Sign in with twitter</a>
+                            <a href="${header.signUpPath}.html" class="btn btn-primary btn-action">Register</a>
                         </div>
                     </div>
 

@@ -4,7 +4,7 @@
     jcr:primaryType="cq:Template"
     ranking="{Long}1">
     <jcr:content
-        jcr:description="Template for a HTML5 content page."
+        jcr:description="Generic template for web pages"
         jcr:primaryType="cq:PageContent"
-        jcr:title="HTML5 Page"/>
+        jcr:title="We.Retail Empty Page"/>
 </jcr:root>
