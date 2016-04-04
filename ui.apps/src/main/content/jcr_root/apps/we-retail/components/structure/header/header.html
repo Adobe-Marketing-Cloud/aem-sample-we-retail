@@ -25,7 +25,7 @@
                 <li data-sly-test="${!header.isAnonymous}"><a href="${header.profilePath}.html">Profile</a></li>
                 <li><a href="#"><i class="fa fa-heart-o"></i> Wishlist <span class="badge">0</span></a></li>
                 <li data-sly-test="${!header.isAnonymous}"><a href="${header.messagingPath}.html"><i class="fa fa-envelope-o"></i> Messages <span class="badge">0</span></a></li>
-                <li data-sly-test="${!header.isAnonymous}"><a href="${header.notificationPath}.html"><i class="fa fa-flag-o"></i> Notifications <span class="badge">0</span></a></li>
+                <li data-sly-test="${!header.isAnonymous}"><a href="${header.notificationPath}.html"><i class="fa fa-flag-o"></i> Notifications <span class="badge" id="scf-js-notificationsUnreadCount" data-siteurl="/content/we-retail/community/en">0</span></a></li>
                 <li data-sly-resource="${@ resourceType='we-retail/components/structure/navcart'}"></li>
             </ul>
         </div>
