@@ -52,6 +52,8 @@ ashley.thompson@spambob.com,0,,,,,,,,,,,,,,,,,,,,,,
 rebekah.larsen@trashymail.com,0,,,,,,,,,,,,,,,,,,,,,,
 andrew.schaeffer@trashymail.com,0,,,,,,,,,,,,,,,,,,,,,,
 donna.billups@pookmail.com,0,,,,,,,,,,,,,,,,,,,,,,
+# Pausing a little bit for Indexing to catchup,,,,,,,,,,,,,,,,,,,,,,,
+Sleep,30000,,,,,,,,,,,,,,,,,,,,,,
 # The following lines are creating the forum component and the associated content for the Community Groups in the Reference site,,,,,,,,,,,,,,,,,,,,,,,
 Forum,/content/we-retail/community/en/groups/hiking/jcr:content/content/primary/forum.social.json,sling:resourceType,social/forum/components/hbs/forum,rteEnabled,TRUE,allowVoting,TRUE,allowRepliesToComments,TRUE,allowCloseComments,TRUE,allowDeleteComments,TRUE,allowDenyComments,TRUE,allowFlagComments,TRUE,flagModerateThreshold,1,flagViewThreshold,3,allowFileUploads,TRUE
 rebekah.larsen@trashymail.com,0,Best GPS for hiking?,"I want to buy my husband a GPS navigator as a gift. He is an avid hiker and is always talking about how great it would be to have one. I don't know a lot about the technology or options available out there, and I am hoping for a little advice backed by experience.",,,,,,,,,,,,,,,,,,,,

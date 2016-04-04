@@ -148,6 +148,9 @@
                         </executions>
                         <configuration>
                             <targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
+ 							<properties>
+                            	<acHandling>merge_preserve</acHandling>
+                    	    </properties>
                             <failOnError>true</failOnError>
                             <failOnMissingEmbed>true</failOnMissingEmbed>
                         </configuration>
@@ -175,6 +178,9 @@
                         </executions>
                         <configuration>
                             <targetURL>http://${aem.publish.host}:${aem.publish.port}/crx/packmgr/service.jsp</targetURL>
+							<properties>
+                            	<acHandling>merge_preserve</acHandling>
+                    	    </properties>
                             <failOnError>true</failOnError>
                             <failOnMissingEmbed>true</failOnMissingEmbed>
                         </configuration>
