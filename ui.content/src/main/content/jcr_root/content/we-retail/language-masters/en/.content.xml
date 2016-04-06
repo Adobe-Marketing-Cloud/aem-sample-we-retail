@@ -176,7 +176,7 @@
                     listFrom="static"
                     orderBy="jcr:title"
                     pageMax="0"
-                    pages="[/content/we-retail/language-masters/en/products/men/coats/edmonton-winter,/content/we-retail/language-masters/en/products/women/pants/tonga-fashion,/content/we-retail/language-masters/en/products/seasonal/winter/apparel/scarves/halifax-winter,/content/we-retail/language-masters/en/products/seasonal/winter/apparel/hats/montreal-snow,/content/we-retail/language-masters/en/products/equipment/skiing/fernie-snow,/content/we-retail/language-masters/en/products/equipment/skiing/blackcomb-snow]"
+                    pages="[/content/we-retail/language-masters/en/products/women/coats/sleek-insulated-coat,/content/we-retail/language-masters/en/products/men/coats/el-gordo-down-jacket,/content/we-retail/language-masters/en/products/men/shirts/expedition-tech-long-sleeved-shirt,/content/we-retail/language-masters/en/products/men/pants/trail-model-pants,/content/we-retail/language-masters/en/products/equipment/biking/marin-mountain-bike-shoes,/content/we-retail/language-masters/en/products/women/shirts/rios-t-shirt]"
                     tagsMatch="any"/>
                 <section_title_431279162
                     jcr:created="{Date}2015-11-04T00:51:12.388+01:00"
@@ -223,7 +223,7 @@
                     listFrom="static"
                     orderBy="jcr:title"
                     pageMax="0"
-                    pages="[/content/we-retail/language-masters/en/products/equipment/skiing/banff-snow,/content/we-retail/language-masters/en/products/seasonal/winter/apparel/hats/montreal-snow,/content/we-retail/language-masters/en/products/equipment/skiing/calgary-winter,/content/we-retail/language-masters/en/products/women/coats/saskatoon-parka,/content/we-retail/language-masters/en/products/equipment/skiing/tobermory-snow,/content/we-retail/language-masters/en/products/equipment/skiing/mont-tremblant]"
+                    pages="[/content/we-retail/language-masters/en/products/women/coats/sleek-insulated-coat,/content/we-retail/language-masters/en/products/men/coats/el-gordo-down-jacket,/content/we-retail/language-masters/en/products/men/shirts/expedition-tech-long-sleeved-shirt,/content/we-retail/language-masters/en/products/men/pants/trail-model-pants,/content/we-retail/language-masters/en/products/equipment/biking/marin-mountain-bike-shoes,/content/we-retail/language-masters/en/products/women/shirts/rios-t-shirt]"
                     tagsMatch="any"/>
                 <section_title_239098
                     jcr:created="{Date}2015-11-04T00:51:38.275+01:00"
