@@ -2,48 +2,50 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:catalogBlueprint="/content/catalogs/we-retail/en/base-catalog/equipment/running"
+        cq:catalogBlueprint="/content/catalogs/we-retail/en/website-catalog/equipment/running"
         cq:commerceType="section"
-        cq:lastModified="{Date}2016-03-14T21:31:14.970+01:00"
+        cq:lastModified="{Date}2016-04-06T21:46:20.174+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastPropertyRollout="{Date}2016-03-10T14:21:11.873+01:00"
-        cq:lastRolledout="{Date}2016-03-14T21:31:15.031+01:00"
+        cq:lastPropertyRollout="{Date}2016-04-06T21:46:20.174+02:00"
+        cq:lastRolledout="{Date}2016-04-06T21:46:20.207+02:00"
         cq:lastRolledoutBy="admin"
         cq:template="/conf/we-retail/settings/wcm/templates/section-page"
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Running"
-        sling:resourceType="we-retail/components/structure/page">
+        sling:resourceType="we-retail/components/structure/page"
+        coverImage="/content/dam/we-retail/activities/running/running_5.jpg"
+        navTitle="Running">
         <root
-            cq:lastRolledout="{Date}2016-03-14T21:31:15.006+01:00"
+            cq:lastRolledout="{Date}2016-04-06T21:46:20.184+02:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <product-grid
-                cq:lastRolledout="{Date}2016-03-14T21:31:15.015+01:00"
+                cq:lastRolledout="{Date}2016-04-06T21:46:20.194+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/product-grid"
                 displayAs="products"
-                listFrom="children"
+                listFrom="descendants"
                 orderBy="jcr:title"
                 ordered="{Boolean}true"
                 pageMax="0">
                 <cq:responsive
-                    cq:lastRolledout="{Date}2016-03-14T21:31:15.020+01:00"
+                    cq:lastRolledout="{Date}2016-04-06T21:46:20.199+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured">
                     <default
-                        cq:lastRolledout="{Date}2016-03-14T21:31:15.030+01:00"
+                        cq:lastRolledout="{Date}2016-04-06T21:46:20.206+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         width="12"/>
                     <phone
-                        cq:lastRolledout="{Date}2016-03-14T21:31:15.030+01:00"
+                        cq:lastRolledout="{Date}2016-04-06T21:46:20.207+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -51,7 +53,7 @@
                 </cq:responsive>
             </product-grid>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-03-14T21:31:15.031+01:00"
+                cq:lastRolledout="{Date}2016-04-06T21:46:20.207+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
@@ -59,13 +61,14 @@
         </root>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"
-            cq:master="/content/catalogs/we-retail/en/template-pages/section-page-template"
+            cq:master="/content/catalogs/we-retail/en/website-template-pages/section-page-template"
             cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
             jcr:primaryType="cq:LiveCopy"/>
     </jcr:content>
-    <marka-sport/>
-    <fiji-sport/>
-    <bora-bora/>
-    <mombassa-runners/>
-    <nairobi-runners/>
+    <faba-running-pants/>
+    <spixa-runners/>
+    <bpa-free-water-bottle/>
+    <fleet-cross-training-shoe/>
+    <basa-mp3-player/>
+    <gomobile-fitness-monitorsmart-music-player/>
 </jcr:root>
