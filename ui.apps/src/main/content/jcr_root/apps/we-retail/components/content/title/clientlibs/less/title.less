@@ -16,11 +16,25 @@
 
 @import (reference) "/etc/designs/we-retail/common/variables.less";
 
-h2.we-Header{
-    margin: 35px 0;
-}
+.we-Header {
+    margin-bottom: 35px;
 
-h4.we-Header{
-    margin: 5px 0;
-    color: @gray-dark;
+    text-align: center;
+
+    & + & {
+        margin-top: -35px;
+    }
+
+    h1&, h2& {
+        text-transform: uppercase;
+    }
+
+    h2& {
+        margin: 35px 0;
+    }
+
+    h4& {
+        margin: 5px 0;
+        color: @gray-dark;
+    }
 }
