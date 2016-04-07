@@ -14,7 +14,8 @@
  *  limitations under the License.
  */
 
-@import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
+@import (reference) "/etc/designs/we-retail/common/variables.less";
+
 
 .we-CategoryTeaser {
     padding: 0;
@@ -44,7 +45,7 @@
     }
 
     h2, h3 {
-        &:extend(.text-uppercase);
+        text-transform: uppercase;
 
         color: @jumbotron-color;
         display: block;
@@ -68,8 +69,20 @@
     }
 
     p {
-        &:extend(.h3);
+        font-family: @headings-font-family;
+        font-weight: @headings-font-weight;
+        line-height: @headings-line-height;
+        color: @headings-color;
+        font-size: @font-size-h3;
 
         margin: 0 auto;
+
+        small,
+        .small {
+            font-weight: normal;
+            line-height: 1;
+            color: @headings-small-color;
+            font-size: 65%;
+        }
     }
 }
