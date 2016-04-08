@@ -3,6 +3,7 @@
     <filter root="/conf/we-retail"/>
 
 	<filter root="/etc/community/we-retail"/>
+	<filter root="/etc/tags/we-retail"/>
 
 	<filter root="/content/campaigns/we-retail"/>
 	<filter root="/content/catalogs/we-retail/en/website-catalog"/>
