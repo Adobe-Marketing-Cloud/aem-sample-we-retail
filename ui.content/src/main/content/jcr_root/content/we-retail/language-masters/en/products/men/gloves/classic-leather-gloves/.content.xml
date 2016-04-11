@@ -2,10 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-04-06T21:46:16.760+02:00"
+        cq:lastModified="{Date}2016-04-12T01:19:38.580+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-04-06T21:46:16.854+02:00"
-        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/me/gloves/meotwicls"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -14,37 +12,27 @@
         jcr:title="Classic Leather Gloves"
         sling:resourceType="we-retail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-04-06T21:46:16.782+02:00"
-            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
-                cq:lastRolledout="{Date}2016-04-06T21:46:16.811+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
-                cq:lastRolledout="{Date}2016-04-06T21:46:16.812+02:00"
-                cq:lastRolledoutBy="admin"
-                jcr:lastModified="{Date}2016-04-06T21:33:00.186+02:00"
+                jcr:lastModified="{Date}2016-04-12T01:19:38.579+02:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product"
                 productData="/etc/commerce/products/we-retail/me/gloves/meotwicls">
                 <meotwicls-s
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:16.829+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/gloves/meotwicls/size-s">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:16.836+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:16:25.048-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -52,23 +40,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/gloves/Classic Leather.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:16.836+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </meotwicls-s>
                 <meotwicls-m
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:16.837+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/gloves/meotwicls/size-m">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:16.844+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:16:25.048-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -76,23 +58,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/gloves/Classic Leather.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:16.844+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </meotwicls-m>
                 <meotwicls-l
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:16.845+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/gloves/meotwicls/size-l">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:16.852+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:16:25.048-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -100,15 +76,11 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/gloves/Classic Leather.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:16.852+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </meotwicls-l>
                 <image
-                    cq:lastRolledout="{Date}2016-04-06T21:46:16.852+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2016-01-11T16:16:25.048-08:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -116,41 +88,29 @@
                     sling:resourceType="commerce/components/product/image"
                     fileReference="/content/dam/we-retail/products/apparel/gloves/Classic Leather.jpg"/>
                 <assets
-                    cq:lastRolledout="{Date}2016-04-06T21:46:16.853+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/assets"/>
             </product>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-04-06T21:46:16.853+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
-                cq:lastRolledout="{Date}2016-04-06T21:46:16.853+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
-                cq:lastRolledout="{Date}2016-04-06T21:46:16.853+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
-                cq:lastRolledout="{Date}2016-04-06T21:46:16.854+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
-                cq:lastRolledout="{Date}2016-04-06T21:46:16.854+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-recommendation"/>

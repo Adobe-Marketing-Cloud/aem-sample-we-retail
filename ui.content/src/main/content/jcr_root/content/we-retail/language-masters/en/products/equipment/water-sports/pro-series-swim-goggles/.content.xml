@@ -2,10 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-04-06T21:46:24.111+02:00"
+        cq:lastModified="{Date}2016-04-12T01:19:39.052+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-04-06T21:46:24.233+02:00"
-        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/eq/water-sports/eqswsuprs"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -14,22 +12,16 @@
         jcr:title="Pro Series Swim Goggles"
         sling:resourceType="we-retail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-04-06T21:46:24.128+02:00"
-            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
-                cq:lastRolledout="{Date}2016-04-06T21:46:24.160+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
-                cq:lastRolledout="{Date}2016-04-06T21:46:24.161+02:00"
-                cq:lastRolledoutBy="admin"
-                jcr:lastModified="{Date}2016-04-06T21:33:00.689+02:00"
+                jcr:lastModified="{Date}2016-04-12T01:19:39.050+02:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product"
@@ -38,15 +30,11 @@
                 variationTitle="Color">
                 <eqswsuprs-one-size
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:24.186+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsuprs/size-one-size">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:24.193+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:38:02.494-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -54,23 +42,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/activities/water-sports/Swim Goggles Blue.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:24.193+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqswsuprs-one-size>
                 <eqswsuprs_1-one-size
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:24.204+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsuprs/eqswsuprs.1/size-one-size">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:24.212+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:38:39.334-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -78,23 +60,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/activities/water-sports/Swim Goggles Blue.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:24.213+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqswsuprs_1-one-size>
                 <eqswsuprs_2-one-size
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:24.213+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsuprs/eqswsuprs.2/size-one-size">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:24.223+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:38:46.660-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -102,23 +78,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/activities/water-sports/Swim Goggles Green.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:24.223+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqswsuprs_2-one-size>
                 <eqswsuprs_3-one-size
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:24.223+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsuprs/eqswsuprs.3/size-one-size">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:24.231+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:38:55.015-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -126,15 +96,11 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/activities/water-sports/Swim Goggles Yellow.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:24.231+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqswsuprs_3-one-size>
                 <image
-                    cq:lastRolledout="{Date}2016-04-06T21:46:24.231+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2016-01-11T16:38:02.494-08:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -142,41 +108,29 @@
                     sling:resourceType="commerce/components/product/image"
                     fileReference="/content/dam/we-retail/products/activities/water-sports/Swim Goggles Blue.jpg"/>
                 <assets
-                    cq:lastRolledout="{Date}2016-04-06T21:46:24.232+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/assets"/>
             </product>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-04-06T21:46:24.232+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
-                cq:lastRolledout="{Date}2016-04-06T21:46:24.232+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
-                cq:lastRolledout="{Date}2016-04-06T21:46:24.233+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
-                cq:lastRolledout="{Date}2016-04-06T21:46:24.233+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
-                cq:lastRolledout="{Date}2016-04-06T21:46:24.233+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-recommendation"/>

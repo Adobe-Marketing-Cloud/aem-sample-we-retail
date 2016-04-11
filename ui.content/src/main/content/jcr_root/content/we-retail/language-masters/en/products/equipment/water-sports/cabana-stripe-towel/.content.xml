@@ -2,10 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-04-06T21:46:23.804+02:00"
+        cq:lastModified="{Date}2016-04-12T01:19:39.034+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-04-06T21:46:23.888+02:00"
-        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/eq/water-sports/eqswsucal"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -14,37 +12,27 @@
         jcr:title="Cabana Stripe Towel"
         sling:resourceType="we-retail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-04-06T21:46:23.821+02:00"
-            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
-                cq:lastRolledout="{Date}2016-04-06T21:46:23.863+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
-                cq:lastRolledout="{Date}2016-04-06T21:46:23.864+02:00"
-                cq:lastRolledoutBy="admin"
-                jcr:lastModified="{Date}2016-04-06T21:33:00.674+02:00"
+                jcr:lastModified="{Date}2016-04-12T01:19:39.033+02:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product"
                 productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsucal">
                 <eqswsucal-one-size
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:23.878+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsucal/size-one-size">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:23.886+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:37:55.625-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -58,15 +46,11 @@
                         unsharpMaskThreshold="0"
                         width="300"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:23.886+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqswsucal-one-size>
                 <image
-                    cq:lastRolledout="{Date}2016-04-06T21:46:23.886+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2016-01-11T16:37:55.625-08:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -80,41 +64,29 @@
                     unsharpMaskThreshold="0"
                     width="300"/>
                 <assets
-                    cq:lastRolledout="{Date}2016-04-06T21:46:23.887+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/assets"/>
             </product>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-04-06T21:46:23.887+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
-                cq:lastRolledout="{Date}2016-04-06T21:46:23.887+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
-                cq:lastRolledout="{Date}2016-04-06T21:46:23.887+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
-                cq:lastRolledout="{Date}2016-04-06T21:46:23.888+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
-                cq:lastRolledout="{Date}2016-04-06T21:46:23.888+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-recommendation"/>

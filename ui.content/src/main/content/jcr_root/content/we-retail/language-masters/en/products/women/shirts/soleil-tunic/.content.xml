@@ -2,10 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-04-06T21:46:04.047+02:00"
+        cq:lastModified="{Date}2016-04-12T01:19:37.789+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-04-06T21:46:04.296+02:00"
-        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/wo/shirts/woswsusoc"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -14,159 +12,29 @@
         jcr:title="Soleil Tunic"
         sling:resourceType="we-retail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-04-06T21:46:04.080+02:00"
-            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
-                cq:lastRolledout="{Date}2016-04-06T21:46:04.109+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
-                cq:lastRolledout="{Date}2016-04-06T21:46:04.110+02:00"
-                cq:lastRolledoutBy="admin"
-                jcr:lastModified="{Date}2016-04-06T21:32:59.367+02:00"
+                jcr:lastModified="{Date}2016-04-12T01:19:37.788+02:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product"
                 productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc"
                 variationAxis="color"
                 variationTitle="Color">
-                <woswsusoc-xs
-                    cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:04.170+02:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/size-xs">
-                    <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.180+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:lastModified="{Date}2016-01-11T09:22:54.284-08:00"
-                        jcr:lastModifiedBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="commerce/components/product/image"
-                        fileReference="/content/dam/we-retail/products/apparel/shirts/Soleil Yellow.jpg"/>
-                    <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.180+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
-                </woswsusoc-xs>
-                <woswsusoc-s
-                    cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:04.180+02:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/size-s">
-                    <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.188+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:lastModified="{Date}2016-01-11T09:22:54.284-08:00"
-                        jcr:lastModifiedBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="commerce/components/product/image"
-                        fileReference="/content/dam/we-retail/products/apparel/shirts/Soleil Yellow.jpg"/>
-                    <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.188+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
-                </woswsusoc-s>
-                <woswsusoc-m
-                    cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:04.189+02:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/size-m">
-                    <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.196+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:lastModified="{Date}2016-01-11T09:22:54.284-08:00"
-                        jcr:lastModifiedBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="commerce/components/product/image"
-                        fileReference="/content/dam/we-retail/products/apparel/shirts/Soleil Yellow.jpg"/>
-                    <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.196+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
-                </woswsusoc-m>
-                <woswsusoc-l
-                    cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:04.197+02:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/size-l">
-                    <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.204+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:lastModified="{Date}2016-01-11T09:22:54.284-08:00"
-                        jcr:lastModifiedBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="commerce/components/product/image"
-                        fileReference="/content/dam/we-retail/products/apparel/shirts/Soleil Yellow.jpg"/>
-                    <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.205+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
-                </woswsusoc-l>
-                <woswsusoc-xl
-                    cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:04.205+02:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/size-xl">
-                    <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.213+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:lastModified="{Date}2016-01-11T09:22:54.284-08:00"
-                        jcr:lastModifiedBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="commerce/components/product/image"
-                        fileReference="/content/dam/we-retail/products/apparel/shirts/Soleil Yellow.jpg"/>
-                    <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.213+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
-                </woswsusoc-xl>
                 <woswsusoc_1-xs
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:04.213+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.1/size-xs">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.223+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:46:17.174-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -174,23 +42,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shirts/Soleil Yellow.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.223+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </woswsusoc_1-xs>
                 <woswsusoc_1-s
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:04.224+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.1/size-s">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.232+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:46:17.174-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -198,23 +60,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shirts/Soleil Yellow.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.232+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </woswsusoc_1-s>
                 <woswsusoc_1-m
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:04.232+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.1/size-m">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.240+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:46:17.174-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -222,23 +78,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shirts/Soleil Yellow.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.240+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </woswsusoc_1-m>
                 <woswsusoc_1-l
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:04.240+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.1/size-l">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.247+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:46:17.174-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -246,23 +96,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shirts/Soleil Yellow.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.248+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </woswsusoc_1-l>
                 <woswsusoc_1-xl
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:04.248+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.1/size-xl">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.255+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:46:17.174-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -270,23 +114,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shirts/Soleil Yellow.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.255+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </woswsusoc_1-xl>
                 <woswsusoc_2-xs
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:04.256+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.2/size-xs">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.263+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:46:22.019-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -294,23 +132,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shirts/Soleil Red.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.263+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </woswsusoc_2-xs>
                 <woswsusoc_2-s
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:04.263+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.2/size-s">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.270+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:46:22.019-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -318,23 +150,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shirts/Soleil Red.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.271+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </woswsusoc_2-s>
                 <woswsusoc_2-m
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:04.271+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.2/size-m">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.278+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:46:22.019-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -342,23 +168,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shirts/Soleil Red.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.278+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </woswsusoc_2-m>
                 <woswsusoc_2-l
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:04.279+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.2/size-l">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.286+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:46:22.019-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -366,23 +186,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shirts/Soleil Red.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.286+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </woswsusoc_2-l>
                 <woswsusoc_2-xl
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:04.286+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.2/size-xl">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.294+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:46:22.019-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -390,15 +204,11 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shirts/Soleil Red.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:04.294+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </woswsusoc_2-xl>
                 <image
-                    cq:lastRolledout="{Date}2016-04-06T21:46:04.294+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2016-01-11T09:22:54.284-08:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -406,41 +216,29 @@
                     sling:resourceType="commerce/components/product/image"
                     fileReference="/content/dam/we-retail/products/apparel/shirts/Soleil Yellow.jpg"/>
                 <assets
-                    cq:lastRolledout="{Date}2016-04-06T21:46:04.294+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/assets"/>
             </product>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-04-06T21:46:04.295+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
-                cq:lastRolledout="{Date}2016-04-06T21:46:04.295+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
-                cq:lastRolledout="{Date}2016-04-06T21:46:04.296+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
-                cq:lastRolledout="{Date}2016-04-06T21:46:04.296+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
-                cq:lastRolledout="{Date}2016-04-06T21:46:04.296+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-recommendation"/>

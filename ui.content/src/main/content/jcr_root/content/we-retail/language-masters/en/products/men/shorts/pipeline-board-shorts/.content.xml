@@ -2,10 +2,8 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-04-06T21:46:15.609+02:00"
+        cq:lastModified="{Date}2016-04-12T01:19:38.513+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-04-06T21:46:15.971+02:00"
-        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/me/shorts/mesusupis"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -14,154 +12,29 @@
         jcr:title="Pipeline Board Shorts"
         sling:resourceType="we-retail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-04-06T21:46:15.648+02:00"
-            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
-                cq:lastRolledout="{Date}2016-04-06T21:46:15.675+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
-                cq:lastRolledout="{Date}2016-04-06T21:46:15.677+02:00"
-                cq:lastRolledoutBy="admin"
-                jcr:lastModified="{Date}2016-04-06T21:33:00.121+02:00"
+                jcr:lastModified="{Date}2016-04-12T01:19:38.512+02:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product"
                 productData="/etc/commerce/products/we-retail/me/shorts/mesusupis"
                 variationAxis="color"
                 variationTitle="Color">
-                <mesusupis-s
-                    cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.766+02:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/size-s">
-                    <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.776+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:lastModified="{Date}2015-09-08T17:10:12.409-07:00"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="commerce/components/product/image"
-                        fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Orange.jpg"/>
-                    <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.777+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
-                </mesusupis-s>
-                <mesusupis-m
-                    cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.777+02:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/size-m">
-                    <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.786+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:lastModified="{Date}2015-09-08T17:10:12.409-07:00"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="commerce/components/product/image"
-                        fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Orange.jpg"/>
-                    <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.786+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
-                </mesusupis-m>
-                <mesusupis-l
-                    cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.787+02:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/size-l">
-                    <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.795+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:lastModified="{Date}2015-09-08T17:10:12.409-07:00"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="commerce/components/product/image"
-                        fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Orange.jpg"/>
-                    <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.795+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
-                </mesusupis-l>
-                <mesusupis-xl
-                    cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.795+02:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/size-xl">
-                    <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.803+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:lastModified="{Date}2015-09-08T17:10:12.409-07:00"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="commerce/components/product/image"
-                        fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Orange.jpg"/>
-                    <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.804+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
-                </mesusupis-xl>
-                <mesusupis-xxl
-                    cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.804+02:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/size-xxl">
-                    <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.813+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:lastModified="{Date}2015-09-08T17:10:12.409-07:00"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="commerce/components/product/image"
-                        fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Orange.jpg"/>
-                    <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.813+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
-                </mesusupis-xxl>
                 <mesusupis_1-s
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.813+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/mesusupis.1/size-s">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.821+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:20:30.956-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -169,23 +42,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Orange.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.822+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mesusupis_1-s>
                 <mesusupis_1-m
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.822+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/mesusupis.1/size-m">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.830+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:20:30.956-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -193,23 +60,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Orange.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.830+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mesusupis_1-m>
                 <mesusupis_1-l
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.831+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/mesusupis.1/size-l">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.839+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:20:30.956-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -217,23 +78,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Orange.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.839+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mesusupis_1-l>
                 <mesusupis_1-xl
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.840+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/mesusupis.1/size-xl">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.859+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:20:30.956-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -241,23 +96,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Orange.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.860+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mesusupis_1-xl>
                 <mesusupis_1-xxl
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.860+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/mesusupis.1/size-xxl">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.869+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:20:30.956-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -265,23 +114,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Orange.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.870+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mesusupis_1-xxl>
                 <mesusupis_2-s
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.870+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/mesusupis.2/size-s">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.879+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:20:46.413-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -289,23 +132,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Blue.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.879+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mesusupis_2-s>
                 <mesusupis_2-m
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.880+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/mesusupis.2/size-m">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.887+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:20:46.413-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -313,23 +150,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Blue.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.888+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mesusupis_2-m>
                 <mesusupis_2-l
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.888+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/mesusupis.2/size-l">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.895+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:20:46.413-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -337,23 +168,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Blue.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.896+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mesusupis_2-l>
                 <mesusupis_2-xl
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.896+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/mesusupis.2/size-xl">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.904+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:20:46.413-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -361,23 +186,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Blue.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.904+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mesusupis_2-xl>
                 <mesusupis_2-xxl
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.905+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/mesusupis.2/size-xxl">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.914+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:20:46.413-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -385,23 +204,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Blue.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.914+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mesusupis_2-xxl>
                 <mesusupis_3-s
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.914+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/mesusupis.3/size-s">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.928+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:20:55.228-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -409,23 +222,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Red.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.928+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mesusupis_3-s>
                 <mesusupis_3-m
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.931+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/mesusupis.3/size-m">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.940+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:20:55.228-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -433,23 +240,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Red.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.940+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mesusupis_3-m>
                 <mesusupis_3-l
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.941+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/mesusupis.3/size-l">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.949+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:20:55.228-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -457,23 +258,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Red.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.949+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mesusupis_3-l>
                 <mesusupis_3-xl
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.950+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/mesusupis.3/size-xl">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.957+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:20:55.228-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -481,23 +276,17 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Red.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.957+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mesusupis_3-xl>
                 <mesusupis_3-xxl
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.958+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mesusupis/mesusupis.3/size-xxl">
                     <image
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.967+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:20:55.228-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -505,56 +294,40 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Red.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-04-06T21:46:15.968+02:00"
-                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mesusupis_3-xxl>
                 <image
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.968+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2015-09-08T17:10:12.409-07:00"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="commerce/components/product/image"
                     fileReference="/content/dam/we-retail/products/apparel/shorts/Pipeline Orange.jpg"/>
                 <assets
-                    cq:lastRolledout="{Date}2016-04-06T21:46:15.968+02:00"
-                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/assets"/>
             </product>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-04-06T21:46:15.969+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
-                cq:lastRolledout="{Date}2016-04-06T21:46:15.969+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
-                cq:lastRolledout="{Date}2016-04-06T21:46:15.969+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
-                cq:lastRolledout="{Date}2016-04-06T21:46:15.970+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
-                cq:lastRolledout="{Date}2016-04-06T21:46:15.971+02:00"
-                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-recommendation"/>
