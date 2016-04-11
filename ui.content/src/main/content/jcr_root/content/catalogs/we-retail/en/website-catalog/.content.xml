@@ -33,6 +33,12 @@
             cq:master="/content/catalogs/we-retail/en/master-catalog"
             cq:rolloutConfigs="[/etc/msm/rolloutconfigs/default]"
             jcr:primaryType="cq:LiveCopy"/>
+        <cq:CatalogSyncConfig jcr:primaryType="cq:CatalogSyncConfig">
+            <catalog
+                cq:catalogPath="/content/we-retail/language-masters/en/products"
+                cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
+                jcr:primaryType="nt:unstructured"/>
+        </cq:CatalogSyncConfig>
     </jcr:content>
     <women/>
     <men/>
