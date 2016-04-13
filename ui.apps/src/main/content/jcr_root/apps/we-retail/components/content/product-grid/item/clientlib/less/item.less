@@ -14,7 +14,8 @@
  *  limitations under the License.
  */
 
-@import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
+//@import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
+@import "/etc/designs/we-retail/common/helpers.less";
 
 .we-ProductsGrid-item {
     padding: @padding-base-horizontal @padding-small-horizontal;
@@ -47,18 +48,13 @@
     }
 
     &-image {
-        .img-center;
     }
 
     &-title {
-        &:extend(.h4);
-
         margin: 20px auto 5px;
     }
 
     &-subtitle {
-        &:extend(.small.text-muted);
-
         display: block;
 
         margin: 0 auto 10px;

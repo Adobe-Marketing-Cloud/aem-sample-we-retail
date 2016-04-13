@@ -22,13 +22,13 @@
 
     <div class="we-ProductsGrid-item">
 
-        <div class="we-ProductsGrid-item-image">
+        <div class="we-ProductsGrid-item-image img-center">
             <img data-sly-test="${item.image}" src="${item.image}" alt="${item.name}"/>
             <img data-sly-test="${!item.image}" src="http://placehold.it/300/c0c0c1/ffffff"/>
         </div>
 
-        <h3 class="we-ProductsGrid-item-title">${item.name}</h3>
-        <span class="we-ProductsGrid-item-subtitle">${item.description}</span>
+        <h3 class="we-ProductsGrid-item-title h4">${item.name}</h3>
+        <span class="we-ProductsGrid-item-subtitle small text-muted">${item.description}</span>
 
         <strong class="we-ProductsGrid-item-price">
             <span>${item.price}</span>
