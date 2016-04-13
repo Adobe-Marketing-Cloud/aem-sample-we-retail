@@ -14,12 +14,12 @@
     limitations under the License.
 */-->
 <sly data-sly-use.heroImage="hero-image.js">
-    <div class="${heroImage.classList}"
+    <div class="${heroImage.classList} jumbotron"
          style="background-image: url(${heroImage.image.src @ context='styleString'});">
         <div class="container cq-dd-image">
             <div class="we-HeroImage-wrapper">
-                <p>${properties.heading}</p>
-                <strong class="we-HeroImage-title">${properties.title || currentPage.title}</strong>
+                <p class="h3">${properties.heading}</p>
+                <strong class="we-HeroImage-title h1">${properties.title || currentPage.title}</strong>
 
                 <p data-sly-test="${properties.buttonLabel && properties.buttonLinkTo}">
                     <a class="btn btn-primary btn-action" href="${properties.buttonLinkTo}.html" role="button">${properties.buttonLabel}</a>
