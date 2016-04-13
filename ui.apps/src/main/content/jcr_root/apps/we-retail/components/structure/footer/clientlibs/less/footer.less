@@ -14,6 +14,8 @@
  *  limitations under the License.
  */
 
+@import "/etc/designs/we-retail/common/helpers.less";
+
 .we-Footer {
     background-color: fade(@gray-base, 90);
 
@@ -43,10 +45,14 @@
     }
 
     &-nav {
-         .list-unstyled;
+        //.list-unstyled;
+        padding-left: 0;
+        list-style: none;
 
         ul {
-             .list-unstyled;
+            //.list-unstyled;
+            padding-left: 0;
+            list-style: none;
 
             li {
                 margin-bottom: @padding-base-vertical;
@@ -54,7 +60,7 @@
         }
 
         h2 {
-            .h4;
+            //.h4;
         }
 
         a {
@@ -65,11 +71,17 @@
             margin-left: -@grid-gutter-width/2;
 
             ul {
-                 .list-inline;
+                //.list-inline;
+                padding-left: 0;
+                list-style: none;
+
+                margin-left: -5px;
 
                 //white-space: nowrap;
 
                 &> li {
+                    display: inline-block;
+
                     padding: 0 3px;
                 }
             }
