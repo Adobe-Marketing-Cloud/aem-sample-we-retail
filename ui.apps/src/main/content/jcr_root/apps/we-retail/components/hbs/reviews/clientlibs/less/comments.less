@@ -53,7 +53,8 @@
     }
 
     &-ratings {
-        .list-unstyled;
+        padding-left: 0;
+        list-style: none;
 
         margin-bottom: 0;
 
@@ -109,18 +110,18 @@
 
     &-composer {
         &.scf-is-collapsed {
-                display: none;
+            display: none;
         }
 
         &-msg {
-                border: 1px solid fade(@gray-base, 50);
-                outline: 0;
-                padding: 15px 20px;
-                display: inline;
-                width: 100%;
-                box-sizing: border-box;
-                resize: none;
-                height: 200px;
+            border: 1px solid fade(@gray-base, 50);
+            outline: 0;
+            padding: 15px 20px;
+            display: inline;
+            width: 100%;
+            box-sizing: border-box;
+            resize: none;
+            height: 200px;
         }
     }
 }
