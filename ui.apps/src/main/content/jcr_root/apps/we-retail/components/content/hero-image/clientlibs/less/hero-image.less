@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-@import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
+@import "/etc/designs/we-retail/common/helpers.less";
 
 .hero-image.image {
     overflow: visible;
@@ -23,11 +23,11 @@
 }
 
 .we-HeroImage {
-    &:extend(.jumbotron);
-
     min-height: 460px;
 
     padding: @jumbotron-padding 0;
+
+    margin-bottom: @jumbotron-padding;
 
     background: @gray 50% no-repeat;
     background-size: cover;
@@ -41,17 +41,14 @@
     }
 
     &-title {
-        &:extend(.h1);
-        &:extend(.text-uppercase);
-
         display: block;
 
         margin: 0 auto 20px;
+
+        text-transform: uppercase;
     }
 
     p {
-        &:extend(.h3);
-
         margin: 0 auto;
     }
 
@@ -59,7 +56,7 @@
         text-shadow: 2px 4px 3px rgba(0,0,0,0.5);
 
         .btn {
-                text-shadow: none;
+            text-shadow: none;
         }
     }
 }

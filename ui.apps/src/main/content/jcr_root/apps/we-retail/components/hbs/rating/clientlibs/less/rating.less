@@ -44,36 +44,36 @@
         display: inline-block;
 
         &[data-rating-shown^="1"] :nth-child(n+5) {
-                color: @brand-primary;
+            color: @brand-primary;
         }
         &[data-rating-shown^="2"] :nth-child(n+4) {
-                color: @brand-primary;
+            color: @brand-primary;
         }
         &[data-rating-shown^="3"] :nth-child(n+3) {
-                color: @brand-primary;
+            color: @brand-primary;
         }
         &[data-rating-shown^="4"] :nth-child(n+2) {
-                color: @brand-primary;
+            color: @brand-primary;
         }
         &[data-rating-shown^="5"] :nth-child(n+1) {
-                color: @brand-primary;
+            color: @brand-primary;
         }
 
         &-hoverable {
-                &:hover {
-                        .we-Star {
-                                color: fade(@gray-base, 5);
-                        }
-                }
-
+            &:hover {
                 .we-Star {
-                        cursor: pointer;
-
-                        &:hover,
-                        &:hover ~ i {
-                                color: fade(@brand-primary, 20);
-                        }
+                    color: fade(@gray-base, 5);
                 }
+            }
+
+            .we-Star {
+                cursor: pointer;
+
+                &:hover,
+                &:hover ~ i {
+                    color: fade(@brand-primary, 20);
+                }
+            }
         }
     }
 }

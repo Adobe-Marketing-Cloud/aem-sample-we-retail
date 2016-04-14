@@ -14,20 +14,27 @@
  *  limitations under the License.
  */
 
-.we-Container {
-    &--top {
-        position: relative;
+@import (reference) "/etc/designs/we-retail/common/variables.less";
 
-        .navbar {
-            width: 100%;
+.we-Header {
+    margin-bottom: 35px;
 
-            position: absolute;
-            top: 70px;
-        }
+    text-align: center;
+
+    & + & {
+        margin-top: -35px;
     }
 
-    &--main {
-        // padding-top: (@navbar-height + 70px); // navbar height + top
-        // margin-top: -(@navbar-height + 70px);
+    h1&, h2& {
+        text-transform: uppercase;
+    }
+
+    h2& {
+        margin: 35px 0;
+    }
+
+    h4& {
+        margin: 5px 0;
+        color: @gray-dark;
     }
 }

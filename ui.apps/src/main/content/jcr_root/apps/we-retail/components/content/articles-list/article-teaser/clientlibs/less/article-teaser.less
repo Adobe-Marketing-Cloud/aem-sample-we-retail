@@ -14,10 +14,12 @@
  *  limitations under the License.
  */
 
-@import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
+@import (reference) "/etc/designs/we-retail/common/variables.less";
+@import (reference) "/etc/designs/we-retail/common/mixins.less";
+
 
 .we-ArticleTeaser {
-    .clearfix;
+    .clearfix();
 
     padding-bottom: @padding-large-vertical;
 
@@ -34,7 +36,7 @@
         text-align: center;
 
         img {
-            &:extend(.img-responsive);
+            .img-responsive();
 
             min-height: 100%;
             width: 100%;
@@ -47,11 +49,14 @@
     }
 
     &-title {
-        &:extend(.h3);
+        font-family: @headings-font-family;
+        font-weight: @headings-font-weight;
+        line-height: @headings-line-height;
+        font-size: @font-size-h3;
+
         margin: 0;
         padding: @padding-small-vertical @padding-small-horizontal;
 
-        font-weight: 700;
         line-height: 29px;
 
         color: #000;
@@ -91,7 +96,7 @@
     }
 
     &-date {
-        &:extend(.text-muted);
+        color: @text-muted;
 
         float: right;
 

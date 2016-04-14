@@ -14,7 +14,9 @@
  *  limitations under the License.
  */
 
-@import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
+@import "/etc/designs/we-retail/common/helpers.less";
+
+@import (reference) "/etc/designs/we-retail/common/icons.less";
 
 .we-Product {
     padding-top: 50px;
@@ -26,7 +28,9 @@
     margin-bottom: 45px;
 
     &-photos {
-        .list-unstyled;
+        padding-left: 0;
+
+        list-style: none;
 
         li {
             transition: border-color @transition-default;
@@ -43,7 +47,7 @@
         }
 
         img {
-            .img-responsive;
+            //.img-responsive;
 
             cursor: pointer;
         }
@@ -53,11 +57,12 @@
         text-align: center;
 
         img {
-            .img-responsive;
+            //.img-responsive;
         }
 
         &-zoom {
-            .text-muted;
+            //.text-muted;
+            color: @text-muted;
 
             transition: color @transition-default;
 
@@ -82,11 +87,12 @@
     }
 
     &-brand {
-        .h4;
+        //.h4;
     }
 
     &-code {
-        .text-muted;
+        //.text-muted;
+        color: @text-muted;
 
         font-weight: 700;
         font-size: 13px;
@@ -100,7 +106,7 @@
     }
 
     &-price {
-        .h2;
+        //.h2;
 
         display: inline-block;
 
@@ -222,7 +228,9 @@
 
     &-features {
         ul {
-            .list-unstyled;
+            //.list-unstyled;
+            padding-left: 0;
+            list-style: none;
         }
     }
 
@@ -235,7 +243,8 @@
     }
 
     label {
-        .text-muted;
+        //.text-muted;
+        color: @text-muted;
 
         text-transform: none;
     }
