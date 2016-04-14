@@ -42,14 +42,14 @@
         <!--/*
         <div class="col-md-1">
             <ul class="we-Product-photos">
-                <li class="active"><img src="${product.base.image}" v-bind:src="product.image"/></li>
+                <li class="active"><img src="${product.base.image}" class="img-responsive" v-bind:src="product.image"/></li>
             </ul>
         </div>
         */-->
         
         <div class="col-md-5 col-md-offset-1">
             <div class="we-Product-visual"> <!-- TODO: add zoom and slider -->
-                <img src="${product.base.image}" v-bind:src="product.image"/>
+                <img src="${product.base.image}" class="img-responsive" v-bind:src="product.image"/>
                 
                 <!--/*
                 <a href="#" class="we-Product-visual-zoom"><i class="we-Icon we-Icon--zoom-plus"></i> View larger</a>
@@ -60,7 +60,7 @@
         <div class="col-md-5 col-md-offset-1">
             <div class="row">
                 <div class="col-xs-6">
-                    <strong class="we-Product-brand" v-html="product.description">${product.base.description @context='html'}</strong>
+                    <strong class="we-Product-brand h4" v-html="product.description">${product.base.description @context='html'}</strong>
                 </div>
                 <div class="col-xs-6 text-right">
                     <span class="we-Product-code">SKU: <span v-text="product.sku">${product.base.sku}</span></span>
@@ -73,7 +73,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <strong class="we-Product-price" v-html="product.price">${product.base.price}</strong>
+                    <strong class="we-Product-price h2" v-html="product.price">${product.base.price}</strong>
                 </div>
             </div>
             <div class="row">
