@@ -67,6 +67,10 @@ use(["commerce_init.js"], function (commerceInit) {
             while (unorderedVariations.hasNext()) {
                 var productVariation = unorderedVariations.next();
 
+                if (productVariation.SKU == null) {
+                    continue;
+                }
+
                 var variation = getProductProperties(productVariation);
 
                 if (variationLead !== '' && productVariation.getProperty(variationAxis, java.lang.String) === variationLead) {
@@ -77,10 +81,10 @@ use(["commerce_init.js"], function (commerceInit) {
                 }
 
                 if ('' + variations.type === 'color') {
-                    if (!variations.colors[variation.color.toLowerCase()]) {
-                        variations.colors[variation.color.toLowerCase()] = [];
+                    if (!variations.colors[('' + variation.color).toLowerCase()]) {
+                        variations.colors[('' + variation.color).toLowerCase()] = [];
                     }
-                    variations.colors[variation.color.toLowerCase()].push(variation);
+                    variations.colors[('' + variation.color).toLowerCase()].push(variation);
                 }
                 else if ('' + variations.type === 'size') {
                     variations.sizes.push(variation);
