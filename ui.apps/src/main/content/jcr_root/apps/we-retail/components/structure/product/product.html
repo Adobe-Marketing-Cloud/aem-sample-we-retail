@@ -88,7 +88,7 @@
                     <div class="we-Product-description separator" v-html="product.summary">${product.base.summary @context='html'}</div>
                 </div>
             </div>
-            
+
             <form class="we-Product-form"
                   action="${ product.addToCartUrl }"
                   method="POST">
@@ -101,9 +101,9 @@
                     <label>Colors</label>
                 </div>
                 <div class="form-group"
-                     data-sly-test="${product.variations.type == 'color'}"
-                     data-sly-repeat.color="${product.variations.colors}">
-                    <div class="we-Product-radio marker radio-inline">
+                     data-sly-test="${product.variations.type == 'color'}">
+                    <div class="we-Product-radio marker radio-inline"
+                         data-sly-repeat.color="${product.variations.colors}">
                         <label>
                             <input type="radio" name="product.color"
                                    value="${color}" title="${color}"
