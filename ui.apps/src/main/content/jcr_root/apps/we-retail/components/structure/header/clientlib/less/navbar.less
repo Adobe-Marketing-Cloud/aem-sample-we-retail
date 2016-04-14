@@ -14,7 +14,9 @@
  *  limitations under the License.
  */
 
-@import (reference) "/etc/designs/we-retail/clientlib-site/less/main.less";
+@import "/etc/designs/we-retail/common/helpers.less";
+
+@import "/etc/clientlibs/we-retail/vendor/bootstrap/src/less/mixins/nav-vertical-align.less";
 
 .navbar {
     .make-row();
@@ -225,7 +227,6 @@
 }
 
 .navbar-nav-subitems {
-    .list-unstyled;
     .make-row();
 
     overflow: hidden;
@@ -235,6 +236,8 @@
     padding: 0;
 
     border-top: 0 solid transparent;
+
+    list-style: none;
 
     li {
         .make-md-column(2);
