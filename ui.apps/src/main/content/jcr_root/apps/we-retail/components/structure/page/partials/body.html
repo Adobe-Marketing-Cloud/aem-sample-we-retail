@@ -18,3 +18,5 @@
     <sly data-sly-repeat="${templatedContainer.structureResources}"
          data-sly-resource="${item.path @ resourceType=item.resourceType, decorationTagName='div'}"/>
 </div>
+<div data-sly-resource="${'cloudservices' @ resourceType='cq/cloudserviceconfigs/components/servicecomponents'}" data-sly-unwrap></div>
+<div data-sly-resource="${'clientcontext' @ resourceType='cq/personalization/components/clientcontext'}"></div>
