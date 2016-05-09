@@ -218,7 +218,8 @@
 
         <dependency>
             <groupId>com.adobe.aem</groupId>
-            <artifactId>aem-api</artifactId>
+            <artifactId>uber-jar</artifactId>
+            <classifier>apis</classifier>
         </dependency>
 
         <dependency>
@@ -249,7 +250,7 @@
 		<dependency>
 			<groupId>com.adobe.aem.demomachine</groupId>
 			<artifactId>core</artifactId>
-			<version>0.1.7</version>
+			<version>0.1.9</version>
 		</dependency>
 
     </dependencies>
