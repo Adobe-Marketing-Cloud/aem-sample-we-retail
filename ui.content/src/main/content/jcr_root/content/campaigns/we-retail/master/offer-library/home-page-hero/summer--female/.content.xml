@@ -5,13 +5,13 @@
         cq:cloudserviceconfigs="[[]]"
         cq:contextHubPath="/etc/cloudsettings/default/contexthub"
         cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
-        cq:lastModified="{Date}2016-04-26T15:27:55.508+02:00"
+        cq:lastModified="{Date}2016-05-09T14:39:02.554+02:00"
         cq:lastModifiedBy="admin"
         cq:template="/libs/cq/personalization/templates/teaser"
         jcr:lastModified="{Date}2015-11-23T18:40:29.754+01:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Summer, Female "
+        jcr:title="Hiking Summer Clothing for Women"
         sling:resourceType="cq/personalization/components/teaserpage">
         <par
             jcr:primaryType="nt:unstructured"
@@ -19,15 +19,17 @@
             <hero_image
                 jcr:created="{Date}2015-11-04T00:14:44.088+01:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2016-04-26T14:49:13.655+02:00"
+                jcr:lastModified="{Date}2016-05-09T14:39:02.551+02:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/hero-image"
                 buttonLabel="Shop now"
-                buttonLinkTo="/content/we-retail/language-masters/en/discover"
+                buttonLinkTo="/content/we-retail/language-masters/en/men"
                 fileReference="/content/dam/we-retail/activities/hiking-camping/Hiking-Campaign.jpg"
                 heading="New Hiking Clothing, Shoes, &amp; Accessories"
-                title="WHEREVER THE TRAILS LEADS"/>
+                keepRatio="true"
+                title="WHEREVER THE TRAILS LEADS"
+                useFullWidth="true"/>
         </par>
     </jcr:content>
 </jcr:root>
