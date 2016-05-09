@@ -2,11 +2,14 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-04-26T15:52:00.571+02:00"
+        cq:cloudserviceconfigs="[[]]"
+        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
+        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:lastModified="{Date}2016-05-09T15:27:56.946+02:00"
         cq:lastModifiedBy="admin"
         cq:template="/libs/cq/personalization/templates/teaser"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Winter Teaser"
+        jcr:title="Men Skiing Category Teaser"
         sling:resourceType="cq/personalization/components/teaserpage">
         <par
             jcr:primaryType="nt:unstructured"
@@ -14,13 +17,13 @@
             <category_teaser
                 jcr:created="{Date}2015-11-03T23:52:30.703+01:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2016-04-26T15:52:00.569+02:00"
+                jcr:lastModified="{Date}2016-05-09T15:22:45.990+02:00"
                 jcr:lastModifiedBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/category-teaser"
                 buttonLabel="MEN"
-                buttonLinkTo="/content/we-retail/us/en/women"
+                buttonLinkTo="/content/we-retail/us/en/men"
                 fileReference="/content/dam/we-retail/activities/skiing/skiing-winter.jpg">
                 <cq:responsive
                     jcr:mixinTypes="[cq:LiveRelationship]"
