@@ -88,7 +88,8 @@ public class Article {
             String heroFileReference = heroImageResource.adaptTo(ValueMap.class).get("fileReference", String.class);
 
             if (heroFileReference != null) {
-                path = heroFileReference;
+                // TODO continue here
+                path = heroFileReference + "/jcr:content/renditions/cq5dam.web.768.768.jpeg";
             }
         }
 
