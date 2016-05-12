@@ -15,7 +15,7 @@
 */-->
 <sly data-sly-use.heroImage="hero-image.js">
     <div class="${heroImage.classList} jumbotron"
-         style="background-image: url(${heroImage.image.src @ context='styleString'});">
+         style="background-image: url(${heroImage.image.src @context='attribute'});">
         <div class="container cq-dd-image">
             <div class="we-HeroImage-wrapper">
                 <p class="h3">${properties.heading}</p>
