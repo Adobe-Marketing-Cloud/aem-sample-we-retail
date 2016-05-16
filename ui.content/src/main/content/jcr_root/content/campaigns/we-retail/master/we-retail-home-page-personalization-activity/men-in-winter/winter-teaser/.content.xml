@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2016-05-16T19:15:01.393+02:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/personalization/templates/offerproxy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:uuid="b2fc54f2-2ee9-49d2-8de1-187a84f3d12e"
+        sling:resourceType="cq/personalization/components/offerproxy"
+        location="ee033a3d-c7a2-4a80-9aa6-5db4aef6bdeb"
+        offerPath="/content/campaigns/we-retail/master/offer-library/category-teaser/winter-teaser"/>
+</jcr:root>

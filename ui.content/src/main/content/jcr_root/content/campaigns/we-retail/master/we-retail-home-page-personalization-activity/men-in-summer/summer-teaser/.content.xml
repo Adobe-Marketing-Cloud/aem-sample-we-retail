@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2016-05-16T19:15:16.304+02:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/personalization/templates/offerproxy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:uuid="c4713f0a-c57a-4a3f-8b78-455a3b8c612a"
+        sling:resourceType="cq/personalization/components/offerproxy"
+        location="ee033a3d-c7a2-4a80-9aa6-5db4aef6bdeb"
+        offerPath="/content/campaigns/we-retail/master/offer-library/category-teaser/summer-teaser"/>
+</jcr:root>
