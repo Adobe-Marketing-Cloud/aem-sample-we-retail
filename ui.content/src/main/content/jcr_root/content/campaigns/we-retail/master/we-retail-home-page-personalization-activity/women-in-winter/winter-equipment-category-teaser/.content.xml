@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2016-05-16T19:14:43.755+02:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/personalization/templates/offerproxy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:uuid="87dbcf12-8755-46ce-92ab-9ab76cdac385"
+        sling:resourceType="cq/personalization/components/offerproxy"
+        location="d2878954-431c-4f51-8465-7c6653344545"
+        offerPath="/content/campaigns/we-retail/master/offer-library/category-teaser/winter-equipment-category-teaser"/>
+</jcr:root>

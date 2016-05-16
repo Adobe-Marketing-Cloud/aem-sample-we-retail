@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2016-05-16T19:13:58.216+02:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/personalization/templates/offerproxy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:uuid="a0b2517c-1d8c-46e5-89ee-3b45b64bd435"
+        sling:resourceType="cq/personalization/components/offerproxy"
+        location="2b493aca-8345-4fc1-be72-75535f1f8c0a"
+        offerPath="/content/campaigns/we-retail/master/offer-library/home-page-hero/winter--male"/>
+</jcr:root>
