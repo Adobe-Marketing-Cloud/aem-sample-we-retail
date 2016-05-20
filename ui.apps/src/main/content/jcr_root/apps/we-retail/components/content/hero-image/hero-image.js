@@ -17,7 +17,7 @@
 
 var global = this;
 
-use(['image.js'], function (image) {
+use(function () {
     var CONST = {
         FULL_WIDTH: 'useFullWidth',
         KEEP_RATIO: 'keepRatio'
@@ -32,8 +32,12 @@ use(['image.js'], function (image) {
         classList += ' ratio-16by9';
     }
 
+    // TODO find better solution to pick correct rendition
+    var renditionPath = granite.resource.properties['fileReference'] + '/jcr:content/renditions/cq5dam.web.1280.1280.jpeg';
     return {
         classList: classList,
-        image: image
+        image: {
+            src: renditionPath
+        }
     };
 });
