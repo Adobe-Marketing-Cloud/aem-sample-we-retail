@@ -6,5 +6,6 @@
     <filter root="/etc/clientlibs/we-retail"/>
     <filter root="/etc/designs/we-retail"/>
     <filter root="/etc/cloudservices/dynamictagmanagement/we-retail-dtm"/>
-    <filter root="/apps/social/console/components/hbs/sitepage"/>
+    <filter root="/apps/social/console/components/hbs/sitepage" mode="merge"/>
+    <filter root="/etc/workflow/models/dam/update_asset"/>
 </workspaceFilter>
