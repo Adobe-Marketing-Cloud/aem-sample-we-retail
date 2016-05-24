@@ -15,8 +15,7 @@
 */-->
 <div data-sly-use.categoryTeaser="category-teaser.js" class="we-CategoryTeaser cq-dd-image">
     <div class="crop crop-16_9">
-        <!-- TODO find better solution to pick correct rendition -->
-        <img class="crop__content" data-lazy-src="${ properties.fileReference }/jcr:content/renditions/cq5dam.web.768.768.jpeg"/>
+        <img class="crop__content" data-lazy-src="${ resource.path }.img.jpeg"/>
     </div>
 
     <h2>${properties.heading}</h2>
