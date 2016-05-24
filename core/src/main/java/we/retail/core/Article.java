@@ -81,28 +81,7 @@ public class Article {
 
 
     public String getImagePath() {
-        String path = resource.getPath() + ".thumb.319.319.png";
-
-        Resource heroImageResource = resource.getChild(JcrConstants.JCR_CONTENT + "/root/hero_image");
-        if (heroImageResource != null) {
-            String heroFileReference = heroImageResource.adaptTo(ValueMap.class).get("fileReference", String.class);
-
-            if (heroFileReference != null) {
-                // TODO find better solution to pick correct rendition
-                path = heroFileReference + "/jcr:content/renditions/cq5dam.web.768.768.jpeg";
-            }
-        }
-
-        Resource thumbnailImageResource = resource.getChild(JcrConstants.JCR_CONTENT + "/image");
-        if (thumbnailImageResource != null) {
-            String thumbnailFileReference = thumbnailImageResource.adaptTo(ValueMap.class).get("fileReference", String.class);
-
-            if (thumbnailFileReference != null) {
-                path = thumbnailFileReference;
-            }
-        }
-        
-        return path;
+        return resource.getPath() + ".article-image.jpeg";
     }
 
     public List<Tag> getTags() {

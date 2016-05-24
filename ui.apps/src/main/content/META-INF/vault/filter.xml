@@ -7,5 +7,4 @@
     <filter root="/etc/designs/we-retail"/>
     <filter root="/etc/cloudservices/dynamictagmanagement/we-retail-dtm"/>
     <filter root="/apps/social/console/components/hbs/sitepage"/>
-    <filter root="/etc/workflow/models/dam/update_asset"/>
 </workspaceFilter>
