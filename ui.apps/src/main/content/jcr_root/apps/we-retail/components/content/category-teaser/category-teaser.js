@@ -36,6 +36,7 @@ use(function () {
         linkTo = linkTo + ".html";
     }
     return {
+        imagePath: resource.path + ".img.jpeg",
         buttonLinkTo: linkTo,
         buttonLabel: buttonLabel
     };
