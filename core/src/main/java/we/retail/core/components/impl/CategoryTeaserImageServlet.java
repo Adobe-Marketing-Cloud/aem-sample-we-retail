@@ -31,6 +31,9 @@ import java.io.IOException;
 public class CategoryTeaserImageServlet extends AbstractImageServlet {
 
     private static final RenditionPicker RENDITION_PICKER = new WCMRenditionPicker();
+    private static final int MAX_HEIGHT = 768;
+    private static final int MAX_WIDTH = 768;
+    private static final double QUALITY = 0.75d;
 
     @Override
     protected Layer createLayer(ImageContext imageContext) throws RepositoryException, IOException {
@@ -47,7 +50,16 @@ public class CategoryTeaserImageServlet extends AbstractImageServlet {
             return null;
         }
         Rendition rendition = RENDITION_PICKER.getRendition(asset);
-        return new Layer(rendition.getStream());
+        Layer layer = new Layer(rendition.getStream());
+        if (layer.getHeight() > MAX_HEIGHT || layer.getWidth() > MAX_WIDTH) {
+            layer.resize(MAX_WIDTH, MAX_HEIGHT);
+        }
+        return layer;
 
+    }
+
+    @Override
+    protected double getImageQuality() {
+        return QUALITY;
     }
 }
