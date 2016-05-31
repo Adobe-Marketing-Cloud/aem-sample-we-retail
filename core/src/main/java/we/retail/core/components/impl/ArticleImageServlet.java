@@ -22,15 +22,12 @@ import com.day.cq.dam.api.RenditionPicker;
 import com.day.cq.wcm.commons.AbstractImageServlet;
 import com.day.cq.wcm.foundation.WCMRenditionPicker;
 import com.day.image.Layer;
-import org.apache.commons.io.IOUtils;
 import org.apache.felix.scr.annotations.sling.SlingServlet;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.Resource;
-import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
 
 import javax.jcr.RepositoryException;
-import javax.servlet.ServletException;
 import java.io.IOException;
 
 @SlingServlet(resourceTypes = "cq:Page", selectors = "article-image", extensions = "jpeg")
