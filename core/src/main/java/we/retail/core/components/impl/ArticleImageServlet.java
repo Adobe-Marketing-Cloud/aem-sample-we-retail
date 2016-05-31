@@ -65,6 +65,11 @@ public class ArticleImageServlet extends AbstractImageServlet  {
     }
 
     @Override
+    protected double getImageQuality() {
+        return QUALITY;
+    }
+
+    @Override
     protected void writeLayer(SlingHttpServletRequest request, SlingHttpServletResponse response, ImageContext context, Layer layer, double quality) throws IOException, RepositoryException {
         if (layer == null) {
             // if we get to this point, there either is no hero image or the hero image can't be found,
