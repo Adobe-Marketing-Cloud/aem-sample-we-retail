@@ -20,13 +20,14 @@
                 <li><a href="#" data-toggle="modal" data-target=".we-LanguageModal" title="${header.currentLanguage.name}"><i class="we-lang-icon we-lang-icon-${header.currentLanguage.countrycode}"></i> ${header.currentLanguage.languagecode}</a></li>
             </ul>
            <ul class="nav navbar-nav navbar-right">
-                <li data-sly-test="${header.isAnonymous}"><a href="#" data-toggle="modal" data-target=".we-SignInModal">Login</a></li>
-                <li data-sly-test="${!header.isAnonymous}"><a href="/system/sling/logout.html?resource=${header.currentPath}.html">Log out</a></li>
                 <li data-sly-test="${!header.isAnonymous}"><a href="${header.profilePath}.html">Profile</a></li>
                 <li><a href="#"><i class="fa fa-heart-o"></i> Wishlist <span class="badge">0</span></a></li>
                 <li data-sly-test="${!header.isAnonymous}"><a href="${header.messagingPath}.html"><i class="fa fa-envelope-o"></i> Messages <span class="badge">0</span></a></li>
                 <li data-sly-test="${!header.isAnonymous}"><a href="${header.notificationPath}.html"><i class="fa fa-flag-o"></i> Notifications <span class="badge" id="scf-js-notificationsUnreadCount" data-siteurl="/content/we-retail/community/en">0</span></a></li>
                 <li data-sly-resource="${@ resourceType='we-retail/components/structure/navcart'}"></li>
+                <li data-sly-test="${header.isModerator}"><a href="/content/sites/communities/en/moderation.html">Moderation</a></li>
+                <li data-sly-test="${header.isAnonymous}"><a href="#" data-toggle="modal" data-target=".we-SignInModal">Login</a></li>
+                <li data-sly-test="${!header.isAnonymous}"><a href="/system/sling/logout.html?resource=${header.currentPath}.html">Log out</a></li>
             </ul>
         </div>
     </div>
