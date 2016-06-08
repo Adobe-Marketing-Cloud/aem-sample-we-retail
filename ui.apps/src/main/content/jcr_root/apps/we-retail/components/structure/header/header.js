@@ -35,7 +35,7 @@ use(function () {
 
     var pageManager = resolver.adaptTo(com.day.cq.wcm.api.PageManager);
     var resourcePage = pageManager.getContainingPage(resource);
-
+    
     if (resourcePage.getPath().startsWith("/conf/")) {
         resourcePage = currentPage;
     }
@@ -161,7 +161,8 @@ use(function () {
     var theme = properties.get("theme", "default");
 
     return {
-        isAnonymous: resolver.getUserID().equals("anonymous"),
+    	isModerator: currentPage.adaptTo(com.adobe.cq.social.community.api.CommunityContext).checkIfUserIsModerator(resolver.adaptTo(org.apache.jackrabbit.api.security.user.UserManager), resolver.getUserID()),
+    	isAnonymous: resolver.getUserID().equals("anonymous"),
     	currentPath: currentPage.getPath(),
         signInPath: SIGN_IN_PATH,
         signUpPath: SIGN_UP_PATH,
