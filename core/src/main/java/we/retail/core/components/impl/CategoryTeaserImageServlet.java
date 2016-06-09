@@ -15,6 +15,7 @@
  */
 package we.retail.core.components.impl;
 
+import com.day.cq.commons.ImageHelper;
 import com.day.cq.dam.api.Asset;
 import com.day.cq.dam.api.Rendition;
 import com.day.cq.dam.api.RenditionPicker;
@@ -25,6 +26,7 @@ import org.apache.felix.scr.annotations.sling.SlingServlet;
 import org.apache.sling.api.resource.Resource;
 
 import javax.jcr.RepositoryException;
+import java.awt.Dimension;
 import java.io.IOException;
 
 @SlingServlet(resourceTypes = { "we-retail/components/content/category-teaser" }, selectors = "img", extensions = { "jpeg", "jpg", "png" })
@@ -52,7 +54,10 @@ public class CategoryTeaserImageServlet extends AbstractImageServlet {
         Rendition rendition = RENDITION_PICKER.getRendition(asset);
         Layer layer = new Layer(rendition.getStream());
         if (layer.getHeight() > MAX_HEIGHT || layer.getWidth() > MAX_WIDTH) {
-            layer.resize(MAX_WIDTH, MAX_HEIGHT);
+            Layer resized = ImageHelper.resize(layer, new Dimension(), new Dimension(0, 0), new Dimension(MAX_WIDTH, MAX_HEIGHT));
+            if (resized != null) {
+                layer = resized;
+            }
         }
         return layer;
 
