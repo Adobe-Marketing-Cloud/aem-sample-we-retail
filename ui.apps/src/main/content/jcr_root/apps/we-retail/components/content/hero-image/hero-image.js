@@ -32,8 +32,7 @@ use(function () {
         classList += ' ratio-16by9';
     }
 
-    // TODO find better solution to pick correct rendition
-    var renditionPath = currentPage.path + ".article-image.jpeg";
+    var renditionPath = resource.path + ".img.jpeg";
     return {
         classList: classList,
         image: {
