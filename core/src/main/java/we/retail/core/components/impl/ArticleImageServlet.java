@@ -15,6 +15,7 @@
  */
 package we.retail.core.components.impl;
 
+import com.day.cq.commons.ImageHelper;
 import com.day.cq.commons.jcr.JcrConstants;
 import com.day.cq.dam.api.Asset;
 import com.day.cq.dam.api.Rendition;
@@ -28,6 +29,7 @@ import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.Resource;
 
 import javax.jcr.RepositoryException;
+import java.awt.Dimension;
 import java.io.IOException;
 
 @SlingServlet(resourceTypes = "cq:Page", selectors = "article-image", extensions = "jpeg")
@@ -53,7 +55,10 @@ public class ArticleImageServlet extends AbstractImageServlet  {
                         if (rendition != null) {
                             Layer layer = new Layer(rendition.getStream());
                             if (layer.getHeight() > MAX_HEIGHT || layer.getWidth() > MAX_WIDTH) {
-                                layer.resize(MAX_WIDTH, MAX_HEIGHT);
+                                Layer resized = ImageHelper.resize(layer, new Dimension(), new Dimension(0, 0), new Dimension(MAX_WIDTH, MAX_HEIGHT));
+                                if (resized != null) {
+                                    layer = resized;
+                                }
                             }
                             return layer;
                         }
