@@ -32,8 +32,7 @@ use(function () {
         classList += ' ratio-16by9';
     }
 
-    // TODO find better solution to pick correct rendition
-    var renditionPath = granite.resource.properties['fileReference'] + '/jcr:content/renditions/cq5dam.web.1280.1280.jpeg';
+    var renditionPath = resource.path + ".img.jpeg";
     return {
         classList: classList,
         image: {

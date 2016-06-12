@@ -20,7 +20,7 @@
        class="we-ArticleTeaser-link"
        onclick="CQ_Analytics.record({event: 'listTeaserItemClicked', values: { listItemPath: '${resource.path @ context='scriptString'}' }, collect:  false, options: { obj: this }, componentPath: '${resource.resourceType @ context='scriptString'}'})">
         <div class="we-ArticleTeaser-visual">
-            <img data-lazy-src="${ article.imagePath }" alt="${ article.title }">
+            <img data-lazy-src="${ article.imagePath @ context='uri'}" alt="${ article.title }">
         </div>
 
         <h3 class="we-ArticleTeaser-title">${ article.title }</h3>

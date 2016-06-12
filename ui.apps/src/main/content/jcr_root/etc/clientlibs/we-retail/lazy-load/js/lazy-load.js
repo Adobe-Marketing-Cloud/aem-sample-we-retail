@@ -16,13 +16,17 @@
 (function (window, $) {
     'use strict';
 
-    $(window).load(function () {
-
-        $('img[data-lazy-src]').each(function () {
+    function loadImages() {
+        $("img[data-lazy-src]").not("img[data-lazy-src][src]").each(function () {
             var $img = $(this);
             $img.attr('src', $img.data('lazySrc'));
         });
+    }
 
-    });
+    $(window).load(loadImages);
+
+    if (ContextHub) {
+        ContextHub.eventing.on(ContextHub.Constants.EVENT_TEASER_LOADED, loadImages);
+    }
 
 })(window, jQuery);
