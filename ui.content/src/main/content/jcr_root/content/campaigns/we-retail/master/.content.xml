@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:template="/libs/cq/personalization/templates/ambit"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Master Ambit"
+        jcr:title="Master Area"
         sling:resourceType="cq/personalization/components/ambitpage">
         <par
             jcr:primaryType="nt:unstructured"
