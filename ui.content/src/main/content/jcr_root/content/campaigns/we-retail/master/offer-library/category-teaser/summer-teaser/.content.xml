@@ -24,7 +24,7 @@
                 sling:resourceType="we-retail/components/content/category-teaser"
                 buttonLabel="Men"
                 buttonLinkTo="/content/we-retail/us/en/men"
-                fileReference="/content/dam/we-retail/activities/running/running-trail-man.jpg">
+                fileReference="/content/dam/we-retail/en/activities/running/running-trail-man.jpg">
                 <cq:responsive
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured">

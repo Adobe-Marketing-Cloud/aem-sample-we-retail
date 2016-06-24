@@ -12,7 +12,7 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="Snow Sports"
         sling:resourceType="we-retail/components/structure/page"
-        coverImage="/content/dam/we-retail/activities/skiing/skiing_2.jpg"
+        coverImage="/content/dam/we-retail/en/activities/skiing/skiing_2.jpg"
         navTitle="Snow Sports">
         <root
             jcr:mixinTypes="[cq:LiveRelationship]"

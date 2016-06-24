@@ -31,7 +31,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="commerce/components/product/image"
-                    fileReference="/content/dam/we-retail/products/apparel/pants/331050524.jpg"/>
+                    fileReference="/content/dam/we-retail/en/products/apparel/pants/331050524.jpg"/>
                 <assets
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
@@ -67,6 +67,6 @@
             jcr:primaryType="cq:LiveCopy"/>
         <image
             jcr:primaryType="nt:unstructured"
-            fileReference="/content/dam/we-retail/products/apparel/pants/331050524.jpg"/>
+            fileReference="/content/dam/we-retail/en/products/apparel/pants/331050524.jpg"/>
     </jcr:content>
 </jcr:root>

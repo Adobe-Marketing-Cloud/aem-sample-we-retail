@@ -12,7 +12,7 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="Scarfs"
         sling:resourceType="we-retail/components/structure/page"
-        coverImage="/content/dam/we-retail/products/apparel/scarfs/Scarfs.jpg">
+        coverImage="/content/dam/we-retail/en/products/apparel/scarfs/Scarfs.jpg">
         <root
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"

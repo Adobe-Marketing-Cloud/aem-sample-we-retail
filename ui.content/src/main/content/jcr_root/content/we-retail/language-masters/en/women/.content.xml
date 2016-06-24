@@ -18,7 +18,7 @@
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/hero-image"
-                fileReference="/content/dam/we-retail/activities/running/fitness-woman.jpg"
+                fileReference="/content/dam/we-retail/en/activities/running/fitness-woman.jpg"
                 useFullWidth="true"/>
             <responsivegrid
                 jcr:created="{Date}2016-01-13T15:58:09.854+01:00"
@@ -68,7 +68,7 @@
                     sling:resourceType="we-retail/components/content/category-teaser"
                     buttonLabel="Our strongest clothes"
                     buttonLinkTo="/content/we-retail/language-masters/en/products/women/shirts"
-                    fileReference="/content/dam/we-retail/activities/climbing/kalymnos-island-female.jpg"
+                    fileReference="/content/dam/we-retail/en/activities/climbing/kalymnos-island-female.jpg"
                     heading="Push the limits">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
@@ -85,7 +85,7 @@
                     sling:resourceType="we-retail/components/content/category-teaser"
                     buttonLabel="Our warmest jackets"
                     buttonLinkTo="/content/we-retail/language-masters/en/products/women/coats"
-                    fileReference="/content/dam/we-retail/activities/running/running-desert-woman.jpg"
+                    fileReference="/content/dam/we-retail/en/activities/running/running-desert-woman.jpg"
                     heading="Always comfortable">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default

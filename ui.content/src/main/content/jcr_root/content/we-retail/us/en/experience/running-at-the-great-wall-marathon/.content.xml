@@ -42,7 +42,7 @@
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/hero-image"
-                fileReference="/content/dam/we-retail/activities/running/marathon-shoes.jpg"
+                fileReference="/content/dam/we-retail/en/activities/running/marathon-shoes.jpg"
                 useFullWidth="true"/>
         </root>
     </jcr:content>

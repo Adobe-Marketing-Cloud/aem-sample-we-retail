@@ -12,7 +12,7 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="Coats"
         sling:resourceType="we-retail/components/structure/page"
-        coverImage="/content/dam/we-retail/products/apparel/coats/Coats_men.jpg">
+        coverImage="/content/dam/we-retail/en/products/apparel/coats/Coats_men.jpg">
         <root
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"

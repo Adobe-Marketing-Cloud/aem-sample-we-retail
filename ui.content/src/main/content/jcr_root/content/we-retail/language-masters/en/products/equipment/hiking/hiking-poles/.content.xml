@@ -63,7 +63,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="commerce/components/product/image"
                         assetCategory="[we-retail:activity/hiking,we-retail:equipment]"
-                        fileReference="/content/dam/we-retail/products/activities/hiking/170227049.jpg"/>
+                        fileReference="/content/dam/we-retail/en/products/activities/hiking/170227049.jpg"/>
                 </assets>
             </product>
             <responsivegrid
@@ -96,6 +96,6 @@
             jcr:primaryType="cq:LiveCopy"/>
         <image
             jcr:primaryType="nt:unstructured"
-            fileReference="/content/dam/we-retail/products/activities/hiking/170227049.jpg"/>
+            fileReference="/content/dam/we-retail/en/products/activities/hiking/170227049.jpg"/>
     </jcr:content>
 </jcr:root>

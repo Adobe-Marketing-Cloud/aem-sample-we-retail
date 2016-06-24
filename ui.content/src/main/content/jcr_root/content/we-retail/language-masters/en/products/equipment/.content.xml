@@ -12,7 +12,7 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="Equipment"
         sling:resourceType="we-retail/components/structure/page"
-        coverImage="/content/dam/we-retail/products/activities/equipment_4.jpg"
+        coverImage="/content/dam/we-retail/en/products/activities/equipment_4.jpg"
         navTitle="Equipment">
         <root
             jcr:mixinTypes="[cq:LiveRelationship]"

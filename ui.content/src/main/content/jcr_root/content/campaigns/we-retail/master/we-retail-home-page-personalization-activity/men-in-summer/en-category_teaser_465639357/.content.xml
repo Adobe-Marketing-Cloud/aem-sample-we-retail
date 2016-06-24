@@ -21,7 +21,7 @@
                 sling:resourceType="we-retail/components/content/category-teaser"
                 buttonLabel="Equipment"
                 buttonLinkTo="/content/we-retail/language-masters/en/equipment"
-                fileReference="/content/dam/we-retail/activities/climbing/climber-gear-rope.jpg">
+                fileReference="/content/dam/we-retail/en/activities/climbing/climber-gear-rope.jpg">
                 <cq:responsive jcr:primaryType="nt:unstructured">
                     <default
                         jcr:primaryType="nt:unstructured"
