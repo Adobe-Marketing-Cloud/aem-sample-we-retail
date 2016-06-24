@@ -22,5 +22,7 @@
 
     <!--/* Initialize Cloud Services */-->
     <sly data-sly-resource="${@ resourceType='cq/cloudserviceconfigs/components/servicecomponents'}"/>
+    <!--/* Load authoring related client libraries */-->
+    <sly data-sly-test="${wcmmode.preview || wcmmode.edit}" data-sly-call="${clientLib.js @ categories='we-retail.authoring'}"/>
 </sly>
 
