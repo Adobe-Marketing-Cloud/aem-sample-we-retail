@@ -20,7 +20,7 @@
                 sling:resourceType="we-retail/components/content/category-teaser"
                 buttonLabel="WOMEN"
                 buttonLinkTo="/content/we-retail/language-masters/en/women"
-                fileReference="/content/dam/we-retail/activities/skiing/ski touring.jpg"/>
+                fileReference="/content/dam/we-retail/en/activities/skiing/ski touring.jpg"/>
         </par>
     </jcr:content>
 </jcr:root>

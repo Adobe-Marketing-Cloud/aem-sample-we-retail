@@ -21,7 +21,7 @@
                 sling:resourceType="we-retail/components/content/category-teaser"
                 buttonLabel="Women"
                 buttonLinkTo="/content/we-retail/language-masters/en/women"
-                fileReference="/content/dam/we-retail/activities/running/running-woods-woman.jpg">
+                fileReference="/content/dam/we-retail/en/activities/running/running-woods-woman.jpg">
                 <cq:responsive jcr:primaryType="nt:unstructured">
                     <default
                         jcr:primaryType="nt:unstructured"

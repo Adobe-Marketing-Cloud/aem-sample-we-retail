@@ -24,7 +24,7 @@
                 sling:resourceType="we-retail/components/content/category-teaser"
                 buttonLabel="MEN"
                 buttonLinkTo="/content/we-retail/us/en/men"
-                fileReference="/content/dam/we-retail/activities/skiing/skiing-winter.jpg">
+                fileReference="/content/dam/we-retail/en/activities/skiing/skiing-winter.jpg">
                 <cq:responsive
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured">

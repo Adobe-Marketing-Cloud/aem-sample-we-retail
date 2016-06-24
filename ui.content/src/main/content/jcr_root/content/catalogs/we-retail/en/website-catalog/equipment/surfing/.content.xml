@@ -24,7 +24,7 @@
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
-            coverImage="/content/dam/we-retail/activities/surfing/surfing_5.jpg"
+            coverImage="/content/dam/we-retail/en/activities/surfing/surfing_5.jpg"
             jcr_title="Surfing"
             navTitle="Surfing"/>
         <filter

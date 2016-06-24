@@ -11,7 +11,7 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="Men's"
         sling:resourceType="commerce/components/section"
-        coverUrl="/content/dam/we-retail/people/mens/men_1.jpg">
+        coverUrl="/content/dam/we-retail/en/people/mens/men_1.jpg">
         <templates
             cq:lastRolledout="{Date}2016-04-06T21:07:11.677+02:00"
             cq:lastRolledoutBy="admin"
@@ -23,7 +23,7 @@
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
-            coverImage="/content/dam/we-retail/people/mens/men_5.jpg"
+            coverImage="/content/dam/we-retail/en/people/mens/men_5.jpg"
             jcr_title="Men"/>
         <filter
             cq:lastRolledout="{Date}2016-04-06T21:07:11.685+02:00"

@@ -12,7 +12,7 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="Surfing"
         sling:resourceType="we-retail/components/structure/page"
-        coverImage="/content/dam/we-retail/activities/surfing/surfing_5.jpg"
+        coverImage="/content/dam/we-retail/en/activities/surfing/surfing_5.jpg"
         navTitle="Surfing">
         <root
             jcr:mixinTypes="[cq:LiveRelationship]"

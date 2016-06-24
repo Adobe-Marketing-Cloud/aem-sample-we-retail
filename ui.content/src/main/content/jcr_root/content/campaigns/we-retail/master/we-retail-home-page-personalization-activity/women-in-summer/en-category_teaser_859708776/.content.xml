@@ -21,7 +21,7 @@
                 sling:resourceType="we-retail/components/content/category-teaser"
                 buttonLabel="Men"
                 buttonLinkTo="/content/we-retail/language-masters/en/men"
-                fileReference="/content/dam/we-retail/activities/biking/rocks-downhill.jpg">
+                fileReference="/content/dam/we-retail/en/activities/biking/rocks-downhill.jpg">
                 <cq:responsive jcr:primaryType="nt:unstructured">
                     <default
                         jcr:primaryType="nt:unstructured"

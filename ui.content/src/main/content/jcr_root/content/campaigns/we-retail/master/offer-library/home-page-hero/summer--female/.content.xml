@@ -25,7 +25,7 @@
                 sling:resourceType="we-retail/components/content/hero-image"
                 buttonLabel="Shop now"
                 buttonLinkTo="/content/we-retail/language-masters/en/men"
-                fileReference="/content/dam/we-retail/activities/hiking-camping/Hiking-Campaign.jpg"
+                fileReference="/content/dam/we-retail/en/activities/hiking-camping/Hiking-Campaign.jpg"
                 heading="New Hiking Clothing, Shoes, &amp; Accessories"
                 keepRatio="true"
                 title="WHEREVER THE TRAILS LEADS"

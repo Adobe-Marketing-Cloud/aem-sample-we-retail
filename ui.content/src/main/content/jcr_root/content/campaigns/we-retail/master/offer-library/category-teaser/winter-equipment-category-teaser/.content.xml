@@ -20,7 +20,7 @@
                 sling:resourceType="we-retail/components/content/category-teaser"
                 buttonLabel="EQUIPMENT"
                 buttonLinkTo="/content/we-retail/language-masters/en/equipment"
-                fileReference="/content/dam/we-retail/activities/skiing/climber-ferrata-la-torre-di-toblin.jpg"/>
+                fileReference="/content/dam/we-retail/en/activities/skiing/climber-ferrata-la-torre-di-toblin.jpg"/>
         </par>
     </jcr:content>
 </jcr:root>
