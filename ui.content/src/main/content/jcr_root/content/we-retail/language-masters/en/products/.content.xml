@@ -16,7 +16,7 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="Products"
         sling:resourceType="we-retail/components/structure/page"
-        coverImage="/content/dam/we-retail/products/Product_catalog.jpg"
+        coverImage="/content/dam/we-retail/en/products/Product_catalog.jpg"
         hideInNav="true">
         <root
             jcr:mixinTypes="[cq:LiveRelationship]"

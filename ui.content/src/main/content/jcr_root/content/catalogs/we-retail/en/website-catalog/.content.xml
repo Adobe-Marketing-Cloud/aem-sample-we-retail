@@ -11,11 +11,11 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="Website Catalog"
         sling:resourceType="commerce/components/catalog"
-        coverUrl="/content/dam/we-retail/products/Product_catalog.jpg">
+        coverUrl="/content/dam/we-retail/en/products/Product_catalog.jpg">
         <target
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
-            coverImage="/content/dam/we-retail/products/Product_catalog.jpg"/>
+            coverImage="/content/dam/we-retail/en/products/Product_catalog.jpg"/>
         <templates
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"

@@ -12,7 +12,7 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="Biking"
         sling:resourceType="we-retail/components/structure/page"
-        coverImage="/content/dam/we-retail/activities/biking/cycling_1.jpg"
+        coverImage="/content/dam/we-retail/en/activities/biking/cycling_1.jpg"
         navTitle="Biking">
         <root
             jcr:mixinTypes="[cq:LiveRelationship]"

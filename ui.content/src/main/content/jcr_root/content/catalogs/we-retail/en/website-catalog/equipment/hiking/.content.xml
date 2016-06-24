@@ -24,7 +24,7 @@
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
-            coverImage="/content/dam/we-retail/activities/hiking/hiking_2.jpg"
+            coverImage="/content/dam/we-retail/en/activities/hiking/hiking_2.jpg"
             jcr_title="Hiking"
             navTitle="Hiking"/>
         <filter

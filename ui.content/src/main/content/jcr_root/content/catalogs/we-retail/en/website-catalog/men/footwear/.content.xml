@@ -22,7 +22,7 @@
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
-            coverImage="/content/dam/we-retail/products/apparel/footwear/Footwear.jpg"
+            coverImage="/content/dam/we-retail/en/products/apparel/footwear/Footwear.jpg"
             jcr_title="Footwear"/>
         <filter
             cq:lastRolledout="{Date}2016-04-06T21:07:11.947+02:00"
