@@ -1,7 +1,7 @@
 # Title: Install Gamification Features,,,,,
 # Description: This option configures the scoring and badging rules for We.Retail,,,,,
 # Assigning the scoring and badging rules to the site,,,,,
-SlingPost,/content/we-retail/community/jcr:content,scoringRules@String[],/etc/community/scoring/rules/forums-scoring,badgingRules@String[],/etc/community/badging/rules/forums-badging
+Badge,/content/we-retail/community/jcr:content,scoringRules@String[],/etc/community/scoring/rules/forums-scoring|/etc/community/scoring/rules/adv-forums-scoring,badgingRules@String[],/etc/community/badging/rules/forums-badging|/etc/community/badging/rules/adv-forums-badging
 # Assigning a few role based badges,,,,,
 Badge,/home/users/geometrixx-outdoors/aaron.mcdonald%40mailinator.com/profile.social.json,badgeContentPath,/etc/community/badging/images/moderator/jcr:content/moderator.png,,
 # Republishing the site,,,,,
