@@ -108,12 +108,12 @@ public class WeRetailCommerceServiceImpl extends AbstractJcrCommerceService impl
             }
 
             //
-            // Copy geometrixx-outdoors-namespaced tags from the product to the product page.
+            // Copy we-retail namespaced tags from the product to the product page.
             //
             if (CommerceHelper.copyTags(productData, productPage.getContentResource(),
                     new Predicate() {
                         public boolean evaluate(Object o) {
-                            return ((Tag) o).getNamespace().getName().equals("geometrixx-outdoors");
+                            return ((Tag) o).getNamespace().getName().equals("we-retail");
                         }
                     })) {
                 changed = true;

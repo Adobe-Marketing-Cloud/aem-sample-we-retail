@@ -3,6 +3,7 @@
     cq:policyOrigin="local"
     cq:templatesOrigin="local"
     cq:templateTypesOrigin="local"
+    jcr:mixinTypes="[rep:AccessControllable]"
     jcr:primaryType="sling:OrderedFolder"
     jcr:title="We.Retail">
     <settings/>
