@@ -85,7 +85,11 @@ use(function () {
     return product;
 
     function getProductProperties(product) {
-        var productImage = resolver.getResource(product.getImage().getPath());
+        var productImage = product.getImage();
+        var productImageResource = null;
+        if (productImage != null) {
+            productImageResource = resolver.getResource(productImage.getPath());
+        }
 
         return {
             path: product.getPath(),
@@ -99,8 +103,8 @@ use(function () {
             price: commerceSession.getProductPrice(product),
             summary: product.getProperty('summary', java.lang.String),
             features: product.getProperty("features", java.lang.String),
-            image: productImage != null ?
-                productImage.adaptTo(org.apache.sling.api.resource.ValueMap).get("fileReference", java.lang.String) : ""
+            image: productImageResource != null ?
+                productImageResource.adaptTo(org.apache.sling.api.resource.ValueMap).get("fileReference", java.lang.String) : ""
         };
     }
 });

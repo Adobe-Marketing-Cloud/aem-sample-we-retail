@@ -90,9 +90,10 @@ public class Article {
         
         if(contentFragment != null) {
             Object[] tagIds = (Object[]) contentFragment.getMetaData().get("cq:tags");
-
-            for (Object cqTag : tagIds) {
-                tags.add(tagManager.resolve(cqTag.toString()));
+            if (tagIds != null) {
+                for (Object cqTag : tagIds) {
+                    tags.add(tagManager.resolve(cqTag.toString()));
+                }
             }
         }
         return tags;

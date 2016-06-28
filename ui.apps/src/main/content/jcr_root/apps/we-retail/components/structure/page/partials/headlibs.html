@@ -16,8 +16,10 @@
 <script>window.CQ = window.CQ || {}</script>
 
 <!--/* Include the site client libraries (loading only the CSS in the header, JS will be loaded in the footer) */-->
-<sly data-sly-use.wcmInit="wcm/foundation/components/page/initwcm.js" data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
-    <sly data-sly-call="${clientLib.css @ categories=wcmInit.templateCategories}" />
+<sly data-sly-use.wcmInit="/libs/wcm/foundation/components/page/initwcm.js"
+     data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-test.templateCategories="${wcmInit.templateCategories}"
+         data-sly-call="${clientLib.css @ categories=templateCategories}" />
     <sly data-sly-call="${clientlib.css @ categories='we-retail.base'}"/>
 </sly>
 
