@@ -1,3 +1,2 @@
 #base=src
-
-jquery-2.2.0.js
+jquery-1.12.4.js
