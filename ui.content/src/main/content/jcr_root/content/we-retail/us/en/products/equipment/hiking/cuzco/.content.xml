@@ -2,11 +2,12 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-03-14T22:19:01.458+01:00"
+        cq:lastModified="{Date}2016-06-29T14:21:00.543+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-03-14T22:19:01.459+01:00"
+        cq:lastRolledout="{Date}2016-06-29T14:21:00.545+02:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/eq/eqsm/eqsmcz"
+        cq:productMaster="/etc/commerce/products/we-retail/eq/hiking/eqsmcz"
+        cq:tags="[we-retail:activity/hiking,we-retail:season/summer]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
         jcr:mixinTypes="[cq:LiveRelationship]"
@@ -14,46 +15,53 @@
         jcr:title="Cuzco"
         sling:resourceType="we-retail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-03-14T22:19:01.413+01:00"
+            cq:lastRolledout="{Date}2016-06-29T14:21:00.449+02:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
-                cq:lastRolledout="{Date}2016-03-14T22:19:01.428+01:00"
+                cq:lastRolledout="{Date}2016-06-29T14:21:00.479+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
-                cq:lastRolledout="{Date}2016-03-14T22:19:01.429+01:00"
+                cq:lastRolledout="{Date}2016-06-29T14:21:00.482+02:00"
                 cq:lastRolledoutBy="admin"
-                jcr:lastModified="{Date}2016-03-10T14:21:11.823+01:00"
+                jcr:lastModified="{Date}2016-04-12T01:19:39.237+02:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmcz"
+                productData="/etc/commerce/products/we-retail/eq/hiking/eqsmcz"
                 variationAxis="color"
                 variationTitle="Color">
                 <eqsmcz_1
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-14T22:19:01.438+01:00"
+                    cq:lastRolledout="{Date}2016-06-29T14:21:00.503+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmcz/eqsmcz.1">
+                    productData="/etc/commerce/products/we-retail/eq/hiking/eqsmcz/eqsmcz.1">
                     <image
-                        cq:lastRolledout="{Date}2016-03-14T22:19:01.443+01:00"
+                        cq:lastRolledout="{Date}2016-06-29T14:21:00.513+02:00"
                         cq:lastRolledoutBy="admin"
-                        jcr:lastModified="{Date}2015-01-26T12:28:08.318Z"
+                        jcr:lastModified="{Date}2016-01-11T17:23:31.368-08:00"
+                        jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="commerce/components/product/image"
-                        fileReference="/content/dam/geometrixx-outdoors/products/equipment/Lake Titicaca Blue.jpg"/>
+                        sling:resourceType="dam/components/scene7/dynamicmediaimage"
+                        fileReference="/content/dam/we-retail/en/products/activities/hiking/backpack_spin"
+                        height="300"
+                        jpegQuality="85"
+                        unsharpMaskAmount="0"
+                        unsharpMaskRadius="0"
+                        unsharpMaskThreshold="0"
+                        width="300"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-14T22:19:01.443+01:00"
+                        cq:lastRolledout="{Date}2016-06-29T14:21:00.515+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -61,80 +69,94 @@
                 </eqsmcz_1>
                 <eqsmcz_2
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-03-14T22:19:01.444+01:00"
+                    cq:lastRolledout="{Date}2016-06-29T14:21:00.516+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/eqsm/eqsmcz/eqsmcz.2">
+                    productData="/etc/commerce/products/we-retail/eq/hiking/eqsmcz/eqsmcz.2">
                     <image
-                        cq:lastRolledout="{Date}2016-03-14T22:19:01.449+01:00"
+                        cq:lastRolledout="{Date}2016-06-29T14:21:00.526+02:00"
                         cq:lastRolledoutBy="admin"
-                        jcr:lastModified="{Date}2015-01-26T12:28:08.321Z"
+                        jcr:lastModified="{Date}2016-01-11T17:24:13.002-08:00"
+                        jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="commerce/components/product/image"
-                        fileReference="/content/dam/geometrixx-outdoors/products/equipment/Lake Titicaca Orange.jpg"/>
+                        sling:resourceType="dam/components/scene7/dynamicmediaimage"
+                        fileReference="/content/dam/we-retail/en/products/activities/hiking/backpack_colors"
+                        height="300"
+                        jpegQuality="85"
+                        unsharpMaskAmount="0"
+                        unsharpMaskRadius="0"
+                        unsharpMaskThreshold="0"
+                        width="300"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-03-14T22:19:01.450+01:00"
+                        cq:lastRolledout="{Date}2016-06-29T14:21:00.528+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqsmcz_2>
                 <image
-                    cq:lastRolledout="{Date}2016-03-14T22:19:01.451+01:00"
+                    cq:lastRolledout="{Date}2016-06-29T14:21:00.530+02:00"
                     cq:lastRolledoutBy="admin"
-                    jcr:lastModified="{Date}2015-01-26T12:28:08.318Z"
+                    jcr:lastModified="{Date}2016-01-11T17:23:31.368-08:00"
+                    jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="commerce/components/product/image"
-                    fileReference="/content/dam/geometrixx-outdoors/products/equipment/Lake Titicaca Blue.jpg"/>
+                    sling:resourceType="dam/components/scene7/dynamicmediaimage"
+                    fileReference="/content/dam/we-retail/en/products/activities/hiking/backpack_spin"
+                    height="300"
+                    jpegQuality="85"
+                    unsharpMaskAmount="0"
+                    unsharpMaskRadius="0"
+                    unsharpMaskThreshold="0"
+                    width="300"/>
                 <assets
-                    cq:lastRolledout="{Date}2016-03-14T22:19:01.452+01:00"
+                    cq:lastRolledout="{Date}2016-06-29T14:21:00.531+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/assets"/>
             </product>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-03-14T22:19:01.453+01:00"
+                cq:lastRolledout="{Date}2016-06-29T14:21:00.534+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
-                cq:lastRolledout="{Date}2016-03-14T22:19:01.454+01:00"
+                cq:lastRolledout="{Date}2016-06-29T14:21:00.536+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
-                cq:lastRolledout="{Date}2016-03-14T22:19:01.455+01:00"
+                cq:lastRolledout="{Date}2016-06-29T14:21:00.538+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
-                cq:lastRolledout="{Date}2016-03-14T22:19:01.457+01:00"
+                cq:lastRolledout="{Date}2016-06-29T14:21:00.540+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
-                cq:lastRolledout="{Date}2016-03-14T22:19:01.458+01:00"
+                cq:lastRolledout="{Date}2016-06-29T14:21:00.542+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-recommendation"/>
         </root>
         <image
-            cq:lastRolledout="{Date}2016-03-14T22:19:01.459+01:00"
+            cq:lastRolledout="{Date}2016-06-29T14:21:00.544+02:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
-            fileReference="/content/dam/geometrixx-outdoors/products/equipment/Lake Titicaca Blue.jpg"/>
+            fileReference=""/>
     </jcr:content>
 </jcr:root>

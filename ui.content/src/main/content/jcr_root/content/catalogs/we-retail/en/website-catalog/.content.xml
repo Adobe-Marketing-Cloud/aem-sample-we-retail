@@ -6,10 +6,12 @@
         cq:cloudserviceconfigs="[[]]"
         cq:propertyInheritanceCancelled="[templates/catalog,templates/section,templates/product]"
         cq:template="/libs/commerce/templates/catalog"
+        jcr:isCheckedOut="{Boolean}true"
         jcr:language="en"
         jcr:mixinTypes="[cq:LiveRelationship,cq:LiveSync,cq:PropertyLiveSyncCancelled,mix:versionable]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Website Catalog"
+        jcr:uuid="1f78d915-d3ae-41a5-9e08-b92216294090"
         sling:resourceType="commerce/components/catalog"
         coverUrl="/content/dam/we-retail/en/products/Product_catalog.jpg">
         <target

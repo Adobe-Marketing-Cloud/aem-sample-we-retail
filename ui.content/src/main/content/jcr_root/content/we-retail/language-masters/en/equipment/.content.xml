@@ -102,7 +102,7 @@
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/category-teaser"
-                    buttonLinkTo="/content/we-retail/language-masters/en/products/equipment/skiing"
+                    buttonLinkTo="/content/we-retail/us/en/products/equipment/snow-sports"
                     fileReference="/content/dam/we-retail/en/activities/skiing/freeride-steep.jpg">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
@@ -157,7 +157,7 @@
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/category-teaser"
-                    buttonLinkTo="/content/we-retail/language-masters/en/products/equipment/skiing"
+                    buttonLinkTo="/content/we-retail/us/en/products/equipment/snow-sports"
                     fileReference="/content/dam/we-retail/en/activities/skiing/freeride-extreme.jpg">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default
@@ -173,7 +173,7 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/content/category-teaser"
                     buttonLabel="Snowboarding"
-                    buttonLinkTo="/content/we-retail/language-masters/en/products/equipment/skiing"
+                    buttonLinkTo="/content/we-retail/us/en/products/equipment/snow-sports"
                     fileReference="/content/dam/we-retail/en/activities/skiing/freeride-siberia.jpg">
                     <cq:responsive jcr:primaryType="nt:unstructured">
                         <default

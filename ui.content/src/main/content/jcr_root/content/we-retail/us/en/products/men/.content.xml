@@ -2,28 +2,27 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:catalogBlueprint="/content/catalogs/we-retail/en/base-catalog/men"
-        cq:commerceProvider="we-retail"
+        cq:catalogBlueprint="/content/catalogs/we-retail/en/website-catalog/men"
         cq:commerceType="section"
-        cq:lastModified="{Date}2016-03-14T22:18:58.383+01:00"
+        cq:lastModified="{Date}2016-06-29T14:20:48.442+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastPropertyRollout="{Date}2016-03-10T14:21:11.372+01:00"
-        cq:lastRolledout="{Date}2016-03-14T22:18:58.384+01:00"
+        cq:lastPropertyRollout="{Date}2016-06-29T14:10:00.002+02:00"
+        cq:lastRolledout="{Date}2016-06-29T14:20:48.444+02:00"
         cq:lastRolledoutBy="admin"
         cq:template="/conf/we-retail/settings/wcm/templates/section-page"
-        jcr:language="en"
         jcr:mixinTypes="[cq:LiveRelationship]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Men"
-        sling:resourceType="we-retail/components/structure/page">
+        sling:resourceType="we-retail/components/structure/page"
+        coverImage="/content/dam/we-retail/en/people/mens/men_5.jpg">
         <root
-            cq:lastRolledout="{Date}2016-03-14T22:18:58.367+01:00"
+            cq:lastRolledout="{Date}2016-06-29T14:20:48.405+02:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <product-grid
-                cq:lastRolledout="{Date}2016-03-14T22:18:58.373+01:00"
+                cq:lastRolledout="{Date}2016-06-29T14:20:48.419+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
@@ -34,18 +33,18 @@
                 ordered="{Boolean}true"
                 pageMax="0">
                 <cq:responsive
-                    cq:lastRolledout="{Date}2016-03-14T22:18:58.376+01:00"
+                    cq:lastRolledout="{Date}2016-06-29T14:20:48.425+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured">
                     <default
-                        cq:lastRolledout="{Date}2016-03-14T22:18:58.382+01:00"
+                        cq:lastRolledout="{Date}2016-06-29T14:20:48.438+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         width="12"/>
                     <phone
-                        cq:lastRolledout="{Date}2016-03-14T22:18:58.383+01:00"
+                        cq:lastRolledout="{Date}2016-06-29T14:20:48.441+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -53,7 +52,7 @@
                 </cq:responsive>
             </product-grid>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-03-14T22:18:58.384+01:00"
+                cq:lastRolledout="{Date}2016-06-29T14:20:48.444+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
@@ -61,7 +60,10 @@
         </root>
     </jcr:content>
     <coats/>
-    <pants/>
     <shirts/>
+    <pants/>
     <shorts/>
+    <scarfs/>
+    <gloves/>
+    <footwear/>
 </jcr:root>

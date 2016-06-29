@@ -2,9 +2,12 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-04-12T01:19:39.009+02:00"
+        cq:lastModified="{Date}2016-06-29T14:10:22.216+02:00"
         cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2016-06-29T14:10:22.370+02:00"
+        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus"
+        cq:tags="[we-retail:activity/swimming,we-retail:equipment,we-retail:season/summer]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
         jcr:mixinTypes="[cq:LiveSync]"
@@ -12,83 +15,39 @@
         jcr:title="Pufferfish Snorkeling Fins"
         sling:resourceType="we-retail/components/structure/page">
         <root
+            cq:lastRolledout="{Date}2016-06-29T14:10:22.180+02:00"
+            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
+                cq:lastRolledout="{Date}2016-06-29T14:10:22.215+02:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
-                jcr:lastModified="{Date}2016-04-12T01:19:39.008+02:00"
+                cq:lastRolledout="{Date}2016-06-29T14:10:22.217+02:00"
+                cq:lastRolledoutBy="admin"
+                jcr:lastModified="{Date}2016-06-29T14:10:21.780+02:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product"
                 productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus"
                 variationAxis="color"
                 variationTitle="Color">
-                <eqswsupus-s
-                    cq:commerceType="variant"
-                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/size-s">
-                    <image
-                        jcr:lastModified="{Date}2016-01-11T16:36:42.930-08:00"
-                        jcr:lastModifiedBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="commerce/components/product/image"
-                        fileReference="/content/dam/we-retail/en/products/activities/water-sports/Pufferfish Blue.jpg"/>
-                    <assets
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
-                </eqswsupus-s>
-                <eqswsupus-m
-                    cq:commerceType="variant"
-                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/size-m">
-                    <image
-                        jcr:lastModified="{Date}2016-01-11T16:36:42.930-08:00"
-                        jcr:lastModifiedBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="commerce/components/product/image"
-                        fileReference="/content/dam/we-retail/en/products/activities/water-sports/Pufferfish Blue.jpg"/>
-                    <assets
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
-                </eqswsupus-m>
-                <eqswsupus-l
-                    cq:commerceType="variant"
-                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/size-l">
-                    <image
-                        jcr:lastModified="{Date}2016-01-11T16:36:42.930-08:00"
-                        jcr:lastModifiedBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="commerce/components/product/image"
-                        fileReference="/content/dam/we-retail/en/products/activities/water-sports/Pufferfish Blue.jpg"/>
-                    <assets
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
-                </eqswsupus-l>
                 <eqswsupus_1-s
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-06-29T14:10:22.268+02:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.1/size-s">
                     <image
+                        cq:lastRolledout="{Date}2016-06-29T14:10:22.279+02:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:36:54.131-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -96,17 +55,23 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/activities/water-sports/Pufferfish Blue.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-06-29T14:10:22.279+02:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqswsupus_1-s>
                 <eqswsupus_1-m
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-06-29T14:10:22.279+02:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.1/size-m">
                     <image
+                        cq:lastRolledout="{Date}2016-06-29T14:10:22.289+02:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:36:54.131-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -114,17 +79,23 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/activities/water-sports/Pufferfish Blue.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-06-29T14:10:22.290+02:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqswsupus_1-m>
                 <eqswsupus_1-l
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-06-29T14:10:22.290+02:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.1/size-l">
                     <image
+                        cq:lastRolledout="{Date}2016-06-29T14:10:22.301+02:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:36:54.131-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -132,17 +103,23 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/activities/water-sports/Pufferfish Blue.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-06-29T14:10:22.302+02:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqswsupus_1-l>
                 <eqswsupus_2-s
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-06-29T14:10:22.302+02:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.2/size-s">
                     <image
+                        cq:lastRolledout="{Date}2016-06-29T14:10:22.312+02:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:37:03.778-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -150,17 +127,23 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/activities/water-sports/Pufferfish Green.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-06-29T14:10:22.312+02:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqswsupus_2-s>
                 <eqswsupus_2-m
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-06-29T14:10:22.312+02:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.2/size-m">
                     <image
+                        cq:lastRolledout="{Date}2016-06-29T14:10:22.322+02:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:37:03.778-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -168,17 +151,23 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/activities/water-sports/Pufferfish Green.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-06-29T14:10:22.322+02:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqswsupus_2-m>
                 <eqswsupus_2-l
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-06-29T14:10:22.322+02:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.2/size-l">
                     <image
+                        cq:lastRolledout="{Date}2016-06-29T14:10:22.333+02:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:37:03.778-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -186,17 +175,23 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/activities/water-sports/Pufferfish Green.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-06-29T14:10:22.334+02:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqswsupus_2-l>
                 <eqswsupus_3-s
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-06-29T14:10:22.334+02:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.3/size-s">
                     <image
+                        cq:lastRolledout="{Date}2016-06-29T14:10:22.345+02:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:37:16.125-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -204,17 +199,23 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/activities/water-sports/Pufferfish Purple.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-06-29T14:10:22.345+02:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqswsupus_3-s>
                 <eqswsupus_3-m
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-06-29T14:10:22.346+02:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.3/size-m">
                     <image
+                        cq:lastRolledout="{Date}2016-06-29T14:10:22.356+02:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:37:16.125-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -222,17 +223,23 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/activities/water-sports/Pufferfish Purple.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-06-29T14:10:22.356+02:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqswsupus_3-m>
                 <eqswsupus_3-l
                     cq:commerceType="variant"
+                    cq:lastRolledout="{Date}2016-06-29T14:10:22.357+02:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.3/size-l">
                     <image
+                        cq:lastRolledout="{Date}2016-06-29T14:10:22.366+02:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:37:16.125-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -240,11 +247,15 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/activities/water-sports/Pufferfish Purple.jpg"/>
                     <assets
+                        cq:lastRolledout="{Date}2016-06-29T14:10:22.367+02:00"
+                        cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </eqswsupus_3-l>
                 <image
+                    cq:lastRolledout="{Date}2016-06-29T14:10:22.367+02:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2016-01-11T16:36:42.930-08:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -252,29 +263,41 @@
                     sling:resourceType="commerce/components/product/image"
                     fileReference="/content/dam/we-retail/en/products/activities/water-sports/Pufferfish Blue.jpg"/>
                 <assets
+                    cq:lastRolledout="{Date}2016-06-29T14:10:22.367+02:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/assets"/>
             </product>
             <responsivegrid
+                cq:lastRolledout="{Date}2016-06-29T14:10:22.368+02:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
+                cq:lastRolledout="{Date}2016-06-29T14:10:22.368+02:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
+                cq:lastRolledout="{Date}2016-06-29T14:10:22.368+02:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
+                cq:lastRolledout="{Date}2016-06-29T14:10:22.369+02:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
+                cq:lastRolledout="{Date}2016-06-29T14:10:22.369+02:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-recommendation"/>

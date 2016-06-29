@@ -2,14 +2,14 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:catalogBlueprint="/content/catalogs/we-retail/en/base-catalog"
+        cq:catalogBlueprint="/content/catalogs/we-retail/en/website-catalog"
+        cq:cloudserviceconfigs="[[]]"
         cq:commerceProvider="we-retail"
         cq:commerceType="section"
-        cq:designPath="/etc/designs/we-retail"
-        cq:lastModified="{Date}2016-03-14T22:18:58.337+01:00"
+        cq:lastModified="{Date}2016-06-29T14:20:45.183+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastPropertyRollout="{Date}2016-03-14T21:31:01.019+01:00"
-        cq:lastRolledout="{Date}2016-03-14T22:18:58.337+01:00"
+        cq:lastPropertyRollout="{Date}2016-06-29T14:09:49.562+02:00"
+        cq:lastRolledout="{Date}2016-06-29T14:20:45.195+02:00"
         cq:lastRolledoutBy="admin"
         cq:template="/conf/we-retail/settings/wcm/templates/section-page"
         jcr:language="en"
@@ -17,16 +17,16 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="Products"
         sling:resourceType="we-retail/components/structure/page"
-        hideInNav="true"
-        pageTitle="We.Retail">
+        coverImage="/content/dam/we-retail/en/products/Product_catalog.jpg"
+        hideInNav="true">
         <root
-            cq:lastRolledout="{Date}2016-03-14T22:18:58.321+01:00"
+            cq:lastRolledout="{Date}2016-06-29T14:20:45.151+02:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <product-grid
-                cq:lastRolledout="{Date}2016-03-14T22:18:58.327+01:00"
+                cq:lastRolledout="{Date}2016-06-29T14:20:45.163+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
@@ -37,18 +37,18 @@
                 ordered="{Boolean}true"
                 pageMax="0">
                 <cq:responsive
-                    cq:lastRolledout="{Date}2016-03-14T22:18:58.330+01:00"
+                    cq:lastRolledout="{Date}2016-06-29T14:20:45.168+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured">
                     <default
-                        cq:lastRolledout="{Date}2016-03-14T22:18:58.335+01:00"
+                        cq:lastRolledout="{Date}2016-06-29T14:20:45.180+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         width="12"/>
                     <phone
-                        cq:lastRolledout="{Date}2016-03-14T22:18:58.336+01:00"
+                        cq:lastRolledout="{Date}2016-06-29T14:20:45.182+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -56,15 +56,14 @@
                 </cq:responsive>
             </product-grid>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-03-14T22:18:58.337+01:00"
+                cq:lastRolledout="{Date}2016-06-29T14:20:45.195+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
         </root>
     </jcr:content>
-    <men/>
     <women/>
+    <men/>
     <equipment/>
-    <seasonal/>
 </jcr:root>

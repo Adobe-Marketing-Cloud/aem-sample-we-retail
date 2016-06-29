@@ -2,48 +2,49 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:catalogBlueprint="/content/catalogs/we-retail/en/base-catalog/men/shorts"
+        cq:catalogBlueprint="/content/catalogs/we-retail/en/website-catalog/men/shorts"
         cq:commerceType="section"
-        cq:lastModified="{Date}2016-03-14T22:18:58.998+01:00"
+        cq:lastModified="{Date}2016-06-29T14:20:52.204+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastPropertyRollout="{Date}2016-03-10T14:21:11.474+01:00"
-        cq:lastRolledout="{Date}2016-03-14T22:18:58.999+01:00"
+        cq:lastPropertyRollout="{Date}2016-06-29T14:10:09.853+02:00"
+        cq:lastRolledout="{Date}2016-06-29T14:20:52.206+02:00"
         cq:lastRolledoutBy="admin"
         cq:template="/conf/we-retail/settings/wcm/templates/section-page"
         jcr:mixinTypes="[cq:LiveRelationship]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Shorts"
-        sling:resourceType="we-retail/components/structure/page">
+        sling:resourceType="we-retail/components/structure/page"
+        coverImage="/content/dam/we-retail/en/products/apparel/shorts/Shorts_men.jpg">
         <root
-            cq:lastRolledout="{Date}2016-03-14T22:18:58.981+01:00"
+            cq:lastRolledout="{Date}2016-06-29T14:20:52.174+02:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <product-grid
-                cq:lastRolledout="{Date}2016-03-14T22:18:58.988+01:00"
+                cq:lastRolledout="{Date}2016-06-29T14:20:52.185+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/content/product-grid"
                 displayAs="products"
-                listFrom="children"
+                listFrom="descendants"
                 orderBy="jcr:title"
                 ordered="{Boolean}true"
                 pageMax="0">
                 <cq:responsive
-                    cq:lastRolledout="{Date}2016-03-14T22:18:58.991+01:00"
+                    cq:lastRolledout="{Date}2016-06-29T14:20:52.190+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured">
                     <default
-                        cq:lastRolledout="{Date}2016-03-14T22:18:58.997+01:00"
+                        cq:lastRolledout="{Date}2016-06-29T14:20:52.201+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         width="12"/>
                     <phone
-                        cq:lastRolledout="{Date}2016-03-14T22:18:58.998+01:00"
+                        cq:lastRolledout="{Date}2016-06-29T14:20:52.203+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -51,14 +52,16 @@
                 </cq:responsive>
             </product-grid>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-03-14T22:18:58.999+01:00"
+                cq:lastRolledout="{Date}2016-06-29T14:20:52.205+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
         </root>
     </jcr:content>
-    <tuareg-summer/>
-    <jola-summer/>
-    <marka-sport/>
+    <corona-shorts/>
+    <buffalo-plaid-shorts/>
+    <stretch-fatigue-shorts/>
+    <slot-canyon-active-shorts/>
+    <pipeline-board-shorts/>
 </jcr:root>

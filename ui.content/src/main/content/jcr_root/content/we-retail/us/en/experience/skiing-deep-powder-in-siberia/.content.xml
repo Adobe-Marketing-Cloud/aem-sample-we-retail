@@ -4,7 +4,7 @@
     <jcr:content
         cq:lastModified="{Date}2016-03-14T22:18:57.920+01:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-03-14T22:18:57.921+01:00"
+        cq:lastRolledout="{Date}2016-06-29T14:20:45.101+02:00"
         cq:lastRolledoutBy="admin"
         cq:template="/conf/we-retail/settings/wcm/templates/experience-page"
         jcr:mixinTypes="[cq:LiveRelationship]"

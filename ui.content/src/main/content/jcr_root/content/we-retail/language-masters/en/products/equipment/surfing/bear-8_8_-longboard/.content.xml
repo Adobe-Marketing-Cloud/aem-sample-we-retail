@@ -2,9 +2,12 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-04-12T01:19:38.737+02:00"
+        cq:lastModified="{Date}2016-06-29T14:10:15.581+02:00"
         cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2016-06-29T14:10:15.594+02:00"
+        cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/eq/surfing/eqsusubed"
+        cq:tags="[we-retail:equipment,we-retail:season/summer,we-retail:activity/surfing]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
         jcr:mixinTypes="[cq:LiveSync]"
@@ -12,20 +15,28 @@
         jcr:title="Bear 8'8&quot; Longboard"
         sling:resourceType="we-retail/components/structure/page">
         <root
+            cq:lastRolledout="{Date}2016-06-29T14:10:15.544+02:00"
+            cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
+                cq:lastRolledout="{Date}2016-06-29T14:10:15.580+02:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
+                cq:lastRolledout="{Date}2016-06-29T14:10:15.582+02:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product"
                 productData="/etc/commerce/products/we-retail/eq/surfing/eqsusubed">
                 <image
+                    cq:lastRolledout="{Date}2016-06-29T14:10:15.591+02:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2016-01-11T16:23:53.091-08:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -39,29 +50,41 @@
                     unsharpMaskThreshold="0"
                     width="300"/>
                 <assets
+                    cq:lastRolledout="{Date}2016-06-29T14:10:15.592+02:00"
+                    cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/assets"/>
             </product>
             <responsivegrid
+                cq:lastRolledout="{Date}2016-06-29T14:10:15.592+02:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
+                cq:lastRolledout="{Date}2016-06-29T14:10:15.592+02:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
+                cq:lastRolledout="{Date}2016-06-29T14:10:15.593+02:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
+                cq:lastRolledout="{Date}2016-06-29T14:10:15.593+02:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
+                cq:lastRolledout="{Date}2016-06-29T14:10:15.594+02:00"
+                cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-recommendation"/>
