@@ -21,9 +21,9 @@ var global = this;
  * List foundation component JS backing script
  */
 use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
-     "/libs/wcm/foundation/components/utils/ResourceUtils.js",
-     "/libs/sightly/js/3rd-party/q.js"], function (AuthoringUtils, ResourceUtils, Q) {
-        
+    "/libs/wcm/foundation/components/utils/ResourceUtils.js",
+    "/libs/sightly/js/3rd-party/q.js"], function (AuthoringUtils, ResourceUtils, Q) {
+
     var CONST = {
         PROP_SOURCE: "listFrom",
         PROP_QUERY: "query",
@@ -40,26 +40,26 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
         PROP_TAGS: "tags",
         PROP_TAGS_MATCH: "tagsMatch",
         PROP_PAGES: "pages",
-        
+
         PARAM_PAGE_START: "start",
         PARAM_PAGE_MAX: "max",
-        
+
         SOURCE_CHILDREN: "children",
         SOURCE_DESCENDANTS: "descendants",
         SOURCE_STATIC: "static",
         SOURCE_SEARCH: "search",
         SOURCE_QUERYBUILDER: "querybuilder",
         SOURCE_TAGS: "tags",
-        
+
         TYPE_DEFAULT: "default",
-        
+
         PAGE_MAX_DEFAULT: -1,
         LIMIT_DEFAULT: 100
     };
-    
+
     var _getModifiedDate = function (pageResource) {
         var modifDatePromise = Q.defer();
-        
+
         var parseDate = function (dateProperty, promise) {
             try {
                 var month = dateProperty.get(global.Packages.java.util.Calendar.MONTH) + 1;
@@ -67,41 +67,41 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
                 var year = dateProperty.get(global.Packages.java.util.Calendar.YEAR);
                 var hourOfDay = dateProperty.get(global.Packages.java.util.Calendar.HOUR_OF_DAY);
                 var minutes = dateProperty.get(global.Packages.java.util.Calendar.MINUTE);
-                
+
                 var modifDate = month + "/" + day + "/" + year + " " + hourOfDay + ":" + minutes;
-                
+
                 log.debug("Page " + pageResource.path + " modification date is " + modifDate);
-                
+
                 promise.resolve(modifDate);
             } catch (e) {
                 log.error("Can't determine page " + pageResource.path + " modification date" + e);
-                
+
                 promise.resolve(undefined);
             }
         };
-        
+
         var propValue = pageResource.properties["date"];
         if (!propValue) {
             ResourceUtils.getResource(pageResource.path + "/jcr:content")
                 .then(function (pageContentResource) {
                     propValue = pageContentResource.properties["cq:lastModified"]
                         || pageContentResource.properties["jcr:lastModified"];
-                    
+
                     parseDate(propValue, modifDatePromise);
-                }); 
+                });
         } else {
             parseDate(propValue, modifDatePromise);
         }
-        
+
         return modifDatePromise.promise;
     }
-    
+
     var _hasImage = function (pageResource) {
         var hasImagePromise = Q.defer();
-        
+
         ResourceUtils.getResource(pageResource.path + "/jcr:content")
             .then(function (pageContentResource) {
-                
+
                 if (pageContentResource.properties["fileReference"]) {
                     hasImagePromise.resolve(true);
                 } else {
@@ -121,14 +121,14 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
                             hasImagePromise.resolve(false);
                         });
                 }
-                
+
             }, function () {
                 hasImagePromise.resolve(false);
             });
-    
+
         return hasImagePromise.promise;
     }
-    
+
     var _getAbsoluteParent = function (handle, level) {
         var idx = 0;
         var len = handle.length;
@@ -141,48 +141,48 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
         }
         return level>=0 ? "" : handle.substring(0,idx);
     };
-    
+
     var _initializeProperties = function () {
         var currentListId = _getGeneratedId();
         log.info("List generated ID: " + currentListId);
 
         var source = granite.resource.properties[CONST.PROP_SOURCE]
-                || CONST.SOURCE_STATIC;
-        
+            || CONST.SOURCE_STATIC;
+
         var query = granite.resource.properties[CONST.PROP_QUERY]
-                || "";
-        
+            || "";
+
         var startIn = granite.resource.properties[CONST.PROP_SEARCH_IN]
-                || _getAbsoluteParent(granite.resource.path, 1);
-        
+            || _getAbsoluteParent(granite.resource.path, 1);
+
         var type = granite.resource.properties[CONST.PROP_TYPE]
-                || CONST.TYPE_DEFAULT;
+            || CONST.TYPE_DEFAULT;
 
         var orderBy = granite.resource.properties[CONST.PROP_ORDER_BY]
-                || "";
-        
+            || "";
+
         var limit = granite.resource.properties[CONST.PROP_LIMIT]
-                || CONST.LIMIT_DEFAULT;
+            || CONST.LIMIT_DEFAULT;
         limit = parseInt(limit);
         if (limit <= 0) {
             limit = CONST.LIMIT_DEFAULT;
         }
 
         var pageMax = granite.resource.properties[CONST.PROP_PAGE_MAX]
-                || CONST.PAGE_MAX_DEFAULT;
+            || CONST.PAGE_MAX_DEFAULT;
         pageMax = parseInt(pageMax);
         if (pageMax <= 0) {
             pageMax = CONST.PAGE_MAX_DEFAULT;
         }
 
         var ordered = granite.resource.properties[CONST.PROP_ORDERED]
-                || "";
-        
+            || "";
+
         var feedEnabled = granite.resource.properties[CONST.PROP_FEED_ENABLED]
         if (!feedEnabled) {
             feedEnabled = false;
         }
-        
+
         var pageStart = 0;
         if (granite.request.parameters[_getListSpecificParamName(CONST.PARAM_PAGE_START)]) {
             pageStart = parseInt(granite.request.parameters[_getListSpecificParamName(CONST.PARAM_PAGE_START)]);
@@ -191,7 +191,7 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
         if (granite.request.parameters[_getListSpecificParamName(CONST.PARAM_PAGE_MAX)]) {
             pageMax = granite.request.parameters[_getListSpecificParamName(CONST.PARAM_PAGE_MAX)];
         }
-        
+
         var listCfg = {
             source: source,
             query: query,
@@ -204,11 +204,11 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
             pageMax: pageMax,
             feedEnabled: feedEnabled
         };
-        
+
         for (var cfgItem in listCfg) {
             log.debug("List config - " + cfgItem + " = " + listCfg[cfgItem]);
         }
-        
+
         return listCfg;
     };
 
@@ -233,7 +233,7 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
         if (!itemList) {
             return;
         }
-        
+
         var destination = [];
 
         var collectItems = function (allItems, currentIndex, collector, collectPromise) {
@@ -241,17 +241,17 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
                 collectPromise = Q.defer();
                 log.debug("Collecting all " + allItems.length + " result items");
             }
-            
+
             if (!collector) {
                 collector = [];
             }
-            
+
             if (allItems.length == 0) {
                 log.debug("Resolving collection, total " + collector.length + " items");
                 collectPromise.resolve(collector);
                 return collectPromise.promise;
             }
-            
+
             var item = allItems[currentIndex];
             log.debug("Collecting item " + item.path);
             ResourceUtils.getContainingPage(item)
@@ -262,9 +262,9 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
                         .then(function (pageProps) {
                             pageContainingItem.title = pageProps["jcr:title"];
                             pageContainingItem.orderByData = pageProps[listConfig.orderBy];
-                            
+
                             collector.push(pageContainingItem);
-                            
+
                             if (currentIndex + 1 <= allItems.length -1) {
                                 log.debug("Collecting next item in the list");
                                 collectItems(allItems, currentIndex + 1, collector, collectPromise);
@@ -274,10 +274,10 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
                             }
                         });
                 });
-            
+
             return collectPromise.promise;
         };
-        
+
         collectItems(itemList, 0)
             .then(function (fullList) {
                 log.debug("Collected " + fullList.length + " total items for the list");
@@ -303,7 +303,7 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
                     });
                     log.debug("Sorting finished!");
                 }
-                
+
                 var currentIndex = -1;
                 var count = 0;
                 var hasMore = false;
@@ -315,13 +315,13 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
                     if (listConfig.pageStart >= 0 && currentIndex < listConfig.pageStart) {
                         continue;
                     }
-                    
+
                     // stop when reached page maximum
                     if (listConfig.pageMax > 0 && count >= listConfig.pageMax ) {
                         hasMore = true;
                         break;
                     }
-                    
+
                     count++;
                     destination.push({
                         item: fullList[currentIndex],
@@ -330,10 +330,10 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
                         hasimage: _hasImage(fullList[currentIndex])
                     });
                 }
-                
+
                 // apply limit
                 destination = destination.slice(0, listConfig.limit)
-                
+
                 resultPromise.resolve({
                     renderList: destination,
                     hasMore: hasMore
@@ -367,7 +367,7 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
         var prevPageLinkPromise = Q.defer();
         if (listConfig.pageStart > 0) {
             var startPoint = listConfig.pageMax > 0 && listConfig.pageStart > listConfig.pageMax ?
-                    listConfig.pageStart - listConfig.pageMax : 0;
+            listConfig.pageStart - listConfig.pageMax : 0;
 
             var queryString = _getRequestQueryString(_getListSpecificParamName(CONST.PARAM_PAGE_START), startPoint);
             var prevPage = granite.resource.path + ".html?" + queryString;
@@ -376,10 +376,10 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
         } else {
             prevPageLinkPromise.resolve("");
         }
-        
+
         return prevPageLinkPromise.promise;
     };
-    
+
     var _getNextPage = function (listConfig, hasMore) {
         var nextPageLinkPromise = Q.defer();
         if (hasMore) {
@@ -391,17 +391,17 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
         } else {
             nextPageLinkPromise.resolve("");
         }
-        
-        
+
+
         return nextPageLinkPromise.promise;
     }
-    
+
     var _addChildItems = function (listConfig) {
         // get parent path, default to current page
         var resultPromise = Q.defer();
         var parentPath = granite.resource.properties[CONST.PROP_PARENT_PAGE]
-                || granite.resource.path;
-        
+            || granite.resource.path;
+
         log.debug("Listing child items of " + parentPath);
         ResourceUtils.getResource(parentPath)
             .then(function (startResource) {
@@ -416,60 +416,60 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
                             }
                         }
                         _addItems(resultPromise, childList, listConfig, undefined);
-                    });               
+                    });
                 });
             });
-        
+
         return resultPromise.promise;
     };
-    
+
     var _addDescendantItems = function (listConfig) {
         var resultPromise = Q.defer();
-        
+
         if (!global.Packages) {
             console.warn("Did not detect AEM platform, advanced search mode of list component not available!");
         } else {
             var resourceResolver = request.getResourceResolver();
             var session = resourceResolver.adaptTo(global.Packages.javax.jcr.Session);
             var queryBuilder = resourceResolver.adaptTo(global.Packages.com.day.cq.search.QueryBuilder);
-            
+
             var params = {};
             params["path"] = properties.get("path", currentPage.getPath());
             params["type"] = "cq:Page";
-            params["p.offset"] = 0;
-            params["p.limit"] = 500;
-            
+            params["p.offset"] = "0";
+            params["p.limit"] = "500";
+
             var query = queryBuilder.createQuery(global.Packages.com.day.cq.search.PredicateGroup.create(params), session);
-            
+
             if (query) {
                 var searchResult = query.getResult();
                 if (searchResult && searchResult.getHits) {
                     var hitsIterator = searchResult.getHits().iterator();
-                    
+
                     _deferredCollectSearchItems(hitsIterator).then(function (itemList) {
                         _addItems(resultPromise, itemList, listConfig);
                     });
                 }
             }
         }
-        
+
         return resultPromise.promise;
     };
-    
+
     /**
      * Collects search result items returned through an iterator
-     * Returns a promise that will be resolved asynchronous 
+     * Returns a promise that will be resolved asynchronous
      */
     var _deferredCollectSearchItems = function (itemIterator, itemPromise, itemList) {
         if (!itemPromise) {
             itemPromise = Q.defer();
             log.debug("Deferred collecting items from an iterator");
         }
-        
+
         if (!itemList) {
             itemList = [];
         }
-        
+
         if (itemIterator.hasNext()) {
             var resPath = "";
             try {
@@ -486,24 +486,26 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
                 log.error(e);
             }
             log.debug("Deferred collecting item with path " + resPath);
-            granite.resource.resolve(resPath).then(function (hitResource) {
-                itemList.push(hitResource);
-                _deferredCollectSearchItems(itemIterator, itemPromise, itemList);
-            });
+            granite.resource.resolve(resPath).then(
+                function (hitResource) {
+                    itemList.push(hitResource);
+                    _deferredCollectSearchItems(itemIterator, itemPromise, itemList);
+                }
+            );
         } else {
             log.debug("Iterator has no more items, resolving collection with " + itemList.length);
             itemPromise.resolve(itemList);
         }
-        
+
         return itemPromise.promise;
     };
-    
+
     var _addSimpleSearchItems = function (listConfig) {
         var resultPromise = Q.defer();
         if (!global.Packages) {
             console.warn("Did not detect AEM platform, simple search mode of list component not available!");
         }
-        
+
         if (global.Packages) {
             var resourceResolver = resource.getResourceResolver();
             var search = resource.adaptTo(global.Packages.com.day.cq.search.SimpleSearch);
@@ -515,18 +517,18 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
             search.setHitsPerPage(100000);
             var searchResult = search.getResult();
             if (searchResult && searchResult.getHits) {
-                
+
                 var hitsIterator = searchResult.getHits().iterator();
-                
+
                 _deferredCollectSearchItems(hitsIterator).then(function (itemList) {
                     _addItems(resultPromise, itemList, listConfig);
                 });
             }
         }
-        
+
         return resultPromise.promise;
     };
-    
+
     var _addQueryBuilderSearchItems = function (listConfig) {
         var resultPromise = Q.defer();
         if (!global.Packages) {
@@ -541,17 +543,17 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
                 var searchResult = query.getResult();
                 if (searchResult && searchResult.getHits) {
                     var hitsIterator = searchResult.getHits().iterator();
-                    
+
                     _deferredCollectSearchItems(hitsIterator).then(function (itemList) {
                         _addItems(resultPromise, itemList, listConfig);
                     });
                 }
             }
         }
-        
+
         return resultPromise.promise;
     };
-    
+
     var _addTagSearchItems = function (listConfig) {
         var resultPromise = Q.defer();
         if (!global.Packages) {
@@ -559,10 +561,10 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
         } else {
             var parentPath = granite.resource.properties[CONST.PROP_TAG_SEARCH_ROOT]
                 || granite.resource.path;
-            
+
             var tags = granite.resource.properties[CONST.PROP_TAGS]
                 || [];
-            
+
             var matchAny = granite.resource.properties[CONST.PROP_TAGS_MATCH] == "any";
             log.debug("Performing tag search under " + parentPath);
             ResourceUtils.getResource(parentPath).then(function (startResource) {
@@ -573,7 +575,7 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
                         var resourceResolver = resource.getResourceResolver();
                         var tagManager = resourceResolver.adaptTo(global.Packages.com.day.cq.tagging.TagManager);
                         var tagResultsIterator = tagManager.find(startPage.path, tags, matchAny);
-                        
+
                         _deferredCollectSearchItems(tagResultsIterator).then(function (itemList) {
                             _addItems(resultPromise, itemList, listConfig);
                         });
@@ -587,22 +589,22 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
                 });
             });
         }
-        
+
         return resultPromise.promise;
     };
-    
+
     var _addFixedPathsItems = function (resultList, listConfig) {
         var resultPromise = Q.defer();
-        
+
         var pagePaths = granite.resource.properties[CONST.PROP_PAGES]
             || [];
-        
+
         if (typeof pagePaths.length == "function") {
             // got only one string, convert to an array with one item
             var tmp = pagePaths;
             pagePaths = [tmp];
         }
-        
+
         log.debug("Got list with " + pagePaths.length + " fixed page items");
         var iterableArray = {
             store: pagePaths,
@@ -615,19 +617,19 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
                 return this.currentIdx + 1 < this.store.length;
             }
         };
-        
+
         _deferredCollectSearchItems(iterableArray).then(function (itemList) {
             _addItems(resultPromise, itemList, listConfig);
         });
-        
+
         return resultPromise.promise;
     };
-    
+
     var _fetchList = function (listConfig) {
         var renderList = [];
         var resultPromise = {};
         var hasMore = false;
-        
+
         if (listConfig.source == CONST.SOURCE_CHILDREN) {
             log.debug("Building list from child items");
             resultPromise = _addChildItems(listConfig);
@@ -650,13 +652,13 @@ use(["/libs/wcm/foundation/components/utils/AuthoringUtils.js",
             log.debug("Building list from fixed set of items");
             resultPromise = _addFixedPathsItems(renderList, listConfig);
         }
-        
+
         return resultPromise;
     };
-    
+
     var configProps = _initializeProperties();
     var listElement = configProps.ordered == true || configProps.ordered == "true"
-            ? "ol" : "ul";
+        ? "ol" : "ul";
     return _fetchList(configProps).then(function (renderItems) {
         return {
             list: renderItems.renderList,

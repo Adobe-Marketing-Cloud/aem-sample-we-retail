@@ -25,22 +25,24 @@ use(function () {
         , commerceSession = commerceService.login(request, response)
         , productPage = global.pageManager.getContainingPage(granite.resource.path)
         , productPath = productPage.getProperties().get("cq:productMaster", java.lang.String);
-    
+
     var productResource = resolver.getResource(productPath);
-    
+
     if(productResource == null) {
-        return null; 
+        return null;
     }
 
     var baseProduct = commerceService.getProduct(productPath)
         , productData = productResource.adaptTo(org.apache.sling.api.resource.ValueMap)
-        , imageResource = resolver.getResource(productPage.getProperties().get("cq:productMaster", java.lang.String) + "/image")
         , variationAxis = baseProduct.getProperty("cq:productVariantAxes", java.lang.String)
         , variationTitle = baseProduct.getProperty("variationTitle", java.lang.String)
         , variationLead = baseProduct.getProperty("variationLead", java.lang.String)
         , variants = [];
 
-    product.image = imageResource.adaptTo(org.apache.sling.api.resource.ValueMap).get("fileReference", java.lang.String);
+    var imageResource = resolver.getResource(productPage.getProperties().get("cq:productMaster", java.lang.String) + "/image");
+    if (imageResource != null) {
+        product.image = imageResource.adaptTo(org.apache.sling.api.resource.ValueMap).get("fileReference", java.lang.String);
+    }
     product.name = productData.get("jcr:title", java.lang.String);
     product.description = productData.get("jcr:description", java.lang.String);
     product.price = commerceSession.getProductPrice(baseProduct);
