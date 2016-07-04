@@ -2,9 +2,9 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-06-29T14:10:37.357+02:00"
+        cq:lastModified="{Date}2016-07-04T11:35:24.059+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-06-29T14:10:37.591+02:00"
+        cq:lastRolledout="{Date}2016-07-04T11:35:24.297+02:00"
         cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/me/coats/meskwielt"
         cq:tags="[we-retail:activity/skiing,we-retail:gender/men,we-retail:season/winter,we-retail:apparel/coat]"
@@ -15,20 +15,20 @@
         jcr:title="El Gordo Down Jacket"
         sling:resourceType="we-retail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-06-29T14:10:37.321+02:00"
+            cq:lastRolledout="{Date}2016-07-04T11:35:24.083+02:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
-                cq:lastRolledout="{Date}2016-06-29T14:10:37.355+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:24.113+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
-                cq:lastRolledout="{Date}2016-06-29T14:10:37.357+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:24.114+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:lastModified="{Date}2016-04-12T01:19:39.540+02:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -39,14 +39,14 @@
                 variationTitle="Color">
                 <meskwielt_1-xs
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:37.428+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:24.174+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/coats/meskwielt/meskwielt.1/size-xs">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.439+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.181+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:43:02.629-08:00"
                         jcr:lastModifiedBy="admin"
@@ -55,7 +55,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/El Gordo Green.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.439+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.182+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -63,14 +63,14 @@
                 </meskwielt_1-xs>
                 <meskwielt_1-s
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:37.440+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:24.182+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/coats/meskwielt/meskwielt.1/size-s">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.448+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.188+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:43:02.629-08:00"
                         jcr:lastModifiedBy="admin"
@@ -79,7 +79,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/El Gordo Green.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.449+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.189+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -87,14 +87,14 @@
                 </meskwielt_1-s>
                 <meskwielt_1-m
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:37.449+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:24.189+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/coats/meskwielt/meskwielt.1/size-m">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.458+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.196+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:43:02.629-08:00"
                         jcr:lastModifiedBy="admin"
@@ -103,7 +103,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/El Gordo Green.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.458+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.196+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -111,14 +111,14 @@
                 </meskwielt_1-m>
                 <meskwielt_1-l
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:37.459+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:24.197+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/coats/meskwielt/meskwielt.1/size-l">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.467+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.213+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:43:02.629-08:00"
                         jcr:lastModifiedBy="admin"
@@ -127,7 +127,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/El Gordo Green.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.468+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.213+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -135,14 +135,14 @@
                 </meskwielt_1-l>
                 <meskwielt_1-xl
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:37.468+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:24.213+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/coats/meskwielt/meskwielt.1/size-xl">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.477+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.219+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:43:02.629-08:00"
                         jcr:lastModifiedBy="admin"
@@ -151,7 +151,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/El Gordo Green.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.477+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.220+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -159,14 +159,14 @@
                 </meskwielt_1-xl>
                 <meskwielt_2-xs
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:37.478+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:24.220+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/coats/meskwielt/meskwielt.2/size-xs">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.488+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.227+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:43:06.575-08:00"
                         jcr:lastModifiedBy="admin"
@@ -175,7 +175,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/El Gordo Purple.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.488+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.228+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -183,14 +183,14 @@
                 </meskwielt_2-xs>
                 <meskwielt_2-s
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:37.489+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:24.228+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/coats/meskwielt/meskwielt.2/size-s">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.500+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.234+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:43:06.575-08:00"
                         jcr:lastModifiedBy="admin"
@@ -199,7 +199,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/El Gordo Purple.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.500+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.235+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -207,14 +207,14 @@
                 </meskwielt_2-s>
                 <meskwielt_2-m
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:37.501+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:24.235+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/coats/meskwielt/meskwielt.2/size-m">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.512+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.242+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:43:06.575-08:00"
                         jcr:lastModifiedBy="admin"
@@ -223,7 +223,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/El Gordo Purple.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.512+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.242+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -231,14 +231,14 @@
                 </meskwielt_2-m>
                 <meskwielt_2-l
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:37.513+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:24.243+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/coats/meskwielt/meskwielt.2/size-l">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.523+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.250+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:43:06.575-08:00"
                         jcr:lastModifiedBy="admin"
@@ -247,7 +247,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/El Gordo Purple.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.523+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.250+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -255,14 +255,14 @@
                 </meskwielt_2-l>
                 <meskwielt_2-xl
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:37.524+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:24.250+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/coats/meskwielt/meskwielt.2/size-xl">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.534+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.257+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:43:06.575-08:00"
                         jcr:lastModifiedBy="admin"
@@ -271,7 +271,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/El Gordo Purple.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.534+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.257+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -279,14 +279,14 @@
                 </meskwielt_2-xl>
                 <meskwielt_3-xs
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:37.535+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:24.257+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/coats/meskwielt/meskwielt.3/size-xs">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.544+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.264+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:43:10.840-08:00"
                         jcr:lastModifiedBy="admin"
@@ -295,7 +295,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/El Gordo Red.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.544+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.265+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -303,14 +303,14 @@
                 </meskwielt_3-xs>
                 <meskwielt_3-s
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:37.545+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:24.265+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/coats/meskwielt/meskwielt.3/size-s">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.555+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.272+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:43:10.840-08:00"
                         jcr:lastModifiedBy="admin"
@@ -319,7 +319,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/El Gordo Red.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.555+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.273+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -327,14 +327,14 @@
                 </meskwielt_3-s>
                 <meskwielt_3-m
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:37.556+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:24.273+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/coats/meskwielt/meskwielt.3/size-m">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.566+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.280+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:43:10.840-08:00"
                         jcr:lastModifiedBy="admin"
@@ -343,7 +343,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/El Gordo Red.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.566+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.280+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -351,14 +351,14 @@
                 </meskwielt_3-m>
                 <meskwielt_3-l
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:37.567+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:24.280+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/coats/meskwielt/meskwielt.3/size-l">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.576+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.287+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:43:10.840-08:00"
                         jcr:lastModifiedBy="admin"
@@ -367,7 +367,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/El Gordo Red.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.577+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.287+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -375,14 +375,14 @@
                 </meskwielt_3-l>
                 <meskwielt_3-xl
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:37.577+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:24.287+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/coats/meskwielt/meskwielt.3/size-xl">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.587+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.295+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:43:10.840-08:00"
                         jcr:lastModifiedBy="admin"
@@ -391,14 +391,14 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/El Gordo Red.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:37.588+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:24.295+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </meskwielt_3-xl>
                 <image
-                    cq:lastRolledout="{Date}2016-06-29T14:10:37.588+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:24.295+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2016-01-11T16:22:57.295-08:00"
                     jcr:lastModifiedBy="admin"
@@ -407,40 +407,40 @@
                     sling:resourceType="commerce/components/product/image"
                     fileReference="/content/dam/we-retail/en/products/apparel/coats/El Gordo Green.jpg"/>
                 <assets
-                    cq:lastRolledout="{Date}2016-06-29T14:10:37.589+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:24.295+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/assets"/>
             </product>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-06-29T14:10:37.589+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:24.296+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
-                cq:lastRolledout="{Date}2016-06-29T14:10:37.589+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:24.296+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
-                cq:lastRolledout="{Date}2016-06-29T14:10:37.590+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:24.296+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
-                cq:lastRolledout="{Date}2016-06-29T14:10:37.590+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:24.296+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
-                cq:lastRolledout="{Date}2016-06-29T14:10:37.590+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:24.297+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
@@ -451,8 +451,5 @@
             cq:master="/content/catalogs/we-retail/en/website-template-pages/product-page-template"
             cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
             jcr:primaryType="cq:LiveCopy"/>
-        <image
-            jcr:primaryType="nt:unstructured"
-            fileReference="/content/dam/we-retail/en/products/apparel/coats/El Gordo Green.jpg"/>
     </jcr:content>
 </jcr:root>

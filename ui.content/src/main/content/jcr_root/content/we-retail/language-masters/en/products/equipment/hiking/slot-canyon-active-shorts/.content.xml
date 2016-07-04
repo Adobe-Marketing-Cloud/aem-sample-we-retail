@@ -2,9 +2,9 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-06-29T14:10:31.910+02:00"
+        cq:lastModified="{Date}2016-07-04T11:35:19.388+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-06-29T14:10:32.015+02:00"
+        cq:lastRolledout="{Date}2016-07-04T11:35:19.568+02:00"
         cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/me/shorts/mehisusls"
         cq:tags="[we-retail:gender/men,we-retail:apparel/shorts,we-retail:season/summer,we-retail:activity/hiking]"
@@ -15,20 +15,20 @@
         jcr:title="Slot Canyon Active Shorts"
         sling:resourceType="we-retail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-06-29T14:10:31.863+02:00"
+            cq:lastRolledout="{Date}2016-07-04T11:35:19.425+02:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
-                cq:lastRolledout="{Date}2016-06-29T14:10:31.908+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:19.478+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
-                cq:lastRolledout="{Date}2016-06-29T14:10:31.910+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:19.479+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:lastModified="{Date}2016-04-12T01:19:39.338+02:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -37,14 +37,14 @@
                 productData="/etc/commerce/products/we-retail/me/shorts/mehisusls">
                 <mehisusls-xs
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:31.948+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:19.508+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mehisusls/size-xs">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:31.957+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:19.516+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:22:14.147-08:00"
                         jcr:lastModifiedBy="admin"
@@ -53,7 +53,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/shorts/Canyon.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:31.958+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:19.517+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -61,14 +61,14 @@
                 </mehisusls-xs>
                 <mehisusls-s
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:31.958+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:19.517+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mehisusls/size-s">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:31.967+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:19.534+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:22:14.147-08:00"
                         jcr:lastModifiedBy="admin"
@@ -77,7 +77,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/shorts/Canyon.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:31.967+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:19.534+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -85,14 +85,14 @@
                 </mehisusls-s>
                 <mehisusls-m
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:31.968+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:19.534+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mehisusls/size-m">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:31.978+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:19.541+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:22:14.147-08:00"
                         jcr:lastModifiedBy="admin"
@@ -101,7 +101,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/shorts/Canyon.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:31.978+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:19.541+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -109,14 +109,14 @@
                 </mehisusls-m>
                 <mehisusls-l
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:31.979+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:19.542+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mehisusls/size-l">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:31.989+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:19.550+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:22:14.147-08:00"
                         jcr:lastModifiedBy="admin"
@@ -125,7 +125,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/shorts/Canyon.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:31.989+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:19.550+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -133,14 +133,14 @@
                 </mehisusls-l>
                 <mehisusls-xl
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:31.990+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:19.550+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mehisusls/size-xl">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:32.001+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:19.557+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:22:14.147-08:00"
                         jcr:lastModifiedBy="admin"
@@ -149,7 +149,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/shorts/Canyon.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:32.001+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:19.558+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -157,14 +157,14 @@
                 </mehisusls-xl>
                 <mehisusls-xxl
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:32.002+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:19.558+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mehisusls/size-xxl">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:32.011+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:19.565+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:22:14.147-08:00"
                         jcr:lastModifiedBy="admin"
@@ -173,14 +173,14 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/shorts/Canyon.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:32.012+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:19.566+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mehisusls-xxl>
                 <image
-                    cq:lastRolledout="{Date}2016-06-29T14:10:32.012+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:19.566+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2016-01-11T16:22:14.147-08:00"
                     jcr:lastModifiedBy="admin"
@@ -189,40 +189,40 @@
                     sling:resourceType="commerce/components/product/image"
                     fileReference="/content/dam/we-retail/en/products/apparel/shorts/Canyon.jpg"/>
                 <assets
-                    cq:lastRolledout="{Date}2016-06-29T14:10:32.012+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:19.566+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/assets"/>
             </product>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-06-29T14:10:32.013+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:19.567+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
-                cq:lastRolledout="{Date}2016-06-29T14:10:32.013+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:19.567+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
-                cq:lastRolledout="{Date}2016-06-29T14:10:32.013+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:19.567+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
-                cq:lastRolledout="{Date}2016-06-29T14:10:32.014+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:19.568+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
-                cq:lastRolledout="{Date}2016-06-29T14:10:32.014+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:19.568+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
@@ -233,8 +233,5 @@
             cq:master="/content/catalogs/we-retail/en/website-template-pages/product-page-template"
             cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
             jcr:primaryType="cq:LiveCopy"/>
-        <image
-            jcr:primaryType="nt:unstructured"
-            fileReference="/content/dam/we-retail/en/products/apparel/shorts/Canyon.jpg"/>
     </jcr:content>
 </jcr:root>

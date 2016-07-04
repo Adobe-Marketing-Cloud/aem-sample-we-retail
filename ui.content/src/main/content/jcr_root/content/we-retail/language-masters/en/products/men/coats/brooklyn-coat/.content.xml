@@ -2,9 +2,9 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-06-29T14:10:01.328+02:00"
+        cq:lastModified="{Date}2016-07-04T11:34:53.298+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-06-29T14:10:01.427+02:00"
+        cq:lastRolledout="{Date}2016-07-04T11:34:53.427+02:00"
         cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/me/coats/meotwibrt"
         cq:tags="[we-retail:gender/men,we-retail:season/winter,we-retail:activity/others,we-retail:apparel/coat]"
@@ -15,20 +15,20 @@
         jcr:title="Brooklyn Coat"
         sling:resourceType="we-retail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-06-29T14:10:01.281+02:00"
+            cq:lastRolledout="{Date}2016-07-04T11:34:53.320+02:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
-                cq:lastRolledout="{Date}2016-06-29T14:10:01.326+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:53.365+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
-                cq:lastRolledout="{Date}2016-06-29T14:10:01.329+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:53.366+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:lastModified="{Date}2016-04-12T01:19:38.157+02:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -37,14 +37,14 @@
                 productData="/etc/commerce/products/we-retail/me/coats/meotwibrt">
                 <meotwibrt-s
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:01.366+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:53.389+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/coats/meotwibrt/size-s">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:01.379+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:53.396+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:15:31.879-08:00"
                         jcr:lastModifiedBy="admin"
@@ -53,7 +53,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/Brooklyn.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:01.380+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:53.397+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -61,14 +61,14 @@
                 </meotwibrt-s>
                 <meotwibrt-m
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:01.380+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:53.397+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/coats/meotwibrt/size-m">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:01.394+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:53.405+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:15:31.879-08:00"
                         jcr:lastModifiedBy="admin"
@@ -77,7 +77,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/Brooklyn.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:01.394+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:53.405+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -85,14 +85,14 @@
                 </meotwibrt-m>
                 <meotwibrt-l
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:01.395+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:53.406+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/coats/meotwibrt/size-l">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:01.407+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:53.415+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:15:31.879-08:00"
                         jcr:lastModifiedBy="admin"
@@ -101,7 +101,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/Brooklyn.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:01.408+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:53.415+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -109,14 +109,14 @@
                 </meotwibrt-l>
                 <meotwibrt-xl
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:01.409+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:53.416+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/coats/meotwibrt/size-xl">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:01.421+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:53.424+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:15:31.879-08:00"
                         jcr:lastModifiedBy="admin"
@@ -125,14 +125,14 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/Brooklyn.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:01.422+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:53.424+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </meotwibrt-xl>
                 <image
-                    cq:lastRolledout="{Date}2016-06-29T14:10:01.422+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:53.425+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2016-01-11T16:15:31.879-08:00"
                     jcr:lastModifiedBy="admin"
@@ -141,40 +141,40 @@
                     sling:resourceType="commerce/components/product/image"
                     fileReference="/content/dam/we-retail/en/products/apparel/coats/Brooklyn.jpg"/>
                 <assets
-                    cq:lastRolledout="{Date}2016-06-29T14:10:01.423+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:53.425+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/assets"/>
             </product>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-06-29T14:10:01.423+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:53.426+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
-                cq:lastRolledout="{Date}2016-06-29T14:10:01.424+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:53.426+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
-                cq:lastRolledout="{Date}2016-06-29T14:10:01.425+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:53.426+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
-                cq:lastRolledout="{Date}2016-06-29T14:10:01.426+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:53.427+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
-                cq:lastRolledout="{Date}2016-06-29T14:10:01.426+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:53.427+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"

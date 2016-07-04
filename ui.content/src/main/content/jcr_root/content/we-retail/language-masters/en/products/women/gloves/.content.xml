@@ -4,10 +4,10 @@
     <jcr:content
         cq:catalogBlueprint="/content/catalogs/we-retail/en/website-catalog/women/gloves"
         cq:commerceType="section"
-        cq:lastModified="{Date}2016-06-29T14:09:59.203+02:00"
+        cq:lastModified="{Date}2016-07-04T11:34:52.330+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastPropertyRollout="{Date}2016-06-29T14:09:59.203+02:00"
-        cq:lastRolledout="{Date}2016-06-29T14:09:59.280+02:00"
+        cq:lastPropertyRollout="{Date}2016-07-04T11:34:52.330+02:00"
+        cq:lastRolledout="{Date}2016-07-04T11:34:52.358+02:00"
         cq:lastRolledoutBy="admin"
         cq:template="/conf/we-retail/settings/wcm/templates/section-page"
         jcr:mixinTypes="[cq:LiveSync]"
@@ -16,13 +16,13 @@
         sling:resourceType="we-retail/components/structure/page"
         coverImage="/content/dam/we-retail/en/products/apparel/gloves/Gloves.jpg">
         <root
-            cq:lastRolledout="{Date}2016-06-29T14:09:59.226+02:00"
+            cq:lastRolledout="{Date}2016-07-04T11:34:52.337+02:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <product-grid
-                cq:lastRolledout="{Date}2016-06-29T14:09:59.253+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:52.348+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
@@ -33,18 +33,18 @@
                 ordered="{Boolean}true"
                 pageMax="0">
                 <cq:responsive
-                    cq:lastRolledout="{Date}2016-06-29T14:09:59.261+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:52.351+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured">
                     <default
-                        cq:lastRolledout="{Date}2016-06-29T14:09:59.278+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:52.358+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         width="12"/>
                     <phone
-                        cq:lastRolledout="{Date}2016-06-29T14:09:59.278+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:52.358+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -52,7 +52,7 @@
                 </cq:responsive>
             </product-grid>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-06-29T14:09:59.279+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:52.358+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"

@@ -2,9 +2,9 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-06-29T14:09:50.793+02:00"
+        cq:lastModified="{Date}2016-07-04T11:34:46.811+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-06-29T14:09:50.960+02:00"
+        cq:lastRolledout="{Date}2016-07-04T11:34:46.941+02:00"
         cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/wo/coats/woskwislt"
         cq:tags="[we-retail:activity/skiing,we-retail:apparel/coat,we-retail:season/winter,we-retail:gender/women]"
@@ -15,20 +15,20 @@
         jcr:title="Sleek Insulated Coat"
         sling:resourceType="we-retail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-06-29T14:09:50.720+02:00"
+            cq:lastRolledout="{Date}2016-07-04T11:34:46.831+02:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
-                cq:lastRolledout="{Date}2016-06-29T14:09:50.783+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:46.856+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
-                cq:lastRolledout="{Date}2016-06-29T14:09:50.794+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:46.857+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:lastModified="{Date}2016-04-12T01:19:37.655+02:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -37,14 +37,14 @@
                 productData="/etc/commerce/products/we-retail/wo/coats/woskwislt">
                 <woskwislt-xs
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:09:50.865+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:46.888+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/coats/woskwislt/size-xs">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:09:50.884+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:46.900+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-14T15:06:54.823-08:00"
                         jcr:lastModifiedBy="admin"
@@ -53,7 +53,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/Sleek.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:09:50.884+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:46.901+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -61,14 +61,14 @@
                 </woskwislt-xs>
                 <woskwislt-s
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:09:50.885+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:46.901+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/coats/woskwislt/size-s">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:09:50.898+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:46.911+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-14T15:06:54.823-08:00"
                         jcr:lastModifiedBy="admin"
@@ -77,7 +77,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/Sleek.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:09:50.899+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:46.912+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -85,14 +85,14 @@
                 </woskwislt-s>
                 <woskwislt-m
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:09:50.900+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:46.912+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/coats/woskwislt/size-m">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:09:50.917+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:46.919+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-14T15:06:54.823-08:00"
                         jcr:lastModifiedBy="admin"
@@ -101,7 +101,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/Sleek.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:09:50.918+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:46.920+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -109,14 +109,14 @@
                 </woskwislt-m>
                 <woskwislt-l
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:09:50.918+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:46.920+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/coats/woskwislt/size-l">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:09:50.935+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:46.927+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-14T15:06:54.823-08:00"
                         jcr:lastModifiedBy="admin"
@@ -125,7 +125,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/Sleek.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:09:50.937+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:46.927+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -133,14 +133,14 @@
                 </woskwislt-l>
                 <woskwislt-xl
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:09:50.938+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:46.928+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/coats/woskwislt/size-xl">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:09:50.955+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:46.938+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-14T15:06:54.823-08:00"
                         jcr:lastModifiedBy="admin"
@@ -149,14 +149,14 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/coats/Sleek.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:09:50.955+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:46.939+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </woskwislt-xl>
                 <image
-                    cq:lastRolledout="{Date}2016-06-29T14:09:50.956+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:46.939+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2016-01-14T15:06:54.823-08:00"
                     jcr:lastModifiedBy="admin"
@@ -165,40 +165,40 @@
                     sling:resourceType="commerce/components/product/image"
                     fileReference="/content/dam/we-retail/en/products/apparel/coats/Sleek.jpg"/>
                 <assets
-                    cq:lastRolledout="{Date}2016-06-29T14:09:50.956+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:46.939+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/assets"/>
             </product>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-06-29T14:09:50.957+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:46.939+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
-                cq:lastRolledout="{Date}2016-06-29T14:09:50.957+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:46.940+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
-                cq:lastRolledout="{Date}2016-06-29T14:09:50.958+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:46.940+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
-                cq:lastRolledout="{Date}2016-06-29T14:09:50.959+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:46.940+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
-                cq:lastRolledout="{Date}2016-06-29T14:09:50.959+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:46.940+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"

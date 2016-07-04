@@ -2,9 +2,9 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-06-29T14:09:53.205+02:00"
+        cq:lastModified="{Date}2016-07-04T11:34:48.221+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-06-29T14:09:53.329+02:00"
+        cq:lastRolledout="{Date}2016-07-04T11:34:48.391+02:00"
         cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/wo/shirts/wohisurit"
         cq:tags="[we-retail:season/summer,we-retail:activity/hiking,we-retail:apparel/shirt,we-retail:gender/women]"
@@ -15,20 +15,20 @@
         jcr:title="Rios T Shirt"
         sling:resourceType="we-retail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-06-29T14:09:53.166+02:00"
+            cq:lastRolledout="{Date}2016-07-04T11:34:48.240+02:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
-                cq:lastRolledout="{Date}2016-06-29T14:09:53.202+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:48.280+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
-                cq:lastRolledout="{Date}2016-06-29T14:09:53.205+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:48.281+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:lastModified="{Date}2016-04-12T01:19:37.728+02:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -37,14 +37,14 @@
                 productData="/etc/commerce/products/we-retail/wo/shirts/wohisurit">
                 <wohisurit-xxs
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:09:53.249+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:48.316+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shirts/wohisurit/size-xxs">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:09:53.263+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:48.324+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T09:24:22.384-08:00"
                         jcr:lastModifiedBy="admin"
@@ -53,7 +53,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/shirts/Rios.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:09:53.264+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:48.324+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -61,14 +61,14 @@
                 </wohisurit-xxs>
                 <wohisurit-s
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:09:53.264+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:48.325+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shirts/wohisurit/size-s">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:09:53.275+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:48.334+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T09:24:22.384-08:00"
                         jcr:lastModifiedBy="admin"
@@ -77,7 +77,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/shirts/Rios.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:09:53.275+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:48.334+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -85,14 +85,14 @@
                 </wohisurit-s>
                 <wohisurit-m
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:09:53.276+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:48.334+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shirts/wohisurit/size-m">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:09:53.288+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:48.342+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T09:24:22.384-08:00"
                         jcr:lastModifiedBy="admin"
@@ -101,7 +101,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/shirts/Rios.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:09:53.289+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:48.343+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -109,14 +109,14 @@
                 </wohisurit-m>
                 <wohisurit-l
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:09:53.289+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:48.343+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shirts/wohisurit/size-l">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:09:53.300+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:48.355+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T09:24:22.384-08:00"
                         jcr:lastModifiedBy="admin"
@@ -125,7 +125,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/shirts/Rios.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:09:53.301+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:48.356+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -133,14 +133,14 @@
                 </wohisurit-l>
                 <wohisurit-xl
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:09:53.301+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:48.357+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shirts/wohisurit/size-xl">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:09:53.312+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:48.366+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T09:24:22.384-08:00"
                         jcr:lastModifiedBy="admin"
@@ -149,7 +149,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/shirts/Rios.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:09:53.312+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:48.367+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -157,14 +157,14 @@
                 </wohisurit-xl>
                 <wohisurit-xxl
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:09:53.313+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:48.367+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shirts/wohisurit/size-xxl">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:09:53.325+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:48.388+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T09:24:22.384-08:00"
                         jcr:lastModifiedBy="admin"
@@ -173,14 +173,14 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/shirts/Rios.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:09:53.326+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:48.388+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </wohisurit-xxl>
                 <image
-                    cq:lastRolledout="{Date}2016-06-29T14:09:53.326+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:48.389+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2016-01-11T09:24:22.384-08:00"
                     jcr:lastModifiedBy="admin"
@@ -189,40 +189,40 @@
                     sling:resourceType="commerce/components/product/image"
                     fileReference="/content/dam/we-retail/en/products/apparel/shirts/Rios.jpg"/>
                 <assets
-                    cq:lastRolledout="{Date}2016-06-29T14:09:53.327+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:48.389+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/assets"/>
             </product>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-06-29T14:09:53.327+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:48.389+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
-                cq:lastRolledout="{Date}2016-06-29T14:09:53.327+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:48.390+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
-                cq:lastRolledout="{Date}2016-06-29T14:09:53.328+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:48.390+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
-                cq:lastRolledout="{Date}2016-06-29T14:09:53.328+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:48.390+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
-                cq:lastRolledout="{Date}2016-06-29T14:09:53.329+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:48.391+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"

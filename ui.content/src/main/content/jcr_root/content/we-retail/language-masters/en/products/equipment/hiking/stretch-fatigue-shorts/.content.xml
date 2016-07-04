@@ -2,9 +2,9 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-06-29T14:10:31.348+02:00"
+        cq:lastModified="{Date}2016-07-04T11:35:18.886+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-06-29T14:10:31.429+02:00"
+        cq:lastRolledout="{Date}2016-07-04T11:35:18.993+02:00"
         cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/me/shorts/mehisusts"
         cq:tags="[we-retail:gender/men,we-retail:apparel/shorts,we-retail:season/summer,we-retail:activity/hiking]"
@@ -15,20 +15,20 @@
         jcr:title="Stretch Fatigue Shorts"
         sling:resourceType="we-retail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-06-29T14:10:31.302+02:00"
+            cq:lastRolledout="{Date}2016-07-04T11:35:18.915+02:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
-                cq:lastRolledout="{Date}2016-06-29T14:10:31.346+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:18.940+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
-                cq:lastRolledout="{Date}2016-06-29T14:10:31.348+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:18.941+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:lastModified="{Date}2016-04-12T01:19:39.317+02:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -37,14 +37,14 @@
                 productData="/etc/commerce/products/we-retail/me/shorts/mehisusts">
                 <mehisusts-s
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:31.378+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:18.961+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mehisusts/size-s">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:31.388+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:18.968+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:22:27.024-08:00"
                         jcr:lastModifiedBy="admin"
@@ -53,7 +53,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/shorts/Fatigue.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:31.389+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:18.969+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -61,14 +61,14 @@
                 </mehisusts-s>
                 <mehisusts-m
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:31.389+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:18.969+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mehisusts/size-m">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:31.400+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:18.976+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:22:27.024-08:00"
                         jcr:lastModifiedBy="admin"
@@ -77,7 +77,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/shorts/Fatigue.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:31.400+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:18.976+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -85,14 +85,14 @@
                 </mehisusts-m>
                 <mehisusts-l
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:31.401+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:18.977+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mehisusts/size-l">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:31.411+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:18.983+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:22:27.024-08:00"
                         jcr:lastModifiedBy="admin"
@@ -101,7 +101,7 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/shorts/Fatigue.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:31.411+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:18.983+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -109,14 +109,14 @@
                 </mehisusts-l>
                 <mehisusts-xl
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:31.412+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:18.984+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/shorts/mehisusts/size-xl">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:31.426+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:18.990+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:22:27.024-08:00"
                         jcr:lastModifiedBy="admin"
@@ -125,14 +125,14 @@
                         sling:resourceType="commerce/components/product/image"
                         fileReference="/content/dam/we-retail/en/products/apparel/shorts/Fatigue.jpg"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:31.426+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:18.991+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </mehisusts-xl>
                 <image
-                    cq:lastRolledout="{Date}2016-06-29T14:10:31.427+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:18.991+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2016-01-11T16:22:27.024-08:00"
                     jcr:lastModifiedBy="admin"
@@ -141,40 +141,40 @@
                     sling:resourceType="commerce/components/product/image"
                     fileReference="/content/dam/we-retail/en/products/apparel/shorts/Fatigue.jpg"/>
                 <assets
-                    cq:lastRolledout="{Date}2016-06-29T14:10:31.427+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:18.991+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/assets"/>
             </product>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-06-29T14:10:31.427+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:18.992+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
-                cq:lastRolledout="{Date}2016-06-29T14:10:31.428+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:18.992+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
-                cq:lastRolledout="{Date}2016-06-29T14:10:31.428+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:18.992+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
-                cq:lastRolledout="{Date}2016-06-29T14:10:31.428+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:18.993+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
-                cq:lastRolledout="{Date}2016-06-29T14:10:31.429+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:18.993+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
@@ -185,8 +185,5 @@
             cq:master="/content/catalogs/we-retail/en/website-template-pages/product-page-template"
             cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
             jcr:primaryType="cq:LiveCopy"/>
-        <image
-            jcr:primaryType="nt:unstructured"
-            fileReference="/content/dam/we-retail/en/products/apparel/shorts/Fatigue.jpg"/>
     </jcr:content>
 </jcr:root>

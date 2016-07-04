@@ -2,9 +2,9 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-06-29T14:10:13.428+02:00"
+        cq:lastModified="{Date}2016-07-04T11:35:00.804+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-06-29T14:10:13.455+02:00"
+        cq:lastRolledout="{Date}2016-07-04T11:35:00.895+02:00"
         cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/me/scarfs/meotwizuf"
         cq:tags="[we-retail:apparel/scarf,we-retail:gender/men,we-retail:season/winter,we-retail:activity/others]"
@@ -15,20 +15,20 @@
         jcr:title="Zurich Wool Scarf"
         sling:resourceType="we-retail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-06-29T14:10:13.388+02:00"
+            cq:lastRolledout="{Date}2016-07-04T11:35:00.836+02:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
-                cq:lastRolledout="{Date}2016-06-29T14:10:13.426+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:00.869+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
-                cq:lastRolledout="{Date}2016-06-29T14:10:13.428+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:00.871+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:lastModified="{Date}2016-04-12T01:19:38.537+02:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -37,21 +37,21 @@
                 productData="/etc/commerce/products/we-retail/me/scarfs/meotwizuf">
                 <meotwizuf-one-size
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:13.442+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:00.884+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/me/scarfs/meotwizuf/size-one-size">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:13.451+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:00.892+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-11T16:14:13.580-08:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="dam/components/scene7/dynamicmediaimage"
-                        fileReference="/content/dam/we-retail/en/products/apparel/scarfs/zurich"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/we-retail/en/products/apparel/scarfs/source/Zurich.jpg"
                         height="300"
                         jpegQuality="85"
                         unsharpMaskAmount="0"
@@ -59,21 +59,21 @@
                         unsharpMaskThreshold="0"
                         width="300"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:13.452+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:00.893+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/assets"/>
                 </meotwizuf-one-size>
                 <image
-                    cq:lastRolledout="{Date}2016-06-29T14:10:13.452+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:00.893+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:lastModified="{Date}2016-01-11T16:14:13.580-08:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="dam/components/scene7/dynamicmediaimage"
-                    fileReference="/content/dam/we-retail/en/products/apparel/scarfs/zurich"
+                    sling:resourceType="commerce/components/product/image"
+                    fileReference="/content/dam/we-retail/en/products/apparel/scarfs/source/Zurich.jpg"
                     height="300"
                     jpegQuality="85"
                     unsharpMaskAmount="0"
@@ -81,40 +81,40 @@
                     unsharpMaskThreshold="0"
                     width="300"/>
                 <assets
-                    cq:lastRolledout="{Date}2016-06-29T14:10:13.452+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:00.893+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/assets"/>
             </product>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-06-29T14:10:13.453+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:00.894+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
-                cq:lastRolledout="{Date}2016-06-29T14:10:13.453+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:00.894+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
-                cq:lastRolledout="{Date}2016-06-29T14:10:13.453+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:00.894+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
-                cq:lastRolledout="{Date}2016-06-29T14:10:13.454+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:00.894+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
-                cq:lastRolledout="{Date}2016-06-29T14:10:13.454+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:00.895+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
@@ -127,6 +127,6 @@
             jcr:primaryType="cq:LiveCopy"/>
         <image
             jcr:primaryType="nt:unstructured"
-            fileReference=""/>
+            fileReference="/content/dam/we-retail/en/products/apparel/scarfs/source/Zurich.jpg"/>
     </jcr:content>
 </jcr:root>

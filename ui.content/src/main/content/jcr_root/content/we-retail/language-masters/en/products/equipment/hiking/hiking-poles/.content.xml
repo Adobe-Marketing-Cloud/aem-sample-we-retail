@@ -2,9 +2,9 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-06-29T14:10:29.152+02:00"
+        cq:lastModified="{Date}2016-07-04T11:35:16.644+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-06-29T14:10:29.191+02:00"
+        cq:lastRolledout="{Date}2016-07-04T11:35:16.756+02:00"
         cq:lastRolledoutBy="admin"
         cq:productMaster="/etc/commerce/products/we-retail/eq/hiking/hiking_poles"
         cq:tags="[we-retail:activity/hiking,we-retail:equipment]"
@@ -15,20 +15,20 @@
         jcr:title="Hiking Poles"
         sling:resourceType="we-retail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-06-29T14:10:29.114+02:00"
+            cq:lastRolledout="{Date}2016-07-04T11:35:16.677+02:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <breadcrumb
-                cq:lastRolledout="{Date}2016-06-29T14:10:29.150+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:16.717+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/breadcrumb"/>
             <product
                 cq:commerceType="product"
-                cq:lastRolledout="{Date}2016-06-29T14:10:29.152+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:16.719+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:lastModified="{Date}2016-04-12T01:19:39.222+02:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
@@ -37,26 +37,26 @@
                 productData="/etc/commerce/products/we-retail/eq/hiking/hiking_poles">
                 <_x0031_70227049-long
                     cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:10:29.168+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:16.734+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/hiking/hiking_poles/hiking_poles">
                     <image
-                        cq:lastRolledout="{Date}2016-06-29T14:10:29.177+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:16.744+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="we-retail/components/structure/product/image"/>
                     <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:10:29.177+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:16.744+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-12T22:02:08.398-08:00"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured">
                         <asset
-                            cq:lastRolledout="{Date}2016-06-29T14:10:29.182+02:00"
+                            cq:lastRolledout="{Date}2016-07-04T11:35:16.748+02:00"
                             cq:lastRolledoutBy="admin"
                             jcr:lastModified="{Date}2016-01-12T22:02:26.637-08:00"
                             jcr:lastModifiedBy="admin"
@@ -67,18 +67,18 @@
                     </assets>
                 </_x0031_70227049-long>
                 <image
-                    cq:lastRolledout="{Date}2016-06-29T14:10:29.183+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:16.749+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="we-retail/components/structure/product/image"/>
                 <assets
-                    cq:lastRolledout="{Date}2016-06-29T14:10:29.183+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:35:16.749+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured">
                     <asset
-                        cq:lastRolledout="{Date}2016-06-29T14:10:29.188+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:35:16.753+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:lastModified="{Date}2016-01-16T17:18:45.859-05:00"
                         jcr:lastModifiedBy="admin"
@@ -90,33 +90,33 @@
                 </assets>
             </product>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-06-29T14:10:29.189+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:16.754+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
             <reviews_section_title
-                cq:lastRolledout="{Date}2016-06-29T14:10:29.189+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:16.754+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
                 sling:resourceType="we-retail/components/content/title"/>
             <reviews
-                cq:lastRolledout="{Date}2016-06-29T14:10:29.189+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:16.755+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="we-retail/components/structure/product-reviews"/>
             <similar_section_title
-                cq:lastRolledout="{Date}2016-06-29T14:10:29.190+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:16.755+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
                 sling:resourceType="we-retail/components/content/title"/>
             <similar_products
-                cq:lastRolledout="{Date}2016-06-29T14:10:29.190+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:35:16.755+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
@@ -127,8 +127,5 @@
             cq:master="/content/catalogs/we-retail/en/website-template-pages/product-page-template"
             cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
             jcr:primaryType="cq:LiveCopy"/>
-        <image
-            jcr:primaryType="nt:unstructured"
-            fileReference="/content/dam/we-retail/en/products/activities/hiking/170227049.jpg"/>
     </jcr:content>
 </jcr:root>

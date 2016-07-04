@@ -4,10 +4,10 @@
     <jcr:content
         cq:catalogBlueprint="/content/catalogs/we-retail/en/website-catalog/women"
         cq:commerceType="section"
-        cq:lastModified="{Date}2016-06-29T14:09:49.801+02:00"
+        cq:lastModified="{Date}2016-07-04T11:34:46.350+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastPropertyRollout="{Date}2016-06-29T14:09:49.801+02:00"
-        cq:lastRolledout="{Date}2016-06-29T14:09:49.872+02:00"
+        cq:lastPropertyRollout="{Date}2016-07-04T11:34:46.350+02:00"
+        cq:lastRolledout="{Date}2016-07-04T11:34:46.397+02:00"
         cq:lastRolledoutBy="admin"
         cq:template="/conf/we-retail/settings/wcm/templates/section-page"
         jcr:mixinTypes="[cq:LiveSync]"
@@ -16,13 +16,13 @@
         sling:resourceType="we-retail/components/structure/page"
         coverImage="/content/dam/we-retail/en/people/womens/women_6.jpg">
         <root
-            cq:lastRolledout="{Date}2016-06-29T14:09:49.818+02:00"
+            cq:lastRolledout="{Date}2016-07-04T11:34:46.361+02:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <product-grid
-                cq:lastRolledout="{Date}2016-06-29T14:09:49.840+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:46.376+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
@@ -33,18 +33,18 @@
                 ordered="{Boolean}true"
                 pageMax="0">
                 <cq:responsive
-                    cq:lastRolledout="{Date}2016-06-29T14:09:49.850+02:00"
+                    cq:lastRolledout="{Date}2016-07-04T11:34:46.383+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured">
                     <default
-                        cq:lastRolledout="{Date}2016-06-29T14:09:49.870+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:46.395+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         width="12"/>
                     <phone
-                        cq:lastRolledout="{Date}2016-06-29T14:09:49.871+02:00"
+                        cq:lastRolledout="{Date}2016-07-04T11:34:46.396+02:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
@@ -52,7 +52,7 @@
                 </cq:responsive>
             </product-grid>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-06-29T14:09:49.872+02:00"
+                cq:lastRolledout="{Date}2016-07-04T11:34:46.396+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
