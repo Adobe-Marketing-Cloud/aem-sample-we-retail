@@ -33,18 +33,15 @@ use(function () {
     }
 
     var baseProduct = commerceService.getProduct(productPath)
-        , productData = productResource.adaptTo(org.apache.sling.api.resource.ValueMap)
         , variationAxis = baseProduct.getProperty("cq:productVariantAxes", java.lang.String)
         , variationTitle = baseProduct.getProperty("variationTitle", java.lang.String)
         , variationLead = baseProduct.getProperty("variationLead", java.lang.String)
         , variants = [];
 
-    var imageResource = resolver.getResource(productPage.getProperties().get("cq:productMaster", java.lang.String) + "/image");
-    if (imageResource != null) {
-        product.image = imageResource.adaptTo(org.apache.sling.api.resource.ValueMap).get("fileReference", java.lang.String);
-    }
-    product.name = productData.get("jcr:title", java.lang.String);
-    product.description = productData.get("jcr:description", java.lang.String);
+    var imageResource = baseProduct.getImage();
+    product.image = imageResource.adaptTo(org.apache.sling.api.resource.ValueMap).get("fileReference", java.lang.String);
+    product.name = baseProduct.getTitle();
+    product.description = baseProduct.getDescription();
     product.price = commerceSession.getProductPrice(baseProduct);
     product.path = productPage.getPath();
 
