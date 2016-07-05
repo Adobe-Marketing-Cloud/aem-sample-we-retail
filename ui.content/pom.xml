@@ -141,16 +141,12 @@
                             <failOnError>true</failOnError>
                             <failOnMissingEmbed>true</failOnMissingEmbed>
                             <requiresRoot>true</requiresRoot>
-
-
                             <properties>
                                 <acHandling>merge</acHandling>
                                 <description>${project.description}</description>
                                 <createdBy>Adobe Systems Incorporated</createdBy>
                             </properties>
-
                             <filterSource>${basedir}/META-INF/vault/filter.xml</filterSource>
-
                         </configuration>
                     </plugin>
                 </plugins>
