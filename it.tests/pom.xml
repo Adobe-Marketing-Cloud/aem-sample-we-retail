@@ -35,6 +35,12 @@
     <name>We.Retail - Integration Tests Bundles</name>
     <description>Bundles for Integration Tests for We.Retail</description>
 
+    <scm>
+        <connection>scm:git:https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail.git</connection>
+        <developerConnection>scm:git:git@github.com:Adobe-Marketing-Cloud/aem-sample-we-retail.git</developerConnection>
+        <url>https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/tree/master/it.tests</url>
+    </scm>
+
     <properties>
         <junit.version>4.8.2</junit.version>
     </properties>

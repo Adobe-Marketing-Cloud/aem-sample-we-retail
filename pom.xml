@@ -42,6 +42,13 @@
         <vault.password>admin</vault.password>
         <slf4j.version>1.5.11</slf4j.version>
     </properties>
+
+    <scm>
+        <connection>scm:git:https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail.git</connection>
+        <developerConnection>scm:git:git@github.com:Adobe-Marketing-Cloud/aem-sample-we-retail.git</developerConnection>
+        <url>https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail</url>
+    </scm>
+
     <build>
         <plugins>
             <!-- Maven Release Plugin -->

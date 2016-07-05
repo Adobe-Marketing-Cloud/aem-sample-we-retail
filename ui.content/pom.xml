@@ -36,6 +36,12 @@
     <name>We.Retail - UI content</name>
     <description>UI content package for We.Retail</description>
 
+    <scm>
+        <connection>scm:git:https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail.git</connection>
+        <developerConnection>scm:git:git@github.com:Adobe-Marketing-Cloud/aem-sample-we-retail.git</developerConnection>
+        <url>https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/tree/master/ui.content</url>
+    </scm>
+
     <!-- ====================================================================== -->
     <!-- B U I L D D E F I N I T I O N -->
     <!-- ====================================================================== -->

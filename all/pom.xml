@@ -38,6 +38,12 @@
     <name>We.Retail - All</name>
     <description>Combined package for We.Retail</description>
 
+    <scm>
+        <connection>scm:git:https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail.git</connection>
+        <developerConnection>scm:git:git@github.com:Adobe-Marketing-Cloud/aem-sample-we-retail.git</developerConnection>
+        <url>https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/tree/master/all</url>
+    </scm>
+
     <build>
         <plugins>
             <plugin>

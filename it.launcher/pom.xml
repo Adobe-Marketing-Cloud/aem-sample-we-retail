@@ -32,6 +32,12 @@
     <name>We.Retail - Integration Tests Launcher</name>
     <description>Integration Tests Launcher for We.Retail</description>
 
+    <scm>
+        <connection>scm:git:https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail.git</connection>
+        <developerConnection>scm:git:git@github.com:Adobe-Marketing-Cloud/aem-sample-we-retail.git</developerConnection>
+        <url>https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/tree/master/it.launcher</url>
+    </scm>
+
     <!-- 
         To keep the instance under test running and run individual tests
         against it, use:
