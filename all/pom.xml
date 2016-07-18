@@ -99,7 +99,7 @@
                 <dependency>
                     <groupId>com.adobe.aem.sample</groupId>
                     <artifactId>we.retail.commons.content</artifactId>
-                    <version>1.0.0</version>
+                    <version>1.0.1-SNAPSHOT</version>
                     <type>content-package</type>
                     <scope>provided</scope>
                 </dependency>

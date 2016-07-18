@@ -1,7 +1,0 @@
-# Title: Install Gamification Features,,,,,
-# Description: This option configures the scoring and badging rules for We.Retail,,,,,
-# Assigning the scoring and badging rules to the site,,,,,
-Badge,/content/we-retail/community/jcr:content,scoringRules@String[],/etc/community/scoring/rules/forums-scoring|/etc/community/scoring/rules/adv-forums-scoring,badgingRules@String[],/etc/community/badging/rules/forums-badging|/etc/community/badging/rules/adv-forums-badging
-# Assigning a few role based badges,,,,,
-# Republishing the site,,,,,
-SitePublish,/content/we-retail/community/en,,,,
