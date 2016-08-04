@@ -94,7 +94,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <span><i class="we-Icon we-Icon--search"></i>Search anything</span>
+                    <span><i class="we-Icon we-Icon--search"></i>Search anything really</span>
                     <button type="button" class="close" data-dismiss="modal"><span>Close search</span><i class="we-Icon we-Icon--close-alt"></i></button>
                 </div>
                 <div class="modal-body">
@@ -102,10 +102,12 @@
                         <div class="col-md-12">
 							<form data-paths="[/content/usergenerated/asi/mongo/content/we-retail/community/en]" class="scf-js-searchform navbar-form navbar-left" role="search">
 							    <div class="form-group">
-							        <input type="search" name="input_value" placeholder="Start typing..." class="scf-js-search-value we-SearchModal-input">
+									<input type="search" id="scf-js-quicksearch-input-inline" placeholder="Start typing..." data-dropdown="drop_search" aria-controls="drop_search" aria-expanded="false" name="input_value" class="we-SearchModal-input" value="" required="" autocomplete="off">
 							        <input style="display:none" type="checkbox" class="scf-js-search-jcrtitle" value="jcr:title" checked>
 								    <input style="display:none" type="checkbox" class="scf-js-search-jcrdescription" value="jcr:description" checked>
+									<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
 							        <input type="hidden" name="resultPage" class="scf-js-seach-resultPage" value="/content/we-retail/community/en/search"></input>
+									<input type="hidden" name="searchEndpoint" class="scf-js-search-endpoint" value="/content/we-retail/community/en/search/jcr:content/content/primary/searchresult"></input>
 							    </div>
 							</form>
                         </div>
