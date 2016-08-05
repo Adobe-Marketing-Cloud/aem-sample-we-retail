@@ -19,7 +19,8 @@
     <!--/* Include the site client libraries (loading only the JS in the footer, CSS were loaded in the header) */-->
     <sly data-sly-call="${clientlib.js @ categories='we-retail.base'}"/>
     <sly data-sly-test.templateCategories="${wcmInit.templateCategories}" data-sly-call="${clientLib.js @ categories=templateCategories}" />
-
+    <sly data-sly-call="${clientlib.js @ categories='cq.social.scf'}"/>
+    <sly data-sly-call="${clientlib.js @ categories='cq.social.hbs.quicksearch'}"/>
     <!--/* Initialize Cloud Services */-->
     <sly data-sly-resource="${@ resourceType='cq/cloudserviceconfigs/components/servicecomponents'}"/>
     <!--/* Load authoring related client libraries */-->
