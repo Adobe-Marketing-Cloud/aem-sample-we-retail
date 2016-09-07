@@ -45,13 +45,6 @@ To install single package on an AEM instance
 
     mvn clean install -PbuildSinglePackage -PautoInstallSinglePackage
     
-
-### UberJar
-
-This project relies on the unobfuscated AEM 6.2 UberJar. This is not publicly available from http://repo.adobe.com and must be manually downloaded from https://daycare.day.com/home/products/uberjar.html. After downloading the file (_cq-quickstart-6.2.0-apis.jar_), you must install it into your local Maven repository with this command:
-
-    mvn install:install-file -Dfile=cq-quickstart-6.2.0-apis.jar -DgroupId=com.adobe.aem -DartifactId=uber-jar -Dversion=6.2.0 -Dclassifier=apis -Dpackaging=jar
-
 ## Testing
 
 There are three levels of testing contained in the project:
