@@ -13,6 +13,9 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 }}
+{{include this.id path="clientcontext" resourceType="cq/personalization/components/clientcontext"}}
+{{include this.id path="cloudservices" resourceType="cq/cloudserviceconfigs/components/servicecomponents"}}
+{{include this.id path="contexthub" resourceType="granite/contexthub/components/contexthub"}}
 {{includeClientLib categories="we-retail.communities"}}
 <div class="container">
 {{include this.id path="/content/we-retail/language-masters/en" resourceType="we-retail/components/structure/header"}}
@@ -23,5 +26,3 @@
 <div class="scf-js-site-title" data-id="{{siteId}}" href="{{siteUrl}}.html" style="visibility: hidden;"></div>
 {{include this.id path="/content/we-retail/language-masters/en" resourceType="we-retail/components/structure/footer"}}
 </div>
-{{include this.id path="clientcontext" resourceType="cq/personalization/components/clientcontext"}}
-{{include this.id path="cloudservices" resourceType="cq/cloudserviceconfigs/components/servicecomponents"}}

@@ -164,6 +164,7 @@ use(function () {
     	isModerator: currentPage.adaptTo(com.adobe.cq.social.community.api.CommunityContext).checkIfUserIsModerator(resolver.adaptTo(org.apache.jackrabbit.api.security.user.UserManager), resolver.getUserID()),
     	isAnonymous: resolver.getUserID().equals("anonymous"),
     	currentPath: currentPage.getPath(),
+    	userPath: resolver.adaptTo(org.apache.jackrabbit.api.security.user.UserManager).getAuthorizable(resolver.getUserID()).getPath(),
         signInPath: SIGN_IN_PATH,
         signUpPath: SIGN_UP_PATH,
         messagingPath: MESSAGING_PATH,
