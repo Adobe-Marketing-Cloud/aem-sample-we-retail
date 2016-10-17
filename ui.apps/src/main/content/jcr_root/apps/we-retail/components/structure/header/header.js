@@ -25,11 +25,11 @@ use(function () {
 
     var PROP_NAV_ROOT = "navRoot";
 
-    var SIGN_IN_PATH = "/content/we-retail/community/en/signin/j_security_check";
-    var SIGN_UP_PATH = "/content/we-retail/community/en/signup";
-    var NOTIFICATION_PATH = "/content/we-retail/community/en/notifications";
-    var MESSAGING_PATH = "/content/we-retail/community/en/messaging";
-    var PROFILE_PATH = "/content/we-retail/community/en/profile";
+    var SIGN_IN_PATH = "/content/we-retail/us/en/community/signin/j_security_check";
+    var SIGN_UP_PATH = "/content/we-retail/us/en/community/signup";
+    var NOTIFICATION_PATH = "/content/we-retail/us/en/community/notifications";
+    var MESSAGING_PATH = "/content/we-retail/us/en/community/messaging";
+    var PROFILE_PATH = "/content/we-retail/us/en/community/profile";
     
     var items = [];
 

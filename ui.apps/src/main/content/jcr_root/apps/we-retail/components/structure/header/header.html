@@ -25,7 +25,7 @@
                 <li class="we-retail-not-anonymous hidden-header"><a href="${header.messagingPath}.html"><i class="fa fa-envelope-o"></i> Messages <span class="badge">0</span></a></li>
                 <li class="we-retail-not-anonymous hidden-header"><a href="${header.notificationPath}.html"><i class="fa fa-flag-o"></i> Notifications <span class="badge" id="scf-js-notificationsUnreadCount" data-siteurl="/content/we-retail/community/en">0</span></a></li>
                 <li class="we-retail-not-anonymous hidden-header" data-sly-resource="${@ resourceType='we-retail/components/structure/navcart'}"></li>
-                <li class="we-retail-not-anonymous hidden-header" data-sly-test="${header.isModerator}"><a href="/content/we-retail/community/en/moderation.html">Moderation</a></li>
+                <li class="we-retail-not-anonymous hidden-header" data-sly-test="${header.isModerator}"><a href="/content/we-retail/us/en/community/moderation.html">Moderation</a></li>
                 <li class="we-retail-anonymous hidden-header"><a href="#" data-toggle="modal" data-target=".we-SignInModal">Login</a></li>
                 <li class="we-retail-not-anonymous hidden-header"><a href="/system/sling/logout.html?resource=${header.currentPath}.html">Log out</a></li>
             </ul>
@@ -100,14 +100,14 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-12">
-							<form id="form-search-input-inline" data-paths="[/content/usergenerated/asi/mongo/content/we-retail/community/en]" class="scf-js-searchform navbar-form navbar-left" role="search">
+							<form id="form-search-input-inline" data-paths="[/content/usergenerated/asi/mongo/content/we-retail/us/en/community]" class="scf-js-searchform navbar-form navbar-left" role="search">
 							    <div class="scf-quicksearch-form-group form-group">
 									<input type="search" id="scf-js-quicksearch-input-inline" placeholder="Start typing..." data-dropdown="drop_search" aria-controls="drop_search" aria-expanded="false" name="input_value" class="we-SearchModal-input" value="" required="" autocomplete="off">
 							        <input style="display:none" type="checkbox" class="scf-js-search-jcrtitle" value="jcr:title" checked>
 								    <input style="display:none" type="checkbox" class="scf-js-search-jcrdescription" value="jcr:description" checked>
 									<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
-							        <input type="hidden" name="resultPage" class="scf-js-seach-resultPage" value="/content/we-retail/community/en/search"></input>
-									<input type="hidden" name="searchEndpoint" class="scf-js-search-endpoint" value="/content/we-retail/community/en/search/jcr:content/content/primary/searchresult"></input>
+							        <input type="hidden" name="resultPage" class="scf-js-seach-resultPage" value="/content/we-retail/us/en/community/search"></input>
+									<input type="hidden" name="searchEndpoint" class="scf-js-search-endpoint" value="/content/we-retail/us/en/community/search/jcr:content/content/primary/searchresult"></input>
 							    </div>
 							</form>
                         </div>
@@ -136,7 +136,7 @@
                             <button type="submit" class="btn btn-primary btn-action">Login</button>
                         </div>
                         <div class="form-group">
-                            <a href="/content/we-retail/community/en/signin.html" class=""><img src="/etc/designs/we-retail/images/social/socialnetworks.png" alt="Social Login" width="150"></a>
+                            <a href="/content/we-retail/us/en/community/signin.html" class=""><img src="/etc/designs/we-retail/images/social/socialnetworks.png" alt="Social Login" width="150"></a>
                         </div>
                         <div class="form-group">
                             <a href="#" class="">Forgot your password?</a>
@@ -168,15 +168,6 @@
                     <ul class="we-LanguagesList">
                         <li>
                             <i class="we-lang-icon we-lang-icon-us"></i><span><a href="/content/we-retail/us/en.html" class="${language.selected ? 'active' : ''}">English</a></span>
-                        </li>
-                        <li>
-                            <i class="we-lang-icon we-lang-icon-fr"></i><span><a href="/content/we-retail/community/fr/forum.html" class="${language.selected ? 'active' : ''}">French</a></span>
-                        </li>
-                        <li>
-                            <i class="we-lang-icon we-lang-icon-de"></i><span><a href="/content/we-retail/community/de/forum.html" class="${language.selected ? 'active' : ''}">German</a></span>
-                        </li>
-                        <li>
-                            <i class="we-lang-icon we-lang-icon-jp"></i><span><a href="/content/we-retail/community/jp/forum.html" class="${language.selected ? 'active' : ''}">Japanese</a></span>
                         </li>
                     </ul>
                 </div>

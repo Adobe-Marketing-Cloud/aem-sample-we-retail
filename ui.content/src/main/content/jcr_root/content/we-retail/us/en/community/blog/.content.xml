@@ -13,5 +13,5 @@
         sling:redirect="{Boolean}true"
         sling:redirectStatus="{Long}302"
         sling:resourceType="foundation/components/redirect"
-        redirectTarget="/content/we-retail/community/en/blog"/>
+        redirectTarget="/bin/SetupCommunities?contentPath=/etc/community/we-retail&amp;returnURL=/content/we-retail/community/en.html#top"/>
 </jcr:root>
