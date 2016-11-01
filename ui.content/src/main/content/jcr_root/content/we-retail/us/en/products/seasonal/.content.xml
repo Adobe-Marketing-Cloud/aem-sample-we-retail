@@ -3,7 +3,6 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:catalogBlueprint="/content/catalogs/we-retail/en/base-catalog/seasonal"
-        cq:commerceProvider="we-retail"
         cq:commerceType="section"
         cq:lastModified="{Date}2016-03-14T22:19:05.778+01:00"
         cq:lastModifiedBy="admin"
