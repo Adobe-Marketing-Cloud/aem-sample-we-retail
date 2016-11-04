@@ -22,7 +22,7 @@ var global = this;
  */
 use(function () {
 
-    var commerceService = resource.adaptTo(com.adobe.cq.commerce.api.CommerceService);
+    var commerceService = currentPage.getContentResource().adaptTo(com.adobe.cq.commerce.api.CommerceService);
     var session = commerceService.login(request, response);
     var resolver = resource.getResourceResolver();
 
