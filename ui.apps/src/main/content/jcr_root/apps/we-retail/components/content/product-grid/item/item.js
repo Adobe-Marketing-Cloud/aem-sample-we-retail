@@ -39,7 +39,7 @@ use(function () {
         , variants = [];
 
     var imageResource = baseProduct.getAsset();
-    product.image = imageResource.adaptTo(org.apache.sling.api.resource.ValueMap).get("fileReference", java.lang.String);
+    product.image = imageResource.adaptTo(org.apache.sling.api.resource.ValueMap).get("fileReference", java.lang.String) + ".thumb.319.319.png";
     product.name = baseProduct.getTitle();
     product.description = baseProduct.getDescription();
     product.price = commerceSession.getProductPrice(baseProduct);
