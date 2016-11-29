@@ -38,8 +38,8 @@ use(function () {
         , variationLead = baseProduct.getProperty("variationLead", java.lang.String)
         , variants = [];
 
-    var imageResource = baseProduct.getImage();
-    product.image = imageResource.adaptTo(org.apache.sling.api.resource.ValueMap).get("fileReference", java.lang.String);
+    var imageResource = baseProduct.getAsset();
+    product.image = imageResource.adaptTo(org.apache.sling.api.resource.ValueMap).get("fileReference", java.lang.String) + ".thumb.319.319.png";
     product.name = baseProduct.getTitle();
     product.description = baseProduct.getDescription();
     product.price = commerceSession.getProductPrice(baseProduct);
@@ -84,11 +84,7 @@ use(function () {
     return product;
 
     function getProductProperties(product) {
-        var productImage = product.getImage();
-        var productImageResource = null;
-        if (productImage != null) {
-            productImageResource = resolver.getResource(productImage.getPath());
-        }
+        var productImageResource = product.getAsset();
 
         return {
             path: product.getPath(),
