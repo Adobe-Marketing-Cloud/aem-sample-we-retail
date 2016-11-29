@@ -2,7 +2,7 @@
 
 This is an AEM 6.2 reference implementation for the retail industry.
 
-## Modules
+## Modules.
 
 The main parts of the template are:
 
