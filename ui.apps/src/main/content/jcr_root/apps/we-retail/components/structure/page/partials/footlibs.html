@@ -17,7 +17,7 @@
      data-sly-use.wcmInit="/libs/wcm/foundation/components/page/initwcm.js">
 
     <!--/* Include the site client libraries (loading only the JS in the footer, CSS were loaded in the header) */-->
-    <sly data-sly-call="${clientlib.js @ categories='we-retail.base'}"/>
+    <sly data-sly-call="${clientlib.js @ categories='we-retail.base,we-retail.base.addon'}"/>
     <sly data-sly-test.templateCategories="${wcmInit.templateCategories}" data-sly-call="${clientLib.js @ categories=templateCategories}" />
     <sly data-sly-call="${clientlib.js @ categories='cq.social.scf'}"/>
     <sly data-sly-call="${clientlib.js @ categories='cq.social.hbs.quicksearch'}"/>
