@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Paypal"
+        jcr:uuid="05a67369-b2f1-4233-ad93-a688aee10577"
+        sling:resourceType="commerce/components/paymentmethod"
+        predicate="payment">
+        <image
+            jcr:lastModified="{Date}2013-06-11T13:57:19.549+01:00"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/image">
+            <file/>
+        </image>
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+        </par>
+    </jcr:content>
+</jcr:root>

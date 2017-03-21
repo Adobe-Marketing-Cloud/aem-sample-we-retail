@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:template="/libs/cq/personalization/templates/offerlibrary"
         jcr:primaryType="cq:PageContent"
-        jcr:title="we.RETAIL"
+        jcr:title="We.Retail"
         sling:resourceType="cq/personalization/components/offerlibrarypage">
         <par
             jcr:primaryType="nt:unstructured"
@@ -14,4 +14,5 @@
     </jcr:content>
     <home-page-hero/>
     <category-teaser/>
+    <big-spender/>
 </jcr:root>

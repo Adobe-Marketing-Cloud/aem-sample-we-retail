@@ -21,7 +21,7 @@
                 jcr:lastModifiedBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/category-teaser"
+                sling:resourceType="weretail/components/content/categoryteaser"
                 buttonLabel="MEN"
                 buttonLinkTo="/content/we-retail/us/en/men"
                 fileReference="/content/dam/we-retail/en/activities/skiing/skiing-winter.jpg">

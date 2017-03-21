@@ -1,0 +1,120 @@
+<!--/*
+    Copyright 2016 Adobe Systems Incorporated
+  
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+
+<sly data-sly-use.order="we.retail.core.model.OrderModel"
+     data-sly-use.hapiOrder="${'org.apache.sling.hapi.sightly.HApiUse' @type='/apps/public/weretail/hapi_types/order'}"/>
+
+<div class="we-ShoppingOrder"
+     data-sly-attribute="${hapiOrder.itemtype}">
+
+    <div class="we-ShoppingOrder-content" data-sly-attribute="${hapiCart.itemtype}">
+
+        <div class="we-ShoppingOrder-summary">
+            <div>
+                <span class="title">${'Order id' @ i18n}:</span>
+                <span data-sly-attribute="${hapiOrder.itemprop.id}">${order.orderId}</span>
+            </div>
+            <div>
+                <span class="title">${'Order date' @ i18n}:</span> 
+                <span data-sly-attribute="${hapiOrder.itemprop.date}">${'dd MMM, yyyy' @ format=order.orderDate}</span>
+            </div>
+            <div>
+                <span class="title">${'Order status' @ i18n}:</span>
+                <span data-sly-attribute="${hapiOrder.itemprop.status}">${order.orderStatus}</span>
+            </div>
+            <div>
+                <span class="title">${'Shipping address' @ i18n}:</span> 
+                <span data-sly-attribute="${hapiOrder.itemprop.shippingAddress}">${order.shippingAddress}</span>
+            </div>
+            <div>
+                <span class="title">${'Billing address' @ i18n}:</span>
+                <span data-sly-attribute="${hapiOrder.itemprop.billingAddress}">${order.billingAddress}</span>
+            </div>
+        </div>
+
+        <div class="we-ShoppingOrder-entries" data-sly-list.item="${order.entries}">
+            <div class="we-ShoppingOrder-entry"
+                 data-sly-use.hapiOrderEntry="${'org.apache.sling.hapi.sightly.HApiUse' @type=hapiOrder.proptype.entry}"
+                 data-sly-attribute="${hapiOrder.itemprop.entry}">
+
+                <img class="we-ShoppingOrder-image" src="${ item.product.thumbnailUrl }" alt="${item.product.title}"
+                     data-sly-attribute="${hapiOrderEntry.itemprop.asset}"/>
+
+                <div class="we-ShoppingOrder-entryContent">
+                    <div data-sly-use.hapiOrderEntryProduct="${'org.apache.sling.hapi.sightly.HApiUse' @type=hapiOrderEntry.proptype.product}"
+                         data-sly-attribute="${hapiOrderEntry.itemprop.product}">
+
+                        <meta content="${item.entry.product.title}" data-sly-attribute="${ hapiOrderEntryProduct.itemprop.name }" />
+                        <a href="${item.product.pagePath}" data-sly-attribute="${hapiOrderEntryProduct.itemprop.path}">
+                            <strong>${item.product.title}</strong>
+                        </a>
+
+                        <div class="text-muted">
+                            <small data-sly-attribute="${hapiOrderEntryProduct.itemprop.description}">
+                                ${item.product.description}
+                            </small>
+                            <ul class="small we-ShoppingOrder-entryVariants" data-sly-list.key="${item.variantAxesMap}">
+                                <li><span>${key @ i18n}</span>: ${item.variantAxesMap[key]}</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="we-ShoppingOrder-entryPrice">
+                    <span data-sly-attribute="${hapiOrderEntry.itemprop.unitPrice}">${item.price}</span>
+                </div>
+                
+                <div class="we-ShoppingOrder-entryQuantity">
+                    <label class="text-muted">${'Qty' @ i18n}:</label>
+                    <span data-sly-attribute="${hapiOrderEntry.itemprop.quantity}">${item.entry.quantity}</span>
+                </div>
+                
+                <div class="we-ShoppingOrder-entryPrice">
+                    <strong data-sly-attribute="${hapiOrderEntry.itemprop.itemPrice}">${item.totalPrice}</strong>
+                </div>
+
+            </div>
+        </div>
+        <div class="we-ShoppingOrder-promotions" data-sly-test="${order.orderPromotions}">
+            <sly data-sly-repeat.promotion="${order.orderPromotions}">
+                <span class="we-ShoppingCart-promotion">${promotion.message @ context='html'}</span>
+            </sly>
+        </div>
+        
+        <div class="we-ShoppingOrder-prices body"
+        data-sly-use.hapiOrderPrices="${'org.apache.sling.hapi.sightly.HApiUse' @type='/apps/public/weretail/hapi_types/cartprices'}"
+        data-sly-attribute="${hapiOrderPrices.itemtype}">
+            <div class="row">
+                <div class="cell-title">${'Subtotal' @ i18n}</div>
+                <div class="cell-align-right" data-sly-attribute="${hapiOrderPrices.itemprop.subTotal}">${order.subTotal}</div>
+            </div>
+            <div class="row">
+                <div class="cell-title">${'Shipping' @ i18n}</div>
+                <div class="cell-align-right" data-sly-attribute="${hapiOrderPrices.itemprop.shippingTotal}">${order.shippingTotal}</div>
+            </div>
+            <div class="row">
+                <div class="cell-title">${'Tax' @ i18n}</div>
+                <div class="cell-align-right" data-sly-attribute="${hapiOrderPrices.itemprop.taxTotal}">${order.taxTotal}</div>
+            </div>
+            <div class="row">
+                <div class="cell-title border-top">${'Total' @ i18n}</div>
+                <div class="cell-align-right cell-strong border-top" data-sly-attribute="${hapiOrderPrices.itemprop.total}">${order.total}</div>
+        </div>
+    </div>
+        
+    </div>
+</div>

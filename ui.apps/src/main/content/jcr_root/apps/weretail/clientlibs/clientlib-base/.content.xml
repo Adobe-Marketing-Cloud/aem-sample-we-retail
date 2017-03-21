@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:ClientLibraryFolder"
+    allowProxy="{Boolean}true"
+    categories="[we-retail.base]"
+    dependencies="[jquery,jquery-ui]"
+    embed="[granite.shared,cq.shared,cq.underscore,cq.handlebars,cq.backbone,moment,cq.social.scf,cq.jquery.ui,we-retail.bootstrap.js,we-retail.vue,we-retail.site,we-retail.structure,we-retail.components.base,we-retail.lazy-load,core.wcm.components.image.v1,core.wcm.components.breadcrumb.v1,cq.social.console.theme.scfskin,cq.social.author.hbs.quicksearch,core.wcm.components.form.container.v1,core.wcm.components.form.text.v1,core.wcm.components.list.v1]"/>

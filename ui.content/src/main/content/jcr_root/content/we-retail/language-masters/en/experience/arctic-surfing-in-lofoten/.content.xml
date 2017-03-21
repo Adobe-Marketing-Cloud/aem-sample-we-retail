@@ -7,7 +7,7 @@
         cq:template="/conf/we-retail/settings/wcm/templates/experience-page"
         jcr:primaryType="cq:PageContent"
         jcr:title="Arctic Surfing In Lofoten"
-        sling:resourceType="we-retail/components/structure/page">
+        sling:resourceType="weretail/components/structure/page">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
@@ -22,7 +22,7 @@
                     jcr:lastModified="{Date}2016-03-12T22:01:14.328+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/content-fragment"
+                    sling:resourceType="dam/cfm/components/contentfragment"
                     element="main"
                     fileReference="/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/arctic-surfing-in-lofoten"
                     paragraphRange="1-2"
@@ -37,7 +37,7 @@
                             jcr:lastModified="{Date}2016-03-12T22:17:28.188+01:00"
                             jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/image"
+                            sling:resourceType="weretail/components/content/image"
                             fileReference="/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/fjord-waves.jpg">
                             <cq:responsive jcr:primaryType="nt:unstructured">
                                 <default
@@ -57,7 +57,7 @@
                             jcr:lastModified="{Date}2016-03-12T22:26:19.265+01:00"
                             jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/image"
+                            sling:resourceType="weretail/components/content/image"
                             fileReference="/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/surfer-ready-to-go.jpg">
                             <cq:responsive jcr:primaryType="nt:unstructured">
                                 <default
@@ -77,7 +77,7 @@
                             jcr:lastModified="{Date}2016-03-12T22:26:23.767+01:00"
                             jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/image"
+                            sling:resourceType="weretail/components/content/image"
                             fileReference="/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/surfer-wave-02.jpg">
                             <cq:responsive jcr:primaryType="nt:unstructured">
                                 <default
@@ -101,7 +101,7 @@
                             jcr:lastModified="{Date}2016-03-12T22:24:20.553+01:00"
                             jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/image"
+                            sling:resourceType="weretail/components/content/image"
                             fileReference="/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/camp-tent.jpg">
                             <cq:responsive jcr:primaryType="nt:unstructured">
                                 <default
@@ -121,7 +121,7 @@
                             jcr:lastModified="{Date}2016-03-12T22:26:38.819+01:00"
                             jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/image"
+                            sling:resourceType="weretail/components/content/image"
                             fileReference="/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/camp-fire.jpg">
                             <cq:responsive jcr:primaryType="nt:unstructured">
                                 <default
@@ -141,7 +141,7 @@
                             jcr:lastModified="{Date}2016-03-12T22:26:57.104+01:00"
                             jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/image"
+                            sling:resourceType="weretail/components/content/image"
                             fileReference="/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/northern-lights.jpg">
                             <cq:responsive jcr:primaryType="nt:unstructured">
                                 <default
@@ -165,7 +165,7 @@
                             jcr:lastModified="{Date}2016-03-12T22:24:39.850+01:00"
                             jcr:lastModifiedBy="admin"
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="we-retail/components/content/image"
+                            sling:resourceType="weretail/components/content/image"
                             fileReference="/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/majestic-rainbow.jpg">
                             <cq:responsive jcr:primaryType="nt:unstructured">
                                 <default
@@ -183,7 +183,7 @@
                 jcr:lastModified="{Date}2016-03-12T21:10:51.830+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/hero-image"
+                sling:resourceType="weretail/components/content/heroimage"
                 fileReference="/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/surfer-wave-01.jpg"
                 title="Arctic Surfing In Lofoten"
                 useFullWidth="true"/>

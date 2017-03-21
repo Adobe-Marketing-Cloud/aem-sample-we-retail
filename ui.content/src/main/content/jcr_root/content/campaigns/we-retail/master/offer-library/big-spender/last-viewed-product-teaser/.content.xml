@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/libs/cq/personalization/templates/teaser"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Last Viewed Product Teaser"
+        sling:resourceType="cq/personalization/components/teaserpage"
+        location="cart-teaser">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <call-to-action
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="commerce/components/calltoaction/lastviewed"
+                callToAction="Shop Now"
+                defaultProductPagePath="/content/we-retail/us/en/products/men/shirts/eton-short-sleeve-shirt"
+                heading="Free Shipping Promotion"
+                message="Order over $100 and the shipping is on us!"/>
+        </par>
+    </jcr:content>
+</jcr:root>

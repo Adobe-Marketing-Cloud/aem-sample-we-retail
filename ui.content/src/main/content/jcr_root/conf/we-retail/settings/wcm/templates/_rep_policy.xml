@@ -5,15 +5,15 @@
         jcr:primaryType="rep:GrantACE"
         rep:principalName="everyone"
         rep:privileges="{Name}[jcr:read]"/>
-    <allow0
+    <allow1
         jcr:primaryType="rep:GrantACE"
         rep:principalName="content-authors"
         rep:privileges="{Name}[crx:replicate]"/>
-    <allow1
+    <allow2
         jcr:primaryType="rep:GrantACE"
         rep:principalName="template-authors"
-        rep:privileges="{Name}[jcr:versionManagement,crx:replicate,jcr:lockManagement,rep:write]"/>
-    <allow2
+        rep:privileges="{Name}[jcr:versionManagement,crx:replicate,rep:write,jcr:lockManagement]"/>
+    <allow3
         jcr:primaryType="rep:GrantACE"
         rep:principalName="version-manager-service"
         rep:privileges="{Name}[jcr:versionManagement,rep:write]"/>

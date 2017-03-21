@@ -13,7 +13,7 @@
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Fleet Fox Running Shorts"
-        sling:resourceType="we-retail/components/structure/page">
+        sling:resourceType="weretail/components/structure/page">
         <root
             cq:lastRolledout="{Date}2016-07-04T11:34:50.836+02:00"
             cq:lastRolledoutBy="admin"
@@ -25,7 +25,7 @@
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/structure/breadcrumb"/>
+                sling:resourceType="weretail/components/content/breadcrumb"/>
             <product
                 cq:commerceType="product"
                 cq:lastRolledout="{Date}2016-07-04T11:34:50.875+02:00"
@@ -33,7 +33,7 @@
                 jcr:lastModified="{Date}2016-04-12T01:19:37.884+02:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/structure/product"
+                sling:resourceType="weretail/components/structure/product"
                 productData="/etc/commerce/products/we-retail/wo/shorts/wohisufls">
                 <wohisufls-xs
                     cq:commerceType="variant"
@@ -41,7 +41,7 @@
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
+                    sling:resourceType="weretail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shorts/wohisufls/size-xs">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:34:50.910+02:00"
@@ -57,7 +57,7 @@
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                        sling:resourceType="weretail/components/structure/product/assets"/>
                 </wohisufls-xs>
                 <wohisufls-s
                     cq:commerceType="variant"
@@ -65,7 +65,7 @@
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
+                    sling:resourceType="weretail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shorts/wohisufls/size-s">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:34:50.919+02:00"
@@ -81,7 +81,7 @@
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                        sling:resourceType="weretail/components/structure/product/assets"/>
                 </wohisufls-s>
                 <wohisufls-m
                     cq:commerceType="variant"
@@ -89,7 +89,7 @@
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
+                    sling:resourceType="weretail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shorts/wohisufls/size-m">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:34:50.927+02:00"
@@ -105,7 +105,7 @@
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                        sling:resourceType="weretail/components/structure/product/assets"/>
                 </wohisufls-m>
                 <wohisufls-l
                     cq:commerceType="variant"
@@ -113,7 +113,7 @@
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
+                    sling:resourceType="weretail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shorts/wohisufls/size-l">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:34:50.936+02:00"
@@ -129,7 +129,7 @@
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                        sling:resourceType="weretail/components/structure/product/assets"/>
                 </wohisufls-l>
                 <wohisufls-xl
                     cq:commerceType="variant"
@@ -137,7 +137,7 @@
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
+                    sling:resourceType="weretail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/wo/shorts/wohisufls/size-xl">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:34:50.944+02:00"
@@ -153,7 +153,7 @@
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                        sling:resourceType="weretail/components/structure/product/assets"/>
                 </wohisufls-xl>
                 <image
                     cq:lastRolledout="{Date}2016-07-04T11:34:50.945+02:00"
@@ -169,7 +169,7 @@
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product/assets"/>
+                    sling:resourceType="weretail/components/structure/product/assets"/>
             </product>
             <responsivegrid
                 cq:lastRolledout="{Date}2016-07-04T11:34:50.956+02:00"
@@ -183,26 +183,26 @@
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
-                sling:resourceType="we-retail/components/content/title"/>
+                sling:resourceType="weretail/components/content/title"/>
             <reviews
                 cq:lastRolledout="{Date}2016-07-04T11:34:50.957+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/structure/product-reviews"/>
+                sling:resourceType="weretail/components/structure/productreviews"/>
             <similar_section_title
                 cq:lastRolledout="{Date}2016-07-04T11:34:50.957+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
-                sling:resourceType="we-retail/components/content/title"/>
+                sling:resourceType="weretail/components/content/title"/>
             <similar_products
                 cq:lastRolledout="{Date}2016-07-04T11:34:50.957+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/structure/product-recommendation"/>
+                sling:resourceType="weretail/components/structure/productrecommendation"/>
         </root>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2016-12-05T12:07:12.801+01:00"
+        cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2017-01-23T21:48:05.430+01:00"
+        cq:lastRolledoutBy="admin"
+        cq:template="/conf/we-retail/settings/wcm/templates/content-page"
+        jcr:mixinTypes="[cq:LiveRelationship]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Thank you"
+        sling:resourceType="weretail/components/structure/page">
+        <root
+            cq:lastRolledout="{Date}2016-12-05T12:07:12.776+01:00"
+            cq:lastRolledoutBy="admin"
+            jcr:mixinTypes="[cq:LiveRelationship]"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                cq:lastRolledout="{Date}2016-12-05T12:07:12.780+01:00"
+                cq:lastRolledoutBy="admin"
+                jcr:created="{Date}2016-09-20T20:35:34.244+02:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-12-05T12:07:12.778+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <title
+                    cq:lastRolledout="{Date}2016-12-05T12:07:12.788+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:created="{Date}2016-11-11T11:44:36.202+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-12-05T12:07:12.786+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="THANK YOU !"
+                    sling:resourceType="weretail/components/content/title"
+                    type="h2"/>
+                <subtitle
+                    cq:lastRolledout="{Date}2016-12-05T12:07:12.791+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:created="{Date}2016-11-11T11:46:13.280+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-12-05T12:07:12.789+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Your order is being processed."
+                    sling:resourceType="weretail/components/content/title"
+                    type="h4"/>
+                <orderid
+                    cq:lastRolledout="{Date}2016-12-05T12:07:12.796+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:created="{Date}2013-05-24T18:42:54.646+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-12-05T12:07:12.793+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title=" "
+                    sling:resourceType="commerce/components/orderid"
+                    columns="[orderPlacedFormatted=Date,#summary=Summary,price=Price,orderStatus=Status]"
+                    detailsPagePath="/content/we-retail/us/en/user/account/order-history/order-details"
+                    label="Order No."/>
+                <text
+                    cq:lastRolledout="{Date}2016-12-05T12:07:12.799+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:lastModified="{Date}2016-12-05T12:07:12.797+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="weretail/components/content/text"
+                    text="&lt;p style=&quot;text-align: center;&quot;>&amp;nbsp;&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>We are processing your order and a confirmation email has been sent to your email address.&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>Please check your inbox for further details on shipping and contacts.&lt;/p>&#xa;&lt;p style=&quot;text-align: center;&quot;>If you have any problem or question, you can email us and we will promptly see what we can do to help you out.&lt;/p>&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xa;"
+                    textIsRich="true"/>
+                <button
+                    cq:lastRolledout="{Date}2016-12-05T12:07:12.802+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:created="{Date}2016-03-14T21:41:39.706+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2016-12-05T12:07:12.800+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="weretail/components/content/button"
+                    label="Back to We.Retail"
+                    linkTo="/content/we-retail/us/en"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+</jcr:root>

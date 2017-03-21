@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:lastModified="{Date}2016-10-28T10:24:23.847+05:30"
+    jcr:lastModifiedBy="admin"
+    jcr:mixinTypes="[cq:Project,mix:created,mix:lastModified,rep:AccessControllable]"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/projects/admin/card/projectcard"
+    role_editor="projects-we_retail-editor"
+    role_observer="projects-we_retail"
+    role_owner="projects-we_retail-owner">
+    <jcr:content
+        cq:template="/libs/cq/core/content/projects/templates/default"
+        jcr:description="Reference Implementation"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="We.Retail"
+        sling:resourceType="cq/gui/components/projects/admin/card/projectcontent"
+        active="{Boolean}true"
+        coverUrl="/content/dam/projects/we-retail/cover"
+        damFolderPath="/content/dam/projects/we-retail"
+        detailsHref="/projects/details.html"
+        taskid=""
+        user="">
+        <links jcr:primaryType="nt:unstructured"/>
+        <dashboard jcr:primaryType="nt:unstructured">
+            <gadgets jcr:primaryType="nt:unstructured">
+                <projectinfo
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Project Info"
+                    sling:resourceType="cq/gui/components/projects/admin/pod/projectinfopod"
+                    cardWeight="100"/>
+                <team
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Team"
+                    sling:resourceType="cq/gui/components/projects/admin/pod/teampod"
+                    cardWeight="60"/>
+                <experiences
+                    jcr:lastModified="{Date}2016-10-28T10:26:53.546+05:30"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Experiences"
+                    sling:resourceType="cq/gui/components/projects/admin/pod/channelpod"
+                    cardWeight="90">
+                    <Site
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Site"
+                        sling:resourceType="cq/gui/components/projects/admin/card/linkcard"
+                        class="card-page"
+                        consolePath="/sites.html"
+                        name="websites"
+                        projectPath="/content/projects/we-retail"
+                        suffix="/content/we-retail"
+                        wizard="/etc/projects/dashboard/gadgets/experiences/site"
+                        wizard_x0040_Delete=""/>
+                </experiences>
+                <asset
+                    jcr:description="Assets Tile"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Assets"
+                    sling:resourceType="cq/gui/components/projects/admin/pod/assetpod"
+                    assetPath="/content/dam/we-retail/en"
+                    cardWeight="90"/>
+                <work
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Workflows"
+                    sling:resourceType="cq/gui/components/projects/admin/pod/workpod"
+                    cardWeight="80"/>
+            </gadgets>
+        </dashboard>
+    </jcr:content>
+    <rep:policy/>
+</jcr:root>

@@ -13,7 +13,7 @@
         jcr:mixinTypes="[cq:LiveRelationship]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Hiking Poles"
-        sling:resourceType="we-retail/components/structure/page">
+        sling:resourceType="weretail/components/structure/page">
         <root
             cq:lastRolledout="{Date}2016-06-29T14:21:00.292+02:00"
             cq:lastRolledoutBy="admin"
@@ -25,7 +25,7 @@
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/structure/breadcrumb"/>
+                sling:resourceType="weretail/components/content/breadcrumb"/>
             <product
                 cq:commerceType="product"
                 cq:lastRolledout="{Date}2016-06-29T14:21:00.326+02:00"
@@ -33,50 +33,21 @@
                 jcr:lastModified="{Date}2016-04-12T01:19:39.222+02:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/structure/product"
+                sling:resourceType="weretail/components/structure/product"
                 productData="/etc/commerce/products/we-retail/eq/hiking/hiking_poles">
-                <_x0031_70227049-long
-                    cq:commerceType="variant"
-                    cq:lastRolledout="{Date}2016-06-29T14:21:00.350+02:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/hiking/hiking_poles/hiking_poles">
-                    <image
-                        cq:lastRolledout="{Date}2016-06-29T14:21:00.359+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/image"/>
-                    <assets
-                        cq:lastRolledout="{Date}2016-06-29T14:21:00.361+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:lastModified="{Date}2016-01-12T22:02:08.398-08:00"
-                        jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured">
-                        <asset
-                            cq:lastRolledout="{Date}2016-06-29T14:21:00.367+02:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:lastModified="{Date}2016-01-12T22:02:26.637-08:00"
-                            jcr:lastModifiedBy="admin"
-                            jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="commerce/components/product/image"
-                            fileReference="/content/dam/nrf/170227049.jpg"/>
-                    </assets>
-                </_x0031_70227049-long>
                 <image
                     cq:lastRolledout="{Date}2016-06-29T14:21:00.369+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product/image"/>
+                    sling:resourceType="commerce/components/product/image"
+                    fileReference="/content/dam/we-retail/en/products/activities/hiking/170227049.jpg"/>
                 <assets
                     cq:lastRolledout="{Date}2016-06-29T14:21:00.370+02:00"
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured">
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="weretail/components/structure/product/assets">
                     <asset
                         cq:lastRolledout="{Date}2016-06-29T14:21:00.376+02:00"
                         cq:lastRolledoutBy="admin"
@@ -101,26 +72,26 @@
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
-                sling:resourceType="we-retail/components/content/title"/>
+                sling:resourceType="weretail/components/content/title"/>
             <reviews
                 cq:lastRolledout="{Date}2016-06-29T14:21:00.383+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/structure/product-reviews"/>
+                sling:resourceType="weretail/components/structure/productreviews"/>
             <similar_section_title
                 cq:lastRolledout="{Date}2016-06-29T14:21:00.385+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
-                sling:resourceType="we-retail/components/content/title"/>
+                sling:resourceType="weretail/components/content/title"/>
             <similar_products
                 cq:lastRolledout="{Date}2016-06-29T14:21:00.387+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/structure/product-recommendation"/>
+                sling:resourceType="weretail/components/structure/productrecommendation"/>
         </root>
         <image
             cq:lastRolledout="{Date}2016-06-29T14:21:00.390+02:00"

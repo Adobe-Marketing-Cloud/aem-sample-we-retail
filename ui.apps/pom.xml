@@ -21,9 +21,9 @@
     <!-- P A R E N T  P R O J E C T  D E S C R I P T I O N                      -->
     <!-- ====================================================================== -->
     <parent>
-        <groupId>we</groupId>
+        <groupId>com.adobe.cq.sample</groupId>
         <artifactId>we.retail</artifactId>
-        <version>1.0.1-SNAPSHOT</version>
+        <version>2.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -119,28 +119,44 @@
                     <verbose>true</verbose>
                     <failOnError>true</failOnError>
                     <group>adobe/aem6/sample</group>
-                    <embeddeds>
-                        <embedded>
-                            <groupId>we</groupId>
-                            <artifactId>we.retail.core</artifactId>
-                            <target>/apps/we-retail/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>com.adobe.aem.demomachine</groupId>
-                            <artifactId>core</artifactId>
-                            <target>/apps/we-retail/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>commons-cli</groupId>
-                            <artifactId>commons-cli</artifactId>
-                            <target>/apps/we-retail/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>org.apache.commons</groupId>
-                            <artifactId>commons-csv</artifactId>
-                            <target>/apps/we-retail/install</target>
-                        </embedded>
-                    </embeddeds>
+                    <properties>
+                        <acHandling>merge_preserve</acHandling>
+                    </properties>
+                    <failOnMissingEmbed>true</failOnMissingEmbed>
+                    <dependencies>
+                        <dependency>
+                            <group>day/cq60/product</group>
+                            <name>cq-content</name>
+                            <version>[6.3.0,)</version>
+                        </dependency>
+                        <dependency>
+                            <group>day/cq60/product</group>
+                            <name>cq-foundation-content</name>
+                            <version>[1.3.0,)</version>
+                        </dependency>
+                        <dependency>
+                            <group>day/cq60/product</group>
+                            <name>cq-commerce-content</name>
+                            <version>[1.5.0,)</version>
+                        </dependency>
+                        <dependency>
+                            <group>day/cq60/product</group>
+                            <name>cq-cloudservices-content</name>
+                            <version>[1.3.0,)</version>
+                        </dependency>
+                        <dependency>
+                            <group>day/cq60/product</group>
+                            <name>cq-integration-dtm-content</name>
+                            <version>[1.1.4,)</version>
+                        </dependency>
+                    </dependencies>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>htl-maven-plugin</artifactId>
+                <configuration>
+                    <sourceDirectory>src/main/content/jcr_root</sourceDirectory>
                 </configuration>
             </plugin>
         </plugins>
@@ -166,13 +182,12 @@
                                 <goals>
                                     <goal>install</goal>
                                 </goals>
+                                <configuration>
+                                    <targetURL>http://${aem.host}:${aem.port}${aem.contextPath}/crx/packmgr/service.jsp</targetURL>
+                                    <failOnError>true</failOnError>
+                                </configuration>
                             </execution>
                         </executions>
-                        <configuration>
-                            <targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
-                            <failOnError>true</failOnError>
-                            <failOnMissingEmbed>true</failOnMissingEmbed>
-                        </configuration>
                      </plugin>
                  </plugins>
             </build>
@@ -189,17 +204,16 @@
                         <artifactId>content-package-maven-plugin</artifactId>
                         <executions>
                             <execution>
-                                <id>install-package</id>
+                                <id>install-package-publish</id>
                                 <goals>
                                     <goal>install</goal>
                                 </goals>
+                                <configuration>
+                                    <targetURL>http://${aem.publish.host}:${aem.publish.port}${aem.contextPath}/crx/packmgr/service.jsp</targetURL>
+                                    <failOnError>true</failOnError>
+                                </configuration>
                             </execution>
                         </executions>
-                        <configuration>
-                            <targetURL>http://${aem.publish.host}:${aem.publish.port}/crx/packmgr/service.jsp</targetURL>
-                            <failOnError>true</failOnError>
-                            <failOnMissingEmbed>true</failOnMissingEmbed>
-                        </configuration>
                      </plugin>
                  </plugins>
             </build>
@@ -211,13 +225,8 @@
     <!-- ====================================================================== -->
     <dependencies>
         <dependency>
-            <groupId>we</groupId>
-            <artifactId>we.retail.core</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.adobe.aem</groupId>
-            <artifactId>uber-jar</artifactId>
+            <groupId>com.day.cq</groupId>
+            <artifactId>cq-quickstart-beta</artifactId>
             <classifier>apis</classifier>
         </dependency>
         <dependency>
@@ -234,19 +243,12 @@
             <artifactId>cq-wcm-taglib</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.apache.commons</groupId>
-            <artifactId>commons-csv</artifactId>
-            <version>1.1</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-cli</groupId>
-            <artifactId>commons-cli</artifactId>
-            <version>1.2</version>
-        </dependency>
-        <dependency>
-            <groupId>com.adobe.aem.demomachine</groupId>
-            <artifactId>core</artifactId>
-            <version>0.1.25</version>
+            <artifactId>commons-lang3</artifactId>
         </dependency>
     </dependencies>
 </project>

@@ -7,7 +7,7 @@
         cq:template="/conf/we-retail/settings/wcm/templates/hero-page"
         jcr:primaryType="cq:PageContent"
         jcr:title="About Us"
-        sling:resourceType="we-retail/components/structure/page">
+        sling:resourceType="weretail/components/structure/page">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
@@ -17,7 +17,7 @@
                 jcr:lastModified="{Date}2016-03-13T11:20:37.776+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/hero-image"
+                sling:resourceType="weretail/components/content/heroimage"
                 fileReference="/content/dam/we-retail/en/activities/hiking-camping/trekker-ama-dablam.jpg"
                 useFullWidth="true"/>
             <responsivegrid

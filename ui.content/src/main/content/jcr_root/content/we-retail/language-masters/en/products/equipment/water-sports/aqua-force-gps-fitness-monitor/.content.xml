@@ -13,7 +13,7 @@
         jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Aqua Force GPS Fitness Monitor"
-        sling:resourceType="we-retail/components/structure/page">
+        sling:resourceType="weretail/components/structure/page">
         <root
             cq:lastRolledout="{Date}2016-07-04T11:35:11.246+02:00"
             cq:lastRolledoutBy="admin"
@@ -25,7 +25,7 @@
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/structure/breadcrumb"/>
+                sling:resourceType="weretail/components/content/breadcrumb"/>
             <product
                 cq:commerceType="product"
                 cq:lastRolledout="{Date}2016-07-04T11:35:11.278+02:00"
@@ -33,7 +33,7 @@
                 jcr:lastModified="{Date}2016-04-12T01:19:39.019+02:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/structure/product"
+                sling:resourceType="weretail/components/structure/product"
                 productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsuaqr">
                 <eqswsuaqr-one-size
                     cq:commerceType="variant"
@@ -41,7 +41,7 @@
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
+                    sling:resourceType="weretail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsuaqr/size-one-size">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:35:11.297+02:00"
@@ -57,7 +57,7 @@
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                        sling:resourceType="weretail/components/structure/product/assets"/>
                 </eqswsuaqr-one-size>
                 <image
                     cq:lastRolledout="{Date}2016-07-04T11:35:11.298+02:00"
@@ -73,7 +73,7 @@
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product/assets"/>
+                    sling:resourceType="weretail/components/structure/product/assets"/>
             </product>
             <responsivegrid
                 cq:lastRolledout="{Date}2016-07-04T11:35:11.298+02:00"
@@ -87,26 +87,26 @@
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
-                sling:resourceType="we-retail/components/content/title"/>
+                sling:resourceType="weretail/components/content/title"/>
             <reviews
                 cq:lastRolledout="{Date}2016-07-04T11:35:11.299+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/structure/product-reviews"/>
+                sling:resourceType="weretail/components/structure/productreviews"/>
             <similar_section_title
                 cq:lastRolledout="{Date}2016-07-04T11:35:11.299+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
-                sling:resourceType="we-retail/components/content/title"/>
+                sling:resourceType="weretail/components/content/title"/>
             <similar_products
                 cq:lastRolledout="{Date}2016-07-04T11:35:11.300+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/structure/product-recommendation"/>
+                sling:resourceType="weretail/components/structure/productrecommendation"/>
         </root>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"

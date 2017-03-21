@@ -7,7 +7,7 @@
         cq:template="/conf/we-retail/settings/wcm/templates/hero-page"
         jcr:primaryType="cq:PageContent"
         jcr:title="Women"
-        sling:resourceType="we-retail/components/structure/page">
+        sling:resourceType="weretail/components/structure/page">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
@@ -17,7 +17,7 @@
                 jcr:lastModified="{Date}2016-03-13T23:10:21.791+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/hero-image"
+                sling:resourceType="weretail/components/content/heroimage"
                 fileReference="/content/dam/we-retail/en/activities/running/fitness-woman.jpg"
                 useFullWidth="true"/>
             <responsivegrid
@@ -34,21 +34,22 @@
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Featured products"
-                    sling:resourceType="we-retail/components/content/title"/>
+                    sling:resourceType="weretail/components/content/title"
+                    type="h2"/>
                 <product_grid
                     jcr:created="{Date}2016-03-13T22:39:31.722+01:00"
                     jcr:createdBy="admin"
                     jcr:lastModified="{Date}2016-03-13T22:49:58.120+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product-grid"
+                    sling:resourceType="weretail/components/content/productgrid"
                     displayAs="products"
                     feedEnabled="{Boolean}true"
                     limit="6"
                     listFrom="static"
                     orderBy="jcr:title"
                     pageMax="0"
-                    pages="[/content/we-retail/language-masters/en/products/women/shorts/fiji-sport,/content/we-retail/language-masters/en/products/women/shirts/palau-summer,/content/we-retail/language-masters/en/products/women/shirts/bora-bora,/content/we-retail/language-masters/en/products/women/shorts/tahiti-summer,/content/we-retail/language-masters/en/products/women/shirts/tupai-summer,/content/we-retail/language-masters/en/products/women/shirts/maui-marine]"
+                    pages="[/content/we-retail/language-masters/en/products/women/shorts/bahamas-shorts,/content/we-retail/language-masters/en/products/women/pants/hiking-pants,/content/we-retail/language-masters/en/products/women/shirts/devi-sleeveless-shirt,/content/we-retail/language-masters/en/products/women/shorts/candide-trail-short,/content/we-retail/language-masters/en/products/women/shorts/fleet-fox-running-shorts,/content/we-retail/language-masters/en/products/women/shirts/soleil-tunic]"
                     tagsMatch="any"/>
                 <button
                     jcr:created="{Date}2016-03-14T21:42:23.084+01:00"
@@ -56,7 +57,7 @@
                     jcr:lastModified="{Date}2016-03-14T21:42:43.337+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/button"
+                    sling:resourceType="weretail/components/content/button"
                     label="All women's products"
                     linkTo="/content/we-retail/language-masters/en/products/women"/>
                 <category_teaser
@@ -65,7 +66,7 @@
                     jcr:lastModified="{Date}2016-03-13T23:18:56.362+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/category-teaser"
+                    sling:resourceType="weretail/components/content/categoryteaser"
                     buttonLabel="Our strongest clothes"
                     buttonLinkTo="/content/we-retail/language-masters/en/products/women/shirts"
                     fileReference="/content/dam/we-retail/en/activities/climbing/kalymnos-island-female.jpg"
@@ -82,7 +83,7 @@
                     jcr:lastModified="{Date}2016-03-13T23:19:55.203+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/category-teaser"
+                    sling:resourceType="weretail/components/content/categoryteaser"
                     buttonLabel="Our warmest jackets"
                     buttonLinkTo="/content/we-retail/language-masters/en/products/women/coats"
                     fileReference="/content/dam/we-retail/en/activities/running/running-desert-woman.jpg"
@@ -100,14 +101,15 @@
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Girls' top stories"
-                    sling:resourceType="we-retail/components/content/title"/>
+                    sling:resourceType="weretail/components/content/title"
+                    type="h2"/>
                 <articles_list
                     jcr:created="{Date}2016-03-13T23:23:11.175+01:00"
                     jcr:createdBy="admin"
                     jcr:lastModified="{Date}2016-03-13T23:23:40.179+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/articles-list"
+                    sling:resourceType="weretail/components/content/articleslist"
                     displayAs="default"
                     feedEnabled="{Boolean}true"
                     limit="3"

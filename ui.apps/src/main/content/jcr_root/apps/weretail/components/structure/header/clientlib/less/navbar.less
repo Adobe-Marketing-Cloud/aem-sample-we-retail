@@ -1,0 +1,476 @@
+/*
+ *  Copyright 2016 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+
+@import "/apps/weretail/clientlibs/common/helpers.less";
+
+@import "/apps/weretail/clientlibs/vendor/bootstrap/src/less/mixins/nav-vertical-align.less";
+
+.navbar {
+    .make-row();
+
+    margin-right: @navbar-height + 2;
+
+    border-width: 0 0 1px;
+
+    font-weight: 700;
+    font-size: @font-size-base;
+
+    text-transform: uppercase;
+
+    .navbar-center {
+        .make-md-column(9);
+        .make-md-column-offset(1);
+
+        position: static;
+    }
+}
+
+.navbar-default {}
+
+.navbar-inverse {
+    border-bottom: none;
+}
+
+.navbar-collapse {
+    @media (max-width: @grid-float-breakpoint-max) {
+        text-align: left;
+    }
+}
+
+.navbar-default {
+    .navbar-collapse.in {
+            .navbar-nav {
+                > li > a {
+                    color: @navbar-inverse-link-color;
+                }
+            }
+    }
+}
+
+.navbar-nav {
+    .divider {
+        height: 1px;
+        margin: 11px -50px;
+        overflow: hidden;
+        background-color: #666;
+    }
+
+    & > li {
+
+        position: static;
+
+        & > a {
+            padding-right: @padding-small-horizontal;
+            padding-left: @padding-small-horizontal;
+        }
+
+        @media (min-width: @screen-sm-min) {
+            & > a {
+                padding-right: @padding-base-horizontal;
+                padding-left: @padding-base-horizontal;
+
+                &::after {
+                    bottom: -3px;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            &.active > a {
+                .navbar-default & {
+                    &::after {
+                        border-top-color: @navbar-default-link-active-color;
+                    }
+                }
+                .navbar-inverse & {
+                    &::after {
+                        border-top-color: @navbar-inverse-link-active-color;
+                    }
+                }
+            }
+        }
+
+
+        @media (max-width: @grid-float-breakpoint-max) {
+            & > a {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.navbar-header {
+    .make-md-column(2);
+
+    margin-left: -@grid-gutter-width/2;
+
+    position: relative;
+
+    @media (max-width: @grid-float-breakpoint-max) {
+        text-align: center;
+    }
+}
+
+.navbar-brand {
+    font-size: inherit;
+
+    letter-spacing: 2px;
+
+    strong {
+        color: @brand-primary;
+    }
+
+    @media (max-width: @grid-float-breakpoint-max) {
+        float: none;
+
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+.navbar-toggle {
+    float: left;
+
+    .navbar-vertical-align(30.5px);
+    margin-right: auto;
+    margin-left: @padding-small-horizontal;
+
+    .icon-bar {
+        border-radius: 2px;
+    }
+
+    .icon-bar + .icon-bar {
+        margin-top: (13px/2);
+    }
+}
+
+.navbar-right-outside {
+    transform: translateX(100%);
+
+    position: absolute;
+    top: 0;
+    right: -2px;
+
+    .btn {
+        min-width: @navbar-height;
+
+        padding-top: ((@navbar-height - (@font-size-base * @line-height-base)) / 2 - 1);
+        padding-bottom: ((@navbar-height - (@font-size-base * @line-height-base)) / 2 - 1);
+
+        .navbar-default & {
+            padding-bottom: ((@navbar-height - (@font-size-base * @line-height-base)) / 2);
+
+            border-bottom: 1px solid @navbar-default-border;
+
+            &:hover, &.hover,
+            &:focus, &.focus {
+                color: @brand-primary-hover;
+            }
+
+            &:active, &.active {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.navbar-fixed-top {
+    min-height: @navbar-fixed-height;
+
+    margin: 0;
+
+    background-color: @gray-base;
+
+    .navbar-nav {
+        margin: auto;
+
+        & > li {
+            & > a {
+                padding: 8px @padding-small-horizontal;
+
+                &::after {
+                    display: none;
+                }
+
+                .fa {
+                    opacity: .2;
+
+                    vertical-align: text-bottom;
+
+                    margin-right: 10px;
+
+                    font-size: 16px;
+                }
+
+                .badge {
+                    vertical-align: baseline;
+
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+.navbar-nav-subitems {
+    .make-row();
+
+    overflow: hidden;
+
+    height: 0;
+
+    padding: 0;
+
+    border-top: 0 solid transparent;
+
+    list-style: none;
+
+    li {
+        .make-md-column(2);
+        .make-md-column-offset(1);
+
+        transition: opacity @transition-default;
+
+        opacity: 0;
+
+        text-align: left;
+
+        &:nth-of-type(3n+1) {
+            .make-md-column-offset(3);
+
+            clear: left;
+        }
+
+        & > a {
+            display: block;
+
+            padding: 8px 0;
+
+            font-size: 16px;
+            line-height: 1.1;
+
+            text-transform: none;
+        }
+        &.active > a {
+            .navbar-default & {
+                color: @navbar-default-link-active-color;
+            }
+            .navbar-inverse & {
+                color: @navbar-inverse-link-active-color;
+            }
+        }
+    }
+
+    .navbar-default & {
+        a {
+            color: #fff;
+        }
+    }
+
+
+    .navbar-inverse & {
+        border-top-color: fade(#fff, 20);
+
+        a {
+            color: #fff;
+        }
+    }
+
+    @media (min-width: @screen-sm-min) {
+        position: absolute;
+        top: 100%;
+        right: @grid-gutter-width/2;
+        left: @grid-gutter-width/2;
+
+        .navbar-default & {
+            border-top-color: @navbar-default-border;
+
+            a {
+                color: #000;
+            }
+        }
+    }
+}
+
+nav.navbar-absolute-top {
+    position: absolute;
+    top: 40px;
+    left: @grid-gutter-width/2;
+    right: 0;
+
+    z-index: 1;
+
+    &::before, .navbar-shutter {
+        content: '';
+
+        display: block;
+
+        position: absolute;
+        right: 0;
+        left: 0;
+
+        background-color: @navbar-inverse-bg;
+        z-index: -1;
+    }
+
+    &::before {
+        transition: top @transition-bounce-duration @transition-default-easing, right @transition-bounce-duration @transition-default-easing, left @transition-bounce-duration @transition-default-easing;
+
+        top: 0;
+        bottom: 0;
+    }
+
+    .navbar-shutter {
+        transition: height @transition-bounce-duration @transition-default-easing, right @transition-bounce-duration @transition-default-easing, left @transition-bounce-duration @transition-default-easing;
+
+        height: 0;
+
+        top: 100%;
+    }
+
+    @media (min-width: @screen-sm-min) {
+        &.submenu-opened {
+            &::before, .navbar-shutter {
+                @media (min-width: @screen-md-min) {
+                    right: -9999em;
+                    right: ~'calc((100vw - @{container-md} + @{grid-gutter-width}) / -2 - @{navbar-height})';
+                    left: -9999em;
+                    left: ~'calc((100vw - @{container-md} + @{grid-gutter-width}) / -2)';
+                }
+
+                @media (min-width: @screen-lg-min) {
+                    right: -9999em;
+                    right: ~'calc((100vw - @{container-large-desktop} + @{grid-gutter-width}) / -2 - @{navbar-height})';
+                    left: -9999em;
+                    left: ~'calc((100vw - @{container-large-desktop} + @{grid-gutter-width}) / -2)';
+                }
+            }
+
+            &::before {
+                top: -25px;
+            }
+            .navbar-shutter {}
+        }
+    }
+
+    &.navbar-default {
+        background-color: fade(#fff, 0);
+
+        &::before, .navbar-shutter {
+            background-color: fade(#fff, 90);
+        }
+    }
+
+    &.navbar-inverse {
+        background-color: fade(@gray-base, 0);
+
+        &::before, .navbar-shutter {
+            background-color: @navbar-inverse-bg;
+        }
+    }
+}
+
+.navbar-nav li:hover .navbar-nav-subitems,
+.navbar-nav .navbar-nav-subitems:hover {
+    display: block;
+
+    height: auto;
+
+    border-top-width: 1px;
+
+    li {
+        transition-delay: .15s;
+
+        opacity: 1;
+    }
+
+    @media (min-width: @screen-sm-min) {
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: @screen-sm-max) {
+    .header {
+        .navbar-brand {
+            float: left;
+        }
+
+        .navbar-collapse {
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: @navbar-inverse-bg;
+            width: 0px;
+            height: 100%;
+            z-index: 1000;
+            overflow: hidden;
+
+            transition: width 0.35s;
+
+            padding: 0;
+
+            .nav {
+                display: none;
+            }
+        }
+
+        .navbar-collapse.collapse.in {
+            width: ~'calc(100vw - 50px)';
+            padding: 0 50px;
+            display: block;
+            .nav {
+                display: block;
+            }
+        }
+
+        .navbar-inverse .navbar-toggle-close:hover,
+        .navbar-inverse .navbar-toggle-close:focus {
+            background-color: @brand-primary;
+        }
+
+        .navbar-toggle-close {
+            color: #fff;
+            position: fixed;
+            margin: 0;
+            padding-top: ((@navbar-height - 34px) / 2) + 4px;
+            padding-bottom: ((@navbar-height - 34px) / 2) + 4px;
+
+            background-color: @brand-primary;
+
+            right: 0;
+            left: ~'calc(100% - 50px)';
+            transition: left 0.35s, right 0.35s, background-color .35s;
+            transition-delay: .35s, .35s, .35s;
+            width: 50px;
+            z-index: 999;
+        }
+
+        .navbar-toggle-close.collapsed {
+            background-color: @navbar-inverse-bg;
+            left: 100%;
+            width: auto;
+            transition-delay: 0s;
+        }
+
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    .navbar {
+        font-size: @font-size-small;
+    }
+}

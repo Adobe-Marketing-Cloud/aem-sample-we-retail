@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Product filter"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        margin="{Boolean}false"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <type
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Type"
+                        name="./type">
+                        <items jcr:primaryType="nt:unstructured">
+                            <color
+                                jcr:primaryType="nt:unstructured"
+                                text="color"
+                                value="color"/>
+                            <price
+                                jcr:primaryType="nt:unstructured"
+                                text="price"
+                                value="price"/>
+                            <size
+                                jcr:primaryType="nt:unstructured"
+                                text="size"
+                                value="size"/>
+                        </items>
+                    </type>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2016 Adobe Systems Incorporated
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- ====================================================================== -->
+    <!-- P A R E N T  P R O J E C T  D E S C R I P T I O N                      -->
+    <!-- ====================================================================== -->
+    <parent>
+        <groupId>com.adobe.cq.sample</groupId>
+        <artifactId>we.retail</artifactId>
+        <version>2.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <!-- ====================================================================== -->
+    <!-- P R O J E C T  D E S C R I P T I O N                                   -->
+    <!-- ====================================================================== -->
+    <artifactId>we.retail.it.tests.ui-js</artifactId>
+    <packaging>content-package</packaging>
+    <name>We.Retail - JavaScript UI Integration Tests Package</name>
+    <description>Package for JavaScript UI Integration Tests for We.Retail</description>
+
+    <scm>
+        <connection>scm:git:https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail.git</connection>
+        <developerConnection>scm:git:git@github.com:Adobe-Marketing-Cloud/aem-sample-we-retail.git</developerConnection>
+        <url>https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/tree/master/it.tests.ui-js</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <!-- ====================================================================== -->
+    <!-- B U I L D D E F I N I T I O N -->
+    <!-- ====================================================================== -->
+    <build>
+        <resources>
+            <!-- define the resources that will go into the package -->
+            <resource>
+                <!-- we want to keep some of the META-INF files and not configure everything
+                    in the plugin. -->
+                <directory>${basedir}/src/main/content/META-INF</directory>
+                <targetPath>../vault-work/META-INF</targetPath>
+            </resource>
+            <resource>
+                <directory>${basedir}/src/main/content/jcr_root</directory>
+                <excludes>
+                    <!-- exclude .vlt control files in the package -->
+                    <exclude>**/.vlt</exclude>
+                    <exclude>**/.vltignore</exclude>
+                    <exclude>**/.gitignore</exclude>
+                    <exclude>**/*.iml</exclude>
+                    <exclude>**/.classpath</exclude>
+                    <exclude>**/.project</exclude>
+                    <exclude>**/.settings</exclude>
+                    <exclude>**/.DS_Store</exclude>
+                    <exclude>**/target/**</exclude>
+                    <exclude>**/pom.xml</exclude>
+                </excludes>
+            </resource>
+        </resources>
+        <plugins>
+            <!-- we want to keep some of the META-INF files and not configure everything
+                in the plugin (mainly the filters). copy the resource explicitly instead
+                of attaching it to the default resources -->
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <!-- ensure that the empty directories are copied -->
+                <configuration>
+                    <includeEmptyDirs>true</includeEmptyDirs>
+                </configuration>
+
+                <executions>
+                    <execution>
+                        <id>copy-metainf-vault-resources</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/vault-work/META-INF</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${basedir}/META-INF</directory>
+                                    <filtering>false</filtering>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- ====================================================================== -->
+            <!-- V A U L T   P A C K A G E   P L U G I N                                -->
+            <!-- ====================================================================== -->
+            <plugin>
+                <groupId>com.day.jcr.vault</groupId>
+                <artifactId>content-package-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <filterSource>${basedir}/META-INF/vault/filter.xml</filterSource>
+                    <verbose>true</verbose>
+                    <failOnError>true</failOnError>
+                    <group>adobe/aem6/sample</group>
+                    <dependencies>
+                        <dependency>
+                            <group>day/cq60/product</group>
+                            <name>cq-content</name>
+                            <version>[6.1.76,)</version>
+                        </dependency>
+                        <dependency>
+                            <group>day/cq60/product</group>
+                            <name>cq-ui-touch-optimized-content</name>
+                            <version>[2.1.388,)</version>
+                        </dependency>
+                        <dependency>
+                            <group>day/cq60/product</group>
+                            <name>com.adobe.qe.ui-testing-commons</name>
+                            <version>[6.2,)</version>
+                        </dependency>
+                        <dependency>
+                            <group>day/cq60/product</group>
+                            <name>cq-commerce-content</name>
+                            <version>[1.2.222,)</version>
+                        </dependency>
+                    </dependencies>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <id>autoInstallPackage</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.day.jcr.vault</groupId>
+                        <artifactId>content-package-maven-plugin</artifactId>
+                        <extensions>true</extensions>
+                        <executions>
+                            <execution>
+                                <id>install-package</id>
+                                <goals>
+                                    <goal>install</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <targetURL>http://${aem.host}:${aem.port}${aem.contextPath}/crx/packmgr/service.jsp</targetURL>
+                            <failOnError>true</failOnError>
+                            <failOnMissingEmbed>true</failOnMissingEmbed>
+                            <requiresRoot>true</requiresRoot>
+                            <properties>
+                                <acHandling>merge</acHandling>
+                                <description>${project.description}</description>
+                                <createdBy>Adobe Systems Incorporated</createdBy>
+                            </properties>
+                            <filterSource>${basedir}/META-INF/vault/filter.xml</filterSource>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>

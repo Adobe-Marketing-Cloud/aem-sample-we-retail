@@ -1,0 +1,209 @@
+/*
+ *  Copyright 2016 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+
+@import "/apps/weretail/clientlibs/common/helpers.less";
+
+.footer .we-Footer {
+    background-color: fade(@gray-base, 90);
+    color: #fff;
+    padding-top: 28px;
+    margin-top: 20px;
+    text-align: center;
+
+    .text-muted {
+        color: fade(#fff, 40);
+    }
+
+    &-section {
+        padding: @padding-base-horizontal 0;
+
+        &--sub {
+            border-top: 1px solid fade(#fff, 5);
+            margin: 28px 10% 0;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        &-item {
+            display: block;
+            margin: 0 1em;
+        }
+    }
+
+    &-nav {
+        //.list-unstyled;
+        padding-left: 0;
+        list-style: none;
+
+        ul {
+            //.list-unstyled;
+            padding-left: 0;
+            list-style: none;
+
+            li {
+                margin-bottom: @padding-base-vertical;
+            }
+        }
+
+        h2 {
+            //.h4;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        &--inline {
+            margin-left: -@grid-gutter-width/2;
+
+            ul {
+                //.list-inline;
+                padding-left: 0;
+                list-style: none;
+
+                margin-left: -5px;
+
+                //white-space: nowrap;
+
+                &> li {
+                    display: inline-block;
+
+                    padding: 0 3px;
+                }
+            }
+
+            .btn-icon {
+                min-width: 0;
+                width: 38px;
+
+                .we-Icon {
+                    font-size: 38px;
+                    //&::before {
+                    //  line-height: 1;
+                    //}
+                }
+
+                //padding: 6px 0;
+            }
+        }
+    }
+
+    @media (max-width: @screen-sm-max) {
+        .col-xs-1:nth-child(12n+1),
+        .col-xs-2:nth-child(6n+1),
+        .col-xs-3:nth-child(4n+1),
+        .col-xs-4:nth-child(3n+1),
+        .col-xs-6:nth-child(2n+1){
+            clear: left;
+        }
+    }
+
+    @media (min-width: @screen-sm-min){
+
+        /* Column clear fix */
+        .col-lg-1:nth-child(12n+1),
+        .col-lg-2:nth-child(6n+1),
+        .col-lg-3:nth-child(4n+1),
+        .col-lg-4:nth-child(3n+1),
+        .col-lg-6:nth-child(2n+1),
+        .col-md-1:nth-child(12n+1),
+        .col-md-2:nth-child(6n+1),
+        .col-md-3:nth-child(4n+1),
+        .col-md-4:nth-child(3n+1),
+        .col-md-6:nth-child(2n+1){
+            clear: none;
+        }
+        .col-sm-1:nth-child(12n+1),
+        .col-sm-2:nth-child(6n+1),
+        .col-sm-3:nth-child(4n+1),
+        .col-sm-4:nth-child(3n+1),
+        .col-sm-6:nth-child(2n+1){
+            clear: left;
+        }
+    }
+
+
+    /*  Medium Desktop  */
+    @media (min-width: @screen-md-min){
+
+        /* Column clear fix */
+        .col-lg-1:nth-child(12n+1),
+        .col-lg-2:nth-child(6n+1),
+        .col-lg-3:nth-child(4n+1),
+        .col-lg-4:nth-child(3n+1),
+        .col-lg-6:nth-child(2n+1),
+        .col-sm-1:nth-child(12n+1),
+        .col-sm-2:nth-child(6n+1),
+        .col-sm-3:nth-child(4n+1),
+        .col-sm-4:nth-child(3n+1),
+        .col-sm-6:nth-child(2n+1){
+            clear: none;
+        }
+        .col-md-1:nth-child(12n+1),
+        .col-md-2:nth-child(6n+1),
+        .col-md-3:nth-child(4n+1),
+        .col-md-4:nth-child(3n+1),
+        .col-md-6:nth-child(2n+1){
+            clear: left;
+        }
+    }
+
+
+    /*  Large Desktop  */
+    @media (min-width: @screen-lg-min){
+
+        /* Column clear fix */
+        .col-md-1:nth-child(12n+1),
+        .col-md-2:nth-child(6n+1),
+        .col-md-3:nth-child(4n+1),
+        .col-md-4:nth-child(3n+1),
+        .col-md-6:nth-child(2n+1),
+        .col-sm-1:nth-child(12n+1),
+        .col-sm-2:nth-child(6n+1),
+        .col-sm-3:nth-child(4n+1),
+        .col-sm-4:nth-child(3n+1),
+        .col-sm-6:nth-child(2n+1){
+            clear: none;
+        }
+        .col-lg-1:nth-child(12n+1),
+        .col-lg-2:nth-child(6n+1),
+        .col-lg-3:nth-child(4n+1),
+        .col-lg-4:nth-child(3n+1),
+        .col-lg-6:nth-child(2n+1){
+            clear: left;
+        }
+    }
+}
+
+@media (min-width: @screen-md-min) {
+    .we-Footer {
+        text-align: left;
+
+        &-section {
+            padding: inherit;
+
+            &--sub {
+                padding: 30px 0;
+                border: 0;
+            }
+
+            &-item {
+                display: inline-block;
+            }
+        }
+
+    }
+}

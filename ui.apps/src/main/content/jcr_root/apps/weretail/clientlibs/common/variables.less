@@ -1,0 +1,278 @@
+/*
+ *  Copyright 2016 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+
+@import "/apps/weretail/clientlibs/vendor/font-awesome/less/variables.less";
+@import "/apps/weretail/clientlibs/vendor/bootstrap/src/less/variables.less";
+
+
+//== Colors
+//
+
+@gray-base: #000;
+@gray-darker:            lighten(@gray-base, 13.5%); // #222
+@gray-dark:              #272727;
+@gray:                   lighten(@gray-base, 33.5%); // #555
+@gray-light:             lighten(@gray-dark, 50%);
+@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
+
+@brand-primary: #ed1c24;
+//@brand-primary-hover: #c80007; // original
+@brand-primary-hover: darken(@brand-primary, 9.6%); // #c81017
+
+@brand-success: #39b54a;
+
+@placeholder-bg-color:  @gray-lighter;
+
+
+//== Animation
+//
+
+@transition-default-duration: .12s;
+@transition-default-easing: ease-in-out;
+@transition-default: @transition-default-duration @transition-default-easing;
+
+@transition-bounce-duration: .3s;
+@transition-bounce-easing: cubic-bezier(0.68, -0.2, 0.3, 1.55);
+@transition-bounce: @transition-bounce-duration @transition-bounce-easing;
+
+//== Scaffolding
+//
+
+@body-bg: #fff;// #e6e6e6;
+@text-color: @gray-base;
+
+
+//== Typography
+//
+
+@font-family-sans-serif: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@font-size-base: 14px; //regular
+@font-size-small: 12px;
+
+@font-size-h1: 48px; //black
+@font-size-h2: 28px; //bold
+@font-size-h3: 24px; //regular
+@font-size-h4: 18px; //bold
+@font-size-h5: 16px; //bold
+
+@line-height-base: (24/14);
+
+@headings-font-weight: 700;
+
+
+//== Iconography
+//
+
+@we-Icon-font-path: "/etc/designs/we-retail/fonts";
+@fa-font-path: "/apps/weretail/clientlibs/vendor/font-awesome/resources";
+//@icon-font-path: "/bower_components/bootstrap/fonts/";
+
+
+//== Components
+//
+
+@padding-base-vertical: 8px;
+@padding-base-horizontal: 20px;
+
+@padding-large-vertical: 18px;
+@padding-large-horizontal: 30px;
+
+@padding-small-horizontal: 10px;
+
+@border-radius-base: 0;
+
+
+//== Buttons
+//
+
+@btn-font-weight: 700;
+
+@btn-default-color: #fff;
+@btn-default-bg: @gray-base;
+@btn-default-border: transparent;
+
+
+//== Forms
+//
+
+@input-color-placeholder: fade(@gray-base, 20);
+@input-border: fade(@gray-base, 5);
+@input-border-focus: fade(@gray-base, 20);
+
+@form-group-margin-bottom: @padding-base-horizontal;
+
+
+//== Grid system
+//
+
+@screen-lg-min: 1248px;
+
+@grid-columns: 12;
+@grid-gutter-width: 24px;
+@grid-float-breakpoint: @screen-sm-min;
+
+@container-large-desktop: (1200px + @grid-gutter-width);
+
+//== Scaffolding
+//
+
+//** Global textual link color.
+@link-color:            #000;
+//** Link hover color set via `darken()` function.
+@link-hover-color:      darken(@brand-primary, 15%);
+
+//== Navbar
+//
+
+@navbar-height: 60px;
+@navbar-padding-horizontal: @padding-large-horizontal;
+
+// Default navbar
+@navbar-default-color: @gray-base;
+@navbar-default-bg: transparent;
+@navbar-default-border: fade(@gray-base, 10);
+
+@navbar-default-link-color: @gray-base;
+@navbar-default-link-hover-color: @gray-base;
+@navbar-default-link-hover-bg: transparent;
+@navbar-default-link-active-color: @brand-primary;
+@navbar-default-link-active-bg: transparent;
+
+@navbar-default-brand-color: @navbar-default-color;
+@navbar-default-brand-hover-color: @navbar-default-color;
+@navbar-default-brand-hover-bg: transparent;
+
+@navbar-default-toggle-hover-bg: transparent;
+@navbar-default-toggle-icon-bar-bg: @gray-base;
+@navbar-default-toggle-border-color: transparent;
+
+// Inverter navbar
+@navbar-inverse-color: #fff;
+@navbar-inverse-bg: fade(@gray-base, 90);
+@navbar-inverse-border: transparent;
+
+@navbar-inverse-link-color: #fff;
+@navbar-inverse-link-hover-color: #fff;
+@navbar-inverse-link-hover-bg: transparent;
+@navbar-inverse-link-active-color: @brand-primary;
+@navbar-inverse-link-active-bg: transparent;
+
+@navbar-inverse-brand-color: @navbar-inverse-color;
+@navbar-inverse-brand-hover-color: @navbar-inverse-color;
+@navbar-inverse-brand-hover-bg: transparent;
+
+@navbar-inverse-toggle-hover-bg: transparent;
+@navbar-inverse-toggle-icon-bar-bg: #fff;
+@navbar-inverse-toggle-border-color: transparent;
+
+@navbar-fixed-height: 40px;
+
+//== Jumbotron
+//
+
+@jumbotron-padding: 20px;
+@jumbotron-color: #fff;
+@jumbotron-font-size: @font-size-h3;
+@jumbotron-heading-font-size: @font-size-h1;
+
+
+//== Form states and alerts
+//
+
+@state-success-text: @brand-success;
+
+
+//== Modals
+//
+
+@modal-inner-padding: 15px;
+
+@modal-title-padding: 15px;
+@modal-title-line-height: @line-height-base;
+
+@modal-content-bg: #fff;
+@modal-content-border-color: transparent;
+@modal-content-fallback-border-color: transparent;
+
+@modal-backdrop-bg: @gray-base;
+@modal-backdrop-opacity: .75;
+@modal-header-border-color: transparent;
+@modal-footer-border-color: @modal-header-border-color;
+
+@modal-lg: 900px;
+@modal-md: 600px;
+@modal-sm: 300px;
+
+
+//== Panels
+//
+
+@panel-body-padding: 20px 25px;
+
+
+//== Badges
+//
+
+@badge-color: #fff;
+@badge-bg: @gray-dark;
+
+@badge-active-color: #fff;
+@badge-active-bg: @brand-primary;
+
+@badge-line-height: 15px;
+@badge-border-radius: 0;
+
+//== Type
+//
+
+@text-muted: fade(@gray-base, 20);
+@headings-small-color: fade(@gray-base, 20);
+
+
+//== Carousel
+//
+
+@carousel-indicator-active-bg:                #f00;
+@carousel-indicator-border-color:             #ddd;
+
+//== Article teaser
+
+@article-teaser-visual-height:                200px;
+
+//== Breadcrumb
+
+@breadcrumb-bg:                               transparent;
+@border-radius-base:                          0;
+@breadcrumb-separator:                        "";
+@breadcrumb-color:                            @gray-dark;
+@breadcrumb-active-color:                     @gray-dark;
+@breadcrumb-delim-color:                      @brand-primary;
+
+//== Header
+
+@header-height:                               100px;
+
+
+//== Z-index master list
+
+@zindex-navbar:            800;
+@zindex-dropdown:          800;
+@zindex-popover:           860;
+@zindex-tooltip:           870;
+@zindex-navbar-fixed:      830;
+@zindex-modal-background:  840;
+@zindex-modal:             850;

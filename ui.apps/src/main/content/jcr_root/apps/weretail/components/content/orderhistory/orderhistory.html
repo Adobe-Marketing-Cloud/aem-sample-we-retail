@@ -1,0 +1,55 @@
+<!--/*
+    Copyright 2016 Adobe Systems Incorporated
+  
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+
+<sly data-sly-use.orderHistory="we.retail.core.model.OrderHistoryModel"
+     data-sly-use.hapiOrderHistory="${'org.apache.sling.hapi.sightly.HApiUse' @type='/apps/public/weretail/hapi_types/orderhistory'}" />
+
+<div class="we-ShoppingHistory"
+     data-sly-attribute="${hapiOrderHistory.itemtype}">
+
+    <div class="we-ShoppingHistory-login" data-sly-test.anonymous="${orderHistory.anonymous}">
+        ${'Please sign in to view your order history.' @ i18n}
+    </div>
+
+    <sly data-sly-test="${!anonymous}">
+
+        <div class="we-ShoppingHistory-empty" data-sly-test.empty="${orderHistory.empty}">
+            ${'Your order history is empty.' @ i18n}
+        </div>
+
+        <div class="we-ShoppingHistory-entries" data-sly-test="${!empty}">
+
+            <div class="entry header">
+                <div>${'Id' @ i18n}</div>
+                <div>${'Date' @ i18n}</div>
+                <div>${'Status' @ i18n}</div>
+                <div>${'Total' @ i18n}</div>
+            </div>
+
+            <div class="entry order-data" data-href="order-history/order-details.html?orderId=${order.orderId}"
+                 data-sly-repeat.order="${orderHistory.orders}"
+                 data-sly-use.hapiOrder="${ 'org.apache.sling.hapi.sightly.HApiUse' @type=hapiOrderHistory.proptype.order }"
+                 data-sly-attribute="${ hapiOrderHistory.itemprop.order }">
+                <div><meta content="${order.orderId}" data-sly-attribute="${hapiOrder.itemprop.id}" />${order.listOrderId}</div>
+                <div data-sly-attribute="${hapiOrder.itemprop.date}">${'dd MMM, yyyy' @ format=order.order.orderPlaced}</div>
+                <div data-sly-attribute="${hapiOrder.itemprop.status}">${order.order.orderStatus}</div>
+                <div data-sly-attribute="${hapiOrder.itemprop.totalPrice}">${order.order.currencyCode} ${'#.00' @ format=order.order.orderTotalPrice}</div>
+            </div>
+
+        </div>
+        
+    </sly>
+</div>

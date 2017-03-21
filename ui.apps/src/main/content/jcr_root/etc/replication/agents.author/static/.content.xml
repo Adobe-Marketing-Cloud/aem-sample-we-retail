@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2011-01-14T13:25:05.711+01:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/replication/templates/staticagent"
+        jcr:description="Agent that stores a static representation of a node into the filesystem."
+        jcr:lastModified="{Date}2011-01-14T13:25:05.708+01:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Static Agent"
+        sling:resourceType="cq/replication/components/staticagent"
+        userId="author"
+        definition="/content/we-retail* ${path}.html?wcmmode=preview&#xa;/content/dam* ${path}&#xa;/etc/design/* ${path}"
+        directory="/tmp"
+        enabled="false"
+        logLevel="info"
+        serializationType="static"
+        transportUri="static:///"/>
+</jcr:root>

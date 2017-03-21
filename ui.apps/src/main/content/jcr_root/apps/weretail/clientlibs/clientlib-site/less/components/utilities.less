@@ -1,0 +1,227 @@
+/*
+ *  Copyright 2016 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+
+//== helper mixins
+
+.btn-extend(@color, @background-hover) {
+    &:hover, &.hover,
+    &:focus, &.focus {
+        color: @color;
+        background-color: @background-hover;
+        border-color: @background-hover;
+
+        &::after {
+            color: @color;
+            background-color: @background-hover;
+            border-color: @background-hover;
+        }
+
+        &:active, &.active {
+            background-color: @background-hover;
+            border-color: @background-hover;
+            outline-color: @brand-primary;
+
+            &::after {
+                background-color: @background-hover;
+                border-color: @background-hover;
+            }
+        }
+    }
+
+    &:active, &.active {
+        background-color: @background-hover;
+        border-color: @background-hover;
+
+        &::after {
+            background-color: @background-hover;
+            border-color: @background-hover;
+            .box-shadow(inset 0 3 px 5 px rgba(0, 0, 0, .125));
+        }
+    }
+}
+
+.appearance(@val: none) {
+    -webkit-appearance: @val;
+    -moz-appearance: @val;
+    appearance: @val;
+}
+
+//== helper classes
+
+.link-underline {
+    text-transform: uppercase;
+
+    &::after {
+        transition: all @transition-bounce;
+        content: '';
+
+        display: block;
+
+        width: 0;
+
+        border-top: 2px solid #000;
+
+        margin: -5px auto 3px;
+    }
+
+    &:hover, &.hover,
+    &:focus, &.focus {
+        text-decoration: none;
+
+        &::after {
+            width: 95%;
+            width: ~'calc(100% - 4px)';
+
+            border-top-color: @gray-dark;
+        }
+    }
+
+    &.btn-primary {
+        &::after {
+            border-top-color: @brand-primary;
+        }
+    }
+
+    @media (min-width: @screen-sm-min) {
+        &.btn-inverse, [class*=inverse] & {
+            &::after {
+                border-top-color: #fff;
+            }
+        }
+    }
+}
+
+.black {
+    font-weight: 900 !important;
+}
+
+.bold {
+    font-weight: 700 !important;
+}
+
+.normal {
+    font-weight: 400 !important;
+}
+
+.light {
+    font-weight: 300 !important;
+}
+
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.width-full {
+    margin: 0 -10%;
+    margin: 0 (@grid-gutter-width/-1);
+
+    @media (min-width: @screen-sm-min) {
+        margin: 0 ~'calc((100vw - @{container-sm} + 2 * @{grid-gutter-width}) / -2)';
+    }
+
+    @media (min-width: @screen-md-min) {
+        margin: 0 ~'calc((100vw - @{container-md} + 2 * @{grid-gutter-width}) / -2)';
+    }
+
+    @media (min-width: @screen-lg-min) {
+        margin: 0 ~'calc((100vw - @{container-lg} + 2 * @{grid-gutter-width}) / -2)';
+    }
+}
+
+.ratio-16by9 {
+    height: auto !important;
+    min-height: 0 !important;
+
+    padding: 0 @jumbotron-padding percentage(9/16);
+
+    &.width-full {
+        padding: 0 @jumbotron-padding ~'calc(100vw * 9 / 16)';
+    }
+}
+
+.img-center {
+    overflow: hidden;
+
+    padding-bottom: 100%;
+
+    position: relative;
+
+    img {
+        transform: translate(-50%, -50%);
+
+        width: 100%;
+        height: auto;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        //&:extend(.img-responsive);
+
+        margin: 0 auto;
+    }
+}
+
+//== modal
+
+.modal .modal-dialog.modal-center {
+    top: 50%;
+    left: 50%;
+
+    position: absolute;
+
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+//== Vue.js
+
+[v-cloak] {
+    display: none;
+}
+
+//== Aspect Ratio
+.crop {
+
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+
+    &.crop-16_9:before {
+        padding-top: 56.25%;
+    }
+
+    &__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        text-align: center;
+        vertical-align: middle;
+    }
+}

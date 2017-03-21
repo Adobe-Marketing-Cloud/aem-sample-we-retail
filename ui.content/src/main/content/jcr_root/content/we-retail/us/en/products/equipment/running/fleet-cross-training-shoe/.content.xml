@@ -13,7 +13,7 @@
         jcr:mixinTypes="[cq:LiveRelationship]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Fleet Cross-Training Shoe"
-        sling:resourceType="we-retail/components/structure/page">
+        sling:resourceType="weretail/components/structure/page">
         <root
             cq:lastRolledout="{Date}2016-06-29T14:20:56.517+02:00"
             cq:lastRolledoutBy="admin"
@@ -25,7 +25,7 @@
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/structure/breadcrumb"/>
+                sling:resourceType="weretail/components/content/breadcrumb"/>
             <product
                 cq:commerceType="product"
                 cq:lastRolledout="{Date}2016-06-29T14:20:56.550+02:00"
@@ -33,7 +33,7 @@
                 jcr:lastModified="{Date}2016-04-12T01:19:38.907+02:00"
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/structure/product"
+                sling:resourceType="weretail/components/structure/product"
                 productData="/etc/commerce/products/we-retail/eq/running/eqrusufle">
                 <eqrusufle-9
                     cq:commerceType="variant"
@@ -41,7 +41,7 @@
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
+                    sling:resourceType="weretail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/running/eqrusufle/size-9">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:20:56.582+02:00"
@@ -50,8 +50,8 @@
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="dam/components/scene7/dynamicmediaimage"
-                        fileReference="/content/dam/we-retail/en/products/apparel/footwear/fleet"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/we-retail/en/products/apparel/footwear/source/Fleet Shoe.jpg"
                         height="300"
                         jpegQuality="85"
                         unsharpMaskAmount="0"
@@ -63,7 +63,7 @@
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                        sling:resourceType="weretail/components/structure/product/assets"/>
                 </eqrusufle-9>
                 <eqrusufle-11
                     cq:commerceType="variant"
@@ -71,7 +71,7 @@
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
+                    sling:resourceType="weretail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/running/eqrusufle/size-11">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:20:56.598+02:00"
@@ -80,8 +80,8 @@
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="dam/components/scene7/dynamicmediaimage"
-                        fileReference="/content/dam/we-retail/en/products/apparel/footwear/fleet"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/we-retail/en/products/apparel/footwear/source/Fleet Shoe.jpg"
                         height="300"
                         jpegQuality="85"
                         unsharpMaskAmount="0"
@@ -93,7 +93,7 @@
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                        sling:resourceType="weretail/components/structure/product/assets"/>
                 </eqrusufle-11>
                 <eqrusufle-13
                     cq:commerceType="variant"
@@ -101,7 +101,7 @@
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product"
+                    sling:resourceType="weretail/components/structure/product"
                     productData="/etc/commerce/products/we-retail/eq/running/eqrusufle/size-13">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:20:56.612+02:00"
@@ -110,8 +110,8 @@
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="dam/components/scene7/dynamicmediaimage"
-                        fileReference="/content/dam/we-retail/en/products/apparel/footwear/fleet"
+                        sling:resourceType="commerce/components/product/image"
+                        fileReference="/content/dam/we-retail/en/products/apparel/footwear/source/Fleet Shoe.jpg"
                         height="300"
                         jpegQuality="85"
                         unsharpMaskAmount="0"
@@ -123,7 +123,7 @@
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="we-retail/components/structure/product/assets"/>
+                        sling:resourceType="weretail/components/structure/product/assets"/>
                 </eqrusufle-13>
                 <image
                     cq:lastRolledout="{Date}2016-06-29T14:20:56.616+02:00"
@@ -132,8 +132,8 @@
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="dam/components/scene7/dynamicmediaimage"
-                    fileReference="/content/dam/we-retail/en/products/apparel/footwear/fleet"
+                    sling:resourceType="commerce/components/product/image"
+                    fileReference="/content/dam/we-retail/en/products/apparel/footwear/source/Fleet Shoe.jpg"
                     height="300"
                     jpegQuality="85"
                     unsharpMaskAmount="0"
@@ -145,7 +145,7 @@
                     cq:lastRolledoutBy="admin"
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/structure/product/assets"/>
+                    sling:resourceType="weretail/components/structure/product/assets"/>
             </product>
             <responsivegrid
                 cq:lastRolledout="{Date}2016-06-29T14:20:56.620+02:00"
@@ -159,26 +159,26 @@
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="Reviews"
-                sling:resourceType="we-retail/components/content/title"/>
+                sling:resourceType="weretail/components/content/title"/>
             <reviews
                 cq:lastRolledout="{Date}2016-06-29T14:20:56.625+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/structure/product-reviews"/>
+                sling:resourceType="weretail/components/structure/productreviews"/>
             <similar_section_title
                 cq:lastRolledout="{Date}2016-06-29T14:20:56.627+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 jcr:title="You may also like"
-                sling:resourceType="we-retail/components/content/title"/>
+                sling:resourceType="weretail/components/content/title"/>
             <similar_products
                 cq:lastRolledout="{Date}2016-06-29T14:20:56.629+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/structure/product-recommendation"/>
+                sling:resourceType="weretail/components/structure/productrecommendation"/>
         </root>
         <image
             cq:lastRolledout="{Date}2016-06-29T14:20:56.632+02:00"

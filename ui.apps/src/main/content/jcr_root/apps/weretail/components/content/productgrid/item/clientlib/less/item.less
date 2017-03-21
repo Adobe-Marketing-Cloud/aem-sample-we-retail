@@ -1,0 +1,116 @@
+/*
+ *  Copyright 2016 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+
+@import "/apps/weretail/clientlibs/common/helpers.less";
+
+.we-ProductsGrid-item {
+    padding: 0 @padding-small-horizontal;
+
+    //margin: 0 -(@grid-gutter-width/2);
+    margin-bottom: 40px;
+
+    text-align: center;
+
+    position: relative;
+
+    &:hover {
+        .we-ProductsGrid-item-link {
+            border-color: fade(@gray-base, 5);
+        }
+    }
+
+    &-link {
+        transition: border-color @transition-default;
+
+        border: 5px solid transparent;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        z-index: 10;
+    }
+
+    &-image {
+    }
+
+    &-title {
+        margin: 20px auto 5px;
+    }
+
+    &-subtitle {
+        display: block;
+
+        margin: 0 auto 10px;
+
+        line-height: 1;
+        min-height: 14px;
+    }
+
+    &-price {
+        font-weight: 400;
+        font-size: 18px;
+
+        white-space: nowrap;
+
+        span {
+            display: inline-block;
+        }
+    }
+
+    &-price-new {
+        color: @brand-primary;
+    }
+
+    &-price-old {
+        text-decoration: line-through;
+        text-decoration-color: @gray-lighter;
+    }
+
+    &-discount {
+        display: block;
+
+        padding: 0 5px;
+
+        background-color: @brand-primary;
+
+        font-size: @font-size-small;
+        color: #fff;
+
+        position: absolute;
+        top: 25px;
+        right: 0;
+
+        z-index: 11;
+
+        span {
+            font-weight: 700;
+        }
+    }
+}
+
+
+.fade-transition {
+    transition: all .5s ease;
+    overflow: hidden;
+}
+
+.fade-enter, .fade-leave {
+    transform: scale(0);
+    opacity: 0;
+}

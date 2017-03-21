@@ -4,7 +4,7 @@
     <jcr:content
         cq:deviceGroups="[/etc/mobile/groups/responsive]"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="we-retail/components/structure/page">
+        sling:resourceType="weretail/components/structure/page">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid"/>

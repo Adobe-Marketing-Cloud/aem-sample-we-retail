@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:Group"
+    jcr:title="We.Retail"
+    jcr:uuid="18e52d33-53c8-3759-9b87-d22aa5e4d319"
+    rep:authorizableId="projects-we_retail"
+    rep:principalName="projects-we_retail">
+    <profile
+        jcr:primaryType="nt:unstructured"
+        alternateTitle="Observers"
+        givenName="We.Retail Observers"/>
+</jcr:root>

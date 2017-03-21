@@ -1,0 +1,225 @@
+/*
+ *  Copyright 2016 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+
+@import "/apps/weretail/clientlibs/common/helpers.less";
+
+@import "/apps/weretail/clientlibs/vendor/bootstrap/src/less/mixins/text-emphasis.less";
+@import "/apps/weretail/clientlibs/vendor/bootstrap/src/less/mixins/background-variant.less";
+
+@import (reference) "/apps/weretail/clientlibs/vendor/bootstrap/src/less/type.less";
+
+.we-SearchModal {
+    color: #fff;
+
+    .modal-dialog {
+        .container-fixed();
+
+        margin-top: 80px;
+
+        @media (min-width: @screen-sm-min) {
+            width: @container-sm;
+        }
+        @media (min-width: @screen-md-min) {
+            width: @container-md;
+        }
+        @media (min-width: @screen-lg-min) {
+            width: @container-lg;
+        }
+    }
+
+    .modal-header {
+        font-weight: 700;
+        font-size: 13px;
+        color: #fff;
+
+        text-transform: uppercase;
+
+        .we-Icon {
+            font-size: 19px;
+        }
+
+        .we-Icon--search {
+            margin-right: 10px;
+        }
+    }
+
+    .modal-content {
+        background-color: transparent;
+
+        box-shadow: none;
+    }
+
+    .close {
+        opacity: 1;
+
+        font-weight: inherit;
+        font-size: inherit;
+        color: inherit;
+
+        text-transform: inherit;
+
+        .we-Icon {
+            vertical-align: sub;
+
+            margin-left: 10px;
+        }
+
+        span {
+            display: inline-block;
+        }
+    }
+
+    &-input {
+        display: block;
+
+        width: 100%;
+
+        border: solid fade(#fff, 40);
+        border-width: 0 0 1px;
+
+        background-color: transparent;
+
+        font-weight: 700;
+        font-size: 98px;
+
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: fade(#fff, 20);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &-box {
+        font-size: 16px;
+        color: fade(#fff, 80);
+
+        h5 {
+            margin-top: 30px;
+            margin-bottom: 6px;
+
+            color: #fff;
+
+            text-transform: uppercase;
+        }
+
+        h6 {
+            padding-right: 5px;
+
+            margin-top: 10px;
+            margin-bottom: 0;
+
+            font-weight: 500;
+            font-size: 18px;
+            color: #fff;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        ul {
+            .list-unstyled;
+        }
+
+        li {
+            .clearfix();
+
+            margin-bottom: 5px;
+        }
+
+        &-list {
+            margin-top: 10px;
+
+            li {
+                &::before {
+                    content: '';
+
+                    float: left;
+
+                    height: 65px;
+
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        a {
+            color: inherit;
+        }
+
+        mark {
+            padding: 0;
+
+            background-color: transparent;
+
+            font-weight: 700;
+            color: #fff;
+        }
+
+        img {
+            float: left;
+
+            width: 65px;
+            height: auto;
+
+            margin: 0 15px 5px 0;
+        }
+
+
+        &-avatar {
+            float: left;
+
+            width: 48px;
+
+            margin-top: 6px;
+            margin-right: 10px;
+
+            div {
+                //.img-center;
+
+                border-radius: 50%;
+            }
+        }
+
+        .small {
+            display: inline-block;
+            max-width: 100%;
+
+            font-size: 14px;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .pull-left {
+            overflow: hidden;
+
+            float: none !important;
+        }
+    }
+}
+
+.modal-color-primary .modal-backdrop {
+    background-color: @brand-primary;
+
+    &.in {
+        opacity: .97;
+    }
+}

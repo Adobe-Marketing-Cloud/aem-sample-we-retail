@@ -29,7 +29,7 @@ import javax.jcr.RepositoryException;
 import java.awt.Dimension;
 import java.io.IOException;
 
-@SlingServlet(resourceTypes = { "we-retail/components/content/category-teaser" }, selectors = "img", extensions = { "jpeg", "jpg", "png" })
+@SlingServlet(resourceTypes = { "weretail/components/content/categoryteaser" }, selectors = "img", extensions = { "jpeg", "jpg", "png" })
 public class CategoryTeaserImageServlet extends AbstractImageServlet {
 
     private static final RenditionPicker RENDITION_PICKER = new WCMRenditionPicker();

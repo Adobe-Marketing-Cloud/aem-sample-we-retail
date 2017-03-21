@@ -1,0 +1,94 @@
+<!--/*
+    Copyright 2017 Adobe Systems Incorporated
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+<div data-sly-use.header="Header"
+     class="navbar navbar-inverse navbar-fixed-top hidden-xs">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-left">
+            <li><a href="#" data-toggle="modal" data-target=".we-LanguageModal" title="${header.currentLanguage.name}"><i class="we-lang-icon we-lang-icon-${header.currentLanguage.countrycode}"></i> ${header.currentLanguage.languagecode}</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li data-sly-test="${!header.anonymous}"><a href="${header.accountPath}.html">Account</a></li>
+            <li data-sly-test="${!header.anonymous}"><a href="${header.profilePath}.html">Profile</a></li>
+            <li data-sly-test="${!header.anonymous}" data-sly-resource="${@ resourceType='weretail/components/structure/navwishlist'}"></li>
+            <li data-sly-test="${!header.anonymous}"><a href="${header.messagingPath}.html"><i class="fa fa-envelope-o"></i> Messages
+                <span class="badge" id="we-retail-message-count" data-siteurl="/content/we-retail/us/en/community">0</span></a></li>
+            <li data-sly-test="${!header.anonymous}"><a href="${header.notificationPath}.html"><i class="fa fa-flag-o"></i> Notifications
+                <span class="badge" id="we-retail-notification-count" data-siteurl="/content/we-retail/us/en/community">0</span></a></li>
+            <li data-sly-resource="${@ resourceType='weretail/components/structure/navcart'}"></li>
+            <li data-sly-test="${header.isModerator}"><a href="${header.moderationPath}.html">Moderation</a></li>
+            <li data-sly-test="${header.anonymous}"><a href="${header.signInPath}.html">Login</a></li>
+            <li data-sly-test="${!header.anonymous}"><a href="/system/sling/logout.html?resource=${header.currentPath}.html">Log out</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <nav class="navbar navbar-${header.theme} navbar-absolute-top">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#we-example-navbar-collapse-inverse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span> <span class="icon-bar"></span>
+            </button>
+
+            <button type="button" class="navbar-toggle navbar-toggle-close collapsed" data-toggle="collapse"
+                    data-target="#we-example-navbar-collapse-inverse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="we-Icon we-Icon--close"></i>
+            </button>
+
+            <a class="navbar-brand" href="${header.languageRoot}">we.<strong>Retail</strong></a>
+            <div class="pull-right visible-xs" data-sly-resource="${@ resourceType='weretail/components/structure/navcart', selectors='mobilebutton'}"></div>
+        </div>
+
+        <!-- /.navbar-header -->
+        <div class="collapse navbar-collapse width" id="we-example-navbar-collapse-inverse">
+            <ul  class="nav navbar-nav navbar-center">
+                <li class="visible-xs"><a href="${header.languageRoot.path}.html">we.<strong class="text-primary">Retail</strong></a></li>
+                <sly data-sly-list.item="${header.items}">
+                    <li class="${item.selected ? 'active' : ''}">
+                        <a href="${ item.page.path }.html">${item.page.title}</a>
+
+                        <ul data-sly-list.subitem="${item.children}" class="navbar-nav-subitems">
+                            <li class="${subitem.selected ? 'active' : ''}">
+                                <a href="${ subitem.page.path }.html">${subitem.page.title}</a>
+                            </li>
+                        </ul>
+                    </li>
+                </sly>
+                <li class="visible-xs divider" role="separator"></li>
+                <li class="visible-xs" data-sly-test="${header.anonymous}"><a href="${header.signInPath}.html">Login</a></li>
+                <li class="visible-xs" data-sly-test="${!header.anonymous}"><a href="/system/sling/logout.html?resource=${header.currentPath}.html">Log out</a></li>
+                <li class="visible-xs" data-sly-test="${!header.anonymous}"><a href="${header.profilePath}.html">Profile</a></li>
+                <li class="visible-xs" data-sly-test="${!header.anonymous}"><a href="${header.messagingPath}.html" class="visible-xs">Messages <span class="badge pull-right">0</span></a></li>
+                <li class="visible-xs" data-sly-test="${!header.anonymous}"><a href="${header.notificationPath}.html" class="visible-xs">Notifications <span class="badge pull-right">0</span></a></li>
+                <li class="visible-xs" data-sly-test="${!header.anonymous}" data-sly-resource="${@ resourceType='weretail/components/structure/navwishlist', selectors='mobilelink'}"></li>
+                <li class="visible-xs"><a href="#" data-toggle="modal" data-target=".we-LanguageModal"><i class="we-lang-icon we-lang-icon-${header.currentLanguage.countrycode}"></i> ${header.currentLanguage.languagecode}</a></li>
+            </ul>
+        </div>
+
+        <!-- /.navbar-collapse -->
+        <div class="navbar-right-outside">
+            <a href="#" class="btn ${header.theme == 'inverse' ? 'btn-primary' : ''}" data-toggle="modal" data-target="#navbar-search">
+                <span class="sr-only">Search</span><i class="we-Icon we-Icon--search" aria-hidden="true"></i>
+            </a>
+        </div>
+        <!-- /.navbar-right-outside -->
+
+        <span class="navbar-shutter"></span>
+    </nav>
+    <!-- /.navbar -->
+</div>

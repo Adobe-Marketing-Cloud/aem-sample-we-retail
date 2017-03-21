@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="sling/hapi/components/type"
+    description="We.Retail Commerce Product Add To Cart Form"
+    fqdn="we.retail.commerce.hapi.addcartentryform"
+    name="addcartentryform"
+    parameters="[\0]">
+    <color
+        jcr:primaryType="nt:unstructured"
+        description="Available colors"
+        multiple="{Boolean}true"
+        type="org.apache.sling.hapi.common.Text"/>
+    <size
+        jcr:primaryType="nt:unstructured"
+        description="Available sizes"
+        multiple="{Boolean}true"
+        type="org.apache.sling.hapi.common.Text"/>
+    <redirectPath
+        jcr:primaryType="nt:unstructured"
+        description="Redirect path"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <redirectErrorPath
+        jcr:primaryType="nt:unstructured"
+        description="Redirect in case of an error"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <quantity
+        jcr:primaryType="nt:unstructured"
+        description="Number of products that should be added to the cart"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Number"/>
+    <productPath
+        jcr:primaryType="nt:unstructured"
+        description="Path to the product"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <smartlistPath
+        jcr:primaryType="nt:unstructured"
+        description="Path / ID of the smart list"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <addToCartButton
+        jcr:primaryType="nt:unstructured"
+        description="Add To Cart button"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <addAllToCartButton
+        jcr:primaryType="nt:unstructured"
+        description="Add all products to cart button"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <addToSmartlistButton
+        jcr:primaryType="nt:unstructured"
+        description="Add To Smartlist button"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+</jcr:root>

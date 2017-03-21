@@ -2,6 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
+        cq:commerceProvider="we-retail"
         cq:lastModified="{Date}2015-10-12T23:10:09.098+02:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/we-retail/settings/wcm/templates/redirect-page"
@@ -13,5 +14,9 @@
         branding-global-less="/etc/designs/we-retail/global.less"
         hideInNav="{Boolean}true"
         redirectTarget="/content/we-retail/language-masters/en"/>
+    <de/>
     <en/>
+    <es/>
+    <fr/>
+    <it/>
 </jcr:root>

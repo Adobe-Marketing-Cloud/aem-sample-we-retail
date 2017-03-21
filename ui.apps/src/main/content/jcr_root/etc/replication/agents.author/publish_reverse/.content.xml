@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2010-01-10T22:48:46.660+01:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/replication/templates/revagent"
+        jcr:description="Agent that retrieves reverse replicated content from the default publish instance's outbox."
+        jcr:lastModified="{Date}2010-01-10T22:48:46.654+01:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Reverse Replication Agent"
+        sling:resourceType="cq/replication/components/revagent"
+        enabled="true"
+        logLevel="info"
+        protocolHTTPMethod="GET"
+        retryDelay="60000"
+        reverseReplication="true"
+        serializationType="durbo"
+        transportPassword="\{DES}860e3e2c40a2ef1a38d267ad7e3ec9da"
+        transportUri="http://localhost:4503/bin/receive?sling:authRequestLogin=1"
+        transportUser="admin"/>
+</jcr:root>

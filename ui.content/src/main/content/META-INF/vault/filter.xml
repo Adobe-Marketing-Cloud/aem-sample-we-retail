@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2016 Adobe Systems Incorporated
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <workspaceFilter version="1.0">
     <filter root="/conf/we-retail"/>
     <filter root="/content/campaigns/we-retail"/>
     <filter root="/content/catalogs/we-retail/en/website-catalog"/>
     <filter root="/content/catalogs/we-retail/en/website-template-pages"/>
     <filter root="/content/dam/collections/w/we-retail" mode="merge"/>
-    <filter root="/content/we-retail/community" mode="merge"/>
+    <filter root="/content/dam/projects/we-retail"/>
     <filter root="/content/we-retail">
-        <exclude pattern="/content/we-retail/community(/.*)"/>
+        <exclude pattern="/content/we-retail/us/en/community"/>
     </filter>
+    <filter root="/content/projects/we-retail"/>
+    <filter root="/content" mode="update">
+        <exclude pattern="/content/(.*)?" />
+    </filter>
+    <filter root="/home/groups/projects/admin/we_retail"/>
 </workspaceFilter>

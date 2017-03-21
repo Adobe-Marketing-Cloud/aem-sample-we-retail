@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
-    <community/>
     <jcr:content
         cq:allowedTemplates="[/conf/we-retail/settings/wcm/templates/.*]"
+        cq:cloudserviceconfigs="[/etc/cloudservices/msft-translation/msft_trial,/etc/cloudservices/translation/default_translation]"
         cq:designPath="/etc/designs/we-retail"
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
         cq:lastModified="{Date}2016-02-09T00:05:48.520+01:00"
         cq:lastModifiedBy="admin"
         jcr:primaryType="cq:PageContent"
@@ -19,6 +20,13 @@
             <file/>
         </image>
     </jcr:content>
+    <ca/>
+    <ch/>
+    <de/>
+    <es/>
+    <fr/>
+    <it/>
     <language-masters/>
     <us/>
+    <resources/>
 </jcr:root>

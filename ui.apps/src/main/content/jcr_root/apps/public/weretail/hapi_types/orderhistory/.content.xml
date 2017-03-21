@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="sling/hapi/components/type"
+    description="We.Retail Commerce Order History"
+    fqdn="we.retail.commerce.hapi.orderhistory"
+    name="orderhistory"
+    parameters="[\0]">
+    <order
+        jcr:primaryType="nt:unstructured"
+        description="Orders in Order History"
+        multiple="{Boolean}true"
+        type="/apps/public/weretail/hapi_types/order"/>
+</jcr:root>

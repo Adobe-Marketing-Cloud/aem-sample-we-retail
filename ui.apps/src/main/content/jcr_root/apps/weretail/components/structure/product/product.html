@@ -1,0 +1,144 @@
+<!--/*
+    Copyright 2016 Adobe Systems Incorporated
+  
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+<div class="we-Product cq-dd-product-data-reference"
+     data-sly-use.productModel="we.retail.core.model.ProductModel"
+     data-sly-use.hapiProduct="${'org.apache.sling.hapi.sightly.HApiUse' @ type='/apps/public/weretail/hapi_types/product'}"
+     data-sly-attribute="${hapiProduct.itemtype}">
+
+    <div data-sly-test="${wcmmode.edit && !model.hasVariants}" class="cq-placeholder"
+         data-emptytext="Product Component"></div>
+    
+    <we-product-variant
+        data-sly-repeat.productItem="${productModel.productItem.variants}"
+        is-base="${productItemList.first ? 1 : 0}"
+        path="${productItem.path}"
+        page-path="${productItem.pagePath}"
+        variants="${productItem.variants}"
+        sku="${productItem.sku}"
+        title="${productItem.title}"
+        description="${productItem.description}"
+        price="${productItem.price}"
+        summary="${productItem.summary}"
+        features="${productItem.features}"
+        image="${productItem.imageUrl}"
+        thumbnail="${productItem.thumbnailUrl}"
+        variant-axes="${productItem.variantAxesMapJson}"></we-product-variant>
+    
+    <div class="row">
+    
+        <div class="col-md-5 col-md-offset-1">
+            <div class="we-Product-visual" 
+                 data-sly-use.hapiProductAsset="${'org.apache.sling.hapi.sightly.HApiUse' @ type=hapiProduct.proptype.assets}"
+                 data-sly-attribute="${hapiProduct.itemprop.assets}"> <!-- TODO: add zoom and slider -->
+
+                <img src="${productModel.productItem.imageUrl}" class="img-responsive" v-bind:src="product.image" data-sly-attribute="${hapiProductAsset.itemprop.path}" />
+                
+                <!--/*
+                <a href="#" class="we-Product-visual-zoom"><i class="we-Icon we-Icon--zoom-plus"></i> View larger</a>
+                */-->
+            </div>
+        </div>
+    
+        <div class="col-md-5 col-md-offset-1">
+            <div class="row">
+                <div class="col-xs-6">
+                    <strong class="we-Product-brand h4" v-html="product.description" data-sly-attribute="${hapiProduct.itemprop.description}">${productModel.productItem.description}</strong>
+                </div>
+                <div class="col-xs-6 text-right">
+                    <span class="we-Product-code">SKU: <span v-text="product.sku" data-sly-attribute="${hapiProduct.itemprop.sku}">${productModel.productItem.sku}</span></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="we-Product-name" v-html="product.title" data-sly-attribute="${hapiProduct.itemprop.name}">${productModel.productItem.title}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <strong class="we-Product-price h2" v-html="product.price" data-sly-attribute="${hapiProduct.itemprop.price}">${productModel.productItem.price}</strong>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="we-Rating">
+                        <div data-sly-resource="${'rating' @ resourceType='weretail/components/hbs/rating', wcmmode='disabled'}"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="we-Product-description separator" v-html="product.summary" data-sly-attribute="${hapiProduct.itemprop.summary}">${productModel.productItem.summary}</div>
+                </div>
+            </div>
+            
+            <form class="we-Product-form" v-el:weProductForm action="${productModel.addToCartUrl}" method="POST"
+                  data-sly-use.hapiProductForm="${'org.apache.sling.hapi.sightly.HApiUse' @ type='/apps/public/weretail/hapi_types/addcartentryform'}"
+                  data-sly-attribute="${hapiProductForm.itemtype}"
+                  data-rel="addCartEntryForm">
+                <input type="hidden" name="redirect" v-model="product.pagePath" data-sly-attribute="${hapiProductForm.itemprop.redirectPath}" />
+                <input type="hidden" name="redirect-product-not-found" v-model="product.pagePath" data-sly-attribute="${hapiProductForm.itemprop.redirectErrorPath}" />
+                <input type="hidden" name="product-quantity" value="1" data-sly-attribute="${hapiProductForm.itemprop.quantity}" />
+                <input type="hidden" name="product-path" v-model="product.path" data-sly-attribute="${hapiProductForm.itemprop.productPath}" />
+                <input type="hidden" name=":operation" value="addToSmartList" />
+
+                <sly data-sly-list.axisName="${productModel.productItem.variantsAxesValues}">
+                <div class="form-group fg-title">
+                    <label>${axisName @ i18n}</label>
+                </div>
+                <div class="form-group fg-content">
+                    <div class="we-Product-radio marker radio-inline" data-sly-repeat.axisValue="${productModel.productItem.variantsAxesValues[axisName]}">
+                        <label>
+                            <input data-sly-test="${axisName != 'color'}" type="radio" name="${axisName}" value="${axisValue}" title="${axisValue}"
+                                   v-bind:checked="isChecked('${axisName}','${axisValue}')" v-on:click="setProduct"
+                                   data-sly-attribute="${hapiProductForm.itemprop[axisName]}" />
+                            <input data-sly-test="${axisName == 'color'}" type="radio" name="${axisName}" value="${axisValue}" title="${axisValue}"
+                                   v-bind:checked="isChecked('${axisName}','${axisValue}')" v-on:click="setProduct" 
+                                   style="background-color:${axisValue @context='styleString'};"
+                                   data-sly-attribute="${hapiProductForm.itemprop[axisName]}" />
+                            <div data-sly-test="${axisName != 'color'}">${axisValue}</div>
+                            <div data-sly-test="${axisName == 'color'}" style="background-color:${axisValue @context='styleString'};"></div>
+                        </label>
+                    </div>
+                </div>
+                </sly>
+            
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <!--/*
+                            <span class="we-Product-status text-success">In stock</span>
+                            */-->
+                        </div>
+                        <div class="col-md-8 text-right">
+                            <div class="we-Product-actions">
+                                <button type="submit" class="btn btn-action btn-primary" v-on:click="trackCartAdd"
+                                        data-sly-attribute="${hapiProductForm.itemprop.addToCartButton}">Add to cart</button>
+                                <a data-sly-test="${!productModel.isAnonymous}" v-on:click.prevent="addToWishlist"
+                                   href="#" data-smartlist-url="${productModel.addToSmartListUrl}"
+                                   class="btn btn-icon btn-primary we-retail-not-anonymous" data-sly-attribute="${hapiProductForm.itemprop.addToSmartlistButton}">
+                                    <i class="fa fa-heart-o"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+    
+    </div>
+
+</div>

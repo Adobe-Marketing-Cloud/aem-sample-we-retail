@@ -1,0 +1,71 @@
+<!--/*
+    Copyright 2016 Adobe Systems Incorporated
+  
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+
+<sly data-sly-use.order="we.retail.core.model.VendorOrderModel">
+
+    <div data-sly-test.empty="${order.entries.size == 0}" class="cq-order-details-entries">
+        <h3 class="empty">${'Order contains no items.' @ i18n, locale=request.locale}</h3>
+    </div>
+
+    <div data-sly-test="${!empty}">
+    
+        <h3>${order.title}</h3>
+        <table class="cq-order-details-entries">
+        
+            <tr class="entry" data-sly-repeat.item="${order.entries}">
+            <td class="thumbnail">
+                <a href="${item.product.pagePath}">
+                    <span class="image"><img src="${item.product.thumbnailUrl}" alt="${item.product.title}"/></span>
+                </a>
+            </td>
+            <td class="foundation-field-editable product">
+                <span class="foundation-field-readonly coral-Form-fieldwrapper">
+                    <span class="coral-Heading--4"><a href="${item.product.pagePath}">${item.product.title}</a></span>
+                    <span class="coral-Heading--5">${item.product.description}</span>
+                    <span class="coral-Heading--5" data-sly-repeat.key="${item.variantAxesMap}">${key}: ${item.variantAxesMap[key]}</span>     
+                    <br>
+                    <span class="coral-Heading--5" data-sly-test="${item.wrapping && !item.wrappingLabel}">${'Gift wrapping selected' @ i18n, locale=request.locale}</span>
+                    <span class="coral-Heading--5" data-sly-test="${item.wrapping && item.wrappingLabel}">${'Gift wrapping message' @ i18n, locale=request.locale}: ${item.wrappingLabel}</span>
+                </span>
+                <span class="foundation-field-edit coral-Form-fieldwrapper">
+                    <label class="coral-Form-fieldlabel" for="cq-commerce-cartentry${item.entry.entryIndex}-path" style="display: none">${'Path for' @ i18n, locale=request.locale} ${item.product.title}</label>
+                    <input class="coral-Form-field coral-Textfield" id="cq-commerce-cartentry${item.entry.entryIndex}-path" type="text" name="cartentry${item.entry.entryIndex}:path" value="${item.product.path}"/>
+                    <label class="coral-Form-fieldlabel" for="cq-commerce-cartentry${item.entry.entryIndex}-path" style="display: none">${'Path for' @ i18n, locale=request.locale}${item.product.title}</label>
+                    <label class="coral-Form-fieldlabel">${'Gift wrapping' @ i18n, locale=request.locale}&nbsp;<input class="coral-Form-field coral-Checkbox" style="width: 20px" id="cq-commerce-cartentry${item.entry.entryIndex}-wrapping" type="checkbox" checked="${item.wrapping}" name="cartentry${item.entry.entryIndex}:wrapping-selected" value="true"/></label>
+                    <label class="coral-Form-fieldlabel">${'Gift wrapping message' @ i18n, locale=request.locale}&nbsp;<input class="coral-Form-field coral-Textfield" id="cq-commerce-cartentry${item.entry.entryIndex}-label" type="text" name="cartentry${item.entry.entryIndex}:wrapping-label" value="${entry.wrappingLabel}"/></label>
+                </span>
+            </td>
+            <td class="foundation-field-editable quantity">
+                <span class="foundation-field-readonly">${item.entry.quantity}</span>
+                <div class="foundation-field-edit coral-Form-fieldwrapper">
+                    <label class="coral-Form-fieldlabel" for="cq-commerce-cartentry${item.entry.entryIndex}-quantity" style="display: none">${'Quantity for' @ i18n, locale=request.locale} ${item.product.title}</label>
+                    <input class="coral-Form-field coral-Textfield" id="cq-commerce-cartentry${item.entry.entryIndex}-quantity" type="text" name="cartentry${item.entry.entryIndex}:quantity" value="${item.entry.quantity}"/>
+                </div>
+            </td>
+            <td class="foundation-field-editable price" data-sly-test.showPrice="${order.showPrice}">
+                <span class="foundation-field-readonly">${item.price}</span>
+                <div class="foundation-field-edit coral-Form-fieldwrapper">
+                    <label class="coral-Form-fieldlabel" for="cq-commerce-cartentry${item.entry.entryIndex}-price" style="display: none">${'Price for' @ i18n, locale=request.locale} ${item.product.title}</label>
+                    <input class="coral-Form-field coral-Textfield" id="cq-commerce-cartentry${item.entry.entryIndex}-price" type="text" name="cartentry${item.entry.entryIndex}:price" value="${item.price}"/>
+                </div>
+            </td>
+        </tr>
+        
+        </table>
+        
+    </div>
+
+</sly>

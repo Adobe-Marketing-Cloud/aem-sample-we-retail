@@ -1,0 +1,66 @@
+<!--/*
+    Copyright 2016 Adobe Systems Incorporated
+  
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+<sly
+        data-sly-use.clientlib="${'/libs/granite/sightly/templates/clientlib.html'}"
+        data-sly-call="${clientLib.all @ categories='weretail.footer'}"/>
+
+<sly data-sly-use.footer="Footer">
+    <footer class="we-Footer width-full">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="we-Logo we-Logo--big">
+                        we.<strong>Retail</strong>
+                    </div>
+                </div>
+
+                <div class="col-md-8 col-xs-12">
+                    <sly data-sly-list.item="${footer.items}">
+                        <div class="col-lg-2 col-md-2 col-xs-3">
+                            <div class="we-Footer-nav">
+                                <h2 class="h4">
+                                    <a href="${ item.path }.html">${item.title}</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </sly>
+                </div>
+
+
+            </div>
+
+            <div class="row we-Footer-section we-Footer-section--sub">
+                <div class="we-Footer-section-item">
+                    <span class="text-uppercase text-muted">&copy; ${ footer.year } All rights reserved</span>
+                </div>
+                <div class="we-Footer-section-item">
+                    <a href="#" class="text-uppercase text-muted">Terms of use &amp; privacy policy</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-center">
+                        <a href="#top" class="btn btn-action btn-action-up btn-primary">Ride to the top</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</sly>

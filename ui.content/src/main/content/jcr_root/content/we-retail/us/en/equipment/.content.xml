@@ -10,7 +10,7 @@
         jcr:mixinTypes="[cq:LiveRelationship]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Equipment"
-        sling:resourceType="we-retail/components/structure/page">
+        sling:resourceType="weretail/components/structure/page">
         <root
             cq:lastRolledout="{Date}2016-03-14T22:18:58.133+01:00"
             cq:lastRolledoutBy="admin"
@@ -26,7 +26,7 @@
                 jcr:lastModifiedBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="we-retail/components/content/hero-image"
+                sling:resourceType="weretail/components/content/heroimage"
                 fileReference="/content/dam/we-retail/en/activities/biking/forest-trail.jpg"
                 useFullWidth="true"/>
             <responsivegrid
@@ -49,7 +49,8 @@
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Welcome our finest equipment"
-                    sling:resourceType="we-retail/components/content/title"/>
+                    sling:resourceType="weretail/components/content/title"
+                    type="h2"/>
                 <category_teaser
                     cq:lastRolledout="{Date}2016-03-14T22:18:58.185+01:00"
                     cq:lastRolledoutBy="admin"
@@ -59,7 +60,7 @@
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/category-teaser"
+                    sling:resourceType="weretail/components/content/categoryteaser"
                     buttonLinkTo="/content/we-retail/us/en/products/equipment/hiking"
                     fileReference="/content/dam/we-retail/en/activities/hiking-camping/hiker-anapurna.jpg">
                     <cq:responsive
@@ -84,7 +85,7 @@
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/category-teaser"
+                    sling:resourceType="weretail/components/content/categoryteaser"
                     buttonLinkTo="/content/we-retail/us/en/products/equipment/running"
                     fileReference="/content/dam/we-retail/en/activities/running/running-trail-man.jpg">
                     <cq:responsive
@@ -109,7 +110,7 @@
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/category-teaser"
+                    sling:resourceType="weretail/components/content/categoryteaser"
                     buttonLinkTo="/content/we-retail/us/en/products/equipment/biking"
                     fileReference="/content/dam/we-retail/en/activities/biking/enduro-trail-jump.jpg">
                     <cq:responsive
@@ -134,7 +135,7 @@
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/category-teaser"
+                    sling:resourceType="weretail/components/content/categoryteaser"
                     buttonLinkTo="/content/we-retail/us/en/products/equipment/surfing"
                     fileReference="/content/dam/we-retail/en/activities/surfing/wave-nicaragua.jpg">
                     <cq:responsive
@@ -159,7 +160,7 @@
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/category-teaser"
+                    sling:resourceType="weretail/components/content/categoryteaser"
                     buttonLinkTo="/content/we-retail/us/en/products/equipment/snow-sports"
                     fileReference="/content/dam/we-retail/en/activities/skiing/freeride-steep.jpg">
                     <cq:responsive
@@ -185,7 +186,8 @@
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Featured products"
-                    sling:resourceType="we-retail/components/content/title"/>
+                    sling:resourceType="weretail/components/content/title"
+                    type="h2"/>
                 <product_grid
                     cq:lastRolledout="{Date}2016-03-14T22:18:58.234+01:00"
                     cq:lastRolledoutBy="admin"
@@ -195,14 +197,14 @@
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/product-grid"
+                    sling:resourceType="weretail/components/content/productgrid"
                     displayAs="products"
                     feedEnabled="{Boolean}true"
                     limit="6"
                     listFrom="static"
                     orderBy="jcr:title"
                     pageMax="0"
-                    pages="[/content/we-retail/us/en/products/equipment/biking/sparrow,/content/we-retail/us/en/products/equipment/running/mombassa-runners,/content/we-retail/us/en/products/equipment/biking/tacna,/content/we-retail/us/en/products/equipment/sunglasses/timor,/content/we-retail/us/en/products/equipment/surfing/lagos-mini-longboard,/content/we-retail/us/en/products/equipment/running/marka-sport]"
+                    pages="[/content/we-retail/us/en/products/equipment/biking/marin-mountain-bike-shoes,/content/we-retail/us/en/products/equipment/running/fleet-cross-training-shoe,/content/we-retail/us/en/products/equipment/biking/sequoia-bike-helmet,/content/we-retail/us/en/products/equipment/hiking/rios-t-shirt,/content/we-retail/us/en/products/equipment/surfing/the-stretch-longboard,/content/we-retail/us/en/products/equipment/running/faba-running-pants]"
                     tagsMatch="any"/>
                 <button
                     cq:lastRolledout="{Date}2016-03-14T22:18:58.236+01:00"
@@ -213,7 +215,7 @@
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/button"
+                    sling:resourceType="weretail/components/content/button"
                     label="All equipment"
                     linkTo="/content/we-retail/us/en/products/equipment"/>
                 <title_419694046
@@ -226,7 +228,8 @@
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Winter is coming, get ready"
-                    sling:resourceType="we-retail/components/content/title"/>
+                    sling:resourceType="weretail/components/content/title"
+                    type="h2"/>
                 <category_teaser_643606949
                     cq:lastRolledout="{Date}2016-03-14T22:18:58.241+01:00"
                     cq:lastRolledoutBy="admin"
@@ -236,7 +239,7 @@
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/category-teaser"
+                    sling:resourceType="weretail/components/content/categoryteaser"
                     buttonLinkTo="/content/we-retail/us/en/products/equipment/snow-sports"
                     fileReference="/content/dam/we-retail/en/activities/skiing/freeride-extreme.jpg">
                     <cq:responsive
@@ -261,7 +264,7 @@
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="we-retail/components/content/category-teaser"
+                    sling:resourceType="weretail/components/content/categoryteaser"
                     buttonLabel="Snowboarding"
                     buttonLinkTo="/content/we-retail/us/en/products/equipment/snow-sports"
                     fileReference="/content/dam/we-retail/en/activities/skiing/freeride-siberia.jpg">

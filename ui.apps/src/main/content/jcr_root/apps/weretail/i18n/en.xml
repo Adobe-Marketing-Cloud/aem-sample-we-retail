@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:language="en"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+    <color
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="color"
+        sling:message="Colors"/>
+    <size
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="size"
+        sling:message="Sizes"/>
+</jcr:root>

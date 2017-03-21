@@ -4,8 +4,10 @@
     jcr:primaryType="cq:Page">
     <rep:policy/>
     <hero-page/>
+    <content-page/>
     <experience-page/>
     <section-page/>
     <product-page/>
     <redirect-page/>
+    <experience-fragment-web-variation/>
 </jcr:root>

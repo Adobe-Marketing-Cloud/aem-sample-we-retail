@@ -1,18 +1,20 @@
+/*******************************************************************************
+ * Copyright 2016 Adobe Systems Incorporated
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ ******************************************************************************/
 package we.retail.core.productrelationships;
 
-
-import com.adobe.cq.commerce.api.CommerceException;
-import com.adobe.cq.commerce.api.CommerceSession;
-import com.adobe.cq.commerce.api.Product;
-import com.adobe.cq.commerce.api.ProductRelationship;
-import com.adobe.cq.commerce.common.AbstractJcrProduct;
-import com.adobe.cq.commerce.common.DefaultProductRelationship;
-import com.day.cq.wcm.api.PageManager;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.sling.api.resource.Resource;
-import org.apache.sling.api.resource.ResourceResolver;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -21,6 +23,17 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
+import org.apache.sling.api.resource.Resource;
+import org.apache.sling.api.resource.ResourceResolver;
+
+import com.adobe.cq.commerce.api.CommerceException;
+import com.adobe.cq.commerce.api.CommerceSession;
+import com.adobe.cq.commerce.api.Product;
+import com.adobe.cq.commerce.api.ProductRelationship;
+import com.adobe.cq.commerce.common.AbstractJcrProduct;
+import com.adobe.cq.commerce.common.DefaultProductRelationship;
+import com.day.cq.wcm.api.PageManager;
 
 /**
  * A sample RelatedProductsCollector which matches based on tags.
@@ -75,7 +88,13 @@ public class SimilarProductsCollector {
     }
 
     /**
-     * Add a product relationship.  Include 'price', 'matched-tags' and 'rank' as extra metadata.
+     * Add a product relationship. Include 'price', 'matched-tags' and 'rank' as extra metadata.
+     * 
+     * @param product
+     *            The product to add
+     * @param matchedTags
+     *            The list of matched tags
+     * @throws CommerceException
      */
     protected void addProduct(Product product, List<String> matchedTags) throws CommerceException {
         int rank = matchedTags.size();
@@ -137,6 +156,8 @@ public class SimilarProductsCollector {
 
     /**
      * Return the collected relationships, sorted by 'rank'.
+     * 
+     * @return the list of relationships, sorted by 'rank'
      */
     public List<ProductRelationship> getRelationships() {
         List<ProductRelationship> relationshipList = new ArrayList<ProductRelationship>(relationships.values());

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="sling/hapi/components/type"
+    description="We.Retail Commerce Product"
+    fqdn="we.retail.commerce.hapi.product"
+    name="product"
+    parameters="[\0]">
+    <path
+        jcr:primaryType="nt:unstructured"
+        description="Path to the product"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <name
+        jcr:primaryType="nt:unstructured"
+        description="Name of the product"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <description
+        jcr:primaryType="nt:unstructured"
+        description="Description of the product"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <summary
+        jcr:primaryType="nt:unstructured"
+        description="Summary of the product"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <sku
+        jcr:primaryType="nt:unstructured"
+        description="SKU identifier of the product"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <color
+        jcr:primaryType="nt:unstructured"
+        description="Color of the product"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <size
+        jcr:primaryType="nt:unstructured"
+        description="Size of the product"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <price
+        jcr:primaryType="nt:unstructured"
+        description="Price of the product"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <tags
+        jcr:primaryType="nt:unstructured"
+        description="Tags of the product"
+        multiple="{Boolean}true"
+        type="/apps/public/weretail/hapi_types/tag"/>
+    <assets
+        jcr:primaryType="nt:unstructured"
+        description="Assets of the product"
+        multiple="{Boolean}true"
+        type="/apps/public/weretail/hapi_types/asset"/>
+    <variants
+        jcr:primaryType="nt:unstructured"
+        description="Variants of the product"
+        multiple="{Boolean}true"
+        type="/apps/public/weretail/hapi_types/product"/>
+</jcr:root>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/etc/designs/default"
+        cq:template="/libs/commerce/templates/promotion"
+        jcr:description="Rewarding our big spenders."
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Free Shipping"
+        sling:resourceType="commerce/components/promotion"
+        priority="100"
+        promotionType="/libs/commerce/components/promotion/freeshipping">
+        <config
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="commerce/components/promotion/freeshipping"
+            amountMessage="Shipping's on us -- you saved {1}!"
+            defaultMessage="Your order qualifies for free shipping!"/>
+    </jcr:content>
+</jcr:root>

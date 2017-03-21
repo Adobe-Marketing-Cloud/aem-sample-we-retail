@@ -1,0 +1,41 @@
+<!--/*
+    Copyright 2016 Adobe Systems Incorporated
+  
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+<div class="we-ShoppingCartPrices" data-resource="${resource.path}"
+     data-sly-use.cart="we.retail.core.model.ShoppingCartPricesModel"
+     data-sly-use.hapiCartPrices="${'org.apache.sling.hapi.sightly.HApiUse' @type='/apps/public/weretail/hapi_types/cartprices'}">
+    <div class="shoppingcart-prices body" data-sly-attribute="${hapiCartPrices.itemtype}" data-sly-test="${!cart.isEmpty}">
+        <div class="row" data-sly-test="${cart.showSubTotal}">
+            <div class="cell-title">${'Subtotal' @ i18n}</div>
+            <div class="cell-align-right"
+                data-sly-attribute="${hapiCartPrices.itemprop.subTotal}">${cart.subTotal}</div>
+        </div>
+        <div class="row" data-sly-test="${cart.showShippingTotal}">
+            <div class="cell-title">${'Shipping' @ i18n}</div>
+            <div class="cell-align-right"
+                data-sly-attribute="${hapiCartPrices.itemprop.shippingTotal}">${cart.shippingTotal}</div>
+        </div>
+        <div class="row" data-sly-test="${cart.showTaxTotal}">
+            <div class="cell-title">${'Tax' @ i18n}</div>
+            <div class="cell-align-right"
+                data-sly-attribute="${hapiCartPrices.itemprop.taxTotal}">${cart.taxTotal}</div>
+        </div>
+        <div class="row" data-sly-test="${cart.showTotal}">
+            <div class="cell-title border-top">${'Total' @ i18n}</div>
+            <div class="cell-align-right cell-strong border-top"
+                data-sly-attribute="${hapiCartPrices.itemprop.total}">${cart.total}</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:Group"
+    jcr:uuid="49902166-0051-3436-ba7f-1c1494138bd2"
+    rep:authorizableId="projects-we_retail-owner"
+    rep:principalName="projects-we_retail-owner">
+    <profile
+        jcr:primaryType="nt:unstructured"
+        alternateTitle="Owners"
+        givenName="We.Retail Owners"/>
+</jcr:root>

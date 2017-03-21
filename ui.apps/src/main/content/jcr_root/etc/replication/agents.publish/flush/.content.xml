@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:name="flush"
+        cq:template="/libs/cq/replication/templates/agent"
+        jcr:description="Example agent that is triggered on modification and sends flush requests to the dispatcher."
+        jcr:mixinTypes="[cq:ReplicationStatus]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Dispatcher Flush"
+        sling:resourceType="cq/replication/components/agent"
+        logLevel="error"
+        noVersioning="true"
+        protocolHTTPHeaders="[CQ-Action:{action},CQ-Handle:{path},CQ-Path: {path}]"
+        protocolHTTPMethod="GET"
+        retryDelay="60000"
+        serializationType="flush"
+        transportUri="http://localhost:8000/dispatcher/invalidate.cache"
+        triggerReceive="true"
+        triggerSpecific="true"/>
+</jcr:root>

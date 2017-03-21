@@ -1,0 +1,84 @@
+<!--/*
+    Copyright 2016 Adobe Systems Incorporated
+  
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+<template data-sly-template.color="${@ item}">
+    <we-product-filter type="color">
+        <div class="we-ProductFilter we-ProductFilter-collapsible">
+            <div class="we-ProductFilter-header">
+                <span class="we-ProductFilter-name">${"Colors" @ i18n}</span>
+                <span class="we-ProductFilter-toggle">
+                    <i class="we-Icon we-Icon--close"></i>
+                </span>
+            </div>
+            <div class="we-ProductFilter-values">
+                <div class="we-Product-radio marker checkbox-inline" v-for="color in filters.color" v-cloak>
+                    <label>
+                        <input type="checkbox" name="product-color"
+                               v-on:click="onFilterClick('color', color, $event)"
+                               v-bind:value="color"
+                               v-bind:title="color"
+                               v-bind:style="'background-color:red' + color + ';'">
+                       <div v-bind:style="'background-color:' + color" class="responsive-color"></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- /.we-ProductFilter -->
+    </we-product-filter>
+</template>
+
+<template data-sly-template.price="${@ item}">
+    <we-product-filter type="price">
+        <div class="we-ProductFilter we-ProductFilter-collapsible">
+            <div class="we-ProductFilter-header">
+                <span class="we-ProductFilter-name">${"Price" @ i18n}</span>
+        <span class="we-ProductFilter-toggle">
+            <i class="we-Icon we-Icon--close"></i>
+        </span>
+            </div>
+            <div class="we-ProductFilter-values">
+                <div class="checkbox" v-for="price in filters.price">
+                    <label>
+                        <input type="checkbox"
+                               v-on:click="onFilterClick('price', price.list, $event)">
+                        {{price.label}}
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- /.we-ProductFilter -->
+    </we-product-filter>
+</template>
+
+<template data-sly-template.size="${@ item}">
+    <div class="we-ProductFilter we-ProductFilter-collapsible">
+        <div class="we-ProductFilter-header">
+            <span class="we-ProductFilter-name">${"Sizes" @ i18n}</span>
+        <span class="we-ProductFilter-toggle">
+            <i class="we-Icon we-Icon--close"></i>
+        </span>
+        </div>
+        <div class="we-ProductFilter-values">
+            <div class="checkbox" v-for="size in filters.size">
+                <label>
+                    <input type="checkbox"
+                           v-on:click="onFilterClick('size', size, $event)">
+                    {{size}}
+                </label>
+            </div>
+        </div>
+    </div>
+    <!-- /.we-ProductFilter -->
+</template>

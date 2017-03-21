@@ -1,6 +1,40 @@
+/*******************************************************************************
+ * Copyright 2016 Adobe Systems Incorporated
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ ******************************************************************************/
 package we.retail.core;
 
-import com.adobe.cq.commerce.api.*;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+
+import javax.jcr.Node;
+
+import org.apache.commons.collections.Predicate;
+import org.apache.jackrabbit.commons.JcrUtils;
+import org.apache.sling.api.SlingHttpServletRequest;
+import org.apache.sling.api.SlingHttpServletResponse;
+import org.apache.sling.api.resource.Resource;
+import org.apache.sling.api.resource.ResourceUtil;
+
+import com.adobe.cq.commerce.api.CommerceConstants;
+import com.adobe.cq.commerce.api.CommerceException;
+import com.adobe.cq.commerce.api.CommerceService;
+import com.adobe.cq.commerce.api.CommerceSession;
+import com.adobe.cq.commerce.api.PaymentMethod;
+import com.adobe.cq.commerce.api.Product;
+import com.adobe.cq.commerce.api.ShippingMethod;
 import com.adobe.cq.commerce.api.promotion.Voucher;
 import com.adobe.cq.commerce.common.AbstractJcrCommerceService;
 import com.adobe.cq.commerce.common.CommerceHelper;
@@ -9,22 +43,10 @@ import com.adobe.cq.commerce.common.promotion.AbstractJcrVoucher;
 import com.day.cq.commons.jcr.JcrConstants;
 import com.day.cq.tagging.Tag;
 import com.day.cq.wcm.api.Page;
-import org.apache.commons.collections.Predicate;
-import org.apache.jackrabbit.commons.JcrUtils;
-import org.apache.sling.api.SlingHttpServletRequest;
-import org.apache.sling.api.SlingHttpServletResponse;
-import org.apache.sling.api.resource.Resource;
-import org.apache.sling.api.resource.ResourceUtil;
 
-import javax.jcr.Node;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-
-/**
- * Created by Daniel on 09/03/16.
- */
 public class WeRetailCommerceServiceImpl extends AbstractJcrCommerceService implements CommerceService  {
+
+    private static final String REQUEST_ATTRIBUTE_NAME = WeRetailCommerceServiceImpl.class.getName();
 
     private Resource resource;
 
@@ -35,7 +57,15 @@ public class WeRetailCommerceServiceImpl extends AbstractJcrCommerceService impl
 
     @Override
     public CommerceSession login(SlingHttpServletRequest request, SlingHttpServletResponse response) throws CommerceException {
-        return new WeRetailCommerceSessionImpl(this, request, response, resource);
+        // This avoids that the session is instantiated multiple times by multiple components for the same request
+        Object session = request.getAttribute(REQUEST_ATTRIBUTE_NAME);
+        if (session != null) {
+            return (CommerceSession) session;
+        }
+
+        CommerceSession commerceSession = new WeRetailCommerceSessionImpl(this, request, response, resource);
+        request.setAttribute(REQUEST_ATTRIBUTE_NAME, commerceSession);
+        return commerceSession;
     }
 
     @Override
@@ -145,12 +175,12 @@ public class WeRetailCommerceServiceImpl extends AbstractJcrCommerceService impl
 
     @Override
     public List<ShippingMethod> getAvailableShippingMethods() throws CommerceException {
-        return enumerateMethods("/etc/commerce/shipping-methods/geometrixx-outdoors", ShippingMethod.class);
+        return enumerateMethods("/etc/commerce/shipping-methods/we-retail", ShippingMethod.class);
     }
 
     @Override
     public List<PaymentMethod> getAvailablePaymentMethods() throws CommerceException {
-        return enumerateMethods("/etc/commerce/payment-methods/geometrixx-outdoors", PaymentMethod.class);
+        return enumerateMethods("/etc/commerce/payment-methods/we-retail", PaymentMethod.class);
     }
 
     @Override

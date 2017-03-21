@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:catalogVersion="561"
+        cq:template="/libs/commerce/templates/catalog"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:language="en"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Master Catalog"
+        jcr:uuid="795ec208-c0f3-46ce-9281-b13011e152e0"
+        sling:resourceType="commerce/components/catalog"
+        coverUrl="/content/dam/we-retail/en/products/Product_catalog.jpg">
+        <target
+            jcr:primaryType="nt:unstructured"
+            coverImage="/content/dam/we-retail/en/products/Product_catalog.jpg"/>
+        <templates
+            jcr:primaryType="nt:unstructured"
+            proxyProductPages="false"/>
+        <filter
+            jcr:primaryType="nt:unstructured"
+            basePath="/etc/commerce/products/we-retail"
+            searchType="simple"/>
+    </jcr:content>
+    <women/>
+    <men/>
+    <equipment/>
+</jcr:root>

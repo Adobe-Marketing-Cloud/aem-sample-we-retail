@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="sling/hapi/components/type"
+    description="We.Retail Commerce Shopping Cart"
+    fqdn="we.retail.commerce.hapi.cart"
+    name="cart"
+    parameters="[\0]">
+    <entries
+        jcr:primaryType="nt:unstructured"
+        description="Entries in the Shopping Cart"
+        multiple="{Boolean}true"
+        type="/apps/public/weretail/hapi_types/cartentry"/>
+    <total
+        jcr:primaryType="nt:unstructured"
+        description="Total sum of the shopping cart"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <totalEntries
+        jcr:primaryType="nt:unstructured"
+        description="Total number of entries in the shopping cart"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Number"/>
+</jcr:root>

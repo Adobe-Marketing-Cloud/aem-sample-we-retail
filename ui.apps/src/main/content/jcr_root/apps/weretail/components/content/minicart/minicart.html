@@ -1,0 +1,78 @@
+<!--/*
+    Copyright 2016 Adobe Systems Incorporated
+  
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+<sly data-sly-use.cart="we.retail.core.model.ShoppingCartModel"
+     data-sly-use.hapiCart="${'org.apache.sling.hapi.sightly.HApiUse' @type='/apps/public/weretail/hapi_types/cart'}"/>
+
+<div class="we-MiniCart-empty" data-sly-test="${cart.entries.size == 0}">${'The cart is empty' @ i18n}.</div>
+
+<div class="we-Cart-entries" data-sly-list.item="${cart.entries}">
+    <div class="we-Cart-entry"
+         data-sly-use.hapiCartEntry="${ 'org.apache.sling.hapi.sightly.HApiUse' @type=hapiCart.proptype.entries }"
+         data-sly-attribute="${ hapiCart.itemprop.entries }">
+
+        <img class="we-Cart-image" src="${ item.product.thumbnailUrl }" alt="${ item.product.title }"
+             data-sly-attribute="${ hapiCartEntry.itemprop.asset }" />
+
+        <div class="we-Cart-entryContent">
+            <div data-sly-use.hapiCartEntryProduct="${ 'org.apache.sling.hapi.sightly.HApiUse' @type=hapiCartEntry.proptype.product }"
+                 data-sly-attribute="${ hapiCartEntry.itemprop.product }">
+                <meta content="${ item.product.title }" data-sly-attribute="${ hapiCartEntryProduct.itemprop.name }" />
+                <a href="${item.product.pagePath}" data-sly-attribute="${hapiCartEntryProduct.itemprop.path}">
+                    <strong>${item.product.title}</strong>
+                </a>
+
+                <div class="text-muted">
+                    <small data-sly-attribute="${hapiCartEntryProduct.itemprop.description}">
+                        ${item.product.description}
+                    </small>
+                    <ul class="small we-Cart-entryVariants" data-sly-list.key="${item.variantAxesMap}">
+                        <li><span>${key @ i18n}</span>: ${item.variantAxesMap[key]}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="we-Cart-entryQuantity">
+                <label class="text-muted">${'Qty' @ i18n}:</label>
+                <span data-sly-test.isReadOnly="${cart.isReadOnly}"
+                      data-sly-attribute="${hapiCartEntry.itemprop.quantity}">${item.entry.quantity}</span>
+                <form data-sly-test="${!isReadOnly}" method="POST"
+                      action="${cart.currentPageUrl @ selectors='weretail.modifycartentry'}">
+                    <input type="hidden" name="entryNumber" value="${item.entry.entryIndex}"/>
+                    <input type="hidden" name="redirect" value="${cart.currentPageUrl}"/>
+                    <input type="number" name="quantity" value="${item.entry.quantity}" min="0" step="1"
+                           data-sly-attribute="${hapiCartEntry.itemprop.quantity}"/>
+                </form>
+            </div>
+            <div class="we-Cart-entryPrice" data-sly-attribute="${hapiCartEntry.itemprop.itemPrice}">
+                <strong>${item.totalPrice}</strong>
+            </div>
+        </div>
+        <div class="we-Cart-remove">
+            <form data-sly-test="${!cart.isReadOnly}" method="POST"
+                  action="${cart.currentPageUrl @ selectors='weretail.deletecartentry'}">
+                <input type="hidden" name="entryNumber" value="${item.entry.entryIndex}"/>
+                <input type="hidden" name="redirect" value="${cart.currentPageUrl}"/>
+                <button type="submit" class="btn btn-default btn-icon"><i
+                        class="text-muted fa fa-times-circle-o"></i></button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="we-Cart-promotions" data-sly-test="${cart.orderPromotions}" data-sly-test.="${!cart.isReadOnly}">
+    <sly data-sly-repeat.promotion="${cart.orderPromotions}">
+        <span class="we-Cart-promotion">${promotion.message @ context='html'}</span>
+    </sly>
+</div>

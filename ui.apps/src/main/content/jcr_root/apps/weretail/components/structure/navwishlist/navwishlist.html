@@ -1,0 +1,141 @@
+<!--/*
+    Copyright 2016 Adobe Systems Incorporated
+  
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+<div class="we-Smartlist" data-sly-use.wishlist="we.retail.core.model.WishlistModel">
+    <a class="we-Smartlist-button" href="#" v-on:click="toggle">
+        <i class="fa fa-heart-o"></i> ${'Wishlist' @ i18n} <span class="badge active" v-cloak v-if="smartlistEntriesSize > 0">{{smartlistEntriesSize}}</span>
+    </a>
+
+    <smartlist-content inline-template>
+        <div class="we-Smartlist-content"
+             data-sly-use.hapiWishlist="${'org.apache.sling.hapi.sightly.HApiUse' @type='/apps/public/weretail/hapi_types/wishlist'}"
+             data-sly-attribute="${hapiWishlist.itemtype}">
+            <div class="we-Smartlist-header">
+                <div class="we-Smartlist-headerLeft">
+                    <a href="#" v-on:click="$parent.toggle">
+                        <i class="we-Icon we-Icon--close"></i>
+                    </a>
+                </div>
+                <div class="we-Smartlist-headerRight">
+                    <span data-sly-attribute="${hapiWishlist.itemprop.totalEntries}">{{smartlistEntriesSize}}</span> ${'items in your wish list' @ i18n}
+                </div>
+            </div>
+
+            <div class="we-Smartlist-data">
+
+                <div class="we-Smartlist-title" v-if="smartlist">
+                    <h4 data-sly-attribute="${hapiWishlist.itemprop.name}">{{smartlist.name}}</h4>
+                </div>
+    
+                <div class="we-Smartlist-entries" v-if="smartlist && smartlistEntriesSize > 0">
+                    <div class="we-Smartlist-entry" v-for="(index, smartlistEntry) in smartlist.entries"
+                         data-sly-use.hapiWishlistEntry="${'org.apache.sling.hapi.sightly.HApiUse' @type=hapiWishlist.proptype.entries}"
+                         data-sly-attribute="${hapiWishlist.itemprop.entries}">
+    
+                        <img class="we-Smartlist-image" v-bind:src="smartlistEntry.image" alt="{{ smartlistEntry.title }}"
+                             data-sly-attribute="${ hapiWishlistEntry.itemprop.asset }"/>
+    
+                        <div class="we-Smartlist-entryContent">
+                            <div data-sly-use.hapiWishlistEntryProduct="${'org.apache.sling.hapi.sightly.HApiUse' @type=hapiWishlistEntry.proptype.product}"
+                                 data-sly-attribute="${hapiWishlistEntry.itemprop.product}">
+                                <meta content="{{ smartlistEntry.title }}" data-sly-attribute="${hapiWishlistEntryProduct.itemprop.name}"/>
+                                <a href="#" v-bind:href="smartlistEntry.page" data-sly-attribute="${hapiWishlistEntryProduct.itemprop.path}">
+                                    <strong>{{ smartlistEntry.title }}</strong>
+                                </a>
+    
+                                <form class="we-Smartlist-addToCart-form" method="post" v-on:submit.prevent="onAddToCartSubmit"
+                                      action="${wishlist.smartListUrl @ extension = 'html', selectors='commerce.smartlist.management'}"
+                                      data-sly-use.hapiAddToCartForm="${'org.apache.sling.hapi.sightly.HApiUse' @ type='/apps/public/weretail/hapi_types/addcartentryform'}"
+                                      data-sly-attribute="${hapiAddToCartForm.itemtype}" data-rel="addCartEntryForm">
+                                    <input type="hidden" name="redirect" value="${wishlist.cartPageUrl @ extension = 'html'}" data-sly-attribute="${hapiAddToCartForm.itemprop.redirectPath}">
+                                    <input type="hidden" name=":operation" value="addToCart">
+                                    <input type="hidden" name="smartlist-path" v-model="smartlist.path" data-sly-attribute="${hapiAddToCartForm.itemprop.smartlistPath}"/>
+                                    <input type="hidden" name="product-path" v-model="smartlistEntry.path" data-sly-attribute="${hapiAddToCartForm.itemprop.productPath}"/>
+                                    <input type="hidden" name="_charset_" value="utf-8">
+                                    <button type="submit" class="btn btn-addtocart bold" data-sly-attribute="${hapiAddToCartForm.itemprop.addToCartButton}">
+                                        <i class="fa fa-shopping-cart"></i> ${'Add to cart' @ i18n}
+                                    </button>
+                                </form>
+                                <div class="text-muted">
+                                    <small data-sly-attribute="${hapiWishlistEntryProduct.itemprop.description}">
+                                        {{ smartlistEntry.description }}
+                                    </small>
+                                    <ul v-if="smartlistEntry.variant" class="small we-Smartlist-entryVariants">
+                                        <li v-for="(key, val) in smartlistEntry.variant">
+                                            <span>{{ key }}</span>: {{ val }}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="we-Smartlist-entryQuantity">
+                                <label class="text-muted">${'Qty' @ i18n}:</label>
+                                <span v-if="smartlist.privacy != 'PERSONAL'"
+                                      data-sly-attribute="${hapiWishlistEntry.itemprop.quantity}">{{smartlistEntry.quantity}}</span>
+                                <form v-if="smartlist.privacy == 'PERSONAL'" method="POST"
+                                      action="${wishlist.smartListUrl @ extension = 'html', selectors='commerce.smartlist.management'}">
+                                    <input type="number" name="quantity" v-model="smartlistEntry.quantity" min="0" step="1"
+                                           data-sly-attribute="${hapiWishlistEntry.itemprop.quantity}" v-on:change.prevent="updateSmartlist"/>
+                                    <input type="hidden" name=":operation" value="modifyQuantitySmartListEntry"/>
+                                    <input type="hidden" name="_charset_" value="utf-8"/>
+                                    <input type="hidden" name="smartlist-path" v-model="smartlist.path"/>
+                                    <input type="hidden" name="product-path" v-model="smartlistEntry.path"/>
+                                    <input type="hidden" name="redirect" value="${wishlist.smartListUrl @ extension = 'html'}"/>
+                                </form>
+                            </div>
+                            <div class="we-Smartlist-entryPrice" data-sly-attribute="${hapiWishlistEntry.itemprop.price}">
+                                <strong>{{ smartlistEntry.priceFormatted }}</strong>
+                            </div>
+                        </div>
+                        <div v-if="smartlist.privacy == 'PERSONAL'" class="we-Smartlist-remove">
+                            <form method="POST" v-on:click.prevent="updateSmartlist"
+                                  action="${wishlist.smartListUrl @ extension = 'html', selectors='commerce.smartlist.management'}">
+                                <input type="hidden" name="redirect" value="${wishlist.smartListUrl @ extension = 'html'}"/>
+                                <input type="hidden" name=":operation" value="deleteSmartListEntry"/>
+                                <input type="hidden" name="_charset_" value="utf-8"/>
+                                <input type="hidden" name="smartlist-path" v-model="smartlist.path"/>
+                                <input type="hidden" name="product-path" v-model="smartlistEntry.path"/>
+                                <button type="submit" class="btn btn-default btn-icon" data-sly-attribute="${hapiWishlistEntry.itemprop.removeButton}">
+                                    <i class="text-muted fa fa-times-circle-o"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="we-Smartlist-footer" v-if="smartlist && smartlistEntriesSize > 0">
+                    <div class="we-Smartlist-footer-all">
+                        <form method="post" v-on:submit.prevent="onAddToCartSubmit"
+                              action="${wishlist.smartListUrl @ extension = 'html', selectors='commerce.smartlist.management'}"
+                              data-sly-use.hapiAddAllToCartForm="${'org.apache.sling.hapi.sightly.HApiUse' @ type='/apps/public/weretail/hapi_types/addcartentryform'}"
+                              data-sly-attribute="${hapiAddAllToCartForm.itemtype}" data-rel="addCartEntryForm">
+                            <input type="hidden" name="redirect" value="${wishlist.cartPageUrl @ extension = 'html'}" data-sly-attribute="${hapiAddAllToCartForm.itemprop.redirectPath}">
+                            <input type="hidden" name=":operation" value="addToCart">
+                            <input type="hidden" name="smartlist-path" v-model="smartlist.path" data-sly-attribute="${hapiAddAllToCartForm.itemprop.smartlistPath}"/>
+                            <input type="hidden" name="_charset_" value="utf-8">
+                            <button type="submit" class="btn btn-addtocart bold" data-sly-attribute="${hapiAddAllToCartForm.itemprop.addAllToCartButton}">
+                                <i class="fa fa-shopping-cart"></i> ${'Add all products to cart' @ i18n}
+                            </button>
+                        </form>
+                    </div>
+                </div>
+    
+                <div class="we-Smartlist-empty" v-if="smartlistEntriesSize == 0">
+                    <span>${'You do not have any products on your wish list.' @ i18n}</span>
+                </div>
+            
+            </div>
+        </div>
+    </smartlist-content>
+</div>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:Group"
+    jcr:uuid="7dca9e4f-ed88-3021-9b40-b55f325a01f3"
+    rep:authorizableId="projects-we_retail-editor"
+    rep:principalName="projects-we_retail-editor">
+    <profile
+        jcr:primaryType="nt:unstructured"
+        alternateTitle="Editors"
+        givenName="We.Retail Editors"/>
+</jcr:root>

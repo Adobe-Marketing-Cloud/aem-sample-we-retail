@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="sling/hapi/components/type"
+    description="We.Retail Commerce Order"
+    fqdn="we.retail.commerce.hapi.order"
+    name="order"
+    parameters="[\0]">
+    <id
+        jcr:primaryType="nt:unstructured"
+        description="ID of the order"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <path
+        jcr:primaryType="nt:unstructured"
+        description="ID of the order"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <date
+        jcr:primaryType="nt:unstructured"
+        description="Date the order was placed"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <status
+        jcr:primaryType="nt:unstructured"
+        description="Status of the order"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <totalPrice
+        jcr:primaryType="nt:unstructured"
+        description="Total price of the order"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <shippingAddress
+        jcr:primaryType="nt:unstructured"
+        description="Shipping address of the order"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <billingAddress
+        jcr:primaryType="nt:unstructured"
+        description="Billing address of the order"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
+    <entry
+        jcr:primaryType="nt:unstructured"
+        description="Cart entries of the order"
+        multiple="{Boolean}true"
+        type="/apps/public/weretail/hapi_types/cartentry"/>
+</jcr:root>

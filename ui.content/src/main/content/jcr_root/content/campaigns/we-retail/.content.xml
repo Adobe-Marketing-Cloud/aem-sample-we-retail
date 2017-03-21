@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:template="/libs/mcm/templates/brand"
         jcr:primaryType="cq:PageContent"
-        jcr:title="we.RETAIL"
+        jcr:title="We.Retail"
         sling:resourceType="mcm/components/brandpage">
         <par
             jcr:primaryType="nt:unstructured"

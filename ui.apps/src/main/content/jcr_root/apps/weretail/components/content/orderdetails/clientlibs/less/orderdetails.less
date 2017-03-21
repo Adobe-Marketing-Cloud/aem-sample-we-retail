@@ -1,0 +1,132 @@
+/*
+ *  Copyright 2016 Adobe Systems Incorporated
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+
+@import "/apps/weretail/clientlibs/common/helpers.less";
+
+
+.we-Cart-entryCol {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.we-ShoppingOrder {
+
+    margin-bottom: 50px;
+
+    &-summary {
+        width: 70%;
+        margin: 0 auto 40px auto;
+        font-size: 15px;
+        
+        .title {
+            font-weight: bold;
+        }
+    }
+
+    &-entries {
+        border-bottom: 1px solid fade(@gray-base, 10);
+    }
+
+    &-entry {
+        margin-bottom: 20px;
+    }
+
+    &-image {
+        &:extend(.we-Cart-entryCol);
+        width: 15%;
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    &-entryContent {
+        &:extend(.we-Cart-entryCol);
+        width: 30%;
+        padding-left: 40px;
+
+        a {
+            color: #000;
+        }
+    }
+
+    &-entryPrice {
+        &:extend(.we-Cart-entryCol);
+        width: 15%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    &-entryQuantity {
+        &:extend(.we-Cart-entryCol);
+        width: 15%;
+        margin-top: 20px;
+        padding-left: 40px;
+        font-size: 13px;
+
+        label {
+            color: @gray-light;
+            text-transform: none;
+            margin-right: 5px;
+        }
+    }
+
+    &-entryVariants {
+        list-style-type: none;
+        padding-left: 0px;
+        text-transform: capitalize;
+        line-height: 1rem;
+    }
+    
+    &-prices {
+
+        display: table;
+        width: 300px;
+        margin: 10px 0 0 auto;
+    
+        .row {
+            display: table-row;
+            padding: 10px 0;
+        }
+    
+        .border-top {
+            border-top: 1px solid fade(@gray-base, 10);
+        }
+    
+        .cell-title, .cell-align-right {
+            display: table-cell;
+            padding: 5px 5px;
+            width: 150px;
+        }
+    
+        .cell-title {
+            color: @gray-light;
+        }
+    
+        .cell-align-right {
+            text-align: right;
+        }
+    
+        .cell-strong {
+            font-weight: bold;
+        }
+    }
+
+    &-promotions {
+        margin-top: 10px;
+    }
+
+    &-promotion {
+        font-weight: bold;
+    }
+}

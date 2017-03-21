@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:ClientLibraryFolder"
+    allowProxy="{Boolean}true"
+    categories="[we-retail.product-page]"
+    dependencies="[we-retail.base]"
+    embed="[cq.social.commons,cq.social.scf.cards,cq.collab.comments,cq.social.author.hbs.rating,cq.social.author.hbs.subscriptions,cq.social.author.hbs.comments,cq.social.author.hbs.reviews,cq.social.author.hbs.voting,we-retail.components.social]"/>

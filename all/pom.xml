@@ -22,9 +22,9 @@
     <!-- P A R E N T  P R O J E C T  D E S C R I P T I O N                      -->
     <!-- ====================================================================== -->
     <parent>
-        <groupId>we</groupId>
+        <groupId>com.adobe.cq.sample</groupId>
         <artifactId>we.retail</artifactId>
-        <version>1.0.1-SNAPSHOT</version>
+        <version>2.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -40,8 +40,8 @@
         <connection>scm:git:https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail.git</connection>
         <developerConnection>scm:git:git@github.com:Adobe-Marketing-Cloud/aem-sample-we-retail.git</developerConnection>
         <url>https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/tree/master/all</url>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 
     <build>
         <plugins>
@@ -49,69 +49,69 @@
                 <groupId>com.day.jcr.vault</groupId>
                 <artifactId>content-package-maven-plugin</artifactId>
                 <extensions>true</extensions>
+                <configuration>
+                    <verbose>true</verbose>
+                    <failOnError>true</failOnError>
+                    <group>adobe/cq60/sample</group>
+                    <failOnMissingEmbed>true</failOnMissingEmbed>
+                    <embeddeds>
+                        <embedded>
+                            <groupId>com.adobe.cq.sample</groupId>
+                            <artifactId>we.retail.core</artifactId>
+                            <target>/apps/weretail/install</target>
+                            <filter>true</filter>
+                        </embedded>
+                    </embeddeds>
+                    <subPackages>
+                        <subPackage>
+                            <groupId>com.adobe.cq.sample</groupId>
+                            <artifactId>we.retail.ui.apps</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
+                        <subPackage>
+                            <groupId>com.adobe.cq.sample</groupId>
+                            <artifactId>we.retail.ui.content</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
+                        <subPackage>
+                            <groupId>com.adobe.cq.sample</groupId>
+                            <artifactId>we.retail.config</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
+                        <subPackage>
+                            <groupId>com.adobe.cq.sample</groupId>
+                            <artifactId>we.retail.commons.content</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
+                    </subPackages>
+                    <dependencies>
+                        <dependency>
+                            <group>day/cq60/product</group>
+                            <name>cq-content</name>
+                            <version>[6.1.76,)</version>
+                        </dependency>
+                        <dependency>
+                            <group>day/cq60/product</group>
+                            <name>cq-commerce-content</name>
+                            <version>[1.2.222,)</version>
+                        </dependency>
+                        <dependency>
+                            <group>adobe/cq60</group>
+                            <name>core.wcm.components.all</name>
+                            <version>[0.9.21-SNAPSHOT,)</version>
+                        </dependency>
+                    </dependencies>
+                </configuration>
             </plugin>
         </plugins>
     </build>
 
     <profiles>
         <profile>
-            <id>buildSinglePackage</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-
-            <properties>
-                <maven.test.skip>true</maven.test.skip>
-            </properties>
-
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>com.day.jcr.vault</groupId>
-                        <artifactId>content-package-maven-plugin</artifactId>
-                        <extensions>true</extensions>
-                        <configuration>
-                            <verbose>true</verbose>
-                            <failOnError>true</failOnError>
-                            <group>adobe/aem6/sample</group>
-                            <subPackages>
-                                <subPackage>
-                                    <groupId>${project.groupId}</groupId>
-                                    <artifactId>we.retail.ui.apps</artifactId>
-                                    <filter>true</filter>
-                                </subPackage>
-                                <subPackage>
-                                    <groupId>${project.groupId}</groupId>
-                                    <artifactId>we.retail.ui.content</artifactId>
-                                    <filter>true</filter>
-                                </subPackage>
-                                <subPackage>
-                                    <groupId>com.adobe.aem.sample</groupId>
-                                    <artifactId>we.retail.commons.content</artifactId>
-                                    <filter>true</filter>
-                                </subPackage>
-                            </subPackages>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-            <dependencies>
-                <dependency>
-                    <groupId>com.adobe.aem.sample</groupId>
-                    <artifactId>we.retail.commons.content</artifactId>
-                    <version>1.0.1-SNAPSHOT</version>
-                    <type>content-package</type>
-                    <scope>provided</scope>
-                </dependency>
-            </dependencies>
-        </profile>
-
-        <profile>
             <id>autoInstallSinglePackage</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
-
             <build>
                 <plugins>
                     <plugin>
@@ -123,31 +123,52 @@
                                 <goals>
                                     <goal>install</goal>
                                 </goals>
+                                <configuration>
+                                    <targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
+                                    <failOnError>true</failOnError>
+                                </configuration>
                             </execution>
                         </executions>
-                        <configuration>
-                            <targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
-                            <failOnError>true</failOnError>
-                            <failOnMissingEmbed>true</failOnMissingEmbed>
-                        </configuration>
-                     </plugin>
-                 </plugins>
+                    </plugin>
+                </plugins>
             </build>
         </profile>
     </profiles>
 
     <dependencies>
         <dependency>
-            <groupId>we</groupId>
-            <artifactId>we.retail.ui.apps</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
-            <type>content-package</type>
+            <groupId>com.adobe.cq.sample</groupId>
+            <artifactId>we.retail.core</artifactId>
+            <version>2.0.0-SNAPSHOT</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>we</groupId>
+            <groupId>com.adobe.cq.sample</groupId>
+            <artifactId>we.retail.commons.content</artifactId>
+            <version>2.0.0-SNAPSHOT</version>
+            <type>zip</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.cq.sample</groupId>
+            <artifactId>we.retail.ui.apps</artifactId>
+            <version>2.0.0-SNAPSHOT</version>
+            <type>zip</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.cq.sample</groupId>
             <artifactId>we.retail.ui.content</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
-            <type>content-package</type>
+            <version>2.0.0-SNAPSHOT</version>
+            <type>zip</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.cq.sample</groupId>
+            <artifactId>we.retail.config</artifactId>
+            <version>2.0.0-SNAPSHOT</version>
+            <type>zip</type>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

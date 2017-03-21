@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/libs/commerce/templates/section"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Women's"
+        sling:resourceType="commerce/components/section"
+        coverUrl="/content/dam/we-retail/en/people/womens/women_6.jpg">
+        <templates
+            jcr:primaryType="nt:unstructured"
+            proxyProductPages="false"/>
+        <target
+            jcr:primaryType="nt:unstructured"
+            coverImage="/content/dam/we-retail/en/people/womens/women_6.jpg"
+            jcr_title="Women"/>
+        <filter
+            jcr:primaryType="nt:unstructured"
+            searchType="simple"/>
+    </jcr:content>
+    <coats/>
+    <shirts/>
+    <pants/>
+    <shorts/>
+    <gloves/>
+</jcr:root>

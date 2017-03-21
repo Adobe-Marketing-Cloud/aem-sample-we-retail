@@ -1,0 +1,40 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "vouchers": [],
+  "orderId": "5ad90db8-593f-4403-af91-2dd6df0aefd7",
+  "jcr:language": "en_US",
+  "cartSubtotal": "167",
+  "cartItems": [
+    "/content/we-retail/us/en/products/equipment/running/fleet-cross-training-shoe/jcr:content/root/product/eqrusufle-9;2;price=24\f",
+    "/content/we-retail/us/en/products/equipment/running/fleet-cross-training-shoe/jcr:content/root/product/eqrusufle-11;1;price=119\f"
+  ],
+  "orderTotalTax": "10.02",
+  "promotions": [],
+  "currencyCode": "USD",
+  "orderShipping": "10.00",
+  "orderTotalPrice": "187.02",
+  "orderPlaced": "Mon Dec 12 2016 16:42:15 GMT+0100",
+  "orderStatus": "Processing",
+  "order-details": {
+    "jcr:primaryType": "nt:unstructured",
+    "billing-is-shipping-address": "yes",
+    "card.security.code": "123",
+    "billing.firstname": "John",
+    "shipping.state": "CA",
+    "shipping.lastname": "Doe",
+    "billing.city": "San Francisco",
+    "shipping.firstname": "John",
+    "billing.street1": "601 Townsend St",
+    "billing.street2": "3rd floor",
+    "billing.lastname": "Doe",
+    "shipping.zip": "94103",
+    "card.number": "1234 1234 1234 1234",
+    "billing.zip": "94103",
+    "shipping.city": "San Francisco",
+    "shipping-option": "/etc/commerce/shipping-methods/we-retail/ground-shipping",
+    "card.expiration.date": "12/17",
+    "billing.state": "CA",
+    "payment-option": "/etc/commerce/payment-methods/we-retail/creditcard",
+    "billing.country": "US"
+  }
+}

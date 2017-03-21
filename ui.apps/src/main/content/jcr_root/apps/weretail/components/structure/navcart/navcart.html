@@ -1,0 +1,110 @@
+<!--/*
+    Copyright 2016 Adobe Systems Incorporated
+  
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+  
+        http://www.apache.org/licenses/LICENSE-2.0
+  
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+<div class="we-Cart" data-sly-use.cart="we.retail.core.model.NavCartModel"
+     data-sly-use.hapiCart="${'org.apache.sling.hapi.sightly.HApiUse' @type='/apps/public/weretail/hapi_types/cart'}">
+
+    <a class="we-Cart-button" href="#" v-on:click="toggle">
+        <i class="fa fa-shopping-cart"></i> ${'My cart' @ i18n} <span class="badge active" v-cloak v-if="cartEntriesSize > 0">{{cartEntriesSize}}</span>
+    </a>
+
+    <cart-content inline-template>
+        <div class="we-Cart-content" data-sly-attribute="${hapiCart.itemtype}">
+            <div class="we-Cart-header">
+                <div class="we-Cart-headerLeft">
+                    <a href="#" v-on:click="$parent.toggle">
+                        <i class="we-Icon we-Icon--close"></i>
+                    </a>
+                </div>
+                <div class="we-Cart-headerRight">
+                    <span data-sly-attribute="${hapiCart.itemprop.totalEntries}">{{cartEntriesSize}}</span> ${'items in cart' @ i18n}
+                </div>
+            </div>
+
+            <div class="we-Cart-empty" v-if="cartEntriesSize == 0">${'The cart is empty' @ i18n}.</div>
+
+            <div class="we-Cart-data">
+            
+                <div class="we-Cart-entries" v-if="cartEntriesSize > 0">
+                    <div class="we-Cart-entry" v-for="(index, cartEntry) in cartEntries"
+                         data-sly-use.hapiCartEntry="${ 'org.apache.sling.hapi.sightly.HApiUse' @type=hapiCart.proptype.entries }"
+                         data-sly-attribute="${ hapiCart.itemprop.entries }">
+    
+                        <img class="we-Cart-image" v-bind:src="cartEntry.thumbnail" alt="{{ cartEntry.title }}"
+                             data-sly-attribute="${ hapiCartEntry.itemprop.asset }"/>
+    
+                        <div class="we-Cart-entryContent">
+                            <div data-sly-use.hapiCartEntryProduct="${ 'org.apache.sling.hapi.sightly.HApiUse' @type=hapiCartEntry.proptype.product }"
+                                 data-sly-attribute="${ hapiCartEntry.itemprop.product }">
+                                <meta content="{{ cartEntry.title }}" data-sly-attribute="${ hapiCartEntryProduct.itemprop.name }"/>
+                                <a href="#" v-bind:href="cartEntry.page" data-sly-attribute="${hapiCartEntryProduct.itemprop.path}">
+                                    <strong>{{ cartEntry.title }}</strong>
+                                </a>
+                                <div class="text-muted">
+                                    <small data-sly-attribute="${hapiCartEntryProduct.itemprop.description}">
+                                        {{ cartEntry.description }}
+                                    </small>
+                                    <ul v-if="cartEntry.variant" class="small we-Cart-entryVariants">
+                                        <li v-for="(key, val) in cartEntry.variant">
+                                            <span>{{ key }}</span>: {{ val }}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="we-Cart-entryQuantity">
+                                <label class="text-muted">${'Qty' @ i18n}:</label>
+                                <span data-sly-test.isReadOnly="${cart.isReadOnly}"
+                                      data-sly-attribute="${hapiCartEntry.itemprop.quantity}">{{ cartEntry.quantity }}</span>
+                                <form data-sly-test="${!isReadOnly}" method="POST"
+                                      action="${cart.currentPageUrl @ selectors='weretail.modifycartentry'}">
+                                    <input type="hidden" name="entryNumber" value="{{index}}"/>
+                                    <input type="hidden" name="redirect" value="${cart.currentPageUrl}"/>
+                                    <input type="number" name="quantity" v-model="cartEntry.quantity" min="0" step="1"
+                                           data-sly-attribute="${hapiCartEntry.itemprop.quantity}" v-on:change.prevent="updateCart"/>
+                                </form>
+                            </div>
+                            <div class="we-Cart-entryPrice" data-sly-attribute="${hapiCartEntry.itemprop.itemPrice}">
+                                <strong>{{ cartEntry.priceFormatted }}</strong>
+                            </div>
+                        </div>
+    
+                        <div class="we-Cart-remove">
+                            <form data-sly-test="${!cart.isReadOnly}" method="POST"
+                                  action="${cart.currentPageUrl @ selectors='weretail.deletecartentry'}" v-on:click.prevent="updateCart">
+                                <input type="hidden" name="entryNumber" value="{{index}}"/>
+                                <input type="hidden" name="redirect" value="${cart.currentPageUrl}"/>
+                                <button type="submit" class="btn btn-default btn-icon"><i class="text-muted fa fa-times-circle-o"></i></button>
+                            </form>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="we-Cart-promotions" v-if="cartPromotions && cartPromotions.length > 0" data-sly-test="${!cart.isReadOnly}">
+                    <span v-for="promotion in cartPromotions" class="we-Cart-promotion" v-html="promotion.message"></span>
+                </div>
+    
+                <div class="we-Cart-footer">
+                    <div class="we-Cart-subtotal" v-if="cartEntriesSize > 0">
+                        ${ 'sub-total' @ i18n }: <span data-sly-attribute="${hapiCart.itemprop.total}">{{cartTotalPrice}}</span>
+                    </div>
+                    <a v-if="cartEntriesSize > 0" data-sly-test="${ cart.checkoutPage }" class="btn btn-primary btn-action pull-right"
+                       href="${ cart.checkoutPage }">${ 'Checkout' @ i18n }</a>
+                </div>
+                
+            </div>
+        </div>
+    </cart-content>
+</div>

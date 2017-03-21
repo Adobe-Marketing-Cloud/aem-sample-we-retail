@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/libs/commerce/templates/section"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="[Pants,Pants]"
+        sling:resourceType="commerce/components/section">
+        <templates
+            jcr:primaryType="nt:unstructured"
+            proxyProductPages="false"/>
+        <target
+            jcr:primaryType="nt:unstructured"
+            coverImage="/content/dam/we-retail/en/products/apparel/pants/Pants_women.jpg"
+            jcr_title="Pants"/>
+        <filter
+            jcr:primaryType="nt:unstructured"
+            matchTags="[we-retail:gender/women,we-retail:apparel/pants]"
+            searchType="simple"/>
+    </jcr:content>
+</jcr:root>

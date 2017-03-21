@@ -1,0 +1,97 @@
+{
+    "jcr:primaryType"    : "sling:Folder",
+    "jcr:createdBy"      : "admin",
+    "jcr:title"          : "We.Retail",
+    "cq:commerceProvider": "we-retail",
+    "jcr:created"        : "Wed Jul 27 2016 15:04:19 GMT+0200",
+    "jcr:content"        : {
+        "jcr:primaryType": "nt:unstructured"
+    },
+    "eq"                 : {
+        "jcr:primaryType": "sling:Folder",
+        "jcr:createdBy"  : "admin",
+        "jcr:title"      : "Equipment",
+        "jcr:created"    : "Wed Jul 27 2016 15:04:19 GMT+0200",
+        "running"        : {
+            "jcr:primaryType": "sling:Folder",
+            "jcr:createdBy"  : "admin",
+            "jcr:title"      : "Running",
+            "cq:importCount" : 1,
+            "jcr:created"    : "Wed Jul 27 2016 15:04:19 GMT+0200",
+            "jcr:content"    : {
+                "jcr:primaryType": "nt:unstructured"
+            },
+            "eqrusufle"      : {
+                "jcr:primaryType"      : "nt:unstructured",
+                "jcr:mixinTypes"       : [
+                    "cq:Taggable"
+                ],
+                "cq:productVariantAxes": [
+                    "size"
+                ],
+                "inventory"            : "85",
+                "jcr:title"            : "Fleet Cross-Training Shoe",
+                "summary"              : "The Fleet Cross-Training shoes provide an ideal platform for high-mileage runners looking for 1 pair of shoes to take them from the street to the trail and back again.",
+                "identifier"           : "eqrusufle",
+                "margin"               : "0.38",
+                "rating"               : "5",
+                "features"             : "Quicklace_ lacing system takes just 1 pull for a perfect fit; lace pocket hides lacing away\r\nProtective toe and heel caps guard against bumps and abrasion\r\nframes run along the soles of the shoes to facilitate better heel-to-toe transitions\r\nTriple-density EVA midsoles isolate you from trail impacts, and thermoplastic urethane inserts provide a barrier against sharp rocks underfoot",
+                "price"                : "65",
+                "jcr:description"      : "footwear",
+                "cq:tags"              : [
+                    "we-retail:apparel/footwear",
+                    "we-retail:season/summer",
+                    "we-retail:activity/running"
+                ],
+                "jcr:lastModified"     : "Mon Jan 11 2016 16:30:42 GMT-0800",
+                "reviews"              : "By ohsooocute\nfrom Reseda, Ca\nI do lots of trail walking in the San Gabriel Mountains. These shoes were comfortable from the start. I like the quick lacing system because my shoes stay tied the way I want from the start. They are lightweight, yet sturdy. Thanks mum for thr great birthday present.",
+                "sling:resourceType"   : "commerce/components/product",
+                "textIsRich"           : [
+                    "true",
+                    "true"
+                ],
+                "cq:commerceType"      : "product",
+                "size-9"               : {
+                    "identifier"        : "eqrusufle",
+                    "jcr:primaryType"   : "nt:unstructured",
+                    "size"              : "9",
+                    "jcr:lastModified"  : "Tue Sep 08 2015 17:10:12 GMT-0700",
+                    "sling:resourceType": "commerce/components/product",
+                    "cq:commerceType"   : "variant"
+                },
+                "size-11"              : {
+                    "identifier"        : "eqrusufle",
+                    "jcr:primaryType"   : "nt:unstructured",
+                    "size"              : "11",
+                    "jcr:lastModified"  : "Tue Sep 08 2015 17:10:12 GMT-0700",
+                    "sling:resourceType": "commerce/components/product",
+                    "cq:commerceType"   : "variant"
+                },
+                "size-13"              : {
+                    "identifier"        : "eqrusufle",
+                    "jcr:primaryType"   : "nt:unstructured",
+                    "size"              : "13",
+                    "jcr:lastModified"  : "Tue Sep 08 2015 17:10:12 GMT-0700",
+                    "sling:resourceType": "commerce/components/product",
+                    "cq:commerceType"   : "variant"
+                },
+                "image"                : {
+                    "jcr:primaryType"     : "nt:unstructured",
+                    "fileReference"       : "/content/dam/we-retail/en/products/apparel/footwear/source/Fleet Shoe.jpg",
+                    "height"              : "300",
+                    "jcr:lastModifiedBy"  : "admin",
+                    "unsharpMaskAmount"   : "0",
+                    "unsharpMaskRadius"   : "0",
+                    "width"               : "300",
+                    "jcr:lastModified"    : "Mon Jan 11 2016 16:30:42 GMT-0800",
+                    "sling:resourceType"  : "commerce/components/product/image",
+                    "jpegQuality"         : "85",
+                    "unsharpMaskThreshold": "0"
+                }
+            }
+        },
+        "jcr:content"    : {
+            "jcr:primaryType": "nt:unstructured"
+        }
+    }
+}

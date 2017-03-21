@@ -3,7 +3,6 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:catalogVersion="561"
-        cq:cloudserviceconfigs="[[]]"
         cq:propertyInheritanceCancelled="[templates/catalog,templates/section,templates/product]"
         cq:template="/libs/commerce/templates/catalog"
         jcr:isCheckedOut="{Boolean}true"

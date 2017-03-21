@@ -9,12 +9,12 @@
                 <responsivegrid jcr:primaryType="nt:unstructured">
                     <we-retail-default
                         jcr:description="Policy for editable layout containers"
-                        jcr:lastModified="{Date}2016-02-16T21:39:02.041+01:00"
+                        jcr:lastModified="{Date}2016-09-16T07:50:27.551+02:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="We.Retail Default"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[group:We.Retail,/libs/wcm/foundation/components/responsivegrid]"
+                        components="[group:We.Retail,group:We.Retail Commerce,/libs/wcm/foundation/components/responsivegrid,/libs/cq/experience-fragments/editor/components/experiencefragment,/libs/dam/cfm/components/contentfragment]"
                         policyResourceType="wcm/foundation/components/responsivegrid">
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -23,7 +23,7 @@
                                     assetGroup="media"
                                     assetMimetype="image/*"
                                     droptarget="image"
-                                    resourceType="we-retail/components/content/image"
+                                    resourceType="weretail/components/content/image"
                                     type="Images"/>
                                 <product
                                     jcr:primaryType="nt:unstructured"
@@ -57,19 +57,29 @@
                                     assetGroup="media"
                                     assetMimetype="text/html"
                                     droptarget="fragment"
-                                    resourceType="we-retail/components/content/content-fragment"
+                                    resourceType="dam/cfm/components/contentfragment"
                                     type="Content Fragment"/>
+                                <experiencefragment
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="content"
+                                    assetMimetype="text/html"
+                                    droptarget="experiencefragment"
+                                    resourceType="cq/experience-fragments/editor/components/experiencefragment"
+                                    type="experiencefragment"/>
                             </assetToComponentMapping>
                         </cq:authoring>
+                        <jcr:content
+                            jcr:primaryType="nt:unstructured"
+                            mergeList="{Boolean}true"/>
                     </we-retail-default>
                     <we-retail-structure
                         jcr:description="Policy for templates to allow structure components"
-                        jcr:lastModified="{Date}2016-02-16T21:38:49.301+01:00"
+                        jcr:lastModified="{Date}2016-10-10T22:34:33.689+02:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="We.Retail Structure"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[group:We.Retail,group:We.Retail.Structure,/libs/wcm/foundation/components/responsivegrid]"
+                        components="[/libs/wcm/foundation/components/responsivegrid,group:We.Retail,group:We.Retail Commerce,group:We.Retail.Structure,/libs/cq/experience-fragments/editor/components/experiencefragment,/libs/dam/cfm/components/contentfragment]"
                         policyResourceType="wcm/foundation/components/responsivegrid">
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -78,7 +88,7 @@
                                     assetGroup="media"
                                     assetMimetype="image/*"
                                     droptarget="image"
-                                    resourceType="we-retail/components/content/image"
+                                    resourceType="weretail/components/content/image"
                                     type="Images"/>
                                 <product
                                     jcr:primaryType="nt:unstructured"
@@ -112,16 +122,71 @@
                                     assetGroup="media"
                                     assetMimetype="text/html"
                                     droptarget="fragment"
-                                    resourceType="we-retail/components/content/content-fragment"
+                                    resourceType="dam/cfm/components/contentfragment"
                                     type="Content Fragment"/>
+                                <experiencefragment
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="content"
+                                    assetMimetype="text/html"
+                                    droptarget="experiencefragment"
+                                    resourceType="cq/experience-fragments/editor/components/experiencefragment"
+                                    type="experiencefragment"/>
                             </assetToComponentMapping>
                         </cq:authoring>
+                        <jcr:content
+                            jcr:primaryType="nt:unstructured"
+                            mergeList="{Boolean}true"/>
                     </we-retail-structure>
+                    <we-retail-product-filter
+                        jcr:description="Policy for Search Components"
+                        jcr:lastModified="{Date}2016-09-16T17:02:53.845+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Retail Product Filter"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="/apps/weretail/components/structure/productfilter">
+                        <jcr:content
+                            jcr:primaryType="nt:unstructured"
+                            mergeList="{Boolean}true"/>
+                    </we-retail-product-filter>
+                    <we-retail-content
+                        jcr:lastModified="{Date}2017-02-23T15:09:32.658+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Retail Content"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/dam/cfm/components/contentfragment,/libs/cq/experience-fragments/editor/components/experiencefragment,/libs/wcm/foundation/components/responsivegrid,group:We.Retail,group:We.Retail Form]">
+                        <jcr:content
+                            jcr:primaryType="nt:unstructured"
+                            mergeList="{Boolean}true"/>
+                        <cq:authoring jcr:primaryType="nt:unstructured">
+                            <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                                <mapping_1487856929586
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="text/html"
+                                    droptarget="fragment"
+                                    resourceType="dam/cfm/components/contentfragment"/>
+                                <mapping_1487856938113
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="content"
+                                    assetMimetype="text/html"
+                                    droptarget="experiencefragment"
+                                    resourceType="cq/experience-fragments/editor/components/experiencefragment"/>
+                                <mapping_1487856942908
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="image/.*"
+                                    droptarget="image"
+                                    resourceType="weretail/components/content/image"/>
+                            </assetToComponentMapping>
+                        </cq:authoring>
+                    </we-retail-content>
                 </responsivegrid>
             </components>
         </foundation>
     </wcm>
-    <we-retail
+    <weretail
         jcr:primaryType="nt:unstructured"
         sling:resourceType="nt:unstructured">
         <components
@@ -142,6 +207,10 @@
                         sling:resourceType="wcm/core/components/policy/policy"
                         clientlibs="[we-retail.product-page]"/>
                 </page>
+            </structure>
+            <content
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nt:unstructured">
                 <breadcrumb
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="nt:unstructured">
@@ -152,22 +221,99 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="We.Retail Experience Page Breadcrumb"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        absParent="3"
-                        relParent="1"/>
+                        hideCurrent="true"
+                        startLevel="3"/>
                     <we-retail-product-page
                         jcr:description="Policy for breadcrumb on product pages"
-                        jcr:lastModified="{Date}2016-03-03T18:52:44.719+01:00"
+                        jcr:lastModified="{Date}2016-09-16T15:03:54.572+02:00"
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         jcr:title="We.Retail Product Page Breadcrumb"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        absParent="5"
-                        relParent="1"/>
+                        hideCurrent="true"
+                        startLevel="5">
+                        <jcr:content
+                            jcr:primaryType="nt:unstructured"
+                            mergeList="{Boolean}true"/>
+                    </we-retail-product-page>
                 </breadcrumb>
-            </structure>
-            <content
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="nt:unstructured"/>
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nt:unstructured">
+                    <we-retail-hero-page
+                        jcr:description=""
+                        jcr:lastModified="{Date}2016-10-10T23:42:54.948+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Retail Title policy - Hero Page"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        defaultType="h2">
+                        <jcr:content
+                            jcr:primaryType="nt:unstructured"
+                            mergeList="{Boolean}true"/>
+                    </we-retail-hero-page>
+                    <we-retial-section-page
+                        jcr:description=""
+                        jcr:lastModified="{Date}2016-10-10T17:23:17.909+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Retail Title policy - Section Page"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        defaultType="h2">
+                        <jcr:content
+                            jcr:primaryType="nt:unstructured"
+                            mergeList="{Boolean}true"/>
+                    </we-retial-section-page>
+                </title>
+            </content>
         </components>
-    </we-retail>
+    </weretail>
+    <core
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="nt:unstructured">
+        <wcm
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="nt:unstructured">
+            <components
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="nt:unstructured">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="nt:unstructured">
+                    <policy_1475741491582
+                        jcr:description=""
+                        jcr:lastModified="{Date}2016-10-06T10:11:49.934+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="title"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        defaultType="h2">
+                        <jcr:content
+                            jcr:primaryType="nt:unstructured"
+                            mergeList="{Boolean}true"/>
+                    </policy_1475741491582>
+                </title>
+            </components>
+        </wcm>
+    </core>
+    <dam jcr:primaryType="nt:unstructured">
+        <cfm jcr:primaryType="nt:unstructured">
+            <components jcr:primaryType="nt:unstructured">
+                <contentfragment jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:lastModified="{Date}2017-02-28T15:32:53.518+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Retail Content Fragment policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        cfm-grid-type="dam/cfm/components/grid"
+                        mmf-image-type="dam/cfm/components/mmimage">
+                        <jcr:content
+                            jcr:primaryType="nt:unstructured"
+                            mergeList="{Boolean}true"/>
+                    </default>
+                </contentfragment>
+            </components>
+        </cfm>
+    </dam>
 </jcr:root>
