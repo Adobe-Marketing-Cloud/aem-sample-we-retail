@@ -44,7 +44,7 @@ public class WeRetailProductImpl extends AbstractJcrProduct {
 
     public String getSKU() {
         String sku = getProperty(PN_IDENTIFIER, String.class);
-        // Geometrixx products don't have unique ids for size, so append the size to the sku:
+        // Products don't have unique ids for size, so append the size to the sku:
         String size = getProperty("size", String.class);
         if (size != null && size.length() > 0) {
             sku += "-" + size;

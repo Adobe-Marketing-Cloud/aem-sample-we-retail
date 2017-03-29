@@ -120,7 +120,7 @@ public class WeRetailCommerceServiceImpl extends AbstractJcrCommerceService impl
             // The user-defined axis, if required, is specified using the "variationAxis" and
             // "variationTitle" properties.
             //
-            // In the geometrixx sample product set, the optional axis is always "color".
+            // In the sample product set, the optional axis is always "color".
             //
             Node productNode = product.adaptTo(Node.class);
             if (productData.axisIsVariant("color")) {

@@ -70,7 +70,7 @@ public class WeRetailCommerceSessionImpl extends AbstractJcrCommerceSession {
     @Override
     protected String tokenizePaymentInfo(Map<String, String> paymentDetails) throws CommerceException {
         //
-        // This is only a stub implementation for the Geometrixx-Outdoors demo site, for which there is no
+        // This is only a stub implementation for the demo site, for which there is no
         // real payment processing (or payment info tokenization).
         //
         return "faux-payment-token";
@@ -79,7 +79,7 @@ public class WeRetailCommerceSessionImpl extends AbstractJcrCommerceSession {
     @Override
     protected void initiateOrderProcessing(String orderPath) throws CommerceException {
         //
-        // This is only a stub implementation for the Geometrixx-Outdoors demo site, for which there is no
+        // This is only a stub implementation for the demo site, for which there is no
         // real order processing.
         //
         try {
