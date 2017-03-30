@@ -15,9 +15,7 @@
   ~ limitations under the License.
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <workspaceFilter version="1.0">
-    <filter root="/apps/weretail">
-        <exclude pattern="/apps/weretail(/.*)?"/>
-        <include pattern="/apps/weretail/config"/>
-        <include pattern="/apps/weretail/config.author"/>
-    </filter>
+    <filter root="/apps/weretail/config"/>
+    <filter root="/apps/weretail/config.author"/>
+    <filter root="/apps/weretail/config.publish"/>
 </workspaceFilter>

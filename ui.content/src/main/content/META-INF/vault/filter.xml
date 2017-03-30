@@ -25,8 +25,5 @@
         <exclude pattern="/content/we-retail/us/en/community"/>
     </filter>
     <filter root="/content/projects/we-retail"/>
-    <filter root="/content" mode="update">
-        <exclude pattern="/content/(.*)?" />
-    </filter>
     <filter root="/home/groups/projects/admin/we_retail"/>
 </workspaceFilter>
