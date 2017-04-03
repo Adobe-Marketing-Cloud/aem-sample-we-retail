@@ -143,11 +143,11 @@ public class MockCommerceSession implements CommerceSession {
             subTotal = subTotal.add(entry.getPriceInfo(new PriceFilter(WeRetailConstants.PRICE_FILTER_LINE)).get(0).getAmount());
         }
 
-        setPrice(new PriceInfo(Constants.SHIPPING_TOTAL_VALUE, Locale.getDefault()), WeRetailConstants.PRICE_FILTER_SHIPPING);
-        setPrice(new PriceInfo(subTotal, Locale.getDefault()), WeRetailConstants.PRICE_FILTER_PRE_TAX);
-        setPrice(new PriceInfo(Constants.TAX_TOTAL_VALUE, Locale.getDefault()), WeRetailConstants.PRICE_FILTER_TAX);
+        setPrice(new PriceInfo(Constants.SHIPPING_TOTAL_VALUE, new Locale("en", "US")), WeRetailConstants.PRICE_FILTER_SHIPPING);
+        setPrice(new PriceInfo(subTotal, new Locale("en", "US")), WeRetailConstants.PRICE_FILTER_PRE_TAX);
+        setPrice(new PriceInfo(Constants.TAX_TOTAL_VALUE, new Locale("en", "US")), WeRetailConstants.PRICE_FILTER_TAX);
         BigDecimal total = subTotal.add(Constants.SHIPPING_TOTAL_VALUE).add(Constants.TAX_TOTAL_VALUE);
-        setPrice(new PriceInfo(total, Locale.getDefault()), WeRetailConstants.PRICE_FILTER_TOTAL);
+        setPrice(new PriceInfo(total, new Locale("en", "US")), WeRetailConstants.PRICE_FILTER_TOTAL);
     }
 
     private void setPrice(PriceInfo priceInfo, String... types) {
@@ -271,10 +271,10 @@ public class MockCommerceSession implements CommerceSession {
             if (price != null) {
                 BigDecimal unitPrice = new BigDecimal(price);
                 DefaultJcrCartEntry jcrCartEntry = (DefaultJcrCartEntry) cartEntry;
-                jcrCartEntry.setPrice(new PriceInfo(unitPrice, Locale.getDefault()), WeRetailConstants.PRICE_FILTER_UNIT,
+                jcrCartEntry.setPrice(new PriceInfo(unitPrice, new Locale("en", "US")), WeRetailConstants.PRICE_FILTER_UNIT,
                         WeRetailConstants.PRICE_FILTER_PRE_TAX);
                 BigDecimal preTaxPrice = unitPrice.multiply(new BigDecimal(cartEntry.getQuantity()));
-                jcrCartEntry.setPrice(new PriceInfo(preTaxPrice, Locale.getDefault()), WeRetailConstants.PRICE_FILTER_LINE,
+                jcrCartEntry.setPrice(new PriceInfo(preTaxPrice, new Locale("en", "US")), WeRetailConstants.PRICE_FILTER_LINE,
                         WeRetailConstants.PRICE_FILTER_PRE_TAX);
             }
         }
