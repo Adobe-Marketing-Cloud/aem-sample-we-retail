@@ -55,6 +55,12 @@ public class MockCommerceSession implements CommerceSession {
 
     private List<PriceInfo> prices;
 
+    private Locale locale;
+
+    public MockCommerceSession() {
+        this.locale = new Locale("en", "US");
+    }
+
     @Override
     public void addCartEntry(Product product, int quantity) throws CommerceException {
         throw new UnsupportedOperationException();
@@ -143,11 +149,11 @@ public class MockCommerceSession implements CommerceSession {
             subTotal = subTotal.add(entry.getPriceInfo(new PriceFilter(WeRetailConstants.PRICE_FILTER_LINE)).get(0).getAmount());
         }
 
-        setPrice(new PriceInfo(Constants.SHIPPING_TOTAL_VALUE, new Locale("en", "US")), WeRetailConstants.PRICE_FILTER_SHIPPING);
-        setPrice(new PriceInfo(subTotal, new Locale("en", "US")), WeRetailConstants.PRICE_FILTER_PRE_TAX);
-        setPrice(new PriceInfo(Constants.TAX_TOTAL_VALUE, new Locale("en", "US")), WeRetailConstants.PRICE_FILTER_TAX);
+        setPrice(new PriceInfo(Constants.SHIPPING_TOTAL_VALUE, locale), WeRetailConstants.PRICE_FILTER_SHIPPING);
+        setPrice(new PriceInfo(subTotal, locale), WeRetailConstants.PRICE_FILTER_PRE_TAX);
+        setPrice(new PriceInfo(Constants.TAX_TOTAL_VALUE, locale), WeRetailConstants.PRICE_FILTER_TAX);
         BigDecimal total = subTotal.add(Constants.SHIPPING_TOTAL_VALUE).add(Constants.TAX_TOTAL_VALUE);
-        setPrice(new PriceInfo(total, new Locale("en", "US")), WeRetailConstants.PRICE_FILTER_TOTAL);
+        setPrice(new PriceInfo(total, locale), WeRetailConstants.PRICE_FILTER_TOTAL);
     }
 
     private void setPrice(PriceInfo priceInfo, String... types) {
@@ -271,10 +277,10 @@ public class MockCommerceSession implements CommerceSession {
             if (price != null) {
                 BigDecimal unitPrice = new BigDecimal(price);
                 DefaultJcrCartEntry jcrCartEntry = (DefaultJcrCartEntry) cartEntry;
-                jcrCartEntry.setPrice(new PriceInfo(unitPrice, new Locale("en", "US")), WeRetailConstants.PRICE_FILTER_UNIT,
+                jcrCartEntry.setPrice(new PriceInfo(unitPrice, locale), WeRetailConstants.PRICE_FILTER_UNIT,
                         WeRetailConstants.PRICE_FILTER_PRE_TAX);
                 BigDecimal preTaxPrice = unitPrice.multiply(new BigDecimal(cartEntry.getQuantity()));
-                jcrCartEntry.setPrice(new PriceInfo(preTaxPrice, new Locale("en", "US")), WeRetailConstants.PRICE_FILTER_LINE,
+                jcrCartEntry.setPrice(new PriceInfo(preTaxPrice, locale), WeRetailConstants.PRICE_FILTER_LINE,
                         WeRetailConstants.PRICE_FILTER_PRE_TAX);
             }
         }
