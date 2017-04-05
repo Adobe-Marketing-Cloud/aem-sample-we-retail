@@ -14,7 +14,7 @@
     limitations under the License.
 */-->
 <div data-sly-use.header="Header"
-     class="navbar navbar-inverse navbar-fixed-top hidden-xs">
+     class="navbar navbar-inverse navbar-fixed-top hidden-xs hidden-sm">
     <div class="container-fluid">
         <ul class="nav navbar-nav navbar-left">
             <li><a href="#" data-toggle="modal" data-target=".we-LanguageModal" title="${header.currentLanguage.name}"><i class="we-lang-icon we-lang-icon-${header.currentLanguage.countrycode}"></i> ${header.currentLanguage.languagecode}</a></li>
@@ -51,13 +51,14 @@
             </button>
 
             <a class="navbar-brand" href="${header.languageRoot}">we.<strong>Retail</strong></a>
-            <div class="pull-right visible-xs" data-sly-resource="${@ resourceType='weretail/components/structure/navcart', selectors='mobilebutton'}"></div>
+            <div class="pull-right visible-xs visible-sm"
+                 data-sly-resource="${@ resourceType='weretail/components/structure/navcart', selectors='mobilebutton'}"></div>
         </div>
 
         <!-- /.navbar-header -->
         <div class="collapse navbar-collapse width" id="we-example-navbar-collapse-inverse">
             <ul  class="nav navbar-nav navbar-center">
-                <li class="visible-xs"><a href="${header.languageRoot.path}.html">we.<strong class="text-primary">Retail</strong></a></li>
+                <li class="visible-xs visible-sm"><a href="${header.languageRoot.path}.html">we.<strong class="text-primary">Retail</strong></a></li>
                 <sly data-sly-list.item="${header.items}">
                     <li class="${item.selected ? 'active' : ''}">
                         <a href="${ item.page.path }.html">${item.page.title}</a>
@@ -69,14 +70,22 @@
                         </ul>
                     </li>
                 </sly>
-                <li class="visible-xs divider" role="separator"></li>
-                <li class="visible-xs" data-sly-test="${header.anonymous}"><a href="${header.signInPath}.html">Login</a></li>
-                <li class="visible-xs" data-sly-test="${!header.anonymous}"><a href="/system/sling/logout.html?resource=${header.currentPath}.html">Log out</a></li>
-                <li class="visible-xs" data-sly-test="${!header.anonymous}"><a href="${header.profilePath}.html">Profile</a></li>
-                <li class="visible-xs" data-sly-test="${!header.anonymous}"><a href="${header.messagingPath}.html" class="visible-xs">Messages <span class="badge pull-right">0</span></a></li>
-                <li class="visible-xs" data-sly-test="${!header.anonymous}"><a href="${header.notificationPath}.html" class="visible-xs">Notifications <span class="badge pull-right">0</span></a></li>
-                <li class="visible-xs" data-sly-test="${!header.anonymous}" data-sly-resource="${@ resourceType='weretail/components/structure/navwishlist', selectors='mobilelink'}"></li>
-                <li class="visible-xs"><a href="#" data-toggle="modal" data-target=".we-LanguageModal"><i class="we-lang-icon we-lang-icon-${header.currentLanguage.countrycode}"></i> ${header.currentLanguage.languagecode}</a></li>
+                <li class="visible-xs visible-sm divider" role="separator"></li>
+                <li class="visible-xs visible-sm" data-sly-test="${header.anonymous}"><a href="${header.signInPath}.html">Login</a></li>
+                <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}"><a href="/system/sling/logout.html?resource=${header.currentPath}.html">Log out</a></li>
+                <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}"><a href="${header.profilePath}.html">Profile</a></li>
+                <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}">
+                    <a href="${header.messagingPath}.html" class="visible-xs visible-sm">Messages
+                        <span class="badge pull-right">0</span>
+                    </a>
+                </li>
+                <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}">
+                    <a href="${header.notificationPath}.html" class="visible-xs visible-sm">Notifications
+                        <span class="badge pull-right">0</span>
+                    </a>
+                </li>
+                <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}" data-sly-resource="${@ resourceType='weretail/components/structure/navwishlist', selectors='mobilelink'}"></li>
+                <li class="visible-xs visible-sm"><a href="#" data-toggle="modal" data-target=".we-LanguageModal"><i class="we-lang-icon we-lang-icon-${header.currentLanguage.countrycode}"></i> ${header.currentLanguage.languagecode}</a></li>
             </ul>
         </div>
 
