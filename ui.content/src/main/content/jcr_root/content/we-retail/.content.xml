@@ -20,13 +20,13 @@
             <file/>
         </image>
     </jcr:content>
+    <language-masters/>
+    <us/>
     <ca/>
     <ch/>
     <de/>
-    <es/>
     <fr/>
+    <es/>
     <it/>
-    <language-masters/>
-    <us/>
     <resources/>
 </jcr:root>

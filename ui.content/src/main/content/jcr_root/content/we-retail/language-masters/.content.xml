@@ -14,9 +14,9 @@
         branding-global-less="/etc/designs/we-retail/global.less"
         hideInNav="{Boolean}true"
         redirectTarget="/content/we-retail/language-masters/en"/>
-    <de/>
     <en/>
-    <es/>
+    <de/>
     <fr/>
+    <es/>
     <it/>
 </jcr:root>
