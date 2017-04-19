@@ -11,7 +11,7 @@
         cq:template="/conf/we-retail/settings/wcm/templates/hero-page"
         jcr:mixinTypes="[cq:LiveRelationship,cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="German"
+        jcr:title="Deutsch"
         sling:resourceType="weretail/components/structure/page"
         navRoot="{Boolean}true">
         <root
