@@ -14,8 +14,8 @@
     limitations under the License.
 */-->
 <div data-sly-use.categoryTeaser="CategoryTeaser" class="we-CategoryTeaser cq-dd-image">
-    <div class="crop crop-16_9">
-        <img class="crop__content" data-lazy-src="${ categoryTeaser.imagePath @ context='uri' }"/>
+    <div class="crop crop-16_9"
+         data-sly-resource="${ @ resourceType='weretail/components/content/categoryteaserimage'}">
     </div>
 
     <h2>${properties.heading}</h2>

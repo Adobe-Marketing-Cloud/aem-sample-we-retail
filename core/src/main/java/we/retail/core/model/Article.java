@@ -26,6 +26,7 @@ import javax.jcr.RepositoryException;
 import com.adobe.cq.dam.cfm.ContentElement;
 import com.adobe.cq.dam.cfm.ContentFragment;
 import com.adobe.cq.dam.cfm.ContentVariation;
+import com.day.cq.commons.ImageResource;
 import com.day.cq.dam.api.DamConstants;
 
 import org.apache.commons.lang3.StringUtils;
@@ -34,7 +35,9 @@ import org.apache.jackrabbit.util.Text;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
+import org.apache.sling.api.resource.ResourceWrapper;
 import org.apache.sling.api.resource.ValueMap;
+import org.apache.sling.api.wrappers.ValueMapDecorator;
 import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ResourcePath;
@@ -71,17 +74,39 @@ public class Article {
     @Self
     private SlingHttpServletRequest request;
 
-    private String imagePath;
+    private Resource imageResource;
     private String title;
     private ContentFragment contentFragment;
 
     @PostConstruct
     protected void initModel() {
-        String escapedResourcePath = Text.escapePath(resource.getPath());
-        imagePath = request.getContextPath() + escapedResourcePath + ".article-image.jpeg";
         Page page = resource.adaptTo(Page.class);
         if (page != null) {
             title = page.getTitle();
+        }
+        imageResource = resource.getChild(JcrConstants.JCR_CONTENT + "/root/hero_image");
+        if (imageResource != null) {
+            // wrap the hero image resource and inject the value for the alt image attribute
+            final Map<String, Object> resourceProperties = new HashMap<String, Object>(imageResource.getValueMap());
+            if (title != null) {
+                resourceProperties.put(ImageResource.PN_ALT, title);
+            }
+            final ValueMapDecorator decorator = new ValueMapDecorator(resourceProperties);
+            imageResource = new ResourceWrapper(imageResource) {
+
+                @Override
+                public ValueMap getValueMap() {
+                    return decorator;
+                }
+
+                @Override
+                public <AdapterType> AdapterType adaptTo(Class<AdapterType> type) {
+                    if (type == ValueMap.class) {
+                        return (AdapterType) decorator;
+                    }
+                    return super.adaptTo(type);
+                }
+            };
         }
         contentFragment = getContentFragment();
     }
@@ -105,8 +130,8 @@ public class Article {
         return title;
     }
 
-    public String getImagePath() {
-        return imagePath;
+    public Resource getImageResource() {
+        return imageResource;
     }
 
     public List<Tag> getTags() {

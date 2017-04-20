@@ -265,6 +265,73 @@
                             mergeList="{Boolean}true"/>
                     </we-retial-section-page>
                 </title>
+                <image jcr:primaryType="nt:unstructured">
+                    <policy_1490281316632
+                        jcr:lastModified="{Date}2017-03-23T16:52:07.565+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Retail Default"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedRenditionWidths="[128,256,512,1024,1280,1440,1920,2048]"
+                        allowUpload="true">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <plugins jcr:primaryType="nt:unstructured">
+                            <crop
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <aspectRatios jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Wide Landscape"
+                                        ratio="0.8284"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Landscape"
+                                        ratio="0.6180"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Square"
+                                        ratio="1"/>
+                                    <item3
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Portrait"
+                                        ratio="1.6180"/>
+                                </aspectRatios>
+                            </crop>
+                            <rotate
+                                jcr:primaryType="nt:unstructured"
+                                features="right"/>
+                            <flip
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                        </plugins>
+                    </policy_1490281316632>
+                </image>
+                <categoryteaser jcr:primaryType="nt:unstructured">
+                    <policy_1492610142529
+                        jcr:lastModified="{Date}2017-04-20T16:06:08.451+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Retail Default"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedRenditionWidths="[128,256,512,1024,1280,1440,1920,2048]"
+                        disableLazyLoading="true">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1492610142529>
+                </categoryteaser>
+                <categoryteaserimage jcr:primaryType="nt:unstructured">
+                    <policy_1492698986168
+                        jcr:lastModified="{Date}2017-04-20T16:36:47.151+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Retail Default"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedRenditionWidths="[128,256,512,1024,1280,1440,1920,2048]"
+                        allowUpload="true"
+                        disableLazyLoading="true">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1492698986168>
+                </categoryteaserimage>
             </content>
         </components>
     </weretail>

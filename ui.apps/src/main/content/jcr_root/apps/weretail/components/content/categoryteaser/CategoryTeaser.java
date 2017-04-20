@@ -36,7 +36,6 @@ public class CategoryTeaser extends WCMUsePojo {
     public static final String PROP_BUTTON_LINK_TO = "buttonLinkTo";
     public static final String PROP_BUTTON_LABEL = "buttonLabel";
 
-    private String imagePath;
     private String buttonLinkTo;
     private String buttonLabel;
 
@@ -45,8 +44,6 @@ public class CategoryTeaser extends WCMUsePojo {
         Resource resource = getResource();
         ValueMap properties = getProperties();
         ResourceResolver resolver = getResourceResolver();
-        String escapedResourcePath = Text.escapePath(resource.getPath());
-        imagePath = getRequest().getContextPath() + escapedResourcePath + ".img.jpeg";
         buttonLinkTo = properties.get(PROP_BUTTON_LINK_TO, "");
         buttonLabel = properties.get(PROP_BUTTON_LABEL, "");
         if (StringUtils.isNotEmpty(buttonLinkTo)) {
@@ -63,13 +60,8 @@ public class CategoryTeaser extends WCMUsePojo {
             buttonLinkTo = buttonLinkTo + ".html";
         }
         log.debug("resource: {}", resource.getPath());
-        log.debug("imagePath: {}", imagePath);
         log.debug("buttonLinkTo: {}", buttonLinkTo);
         log.debug("buttonLabel: {}", buttonLabel);
-    }
-
-    public String getImagePath() {
-        return imagePath;
     }
 
     public String getButtonLinkTo() {
@@ -79,5 +71,4 @@ public class CategoryTeaser extends WCMUsePojo {
     public String getButtonLabel() {
         return buttonLabel;
     }
-
 }
