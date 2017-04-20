@@ -17,10 +17,10 @@
 <workspaceFilter version="1.0">
     <filter root="/apps/weretail">
         <exclude pattern="/apps/weretail(/.*)?"/>
-        <include pattern="/apps/weretail/clientlibs"/>
-        <include pattern="/apps/weretail/components"/>
-        <include pattern="/apps/weretail/gui"/>
-        <include pattern="/apps/weretail/i18n"/>
+        <include pattern="/apps/weretail/clientlibs(/.*)?"/>
+        <include pattern="/apps/weretail/components(/.*)?"/>
+        <include pattern="/apps/weretail/gui(/.*)?"/>
+        <include pattern="/apps/weretail/i18n(/.*)?"/>
     </filter>
 
     <filter root="/apps/public/weretail"/>
