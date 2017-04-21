@@ -42,13 +42,8 @@
         <div class="col-md-5 col-md-offset-1">
             <div class="we-Product-visual" 
                  data-sly-use.hapiProductAsset="${'org.apache.sling.hapi.sightly.HApiUse' @ type=hapiProduct.proptype.assets}"
-                 data-sly-attribute="${hapiProduct.itemprop.assets}"> <!-- TODO: add zoom and slider -->
-
+                 data-sly-attribute="${hapiProduct.itemprop.assets}">
                 <img src="${productModel.productItem.imageUrl}" class="img-responsive" v-bind:src="product.image" data-sly-attribute="${hapiProductAsset.itemprop.path}" />
-                
-                <!--/*
-                <a href="#" class="we-Product-visual-zoom"><i class="we-Icon we-Icon--zoom-plus"></i> View larger</a>
-                */-->
             </div>
         </div>
     
@@ -58,7 +53,9 @@
                     <strong class="we-Product-brand h4" v-html="product.description" data-sly-attribute="${hapiProduct.itemprop.description}">${productModel.productItem.description}</strong>
                 </div>
                 <div class="col-xs-6 text-right">
-                    <span class="we-Product-code">SKU: <span v-text="product.sku" data-sly-attribute="${hapiProduct.itemprop.sku}">${productModel.productItem.sku}</span></span>
+                    <span class="we-Product-code">${ 'SKU:' @ i18n } <span v-text="product.sku"
+                                                                       data-sly-attribute="${hapiProduct.itemprop.sku}">
+                        ${productModel.productItem.sku}</span></span>
                 </div>
             </div>
             <div class="row">
@@ -118,14 +115,11 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-md-4">
-                            <!--/*
-                            <span class="we-Product-status text-success">In stock</span>
-                            */-->
                         </div>
                         <div class="col-md-8 text-right">
                             <div class="we-Product-actions">
                                 <button type="submit" class="btn btn-action btn-primary" v-on:click="trackCartAdd"
-                                        data-sly-attribute="${hapiProductForm.itemprop.addToCartButton}">Add to cart</button>
+                                        data-sly-attribute="${hapiProductForm.itemprop.addToCartButton}">${ 'Add to cart' @ i18n }</button>
                                 <a data-sly-test="${!productModel.isAnonymous}" v-on:click.prevent="addToWishlist"
                                    href="#" data-smartlist-url="${productModel.addToSmartListUrl}"
                                    class="btn btn-icon btn-primary we-retail-not-anonymous" data-sly-attribute="${hapiProductForm.itemprop.addToSmartlistButton}">

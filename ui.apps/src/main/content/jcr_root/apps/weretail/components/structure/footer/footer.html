@@ -46,17 +46,17 @@
 
             <div class="row we-Footer-section we-Footer-section--sub">
                 <div class="we-Footer-section-item">
-                    <span class="text-uppercase text-muted">&copy; ${ footer.year } All rights reserved</span>
+                    <span class="text-uppercase text-muted">${ '© {0} All rights reserved' @ format=[footer.currentYear], i18n }</span>
                 </div>
                 <div class="we-Footer-section-item">
-                    <a href="#" class="text-uppercase text-muted">Terms of use &amp; privacy policy</a>
+                    <a href="#" class="text-uppercase text-muted">${ 'Terms of use & privacy policy' @ i18n }</a>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-center">
-                        <a href="#top" class="btn btn-action btn-action-up btn-primary">Ride to the top</a>
+                        <a href="#top" class="btn btn-action btn-action-up btn-primary">${ 'Ride to the top' @ i18n }</a>
                     </div>
                 </div>
             </div>

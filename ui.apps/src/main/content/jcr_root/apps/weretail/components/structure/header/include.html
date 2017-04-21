@@ -20,17 +20,18 @@
             <li><a href="#" data-toggle="modal" data-target=".we-LanguageModal" title="${header.currentLanguage.name}"><i class="we-lang-icon we-lang-icon-${header.currentLanguage.countrycode}"></i> ${header.currentLanguage.languagecode}</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li data-sly-test="${!header.anonymous}"><a href="${header.accountPath}.html">Account</a></li>
-            <li data-sly-test="${!header.anonymous}"><a href="${header.profilePath}.html">Profile</a></li>
+            <li data-sly-test="${!header.anonymous}"><a href="${header.accountPath}.html">${ 'Account' @ i18n }</a></li>
+            <li data-sly-test="${!header.anonymous}"><a href="${header.profilePath}.html">${ 'Profile' @ i18n }</a></li>
             <li data-sly-test="${!header.anonymous}" data-sly-resource="${@ resourceType='weretail/components/structure/navwishlist'}"></li>
-            <li data-sly-test="${!header.anonymous}"><a href="${header.messagingPath}.html"><i class="fa fa-envelope-o"></i> Messages
+            <li data-sly-test="${!header.anonymous}"><a href="${header.messagingPath}.html"><i class="fa fa-envelope-o"></i> ${
+                'Messages' @ i18n }
                 <span class="badge" id="we-retail-message-count" data-siteurl="/content/we-retail/us/en/community">0</span></a></li>
-            <li data-sly-test="${!header.anonymous}"><a href="${header.notificationPath}.html"><i class="fa fa-flag-o"></i> Notifications
+            <li data-sly-test="${!header.anonymous}"><a href="${header.notificationPath}.html"><i class="fa fa-flag-o"></i> ${ 'Notifications' @ i18n }
                 <span class="badge" id="we-retail-notification-count" data-siteurl="/content/we-retail/us/en/community">0</span></a></li>
             <li data-sly-resource="${@ resourceType='weretail/components/structure/navcart'}"></li>
-            <li data-sly-test="${header.isModerator}"><a href="${header.moderationPath}.html">Moderation</a></li>
-            <li data-sly-test="${header.anonymous}"><a href="${header.signInPath}.html">Login</a></li>
-            <li data-sly-test="${!header.anonymous}"><a href="/system/sling/logout.html?resource=${header.currentPath}.html">Log out</a></li>
+            <li data-sly-test="${header.isModerator}"><a href="${header.moderationPath}.html">${ 'Moderation' @ i18n }</a></li>
+            <li data-sly-test="${header.anonymous}"><a href="${header.signInPath}.html">${ 'Login' @ i18n }</a></li>
+            <li data-sly-test="${!header.anonymous}"><a href="/system/sling/logout.html?resource=${header.currentPath}.html">${ 'Log out' @ i18n }</a></li>
         </ul>
     </div>
 </div>
@@ -40,13 +41,13 @@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#we-example-navbar-collapse-inverse" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
+                <span class="sr-only">${ 'Toggle navigation' @ i18n }</span>
                 <span class="icon-bar"></span> <span class="icon-bar"></span>
             </button>
 
             <button type="button" class="navbar-toggle navbar-toggle-close collapsed" data-toggle="collapse"
                     data-target="#we-example-navbar-collapse-inverse" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
+                <span class="sr-only">${ 'Toggle navigation' @ i18n }</span>
                 <i class="we-Icon we-Icon--close"></i>
             </button>
 
@@ -71,16 +72,16 @@
                     </li>
                 </sly>
                 <li class="visible-xs visible-sm divider" role="separator"></li>
-                <li class="visible-xs visible-sm" data-sly-test="${header.anonymous}"><a href="${header.signInPath}.html">Login</a></li>
-                <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}"><a href="/system/sling/logout.html?resource=${header.currentPath}.html">Log out</a></li>
-                <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}"><a href="${header.profilePath}.html">Profile</a></li>
+                <li class="visible-xs visible-sm" data-sly-test="${header.anonymous}"><a href="${header.signInPath}.html">${ 'Login' @ i18n }</a></li>
+                <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}"><a href="/system/sling/logout.html?resource=${header.currentPath}.html">${ 'Log out' @ i18n }</a></li>
+                <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}"><a href="${header.profilePath}.html">${ 'Profile' @ i18n }</a></li>
                 <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}">
-                    <a href="${header.messagingPath}.html" class="visible-xs visible-sm">Messages
+                    <a href="${header.messagingPath}.html" class="visible-xs visible-sm">${ 'Messages' @ i18n }
                         <span class="badge pull-right">0</span>
                     </a>
                 </li>
                 <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}">
-                    <a href="${header.notificationPath}.html" class="visible-xs visible-sm">Notifications
+                    <a href="${header.notificationPath}.html" class="visible-xs visible-sm">${ 'Notifications' @ i18n }
                         <span class="badge pull-right">0</span>
                     </a>
                 </li>
@@ -92,7 +93,7 @@
         <!-- /.navbar-collapse -->
         <div class="navbar-right-outside">
             <a href="#" class="btn ${header.theme == 'inverse' ? 'btn-primary' : ''}" data-toggle="modal" data-target="#navbar-search">
-                <span class="sr-only">Search</span><i class="we-Icon we-Icon--search" aria-hidden="true"></i>
+                <span class="sr-only">${ 'Search' @ i18n }</span><i class="we-Icon we-Icon--search" aria-hidden="true"></i>
             </a>
         </div>
         <!-- /.navbar-right-outside -->

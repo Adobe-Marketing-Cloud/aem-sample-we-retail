@@ -18,8 +18,8 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <span><i class="we-Icon we-Icon--search"></i>Search anything</span>
-                <button type="button" class="close" data-dismiss="modal"><span>Close search</span><i class="we-Icon we-Icon--close-alt"></i>
+                <span><i class="we-Icon we-Icon--search"></i>${ 'Search anything' @ i18n }</span>
+                <button type="button" class="close" data-dismiss="modal"><span>${ 'Close search' @ i18n }</span><i class="we-Icon we-Icon--close-alt"></i>
                 </button>
             </div>
             <div class="modal-body">
@@ -50,7 +50,7 @@
     <div class="modal-dialog modal-center modal-sm">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 class="modal-title text-center">CHOOSE YOUR COUNTRY</h3>
+                <h3 class="modal-title text-center">${ 'CHOOSE YOUR COUNTRY' @ i18n }</h3>
             </div>
             <div class="modal-body">
                 <ul class="we-LanguagesList" data-sly-list.country="${header.countries}">
@@ -64,7 +64,7 @@
             </div>
         </div>
         <div class="modal-after">
-            <a href="#" data-dismiss="modal"><i class="we-Icon we-Icon--close-alt"></i> Close</a>
+            <a href="#" data-dismiss="modal"><i class="we-Icon we-Icon--close-alt"></i> ${ 'Close' @ i18n }</a>
         </div>
     </div>
 </div><!-- /.we-LanguageModal -->
