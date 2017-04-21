@@ -13,8 +13,8 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<div data-sly-use.categoryTeaser="CategoryTeaser" class="we-CategoryTeaser cq-dd-image">
-    <div class="crop crop-16_9"
+<div data-sly-use.categoryTeaser="CategoryTeaser" class="we-CategoryTeaser${!wcmmode.disabled ? ' cq-dd-image' : ''}">
+    <div class="crop crop-16_9 cmp cmp-image"
          data-sly-resource="${ @ resourceType='weretail/components/content/categoryteaserimage'}">
     </div>
 
