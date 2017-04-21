@@ -16,13 +16,15 @@
 package apps.weretail.components.content.heroimage;
 
 import java.lang.String;
+import java.util.Calendar;
 
-import com.adobe.cq.sightly.SightlyWCMMode;
+import org.apache.jackrabbit.JcrConstants;
 import org.apache.jackrabbit.util.Text;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
+
 import com.adobe.cq.sightly.WCMUsePojo;
 
 public class HeroImage extends WCMUsePojo {
@@ -32,21 +34,13 @@ public class HeroImage extends WCMUsePojo {
     public static final String PROP_FULL_WIDTH = "useFullWidth";
     public static final String PROP_KEEP_RATIO = "keepRatio";
 
-    private Resource resource;
     private String classList;
     private Image image;
-    private SightlyWCMMode wcmMode;
 
     @Override
     public void activate() throws Exception {
-        resource = getResource();
-        wcmMode = getWcmMode();
         classList = getClassList();
         image = getImage();
-        log.debug("resource: {}", resource.getPath());
-        log.debug("classList: {}", classList);
-        log.debug("image.src: {}", image.getSrc());
-        log.debug("wcm mode: {}", wcmMode.toString());
     }
 
     public String getClassList() {
@@ -68,12 +62,10 @@ public class HeroImage extends WCMUsePojo {
         if (image != null) {
             return image;
         }
-        String escapedResourcePath = Text.escapePath(resource.getPath());
-        String src = getRequest().getContextPath() + escapedResourcePath + ".img.jpeg";
-        // cache killer for edit mode to refresh image after drag-and-drop
-        if(wcmMode.isEdit()) {
-            src = src + "?" + System.currentTimeMillis();
-        }
+        String escapedResourcePath = Text.escapePath(getResource().getPath());
+        long lastModifiedDate = getLastModifiedDate(getProperties());
+        String src = getRequest().getContextPath() + escapedResourcePath + ".img.jpeg" +
+                (!getWcmMode().isDisabled() && lastModifiedDate > 0 ? "/" + lastModifiedDate + ".jpeg" : "");
         image = new Image(src);
         return image;
     }
@@ -88,6 +80,16 @@ public class HeroImage extends WCMUsePojo {
         public String getSrc() {
             return src;
         }
+    }
+
+    private long getLastModifiedDate(ValueMap properties) {
+        long lastMod = 0L;
+        if (properties.containsKey(JcrConstants.JCR_LASTMODIFIED)) {
+            lastMod = properties.get(JcrConstants.JCR_LASTMODIFIED, Calendar.class).getTimeInMillis();
+        } else if (properties.containsKey(JcrConstants.JCR_CREATED)) {
+            lastMod = properties.get(JcrConstants.JCR_CREATED, Calendar.class).getTimeInMillis();
+        }
+        return lastMod;
     }
 
 }
