@@ -45,12 +45,27 @@
 @import "@{designPath}/common/icons";
 @import "@{designPath}/common/language-icons";
 
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 body {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     padding-top: 40px!important;
     color: @gray-dark;
+    min-height: 100%;
+    margin: 0;
+    position: relative;
+    padding-bottom: 315px;
 }
 
 @import "@{sitePath}/less/components/utilities";
