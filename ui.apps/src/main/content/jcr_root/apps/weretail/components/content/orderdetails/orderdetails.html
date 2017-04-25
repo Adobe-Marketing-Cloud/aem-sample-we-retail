@@ -90,9 +90,7 @@
             </div>
         </div>
         <div class="we-ShoppingOrder-promotions" data-sly-test="${order.orderPromotions}">
-            <sly data-sly-repeat.promotion="${order.orderPromotions}">
-                <span class="we-ShoppingCart-promotion">${promotion.message @ context='html'}</span>
-            </sly>
+            <span data-sly-repeat.promotion="${order.orderPromotions}" class="we-ShoppingCart-promotion">${promotion.message @context='html'}</span>
         </div>
         
         <div class="we-ShoppingOrder-prices body"
