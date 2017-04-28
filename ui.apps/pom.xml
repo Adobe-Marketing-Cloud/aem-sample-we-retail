@@ -225,8 +225,8 @@
     <!-- ====================================================================== -->
     <dependencies>
         <dependency>
-            <groupId>com.day.cq</groupId>
-            <artifactId>cq-quickstart-beta</artifactId>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>uber-jar</artifactId>
             <classifier>apis</classifier>
         </dependency>
         <dependency>
