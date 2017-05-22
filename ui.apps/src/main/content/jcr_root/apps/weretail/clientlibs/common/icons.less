@@ -62,17 +62,16 @@
 @we-Icon--var-youtube: "\f126";
 @we-Icon--var-zoom-minus: "\f127";
 @we-Icon--var-zoom-plus: "\f128";
+@we-Icon-version: "1.0.0";
 
 
 // General
 
 @font-face {
     font-family: "we-icons";
-    src: url("@{we-Icon-font-path}/we-icons.eot?4c0038ac77b002fe8f53d4b830d03f6c");
-    src: url("@{we-Icon-font-path}/we-icons.eot?#iefix") format("embedded-opentype"),
-         url("@{we-Icon-font-path}/we-icons.woff2?4c0038ac77b002fe8f53d4b830d03f6c") format("woff2"),
-         url("@{we-Icon-font-path}/we-icons.woff?4c0038ac77b002fe8f53d4b830d03f6c") format("woff"),
-         url("@{we-Icon-font-path}/we-icons.ttf?4c0038ac77b002fe8f53d4b830d03f6c") format("truetype");
+    src: url("@{we-Icon-font-path}/we-icons.@{we-Icon-version}.woff2") format("woff2"),
+         url("@{we-Icon-font-path}/we-icons.@{we-Icon-version}.woff") format("woff"),
+         url("@{we-Icon-font-path}/we-icons.@{we-Icon-version}.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
