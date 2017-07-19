@@ -556,11 +556,6 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
 
-            <properties>
-                <releaseRepository-URL>http://admin:admin123@localhost:8081/nexus/content/repositories/releases</releaseRepository-URL>
-                <snapshotRepository-URL>http://admin:admin123@localhost:8081/nexus/content/repositories/snapshots</snapshotRepository-URL>
-            </properties>
-
             <repositories>
                 <repository>
                     <id>adobe-public-releases</id>
