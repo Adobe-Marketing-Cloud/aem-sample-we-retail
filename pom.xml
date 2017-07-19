@@ -19,7 +19,7 @@
     <groupId>com.adobe.cq.sample</groupId>
     <artifactId>we.retail</artifactId>
     <packaging>pom</packaging>
-    <version>2.0.3-SNAPSHOT</version>
+    <version>0.1-SNAPSHOT</version>
 
     <name>We.Retail</name>
     <description>We.Retail reactor and parent</description>
@@ -557,9 +557,8 @@
             </activation>
 
             <properties>
-                <releaseRepository-Id>adobe-public-releases</releaseRepository-Id>
-                <releaseRepository-Name>Adobe Public Releases</releaseRepository-Name>
-                <releaseRepository-URL>https://repo.adobe.com/nexus/content/groups/public</releaseRepository-URL>
+                <releaseRepository-URL>http://admin:admin123@localhost:8081/nexus/content/repositories/releases</releaseRepository-URL>
+                <snapshotRepository-URL>http://admin:admin123@localhost:8081/nexus/content/repositories/snapshots</snapshotRepository-URL>
             </properties>
 
             <repositories>
