@@ -47,15 +47,7 @@
         <module>it.tests.ui-js</module>
         <module>all</module>
     </modules>
-
-    <!--<scm>
-        <connection>scm:git:https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail.git</connection>
-        <developerConnection>scm:git:git@github.com:Adobe-Marketing-Cloud/aem-sample-we-retail.git</developerConnection>
-        <url>https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail</url>
-        <tag>HEAD</tag>
-    </scm>-->
-
-
+    
     <build>
         <plugins>
             <!-- Java Code Coverage plugin -->
