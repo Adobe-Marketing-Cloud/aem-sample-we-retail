@@ -50,6 +50,26 @@
     
     <build>
         <plugins>
+            <plugin>
+            <groupId>org.sonatype.plugins</groupId>
+            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <version>1.5.1</version>
+            <executions>
+                <execution>
+                    <id>default-deploy</id>
+                    <phase>deploy</phase>
+                    <goals>
+                        <goal>deploy</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <serverId>nexus</serverId>
+                <nexusUrl>http://localhost:8081/nexus</nexusUrl>
+                <skipStaging>true</skipStaging>
+            </configuration>
+            </plugin>
+
             <!-- Java Code Coverage plugin -->
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -332,18 +352,31 @@
                         </execution>
                     </executions>
                 </plugin>
-                <!-- Maven Deploy Plugin -->
+                <!-- Maven Deploy Plugin (EDITED)-->
                 <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-deploy-plugin</artifactId>
-                    <version>2.8.2</version>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.1</version>
+                <executions>
+                    <execution>
+                        <id>default-deploy</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 </plugin>
                 <!-- Set fix version for javadoc plugin -->
+                <!-- CONFIGURED FOR DEPLOYMENT -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>2.9</version>
+                    <version>${maven-deploy-plugin.version}</version>
+                        <configuration>
+                        <skip>true</skip>
+                        </configuration>
                 </plugin>
+
                 <!-- Apache Sling Plugin -->
                 <plugin>
                     <groupId>org.apache.sling</groupId>
@@ -505,6 +538,11 @@
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
+            <!-- ADDED PROPERTIES FOR NEXUS DEPLOYMENT -->
+            <properties>
+                <releaseRepository-URL>http://${username}:${password}@localhost:8081/nexus/content/repositories/releases</releaseRepository-URL>
+                <snapshotRepository-URL>http://${username}:${password}@localhost:8081/nexus/content/repositories/snapshots</snapshotRepository-URL>
+            </properties>
 
             <repositories>
                 <repository>
