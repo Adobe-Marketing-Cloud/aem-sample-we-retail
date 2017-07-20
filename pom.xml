@@ -36,6 +36,23 @@
         <vault.user>admin</vault.user>
         <vault.password>admin</vault.password>
         <slf4j.version>1.5.11</slf4j.version>
+
+        <!-- SonarQube inclusions -->
+        <sonar.inclusions>
+        **/core/model/**
+        </sonar.inclusions>
+
+        <!-- SonarQube exclusions -->
+        <sonar.exclusions>
+        **/core/model/*Article*,
+        **/core/model/*CountriesFormOptionsDataSource*,
+        **/core/model/*NavCartModel*,
+        **/core/model/*ProductModel*,
+        **/core/model/*ShoppingCartModel*,
+        **/core/model/*WishlistModel*,
+        **/core/model/*VendorOrderModel*,
+        </sonar.exclusions>
+
         <sonar.jacoco.reportPaths>target/coverage-reports/jacoco-ut.exec</sonar.jacoco.reportPaths>
     </properties>
 
@@ -94,6 +111,20 @@
                             <goal>report</goal>
                         </goals>
                         <configuration>
+                            <!-- Define what to include in the Jacoco report. -->
+                            <includes>
+                                <include>**/core/model/**</include>
+                            </includes>
+                            <!-- Define what to exclude in the Jacoco report. -->
+                            <excludes>
+                                <exclude>**/core/model/*Article*</exclude>
+                                <exclude>**/core/model/*CountriesFormOptionsDataSource*</exclude>
+                                <exclude>**/core/model/*NavCartModel*</exclude>
+                                <exclude>**/core/model/*ProductModel*</exclude>
+                                <exclude>**/core/model/*ShoppingCartModel*</exclude>
+                                <exclude>**/core/model/*WishlistModel*</exclude>
+                                <exclude>**/core/model/*VendorOrderModel*</exclude>
+                            </excludes>
                             <!-- Sets the path to the file which contains the execution data. -->
                             <dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
                             <!-- Sets the output directory for the code coverage report. -->
@@ -110,7 +141,7 @@
                         <id>pre-integration-test</id>
                         <phase>pre-integration-test</phase>
                         <goals>
-                            <goal>prepare-agent</goal>
+                            <goal>prepare-agent-integration</goal>
                         </goals>
                         <configuration>
                             <!-- Sets the path to the file which contains the execution data. -->
@@ -130,7 +161,7 @@
                         <id>post-integration-test</id>
                         <phase>post-integration-test</phase>
                         <goals>
-                            <goal>report</goal>
+                            <goal>report-integration</goal>
                         </goals>
                         <configuration>
                             <!-- Sets the path to the file which contains the execution data. -->
@@ -139,6 +170,45 @@
                             <outputDirectory>${project.reporting.outputDirectory}/jacoco-it</outputDirectory>
                         </configuration>
                     </execution>
+
+                    <!-- Enforce JaCoCo rule -->
+                    <execution>
+                        <id>check</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <configuration>
+                            <dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
+                            <rules>
+                                <rule>
+                                    <element>BUNDLE</element>
+                                    <!-- Include class path patterns -->
+                                    <includes>
+                                        <include>we.retail.core.model.*</include>
+                                    </includes>
+                                    <!-- Exclude class path patterns -->
+                                    <excludes>
+                                        <exclude>we.retail.core.model.handler.*</exclude>
+                                        <exclude>we.retail.core.model.Article*</exclude>
+                                        <exclude>we.retail.core.model.CountriesFormOptionsDataSource*</exclude>
+                                        <exclude>we.retail.core.model.NavCartModel</exclude>
+                                        <exclude>we.retail.core.model.WishlistModel</exclude>
+                                        <exclude>we.retail.core.model.ProductModel</exclude>
+                                        <exclude>we.retail.core.model.ShoppingCartModel*</exclude>
+                                        <exclude>we.retail.core.model.VendorOrderModel</exclude>
+                                    </excludes>
+                                    <limits>
+                                        <limit>
+                                            <counter>INSTRUCTION</counter>
+                                            <value>COVEREDRATIO</value>
+                                            <minimum>0.80</minimum>
+                                        </limit>
+                                    </limits>
+                                </rule>
+                            </rules>
+                        </configuration>
+                    </execution>
+
                 </executions>
             </plugin>
             <!-- Maven Release Plugin -->
