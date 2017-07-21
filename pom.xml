@@ -65,16 +65,21 @@
         <module>all</module>
     </modules>
 
-    <!--<scm>
-        <connection>scm:git:https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail.git</connection>
-        <developerConnection>scm:git:git@github.com:Adobe-Marketing-Cloud/aem-sample-we-retail.git</developerConnection>
-        <url>https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail</url>
-        <tag>HEAD</tag>
-    </scm>-->
-
-
     <build>
         <plugins>
+            <!-- Dendency Check Plugin - OWASP -->
+            <plugin>
+              <groupId>org.owasp</groupId>
+              <artifactId>dependency-check-maven</artifactId>
+              <executions>
+                  <execution>
+                      <goals>
+                          <goal>aggregate</goal>
+                      </goals>
+                  </execution>
+              </executions>
+            </plugin>
+
             <!-- Java Code Coverage plugin -->
             <plugin>
                 <groupId>org.jacoco</groupId>
