@@ -99,29 +99,17 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.7.9</version>
                 <executions>
-                    <!--
-                        Prepares the property pointing to the JaCoCo runtime agent which
-                        is passed as VM argument when Maven the Surefire plugin is executed.
-                    -->
                     <execution>
                         <id>pre-unit-test</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                         <configuration>
-                            <!-- Sets the path to the file which contains the execution data. -->
                             <destFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</destFile>
-                            <!--
-                                Sets the name of the property containing the settings
-                                for JaCoCo runtime agent.
-                            -->
                             <propertyName>surefireArgLine</propertyName>
                         </configuration>
                     </execution>
-                    <!--
-                        Ensures that the code coverage report for unit tests is created after
-                        unit tests have been run.
-                    -->
+
                     <execution>
                         <id>post-unit-test</id>
                         <phase>test</phase>
@@ -129,11 +117,9 @@
                             <goal>report</goal>
                         </goals>
                         <configuration>
-                            <!-- Define what to include in the Jacoco report. -->
                             <includes>
                                 <include>**/core/model/**</include>
                             </includes>
-                            <!-- Define what to exclude in the Jacoco report. -->
                             <excludes>
                                 <exclude>**/core/model/*Article*</exclude>
                                 <exclude>**/core/model/*CountriesFormOptionsDataSource*</exclude>
@@ -143,18 +129,11 @@
                                 <exclude>**/core/model/*WishlistModel*</exclude>
                                 <exclude>**/core/model/*VendorOrderModel*</exclude>
                             </excludes>
-                            <!-- Sets the path to the file which contains the execution data. -->
                             <dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
-                            <!-- Sets the output directory for the code coverage report. -->
                             <outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
                         </configuration>
                     </execution>
 
-                    <!-- The Executions required by unit tests are omitted. -->
-                    <!--
-                        Prepares the property pointing to the JaCoCo runtime agent which
-                        is passed as VM argument when Maven the Failsafe plugin is executed.
-                    -->
                     <execution>
                         <id>pre-integration-test</id>
                         <phase>pre-integration-test</phase>
@@ -162,19 +141,11 @@
                             <goal>prepare-agent-integration</goal>
                         </goals>
                         <configuration>
-                            <!-- Sets the path to the file which contains the execution data. -->
                             <destFile>${project.build.directory}/coverage-reports/jacoco-it.exec</destFile>
-                            <!--
-                                Sets the name of the property containing the settings
-                                for JaCoCo runtime agent.
-                            -->
                             <propertyName>failsafeArgLine</propertyName>
                         </configuration>
                     </execution>
-                    <!--
-                        Ensures that the code coverage report for integration tests after
-                        integration tests have been run.
-                    -->
+
                     <execution>
                         <id>post-integration-test</id>
                         <phase>post-integration-test</phase>
@@ -182,14 +153,13 @@
                             <goal>report-integration</goal>
                         </goals>
                         <configuration>
-                            <!-- Sets the path to the file which contains the execution data. -->
+
                             <dataFile>${project.build.directory}/coverage-reports/jacoco-it.exec</dataFile>
-                            <!-- Sets the output directory for the code coverage report. -->
+
                             <outputDirectory>${project.reporting.outputDirectory}/jacoco-it</outputDirectory>
                         </configuration>
                     </execution>
 
-                    <!-- Enforce JaCoCo rule -->
                     <execution>
                         <id>check</id>
                         <goals>
@@ -200,11 +170,9 @@
                             <rules>
                                 <rule>
                                     <element>BUNDLE</element>
-                                    <!-- Include class path patterns -->
                                     <includes>
                                         <include>we.retail.core.model.*</include>
                                     </includes>
-                                    <!-- Exclude class path patterns -->
                                     <excludes>
                                         <exclude>we.retail.core.model.handler.*</exclude>
                                         <exclude>we.retail.core.model.Article*</exclude>
@@ -226,9 +194,9 @@
                             </rules>
                         </configuration>
                     </execution>
-
                 </executions>
             </plugin>
+
             <!-- Maven Release Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -384,17 +352,14 @@
                     <artifactId>maven-install-plugin</artifactId>
                     <version>2.5.2</version>
                 </plugin>
-                <!-- Maven Surefire Plugin -->
+               <!-- Maven Surefire Plugin -->
                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>2.15</version>
                     <configuration>
-                        <!-- Sets the VM argument line used when unit tests are run. -->
                         <argLine>${surefireArgLine}</argLine>
-                        <!-- Skips unit tests if the value of skip.unit.tests property is true -->
                         <skipTests>${skip.unit.tests}</skipTests>
-                        <!-- Excludes integration tests when unit tests are run. -->
                         <excludes>
                             <exclude>**/IT*.java</exclude>
                         </excludes>
@@ -406,10 +371,6 @@
                     <artifactId>maven-failsafe-plugin</artifactId>
                     <version>2.15</version>
                     <executions>
-                        <!--
-                            Ensures that both integration-test and verify goals of the Failsafe Maven
-                            plugin are executed.
-                        -->
                         <execution>
                             <id>integration-tests</id>
                             <goals>
@@ -417,12 +378,7 @@
                                 <goal>verify</goal>
                             </goals>
                             <configuration>
-                                <!-- Sets the VM argument line used when integration tests are run. -->
                                 <argLine>${failsafeArgLine}</argLine>
-                                <!--
-                                    Skips integration tests if the value of skip.integration.tests property
-                                    is true
-                                -->
                                 <skipTests>${skip.integration.tests}</skipTests>
                             </configuration>
                         </execution>
