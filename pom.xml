@@ -36,6 +36,24 @@
         <vault.user>admin</vault.user>
         <vault.password>admin</vault.password>
         <slf4j.version>1.5.11</slf4j.version>
+
+        <!-- SonarQube inclusions -->
+        <sonar.inclusions>
+        **/core/model/**
+        </sonar.inclusions>
+
+        <!-- SonarQube exclusions -->
+        <sonar.exclusions>
+        **/core/model/*Article*,
+        **/core/model/*CountriesFormOptionsDataSource*,
+        **/core/model/*NavCartModel*,
+        **/core/model/*ProductModel*,
+        **/core/model/*ShoppingCartModel*,
+        **/core/model/*WishlistModel*,
+        **/core/model/*VendorOrderModel*,
+        </sonar.exclusions>
+
+        <sonar.jacoco.reportPaths>target/coverage-reports/jacoco-ut.exec</sonar.jacoco.reportPaths>
     </properties>
 
     <modules>
@@ -47,16 +65,157 @@
         <module>all</module>
     </modules>
 
-    <scm>
-        <connection>scm:git:https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail.git</connection>
-        <developerConnection>scm:git:git@github.com:Adobe-Marketing-Cloud/aem-sample-we-retail.git</developerConnection>
-        <url>https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail</url>
-        <tag>HEAD</tag>
-    </scm>
-
-
     <build>
         <plugins>
+            <!-- Dendency Check Plugin - OWASP -->
+            <plugin>
+              <groupId>org.owasp</groupId>
+              <artifactId>dependency-check-maven</artifactId>
+              <executions>
+                  <execution>
+                      <goals>
+                          <goal>aggregate</goal>
+                      </goals>
+                  </execution>
+              </executions>
+            </plugin>
+
+            <!-- Java Code Coverage plugin -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.9</version>
+                <executions>
+                    <!--
+                        Prepares the property pointing to the JaCoCo runtime agent which
+                        is passed as VM argument when Maven the Surefire plugin is executed.
+                    -->
+                    <execution>
+                        <id>pre-unit-test</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                        <configuration>
+                            <!-- Sets the path to the file which contains the execution data. -->
+                            <destFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</destFile>
+                            <!--
+                                Sets the name of the property containing the settings
+                                for JaCoCo runtime agent.
+                            -->
+                            <propertyName>surefireArgLine</propertyName>
+                        </configuration>
+                    </execution>
+                    <!--
+                        Ensures that the code coverage report for unit tests is created after
+                        unit tests have been run.
+                    -->
+                    <execution>
+                        <id>post-unit-test</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                        <configuration>
+                            <!-- Define what to include in the Jacoco report. -->
+                            <includes>
+                                <include>**/core/model/**</include>
+                            </includes>
+                            <!-- Define what to exclude in the Jacoco report. -->
+                            <excludes>
+                                <exclude>**/core/model/*Article*</exclude>
+                                <exclude>**/core/model/*CountriesFormOptionsDataSource*</exclude>
+                                <exclude>**/core/model/*NavCartModel*</exclude>
+                                <exclude>**/core/model/*ProductModel*</exclude>
+                                <exclude>**/core/model/*ShoppingCartModel*</exclude>
+                                <exclude>**/core/model/*WishlistModel*</exclude>
+                                <exclude>**/core/model/*VendorOrderModel*</exclude>
+                            </excludes>
+                            <!-- Sets the path to the file which contains the execution data. -->
+                            <dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
+                            <!-- Sets the output directory for the code coverage report. -->
+                            <outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
+                        </configuration>
+                    </execution>
+
+                    <!-- The Executions required by unit tests are omitted. -->
+                    <!--
+                        Prepares the property pointing to the JaCoCo runtime agent which
+                        is passed as VM argument when Maven the Failsafe plugin is executed.
+                    -->
+                    <execution>
+                        <id>pre-integration-test</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>prepare-agent-integration</goal>
+                        </goals>
+                        <configuration>
+                            <!-- Sets the path to the file which contains the execution data. -->
+                            <destFile>${project.build.directory}/coverage-reports/jacoco-it.exec</destFile>
+                            <!--
+                                Sets the name of the property containing the settings
+                                for JaCoCo runtime agent.
+                            -->
+                            <propertyName>failsafeArgLine</propertyName>
+                        </configuration>
+                    </execution>
+                    <!--
+                        Ensures that the code coverage report for integration tests after
+                        integration tests have been run.
+                    -->
+                    <execution>
+                        <id>post-integration-test</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>report-integration</goal>
+                        </goals>
+                        <configuration>
+                            <!-- Sets the path to the file which contains the execution data. -->
+                            <dataFile>${project.build.directory}/coverage-reports/jacoco-it.exec</dataFile>
+                            <!-- Sets the output directory for the code coverage report. -->
+                            <outputDirectory>${project.reporting.outputDirectory}/jacoco-it</outputDirectory>
+                        </configuration>
+                    </execution>
+
+                    <!-- Enforce JaCoCo rule -->
+                    <execution>
+                        <id>check</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <configuration>
+                            <dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
+                            <rules>
+                                <rule>
+                                    <element>BUNDLE</element>
+                                    <!-- Include class path patterns -->
+                                    <includes>
+                                        <include>we.retail.core.model.*</include>
+                                    </includes>
+                                    <!-- Exclude class path patterns -->
+                                    <excludes>
+                                        <exclude>we.retail.core.model.handler.*</exclude>
+                                        <exclude>we.retail.core.model.Article*</exclude>
+                                        <exclude>we.retail.core.model.CountriesFormOptionsDataSource*</exclude>
+                                        <exclude>we.retail.core.model.NavCartModel</exclude>
+                                        <exclude>we.retail.core.model.WishlistModel</exclude>
+                                        <exclude>we.retail.core.model.ProductModel</exclude>
+                                        <exclude>we.retail.core.model.ShoppingCartModel*</exclude>
+                                        <exclude>we.retail.core.model.VendorOrderModel</exclude>
+                                    </excludes>
+                                    <limits>
+                                        <limit>
+                                            <counter>INSTRUCTION</counter>
+                                            <value>COVEREDRATIO</value>
+                                            <minimum>0.80</minimum>
+                                        </limit>
+                                    </limits>
+                                </rule>
+                            </rules>
+                        </configuration>
+                    </execution>
+
+                </executions>
+            </plugin>
             <!-- Maven Release Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -158,48 +317,6 @@
                     <downloadSources>true</downloadSources>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.rat</groupId>
-                <artifactId>apache-rat-plugin</artifactId>
-                <configuration>
-                    <excludes combine.children="append">
-                        <!--  Used by maven-remote-resources-plugin -->
-                        <exclude>src/main/appended-resources/META-INF/*</exclude>
-                        <!--  Generated by maven-remote-resources-plugin -->
-                        <exclude>velocity.log</exclude>
-                        <!-- don't check anything in target -->
-                        <exclude>target/*</exclude>
-                        <!-- README files in markdown format -->
-                        <exclude>README.md</exclude>
-                        <!-- Ignore files generated by IDE plugins e.g. maven-eclipse-plugin -->
-                        <exclude>maven-eclipse.xml</exclude>
-                        <!-- Ignore VLT .content.xml files + dialog configurations -->
-                        <exclude>**/jcr_root/**/*.xml</exclude>
-                        <!-- Ignore auto-generated VLT file -->
-                        <exclude>**/META-INF/vault/settings.xml</exclude>
-                        <!-- Ignore .vlt files -->
-                        <exclude>**/.vlt</exclude>
-                        <!-- Ignore .vltignore files -->
-                        <exclude>**/.vltignore</exclude>
-                        <!-- Ignore vendor files -->
-                        <exclude>**/clientlibs/vendor/**/*</exclude>
-                        <!-- Exclude all JSON files -->
-                        <exclude>**/*.json</exclude>
-                        <!-- Generated for release source archives -->
-                        <exclude>DEPENDENCIES</exclude>
-                        <!-- .rej files from svn/patch -->
-                        <exclude>**/*.rej</exclude>
-                    </excludes>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
         <pluginManagement>
             <plugins>
@@ -255,16 +372,48 @@
                     <version>2.5.2</version>
                 </plugin>
                 <!-- Maven Surefire Plugin -->
-                <plugin>
+               <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.18.1</version>
+                    <version>2.15</version>
+                    <configuration>
+                        <!-- Sets the VM argument line used when unit tests are run. -->
+                        <argLine>${surefireArgLine}</argLine>
+                        <!-- Skips unit tests if the value of skip.unit.tests property is true -->
+                        <skipTests>${skip.unit.tests}</skipTests>
+                        <!-- Excludes integration tests when unit tests are run. -->
+                        <excludes>
+                            <exclude>**/IT*.java</exclude>
+                        </excludes>
+                    </configuration>
                 </plugin>
                 <!-- Maven Failsafe Plugin -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>2.18.1</version>
+                    <version>2.15</version>
+                    <executions>
+                        <!--
+                            Ensures that both integration-test and verify goals of the Failsafe Maven
+                            plugin are executed.
+                        -->
+                        <execution>
+                            <id>integration-tests</id>
+                            <goals>
+                                <goal>integration-test</goal>
+                                <goal>verify</goal>
+                            </goals>
+                            <configuration>
+                                <!-- Sets the VM argument line used when integration tests are run. -->
+                                <argLine>${failsafeArgLine}</argLine>
+                                <!--
+                                    Skips integration tests if the value of skip.integration.tests property
+                                    is true
+                                -->
+                                <skipTests>${skip.integration.tests}</skipTests>
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
                 <!-- Maven Deploy Plugin -->
                 <plugin>
