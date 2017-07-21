@@ -16,9 +16,13 @@ For Sonarqube v6.4 deployment, consider the following:
 For Dependency Check, consider the following:  
 - Dependency Check Owasp  
 
-## Inserting the Plugins
-### JaCoCo Plugin and Corresponding Configurations
-Some plugins may include Inclusions and Exclusions
+The modules version format `<version>${version}</version>` should  comply with [semantic versioning](https://semver.org).  
+
+Developers are required to only code in SNAPSHOT version format.  
+
+## Required build plugins and their configurations
+### Test Coverage
+Java Code Coverage (Jacoco) plugin configuration.  
 ```xml
 <!-- Java Code Coverage plugin -->
 <plugin>
@@ -125,6 +129,7 @@ Some plugins may include Inclusions and Exclusions
 </plugin>
 ```
 ### Surefire Plugin
+A plugin use for running Unit test.  
 ```xml
 <!-- Maven Surefire Plugin -->
 <plugin>
@@ -141,6 +146,9 @@ Some plugins may include Inclusions and Exclusions
 </plugin>
 ```
 ### Failsafe Plugin
+If developers use the Surefire Plugin for running tests, then when you have a test failure, the build will stop at the integration-test phase and your integration test environment will not have been torn down correctly. 
+
+The Failsafe Plugin is used during the integration-test and verify phases of the build lifecycle to execute the integration tests of an application. The Failsafe Plugin will not fail the build during the integration-test phase, thus enabling the post-integration-test phase to execute.  
 ```xml
 <!-- Maven Failsafe Plugin -->
 <plugin>
@@ -162,9 +170,8 @@ Some plugins may include Inclusions and Exclusions
     </executions>
 </plugin>
 ```
-### Dependency Check Plugin OWASP
+### Using a specific SonarQube version
 ```xml
-<!-- SONARQUBE - Maven Plugin; FOR DEPENDENCY CHECK; Renewed version -->
 <plugin>
     <groupId>org.codehaus.mojo</groupId>
     <artifactId>sonar-maven-plugin</artifactId>
@@ -172,7 +179,7 @@ Some plugins may include Inclusions and Exclusions
 </plugin>
 ```
 
-## Properties Configuration
+## How to add build properties
 ```xml
 <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -210,16 +217,34 @@ Some plugins may include Inclusions and Exclusions
 </properties>
 ```  
   
-## Commands  
-### Code Coverage Report and Dependency Check
-This command will produce the reports for code coverage and dependency check.
+## How-to Commands  
+For maven lifecycle references: https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html. 
+
+### Build, Test, Jacoco, Dependency check and local Deploy
+For Developers, this is how to build, test and deploy built java packages in their local maven repository (~/.m2).  
+```bash 
+mvn clean install
 ```
+### Build, Test, Jacoco, Dependency check without Deploy
+The ideal command for build servers. Do not deploy built packages to save time and space.  
+```bash
 mvn clean verify
 ```
-  
-### Sonarqube Deployment  
-This command will deploy the reports/results to local Sonarqube server.
-```
+### SonarQube Scan
+This command will run and publish the static code analysis result along with the unit tests, jacoco, and dependenchy check results to SonarQube server `sonar.host`.  
+```bash
 mvn sonar:sonar
 ```
+### Deploying Snapshots to Nexus
+Only applicable if version is in SNAPSHOT format. E.g: `0.1.1-SNAPSHOT` or `0.1-SNAPSHOT`.  
+```bash
+mvn deploy -DaltDeploymentRepository="nexus-snapshot::default::http://localhost:8081/nexus/content/repositories/snapshots/"
+```
+Deployed packages should then be visible in http://localhost:8081/nexus/content/repositories/snapshots/.  
 
+### Deploying Releases to Nexus
+Only applicable if version is in RELEASE format. E.g: `0.1.1` or `0.1.3`. If the version to be deployed already exists or has already been deployed, maven will fail.  
+```bash
+mvn deploy -DaltDeploymentRepository="nexus-snapshot::default::http://localhost:8081/nexus/content/repositories/snapshots/"
+```
+Deployed packages should then be visible in http://localhost:8081/nexus/content/repositories/releases/.  
