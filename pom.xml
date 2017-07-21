@@ -37,6 +37,9 @@
         <vault.password>admin</vault.password>
         <slf4j.version>1.5.11</slf4j.version>
 
+        <!-- Dependency Report Path for Sonarqube -->
+        <sonar.dependencyCheck.reportPath>${project.build.directory}/dependency-check-report.xml</sonar.dependencyCheck.reportPath>
+
         <!-- SonarQube inclusions -->
         <sonar.inclusions>
         **/core/model/**
@@ -67,6 +70,13 @@
 
     <build>
         <plugins>
+            <!-- SONARQUBE - Maven Plugin; FOR DEPENDENCY CHECK; Renewed version -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.3.0.603</version>
+            </plugin>
+
             <!-- Dendency Check Plugin - OWASP -->
             <plugin>
               <groupId>org.owasp</groupId>
@@ -76,6 +86,9 @@
                       <goals>
                           <goal>aggregate</goal>
                       </goals>
+                      <configuration>
+                      <format>ALL</format>
+                      </configuration>
                   </execution>
               </executions>
             </plugin>
