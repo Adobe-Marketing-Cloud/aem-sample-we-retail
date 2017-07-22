@@ -19,7 +19,7 @@
     <groupId>com.adobe.cq.sample</groupId>
     <artifactId>we.retail</artifactId>
     <packaging>pom</packaging>
-    <version>2.0.3-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
 
     <name>We.Retail</name>
     <description>We.Retail reactor and parent</description>
@@ -36,6 +36,31 @@
         <vault.user>admin</vault.user>
         <vault.password>admin</vault.password>
         <slf4j.version>1.5.11</slf4j.version>
+
+        <!-- Dependency Report Path for Sonarqube -->
+        <sonar.dependencyCheck.reportPath>${project.build.directory}/dependency-check-report.xml</sonar.dependencyCheck.reportPath>
+
+        <!-- SonarQube inclusions -->
+        <sonar.inclusions>
+        **/core/model/**
+        </sonar.inclusions>
+        <!-- SonarQube exclusions -->
+        <sonar.exclusions>
+        **/core/model/*Article*,
+        **/core/model/*CountriesFormOptionsDataSource*,
+        **/core/model/*NavCartModel*,
+        **/core/model/*ProductModel*,
+        **/core/model/*ShoppingCartModel*,
+        **/core/model/*WishlistModel*,
+        **/core/model/*VendorOrderModel*,
+        </sonar.exclusions>
+        <!-- Sonar use dependency check xml report path -->
+        <sonar.jacoco.reportPaths>target/coverage-reports/jacoco-ut.exec</sonar.jacoco.reportPaths>
+
+        <!-- Configurable properties for dependency-check -->
+        <dependencyCheck.skip>true</dependencyCheck.skip>
+        <dependencyCheck.failBuild>true</dependencyCheck.failBuild>
+
     </properties>
 
     <modules>
@@ -47,16 +72,141 @@
         <module>all</module>
     </modules>
 
-    <scm>
-        <connection>scm:git:https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail.git</connection>
-        <developerConnection>scm:git:git@github.com:Adobe-Marketing-Cloud/aem-sample-we-retail.git</developerConnection>
-        <url>https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail</url>
-        <tag>HEAD</tag>
-    </scm>
-
-
     <build>
         <plugins>
+            <!-- SONARQUBE - Maven Plugin; FOR DEPENDENCY CHECK; Renewed version -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.3.0.603</version>
+            </plugin>
+
+            <!-- Dendency Check Plugin - OWASP -->
+            <plugin>
+                <groupId>org.owasp</groupId>
+                <artifactId>dependency-check-maven</artifactId>
+                <version>2.0.1</version>
+                <configuration>
+                    <format>ALL</format>
+                    <skip>${dependencyCheck.skip}</skip>
+                    <failBuildOnAnyVulnerability>${dependencyCheck.failBuild}</failBuildOnAnyVulnerability>
+                    <suppressionFiles>
+                        <suppressionFile>${basedir}/dependency-check-suppressions.xml</suppressionFile>
+                    </suppressionFiles>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                              <goal>aggregate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Java Code Coverage plugin -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.9</version>
+                <executions>
+                    <execution>
+                        <id>pre-unit-test</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                        <configuration>
+                            <destFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</destFile>
+                            <propertyName>surefireArgLine</propertyName>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>post-unit-test</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                        <configuration>
+                            <includes>
+                                <include>**/core/model/**</include>
+                            </includes>
+                            <excludes>
+                                <exclude>**/core/model/*Article*</exclude>
+                                <exclude>**/core/model/*CountriesFormOptionsDataSource*</exclude>
+                                <exclude>**/core/model/*NavCartModel*</exclude>
+                                <exclude>**/core/model/*ProductModel*</exclude>
+                                <exclude>**/core/model/*ShoppingCartModel*</exclude>
+                                <exclude>**/core/model/*WishlistModel*</exclude>
+                                <exclude>**/core/model/*VendorOrderModel*</exclude>
+                            </excludes>
+                            <dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
+                            <outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>pre-integration-test</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>prepare-agent-integration</goal>
+                        </goals>
+                        <configuration>
+                            <destFile>${project.build.directory}/coverage-reports/jacoco-it.exec</destFile>
+                            <propertyName>failsafeArgLine</propertyName>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>post-integration-test</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>report-integration</goal>
+                        </goals>
+                        <configuration>
+
+                            <dataFile>${project.build.directory}/coverage-reports/jacoco-it.exec</dataFile>
+
+                            <outputDirectory>${project.reporting.outputDirectory}/jacoco-it</outputDirectory>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>check</id>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                        <configuration>
+                            <dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
+                            <rules>
+                                <rule>
+                                    <element>BUNDLE</element>
+                                    <includes>
+                                        <include>we.retail.core.model.*</include>
+                                    </includes>
+                                    <excludes>
+                                        <exclude>we.retail.core.model.handler.*</exclude>
+                                        <exclude>we.retail.core.model.Article*</exclude>
+                                        <exclude>we.retail.core.model.CountriesFormOptionsDataSource*</exclude>
+                                        <exclude>we.retail.core.model.NavCartModel</exclude>
+                                        <exclude>we.retail.core.model.WishlistModel</exclude>
+                                        <exclude>we.retail.core.model.ProductModel</exclude>
+                                        <exclude>we.retail.core.model.ShoppingCartModel*</exclude>
+                                        <exclude>we.retail.core.model.VendorOrderModel</exclude>
+                                    </excludes>
+                                    <limits>
+                                        <limit>
+                                            <counter>INSTRUCTION</counter>
+                                            <value>COVEREDRATIO</value>
+                                            <minimum>0.80</minimum>
+                                        </limit>
+                                    </limits>
+                                </rule>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
             <!-- Maven Release Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -158,48 +308,6 @@
                     <downloadSources>true</downloadSources>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.rat</groupId>
-                <artifactId>apache-rat-plugin</artifactId>
-                <configuration>
-                    <excludes combine.children="append">
-                        <!--  Used by maven-remote-resources-plugin -->
-                        <exclude>src/main/appended-resources/META-INF/*</exclude>
-                        <!--  Generated by maven-remote-resources-plugin -->
-                        <exclude>velocity.log</exclude>
-                        <!-- don't check anything in target -->
-                        <exclude>target/*</exclude>
-                        <!-- README files in markdown format -->
-                        <exclude>README.md</exclude>
-                        <!-- Ignore files generated by IDE plugins e.g. maven-eclipse-plugin -->
-                        <exclude>maven-eclipse.xml</exclude>
-                        <!-- Ignore VLT .content.xml files + dialog configurations -->
-                        <exclude>**/jcr_root/**/*.xml</exclude>
-                        <!-- Ignore auto-generated VLT file -->
-                        <exclude>**/META-INF/vault/settings.xml</exclude>
-                        <!-- Ignore .vlt files -->
-                        <exclude>**/.vlt</exclude>
-                        <!-- Ignore .vltignore files -->
-                        <exclude>**/.vltignore</exclude>
-                        <!-- Ignore vendor files -->
-                        <exclude>**/clientlibs/vendor/**/*</exclude>
-                        <!-- Exclude all JSON files -->
-                        <exclude>**/*.json</exclude>
-                        <!-- Generated for release source archives -->
-                        <exclude>DEPENDENCIES</exclude>
-                        <!-- .rej files from svn/patch -->
-                        <exclude>**/*.rej</exclude>
-                    </excludes>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
         <pluginManagement>
             <plugins>
@@ -254,17 +362,37 @@
                     <artifactId>maven-install-plugin</artifactId>
                     <version>2.5.2</version>
                 </plugin>
-                <!-- Maven Surefire Plugin -->
-                <plugin>
+               <!-- Maven Surefire Plugin -->
+               <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.18.1</version>
+                    <version>2.15</version>
+                    <configuration>
+                        <argLine>${surefireArgLine}</argLine>
+                        <skipTests>${skip.unit.tests}</skipTests>
+                        <excludes>
+                            <exclude>**/IT*.java</exclude>
+                        </excludes>
+                    </configuration>
                 </plugin>
                 <!-- Maven Failsafe Plugin -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>2.18.1</version>
+                    <version>2.15</version>
+                    <executions>
+                        <execution>
+                            <id>integration-tests</id>
+                            <goals>
+                                <goal>integration-test</goal>
+                                <goal>verify</goal>
+                            </goals>
+                            <configuration>
+                                <argLine>${failsafeArgLine}</argLine>
+                                <skipTests>${skip.integration.tests}</skipTests>
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
                 <!-- Maven Deploy Plugin -->
                 <plugin>
@@ -404,11 +532,6 @@
                             </pluginExecutions>
                         </lifecycleMappingMetadata>
                     </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.rat</groupId>
-                    <artifactId>apache-rat-plugin</artifactId>
-                    <version>0.12</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.sling</groupId>
@@ -567,7 +690,7 @@
             <dependency>
                 <groupId>org.apache.sling</groupId>
                 <artifactId>org.apache.sling.models.api</artifactId>
-                <version>1.3.0</version>
+                <version>1.3.4</version>
                 <scope>provided</scope>
             </dependency>
 
