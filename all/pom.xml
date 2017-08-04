@@ -88,17 +88,17 @@
                         <dependency>
                             <group>day/cq60/product</group>
                             <name>cq-content</name>
-                            <version>[6.1.76,)</version>
+                            <version>[6.3.0,)</version>
                         </dependency>
                         <dependency>
                             <group>day/cq60/product</group>
                             <name>cq-commerce-content</name>
-                            <version>[1.2.222,)</version>
+                            <version>[1.5.0,)</version>
                         </dependency>
                         <dependency>
                             <group>adobe/cq60</group>
                             <name>core.wcm.components.all</name>
-                            <version>[0.9.21-SNAPSHOT,)</version>
+                            <version>[1.0.0,)</version>
                         </dependency>
                     </dependencies>
                 </configuration>
@@ -123,10 +123,6 @@
                                 <goals>
                                     <goal>install</goal>
                                 </goals>
-                                <configuration>
-                                    <targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
-                                    <failOnError>true</failOnError>
-                                </configuration>
                             </execution>
                         </executions>
                     </plugin>

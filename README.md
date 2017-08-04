@@ -33,13 +33,9 @@ Or to deploy only the bundle to the author, run
 
     mvn clean install -PautoInstallBundle
 
-To build a single package
-
-    mvn clean install -PbuildSinglePackage
-
 To install single package on an AEM instance
 
-    mvn clean install -PbuildSinglePackage -PautoInstallSinglePackage
+    mvn clean install -PautoInstallSinglePackage
     
 
 ### UberJar
@@ -47,7 +43,7 @@ To install single package on an AEM instance
 This project relies on the unobfuscated AEM 6.3 cq-quickstart. This is publicly available on https://repo.adobe.com
 
 For more details about the UberJar please head over to the
-[How to Build AEM Projects using Apache Maven](https://docs.adobe.com/docs/en/aem/6-2/develop/dev-tools/ht-projects-maven.html#What%20is%20the%20UberJar?)
+[How to Build AEM Projects using Apache Maven](https://docs.adobe.com/docs/en/aem/6-3/develop/dev-tools/ht-projects-maven.html)
 documentation page.
 
 ## Testing

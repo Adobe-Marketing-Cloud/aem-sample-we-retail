@@ -15,6 +15,7 @@
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 package we.retail.core.model;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -22,87 +23,86 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
-
-import javax.annotation.PostConstruct;
+import javax.servlet.Servlet;
+import javax.servlet.ServletException;
 
 import org.apache.sling.api.SlingHttpServletRequest;
+import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ValueMap;
+import org.apache.sling.api.scripting.SlingBindings;
+import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
 import org.apache.sling.api.wrappers.ValueMapDecorator;
-import org.apache.sling.models.annotations.Model;
-import org.apache.sling.models.annotations.injectorspecific.ScriptVariable;
-import org.apache.sling.models.annotations.injectorspecific.Self;
-import org.apache.sling.models.annotations.injectorspecific.SlingObject;
+import org.osgi.service.component.annotations.Component;
 
+import com.adobe.cq.sightly.WCMBindings;
+import com.adobe.granite.ui.components.ds.DataSource;
 import com.adobe.granite.ui.components.ds.SimpleDataSource;
 import com.adobe.granite.ui.components.ds.ValueMapResource;
 import com.day.cq.i18n.I18n;
 import com.day.cq.wcm.api.Page;
-import com.adobe.cq.wcm.core.components.models.form.DataSourceModel;
 
-@Model(adaptables = SlingHttpServletRequest.class,
-        adapters = DataSourceModel.class,
-        resourceType = CountriesFormOptionsDataSource.RESOURCE_TYPE)
-public class CountriesFormOptionsDataSource extends DataSourceModel {
+@Component(
+        service = {Servlet.class},
+        property = {
+                "sling.servlet.resourceTypes=" + CountriesFormOptionsDataSource.RESOURCE_TYPE,
+                "sling.servlet.methods=GET",
+                "sling.servlet.extensions=html"
+        }
+)
+public class CountriesFormOptionsDataSource extends SlingSafeMethodsServlet {
 
-    protected final static String RESOURCE_TYPE = "weretail/components/form/options/datasource/countriesdatasource";
-    protected final static String COUNTRY_OPTIONS_HEADER = "Country";
-
-    @Self
-    private SlingHttpServletRequest request;
-
-    @ScriptVariable
-    private Page currentPage;
-
-    @SlingObject
-    private ResourceResolver resolver;
+    final static String RESOURCE_TYPE = "weretail/components/form/options/datasource/countriesdatasource";
+    private final static String COUNTRY_OPTIONS_HEADER = "Country";
 
     private I18n i18n;
 
-    @PostConstruct
-    private void initModel() {
+    @Override
+    protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response)
+            throws ServletException, IOException {
+        SlingBindings bindings = (SlingBindings) request.getAttribute(SlingBindings.class.getName());
+        Page currentPage = (Page) bindings.get(WCMBindings.CURRENT_PAGE);
         final Locale pageLocale = currentPage.getLanguage(true);
         final ResourceBundle bundle = request.getResourceBundle(pageLocale);
         i18n = new I18n(bundle);
-
-        SimpleDataSource countriesDataSource = new SimpleDataSource(buildCountriesList().iterator());
-        initDataSource(request, countriesDataSource);
+        SimpleDataSource countriesDataSource = new SimpleDataSource(buildCountriesList(request.getResourceResolver()).iterator());
+        request.setAttribute(DataSource.class.getName(), countriesDataSource);
     }
 
-    private List<Resource> buildCountriesList() {
+    private List<Resource> buildCountriesList(ResourceResolver resolver) {
         List<Resource> countries = new ArrayList<Resource>();
-        addCountry(countries, "AR", "Argentina");
-        addCountry(countries, "AU", "Australia");
-        addCountry(countries, "AT", "Austria");
-        addCountry(countries, "BS", "Bahamas");
-        addCountry(countries, "BH", "Bahrain");
-        addCountry(countries, "BR", "Brazil");
-        addCountry(countries, "CA", "Canada");
-        addCountry(countries, "CL", "Chile");
-        addCountry(countries, "CN", "China");
-        addCountry(countries, "CO", "Colombia");
-        addCountry(countries, "EG", "Egypt");
-        addCountry(countries, "FR", "France");
-        addCountry(countries, "DE", "Germany");
-        addCountry(countries, "GI", "Gibraltar");
-        addCountry(countries, "HK", "Hong Kong");
-        addCountry(countries, "IE", "Ireland");
-        addCountry(countries, "IT", "Italy");
-        addCountry(countries, "JP", "Japan");
-        addCountry(countries, "LU", "Luxembourg");
-        addCountry(countries, "MY", "Malaysia");
-        addCountry(countries, "MX", "Mexico");
-        addCountry(countries, "MC", "Monaco");
-        addCountry(countries, "RU", "Russia");
-        addCountry(countries, "SG", "Singapore");
-        addCountry(countries, "ES", "Spain");
-        addCountry(countries, "CH", "Switzerland");
-        addCountry(countries, "US", "United States of America");
-        addCountry(countries, "AE", "United Arab Emirates");
-        addCountry(countries, "GB", "United Kingdom");
-        addCountry(countries, "UY", "Uruguay");
-        addCountry(countries, "VE", "Venezuela");
+        addCountry(resolver, countries, "AR", "Argentina");
+        addCountry(resolver, countries, "AU", "Australia");
+        addCountry(resolver, countries, "AT", "Austria");
+        addCountry(resolver, countries, "BS", "Bahamas");
+        addCountry(resolver, countries, "BH", "Bahrain");
+        addCountry(resolver, countries, "BR", "Brazil");
+        addCountry(resolver, countries, "CA", "Canada");
+        addCountry(resolver, countries, "CL", "Chile");
+        addCountry(resolver, countries, "CN", "China");
+        addCountry(resolver, countries, "CO", "Colombia");
+        addCountry(resolver, countries, "EG", "Egypt");
+        addCountry(resolver, countries, "FR", "France");
+        addCountry(resolver, countries, "DE", "Germany");
+        addCountry(resolver, countries, "GI", "Gibraltar");
+        addCountry(resolver, countries, "HK", "Hong Kong");
+        addCountry(resolver, countries, "IE", "Ireland");
+        addCountry(resolver, countries, "IT", "Italy");
+        addCountry(resolver, countries, "JP", "Japan");
+        addCountry(resolver, countries, "LU", "Luxembourg");
+        addCountry(resolver, countries, "MY", "Malaysia");
+        addCountry(resolver, countries, "MX", "Mexico");
+        addCountry(resolver, countries, "MC", "Monaco");
+        addCountry(resolver, countries, "RU", "Russia");
+        addCountry(resolver, countries, "SG", "Singapore");
+        addCountry(resolver, countries, "ES", "Spain");
+        addCountry(resolver, countries, "CH", "Switzerland");
+        addCountry(resolver, countries, "US", "United States of America");
+        addCountry(resolver, countries, "AE", "United Arab Emirates");
+        addCountry(resolver, countries, "GB", "United Kingdom");
+        addCountry(resolver, countries, "UY", "Uruguay");
+        addCountry(resolver, countries, "VE", "Venezuela");
 
         // Sort based on translated display text:
         Collections.sort(countries, new Comparator<Resource>() {
@@ -112,12 +112,12 @@ public class CountriesFormOptionsDataSource extends DataSourceModel {
         });
 
         // add the header of the country options
-        addCountryOptionHeader(countries);
+        addCountryOptionHeader(resolver, countries);
 
         return countries;
     }
 
-    private void addCountry(List<Resource> countries, String countryCode, String countryName) {
+    private void addCountry(ResourceResolver resolver, List<Resource> countries, String countryCode, String countryName) {
         ValueMap vm = new ValueMapDecorator(new HashMap<String, Object>());
         vm.put("value", countryCode);
         vm.put("text", i18n.get(countryName));
@@ -125,7 +125,7 @@ public class CountriesFormOptionsDataSource extends DataSourceModel {
         countries.add(countryRes);
     }
 
-    private void addCountryOptionHeader(List<Resource> countries) {
+    private void addCountryOptionHeader(ResourceResolver resolver, List<Resource> countries) {
         ValueMap vm = new ValueMapDecorator(new HashMap<String, Object>());
         vm.put("value", "");
         vm.put("text", i18n.get(COUNTRY_OPTIONS_HEADER));

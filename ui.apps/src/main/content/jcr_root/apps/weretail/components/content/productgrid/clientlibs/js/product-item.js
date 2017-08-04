@@ -106,6 +106,7 @@
 
                 if (vm.isVisible) {
                     vm.$el.parentNode.classList.remove('hidden');
+                    vm.$el.querySelector('div.cmp-image img').dispatchEvent(new Event('cmp-image-redraw'));
                 } else {
                     vm.$el.parentNode.classList.add('hidden');
                 }
