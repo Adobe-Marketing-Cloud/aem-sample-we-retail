@@ -33,12 +33,4 @@
     <filter root="/etc/blueprints/weretail-german"/>
     <filter root="/etc/blueprints/weretail-italian"/>
     <filter root="/etc/blueprints/weretail-spanish"/>
-
-    <filter root="/etc/replication/agents.author/flush"/>
-    <filter root="/etc/replication/agents.author/publish"/>
-    <filter root="/etc/replication/agents.author/publish_reverse"/>
-    <filter root="/etc/replication/agents.author/static"/>
-    <filter root="/etc/replication/agents.author/test_and_target"/>
-    <filter root="/etc/replication/agents.publish/flush"/>
-    <filter root="/etc/replication/agents.publish/outbox"/>
 </workspaceFilter>
