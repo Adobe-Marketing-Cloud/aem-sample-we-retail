@@ -43,7 +43,7 @@ import we.retail.core.model.OrderHistoryModel.PlacedOrderWrapper;
 public class OrderHistoryModelTest {
 
     private static final String DUMMY_ORDER_ID = "dummy-order-id";
-    private static final String DUMMY_ORDER_DATE = "Sun Dec 11 2016 16:42:15 GMT+0100";
+    private static final String DUMMY_ORDER_DATE = "2016:12:11 16:42:15";
     private static final String DUMMY_ORDER_LIST_ID = "201612110";
 
     @Rule
