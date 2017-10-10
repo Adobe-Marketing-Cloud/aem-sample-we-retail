@@ -19,7 +19,7 @@
     <a href="${ resource.path @ extension='html'}" class="we-ArticleTeaser-link">
         <div data-sly-test.imageResource="${article.imageResource}"
              class="we-ArticleTeaser-visual"
-             data-sly-resource="${imageResource @ resourceType='weretail/components/content/image'}">
+             data-sly-resource="${imageResource @ resourceType='weretail/components/content/image', decoration=true}">
         </div>
 
         <h4 class="we-ArticleTeaser-title">${ article.title }</h4>
