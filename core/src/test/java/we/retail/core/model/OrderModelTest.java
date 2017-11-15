@@ -33,7 +33,6 @@ import com.adobe.cq.commerce.api.CommerceException;
 import com.adobe.cq.commerce.api.CommerceService;
 import com.adobe.cq.sightly.SightlyWCMMode;
 import com.adobe.cq.sightly.WCMBindings;
-import com.day.cq.dam.commons.util.DateParser;
 import com.day.cq.wcm.api.Page;
 
 import common.AppAemContext;
@@ -51,6 +50,7 @@ public class OrderModelTest {
 
     @Before
     public void setUp() throws Exception {
+
         Page page = context.currentPage(Constants.TEST_ORDER_PAGE);
         context.currentResource(Constants.TEST_ORDER_RESOURCE);
 
@@ -88,7 +88,7 @@ public class OrderModelTest {
         assertEquals(Constants.BILLING_ADDRESS, orderModel.getBillingAddress());
         assertEquals(Constants.SHIPPING_ADDRESS, orderModel.getShippingAddress());
         assertEquals(Constants.ORDER_STATUS, orderModel.getOrderStatus());
-        Date orderDate = DateParser.parseDate(Constants.ORDER_DATE);
+        Date orderDate = Constants.W3C_DATE_FORMAT.parse(Constants.ORDER_DATE);
         assertEquals(orderDate, orderModel.getOrderDate().getTime());
     }
 

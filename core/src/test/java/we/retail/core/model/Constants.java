@@ -15,7 +15,11 @@
  */
 package we.retail.core.model;
 
+import org.apache.sling.commons.json.jcr.JsonItemWriter;
+
 import java.math.BigDecimal;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 public class Constants {
 
@@ -55,4 +59,6 @@ public class Constants {
 
     public static final String ORDER_ID = "orderId";
     public static final String ORDER_PLACED = "orderPlaced";
+
+    public static final DateFormat W3C_DATE_FORMAT = new SimpleDateFormat("EEE MMM dd yyyy HH:mm:ss \'GMT\'Z", JsonItemWriter.DATE_FORMAT_LOCALE);
 }

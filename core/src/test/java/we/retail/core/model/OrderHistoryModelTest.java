@@ -31,7 +31,6 @@ import org.junit.Test;
 import com.adobe.cq.commerce.api.CommerceService;
 import com.adobe.cq.commerce.common.PriceFilter;
 import com.adobe.cq.sightly.WCMBindings;
-import com.day.cq.dam.commons.util.DateParser;
 import com.day.cq.wcm.api.Page;
 
 import common.AppAemContext;
@@ -72,7 +71,7 @@ public class OrderHistoryModelTest {
         // The dummy order is inserted first but should appear second in the test (see below)
         MockDefaultJcrPlacedOrder dummyOrder = new MockDefaultJcrPlacedOrder(null, DUMMY_ORDER_ID, orderResource);
         dummyOrder.setOrderId(DUMMY_ORDER_ID);
-        dummyOrder.setOrderPlacedDate(DateParser.parseDate(DUMMY_ORDER_DATE));
+        dummyOrder.setOrderPlacedDate(Constants.W3C_DATE_FORMAT.parse(DUMMY_ORDER_DATE));
         commerceSession.registerPlacedOrder(DUMMY_ORDER_ID, dummyOrder);
 
         // This is the "original" mocked order
