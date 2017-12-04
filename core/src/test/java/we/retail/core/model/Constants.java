@@ -37,7 +37,7 @@ public class Constants {
     public static final String SHIPPING_ADDRESS = "John Doe, 94103 San Francisco, CA";
     public static final String ORDER_STATUS = "Processing";
     public static final String ORDER_DATE = "Mon Dec 12 2016 16:42:15 GMT+0100";
-    public static final String ORDER_LIST_ID = "201612121";
+    public static final String ORDER_LIST_ID_INDEX = "1";
 
     public static final int ENTRIES_SIZE = 2;
 

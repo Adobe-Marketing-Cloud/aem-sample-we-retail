@@ -17,6 +17,7 @@ package we.retail.core.model;
 
 import static org.junit.Assert.assertEquals;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -44,7 +45,9 @@ public class OrderHistoryModelTest {
 
     private static final String DUMMY_ORDER_ID = "dummy-order-id";
     private static final String DUMMY_ORDER_DATE = "Sun Dec 11 2016 16:42:15 GMT+0100";
-    private static final String DUMMY_ORDER_LIST_ID = "201612110";
+    private static final String DUMMY_ORDER_LIST_ID_INDEX = "0";
+
+    private SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
 
     @Rule
     public final AemContext context = AppAemContext.newAemContext();
@@ -96,8 +99,8 @@ public class OrderHistoryModelTest {
         assertEquals(DUMMY_ORDER_ID, orders.get(1).getOrderId());
 
         // The list id index is also descending, so that the last order has the highest index
-        assertEquals(Constants.ORDER_LIST_ID, orders.get(0).getListOrderId());
-        assertEquals(DUMMY_ORDER_LIST_ID, orders.get(1).getListOrderId());
+        assertEquals(sdf.format(date0) + Constants.ORDER_LIST_ID_INDEX, orders.get(0).getListOrderId());
+        assertEquals(sdf.format(date1) + DUMMY_ORDER_LIST_ID_INDEX, orders.get(1).getListOrderId());
     }
 
     @Test
@@ -105,8 +108,10 @@ public class OrderHistoryModelTest {
         List<PlacedOrderWrapper> orders = orderHistoryModel.getOrders();
         PlacedOrderWrapper order = orders.get(0);
 
+        Date orderDate = ((Calendar) order.getOrder().get(Constants.ORDER_PLACED)).getTime();
+
         assertEquals(Constants.TEST_ORDER_ID, order.getOrderId());
-        assertEquals(Constants.ORDER_LIST_ID, order.getListOrderId());
+        assertEquals(sdf.format(orderDate) + Constants.ORDER_LIST_ID_INDEX, order.getListOrderId());
         assertEquals(Constants.ORDER_STATUS, order.getOrder().get("orderStatus"));
         assertEquals(Constants.TOTAL, order.getCartPrice(new PriceFilter("TOTAL")));
         assertEquals(Constants.ENTRIES_SIZE, order.getCartEntries().size());
