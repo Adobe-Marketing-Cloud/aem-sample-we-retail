@@ -48,6 +48,7 @@ public class OrderHistoryModelTest {
     private static final String DUMMY_ORDER_LIST_ID_INDEX = "0";
 
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+    private SimpleDateFormat dateParser = new SimpleDateFormat("EEE MMM d yyyy HH:mm:ss 'GMT'Z");
 
     @Rule
     public final AemContext context = AppAemContext.newAemContext();
@@ -99,8 +100,8 @@ public class OrderHistoryModelTest {
         assertEquals(DUMMY_ORDER_ID, orders.get(1).getOrderId());
 
         // The list id index is also descending, so that the last order has the highest index
-        assertEquals(sdf.format(date0) + Constants.ORDER_LIST_ID_INDEX, orders.get(0).getListOrderId());
-        assertEquals(sdf.format(date1) + DUMMY_ORDER_LIST_ID_INDEX, orders.get(1).getListOrderId());
+        assertEquals(sdf.format(dateParser.parse(Constants.ORDER_DATE)) + Constants.ORDER_LIST_ID_INDEX, orders.get(0).getListOrderId());
+        assertEquals(sdf.format(dateParser.parse(DUMMY_ORDER_DATE)) + DUMMY_ORDER_LIST_ID_INDEX, orders.get(1).getListOrderId());
     }
 
     @Test
@@ -108,10 +109,8 @@ public class OrderHistoryModelTest {
         List<PlacedOrderWrapper> orders = orderHistoryModel.getOrders();
         PlacedOrderWrapper order = orders.get(0);
 
-        Date orderDate = ((Calendar) order.getOrder().get(Constants.ORDER_PLACED)).getTime();
-
         assertEquals(Constants.TEST_ORDER_ID, order.getOrderId());
-        assertEquals(sdf.format(orderDate) + Constants.ORDER_LIST_ID_INDEX, order.getListOrderId());
+        assertEquals(sdf.format(dateParser.parse(Constants.ORDER_DATE)) + Constants.ORDER_LIST_ID_INDEX, order.getListOrderId());
         assertEquals(Constants.ORDER_STATUS, order.getOrder().get("orderStatus"));
         assertEquals(Constants.TOTAL, order.getCartPrice(new PriceFilter("TOTAL")));
         assertEquals(Constants.ENTRIES_SIZE, order.getCartEntries().size());
