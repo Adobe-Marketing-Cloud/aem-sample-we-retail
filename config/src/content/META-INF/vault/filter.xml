@@ -16,6 +16,5 @@
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <workspaceFilter version="1.0">
     <filter root="/apps/weretail/config"/>
-    <filter root="/apps/weretail/config.author"/>
     <filter root="/apps/weretail/config.publish"/>
 </workspaceFilter>

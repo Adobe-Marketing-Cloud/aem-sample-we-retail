@@ -20,23 +20,31 @@ import java.io.IOException;
 
 import javax.annotation.Nullable;
 
+import org.apache.jackrabbit.api.security.user.UserManager;
 import org.apache.sling.api.resource.Resource;
+import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.testing.mock.sling.ResourceResolverType;
 
 import com.adobe.cq.commerce.api.CommerceService;
 import com.adobe.cq.commerce.api.Product;
+import com.adobe.cq.social.community.api.CommunityContext;
+import com.day.cq.wcm.api.Page;
 import com.google.common.base.Function;
 
 import common.mock.MockCommerceService;
+import common.mock.MockCommunityContext;
 import common.mock.MockProduct;
+import common.mock.MockUserManager;
 import io.wcm.testing.mock.aem.junit.AemContext;
 import io.wcm.testing.mock.aem.junit.AemContextCallback;
 
 public class AppAemContext {
 
-    public static final String CONTENT_ROOT = "/content/we-retail/us/en";
-    public static final String PRODUCT_ROOT = "/etc/commerce/products/we-retail";
-    public static final String ORDER_ROOT = "/etc/commerce/orders/2016/12/12/order";
+    public static final String CONTENT_ROOT = "/content/we-retail";
+    public static final String PRODUCT_ROOT = "/var/commerce/products/we-retail";
+    public static final String ORDER_ROOT = "/var/commerce/orders/2016/12/12/order";
+    public static final String BUTTON_PATH = "/content/we-retail/us/en/men/jcr:content/root/responsivegrid/button";
+    public static final String PRODUCT_FILTER_PATH = "/content/we-retail/us/en/products/women/shirts/jcr:content/root/product-grid-container/product-filter/productfilter-color";
 
     private static MockCommerceService mockCommerceService = null;
 
@@ -70,10 +78,26 @@ public class AppAemContext {
                     return new MockProduct(resource);
                 }
             });
+            context.registerAdapter(Page.class, CommunityContext.class, new Function<Page, CommunityContext>() {
+                @Nullable
+                @Override
+                public CommunityContext apply(@Nullable Page page) {
+                    return new MockCommunityContext();
+                }
+            });
+            context.registerAdapter(ResourceResolver.class, UserManager.class, new Function<ResourceResolver, UserManager>() {
+                @Nullable
+                @Override
+                public UserManager apply(@Nullable ResourceResolver resolver) {
+                    return new MockUserManager();
+                }
+            });
             context.addModelsForPackage("we.retail.core.model");
             context.load().json("/sample-content.json", CONTENT_ROOT);
             context.load().json("/sample-product.json", PRODUCT_ROOT);
             context.load().json("/sample-order.json", ORDER_ROOT);
+            context.load().json("/sample-button.json", BUTTON_PATH);
+            context.load().json("/sample-productfilter.json", PRODUCT_FILTER_PATH);
         }
     }
 }

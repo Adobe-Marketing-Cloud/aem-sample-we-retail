@@ -3,5 +3,5 @@
     jcr:primaryType="cq:Component"
     jcr:title="Text"
     jcr:description="Rich Text Section"
-    sling:resourceSuperType="core/wcm/components/text/v1/text"
+    sling:resourceSuperType="core/wcm/components/text/v2/text"
     componentGroup="We.Retail"/>

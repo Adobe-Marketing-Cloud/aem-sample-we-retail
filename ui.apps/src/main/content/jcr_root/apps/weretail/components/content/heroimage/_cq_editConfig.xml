@@ -12,7 +12,4 @@
                 sling:resourceType="weretail/components/content/heroimage"/>
         </image>
     </cq:dropTargets>
-    <cq:listeners
-        jcr:primaryType="cq:EditListenersConfig"
-        afteredit="REFRESH_PAGE"/>
 </jcr:root>

@@ -9,8 +9,6 @@
         cq:template="/conf/we-retail/settings/wcm/templates/redirect-page"
         jcr:primaryType="cq:PageContent"
         jcr:title="United States"
-        sling:redirect="{Boolean}true"
-        sling:redirectStatus="{Long}302"
-        sling:resourceType="foundation/components/redirect"
-        redirectTarget="/content/we-retail/us/en"/>
+        sling:resourceType="weretail/components/structure/page"
+        cq:redirectTarget="/content/we-retail/us/en"/>
 </jcr:root>

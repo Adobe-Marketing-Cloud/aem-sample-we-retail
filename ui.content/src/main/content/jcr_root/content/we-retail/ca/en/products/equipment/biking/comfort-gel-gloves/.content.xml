@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2017-02-08T11:58:22.692+01:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/eq/biking/eqbisucos"
+        cq:productMaster="/var/commerce/products/we-retail/eq/biking/eqbisucos"
         cq:tags="[we-retail:activity/biking,we-retail:season/summer,we-retail:apparel/gloves]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -34,7 +34,7 @@
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weretail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/eq/biking/eqbisucos">
+                productData="/var/commerce/products/we-retail/eq/biking/eqbisucos">
                 <eqbisucos-s
                     cq:commerceType="variant"
                     cq:lastRolledout="{Date}2017-02-08T11:58:22.664+01:00"
@@ -42,7 +42,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/biking/eqbisucos/size-s">
+                    productData="/var/commerce/products/we-retail/eq/biking/eqbisucos/size-s">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:22.668+01:00"
                         cq:lastRolledoutBy="admin"
@@ -66,7 +66,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/biking/eqbisucos/size-m">
+                    productData="/var/commerce/products/we-retail/eq/biking/eqbisucos/size-m">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:22.673+01:00"
                         cq:lastRolledoutBy="admin"
@@ -90,7 +90,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/biking/eqbisucos/size-l">
+                    productData="/var/commerce/products/we-retail/eq/biking/eqbisucos/size-l">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:22.679+01:00"
                         cq:lastRolledoutBy="admin"

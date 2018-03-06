@@ -1,5 +1,5 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- ~ Copyright 2016 Adobe Systems Incorporated
+ ~ Copyright 2018 Adobe Systems Incorporated
  ~
  ~ Licensed under the Apache License, Version 2.0 (the "License");
  ~ you may not use this file except in compliance with the License.
@@ -15,17 +15,16 @@
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 package we.retail.core.model;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.ResourceBundle;
+import javax.annotation.Nonnull;
 import javax.servlet.Servlet;
-import javax.servlet.ServletException;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.Resource;
@@ -42,6 +41,7 @@ import com.adobe.granite.ui.components.ds.SimpleDataSource;
 import com.adobe.granite.ui.components.ds.ValueMapResource;
 import com.day.cq.i18n.I18n;
 import com.day.cq.wcm.api.Page;
+import com.google.common.collect.ImmutableMap;
 
 @Component(
         service = {Servlet.class},
@@ -54,85 +54,97 @@ import com.day.cq.wcm.api.Page;
 public class CountriesFormOptionsDataSource extends SlingSafeMethodsServlet {
 
     final static String RESOURCE_TYPE = "weretail/components/form/options/datasource/countriesdatasource";
-    private final static String COUNTRY_OPTIONS_HEADER = "Country";
 
-    private I18n i18n;
+    private final static String COUNTRY_OPTIONS_HEADER = "Country";
+    private final static String PN_TEXT = "text";
+    private final static String PN_VALUE = "value";
+    private final static Map<String, String> COUNTRY_MAP = ImmutableMap.<String, String>builder()
+            .put("AR", "Argentina")
+            .put("AU", "Australia")
+            .put("AT", "Austria")
+            .put("BS", "Bahamas")
+            .put("BH", "Bahrain")
+            .put("BR", "Brazil")
+            .put("CA", "Canada")
+            .put("CL", "Chile")
+            .put("CN", "China")
+            .put("CO", "Colombia")
+            .put("EG", "Egypt")
+            .put("FR", "France")
+            .put("DE", "Germany")
+            .put("GI", "Gibraltar")
+            .put("HK", "Hong Kong")
+            .put("IE", "Ireland")
+            .put("IT", "Italy")
+            .put("JP", "Japan")
+            .put("LU", "Luxembourg")
+            .put("MY", "Malaysia")
+            .put("MX", "Mexico")
+            .put("MC", "Monaco")
+            .put("RU", "Russia")
+            .put("SG", "Singapore")
+            .put("ES", "Spain")
+            .put("CH", "Switzerland")
+            .put("US", "United States of America")
+            .put("AE", "United Arab Emirates")
+            .put("GB", "United Kingdom")
+            .put("UY", "Uruguay")
+            .build();
 
     @Override
-    protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response)
-            throws ServletException, IOException {
-        SlingBindings bindings = (SlingBindings) request.getAttribute(SlingBindings.class.getName());
-        Page currentPage = (Page) bindings.get(WCMBindings.CURRENT_PAGE);
-        final Locale pageLocale = currentPage.getLanguage(true);
-        final ResourceBundle bundle = request.getResourceBundle(pageLocale);
-        i18n = new I18n(bundle);
-        SimpleDataSource countriesDataSource = new SimpleDataSource(buildCountriesList(request.getResourceResolver()).iterator());
+    protected void doGet(@Nonnull SlingHttpServletRequest request, @Nonnull SlingHttpServletResponse response) {
+        List<Resource> countriesList = getCountriesList(request);
+        SimpleDataSource countriesDataSource = new SimpleDataSource(countriesList.iterator());
         request.setAttribute(DataSource.class.getName(), countriesDataSource);
     }
 
-    private List<Resource> buildCountriesList(ResourceResolver resolver) {
-        List<Resource> countries = new ArrayList<Resource>();
-        addCountry(resolver, countries, "AR", "Argentina");
-        addCountry(resolver, countries, "AU", "Australia");
-        addCountry(resolver, countries, "AT", "Austria");
-        addCountry(resolver, countries, "BS", "Bahamas");
-        addCountry(resolver, countries, "BH", "Bahrain");
-        addCountry(resolver, countries, "BR", "Brazil");
-        addCountry(resolver, countries, "CA", "Canada");
-        addCountry(resolver, countries, "CL", "Chile");
-        addCountry(resolver, countries, "CN", "China");
-        addCountry(resolver, countries, "CO", "Colombia");
-        addCountry(resolver, countries, "EG", "Egypt");
-        addCountry(resolver, countries, "FR", "France");
-        addCountry(resolver, countries, "DE", "Germany");
-        addCountry(resolver, countries, "GI", "Gibraltar");
-        addCountry(resolver, countries, "HK", "Hong Kong");
-        addCountry(resolver, countries, "IE", "Ireland");
-        addCountry(resolver, countries, "IT", "Italy");
-        addCountry(resolver, countries, "JP", "Japan");
-        addCountry(resolver, countries, "LU", "Luxembourg");
-        addCountry(resolver, countries, "MY", "Malaysia");
-        addCountry(resolver, countries, "MX", "Mexico");
-        addCountry(resolver, countries, "MC", "Monaco");
-        addCountry(resolver, countries, "RU", "Russia");
-        addCountry(resolver, countries, "SG", "Singapore");
-        addCountry(resolver, countries, "ES", "Spain");
-        addCountry(resolver, countries, "CH", "Switzerland");
-        addCountry(resolver, countries, "US", "United States of America");
-        addCountry(resolver, countries, "AE", "United Arab Emirates");
-        addCountry(resolver, countries, "GB", "United Kingdom");
-        addCountry(resolver, countries, "UY", "Uruguay");
-        addCountry(resolver, countries, "VE", "Venezuela");
+    private List<Resource> getCountriesList(SlingHttpServletRequest request) {
+        List<Resource> countries = new ArrayList<>();
+        SlingBindings bindings = (SlingBindings) request.getAttribute(SlingBindings.class.getName());
+        if (bindings != null) {
+            Page currentPage = (Page) bindings.get(WCMBindings.CURRENT_PAGE);
+            if (currentPage != null) {
+                Locale pageLocale = currentPage.getLanguage(true);
+                ResourceBundle bundle = request.getResourceBundle(pageLocale);
+                if (bundle != null) {
+                    I18n i18n = new I18n(bundle);
 
-        // Sort based on translated display text:
-        Collections.sort(countries, new Comparator<Resource>() {
-            public int compare(Resource o1, Resource o2) {
-                return o1.adaptTo(ValueMap.class).get("text", "").compareTo(o2.adaptTo(ValueMap.class).get("text", ""));
+                    ResourceResolver resourceResolver = request.getResourceResolver();
+                    for (String key : COUNTRY_MAP.keySet()) {
+                        countries.add(getCountryResource(resourceResolver, i18n, key, COUNTRY_MAP.get(key)));
+                    }
+
+                    // Sort based on translated display text:
+                    countries.sort((o1, o2) -> {
+                        ValueMap v1 = o1.adaptTo(ValueMap.class);
+                        ValueMap v2 = o2.adaptTo(ValueMap.class);
+                        if (v1 != null && v2 != null) {
+                            return v1.get(PN_TEXT, StringUtils.EMPTY).compareTo(v2.get(PN_TEXT, StringUtils.EMPTY));
+                        } else {
+                            return 0;
+                        }
+                    });
+                    // add the header of the country options
+                    countries.add(0, getCountryOptionHeader(resourceResolver, i18n));
+                }
             }
-        });
-
-        // add the header of the country options
-        addCountryOptionHeader(resolver, countries);
-
+        }
         return countries;
     }
 
-    private void addCountry(ResourceResolver resolver, List<Resource> countries, String countryCode, String countryName) {
-        ValueMap vm = new ValueMapDecorator(new HashMap<String, Object>());
-        vm.put("value", countryCode);
-        vm.put("text", i18n.get(countryName));
-        ValueMapResource countryRes = new ValueMapResource(resolver, "", "", vm);
-        countries.add(countryRes);
+    private Resource getCountryResource(ResourceResolver resolver, I18n i18n, String countryCode, String countryName) {
+        ValueMap vm = new ValueMapDecorator(new HashMap<>());
+        vm.put(PN_VALUE, countryCode);
+        vm.put(PN_TEXT, i18n.get(countryName));
+        return new ValueMapResource(resolver, "", "", vm);
     }
 
-    private void addCountryOptionHeader(ResourceResolver resolver, List<Resource> countries) {
-        ValueMap vm = new ValueMapDecorator(new HashMap<String, Object>());
+    private Resource getCountryOptionHeader(ResourceResolver resolver, I18n i18n) {
+        ValueMap vm = new ValueMapDecorator(new HashMap<>());
         vm.put("value", "");
         vm.put("text", i18n.get(COUNTRY_OPTIONS_HEADER));
         vm.put("selected", true);
         vm.put("disabled", true);
-        ValueMapResource countryRes = new ValueMapResource(resolver, "", "", vm);
-        countries.add(0, countryRes);
+        return new ValueMapResource(resolver, "", "", vm);
     }
-
 }

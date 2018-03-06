@@ -27,6 +27,7 @@ public class WeRetailConstants {
 
     public static final String PRICE_FILTER_UNIT = "UNIT";
     public static final String PRICE_FILTER_LINE = "LINE";
+    public static final String PRICE_FILTER_DISCOUNT = "DISCOUNT";
 
     public static final String PRICE_FILTER_SHIPPING = "SHIPPING";
     public static final String PRICE_FILTER_PRE_TAX = "PRE_TAX";
@@ -34,4 +35,13 @@ public class WeRetailConstants {
     public static final String PRICE_FILTER_TOTAL = "TOTAL";
 
     public static final String ORDER_PLACED = "orderPlaced";
+
+    public static final String FIRST_NAME = "firstname";
+    public static final String LAST_NAME = "lastname";
+    public static final String STREET_LINE1 = "street1";
+    public static final String STREET_LINE2 = "street2";
+    public static final String CITY = "city";
+    public static final String ZIP_CODE = "zip";
+    public static final String STATE = "state";
+    public static final String COUNTRY = "country";
 }

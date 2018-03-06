@@ -20,7 +20,7 @@
             proxyProductPages="false"/>
         <filter
             jcr:primaryType="nt:unstructured"
-            basePath="/etc/commerce/products/we-retail"
+            basePath="/var/commerce/products/we-retail"
             searchType="simple"/>
     </jcr:content>
     <women/>

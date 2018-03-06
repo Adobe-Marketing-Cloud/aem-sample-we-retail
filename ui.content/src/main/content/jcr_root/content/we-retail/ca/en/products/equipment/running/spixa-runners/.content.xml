@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2017-02-08T11:58:20.631+01:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/eq/running/spixa_runners"
+        cq:productMaster="/var/commerce/products/we-retail/eq/running/spixa_runners"
         cq:tags="[we-retail:activity/running,we-retail:apparel/footwear]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -33,7 +33,7 @@
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weretail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/eq/running/spixa_runners">
+                productData="/var/commerce/products/we-retail/eq/running/spixa_runners">
                 <image
                     cq:lastRolledout="{Date}2017-02-08T11:58:20.621+01:00"
                     cq:lastRolledoutBy="admin"

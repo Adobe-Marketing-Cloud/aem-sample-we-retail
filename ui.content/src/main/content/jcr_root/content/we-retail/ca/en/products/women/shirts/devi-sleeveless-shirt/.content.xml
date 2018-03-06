@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2017-02-08T11:58:17.282+01:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/wo/shirts/wootsudet"
+        cq:productMaster="/var/commerce/products/we-retail/wo/shirts/wootsudet"
         cq:tags="[we-retail:season/summer,we-retail:activity/others,we-retail:apparel/shirt,we-retail:gender/women]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -34,7 +34,7 @@
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weretail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/wo/shirts/wootsudet">
+                productData="/var/commerce/products/we-retail/wo/shirts/wootsudet">
                 <wootsudet-xxs
                     cq:commerceType="variant"
                     cq:lastRolledout="{Date}2017-02-08T11:58:17.226+01:00"
@@ -42,7 +42,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/wootsudet/size-xxs">
+                    productData="/var/commerce/products/we-retail/wo/shirts/wootsudet/size-xxs">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:17.230+01:00"
                         cq:lastRolledoutBy="admin"
@@ -66,7 +66,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/wootsudet/size-xs">
+                    productData="/var/commerce/products/we-retail/wo/shirts/wootsudet/size-xs">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:17.235+01:00"
                         cq:lastRolledoutBy="admin"
@@ -90,7 +90,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/wootsudet/size-s">
+                    productData="/var/commerce/products/we-retail/wo/shirts/wootsudet/size-s">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:17.241+01:00"
                         cq:lastRolledoutBy="admin"
@@ -114,7 +114,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/wootsudet/size-m">
+                    productData="/var/commerce/products/we-retail/wo/shirts/wootsudet/size-m">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:17.247+01:00"
                         cq:lastRolledoutBy="admin"
@@ -138,7 +138,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/wootsudet/size-l">
+                    productData="/var/commerce/products/we-retail/wo/shirts/wootsudet/size-l">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:17.253+01:00"
                         cq:lastRolledoutBy="admin"
@@ -162,7 +162,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/wootsudet/size-xl">
+                    productData="/var/commerce/products/we-retail/wo/shirts/wootsudet/size-xl">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:17.259+01:00"
                         cq:lastRolledoutBy="admin"

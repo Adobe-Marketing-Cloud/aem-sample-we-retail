@@ -45,7 +45,7 @@
             </div>
             <div class="we-Cart-entryQuantity">
                 <label class="text-muted">${'Qty' @ i18n}:</label>
-                <span data-sly-test.isReadOnly="${cart.isReadOnly}"
+                <span data-sly-test.isReadOnly="${properties.isReadOnly}"
                       data-sly-attribute="${hapiCartEntry.itemprop.quantity}">${item.entry.quantity}</span>
                 <form data-sly-test="${!isReadOnly}" method="POST"
                       action="${cart.currentPageUrl @ selectors='weretail.modifycartentry'}">
@@ -60,7 +60,7 @@
             </div>
         </div>
         <div class="we-Cart-remove">
-            <form data-sly-test="${!cart.isReadOnly}" method="POST"
+            <form data-sly-test="${!isReadOnly}" method="POST"
                   action="${cart.currentPageUrl @ selectors='weretail.deletecartentry'}">
                 <input type="hidden" name="entryNumber" value="${item.entry.entryIndex}"/>
                 <input type="hidden" name="redirect" value="${cart.currentPageUrl}"/>
@@ -71,6 +71,6 @@
     </div>
 </div>
 
-<div class="we-Cart-promotions" data-sly-test="${cart.orderPromotions}" data-sly-test.="${!cart.isReadOnly}">
-    <span data-sly-repeat.promotion="${cart.orderPromotions}" class="we-Cart-promotion">${promotion.message @ context='html'}</span>
+<div class="we-Cart-promotions" data-sly-test="${cart.orderPromotions}" data-sly-test.="${!isReadOnly}">
+        <span data-sly-repeat.promotion="${cart.orderPromotions}" class="we-Cart-promotion">${promotion.message @ context='html'}</span>
 </div>

@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2017-02-08T11:58:19.008+01:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/me/pants/meotsuann"
+        cq:productMaster="/var/commerce/products/we-retail/me/pants/meotsuann"
         cq:tags="[we-retail:gender/men,we-retail:season/summer,we-retail:activity/others,we-retail:apparel/pants]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -34,7 +34,7 @@
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weretail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/me/pants/meotsuann">
+                productData="/var/commerce/products/we-retail/me/pants/meotsuann">
                 <meotsuann-28
                     cq:commerceType="variant"
                     cq:lastRolledout="{Date}2017-02-08T11:58:18.930+01:00"
@@ -42,7 +42,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/pants/meotsuann/size-28">
+                    productData="/var/commerce/products/we-retail/me/pants/meotsuann/size-28">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:18.933+01:00"
                         cq:lastRolledoutBy="admin"
@@ -66,7 +66,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/pants/meotsuann/size-30">
+                    productData="/var/commerce/products/we-retail/me/pants/meotsuann/size-30">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:18.938+01:00"
                         cq:lastRolledoutBy="admin"
@@ -90,7 +90,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/pants/meotsuann/size-32">
+                    productData="/var/commerce/products/we-retail/me/pants/meotsuann/size-32">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:18.944+01:00"
                         cq:lastRolledoutBy="admin"
@@ -114,7 +114,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/pants/meotsuann/size-34">
+                    productData="/var/commerce/products/we-retail/me/pants/meotsuann/size-34">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:18.949+01:00"
                         cq:lastRolledoutBy="admin"
@@ -138,7 +138,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/pants/meotsuann/size-36">
+                    productData="/var/commerce/products/we-retail/me/pants/meotsuann/size-36">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:18.955+01:00"
                         cq:lastRolledoutBy="admin"
@@ -162,7 +162,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/pants/meotsuann/size-38">
+                    productData="/var/commerce/products/we-retail/me/pants/meotsuann/size-38">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:18.973+01:00"
                         cq:lastRolledoutBy="admin"
@@ -186,7 +186,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/pants/meotsuann/size-40">
+                    productData="/var/commerce/products/we-retail/me/pants/meotsuann/size-40">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:18.980+01:00"
                         cq:lastRolledoutBy="admin"
@@ -210,7 +210,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/pants/meotsuann/size-42">
+                    productData="/var/commerce/products/we-retail/me/pants/meotsuann/size-42">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:18.988+01:00"
                         cq:lastRolledoutBy="admin"
@@ -234,7 +234,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/pants/meotsuann/size-44">
+                    productData="/var/commerce/products/we-retail/me/pants/meotsuann/size-44">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:18.994+01:00"
                         cq:lastRolledoutBy="admin"

@@ -129,14 +129,6 @@
                         );
                     }
 
-                    if (this.product && window.CQ_Analytics && CQ_Analytics.ViewedProducts) {
-                        CQ_Analytics.ViewedProducts.record(
-                            this.product.pagePath,
-                            this.product.title,
-                            this.product.image,
-                            this.product.price
-                        );
-                    }
                 },
                 trackCartAdd: function (event) {
                     if (this.product && window.ContextHub && ContextHub.getStore("abandonedproducts")) {

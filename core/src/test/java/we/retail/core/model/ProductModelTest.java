@@ -24,6 +24,7 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import com.adobe.cq.sightly.WCMBindings;
+import com.adobe.granite.security.user.UserManagementService;
 import com.day.cq.wcm.api.designer.Style;
 import common.AppAemContext;
 import io.wcm.testing.mock.aem.junit.AemContext;
@@ -44,6 +45,9 @@ public class ProductModelTest {
     @Mock
     private Style style;
 
+    @Mock
+    private UserManagementService ums;
+
     private ProductModel productModel;
     private ProductItem productItem;
 
@@ -54,6 +58,8 @@ public class ProductModelTest {
         attribute.put("currentStyle", style);
         attribute.put(WCMBindings.CURRENT_PAGE, context.currentPage());
         context.currentResource(CURRENT_RESOURCE);
+        context.registerService(UserManagementService.class, ums);
+
         productModel = context.request().adaptTo(ProductModel.class);
         productItem = productModel.getProductItem();
     }

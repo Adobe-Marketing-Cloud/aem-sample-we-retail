@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2016-07-04T11:34:50.958+02:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/wo/shorts/wohisufls"
+        cq:productMaster="/var/commerce/products/we-retail/wo/shorts/wohisufls"
         cq:tags="[we-retail:apparel/shorts,we-retail:season/summer,we-retail:activity/hiking,we-retail:gender/women]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -34,7 +34,7 @@
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weretail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/wo/shorts/wohisufls">
+                productData="/var/commerce/products/we-retail/wo/shorts/wohisufls">
                 <wohisufls-xs
                     cq:commerceType="variant"
                     cq:lastRolledout="{Date}2016-07-04T11:34:50.903+02:00"
@@ -42,7 +42,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shorts/wohisufls/size-xs">
+                    productData="/var/commerce/products/we-retail/wo/shorts/wohisufls/size-xs">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:34:50.910+02:00"
                         cq:lastRolledoutBy="admin"
@@ -66,7 +66,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shorts/wohisufls/size-s">
+                    productData="/var/commerce/products/we-retail/wo/shorts/wohisufls/size-s">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:34:50.919+02:00"
                         cq:lastRolledoutBy="admin"
@@ -90,7 +90,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shorts/wohisufls/size-m">
+                    productData="/var/commerce/products/we-retail/wo/shorts/wohisufls/size-m">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:34:50.927+02:00"
                         cq:lastRolledoutBy="admin"
@@ -114,7 +114,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shorts/wohisufls/size-l">
+                    productData="/var/commerce/products/we-retail/wo/shorts/wohisufls/size-l">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:34:50.936+02:00"
                         cq:lastRolledoutBy="admin"
@@ -138,7 +138,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shorts/wohisufls/size-xl">
+                    productData="/var/commerce/products/we-retail/wo/shorts/wohisufls/size-xl">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:34:50.944+02:00"
                         cq:lastRolledoutBy="admin"
@@ -207,7 +207,7 @@
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"
             cq:master="/content/catalogs/we-retail/en/website-template-pages/product-page-template"
-            cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
+            cq:rolloutConfigs="[/libs/msm/catalog/rolloutconfigs/catalogpagecontent,/libs/msm/catalog/rolloutconfigs/catalogrollouthooks]"
             jcr:primaryType="cq:LiveCopy"/>
         <image
             jcr:primaryType="nt:unstructured"

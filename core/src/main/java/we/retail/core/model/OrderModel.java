@@ -30,13 +30,13 @@ import org.apache.sling.models.annotations.injectorspecific.ScriptVariable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.adobe.cq.address.api.Address;
 import com.adobe.cq.commerce.api.CommerceConstants;
 import com.adobe.cq.commerce.api.CommerceException;
 import com.adobe.cq.commerce.api.CommerceSession;
 import com.adobe.cq.commerce.api.PlacedOrder;
 import com.adobe.cq.commerce.common.PriceFilter;
 import com.adobe.cq.sightly.SightlyWCMMode;
+import we.retail.core.WeRetailConstants;
 
 @Model(adaptables = SlingHttpServletRequest.class)
 public class OrderModel extends ShoppingCartModel {
@@ -62,11 +62,9 @@ public class OrderModel extends ShoppingCartModel {
     @PostConstruct
     private void initModel() throws Exception {
         createCommerceSession();
-        populatePageUrls();
         populateOrder();
         populatePromotions();
         populateCartEntries();
-        isReadOnly = true;
     }
 
     protected void populateOrder() throws CommerceException {
@@ -151,14 +149,14 @@ public class OrderModel extends ShoppingCartModel {
     }
 
     private String getAddress(String prefix) {
-        String firstname = getOrderProperty(prefix + Address.FIRST_NAME);
-        String lastname = getOrderProperty(prefix + Address.LAST_NAME);
-        String street1 = getOrderProperty(prefix + Address.STREET_LINE1);
-        String street2 = getOrderProperty(prefix + Address.STREET_LINE2);
-        String zipCode = getOrderProperty(prefix + Address.ZIP_CODE);
-        String city = getOrderProperty(prefix + Address.CITY);
-        String state = getOrderProperty(prefix + Address.STATE);
-        String country = getOrderProperty(prefix + Address.COUNTRY);
+        String firstname = getOrderProperty(prefix + WeRetailConstants.FIRST_NAME);
+        String lastname = getOrderProperty(prefix + WeRetailConstants.LAST_NAME);
+        String street1 = getOrderProperty(prefix + WeRetailConstants.STREET_LINE1);
+        String street2 = getOrderProperty(prefix + WeRetailConstants.STREET_LINE2);
+        String zipCode = getOrderProperty(prefix + WeRetailConstants.ZIP_CODE);
+        String city = getOrderProperty(prefix + WeRetailConstants.CITY);
+        String state = getOrderProperty(prefix + WeRetailConstants.STATE);
+        String country = getOrderProperty(prefix + WeRetailConstants.COUNTRY);
 
         String name = join(new String[] { firstname, lastname }, " ");
         String street = join(new String[] { street1, street2 }, " ");

@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2016-07-04T11:35:02.055+02:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/me/footwear/meotwisus"
+        cq:productMaster="/var/commerce/products/we-retail/me/footwear/meotwisus"
         cq:tags="[we-retail:apparel/footwear,we-retail:gender/men,we-retail:season/winter,we-retail:activity/others]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -34,7 +34,7 @@
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weretail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/me/footwear/meotwisus">
+                productData="/var/commerce/products/we-retail/me/footwear/meotwisus">
                 <meotwisus-7
                     cq:commerceType="variant"
                     cq:lastRolledout="{Date}2016-07-04T11:35:02.006+02:00"
@@ -42,7 +42,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/footwear/meotwisus/size-7">
+                    productData="/var/commerce/products/we-retail/me/footwear/meotwisus/size-7">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:35:02.013+02:00"
                         cq:lastRolledoutBy="admin"
@@ -72,7 +72,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/footwear/meotwisus/size-8">
+                    productData="/var/commerce/products/we-retail/me/footwear/meotwisus/size-8">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:35:02.020+02:00"
                         cq:lastRolledoutBy="admin"
@@ -102,7 +102,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/footwear/meotwisus/size-9">
+                    productData="/var/commerce/products/we-retail/me/footwear/meotwisus/size-9">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:35:02.028+02:00"
                         cq:lastRolledoutBy="admin"
@@ -132,7 +132,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/footwear/meotwisus/size-10">
+                    productData="/var/commerce/products/we-retail/me/footwear/meotwisus/size-10">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:35:02.036+02:00"
                         cq:lastRolledoutBy="admin"
@@ -162,7 +162,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/footwear/meotwisus/size-11">
+                    productData="/var/commerce/products/we-retail/me/footwear/meotwisus/size-11">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:35:02.045+02:00"
                         cq:lastRolledoutBy="admin"
@@ -192,7 +192,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/footwear/meotwisus/size-12">
+                    productData="/var/commerce/products/we-retail/me/footwear/meotwisus/size-12">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:35:02.052+02:00"
                         cq:lastRolledoutBy="admin"
@@ -273,7 +273,7 @@
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"
             cq:master="/content/catalogs/we-retail/en/website-template-pages/product-page-template"
-            cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
+            cq:rolloutConfigs="[/libs/msm/catalog/rolloutconfigs/catalogpagecontent,/libs/msm/catalog/rolloutconfigs/catalogrollouthooks]"
             jcr:primaryType="cq:LiveCopy"/>
         <image
             jcr:primaryType="nt:unstructured"

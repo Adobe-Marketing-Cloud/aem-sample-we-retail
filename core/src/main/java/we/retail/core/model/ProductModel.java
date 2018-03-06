@@ -17,11 +17,13 @@ package we.retail.core.model;
 
 import javax.annotation.PostConstruct;
 
+import org.apache.jackrabbit.oak.spi.security.user.UserConstants;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.apache.sling.models.annotations.injectorspecific.ScriptVariable;
 import org.apache.sling.models.annotations.injectorspecific.Self;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
@@ -32,6 +34,7 @@ import com.adobe.cq.commerce.api.CommerceException;
 import com.adobe.cq.commerce.api.CommerceService;
 import com.adobe.cq.commerce.api.CommerceSession;
 import com.adobe.cq.commerce.api.Product;
+import com.adobe.granite.security.user.UserManagementService;
 import com.day.cq.wcm.api.Page;
 import we.retail.core.model.handler.CommerceHandler;
 
@@ -58,6 +61,9 @@ public class ProductModel {
     @Self
     private CommerceHandler commerceHandler;
 
+    @OSGiService
+    private UserManagementService ums;
+
     private CommerceService commerceService;
     private ProductItem productItem;
     private boolean isAnonymous;
@@ -68,11 +74,12 @@ public class ProductModel {
             commerceService = currentPage.getContentResource().adaptTo(CommerceService.class);
             if (commerceService != null) {
                 CommerceSession commerceSession = commerceService.login(request, response);
-                Product product = resource.adaptTo(Product.class);
-
-                // If the product is null, it might be a proxy page and the commerceHandler handles that
-                if (product == null) {
+                Product product;
+                //for proxy page use product from commerce handler
+                if (commerceHandler.isProductPageProxy()) {
                     product = commerceHandler.getProduct();
+                } else {
+                    product = resource.adaptTo(Product.class);
                 }
 
                 if (product != null) {
@@ -83,8 +90,8 @@ public class ProductModel {
             LOGGER.error("Can't extract product from page", e);
         }
 
-        isAnonymous = resourceResolver.getUserID() == null || resourceResolver.getUserID().equals("anonymous") ? true
-                : false;
+        String anonymousId = ums != null ? ums.getAnonymousId() : UserConstants.DEFAULT_ANONYMOUS_ID;
+        isAnonymous = resourceResolver.getUserID() == null || resourceResolver.getUserID().equals(anonymousId);
     }
 
     public ProductItem getProductItem() {

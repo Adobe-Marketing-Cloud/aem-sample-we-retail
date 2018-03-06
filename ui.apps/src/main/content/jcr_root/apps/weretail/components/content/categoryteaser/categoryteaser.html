@@ -13,7 +13,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<div data-sly-use.categoryTeaser="CategoryTeaser" class="we-CategoryTeaser${!wcmmode.disabled ? ' cq-dd-image' : ''}">
+<div data-sly-use.categoryTeaser="we.retail.core.model.CategoryTeaser" class="we-CategoryTeaser${!wcmmode.disabled ? ' cq-dd-image' : ''}">
     <div class="crop crop-16_9 cmp cmp-image"
          data-sly-resource="${ @ resourceType='weretail/components/content/categoryteaserimage'}">
     </div>
@@ -21,5 +21,5 @@
     <h2>${properties.heading}</h2>
     <h3>${properties.subheading}</h3>
     
-    <a data-sly-test="${ categoryTeaser.buttonLinkTo }" href="${categoryTeaser.buttonLinkTo}" class="btn btn-action btn-primary">${categoryTeaser.buttonLabel}</a>
+    <a data-sly-test="${ categoryTeaser.buttonLinkTo }" href="${categoryTeaser.buttonLinkTo @ extension = 'html'}" class="btn btn-action btn-primary">${categoryTeaser.buttonLabel}</a>
 </div>

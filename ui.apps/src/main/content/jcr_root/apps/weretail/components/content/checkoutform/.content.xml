@@ -4,5 +4,5 @@
     jcr:description="Allowing visitors to submit checkout form"
     jcr:primaryType="cq:Component"
     jcr:title="We.Retail Checkout Form"
-    sling:resourceSuperType="core/wcm/components/form/container/v1/container"
+    sling:resourceSuperType="core/wcm/components/form/container/v2/container"
     componentGroup=".hidden"/>

@@ -3,5 +3,5 @@
     jcr:primaryType="cq:Component"
     jcr:title="Title"
     jcr:description="Section Heading"
-    sling:resourceSuperType="core/wcm/components/title/v1/title"
+    sling:resourceSuperType="core/wcm/components/title/v2/title"
     componentGroup="We.Retail"/>

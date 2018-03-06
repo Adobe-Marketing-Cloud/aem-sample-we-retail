@@ -2,6 +2,6 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
           jcr:primaryType="cq:Component"
           jcr:title="We.Retail Experience Fragment Web Variation Page"
-          jcr:description="Page component with for the we.retail specific experience fragments web variations"
+          jcr:description="Page with We.Retail specific components for Experience Fragments web variations"
           sling:resourceSuperType="cq/experience-fragments/components/xfpage"
           componentGroup=".hidden"/>

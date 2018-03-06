@@ -16,4 +16,6 @@
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <workspaceFilter version="1.0">
     <filter root="/apps/weretail/tests"/>
+    <filter root="/content/cq:tags/test-tags"/>
+    <filter root="/etc/blueprints/corecomp_blueprint"/>
 </workspaceFilter>

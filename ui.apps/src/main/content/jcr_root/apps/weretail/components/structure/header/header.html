@@ -13,13 +13,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<sly>
-    <div id="top" class="we-retail-header" data-sly-test="${!wcmmode.disabled}">
-        <sly data-sly-include="include.html"/>
-        <sly data-sly-include="modals.html"/>
-    </div>
-    <div class="we-retail-header" data-sly-test="${wcmmode.disabled}"
-         data-we-header-content="${currentPage.path @ extension='html', selectors='header_include'}">
-        <sly data-sly-include="modals.html"/>
-    </div>
-</sly>
+<div id="top" class="we-retail-header" data-we-header-content="${currentPage.path @ extension='html', selectors='header_include'}">
+    <sly data-sly-include="include.html"/>
+    <sly data-sly-include="modals.html"/>
+</div>

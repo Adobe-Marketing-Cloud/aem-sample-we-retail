@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2016-06-29T14:21:01.735+02:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/me/shorts/mehisusls"
+        cq:productMaster="/var/commerce/products/we-retail/me/shorts/mehisusls"
         cq:tags="[we-retail:gender/men,we-retail:apparel/shorts,we-retail:season/summer,we-retail:activity/hiking]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -34,7 +34,7 @@
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weretail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/me/shorts/mehisusls">
+                productData="/var/commerce/products/we-retail/me/shorts/mehisusls">
                 <mehisusls-xs
                     cq:commerceType="variant"
                     cq:lastRolledout="{Date}2016-06-29T14:21:01.613+02:00"
@@ -42,7 +42,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/shorts/mehisusls/size-xs">
+                    productData="/var/commerce/products/we-retail/me/shorts/mehisusls/size-xs">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:21:01.626+02:00"
                         cq:lastRolledoutBy="admin"
@@ -66,7 +66,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/shorts/mehisusls/size-s">
+                    productData="/var/commerce/products/we-retail/me/shorts/mehisusls/size-s">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:21:01.643+02:00"
                         cq:lastRolledoutBy="admin"
@@ -90,7 +90,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/shorts/mehisusls/size-m">
+                    productData="/var/commerce/products/we-retail/me/shorts/mehisusls/size-m">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:21:01.659+02:00"
                         cq:lastRolledoutBy="admin"
@@ -114,7 +114,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/shorts/mehisusls/size-l">
+                    productData="/var/commerce/products/we-retail/me/shorts/mehisusls/size-l">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:21:01.675+02:00"
                         cq:lastRolledoutBy="admin"
@@ -138,7 +138,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/shorts/mehisusls/size-xl">
+                    productData="/var/commerce/products/we-retail/me/shorts/mehisusls/size-xl">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:21:01.693+02:00"
                         cq:lastRolledoutBy="admin"
@@ -162,7 +162,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/shorts/mehisusls/size-xxl">
+                    productData="/var/commerce/products/we-retail/me/shorts/mehisusls/size-xxl">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:21:01.710+02:00"
                         cq:lastRolledoutBy="admin"

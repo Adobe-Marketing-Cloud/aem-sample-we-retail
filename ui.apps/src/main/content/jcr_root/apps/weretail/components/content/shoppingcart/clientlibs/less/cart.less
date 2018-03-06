@@ -58,6 +58,11 @@
         text-align: center;
     }
 
+    &-strikethroughPrice {
+        text-decoration: line-through;
+        &:before { content: ' '; display: block; }
+    }
+
     &-entryQuantity {
         &:extend(.we-Cart-entryCol);
         width: 15%;

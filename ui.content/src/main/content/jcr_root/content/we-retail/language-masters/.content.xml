@@ -8,12 +8,9 @@
         cq:template="/conf/we-retail/settings/wcm/templates/redirect-page"
         jcr:primaryType="cq:PageContent"
         jcr:title="Language Masters"
-        sling:redirect="{Boolean}true"
-        sling:redirectStatus="{Long}302"
-        sling:resourceType="foundation/components/redirect"
-        branding-global-less="/etc/designs/we-retail/global.less"
+        sling:resourceType="weretail/components/structure/page"
         hideInNav="{Boolean}true"
-        redirectTarget="/content/we-retail/language-masters/en"/>
+        cq:redirectTarget="/content/we-retail/language-masters/en"/>
     <en/>
     <de/>
     <fr/>

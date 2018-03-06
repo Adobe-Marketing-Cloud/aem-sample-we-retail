@@ -3,5 +3,5 @@
     jcr:primaryType="cq:Component"
     jcr:title="Form Options"
     jcr:description="Allows visitors to select available options"
-    sling:resourceSuperType="core/wcm/components/form/options/v1/options"
+    sling:resourceSuperType="core/wcm/components/form/options/v2/options"
     componentGroup="We.Retail Form"/>

@@ -13,6 +13,6 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<a data-sly-use.button="Button"
+<a data-sly-use.button="we.retail.core.model.Button"
    class="btn btn-primary btn-action cq-dd-linkTo ${button.cssClass}"
-   href="${button.linkTo}" role="button">${properties.label}</a>
+   href="${button.linkTo == '#' ? '#' : button.linkTo @ extension = 'html'}" role="button">${properties.label}</a>

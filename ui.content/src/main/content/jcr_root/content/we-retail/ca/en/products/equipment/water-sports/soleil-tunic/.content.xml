@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2017-02-08T11:58:21.033+01:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/wo/shirts/woswsusoc"
+        cq:productMaster="/var/commerce/products/we-retail/wo/shirts/woswsusoc"
         cq:tags="[we-retail:activity/swimming,we-retail:season/summer,we-retail:apparel/shirt,we-retail:gender/women]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -34,7 +34,7 @@
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weretail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc"
+                productData="/var/commerce/products/we-retail/wo/shirts/woswsusoc"
                 variationAxis="color"
                 variationTitle="Color">
                 <woswsusoc_1-xs
@@ -44,7 +44,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.1/size-xs">
+                    productData="/var/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.1/size-xs">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:20.955+01:00"
                         cq:lastRolledoutBy="admin"
@@ -68,7 +68,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.1/size-s">
+                    productData="/var/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.1/size-s">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:20.963+01:00"
                         cq:lastRolledoutBy="admin"
@@ -92,7 +92,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.1/size-m">
+                    productData="/var/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.1/size-m">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:20.968+01:00"
                         cq:lastRolledoutBy="admin"
@@ -116,7 +116,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.1/size-l">
+                    productData="/var/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.1/size-l">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:20.974+01:00"
                         cq:lastRolledoutBy="admin"
@@ -140,7 +140,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.1/size-xl">
+                    productData="/var/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.1/size-xl">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:20.979+01:00"
                         cq:lastRolledoutBy="admin"
@@ -164,7 +164,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.2/size-xs">
+                    productData="/var/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.2/size-xs">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:20.985+01:00"
                         cq:lastRolledoutBy="admin"
@@ -188,7 +188,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.2/size-s">
+                    productData="/var/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.2/size-s">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:20.991+01:00"
                         cq:lastRolledoutBy="admin"
@@ -212,7 +212,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.2/size-m">
+                    productData="/var/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.2/size-m">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:20.998+01:00"
                         cq:lastRolledoutBy="admin"
@@ -236,7 +236,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.2/size-l">
+                    productData="/var/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.2/size-l">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:21.004+01:00"
                         cq:lastRolledoutBy="admin"
@@ -260,7 +260,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.2/size-xl">
+                    productData="/var/commerce/products/we-retail/wo/shirts/woswsusoc/woswsusoc.2/size-xl">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:21.013+01:00"
                         cq:lastRolledoutBy="admin"

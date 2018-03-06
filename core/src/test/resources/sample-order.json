@@ -31,10 +31,10 @@
     "card.number": "1234 1234 1234 1234",
     "billing.zip": "94103",
     "shipping.city": "San Francisco",
-    "shipping-option": "/etc/commerce/shipping-methods/we-retail/ground-shipping",
+    "shipping-option": "/var/commerce/shipping-methods/we-retail/ground-shipping",
     "card.expiration.date": "12/17",
     "billing.state": "CA",
-    "payment-option": "/etc/commerce/payment-methods/we-retail/creditcard",
+    "payment-option": "/var/commerce/payment-methods/we-retail/creditcard",
     "billing.country": "US"
   }
 }

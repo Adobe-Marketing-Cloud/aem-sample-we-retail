@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2017-02-08T11:58:20.340+01:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/eq/surfing/eqsusuchd"
+        cq:productMaster="/var/commerce/products/we-retail/eq/surfing/eqsusuchd"
         cq:tags="[we-retail:equipment,we-retail:season/summer,we-retail:activity/surfing]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -33,7 +33,7 @@
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weretail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/eq/surfing/eqsusuchd">
+                productData="/var/commerce/products/we-retail/eq/surfing/eqsusuchd">
                 <image
                     cq:lastRolledout="{Date}2017-02-08T11:58:20.330+01:00"
                     cq:lastRolledoutBy="admin"

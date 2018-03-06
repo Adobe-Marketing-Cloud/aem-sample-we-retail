@@ -15,32 +15,28 @@
  */
 
 @import (reference) "/apps/weretail/clientlibs/common/variables.less";
-.cmp-breadcrumb {
+.we-breadcrumb {
     text-align: center;
 
-    & .breadcrumb {
-        display: inline-block;
+    & .cmp-breadcrumb {
         min-height: 20px;
         margin-bottom: 0;
         padding: 8px 15px;
     }
 
-    & .breadcrumb-item {
-        float: none;
-        display: inline-block;
+    & .cmp-breadcrumb__item {
         & > a {
-            float: left;
             font-weight: 600;
             color: @breadcrumb-color;
         }
 
-        & + .breadcrumb-item::before {
+        & + .cmp-breadcrumb__item::before {
             padding: 0 10px;
-            float: left;
             color: @breadcrumb-delim-color;
+            content: "/\00a0";
         }
 
-        &.active {
+        &.cmp-breadcrumb__item--active {
             & > a {
                 color: @breadcrumb-active-color;
             }

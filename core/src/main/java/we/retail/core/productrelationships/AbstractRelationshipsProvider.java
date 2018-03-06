@@ -41,8 +41,6 @@ public abstract class AbstractRelationshipsProvider implements ProductRelationsh
     private final String relationshipType;
     private final String relationshipTitle;
 
-    protected boolean enabled;
-
     public AbstractRelationshipsProvider(String relationshipType, String relationshipTitle) {
         this.relationshipType = relationshipType;
         this.relationshipTitle = relationshipTitle;
@@ -59,10 +57,6 @@ public abstract class AbstractRelationshipsProvider implements ProductRelationsh
     public List<ProductRelationship> getRelationships(SlingHttpServletRequest request, CommerceSession session,
                                                       Page currentPage, Product currentProduct)
             throws CommerceException {
-        if (!enabled) {
-            return null;
-        }
-
         if (session == null) {
             return null;
         }

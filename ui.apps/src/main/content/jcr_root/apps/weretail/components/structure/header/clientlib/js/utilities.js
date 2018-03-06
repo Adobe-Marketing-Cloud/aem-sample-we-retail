@@ -23,8 +23,6 @@
             url    : "/libs/granite/security/currentuser.json",
             async  : true,
             success: function (json) {
-                // toggle visibility of header elements as per the current logged in user
-                loadHeader(json['authorizableId']);
 
                 // On publish: load the request user into ContextHub
                 if (typeof ContextHub !== "undefined") {
@@ -34,26 +32,6 @@
                     if (!contextHubUser || contextHubUser !== requestUser) {
                         profileStore.loadProfile(requestUser);
                     }
-                }
-            }
-        });
-    }
-
-    /**
-     * JS include of header component, bypass dispatcher caching if user is logged in
-     * @param currentUser The id of the current logged in user
-     * (should be anonymous if there is no logged in user)
-     */
-    function loadHeader(currentUser) {
-        $.ajax({
-            type   : "GET",
-            url    : url,
-            cache  : currentUser === "anonymous",
-            success: function (data) {
-                var $navbar = $(data).find('.navbar');
-                if($navbar.length) {
-                    $headerContainer.prepend(data);
-                    $(document).trigger('we-header-loaded');
                 }
             }
         });

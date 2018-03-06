@@ -13,10 +13,10 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
-     data-sly-call="${clientlib.all @ categories='we-retail.dependencies'}"/>
-<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
-     data-sly-call="${clientlib.css @ categories='we-retail.base'}"/>
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.all @ categories='we-retail.dependencies'}"></sly>
+    <sly data-sly-call="${clientlib.css @ categories='we-retail.base'}"></sly>
+</sly>
 
 <!--/* Initialize TypeKit Fonts */-->
 <script src="https://use.typekit.net/dje4ayd.js"></script>
@@ -27,3 +27,4 @@
 
 <!--/* Include Context Hub */-->
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
+<sly data-sly-test="${!wcmmode.disabled}" data-sly-call="${clientlib.all @ categories='cq.widgets'}"></sly>

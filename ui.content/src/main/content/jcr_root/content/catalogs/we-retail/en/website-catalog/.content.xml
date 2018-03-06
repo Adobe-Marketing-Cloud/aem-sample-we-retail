@@ -27,17 +27,17 @@
         <filter
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
-            basePath="/etc/commerce/products/we-retail"
+            basePath="/var/commerce/products/we-retail"
             searchType="simple"/>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}true"
             cq:master="/content/catalogs/we-retail/en/master-catalog"
-            cq:rolloutConfigs="[/etc/msm/rolloutconfigs/default]"
+            cq:rolloutConfigs="[/libs/msm/wcm/rolloutconfigs/default]"
             jcr:primaryType="cq:LiveCopy"/>
         <cq:CatalogSyncConfig jcr:primaryType="cq:CatalogSyncConfig">
             <catalog
                 cq:catalogPath="/content/we-retail/language-masters/en/products"
-                cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
+                cq:rolloutConfigs="[/libs/msm/catalog/rolloutconfigs/catalogpagecontent,/libs/msm/catalog/rolloutconfigs/catalogrollouthooks]"
                 jcr:primaryType="nt:unstructured"/>
         </cq:CatalogSyncConfig>
     </jcr:content>

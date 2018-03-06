@@ -4,7 +4,7 @@
     <jcr:content
         cq:lastModified="{Date}2016-05-16T19:02:50.895+02:00"
         cq:lastModifiedBy="admin"
-        cq:segments="[/etc/segmentation/contexthub/winter-female]"
+        cq:segments="[/conf/we-retail/settings/wcm/segments/winter-female]"
         cq:template="/libs/cq/personalization/templates/experience"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"

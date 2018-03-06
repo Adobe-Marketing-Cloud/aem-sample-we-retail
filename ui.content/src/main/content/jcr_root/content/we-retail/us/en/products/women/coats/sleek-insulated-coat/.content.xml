@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2016-06-29T14:20:45.596+02:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/wo/coats/woskwislt"
+        cq:productMaster="/var/commerce/products/we-retail/wo/coats/woskwislt"
         cq:tags="[we-retail:activity/skiing,we-retail:apparel/coat,we-retail:season/winter,we-retail:gender/women]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -34,7 +34,7 @@
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weretail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/wo/coats/woskwislt">
+                productData="/var/commerce/products/we-retail/wo/coats/woskwislt">
                 <woskwislt-xs
                     cq:commerceType="variant"
                     cq:lastRolledout="{Date}2016-06-29T14:20:45.503+02:00"
@@ -42,7 +42,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/coats/woskwislt/size-xs">
+                    productData="/var/commerce/products/we-retail/wo/coats/woskwislt/size-xs">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:20:45.523+02:00"
                         cq:lastRolledoutBy="admin"
@@ -66,7 +66,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/coats/woskwislt/size-s">
+                    productData="/var/commerce/products/we-retail/wo/coats/woskwislt/size-s">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:20:45.537+02:00"
                         cq:lastRolledoutBy="admin"
@@ -90,7 +90,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/coats/woskwislt/size-m">
+                    productData="/var/commerce/products/we-retail/wo/coats/woskwislt/size-m">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:20:45.550+02:00"
                         cq:lastRolledoutBy="admin"
@@ -114,7 +114,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/coats/woskwislt/size-l">
+                    productData="/var/commerce/products/we-retail/wo/coats/woskwislt/size-l">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:20:45.564+02:00"
                         cq:lastRolledoutBy="admin"
@@ -138,7 +138,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/coats/woskwislt/size-xl">
+                    productData="/var/commerce/products/we-retail/wo/coats/woskwislt/size-xl">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:20:45.577+02:00"
                         cq:lastRolledoutBy="admin"

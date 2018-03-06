@@ -15,22 +15,19 @@
   ~ limitations under the License.
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <workspaceFilter version="1.0">
-    <filter root="/apps/weretail">
-        <exclude pattern="/apps/weretail(/.*)?"/>
-        <include pattern="/apps/weretail/clientlibs(/.*)?"/>
-        <include pattern="/apps/weretail/components(/.*)?"/>
-        <include pattern="/apps/weretail/gui(/.*)?"/>
-        <include pattern="/apps/weretail/i18n(/.*)?"/>
-    </filter>
+    <filter root="/apps/weretail/clientlibs"/>
+    <filter root="/apps/weretail/components"/>
+    <filter root="/apps/weretail/gui"/>
+    <filter root="/apps/weretail/i18n"/>
 
     <filter root="/apps/public/weretail"/>
-    <filter root="/etc/designs/we-retail"/>
-    <filter root="/etc/commerce/payment-methods/we-retail"/>
-    <filter root="/etc/commerce/shipping-methods/we-retail"/>
+    <filter root="/var/commerce/payment-methods/we-retail"/>
+    <filter root="/var/commerce/shipping-methods/we-retail"/>
 
-    <filter root="/etc/blueprints/weretail-english"/>
-    <filter root="/etc/blueprints/weretail-french"/>
-    <filter root="/etc/blueprints/weretail-german"/>
-    <filter root="/etc/blueprints/weretail-italian"/>
-    <filter root="/etc/blueprints/weretail-spanish"/>
+    <filter root="/apps/msm/we-retail/blueprintconfigs/weretail-english"/>
+    <filter root="/apps/msm/we-retail/blueprintconfigs/weretail-french"/>
+    <filter root="/apps/msm/we-retail/blueprintconfigs/weretail-german"/>
+    <filter root="/apps/msm/we-retail/blueprintconfigs/weretail-italian"/>
+    <filter root="/apps/msm/we-retail/blueprintconfigs/weretail-spanish"/>
+
 </workspaceFilter>

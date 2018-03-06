@@ -8,7 +8,4 @@
             groups="[media]"
             propertyName="./fileReference"/>
     </cq:dropTargets>
-    <cq:listeners
-        jcr:primaryType="cq:EditListenersConfig"
-        afteredit="REFRESH_PAGE"/>
 </jcr:root>

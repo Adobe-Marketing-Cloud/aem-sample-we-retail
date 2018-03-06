@@ -1,5 +1,454 @@
 {
-    "products"   : {
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Fri Oct 13 2017 18:01:07 GMT+0530",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:createdBy": "admin",
+    "jcr:title": "We.Retail",
+    "cq:redirectTarget": "/content/we-retail/us/en",
+    "cq:contextHubSegmentsPath": "/conf/we-retail/settings/wcm/segments",
+    "jcr:created": "Fri Oct 13 2017 18:01:07 GMT+0530",
+    "cq:lastModified": "Tue Feb 09 2016 00:05:48 GMT+0100",
+    "cq:cloudserviceconfigs": [
+      
+    ],
+    "cq:deviceGroups": [
+      "/etc/mobile/groups/responsive"
+    ],
+    "sling:resourceType": "weretail/components/structure/page",
+    "cq:allowedTemplates": [
+      "/conf/we-retail/settings/wcm/templates/.*"
+    ],
+    "cq:lastModifiedBy": "admin",
+    "image": {
+      "jcr:primaryType": "nt:unstructured",
+      "imageRotate": "0"
+    }
+  },
+  "language-masters": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Fri Oct 13 2017 18:01:12 GMT+0530",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:createdBy": "admin",
+      "jcr:title": "Language Masters",
+      "cq:commerceProvider": "we-retail",
+      "cq:template": "/conf/we-retail/settings/wcm/templates/redirect-page",
+      "cq:redirectTarget": "/content/we-retail/language-masters/en",
+      "jcr:created": "Fri Oct 13 2017 18:01:12 GMT+0530",
+      "cq:lastModified": "Mon Oct 12 2015 23:10:09 GMT+0200",
+      "hideInNav": true,
+      "sling:resourceType": "weretail/components/structure/page",
+      "cq:lastModifiedBy": "admin"
+    },
+    "en": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:12 GMT+0530"
+    },
+    "de": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:12 GMT+0530"
+    },
+    "fr": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530"
+    },
+    "es": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530"
+    },
+    "it": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530"
+    }
+  },
+  "us": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+    "en": {
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+  "activitystreams": {
+    "jcr:primaryType": "nt:unstructured",
+    "activities": {
+      "jcr:primaryType": "sling:OrderedFolder",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+      "sling:resourceType": "granite/activitystreams/components/activities",
+      "community": {
+        "jcr:primaryType": "sling:OrderedFolder",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+        "sling:resourceType": "granite/activitystreams/components/stream"
+      },
+      "moderation": {
+        "jcr:primaryType": "sling:OrderedFolder",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 13 2017 18:01:34 GMT+0530",
+        "sling:resourceType": "granite/activitystreams/components/stream"
+      }
+    }
+  },
+  "user": {
+         "jcr:primaryType": "cq:Page",
+         "account" : {
+             "jcr:primaryType": "cq:Page",
+             "order-history" : {
+                 "jcr:primaryType": "cq:Page",
+                 "order-details" : {
+                     "jcr:primaryType": "cq:Page",
+                     "jcr:content": {
+                         "jcr:primaryType": "cq:PageContent",
+                         "jcr:mixinTypes": ["cq:LiveRelationship"],
+                         "jcr:createdBy": "admin",
+                         "jcr:title": "Order Details",
+                         "cq:template": "/conf/we-retail/settings/wcm/templates/content-page",
+                         "cq:lastRolledout": "Fri Dec 02 2016 17:07:37 GMT+0100",
+                         "jcr:created": "Mon Dec 12 2016 14:24:50 GMT+0100",
+                         "cq:lastModified": "Fri Dec 02 2016 17:07:37 GMT+0100",
+                         "sling:resourceType": "weretail/components/structure/page"
+                     }
+                 }
+             }
+         }
+    },
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:mixinTypes": [
+      "cq:LiveRelationship",
+      "cq:LiveSync"
+    ],
+    "jcr:createdBy": "admin",
+    "jcr:title": "English",
+    "cq:commerceProvider": "we-retail",
+    "cq:template": "/conf/we-retail/settings/wcm/templates/hero-page",
+    "cq:lastRolledout": "Wed Jun 29 2016 14:20:45 GMT+0200",
+    "cq:checkoutPage": "/content/we-retail/us/en/user/cart",
+    "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+    "cq:lastModified": "Wed Jun 29 2016 14:20:45 GMT+0200",
+    "cq:cartPage": "/content/we-retail/us/en/user/cart",
+    "sling:resourceType": "weretail/components/structure/page",
+    "cq:lastRolledoutBy": "admin",
+    "navRoot": true,
+    "cq:lastModifiedBy": "admin",
+    "root": {
+      "jcr:primaryType": "nt:unstructured",
+      "jcr:mixinTypes": [
+        "cq:LiveRelationship"
+      ],
+      "cq:lastRolledout": "Wed Jun 29 2016 14:20:44 GMT+0200",
+      "sling:resourceType": "wcm/foundation/components/responsivegrid",
+      "cq:lastRolledoutBy": "admin",
+      "hero_image": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": [
+          "cq:LiveRelationship"
+        ],
+        "strategyName": "first",
+        "strategyPath": "cq/personalization/clientlib/source/strategies/list/first.js",
+        "jcr:lastModifiedBy": "admin",
+        "cq:lastRolledout": "Wed Jun 29 2016 14:20:44 GMT+0200",
+        "jcr:lastModified": "Wed Jun 29 2016 14:20:44 GMT+0200",
+        "cq:targetEngine": "cq_contexthub",
+        "sling:resourceType": "cq/personalization/components/target",
+        "cq:lastRolledoutBy": "admin",
+        "location": "2b493aca-8345-4fc1-be72-75535f1f8c0a"
+      },
+      "responsivegrid": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": [
+          "cq:LiveRelationship"
+        ],
+        "cq:lastRolledout": "Wed Jun 29 2016 14:20:44 GMT+0200",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "cq:lastRolledoutBy": "admin"
+      }
+    },
+    "cq:LiveSyncConfig": {
+      "jcr:primaryType": "cq:LiveCopy",
+      "cq:rolloutConfigs": [
+        "/libs/msm/wcm/rolloutconfigs/default"
+      ],
+      "cq:isDeep": true,
+      "cq:master": "/content/we-retail/language-masters/en"
+    }
+  },
+  "experience": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:mixinTypes": [
+        "cq:LiveRelationship"
+      ],
+      "jcr:createdBy": "admin",
+      "jcr:title": "Experience",
+      "cq:template": "/conf/we-retail/settings/wcm/templates/hero-page",
+      "cq:lastRolledout": "Wed Jun 29 2016 14:20:45 GMT+0200",
+      "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+      "cq:lastModified": "Mon Mar 14 2016 22:18:57 GMT+0100",
+      "sling:resourceType": "weretail/components/structure/page",
+      "cq:lastRolledoutBy": "admin",
+      "cq:lastModifiedBy": "admin",
+      "hideSubItemsInNav": true,
+      "root": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": [
+          "cq:LiveRelationship"
+        ],
+        "cq:lastRolledout": "Mon Mar 14 2016 22:18:57 GMT+0100",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "cq:lastRolledoutBy": "admin"
+      }
+    },
+    "arctic-surfing-in-lofoten": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveRelationship"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Arctic Surfing In Lofoten",
+        "cq:template": "/conf/we-retail/settings/wcm/templates/experience-page",
+        "cq:lastRolledout": "Wed Jun 29 2016 14:20:45 GMT+0200",
+        "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+        "cq:lastModified": "Mon Mar 14 2016 22:18:57 GMT+0100",
+        "sling:resourceType": "weretail/components/structure/page",
+        "cq:lastRolledoutBy": "admin",
+        "cq:lastModifiedBy": "admin"
+      }
+    },
+    "summit-success-in-the-himalayas": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveRelationship"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Summit Success in the Himalayas",
+        "cq:template": "/conf/we-retail/settings/wcm/templates/experience-page",
+        "cq:lastRolledout": "Wed Jun 29 2016 14:20:45 GMT+0200",
+        "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+        "cq:lastModified": "Mon Mar 14 2016 22:18:57 GMT+0100",
+        "sling:resourceType": "weretail/components/structure/page",
+        "cq:lastRolledoutBy": "admin",
+        "cq:lastModifiedBy": "admin"
+      }
+    },
+    "climbing-on-kalymnos-island--greece": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveRelationship"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Climbing on Kalymnos Island, Greece",
+        "cq:template": "/conf/we-retail/settings/wcm/templates/experience-page",
+        "cq:lastRolledout": "Wed Jun 29 2016 14:20:45 GMT+0200",
+        "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+        "cq:lastModified": "Mon Mar 14 2016 22:18:57 GMT+0100",
+        "sling:resourceType": "weretail/components/structure/page",
+        "cq:lastRolledoutBy": "admin",
+        "cq:lastModifiedBy": "admin"
+      }
+    },
+    "running-at-the-great-wall-marathon": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveRelationship"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Running at the Great Wall Marathon",
+        "cq:template": "/conf/we-retail/settings/wcm/templates/experience-page",
+        "cq:lastRolledout": "Wed Jun 29 2016 14:20:45 GMT+0200",
+        "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+        "cq:lastModified": "Mon Mar 14 2016 22:18:57 GMT+0100",
+        "sling:resourceType": "weretail/components/structure/page",
+        "cq:lastRolledoutBy": "admin",
+        "cq:lastModifiedBy": "admin"
+      }
+    },
+    "skiing-deep-powder-in-siberia": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveRelationship"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Skiing deep powder in Siberia",
+        "cq:template": "/conf/we-retail/settings/wcm/templates/experience-page",
+        "cq:lastRolledout": "Wed Jun 29 2016 14:20:45 GMT+0200",
+        "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+        "cq:lastModified": "Mon Mar 14 2016 22:18:57 GMT+0100",
+        "sling:resourceType": "weretail/components/structure/page",
+        "cq:lastRolledoutBy": "admin",
+        "cq:lastModifiedBy": "admin"
+      }
+    },
+    "climbing-in-the-massif-du-mont-blanc": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveRelationship"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Climbing in the Massif du Mont Blanc",
+        "cq:template": "/conf/we-retail/settings/wcm/templates/experience-page",
+        "cq:lastRolledout": "Wed Jun 29 2016 14:20:45 GMT+0200",
+        "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+        "cq:lastModified": "Mon Mar 14 2016 22:18:57 GMT+0100",
+        "sling:resourceType": "weretail/components/structure/page",
+        "cq:lastRolledoutBy": "admin",
+        "cq:lastModifiedBy": "admin"
+      }
+    }
+  },
+  "men": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Fri Oct 13 2017 18:01:17 GMT+0530",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:mixinTypes": [
+        "cq:LiveRelationship"
+      ],
+      "jcr:createdBy": "admin",
+      "jcr:title": "Men",
+      "cq:template": "/conf/we-retail/settings/wcm/templates/hero-page",
+      "cq:lastRolledout": "Wed Jun 29 2016 14:20:45 GMT+0200",
+      "jcr:created": "Fri Oct 13 2017 18:01:17 GMT+0530",
+      "cq:lastModified": "Mon Mar 14 2016 22:18:58 GMT+0100",
+      "sling:resourceType": "weretail/components/structure/page",
+      "cq:lastRolledoutBy": "admin",
+      "cq:lastModifiedBy": "admin",
+      "root": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": [
+          "cq:LiveRelationship"
+        ],
+        "cq:lastRolledout": "Mon Mar 14 2016 22:18:57 GMT+0100",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "cq:lastRolledoutBy": "admin"
+      }
+    }
+  },
+  "women": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Fri Oct 13 2017 18:01:20 GMT+0530",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:mixinTypes": [
+        "cq:LiveRelationship"
+      ],
+      "jcr:createdBy": "admin",
+      "jcr:title": "Women",
+      "cq:template": "/conf/we-retail/settings/wcm/templates/hero-page",
+      "cq:lastRolledout": "Wed Jun 29 2016 14:20:45 GMT+0200",
+      "jcr:created": "Fri Oct 13 2017 18:01:20 GMT+0530",
+      "cq:lastModified": "Mon Mar 14 2016 22:18:58 GMT+0100",
+      "sling:resourceType": "weretail/components/structure/page",
+      "cq:lastRolledoutBy": "admin",
+      "cq:lastModifiedBy": "admin",
+      "root": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": [
+          "cq:LiveRelationship"
+        ],
+        "cq:lastRolledout": "Mon Mar 14 2016 22:18:58 GMT+0100",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "cq:lastRolledoutBy": "admin"
+      }
+    }
+  },
+  "equipment": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:mixinTypes": [
+        "cq:LiveRelationship"
+      ],
+      "jcr:createdBy": "admin",
+      "jcr:title": "Equipment",
+      "cq:template": "/conf/we-retail/settings/wcm/templates/hero-page",
+      "cq:lastRolledout": "Wed Jun 29 2016 14:20:45 GMT+0200",
+      "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+      "cq:lastModified": "Mon Mar 14 2016 22:18:58 GMT+0100",
+      "sling:resourceType": "weretail/components/structure/page",
+      "cq:lastRolledoutBy": "admin",
+      "cq:lastModifiedBy": "admin",
+      "root": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": [
+          "cq:LiveRelationship"
+        ],
+        "cq:lastRolledout": "Mon Mar 14 2016 22:18:58 GMT+0100",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "cq:lastRolledoutBy": "admin"
+      }
+    }
+  },
+  "about-us": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:mixinTypes": [
+        "cq:LiveRelationship"
+      ],
+      "jcr:createdBy": "admin",
+      "jcr:title": "About Us",
+      "cq:template": "/conf/we-retail/settings/wcm/templates/hero-page",
+      "cq:lastRolledout": "Wed Jun 29 2016 14:20:45 GMT+0200",
+      "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+      "cq:lastModified": "Mon Mar 14 2016 22:18:58 GMT+0100",
+      "sling:resourceType": "weretail/components/structure/page",
+      "cq:lastRolledoutBy": "admin",
+      "cq:lastModifiedBy": "admin",
+      "root": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": [
+          "cq:LiveRelationship"
+        ],
+        "cq:lastRolledout": "Mon Mar 14 2016 22:18:58 GMT+0100",
+        "sling:resourceType": "wcm/foundation/components/responsivegrid",
+        "cq:lastRolledoutBy": "admin"
+      }
+    }
+  },
+  "products": {
         "equipment"      : {
             "jcr:content"    : {
                 "coverImage"            : "/content/dam/we-retail/en/products/activities/equipment_4.jpg",
@@ -50,7 +499,7 @@
                         "cq:lastModifiedBy" : "admin",
                         "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:56 GMT+0200",
                         "cq:lastRolledoutBy": "admin",
-                        "cq:productMaster"  : "/etc/commerce/products/we-retail/eq/running/eqrusufle",
+                        "cq:productMaster"  : "/var/commerce/products/we-retail/eq/running/eqrusufle",
                         "cq:tags"           : [
                             "we-retail:apparel/footwear",
                             "we-retail:season/summer",
@@ -88,7 +537,7 @@
                                     "cq:CatalogSyncAction",
                                     "cq:LiveRelationship"
                                 ],
-                                "productData"       : "/etc/commerce/products/we-retail/eq/running/eqrusufle",
+                                "productData"       : "/var/commerce/products/we-retail/eq/running/eqrusufle",
                                 "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:56 GMT+0200",
                                 "jcr:lastModified"  : "Tue Apr 12 2016 01:19:38 GMT+0200",
                                 "sling:resourceType": "we-retail/components/structure/product",
@@ -100,7 +549,7 @@
                                         "cq:CatalogSyncAction",
                                         "cq:LiveRelationship"
                                     ],
-                                    "productData"    : "/etc/commerce/products/we-retail/eq/running/eqrusufle/size-9",
+                                    "productData"    : "/var/commerce/products/we-retail/eq/running/eqrusufle/size-9",
                                     "cq:lastRolledout": "Wed Jun 29 2016 14:20:56 GMT+0200",
                                     "sling:resourceType": "we-retail/components/structure/product",
                                     "cq:commerceType"   : "variant",
@@ -141,7 +590,7 @@
                                         "cq:CatalogSyncAction",
                                         "cq:LiveRelationship"
                                     ],
-                                    "productData"    : "/etc/commerce/products/we-retail/eq/running/eqrusufle/size-11",
+                                    "productData"    : "/var/commerce/products/we-retail/eq/running/eqrusufle/size-11",
                                     "cq:lastRolledout": "Wed Jun 29 2016 14:20:56 GMT+0200",
                                     "sling:resourceType": "we-retail/components/structure/product",
                                     "cq:commerceType"   : "variant",
@@ -182,7 +631,7 @@
                                         "cq:CatalogSyncAction",
                                         "cq:LiveRelationship"
                                     ],
-                                    "productData"    : "/etc/commerce/products/we-retail/eq/running/eqrusufle/size-13",
+                                    "productData"    : "/var/commerce/products/we-retail/eq/running/eqrusufle/size-13",
                                     "cq:lastRolledout": "Wed Jun 29 2016 14:20:56 GMT+0200",
                                     "sling:resourceType": "we-retail/components/structure/product",
                                     "cq:commerceType"   : "variant",
@@ -363,699 +812,1291 @@
         "jcr:createdBy": "admin",
         "jcr:primaryType": "cq:Page"
     },
+  "community": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:mixinTypes": [
+      "rep:AccessControllable"
+    ],
+    "jcr:createdBy": "admin",
+    "jcr:created": "Fri Oct 13 2017 18:01:31 GMT+0530",
     "jcr:content": {
-        "cq:LiveSyncConfig" : {
-            "cq:isDeep"        : true,
-            "cq:master": "/content/we-retail/language-masters/en",
-            "cq:rolloutConfigs": [
-                "/etc/msm/rolloutconfigs/default"
-            ],
-            "jcr:primaryType"  : "cq:LiveCopy"
-        },
-        "cq:lastModified"  : "Wed Jun 29 2016 14:20:45 GMT+0200",
-        "cq:lastModifiedBy": "admin",
-        "cq:lastRolledout" : "Wed Jun 29 2016 14:20:45 GMT+0200",
-        "cq:lastRolledoutBy": "admin",
-        "cq:template"       : "/conf/we-retail/settings/wcm/templates/hero-page",
-        "jcr:created"       : "Wed Jul 27 2016 11:27:04 GMT+0200",
-        "jcr:createdBy"     : "admin",
-        "jcr:mixinTypes"    : [
-            "cq:LiveRelationship",
-            "cq:LiveSync"
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:mixinTypes": [
+        "cq:LiveSync",
+        "mix:versionable"
+      ],
+      "jcr:createdBy": "admin",
+      "jcr:title": "community",
+      "cq:lastReplicationAction": "Activate",
+      "jcr:versionHistory": "01586faf-3986-40e2-82df-d0523b797ae0",
+      "cq:loginPage": "signin",
+      "etcpath": "/etc/community/templates/functions/reference/activitystream",
+      "themePayload": "/etc/designs/community/community-vdfvb/sitethemes/bootstrap_css",
+      "cq:socialSearchResultPage": "search",
+      "cq:template": "/libs/social/console/templates/base_page",
+      "cq:lastReplicatedBy": "admin",
+      "formPayload": "/var/community/publish/content/we-retail/us/en/community",
+      "cq:lastRolledout": "Tue Mar 14 2017 16:55:33 GMT-0700",
+      "languageCopies": [
+        "en"
+      ],
+      "jcr:predecessors": [
+        "6eb717a8-8912-4058-a419-240479f77cbf"
+      ],
+      "jcr:created": "Fri Oct 13 2017 18:01:31 GMT+0530",
+      "cq:lastReplicated": "Tue Mar 14 2017 16:56:19 GMT-0700",
+      "cq:lastModified": "Tue Mar 14 2017 16:56:16 GMT-0700",
+      "scoringRules": [
+        "/etc/community/scoring/rules/forums-scoring"
+      ],
+      "cq:cloudserviceconfigs": [
+        "/etc/cloudservices/twitterconnect/weretailtwitter",
+        "/etc/cloudservices/translation/community_en",
+        "/etc/cloudservices/msft-translation/msft_trial",
+        "/etc/cloudservices/facebookconnect/weretailfacebook"
+      ],
+      "cq:isCommunitySite": true,
+      "jcr:baseVersion": "6eb717a8-8912-4058-a419-240479f77cbf",
+      "jcr:isCheckedOut": true,
+      "cq:deviceGroups": [
+        "/etc/mobile/groups/responsive"
+      ],
+      "pageTitle": "community",
+      "jcr:uuid": "f73aed48-a066-4a83-8ce6-ffcbf19f3df9",
+      "cq:signupPage": "signup",
+      "sling:resourceType": "social/console/components/basepage",
+      "cq:designPath": "/etc/designs/social/console",
+      "cq:socialProfilePage": "profile",
+      "cq:lastRolledoutBy": "msm-service",
+      "cq:lastModifiedBy": "admin",
+      "badgingRules": [
+        "/etc/community/badging/rules/reference-badging"
+      ],
+      "navTitle": "Activities",
+      "clientlibslist": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": [
+          "cq:LiveRelationship"
         ],
-        "jcr:primaryType"   : "cq:PageContent",
-        "jcr:title"         : "English",
-        "navRoot"           : true,
-        "root"              : {
-            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-            "cq:lastRolledoutBy": "admin",
-            "hero_image"        : {
-                "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                "cq:lastRolledoutBy": "admin",
-                "cq:targetEngine"   : "cq_contexthub",
-                "default"           : {
-                    "buttonLabel"       : "Shop Now",
-                    "buttonLinkTo": "/content/we-retail/us/en/products/equipment/snow-sports",
-                    "cq:lastRolledout": "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "cq:lastRolledoutBy": "admin",
-                    "fileReference"     : "/content/dam/we-retail/en/activities/hiking-camping/trekker-khumbu-valley.jpg",
-                    "heading"           : "All-new winter collection",
-                    "jcr:created"       : "Wed Jan 13 2016 15:58:04 GMT+0100",
-                    "jcr:createdBy"     : "admin",
-                    "jcr:lastModified"  : "Sat Mar 12 2016 22:55:47 GMT+0100",
-                    "jcr:lastModifiedBy": "admin",
-                    "jcr:mixinTypes"    : [
-                        "cq:LiveRelationship"
-                    ],
-                    "jcr:primaryType"   : "nt:unstructured",
-                    "keepRatio"         : "true",
-                    "sling:resourceType": "weretail/components/content/heroimage",
-                    "title"             : "Built for the coldest winter on earth",
-                    "useFullWidth"      : "true"
-                },
-                "jcr:lastModified"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                "jcr:lastModifiedBy": "admin",
-                "jcr:mixinTypes"    : [
-                    "cq:LiveRelationship"
-                ],
-                "jcr:primaryType"   : "nt:unstructured",
-                "location"          : "2b493aca-8345-4fc1-be72-75535f1f8c0a",
-                "sling:resourceType": "cq/personalization/components/target",
-                "strategyName"      : "first",
-                "strategyPath"      : "cq/personalization/clientlib/source/strategies/list/first.js"
-            },
-            "jcr:mixinTypes"    : [
-                "cq:LiveRelationship"
-            ],
-            "jcr:primaryType"   : "nt:unstructured",
-            "responsivegrid"    : {
-                "articles_list"             : {
-                    "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "cq:lastRolledoutBy": "admin",
-                    "displayAs"         : "default",
-                    "feedEnabled"       : "true",
-                    "jcr:created"       : "Mon Nov 23 2015 21:44:37 GMT+0100",
-                    "jcr:createdBy"     : "admin",
-                    "jcr:lastModified"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "jcr:lastModifiedBy": "admin",
-                    "jcr:mixinTypes"    : [
-                        "cq:LiveRelationship"
-                    ],
-                    "jcr:primaryType"   : "nt:unstructured",
-                    "limit"             : "6",
-                    "listFrom"          : "children",
-                    "orderBy"           : "cq:lastModified",
-                    "pageMax"           : "0",
-                    "parentPage"        : "/content/we-retail/us/en/experience",
-                    "sling:resourceType": "weretail/components/content/articleslist",
-                    "tagsMatch"         : "any"
-                },
-                "category_teaser": {
-                    "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "cq:lastRolledoutBy": "admin",
-                    "cq:responsive"     : {
-                        "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                        "cq:lastRolledoutBy": "admin",
-                        "default"           : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured",
-                            "width"             : "4"
-                        },
-                        "jcr:mixinTypes"    : [
-                            "cq:LiveRelationship"
-                        ],
-                        "jcr:primaryType"   : "nt:unstructured",
-                        "phone"             : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured",
-                            "width"             : "12"
-                        }
-                    },
-                    "cq:targetEngine"   : "cq_contexthub",
-                    "default"           : {
-                        "buttonLabel"       : "Women",
-                        "buttonLinkTo": "/content/we-retail/us/en/women",
-                        "cq:lastRolledout": "Wed Jun 29 2016 14:20:44 GMT+0200",
-                        "cq:lastRolledoutBy": "admin",
-                        "cq:responsive"     : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured"
-                        },
-                        "fileReference"     : "/content/dam/we-retail/en/activities/running/running-woods-woman.jpg",
-                        "jcr:created"       : "Tue Nov 03 2015 23:52:30 GMT+0100",
-                        "jcr:createdBy"     : "admin",
-                        "jcr:lastModified"  : "Sat Mar 12 2016 23:27:34 GMT+0100",
-                        "jcr:lastModifiedBy": "admin",
-                        "jcr:mixinTypes"    : [
-                            "cq:LiveRelationship"
-                        ],
-                        "jcr:primaryType"   : "nt:unstructured",
-                        "sling:resourceType": "weretail/components/content/categoryteaser"
-                    },
-                    "jcr:lastModified"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "jcr:lastModifiedBy": "admin",
-                    "jcr:mixinTypes"    : [
-                        "cq:LiveRelationship"
-                    ],
-                    "jcr:primaryType"   : "nt:unstructured",
-                    "location"          : "eadebf73-f250-47b5-8d35-b42479c81dca",
-                    "sling:resourceType": "cq/personalization/components/target",
-                    "strategyName"      : "first",
-                    "strategyPath"      : "cq/personalization/clientlib/source/strategies/list/first.js"
-                },
-                "category_teaser_1388037983": {
-                    "buttonLabel"       : "Q&A",
-                    "cq:lastRolledout": "Wed Jun 29 2016 14:20:45 GMT+0200",
-                    "cq:lastRolledoutBy": "admin",
-                    "cq:responsive"     : {
-                        "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:45 GMT+0200",
-                        "cq:lastRolledoutBy": "admin",
-                        "default"           : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:45 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured",
-                            "width"             : "4"
-                        },
-                        "jcr:mixinTypes"    : [
-                            "cq:LiveRelationship"
-                        ],
-                        "jcr:primaryType"   : "nt:unstructured",
-                        "phone"             : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:45 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured",
-                            "width"             : "12"
-                        }
-                    },
-                    "fileReference"     : "/content/dam/we-retail/en/activities/biking/group-mountain-bikers.jpg",
-                    "jcr:created"       : "Sat Mar 12 2016 23:01:16 GMT+0100",
-                    "jcr:createdBy"     : "admin",
-                    "jcr:lastModified"  : "Wed Jun 29 2016 14:20:45 GMT+0200",
-                    "jcr:lastModifiedBy": "admin",
-                    "jcr:mixinTypes"    : [
-                        "cq:LiveRelationship"
-                    ],
-                    "jcr:primaryType"   : "nt:unstructured",
-                    "sling:resourceType": "weretail/components/content/categoryteaser"
-                },
-                "category_teaser_305030210" : {
-                    "buttonLabel"       : "Forum",
-                    "cq:lastRolledout": "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "cq:lastRolledoutBy": "admin",
-                    "cq:responsive"     : {
-                        "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:45 GMT+0200",
-                        "cq:lastRolledoutBy": "admin",
-                        "default"           : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:45 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured",
-                            "width"             : "4"
-                        },
-                        "jcr:mixinTypes"    : [
-                            "cq:LiveRelationship"
-                        ],
-                        "jcr:primaryType"   : "nt:unstructured",
-                        "phone"             : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:45 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured",
-                            "width"             : "12"
-                        }
-                    },
-                    "fileReference"     : "/content/dam/we-retail/en/activities/climbing/ice-climbing-group.jpg",
-                    "jcr:created"       : "Sat Mar 12 2016 23:01:15 GMT+0100",
-                    "jcr:createdBy"     : "admin",
-                    "jcr:lastModified"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "jcr:lastModifiedBy": "admin",
-                    "jcr:mixinTypes"    : [
-                        "cq:LiveRelationship"
-                    ],
-                    "jcr:primaryType"   : "nt:unstructured",
-                    "sling:resourceType": "weretail/components/content/categoryteaser"
-                },
-                "category_teaser_465639357" : {
-                    "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "cq:lastRolledoutBy": "admin",
-                    "cq:responsive"     : {
-                        "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                        "cq:lastRolledoutBy": "admin",
-                        "default"           : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured",
-                            "width"             : "4"
-                        },
-                        "jcr:mixinTypes"    : [
-                            "cq:LiveRelationship"
-                        ],
-                        "jcr:primaryType"   : "nt:unstructured",
-                        "phone"             : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured",
-                            "width"             : "12"
-                        }
-                    },
-                    "cq:targetEngine"   : "cq_contexthub",
-                    "default"           : {
-                        "buttonLabel"       : "Equipment",
-                        "buttonLinkTo": "/content/we-retail/us/en/equipment",
-                        "cq:lastRolledout": "Wed Jun 29 2016 14:20:44 GMT+0200",
-                        "cq:lastRolledoutBy": "admin",
-                        "cq:responsive"     : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured"
-                        },
-                        "fileReference"     : "/content/dam/we-retail/en/activities/climbing/climber-gear-rope.jpg",
-                        "jcr:created"       : "Wed Nov 04 2015 00:10:50 GMT+0100",
-                        "jcr:createdBy"     : "admin",
-                        "jcr:lastModified"  : "Sat Mar 12 2016 22:58:59 GMT+0100",
-                        "jcr:lastModifiedBy": "admin",
-                        "jcr:mixinTypes"    : [
-                            "cq:LiveRelationship"
-                        ],
-                        "jcr:primaryType"   : "nt:unstructured",
-                        "sling:resourceType": "weretail/components/content/categoryteaser"
-                    },
-                    "jcr:lastModified"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "jcr:lastModifiedBy": "admin",
-                    "jcr:mixinTypes"    : [
-                        "cq:LiveRelationship"
-                    ],
-                    "jcr:primaryType"   : "nt:unstructured",
-                    "location"          : "d2878954-431c-4f51-8465-7c6653344545",
-                    "sling:resourceType": "cq/personalization/components/target",
-                    "strategyName"      : "first",
-                    "strategyPath"      : "cq/personalization/clientlib/source/strategies/list/first.js"
-                },
-                "category_teaser_859708776" : {
-                    "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "cq:lastRolledoutBy": "admin",
-                    "cq:responsive"     : {
-                        "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                        "cq:lastRolledoutBy": "admin",
-                        "default"           : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured",
-                            "width"             : "4"
-                        },
-                        "jcr:mixinTypes"    : [
-                            "cq:LiveRelationship"
-                        ],
-                        "jcr:primaryType"   : "nt:unstructured",
-                        "phone"             : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured",
-                            "width"             : "12"
-                        }
-                    },
-                    "cq:targetEngine"   : "cq_contexthub",
-                    "default"           : {
-                        "buttonLabel"       : "Men",
-                        "buttonLinkTo": "/content/we-retail/us/en/men",
-                        "cq:lastRolledout": "Wed Jun 29 2016 14:20:44 GMT+0200",
-                        "cq:lastRolledoutBy": "admin",
-                        "cq:responsive"     : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured"
-                        },
-                        "fileReference"     : "/content/dam/we-retail/en/activities/biking/rocks-downhill.jpg",
-                        "jcr:created"       : "Wed Nov 04 2015 00:10:12 GMT+0100",
-                        "jcr:createdBy"     : "admin",
-                        "jcr:lastModified"  : "Sat Mar 12 2016 22:58:28 GMT+0100",
-                        "jcr:lastModifiedBy": "admin",
-                        "jcr:mixinTypes"    : [
-                            "cq:LiveRelationship"
-                        ],
-                        "jcr:primaryType"   : "nt:unstructured",
-                        "sling:resourceType": "weretail/components/content/categoryteaser"
-                    },
-                    "jcr:lastModified"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "jcr:lastModifiedBy": "admin",
-                    "jcr:mixinTypes"    : [
-                        "cq:LiveRelationship"
-                    ],
-                    "jcr:primaryType"   : "nt:unstructured",
-                    "location"          : "ee033a3d-c7a2-4a80-9aa6-5db4aef6bdeb",
-                    "sling:resourceType": "cq/personalization/components/target",
-                    "strategyName"      : "first",
-                    "strategyPath"      : "cq/personalization/clientlib/source/strategies/list/first.js"
-                },
-                "category_teaser_984780047" : {
-                    "buttonLabel"       : "Blog",
-                    "cq:lastRolledout": "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "cq:lastRolledoutBy": "admin",
-                    "cq:responsive"     : {
-                        "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                        "cq:lastRolledoutBy": "admin",
-                        "default"           : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured",
-                            "width"             : "4"
-                        },
-                        "jcr:mixinTypes"    : [
-                            "cq:LiveRelationship"
-                        ],
-                        "jcr:primaryType"   : "nt:unstructured",
-                        "phone"             : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured",
-                            "width"             : "12"
-                        }
-                    },
-                    "fileReference"     : "/content/dam/we-retail/en/activities/hiking-camping/camp-summer-night.jpg",
-                    "jcr:created"       : "Sat Mar 12 2016 23:01:13 GMT+0100",
-                    "jcr:createdBy"     : "admin",
-                    "jcr:lastModified"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "jcr:lastModifiedBy": "admin",
-                    "jcr:mixinTypes"    : [
-                        "cq:LiveRelationship"
-                    ],
-                    "jcr:primaryType"   : "nt:unstructured",
-                    "sling:resourceType": "weretail/components/content/categoryteaser"
-                },
-                "cq:lastRolledout"          : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                "cq:lastRolledoutBy"        : "admin",
-                "jcr:mixinTypes"            : [
-                    "cq:LiveRelationship"
-                ],
-                "jcr:primaryType"           : "nt:unstructured",
-                "products_grid"             : {
-                    "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "cq:lastRolledoutBy": "admin",
-                    "displayAs"         : "products",
-                    "feedEnabled"       : true,
-                    "jcr:created"       : "Tue Nov 03 2015 23:39:56 GMT+0100",
-                    "jcr:createdBy"     : "admin",
-                    "jcr:lastModified"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "jcr:lastModifiedBy": "admin",
-                    "jcr:mixinTypes"    : [
-                        "cq:LiveRelationship"
-                    ],
-                    "jcr:primaryType"   : "nt:unstructured",
-                    "limit"             : "6",
-                    "listCSSClass"      : "row",
-                    "listFrom"          : "static",
-                    "orderBy"           : "jcr:title",
-                    "pageMax"           : "0",
-                    "pages"             : [
-                        "/content/we-retail/us/en/products/women/coats/sleek-insulated-coat",
-                        "/content/we-retail/us/en/products/men/coats/el-gordo-down-jacket",
-                        "/content/we-retail/us/en/products/men/shirts/expedition-tech-long-sleeved-shirt",
-                        "/content/we-retail/us/en/products/men/pants/trail-model-pants",
-                        "/content/we-retail/us/en/products/equipment/biking/marin-mountain-bike-shoes",
-                        "/content/we-retail/us/en/products/women/shirts/rios-t-shirt"
-                    ],
-                    "sling:resourceType": "weretail/components/content/productgrid",
-                    "tagsMatch"         : "any"
-                },
-                "products_grid_1773541649"  : {
-                    "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "cq:lastRolledoutBy": "admin",
-                    "displayAs"         : "products",
-                    "feedEnabled"       : true,
-                    "jcr:created"       : "Wed Nov 04 2015 00:51:55 GMT+0100",
-                    "jcr:createdBy"     : "admin",
-                    "jcr:lastModified"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "jcr:lastModifiedBy": "admin",
-                    "jcr:mixinTypes"    : [
-                        "cq:LiveRelationship"
-                    ],
-                    "jcr:primaryType"   : "nt:unstructured",
-                    "limit"             : "6",
-                    "listCSSClass"      : "row",
-                    "listFrom"          : "static",
-                    "orderBy"           : "jcr:title",
-                    "pageMax"           : "0",
-                    "pages"             : [
-                        "/content/we-retail/us/en/products/women/coats/sleek-insulated-coat",
-                        "/content/we-retail/us/en/products/men/coats/el-gordo-down-jacket",
-                        "/content/we-retail/us/en/products/men/shirts/expedition-tech-long-sleeved-shirt",
-                        "/content/we-retail/us/en/products/men/pants/trail-model-pants",
-                        "/content/we-retail/us/en/products/equipment/biking/marin-mountain-bike-shoes",
-                        "/content/we-retail/us/en/products/women/shirts/rios-t-shirt"
-                    ],
-                    "sling:resourceType": "weretail/components/content/productgrid",
-                    "tagsMatch"         : "any"
-                },
-                "section_title"             : {
-                    "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "cq:lastRolledoutBy": "admin",
-                    "jcr:created"       : "Wed Nov 04 2015 00:47:00 GMT+0100",
-                    "jcr:createdBy"     : "admin",
-                    "jcr:lastModified"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "jcr:lastModifiedBy": "admin",
-                    "jcr:mixinTypes"    : [
-                        "cq:LiveRelationship"
-                    ],
-                    "jcr:primaryType"   : "nt:unstructured",
-                    "jcr:title"         : "Featured Products",
-                    "sling:resourceType": "weretail/components/content/title"
-                },
-                "section_title_239098"      : {
-                    "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "cq:lastRolledoutBy": "admin",
-                    "jcr:created"       : "Wed Nov 04 2015 00:51:38 GMT+0100",
-                    "jcr:createdBy"     : "admin",
-                    "jcr:lastModified"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "jcr:lastModifiedBy": "admin",
-                    "jcr:mixinTypes"    : [
-                        "cq:LiveRelationship"
-                    ],
-                    "jcr:primaryType"   : "nt:unstructured",
-                    "jcr:title"         : "Join our Community",
-                    "sling:resourceType": "weretail/components/content/title"
-                },
-                "section_title_239098915"   : {
-                    "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "cq:lastRolledoutBy": "admin",
-                    "jcr:created"       : "Wed Nov 04 2015 00:51:38 GMT+0100",
-                    "jcr:createdBy"     : "admin",
-                    "jcr:lastModified"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "jcr:lastModifiedBy": "admin",
-                    "jcr:mixinTypes"    : [
-                        "cq:LiveRelationship"
-                    ],
-                    "jcr:primaryType"   : "nt:unstructured",
-                    "jcr:title"         : "New arrivals",
-                    "sling:resourceType": "weretail/components/content/title"
-                },
-                "section_title_431279162"   : {
-                    "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "cq:lastRolledoutBy": "admin",
-                    "jcr:created"       : "Wed Nov 04 2015 00:51:12 GMT+0100",
-                    "jcr:createdBy"     : "admin",
-                    "jcr:lastModified"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "jcr:lastModifiedBy": "admin",
-                    "jcr:mixinTypes"    : [
-                        "cq:LiveRelationship"
-                    ],
-                    "jcr:primaryType"   : "nt:unstructured",
-                    "jcr:title"         : "Our Top Stories",
-                    "sling:resourceType": "weretail/components/content/title"
-                },
-                "section_title_496791378"   : {
-                    "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "cq:lastRolledoutBy": "admin",
-                    "jcr:created"       : "Wed Nov 04 2015 00:47:33 GMT+0100",
-                    "jcr:createdBy"     : "admin",
-                    "jcr:lastModified"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "jcr:lastModifiedBy": "admin",
-                    "jcr:mixinTypes"    : [
-                        "cq:LiveRelationship"
-                    ],
-                    "jcr:primaryType"   : "nt:unstructured",
-                    "jcr:title"         : "Discover the Finest Gear",
-                    "sling:resourceType": "weretail/components/content/title"
-                },
-                "site_feature"              : {
-                    "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "cq:lastRolledoutBy": "admin",
-                    "cq:responsive"     : {
-                        "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                        "cq:lastRolledoutBy": "admin",
-                        "default"           : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured",
-                            "width"             : "4"
-                        },
-                        "jcr:mixinTypes"    : [
-                            "cq:LiveRelationship"
-                        ],
-                        "jcr:primaryType"   : "nt:unstructured",
-                        "phone"             : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured",
-                            "width"             : "12"
-                        }
-                    },
-                    "icon"              : "shoping-cart-alt",
-                    "jcr:created"       : "Tue Nov 03 2015 23:52:30 GMT+0100",
-                    "jcr:createdBy"     : "admin",
-                    "jcr:description"   : "And free return",
-                    "jcr:lastModified"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "jcr:lastModifiedBy": "admin",
-                    "jcr:mixinTypes"    : [
-                        "cq:LiveRelationship"
-                    ],
-                    "jcr:primaryType"   : "nt:unstructured",
-                    "jcr:title"         : "Free delivery",
-                    "sling:resourceType": "weretail/components/content/sitefeature"
-                },
-                "site_feature_465639357"    : {
-                    "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "cq:lastRolledoutBy": "admin",
-                    "cq:responsive"     : {
-                        "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                        "cq:lastRolledoutBy": "admin",
-                        "default"           : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured",
-                            "width"             : "4"
-                        },
-                        "jcr:mixinTypes"    : [
-                            "cq:LiveRelationship"
-                        ],
-                        "jcr:primaryType"   : "nt:unstructured",
-                        "phone"             : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured",
-                            "width"             : "12"
-                        }
-                    },
-                    "icon"              : "compass",
-                    "jcr:created"       : "Wed Nov 04 2015 00:10:50 GMT+0100",
-                    "jcr:createdBy"     : "admin",
-                    "jcr:description"   : "Worldwide shipping",
-                    "jcr:lastModified"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "jcr:lastModifiedBy": "admin",
-                    "jcr:mixinTypes"    : [
-                        "cq:LiveRelationship"
-                    ],
-                    "jcr:primaryType"   : "nt:unstructured",
-                    "jcr:title"         : "Order tracking",
-                    "sling:resourceType": "weretail/components/content/sitefeature"
-                },
-                "site_feature_859708776"    : {
-                    "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "cq:lastRolledoutBy": "admin",
-                    "cq:responsive"     : {
-                        "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                        "cq:lastRolledoutBy": "admin",
-                        "default"           : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured",
-                            "width"             : "4"
-                        },
-                        "jcr:mixinTypes"    : [
-                            "cq:LiveRelationship"
-                        ],
-                        "jcr:primaryType"   : "nt:unstructured",
-                        "phone"             : {
-                            "cq:lastRolledout"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                            "cq:lastRolledoutBy": "admin",
-                            "jcr:mixinTypes"    : [
-                                "cq:LiveRelationship"
-                            ],
-                            "jcr:primaryType"   : "nt:unstructured",
-                            "width"             : "12"
-                        }
-                    },
-                    "icon"              : "headphones",
-                    "jcr:created"       : "Wed Nov 04 2015 00:10:12 GMT+0100",
-                    "jcr:createdBy"     : "admin",
-                    "jcr:description"   : "With our outdoor specialist",
-                    "jcr:lastModified"  : "Wed Jun 29 2016 14:20:44 GMT+0200",
-                    "jcr:lastModifiedBy": "admin",
-                    "jcr:mixinTypes"    : [
-                        "cq:LiveRelationship"
-                    ],
-                    "jcr:primaryType"   : "nt:unstructured",
-                    "jcr:title"         : "Online support",
-                    "sling:resourceType": "weretail/components/content/sitefeature"
-                },
-                "sling:resourceType"        : "wcm/foundation/components/responsivegrid"
-            },
-            "sling:resourceType": "wcm/foundation/components/responsivegrid"
-        },
-        "sling:resourceType": "weretail/components/structure/page"
+        "jcr:createdBy": "admin",
+        "jcr:lastModifiedBy": "admin",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:33 GMT-0700",
+        "scg:requiredClientLibs": [
+          "cq.social.hbs.activitystreams",
+          "cq.social.hbs.signup",
+          "cq.social.hbs.breadcrumbs",
+          "personalization.core.kernel",
+          "personalization.clientcontext.kernel",
+          "personalization.stores.kernel",
+          "personalization.kernel"
+        ],
+        "jcr:created": "Fri Dec 06 2013 13:01:47 GMT-0500",
+        "jcr:lastModified": "Tue Mar 14 2017 16:55:33 GMT-0700",
+        "sling:resourceType": "social/console/components/clientlibslist",
+        "cq:lastRolledoutBy": "msm-service"
+      },
+      "content": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": [
+          "cq:LiveRelationship"
+        ],
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:33 GMT-0700",
+        "sling:resourceType": "social/console/components/hbs/singlecolumncontent",
+        "cq:lastRolledoutBy": "msm-service"
+      },
+      "cq:responsive": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": [
+          "cq:LiveRelationship"
+        ],
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:33 GMT-0700",
+        "cq:lastRolledoutBy": "msm-service"
+      },
+      "cq:LiveSyncConfig": {
+        "jcr:primaryType": "cq:LiveCopy",
+        "cq:rolloutConfigs": [
+          "/etc/msm/rolloutconfigs/default"
+        ],
+        "cq:isDeep": false,
+        "cq:master": "/content/communities/templates/functions/activitystream"
+      },
+      "image": {
+        "jcr:primaryType": "nt:unstructured"
+      }
     },
-    
-    "user" : {
-         "jcr:primaryType": "cq:Page",
-         "account" : {
-             "jcr:primaryType": "cq:Page",
-             "order-history" : {
-                 "jcr:primaryType": "cq:Page",
-                 "order-details" : {
-                     "jcr:primaryType": "cq:Page",
-                     "jcr:content": {
-                         "jcr:primaryType": "cq:PageContent",
-                         "jcr:mixinTypes": ["cq:LiveRelationship"],
-                         "jcr:createdBy": "admin",
-                         "jcr:title": "Order Details",
-                         "cq:template": "/conf/we-retail/settings/wcm/templates/content-page",
-                         "cq:lastRolledout": "Fri Dec 02 2016 17:07:37 GMT+0100",
-                         "jcr:created": "Mon Dec 12 2016 14:24:50 GMT+0100",
-                         "cq:lastModified": "Fri Dec 02 2016 17:07:37 GMT+0100",
-                         "sling:resourceType": "weretail/components/structure/page",
-                     }
-                 }
-             }
-         }
+    "trending": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Trending",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "afc71cad-a7f0-43fd-aa2a-254a449370b9",
+        "etcpath": "/etc/community/templates/functions/reference/page",
+        "cq:template": "/libs/social/console/templates/base_page",
+        "cq:lastReplicatedBy": "admin",
+        "offTime@TypeHint": "Date",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:34 GMT-0700",
+        "jcr:predecessors": [
+          "3b1bda13-1564-4e3d-9003-463a61d95630"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:19 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:56:16 GMT-0700",
+        "jcr:baseVersion": "3b1bda13-1564-4e3d-9003-463a61d95630",
+        "onTime@TypeHint": "Date",
+        "jcr:isCheckedOut": true,
+        "cq:deviceGroups": [
+          "/etc/mobile/groups/responsive"
+        ],
+        "pageTitle": "Trending",
+        "jcr:uuid": "1fab8d07-9ac2-456d-8c13-35db1ab497d7",
+        "sling:resourceType": "social/console/components/basepage",
+        "cq:designPath": "/etc/designs/social/console",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:lastModifiedBy": "admin",
+        "navTitle": "Trending"
+      }
+    },
+    "forum": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:34 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Forum",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "819ac2c4-c5aa-4b51-bc8f-a196d9e827cb",
+        "etcpath": "/etc/community/templates/functions/reference/forum",
+        "cq:template": "/libs/social/console/templates/base_page",
+        "cq:lastReplicatedBy": "admin",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:34 GMT-0700",
+        "jcr:predecessors": [
+          "42d25999-748a-49a9-bd68-e9bd835e3348"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:34 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:20 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:56:18 GMT-0700",
+        "jcr:baseVersion": "42d25999-748a-49a9-bd68-e9bd835e3348",
+        "jcr:isCheckedOut": true,
+        "cq:deviceGroups": [
+          "/etc/mobile/groups/responsive"
+        ],
+        "pageTitle": "Forum",
+        "jcr:uuid": "1859ca64-a19e-454b-b289-d5d69620d7fc",
+        "sling:resourceType": "social/console/components/basepage",
+        "cq:designPath": "/etc/designs/social/console",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:lastModifiedBy": "admin",
+        "navTitle": "Forum"
+      }
+    },
+    "files": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Files",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "e3539a8b-4bcb-4666-b6d1-c27766775442",
+        "etcpath": "/etc/community/templates/functions/reference/filelibrary",
+        "cq:template": "/libs/social/console/templates/base_page",
+        "cq:lastReplicatedBy": "admin",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:34 GMT-0700",
+        "jcr:predecessors": [
+          "7b89da44-cd1e-4b07-8c5a-af342048dfee"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:20 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:56:16 GMT-0700",
+        "jcr:baseVersion": "7b89da44-cd1e-4b07-8c5a-af342048dfee",
+        "jcr:isCheckedOut": true,
+        "cq:deviceGroups": [
+          "/etc/mobile/groups/responsive"
+        ],
+        "pageTitle": "Files",
+        "jcr:uuid": "b1d07c98-a0b0-4a3a-9da0-8505c52964c6",
+        "sling:resourceType": "social/console/components/basepage",
+        "cq:designPath": "/etc/designs/social/console",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:lastModifiedBy": "admin",
+        "navTitle": "Files"
+      }
+    },
+    "catalog": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:33 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Catalog",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "b4e59134-ce61-4904-9bd1-d289c90df8ee",
+        "etcpath": "/etc/community/templates/functions/reference/catalog",
+        "cq:template": "/libs/social/console/templates/base_page",
+        "cq:lastReplicatedBy": "admin",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:34 GMT-0700",
+        "jcr:predecessors": [
+          "0c196c80-8ac5-4895-8e4c-de0f1c389c47"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:33 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:20 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:56:16 GMT-0700",
+        "jcr:baseVersion": "0c196c80-8ac5-4895-8e4c-de0f1c389c47",
+        "jcr:isCheckedOut": true,
+        "cq:deviceGroups": [
+          "/etc/mobile/groups/responsive"
+        ],
+        "pageTitle": "Catalog",
+        "jcr:uuid": "7fb2bebe-b1b1-47ae-a5ad-0aebebb62595",
+        "sling:resourceType": "social/console/components/basepage",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:lastModifiedBy": "admin",
+        "navTitle": "Catalog"
+      }
+    },
+    "assignments": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:33 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Assignments",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "4a747de2-661d-451e-91ab-0e4001f747dc",
+        "cq:template": "/libs/social/console/templates/base_page",
+        "cq:lastReplicatedBy": "admin",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:35 GMT-0700",
+        "jcr:predecessors": [
+          "6e623d2a-21ca-44b5-8275-2589bfd8e113"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:33 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:21 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:56:16 GMT-0700",
+        "jcr:baseVersion": "6e623d2a-21ca-44b5-8275-2589bfd8e113",
+        "jcr:isCheckedOut": true,
+        "pageTitle": "Assignments",
+        "jcr:uuid": "00b94399-9017-49a6-b005-42145a2584dc",
+        "sling:resourceType": "social/console/components/basepage",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:lastModifiedBy": "admin",
+        "navTitle": "Assignments"
+      }
+    },
+    "blog": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Blog",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "b2de2f6e-3d6d-44ab-9480-a566c3dab1fd",
+        "etcpath": "/etc/community/templates/functions/reference/blog",
+        "cq:template": "/libs/social/console/templates/base_page",
+        "cq:lastReplicatedBy": "admin",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:35 GMT-0700",
+        "jcr:predecessors": [
+          "f8468447-03d8-4e0d-b641-4b74ad75ce5a"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:21 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:56:16 GMT-0700",
+        "jcr:baseVersion": "f8468447-03d8-4e0d-b641-4b74ad75ce5a",
+        "jcr:isCheckedOut": true,
+        "cq:deviceGroups": [
+          "/etc/mobile/groups/responsive"
+        ],
+        "pageTitle": "Blog",
+        "jcr:uuid": "53fed0cf-5c15-4e8a-9f4e-5beb6d871735",
+        "sling:resourceType": "social/console/components/basepage",
+        "cq:designPath": "/etc/designs/social/console",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:lastModifiedBy": "admin",
+        "navTitle": "Blog"
+      }
+    },
+    "questions": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Questions",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "c37d2432-6665-4d31-ae1f-f5e3f6dd68b7",
+        "etcpath": "/etc/community/templates/functions/reference/qna",
+        "cq:template": "/libs/social/console/templates/base_page",
+        "cq:lastReplicatedBy": "admin",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:35 GMT-0700",
+        "jcr:predecessors": [
+          "704de09c-41f1-43f0-989d-f63266543687"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:21 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:56:18 GMT-0700",
+        "jcr:baseVersion": "704de09c-41f1-43f0-989d-f63266543687",
+        "jcr:isCheckedOut": true,
+        "cq:deviceGroups": [
+          "/etc/mobile/groups/responsive"
+        ],
+        "pageTitle": "Questions",
+        "jcr:uuid": "815a8b4e-5836-441d-8a67-e7cc482497df",
+        "sling:resourceType": "social/console/components/basepage",
+        "cq:designPath": "/etc/designs/social/console",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:lastModifiedBy": "admin",
+        "navTitle": "Questions"
+      }
+    },
+    "ideas": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Ideas",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "ec354cec-fafc-45c1-b968-70b73dc47a09",
+        "etcpath": "/etc/community/templates/functions/reference/ideation",
+        "cq:template": "/libs/social/console/templates/base_page",
+        "cq:lastReplicatedBy": "admin",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:35 GMT-0700",
+        "jcr:predecessors": [
+          "9078248b-3bb4-4e6c-bdeb-ff410e0ab665"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:21 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:56:16 GMT-0700",
+        "jcr:baseVersion": "9078248b-3bb4-4e6c-bdeb-ff410e0ab665",
+        "jcr:isCheckedOut": true,
+        "cq:deviceGroups": [
+          "/etc/mobile/groups/responsive"
+        ],
+        "pageTitle": "Ideas",
+        "jcr:uuid": "3425d87b-c32e-4627-b8c6-9b1762ec859d",
+        "sling:resourceType": "social/console/components/basepage",
+        "cq:designPath": "/etc/designs/social/console",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:lastModifiedBy": "admin",
+        "navTitle": "Ideas"
+      }
+    },
+    "calendar": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:34 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Calendar",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "83efb532-7870-4e90-8cb2-79efef79f7df",
+        "etcpath": "/etc/community/templates/functions/reference/calendar",
+        "cq:template": "/libs/social/console/templates/base_page",
+        "cq:lastReplicatedBy": "admin",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:36 GMT-0700",
+        "jcr:predecessors": [
+          "20b23035-daa6-4520-9146-fabfe55aafb5"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:34 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:22 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:56:16 GMT-0700",
+        "jcr:baseVersion": "20b23035-daa6-4520-9146-fabfe55aafb5",
+        "jcr:isCheckedOut": true,
+        "cq:deviceGroups": [
+          "/etc/mobile/groups/responsive"
+        ],
+        "pageTitle": "Calendar",
+        "jcr:uuid": "bf5f5532-b696-4826-bfc9-8167e6b8d24f",
+        "sling:resourceType": "social/console/components/basepage",
+        "cq:designPath": "/etc/designs/social/console",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:lastModifiedBy": "admin",
+        "navTitle": "Calendar"
+      }
+    },
+    "groups": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:mixinTypes": [
+        "rep:AccessControllable"
+      ],
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Groups",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "fcfdeadf-86de-4819-8693-92bd446a1809",
+        "etcpath": "/etc/community/templates/functions/reference/groups",
+        "cq:template": "/libs/social/console/templates/base_page",
+        "cq:lastReplicatedBy": "msm-service",
+        "offTime@TypeHint": "Date",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:36 GMT-0700",
+        "jcr:predecessors": [
+          "12b61acf-1b0c-4522-b5a0-93813b67175b"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 17:02:45 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:56:16 GMT-0700",
+        "jcr:baseVersion": "12b61acf-1b0c-4522-b5a0-93813b67175b",
+        "onTime@TypeHint": "Date",
+        "jcr:isCheckedOut": true,
+        "cq:deviceGroups": [
+          "/etc/mobile/groups/responsive"
+        ],
+        "pageTitle": "Groups",
+        "jcr:uuid": "8f669e65-6495-4c33-9a7b-1007109955d8",
+        "sling:resourceType": "social/console/components/basepage",
+        "cq:designPath": "/etc/designs/social/console",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:isCommunityGroup": true,
+        "cq:lastModifiedBy": "admin",
+        "navTitle": "Groups"
+      },
+      "folderConfiguration": {
+        "jcr:primaryType": "sling:Folder",
+        "jcr:mixinTypes": [
+          "cq:ReplicationStatus",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "aa2dbed6-e0bd-48d5-a0aa-570b6a84acd3",
+        "cq:lastReplicatedBy": "msm-service",
+        "jcr:predecessors": [
+          "8a9330f3-f829-4712-aedd-c694a688aebc"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:33 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 17:02:45 GMT-0700",
+        "jcr:baseVersion": "8a9330f3-f829-4712-aedd-c694a688aebc",
+        "jcr:isCheckedOut": true,
+        "jcr:uuid": "d4fcede6-cee9-4613-aea3-832ba2b96df6",
+        "sling:resourceType": "social/group/components/hbs/groupcollection/groupfolder"
+      },
+      "rep:policy": {
+        "jcr:primaryType": "rep:ACL"
+      },
+      "hiking": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:mixinTypes": [
+          "rep:AccessControllable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530"
+      },
+      "running": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:mixinTypes": [
+          "rep:AccessControllable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530"
+      },
+      "wintersports": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:mixinTypes": [
+          "rep:AccessControllable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 13 2017 18:01:33 GMT+0530"
+      },
+      "skiing": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:mixinTypes": [
+          "rep:AccessControllable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 13 2017 18:01:33 GMT+0530"
+      },
+      "surfing": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:mixinTypes": [
+          "rep:AccessControllable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530"
+      }
+    },
+    "members": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:34 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Members",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "2330aefd-8acd-4838-b367-755bcfeb5419",
+        "etcpath": "/etc/community/templates/functions/reference/page",
+        "cq:template": "/libs/social/console/templates/base_page",
+        "cq:lastReplicatedBy": "admin",
+        "offTime@TypeHint": "Date",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:36 GMT-0700",
+        "jcr:predecessors": [
+          "0bf191ad-bc4f-45a8-b6de-7f1037da92bf"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:34 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:22 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:56:16 GMT-0700",
+        "jcr:baseVersion": "0bf191ad-bc4f-45a8-b6de-7f1037da92bf",
+        "onTime@TypeHint": "Date",
+        "jcr:isCheckedOut": true,
+        "cq:deviceGroups": [
+          "/etc/mobile/groups/responsive"
+        ],
+        "pageTitle": "Members",
+        "jcr:uuid": "6b22e5c9-9162-4fcc-a603-131987f2c864",
+        "sling:resourceType": "social/console/components/basepage",
+        "cq:designPath": "/etc/designs/social/console",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:lastModifiedBy": "admin",
+        "navTitle": "Members"
+      }
+    },
+    "social": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:31 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Social",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "9bc82ca0-e097-4713-a1bb-16b2ed04e703",
+        "etcpath": "/etc/community/templates/functions/reference/page",
+        "cq:template": "/libs/social/console/templates/base_page",
+        "cq:lastReplicatedBy": "admin",
+        "offTime@TypeHint": "Date",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:36 GMT-0700",
+        "jcr:predecessors": [
+          "b849c12d-0ba6-4ee0-9a82-1298170ef834"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:31 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:23 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:55:54 GMT-0700",
+        "jcr:baseVersion": "b849c12d-0ba6-4ee0-9a82-1298170ef834",
+        "onTime@TypeHint": "Date",
+        "jcr:isCheckedOut": true,
+        "cq:deviceGroups": [
+          "/etc/mobile/groups/responsive"
+        ],
+        "pageTitle": "Social",
+        "jcr:uuid": "d8dfb5ee-7e4c-4ccd-aca9-7135d9e43fd7",
+        "sling:resourceType": "social/console/components/basepage",
+        "cq:designPath": "/etc/designs/social/console",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:lastModifiedBy": "admin",
+        "navTitle": "Social"
+      }
+    },
+    "useraccount": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "cq:ReplicationStatus",
+          "mix:versionable"
+        ],
+        "jcr:title": "User Account",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "1443125e-39cc-4122-be8b-4834baa561a4",
+        "cq:lastReplicatedBy": "admin",
+        "cq:redirectTarget": "../",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:36 GMT-0700",
+        "jcr:predecessors": [
+          "9de9bf0d-b33f-4da9-b8bc-fd3406796aa2"
+        ],
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:23 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:55:36 GMT-0700",
+        "jcr:baseVersion": "9de9bf0d-b33f-4da9-b8bc-fd3406796aa2",
+        "jcr:isCheckedOut": true,
+        "pageTitle": "User Account",
+        "jcr:uuid": "c52d57a6-9867-41e8-9a9c-486963f66584",
+        "sling:resourceType": "weretail/components/structure/page",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:lastModifiedBy": "msm-service"
+      },
+      "forgotuserid": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530"
+      },
+      "resetpassword": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530"
+      },
+      "forgotpassword": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530"
+      }
+    },
+    "profile": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:33 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Profile",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "3a816887-65cc-4c27-9571-b8aee6013e9c",
+        "cq:lastReplicatedBy": "admin",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:37 GMT-0700",
+        "jcr:predecessors": [
+          "d4ee2ddd-141d-4ea2-8f81-b3076a612555"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:33 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:23 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:55:37 GMT-0700",
+        "jcr:baseVersion": "d4ee2ddd-141d-4ea2-8f81-b3076a612555",
+        "jcr:isCheckedOut": true,
+        "cq:deviceGroups": [
+          "/etc/mobile/groups/responsive"
+        ],
+        "hideInNav": true,
+        "pageTitle": "Profile",
+        "jcr:uuid": "f06db0b6-5a9b-4543-a946-4d9c36f87045",
+        "sling:resourceType": "social/console/components/profilepage",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:lastModifiedBy": "msm-service",
+        "navTitle": "Profile"
+      }
+    },
+    "messaging": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:mixinTypes": [
+        "rep:AccessControllable"
+      ],
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:31 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Messaging",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "3f5923a9-07e1-4ff5-a9f2-73e7a9d4653b",
+        "cq:template": "/libs/social/console/templates/base_page",
+        "cq:lastReplicatedBy": "admin",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:38 GMT-0700",
+        "jcr:predecessors": [
+          "3722ab3d-7c0d-4ed5-b4ac-944436c015fd"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:31 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:24 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:55:38 GMT-0700",
+        "jcr:baseVersion": "3722ab3d-7c0d-4ed5-b4ac-944436c015fd",
+        "jcr:isCheckedOut": true,
+        "cq:deviceGroups": [
+          "/etc/mobile/groups/responsive"
+        ],
+        "hideInNav": true,
+        "pageTitle": "Messaging",
+        "jcr:uuid": "4ec2505b-607b-4625-ba02-c83d5510067b",
+        "sling:resourceType": "social/console/components/basepage",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:lastModifiedBy": "msm-service",
+        "navTitle": "Messaging"
+      },
+      "sent": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 13 2017 18:01:31 GMT+0530"
+      },
+      "trash": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530"
+      },
+      "compose": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530"
+      },
+      "rep:policy": {
+        "jcr:primaryType": "rep:ACL"
+      }
+    },
+    "search": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Search Results",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "f148a27b-8f5d-446d-8902-49efb1dcbd09",
+        "cq:lastReplicatedBy": "admin",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:39 GMT-0700",
+        "jcr:predecessors": [
+          "fa9c3853-bc5a-4c87-b7df-06b51c836772"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:24 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:55:39 GMT-0700",
+        "jcr:baseVersion": "fa9c3853-bc5a-4c87-b7df-06b51c836772",
+        "jcr:isCheckedOut": true,
+        "cq:deviceGroups": [
+          "/etc/mobile/groups/responsive"
+        ],
+        "hideInNav": true,
+        "pageTitle": "Search Results",
+        "jcr:uuid": "acc67b66-4e63-4550-81df-8f0c590253b6",
+        "sling:resourceType": "social/console/components/basepage",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:lastModifiedBy": "msm-service",
+        "navTitle": "Search Results"
+      }
+    },
+    "signup": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:mixinTypes": [
+        "rep:AccessControllable"
+      ],
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:34 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Sign Up Page",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "fa28e7d2-2c54-4243-a1b7-762ea023439a",
+        "cq:lastReplicatedBy": "admin",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:39 GMT-0700",
+        "jcr:predecessors": [
+          "156898ee-2bd0-4214-9dcc-f2331add28af"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:34 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:24 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:55:39 GMT-0700",
+        "jcr:baseVersion": "156898ee-2bd0-4214-9dcc-f2331add28af",
+        "jcr:isCheckedOut": true,
+        "cq:deviceGroups": [
+          "/etc/mobile/groups/responsive"
+        ],
+        "hideInNav": true,
+        "pageTitle": "Sign Up Page",
+        "jcr:uuid": "9eab6e58-aeec-49e9-8422-199963686dbe",
+        "sling:resourceType": "social/console/components/basepage",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:lastModifiedBy": "msm-service",
+        "navTitle": "Forum"
+      },
+      "rep:policy": {
+        "jcr:primaryType": "rep:ACL"
+      }
+    },
+    "signin": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Sign In Page",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "b032a7e8-e841-44d9-b5a7-4230bf973ade",
+        "cq:lastReplicatedBy": "admin",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:39 GMT-0700",
+        "jcr:predecessors": [
+          "926575ae-4e13-4a68-8109-bd6524ca7f63"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:25 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:55:39 GMT-0700",
+        "jcr:baseVersion": "926575ae-4e13-4a68-8109-bd6524ca7f63",
+        "jcr:isCheckedOut": true,
+        "cq:deviceGroups": [
+          "/etc/mobile/groups/responsive"
+        ],
+        "hideInNav": true,
+        "pageTitle": "Sign In Page",
+        "jcr:uuid": "6dab3e1e-7011-4d5f-91d4-d96b764aa0f1",
+        "sling:resourceType": "social/console/components/basepage",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:lastModifiedBy": "msm-service",
+        "navTitle": "Forum"
+      }
+    },
+    "moderation": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:33 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "AEM Communities Moderation",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "69a5e0e2-2122-407a-b52a-0fd08a3ef507",
+        "cq:lastReplicatedBy": "admin",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:39 GMT-0700",
+        "jcr:predecessors": [
+          "f659d70e-16c3-449c-a419-11a4e7d1bd19"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:33 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:25 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:55:39 GMT-0700",
+        "jcr:baseVersion": "f659d70e-16c3-449c-a419-11a4e7d1bd19",
+        "jcr:isCheckedOut": true,
+        "cq:deviceGroups": [
+          "/etc/mobile/groups/responsive"
+        ],
+        "hideInNav": "true",
+        "pageTitle": "AEM Communities Moderation",
+        "jcr:uuid": "cc7784bc-2148-4388-9da2-6ccd20b49b49",
+        "sling:resourceType": "social/console/components/moderationpublishshell",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:lastModifiedBy": "msm-service"
+      }
+    },
+    "notifications": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:34 GMT+0530",
+      "jcr:content": {
+        "jcr:primaryType": "cq:PageContent",
+        "jcr:mixinTypes": [
+          "cq:LiveSync",
+          "mix:versionable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Notifications",
+        "cq:lastReplicationAction": "Activate",
+        "jcr:versionHistory": "3e4cccdd-5b7b-4e87-9f31-6d42ce5dbb78",
+        "cq:template": "/libs/social/console/templates/base_page",
+        "cq:lastReplicatedBy": "admin",
+        "cq:lastRolledout": "Tue Mar 14 2017 16:55:39 GMT-0700",
+        "jcr:predecessors": [
+          "168cde4e-f0d1-4c85-9902-86730dac4e32"
+        ],
+        "jcr:created": "Fri Oct 13 2017 18:01:34 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:25 GMT-0700",
+        "cq:lastModified": "Tue Mar 14 2017 16:55:39 GMT-0700",
+        "jcr:baseVersion": "168cde4e-f0d1-4c85-9902-86730dac4e32",
+        "jcr:isCheckedOut": true,
+        "cq:deviceGroups": [
+          "/etc/mobile/groups/responsive"
+        ],
+        "hideInNav": true,
+        "pageTitle": "Notifications",
+        "jcr:uuid": "544b6096-9737-47ef-bf76-f460c99c63c0",
+        "sling:resourceType": "social/console/components/basepage",
+        "cq:lastRolledoutBy": "msm-service",
+        "cq:lastModifiedBy": "msm-service",
+        "navTitle": "Notifications"
+      },
+      "preferences": {
+        "jcr:primaryType": "cq:Page",
+        "jcr:createdBy": "admin",
+        "jcr:created": "Fri Oct 13 2017 18:01:34 GMT+0530"
+      }
+    },
+    "rep:policy": {
+      "jcr:primaryType": "rep:ACL",
+      "allow": {
+        "jcr:primaryType": "rep:GrantACE",
+        "rep:principalName": "community-community-vdfvb-members",
+        "rep:privileges": [
+          "jcr:read"
+        ]
+      },
+      "allow1": {
+        "jcr:primaryType": "rep:GrantACE",
+        "rep:principalName": "community-community-vdfvb-sitecontentmanager",
+        "rep:privileges": [
+          "jcr:versionManagement",
+          "jcr:read",
+          "jcr:readAccessControl",
+          "rep:write",
+          "jcr:lockManagement"
+        ]
+      }
+    },
+    "photos": {
+      "jcr:primaryType": "sling:Folder",
+      "jcr:mixinTypes": [
+        "cq:ReplicationStatus"
+      ],
+      "jcr:createdBy": "admin",
+      "cq:lastReplicationAction": "Activate",
+      "cq:lastReplicatedBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:32 GMT+0530",
+      "cq:lastReplicated": "Tue Mar 14 2017 16:56:25 GMT-0700"
+    },
+    "configuration": {
+      "jcr:primaryType": "sling:Folder",
+      "jcr:mixinTypes": [
+        "cq:ReplicationStatus",
+        "rep:AccessControllable"
+      ],
+      "jcr:createdBy": "admin",
+      "moderators": [
+        "/social/authors/aaron.mcdonald@mailinator.com"
+      ],
+      "allowTwitter": true,
+      "cq:lastReplicationAction": "Activate",
+      "availableLanguages": [
+        "en",
+        "fr",
+        "de",
+        "es"
+      ],
+      "communitymanagers": [
+        "/social/authors/josh.bradley@pookmail.com"
+      ],
+      "cq:lastReplicatedBy": "admin",
+      "fbconnectoauthid": "/etc/cloudservices/facebookconnect/weretailfacebook/jcr:content",
+      "allowMachineTranslation": true,
+      "siteId": "community-vdfvb",
+      "translationProviderConfig": "/etc/cloudservices/msft-translation/msft_trial",
+      "twitterconnectoauthid": "/etc/cloudservices/twitterconnect/weretailtwitter/jcr:content",
+      "persistTranslation": "TRANSLATE_ON_USER_REQUEST",
+      "jcr:created": "Fri Oct 13 2017 18:01:34 GMT+0530",
+      "translatePageOrSection": "TRANSLATE_SELECTION",
+      "cq:lastReplicated": "Tue Mar 14 2017 16:56:25 GMT-0700",
+      "macOrgId": "5584D36B545258440A4C98A7@AdobeOrg",
+      "urlName": "community",
+      "allowPrivateMessaging": true,
+      "siteResourcesPath": "/content/we-retail/us/en/community/resources/en",
+      "name": "Communities",
+      "theme": "/etc/designs/community/community-vdfvb/sitethemes/bootstrap_css",
+      "analyticsCloudConfigPath": "/etc/cloudservices/sitecatalyst/demomachine/demomachine",
+      "moderateContent": false,
+      "enableAnalytics": false,
+      "jcr:description": "We.Retail Community",
+      "createGroupPermission": "COMMUNITY_GROUP_ADMINISTRATORS",
+      "siteRoot": "/content/we-retail/us/en",
+      "tagNameSpaces": [
+        "/etc/tags/we-retail"
+      ],
+      "translationProvider": "microsoft",
+      "jcr:lastModified": "Tue Mar 14 2017 16:56:18 GMT-0700",
+      "baseLanguage": "en",
+      "allowAnonymousAccess": true,
+      "sling:resourceType": "social/console/components/hbs/sitecollection/site",
+      "groupAdmin": [
+        "/social/authors/aaron.mcdonald@mailinator.com"
+      ],
+      "allowUserRegistration": true,
+      "groupPaths": [
+        "/groups"
+      ],
+      "page-template": "weretail",
+      "commonStoreLanguages": [
+        "en"
+      ],
+      "allowFacebook": true,
+      "blueprint": "/etc/community/templates/sites/custom/we_retail_site",
+      "commonStoreLanguage": "en",
+      "siteAssetsPath": "/content/dam/community-vdfvb/resource-assets",
+      "functions": {
+        "jcr:primaryType": "sling:OrderedFolder",
+        "jcr:mixinTypes": [
+          "cq:ReplicationStatus"
+        ],
+        "jcr:createdBy": "admin",
+        "cq:lastReplicationAction": "Activate",
+        "cq:lastReplicatedBy": "admin",
+        "jcr:created": "Fri Oct 13 2017 18:01:34 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:26 GMT-0700"
+      },
+      "rep:policy": {
+        "jcr:primaryType": "rep:ACL"
+      }
+    },
+    "folderConfiguration": {
+      "jcr:primaryType": "sling:Folder",
+      "jcr:mixinTypes": [
+        "cq:ReplicationStatus"
+      ],
+      "jcr:createdBy": "admin",
+      "cq:lastReplicationAction": "Activate",
+      "cq:lastReplicatedBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:33 GMT+0530",
+      "cq:lastReplicated": "Tue Mar 14 2017 16:56:29 GMT-0700",
+      "sling:resourceType": "social/console/components/hbs/sitecollection/sitefolder",
+      "initialLanguages": [
+        "en"
+      ]
+    },
+    "resources": {
+      "jcr:primaryType": "sling:Folder",
+      "jcr:mixinTypes": [
+        "cq:ReplicationStatus"
+      ],
+      "jcr:createdBy": "admin",
+      "cq:lastReplicationAction": "Activate",
+      "cq:lastReplicatedBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:33 GMT+0530",
+      "cq:lastReplicated": "Tue Mar 14 2017 16:56:29 GMT-0700",
+      "sling:resourceType": "sling:Folder",
+      "en": {
+        "jcr:primaryType": "sling:Folder",
+        "jcr:mixinTypes": [
+          "cq:ReplicationStatus",
+          "rep:AccessControllable"
+        ],
+        "jcr:createdBy": "admin",
+        "jcr:title": "Communities",
+        "cq:lastReplicationAction": "Activate",
+        "cq:lastReplicatedBy": "admin",
+        "jcr:created": "Fri Oct 13 2017 18:01:35 GMT+0530",
+        "cq:lastReplicated": "Tue Mar 14 2017 16:56:29 GMT-0700",
+        "sling:resourceType": "social_enablement_resources"
+      }
     }
+  }
+},
+    "es": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:20 GMT+0530"
+    },
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:createdBy": "admin",
+      "jcr:title": "United States",
+      "cq:template": "/conf/we-retail/settings/wcm/templates/redirect-page",
+      "redirectTarget": "/content/we-retail/us/en",
+      "jcr:created": "Fri Oct 13 2017 18:01:16 GMT+0530",
+      "cq:lastModified": "Mon Mar 07 2016 17:32:10 GMT+0100",
+      "sling:resourceType": "weretail/components/structure/page",
+      "cq:lastModifiedBy": "admin"
+    }
+  },
+  "ca": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Fri Oct 13 2017 18:01:07 GMT+0530",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:createdBy": "admin",
+      "jcr:title": "Canada",
+      "cq:template": "/conf/we-retail/settings/wcm/templates/redirect-page",
+      "jcr:language": "en_CA",
+      "jcr:created": "Fri Oct 13 2017 18:01:07 GMT+0530",
+      "cq:lastModified": "Fri Sep 23 2016 16:24:52 GMT-0700",
+      "sling:resourceType": "weretail/components/structure/page",
+      "cq:lastModifiedBy": "admin"
+    },
+    "en": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:07 GMT+0530"
+    },
+    "fr": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:11 GMT+0530"
+    }
+  },
+  "ch": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Fri Oct 13 2017 18:01:11 GMT+0530",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:createdBy": "admin",
+      "jcr:title": "Switzerland",
+      "cq:template": "/conf/we-retail/settings/wcm/templates/redirect-page",
+      "jcr:language": "de_CH",
+      "jcr:created": "Fri Oct 13 2017 18:01:11 GMT+0530",
+      "cq:lastModified": "Fri Sep 23 2016 16:24:17 GMT-0700",
+      "sling:resourceType": "weretail/components/structure/page",
+      "cq:lastModifiedBy": "admin"
+    },
+    "de": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:11 GMT+0530"
+    },
+    "fr": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:11 GMT+0530"
+    },
+    "it": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:12 GMT+0530"
+    }
+  },
+  "de": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Fri Oct 13 2017 18:01:12 GMT+0530",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:createdBy": "admin",
+      "jcr:title": "Germany",
+      "cq:template": "/conf/we-retail/settings/wcm/templates/redirect-page",
+      "jcr:created": "Fri Oct 13 2017 18:01:12 GMT+0530",
+      "cq:lastModified": "Fri Sep 23 2016 16:23:39 GMT-0700",
+      "sling:resourceType": "weretail/components/structure/page",
+      "cq:lastModifiedBy": "admin"
+    },
+    "de": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:12 GMT+0530"
+    }
+  },
+  "fr": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Fri Oct 13 2017 18:01:12 GMT+0530",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:createdBy": "admin",
+      "jcr:title": "France",
+      "cq:template": "/conf/we-retail/settings/wcm/templates/redirect-page",
+      "jcr:created": "Fri Oct 13 2017 18:01:12 GMT+0530",
+      "cq:lastModified": "Fri Sep 23 2016 16:23:19 GMT-0700",
+      "sling:resourceType": "weretail/components/structure/page",
+      "cq:lastModifiedBy": "admin"
+    },
+    "fr": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:12 GMT+0530"
+    }
+  },
+  "es": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Fri Oct 13 2017 18:01:12 GMT+0530",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:createdBy": "admin",
+      "jcr:title": "Spain",
+      "cq:template": "/conf/we-retail/settings/wcm/templates/redirect-page",
+      "jcr:created": "Fri Oct 13 2017 18:01:12 GMT+0530",
+      "cq:lastModified": "Fri Sep 23 2016 16:24:35 GMT-0700",
+      "sling:resourceType": "weretail/components/structure/page",
+      "cq:lastModifiedBy": "admin"
+    },
+    "es": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:12 GMT+0530"
+    }
+  },
+  "it": {
+    "jcr:primaryType": "cq:Page",
+    "jcr:createdBy": "admin",
+    "jcr:created": "Fri Oct 13 2017 18:01:12 GMT+0530",
+    "jcr:content": {
+      "jcr:primaryType": "cq:PageContent",
+      "jcr:createdBy": "admin",
+      "jcr:title": "Italy",
+      "cq:template": "/conf/we-retail/settings/wcm/templates/redirect-page",
+      "jcr:created": "Fri Oct 13 2017 18:01:12 GMT+0530",
+      "cq:lastModified": "Fri Sep 23 2016 16:23:57 GMT-0700",
+      "sling:resourceType": "weretail/components/structure/page",
+      "cq:lastModifiedBy": "admin"
+    },
+    "it": {
+      "jcr:primaryType": "cq:Page",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Fri Oct 13 2017 18:01:12 GMT+0530"
+    }
+  },
+  "resources": {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:mixinTypes": [
+      "vlt:FullCoverage"
+    ],
+    "states": {
+      "jcr:primaryType": "nt:unstructured"
+    }
+  }
 }

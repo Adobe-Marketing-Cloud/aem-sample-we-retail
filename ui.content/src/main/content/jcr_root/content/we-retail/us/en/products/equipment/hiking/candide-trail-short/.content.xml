@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2016-06-29T14:20:59.750+02:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/wo/shorts/wohisucat"
+        cq:productMaster="/var/commerce/products/we-retail/wo/shorts/wohisucat"
         cq:tags="[we-retail:apparel/shorts,we-retail:season/summer,we-retail:activity/hiking,we-retail:gender/women]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -34,7 +34,7 @@
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weretail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/wo/shorts/wohisucat">
+                productData="/var/commerce/products/we-retail/wo/shorts/wohisucat">
                 <wohisucat-xxs
                     cq:commerceType="variant"
                     cq:lastRolledout="{Date}2016-06-29T14:20:59.652+02:00"
@@ -42,7 +42,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shorts/wohisucat/size-xxs">
+                    productData="/var/commerce/products/we-retail/wo/shorts/wohisucat/size-xxs">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:20:59.662+02:00"
                         cq:lastRolledoutBy="admin"
@@ -66,7 +66,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shorts/wohisucat/size-xs">
+                    productData="/var/commerce/products/we-retail/wo/shorts/wohisucat/size-xs">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:20:59.674+02:00"
                         cq:lastRolledoutBy="admin"
@@ -90,7 +90,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shorts/wohisucat/size-s">
+                    productData="/var/commerce/products/we-retail/wo/shorts/wohisucat/size-s">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:20:59.686+02:00"
                         cq:lastRolledoutBy="admin"
@@ -114,7 +114,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shorts/wohisucat/size-m">
+                    productData="/var/commerce/products/we-retail/wo/shorts/wohisucat/size-m">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:20:59.702+02:00"
                         cq:lastRolledoutBy="admin"
@@ -138,7 +138,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shorts/wohisucat/size-l">
+                    productData="/var/commerce/products/we-retail/wo/shorts/wohisucat/size-l">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:20:59.716+02:00"
                         cq:lastRolledoutBy="admin"
@@ -162,7 +162,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/wo/shorts/wohisucat/size-xl">
+                    productData="/var/commerce/products/we-retail/wo/shorts/wohisucat/size-xl">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:20:59.731+02:00"
                         cq:lastRolledoutBy="admin"

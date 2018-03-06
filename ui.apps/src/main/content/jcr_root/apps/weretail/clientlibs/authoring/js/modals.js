@@ -18,8 +18,10 @@
 
     // make sure modals are displayed in the middle of the page when in preview mode
     $('.modal').on('show.bs.modal', function () {
-        var viewportHeight = parent.innerHeight;
-        $('.modal-dialog').css('top', viewportHeight * 0.5);
+        $('.modal-dialog.modal-center', this).each(function () {
+            var viewportHeight = parent.innerHeight;
+            $(this).css('top', viewportHeight * 0.5);
+        });
     });
 
 }(jQuery));

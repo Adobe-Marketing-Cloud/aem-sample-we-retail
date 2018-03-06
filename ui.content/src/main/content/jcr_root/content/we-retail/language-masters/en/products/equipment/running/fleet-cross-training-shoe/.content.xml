@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2016-07-04T11:35:07.697+02:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/eq/running/eqrusufle"
+        cq:productMaster="/var/commerce/products/we-retail/eq/running/eqrusufle"
         cq:tags="[we-retail:apparel/footwear,we-retail:season/summer,we-retail:activity/running]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -34,7 +34,7 @@
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weretail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/eq/running/eqrusufle">
+                productData="/var/commerce/products/we-retail/eq/running/eqrusufle">
                 <eqrusufle-9
                     cq:commerceType="variant"
                     cq:lastRolledout="{Date}2016-07-04T11:35:07.670+02:00"
@@ -42,7 +42,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/running/eqrusufle/size-9">
+                    productData="/var/commerce/products/we-retail/eq/running/eqrusufle/size-9">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:35:07.676+02:00"
                         cq:lastRolledoutBy="admin"
@@ -72,7 +72,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/running/eqrusufle/size-11">
+                    productData="/var/commerce/products/we-retail/eq/running/eqrusufle/size-11">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:35:07.685+02:00"
                         cq:lastRolledoutBy="admin"
@@ -102,7 +102,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/running/eqrusufle/size-13">
+                    productData="/var/commerce/products/we-retail/eq/running/eqrusufle/size-13">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:35:07.693+02:00"
                         cq:lastRolledoutBy="admin"
@@ -134,7 +134,6 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="commerce/components/product/image"
                     fileReference="/content/dam/we-retail/en/products/apparel/footwear/source/Fleet Shoe.jpg"
-                    height="300"
                     jpegQuality="85"
                     unsharpMaskAmount="0"
                     unsharpMaskRadius="0"
@@ -183,7 +182,7 @@
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"
             cq:master="/content/catalogs/we-retail/en/website-template-pages/product-page-template"
-            cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
+            cq:rolloutConfigs="[/libs/msm/catalog/rolloutconfigs/catalogpagecontent,/libs/msm/catalog/rolloutconfigs/catalogrollouthooks]"
             jcr:primaryType="cq:LiveCopy"/>
     </jcr:content>
 </jcr:root>

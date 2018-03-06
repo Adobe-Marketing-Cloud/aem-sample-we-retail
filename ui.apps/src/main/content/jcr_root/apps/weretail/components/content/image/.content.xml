@@ -3,5 +3,5 @@
     jcr:primaryType="cq:Component"
     jcr:title="Image"
     jcr:description="Smart Adaptive Image"
-    sling:resourceSuperType="core/wcm/components/image/v1/image"
+    sling:resourceSuperType="core/wcm/components/image/v2/image"
     componentGroup="We.Retail"/>

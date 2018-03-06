@@ -16,20 +16,15 @@
 
 package we.retail.core.productrelationships;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-import org.apache.felix.scr.annotations.Activate;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Properties;
 import org.apache.felix.scr.annotations.Property;
 import org.apache.felix.scr.annotations.Service;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.ResourceResolver;
-import org.apache.sling.commons.osgi.PropertiesUtil;
-import org.osgi.service.component.ComponentContext;
 
 import com.adobe.cq.commerce.api.CommerceException;
 import com.adobe.cq.commerce.api.CommerceSession;
@@ -47,7 +42,7 @@ import we.retail.core.util.WeRetailHelper;
  * NB: this is an example relationship provider which trades off performance for simplicity.  A
  * production system would require a much more performant implementation.
  */
-@Component(metatype = true, label = "We.Retail Similar-to-Cart Recommendations Provider",
+@Component(label = "We.Retail Similar-to-Cart Recommendations Provider",
         description = "Example ProductRelationshipsProvider which recommends products similar to the products in the cart")
 @Service
 @Properties(value = {
@@ -58,9 +53,6 @@ public class SimilarToCartRelationshipsProvider extends AbstractRelationshipsPro
     public static final String RELATIONSHIP_TYPE = "we-retail.similar-to-cart";
     // i18n.get("Similar to cart");
     public static final String RELATIONSHIP_TITLE = "Similar to cart";
-
-    @Property(boolValue = true, label = "Enable", description = "Provide recommendations")
-    public final static String ENABLED = RELATIONSHIP_TYPE + ".enabled";
 
     public SimilarToCartRelationshipsProvider() {
         super(RELATIONSHIP_TYPE, RELATIONSHIP_TITLE);
@@ -87,12 +79,6 @@ public class SimilarToCartRelationshipsProvider extends AbstractRelationshipsPro
             collector.walk(root.getContentResource().getParent());
         }
         return collector.getRelationships();
-    }
-
-    @SuppressWarnings("unused")
-    @Activate
-    private void activate(ComponentContext context) throws IOException {
-        enabled = PropertiesUtil.toBoolean(context.getProperties().get(ENABLED), true);
     }
 }
 

@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:deviceGroups="[mobile/groups/responsive]"
         cq:lastModified="{Date}2016-09-20T23:10:00.086+02:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/we-retail/settings/wcm/templates/content-page"
@@ -17,7 +17,32 @@
                 jcr:lastModified="{Date}2016-09-20T20:34:48.790+02:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="weretail/components/structure/header"/>
+                sling:resourceType="weretail/components/structure/header">
+                <navigation
+                    jcr:created="{Date}2018-01-29T11:12:04.131+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2018-01-29T11:12:44.193+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="weretail/components/structure/navigation"
+                    collectAllPages="false"
+                    navigationRoot="/content/we-retail/language-masters/en"
+                    skipNavigationRoot="true"
+                    structureDepth="2"/>
+                <languagenavigation
+                    jcr:lastModified="{Date}2018-01-26T15:53:18.689+02:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="weretail/components/structure/languagenavigation"
+                    navigationRoot="/content/we-retail"
+                    structureDepth="2"/>
+                <search
+                    jcr:lastModified="{Date}2018-01-26T15:53:18.689+02:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="weretail/components/structure/search"
+                    searchRoot="/content/we-retail/language-masters/en"/>
+            </header>
             <responsivegrid
                 jcr:created="{Date}2016-09-20T20:35:34.244+02:00"
                 jcr:createdBy="admin"
@@ -34,7 +59,19 @@
                 jcr:lastModified="{Date}2016-09-20T20:35:44.080+02:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="weretail/components/structure/footer"/>
+                sling:resourceType="weretail/components/structure/footer">
+                <navigation
+                    jcr:created="{Date}2018-01-29T11:12:04.131+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2018-01-29T11:12:44.193+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="weretail/components/structure/navigation"
+                    collectAllPages="false"
+                    navigationRoot="/content/we-retail/language-masters/en"
+                    skipNavigationRoot="true"
+                    structureDepth="1"/>
+            </footer>
         </root>
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">

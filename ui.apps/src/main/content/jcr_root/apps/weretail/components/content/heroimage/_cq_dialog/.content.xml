@@ -1,79 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="nt:unstructured"
     jcr:title="Hero Image"
     sling:resourceType="cq/gui/components/authoring/dialog">
-    <content
-            jcr:primaryType="nt:unstructured"
-            margin="{Boolean}false"
-            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+    <content jcr:primaryType="nt:unstructured">
         <items jcr:primaryType="nt:unstructured">
-            <image
-                jcr:primaryType="nt:unstructured"
-                sling:hideResource="{Boolean}true"/>
-            <accessibility
-                jcr:primaryType="nt:unstructured"
-                sling:hideResource="{Boolean}true"/>
-            <column
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="granite/ui/components/coral/foundation/container">
-                <items jcr:primaryType="nt:unstructured"
-                       sling:hideChildren="[file,title,alt,linkURL,description,size]">
-                    <image
+            <tabs jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <metadata
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
-                        autoStart="{Boolean}false"
-                        class="cq-droptarget"
-                        fieldLabel="Image asset"
-                        fileNameParameter="./fileName"
-                        fileReferenceParameter="./fileReference"
-                        mimeTypes="[image]"
-                        multiple="{Boolean}false"
-                        name="./file"
-                        title="Upload Image Asset"
-                        uploadUrl="${suffix.path}"
-                        useHTML5="{Boolean}true"/>
-                    <heading
+                        sling:hideResource="true"/>
+                    <properties
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Heading"
-                        name="./heading"/>
-                    <title1
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Title"
-                        name="./title"/>
-                    <buttonLabel
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Button label"
-                        name="./buttonLabel"/>
-                    <buttonLinkTo
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                        fieldLabel="Link to"
-                        name="./buttonLinkTo"
-                        rootPath="/content"
-                        suffix=".html"/>
-                    <useFullWidth
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
-                        fieldDescription="Overlap grid to have full width background"
-                        name="./useFullWidth"
-                        text="Full width"
-                        value="true"/>
-                    <keepRatio
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
-                        fieldDescription="Set component height to in 16:9 aspect ratio"
-                        name="./keepRatio"
-                        text="Keep 16:9 ratio"
-                        value="true"/>
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <heading
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Heading"
+                                                name="./heading"/>
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Title"
+                                                name="./title"/>
+                                            <buttonLabel
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Button label"
+                                                name="./buttonLabel"/>
+                                            <buttonLinkTo
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Link to"
+                                                name="./buttonLinkTo"
+                                                rootPath="/content"
+                                                suffix=".html"/>
+                                            <useFullWidth
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                fieldDescription="Overlap grid to have full width background"
+                                                name="./useFullWidth"
+                                                text="Full width"
+                                                value="true"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
                 </items>
-            </column>
-            <tabs
-                jcr:primaryType="nt:unstructured"
-                sling:hideResource="{Boolean}true"/>
+            </tabs>
         </items>
     </content>
 </jcr:root>

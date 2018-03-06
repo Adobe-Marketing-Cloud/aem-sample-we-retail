@@ -3,5 +3,5 @@
     jcr:primaryType="cq:Component"
     jcr:title="Form Hidden"
     jcr:description="Allows form owner to add hidden data to the form"
-    sling:resourceSuperType="core/wcm/components/form/hidden/v1/hidden"
+    sling:resourceSuperType="core/wcm/components/form/hidden/v2/hidden"
     componentGroup="We.Retail Form"/>

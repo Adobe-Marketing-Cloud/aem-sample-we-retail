@@ -31,7 +31,6 @@ import org.junit.Test;
 import com.adobe.cq.commerce.api.CommerceService;
 import com.adobe.cq.commerce.common.PriceFilter;
 import com.adobe.cq.sightly.WCMBindings;
-import com.day.cq.dam.commons.util.DateParser;
 import com.day.cq.wcm.api.Page;
 
 import common.AppAemContext;
@@ -72,7 +71,8 @@ public class OrderHistoryModelTest {
         // The dummy order is inserted first but should appear second in the test (see below)
         MockDefaultJcrPlacedOrder dummyOrder = new MockDefaultJcrPlacedOrder(null, DUMMY_ORDER_ID, orderResource);
         dummyOrder.setOrderId(DUMMY_ORDER_ID);
-        dummyOrder.setOrderPlacedDate(DateParser.parseDate(DUMMY_ORDER_DATE));
+        Calendar cal = (Calendar) orderResource.getValueMap().get("orderPlaced");
+        dummyOrder.setOrderPlacedDate(new Date(cal.getTimeInMillis()-86400000));
         commerceSession.registerPlacedOrder(DUMMY_ORDER_ID, dummyOrder);
 
         // This is the "original" mocked order
@@ -91,7 +91,7 @@ public class OrderHistoryModelTest {
         // done in OrderHistoryModel
         Date date0 = ((Calendar) orders.get(0).getOrder().get(Constants.ORDER_PLACED)).getTime();
         Date date1 = (Date) orders.get(1).getOrder().get(Constants.ORDER_PLACED);
-        assertEquals(1, date0.compareTo(date1));
+        assertEquals(1,date0.compareTo(date1));
         assertEquals(Constants.TEST_ORDER_ID, orders.get(0).getOrderId());
         assertEquals(DUMMY_ORDER_ID, orders.get(1).getOrderId());
 

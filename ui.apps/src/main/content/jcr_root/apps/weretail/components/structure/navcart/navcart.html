@@ -13,8 +13,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<div class="we-Cart" data-sly-use.cart="we.retail.core.model.NavCartModel"
-     data-sly-use.hapiCart="${'org.apache.sling.hapi.sightly.HApiUse' @type='/apps/public/weretail/hapi_types/cart'}">
+<div class="we-Cart" data-sly-use.hapiCart="${'org.apache.sling.hapi.sightly.HApiUse' @type='/apps/public/weretail/hapi_types/cart'}">
 
     <a class="we-Cart-button" href="#" v-on:click="toggle">
         <i class="fa fa-shopping-cart"></i> ${'My cart' @ i18n} <span class="badge active" v-cloak v-if="cartEntriesSize > 0">{{cartEntriesSize}}</span>
@@ -36,15 +35,15 @@
             <div class="we-Cart-empty" v-if="cartEntriesSize == 0">${'The cart is empty' @ i18n}.</div>
 
             <div class="we-Cart-data">
-            
+
                 <div class="we-Cart-entries" v-if="cartEntriesSize > 0">
                     <div class="we-Cart-entry" v-for="(index, cartEntry) in cartEntries"
                          data-sly-use.hapiCartEntry="${ 'org.apache.sling.hapi.sightly.HApiUse' @type=hapiCart.proptype.entries }"
                          data-sly-attribute="${ hapiCart.itemprop.entries }">
-    
+
                         <img class="we-Cart-image" v-bind:src="cartEntry.thumbnail" alt="{{ cartEntry.title }}"
                              data-sly-attribute="${ hapiCartEntry.itemprop.asset }"/>
-    
+
                         <div class="we-Cart-entryContent">
                             <div data-sly-use.hapiCartEntryProduct="${ 'org.apache.sling.hapi.sightly.HApiUse' @type=hapiCartEntry.proptype.product }"
                                  data-sly-attribute="${ hapiCartEntry.itemprop.product }">
@@ -53,6 +52,9 @@
                                     <strong>{{ cartEntry.title }}</strong>
                                 </a>
                                 <div class="text-muted">
+                                    <small  v-if="cartEntryPromotions(index) && cartEntryPromotions(index).length > 0">
+                                        <span class="text-info" v-for="promotion in cartEntryPromotions(index)" v-html="promotion.message"></span>
+                                    </small>
                                     <small data-sly-attribute="${hapiCartEntryProduct.itemprop.description}">
                                         {{ cartEntry.description }}
                                     </small>
@@ -65,12 +67,19 @@
                             </div>
                             <div class="we-Cart-entryQuantity">
                                 <label class="text-muted">${'Qty' @ i18n}:</label>
-                                <span data-sly-test.isReadOnly="${cart.isReadOnly}"
+                                <!--/* Display read only quantity when cart is read only. */-->
+                                <span data-sly-test.isReadOnly="${properties.isReadOnly}"
                                       data-sly-attribute="${hapiCartEntry.itemprop.quantity}">{{ cartEntry.quantity }}</span>
+                                <!--/* Display read only quantity when cart is read not only and entry is read only. */-->
+                                <span v-if="cartEntry.readonly == true"
+                                      data-sly-test="${!isReadOnly}"
+                                      data-sly-attribute="${hapiCartEntry.itemprop.quantity}">{{ cartEntry.quantity }}</span>
+                                <!--/* Display modifiable quantity when cart or entry is not read only. */-->
                                 <form data-sly-test="${!isReadOnly}" method="POST"
-                                      action="${cart.currentPageUrl @ selectors='weretail.modifycartentry'}">
+                                      action="${currentPage.path @ extension='html', selectors='weretail.modifycartentry'}"
+                                      v-if="cartEntry.readonly != true">
                                     <input type="hidden" name="entryNumber" value="{{index}}"/>
-                                    <input type="hidden" name="redirect" value="${cart.currentPageUrl}"/>
+                                    <input type="hidden" name="redirect" value="${currentPage.path @ extension='html'}"/>
                                     <input type="number" name="quantity" v-model="cartEntry.quantity" min="0" step="1"
                                            data-sly-attribute="${hapiCartEntry.itemprop.quantity}" v-on:change.prevent="updateCart"/>
                                 </form>
@@ -79,31 +88,32 @@
                                 <strong>{{ cartEntry.priceFormatted }}</strong>
                             </div>
                         </div>
-    
+
                         <div class="we-Cart-remove">
-                            <form data-sly-test="${!cart.isReadOnly}" method="POST"
-                                  action="${cart.currentPageUrl @ selectors='weretail.deletecartentry'}" v-on:click.prevent="updateCart">
+                            <form data-sly-test="${!isReadOnly}" method="POST"
+                                  action="${currentPage.path @ extension='html', selectors='weretail.deletecartentry'}"
+                                  v-on:click.prevent="updateCart" v-if="cartEntry.readonly != true">
                                 <input type="hidden" name="entryNumber" value="{{index}}"/>
-                                <input type="hidden" name="redirect" value="${cart.currentPageUrl}"/>
+                                <input type="hidden" name="redirect" value="${currentPage.path @ extension='html'}"/>
                                 <button type="submit" class="btn btn-default btn-icon"><i class="text-muted fa fa-times-circle-o"></i></button>
                             </form>
                         </div>
-    
+
                     </div>
                 </div>
-    
-                <div class="we-Cart-promotions" v-if="cartPromotions && cartPromotions.length > 0" data-sly-test="${!cart.isReadOnly}">
-                    <span v-for="promotion in cartPromotions" class="we-Cart-promotion" v-html="promotion.message"></span>
+
+                <div class="we-Cart-promotions" v-if="orderPromotions && orderPromotions.length > 0" data-sly-test="${!isReadOnly}">
+                    <span v-for="promotion in orderPromotions" class="we-Cart-promotion" v-html="promotion.message"></span>
                 </div>
-    
+
                 <div class="we-Cart-footer">
                     <div class="we-Cart-subtotal" v-if="cartEntriesSize > 0">
                         ${ 'sub-total' @ i18n }: <span data-sly-attribute="${hapiCart.itemprop.total}">{{cartTotalPrice}}</span>
                     </div>
-                    <a v-if="cartEntriesSize > 0" data-sly-test="${ cart.checkoutPage }" class="btn btn-primary btn-action pull-right"
-                       href="${ cart.checkoutPage }">${ 'Checkout' @ i18n }</a>
+                    <a v-if="cartEntriesSize > 0" data-sly-test="${inheritedPageProperties['cq:checkoutPage']}" class="btn btn-primary btn-action pull-right"
+                       href="${inheritedPageProperties['cq:checkoutPage'] @ extension='html' }">${ 'Checkout' @ i18n }</a>
                 </div>
-                
+
             </div>
         </div>
     </cart-content>

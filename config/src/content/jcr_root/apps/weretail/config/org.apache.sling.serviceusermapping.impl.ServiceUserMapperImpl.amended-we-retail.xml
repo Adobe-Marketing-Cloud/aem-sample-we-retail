@@ -2,4 +2,4 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
           jcr:primaryType="sling:OsgiConfig"
           user.default=""
-          user.mapping="[com.adobe.cq.sample.we.retail.core:orders=commerce-orders-service,com.adobe.cq.sample.we.retail.core:frontend=commerce-frontend-service]"/>
+          user.mapping="[com.adobe.cq.sample.we.retail.core:orders=[commerce-orders-service],com.adobe.cq.sample.we.retail.core:frontend=[content-reader-service]]"/>

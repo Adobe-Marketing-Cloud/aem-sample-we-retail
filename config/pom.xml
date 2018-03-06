@@ -22,9 +22,9 @@
     <!-- ====================================================================== -->
     <parent>
         <groupId>com.adobe.cq.sample</groupId>
-        <artifactId>we.retail</artifactId>
-        <version>2.0.5-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
+        <artifactId>we.retail.parent</artifactId>
+        <version>2.9.9-SNAPSHOT</version>
+        <relativePath>../parent/pom.xml</relativePath>
     </parent>
 
     <!-- ====================================================================== -->
@@ -106,7 +106,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <verbose>true</verbose>
-                    <group>adobe/aem6/sample</group>
+                    <group>adobe/aem6</group>
                     <failOnError>true</failOnError>
                     <builtContentDirectory>target/${project.artifactId}</builtContentDirectory>
                     <filterSource>${basedir}/src/content/META-INF/vault/filter.xml</filterSource>

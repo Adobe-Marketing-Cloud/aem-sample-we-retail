@@ -3,5 +3,5 @@
     jcr:primaryType="cq:Component"
     jcr:title="Form Button"
     jcr:description="Allows visitors to interact with the form"
-    sling:resourceSuperType="core/wcm/components/form/button/v1/button"
+    sling:resourceSuperType="core/wcm/components/form/button/v2/button"
     componentGroup="We.Retail Form"/>

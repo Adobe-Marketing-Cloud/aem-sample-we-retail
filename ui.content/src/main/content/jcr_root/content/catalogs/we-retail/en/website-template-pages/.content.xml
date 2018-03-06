@@ -3,7 +3,6 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:allowedTemplates="[/conf/we-retail/settings/wcm/templates/.*]"
-        cq:designPath="/etc/designs/we-retail"
         jcr:description="Page Designs Used To Generate Catalogs"
         jcr:primaryType="nt:unstructured"
         jcr:title="Template Pages"

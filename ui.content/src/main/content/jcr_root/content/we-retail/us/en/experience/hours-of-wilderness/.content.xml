@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2018-02-07T17:42:36.461+01:00"
+        cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2018-02-07T18:48:04.956+01:00"
+        cq:lastRolledoutBy="admin"
+        cq:template="/conf/we-retail/settings/wcm/templates/experience-page"
+        jcr:mixinTypes="[cq:LiveRelationship]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="48 hours of Wilderness"
+        sling:resourceType="weretail/components/structure/page">
+        <root
+            cq:lastRolledout="{Date}2018-02-07T17:42:36.443+01:00"
+            cq:lastRolledoutBy="admin"
+            jcr:mixinTypes="[cq:LiveRelationship]"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                cq:lastRolledout="{Date}2018-02-07T17:42:36.449+01:00"
+                cq:lastRolledoutBy="admin"
+                jcr:created="{Date}2016-01-13T15:58:09.854+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2018-02-07T17:42:36.447+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <contentfragment
+                    cq:lastRolledout="{Date}2018-02-07T17:42:36.457+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:created="{Date}2018-02-07T16:54:41.860+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2018-02-07T16:55:14.764+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="weretail/components/content/contentfragment"
+                    displayMode="singleText"
+                    elementNames="main"
+                    fragmentPath="/content/dam/we-retail/en/experiences/48-hours-of-wilderness/48-hours-of-wilderness"
+                    paragraphScope="all"
+                    text="&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    48 Hours of Wilderness&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    Text: Ian Provo. Photos: Ian Provo&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    Sometimes it can be difficult to get back into the mountains. The business has to come first, or else there can be no play. I feel blessed to spend a lot of time in the places that I love, but it seems as though I could never get enough. The idea of not being able to do these things is always driving me hard to make the most out of every trip, however long or short.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    My brother Neil and I had a break in between jobs, giving us one night and 48 hours to get back into the mountains. We're lucky to live at the western entrance to the Uintas, a vast wilderness to explore, and also where we got our start in flyfishing. I've become so familiar with the land, that if feels like my home. Yet it's impossible to see it all. Using the maps to find a new place with a squiggly blue line that leads to some small blue dots is where it all starts. It's what we're all about.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    We thought we'd explore a bit of the North Slope of the Uintas. The one billion year old wrinkled core of the range runs west to east for 150 miles, with long glacially carved river valleys running north and south from the crest the entire way. This anomalous feature is the largest east/west oriented mountain range outside of Alaska. Once we made it to the north slope road, we headed east up and over the great basin divide and into the headwaters of the green river.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    We turned off the main north slope road and began driving up a valley to a trailhead along the west fork blacks fork. One river crossing which was perfectly handled with Neil's land rover. His rig is necessary for accessing some of the hard to reach trailheads that encompass the Uintas.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    The first few miles of trail brought us through a sad forest of dead, bark beetle infested conifers. This is a characteristic that has become widespread throughout the Uintas and a majority of vast timbered lands all the way to canada. It's primed for a massive fire, and only a matter of time before the Boy Scouts of America set it ablaze, again. Once we reached the first meadow we encountered a herd of sheep and their shit. Not very pleasant but it's the land of many uses so you just have to avoid the loud, smelly bastards. After we passed the sheep, the long meadow began to open up, along with the river and the views.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    We rigged up our rods with some bushy dry flies and began leap frogging our way up the river, hitting every choice hole along the way.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    I fully lost track of how many fish we caught on our way up the river to camp. Most of the fish were small and feisty brook trout which at times seemed like that was all that existed. However I knew that this drainage harbored some native trout. As a naturalist, I lose my shit when a beautiful native cutthroat trout comes to hand amidst a sea of invasive brook trout. This colorado river cutthroat has evolved over thousands of years to live in this stream, evident by his vibrant camouflage to match his environment.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    With no real destination in mind other than a camp with a view, our plan was to hike along the river and fish until we found what we were looking for. The numbers were adding up both in terms of miles and fish caught. It was time for a break.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    After about 5 miles, we found a sick camp spot in one of the upper meadows with some beautiful water running through it. Once the sun dropped behind the massive valley walls, the fishing was elevated to another level. I kid you not we were catching fish every cast. we fished for one hour before dinner and probably had over one hundred fish between the two of us.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    Another colorado river cutthroat that fits in my hand. Most of the fish were small but had lots of character and vibrant colors. Most importantly, the trout were not afraid to eat my fly as it floated through a corner pocket again and again, each time finding itself lodged in the mouth of the next eager fish.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    A good camp trip to the uintas is not complete without a fast moving storm cell. We retreated to the tent just in time to get pounded with rain for about 20 minutes. Eventually the massive thunderhead moved to the next valley as it glowed with the last rays of sun.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    The next morning we ate a large bowl of oats before our ambitious trek into the alpine. We had 17 miles to cover before we could begin the drive back home. My plan was to hike to a particular ridge line to shoot a 360 panorama, and fish a little blue dot on the map that I suspected may hold some native cutthroat trout.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    We cracked through the treeline and made our way on to the alpine tundra. The wildflowers were just starting to come into bloom across the high terrain. It's a harsh life for them this summer with only a few months to grow between snowflakes.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    I had scoped out a spot on the map where I would be able to shoot a 360 Panorama. This ridgeline acts as a divide between two great river systems. Neil sits on the left in the Great Basin at the headwaters of the largest river in the country to never reach the ocean, the Bear. And I sit on the right of the image in the headwaters of the green river and colorado river drainage, one of the american west's iconic bodies of water.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    On our way down from the pass, we would stop at this beautiful alpine pond that sits above all else at the head of the valley. I made a quick stop to photograph these paintbrush flowers. While I was fussing with lenses and getting raped by mosquitos, Neil was down at the pond tied into his second fish. He's on the left shore but he's hard to spot within the carpet of flower buds. Before I headed down, I tied on a little black flying ant that I had crafted the day before at my tying bench at home. Soon after his first flight, he was firmly tucked away in the corner of a cutthroat trouts mouth at 11,200 feet.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    Being at elevation and exposed to the wind, lots of terrestrial insects are blown into the pond. A fish would swim from 20 feet away as soon as the ant hit the water and slowly gulp the insect as if he knew what he was looking for.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    At 4:30pm I caught the last fish of the trip which marked the beginning of our long trek home. We still had to pack up our camp and hike 10 miles back to the car. It's a great feeling of accomplishment when you have a successful trip to an area that you've never seen before. After exploring one long, blue squiggly line and a blue dot, it's time to move on to the next.&#xa;&#xa;"
+                    variationName="master">
+                    <par19
+                        cq:lastRolledout="{Date}2018-02-07T17:42:36.459+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:mixinTypes="[cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid"/>
+                </contentfragment>
+            </responsivegrid>
+            <hero_image
+                cq:lastRolledout="{Date}2018-02-07T17:42:36.463+01:00"
+                cq:lastRolledoutBy="admin"
+                jcr:lastModified="{Date}2018-02-07T17:42:36.460+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="weretail/components/content/heroimage"
+                fileReference="/content/dam/we-retail/en/experiences/48-hours-of-wilderness/48-hours-of-wilderness-1.jpg"
+                useFullWidth="true"/>
+        </root>
+    </jcr:content>
+</jcr:root>

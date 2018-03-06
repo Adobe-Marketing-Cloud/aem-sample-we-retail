@@ -47,42 +47,49 @@
                             <ul class="small we-ShoppingCart-entryVariants" data-sly-list.key="${item.variantAxesMap}">
                                 <li><span>${key @ i18n}</span>: ${item.variantAxesMap[key]}</li>
                             </ul>
+                            <small class="text-info" data-sly-test="${item.entryPromotions}">
+                                <span data-sly-repeat.promotion="${item.entryPromotions}">${promotion.message @ context='html'}</span>
+                            </small>
                         </div>
                     </div>
 
                 </div>
                 <div class="we-ShoppingCart-entryPrice">
-                    <span data-sly-attribute="${hapiCartEntry.itemprop.unitPrice}">${item.price}</span>
+                    <strong data-sly-attribute="${hapiCartEntry.itemprop.unitPrice}">${item.price}</strong>
+                    <small data-sly-test="${item.strikeThroughPrice}"class="we-ShoppingCart-strikethroughPrice">${item.strikeThroughPrice}</small>
+                </div>
+                <div class="we-ShoppingCart-entryPrice">
+                    <span>${item.trikeThroughPrice}</span>
                 </div>
                 <div class="we-ShoppingCart-entryQuantity">
                     <label class="text-muted">${'Qty' @ i18n}:</label>
-                <span data-sly-test.isReadOnly="${cart.isReadOnly}"
+                <span data-sly-test.isReadOnly="${properties.isReadOnly || item.readOnly}"
                       data-sly-attribute="${hapiCartEntry.itemprop.quantity}">${item.entry.quantity}</span>
                     <form data-sly-test="${!isReadOnly}" method="POST"
-                          action="${cart.currentPageUrl @ selectors='weretail.modifycartentry'}">
+                          action="${currentPage.path @ extension='html', selectors='weretail.modifycartentry'}">
                         <input type="hidden" name="entryNumber" value="${item.entry.entryIndex}"/>
-                        <input type="hidden" name="redirect" value="${cart.currentPageUrl}"/>
+                        <input type="hidden" name="redirect" value="${currentPage.path @ extension='html'}"/>
                         <input type="number" name="quantity" value="${item.entry.quantity}" min="0" step="1"
                                data-sly-attribute="${hapiCartEntry.itemprop.quantity}"/>
                     </form>
                 </div>
                 <div class="we-ShoppingCart-entryPrice">
                     <strong data-sly-attribute="${hapiCartEntry.itemprop.itemPrice}">${item.totalPrice}</strong>
+                    <small data-sly-test="${item.strikeThroughTotalPrice}" class="we-ShoppingCart-strikethroughPrice">${item.strikeThroughTotalPrice}</small>
                 </div>
                 <div class="we-ShoppingCart-remove">
-                    <form data-sly-test="${!cart.isReadOnly}" method="POST"
-                          action="${cart.currentPageUrl @ selectors='weretail.deletecartentry'}">
+                    <form data-sly-test="${!isReadOnly}" method="POST"
+                          action="${currentPage.path @ extension='html', selectors='weretail.deletecartentry'}">
                         <input type="hidden" name="entryNumber" value="${item.entry.entryIndex}"/>
-                        <input type="hidden" name="redirect" value="${cart.currentPageUrl}"/>
+                        <input type="hidden" name="redirect" value="${currentPage.path @ extension='html'}"/>
                         <button type="submit" class="btn btn-default btn-icon"><i
                                 class="text-muted fa fa-times-circle-o"></i></button>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="we-ShoppingCart-promotions" data-sly-test="${cart.orderPromotions}">
-            <span data-sly-repeat.promotion="${cart.orderPromotions}" class="we-ShoppingCart-promotion">${promotion.message @
-                context='html'}</span>
+        <div class="we-Cart-promotions" v-if="orderPromotions && orderPromotions.length > 0" data-sly-test="${!isReadOnly}">
+            <span v-for="promotion in orderPromotions" class="we-Cart-promotion" v-html="promotion.message"></span>
         </div>
     </div>
 </div>

@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2016-07-04T11:34:53.077+02:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/me/coats/meotwipot"
+        cq:productMaster="/var/commerce/products/we-retail/me/coats/meotwipot"
         cq:tags="[we-retail:gender/men,we-retail:season/winter,we-retail:activity/others,we-retail:apparel/coat]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -34,7 +34,7 @@
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weretail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/me/coats/meotwipot">
+                productData="/var/commerce/products/we-retail/me/coats/meotwipot">
                 <meotwipot-s
                     cq:commerceType="variant"
                     cq:lastRolledout="{Date}2016-07-04T11:34:53.045+02:00"
@@ -42,7 +42,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/coats/meotwipot/size-s">
+                    productData="/var/commerce/products/we-retail/me/coats/meotwipot/size-s">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:34:53.052+02:00"
                         cq:lastRolledoutBy="admin"
@@ -66,7 +66,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/coats/meotwipot/size-m">
+                    productData="/var/commerce/products/we-retail/me/coats/meotwipot/size-m">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:34:53.060+02:00"
                         cq:lastRolledoutBy="admin"
@@ -90,7 +90,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/coats/meotwipot/size-l">
+                    productData="/var/commerce/products/we-retail/me/coats/meotwipot/size-l">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:34:53.068+02:00"
                         cq:lastRolledoutBy="admin"
@@ -114,7 +114,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/coats/meotwipot/size-xl">
+                    productData="/var/commerce/products/we-retail/me/coats/meotwipot/size-xl">
                     <image
                         cq:lastRolledout="{Date}2016-07-04T11:34:53.075+02:00"
                         cq:lastRolledoutBy="admin"
@@ -183,7 +183,7 @@
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"
             cq:master="/content/catalogs/we-retail/en/website-template-pages/product-page-template"
-            cq:rolloutConfigs="[/etc/msm/rolloutconfigs/catalogpagecontent,/etc/msm/rolloutconfigs/catalogrollouthooks]"
+            cq:rolloutConfigs="[/libs/msm/catalog/rolloutconfigs/catalogpagecontent,/libs/msm/catalog/rolloutconfigs/catalogrollouthooks]"
             jcr:primaryType="cq:LiveCopy"/>
         <image
             jcr:primaryType="nt:unstructured"

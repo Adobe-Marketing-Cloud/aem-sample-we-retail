@@ -5,11 +5,11 @@
         cq:lastModified="{Date}2016-09-23T16:24:52.890-07:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/we-retail/settings/wcm/templates/redirect-page"
+        jcr:language="en_CA"
         jcr:primaryType="cq:PageContent"
         jcr:title="Canada"
-        sling:redirect="{Boolean}true"
-        sling:redirectStatus="{Long}302"
-        sling:resourceType="foundation/components/redirect"/>
+        sling:resourceType="weretail/components/structure/page"
+        cq:redirectTarget="/content/we-retail/ca/en"/>
     <en/>
     <fr/>
 </jcr:root>

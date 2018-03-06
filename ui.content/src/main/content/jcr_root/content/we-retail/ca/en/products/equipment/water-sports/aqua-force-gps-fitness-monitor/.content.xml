@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2017-02-08T11:58:21.174+01:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/eq/water-sports/eqswsuaqr"
+        cq:productMaster="/var/commerce/products/we-retail/eq/water-sports/eqswsuaqr"
         cq:tags="[we-retail:activity/swimming,we-retail:equipment,we-retail:season/summer]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -34,7 +34,7 @@
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weretail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsuaqr">
+                productData="/var/commerce/products/we-retail/eq/water-sports/eqswsuaqr">
                 <eqswsuaqr-one-size
                     cq:commerceType="variant"
                     cq:lastRolledout="{Date}2017-02-08T11:58:21.156+01:00"
@@ -42,7 +42,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsuaqr/size-one-size">
+                    productData="/var/commerce/products/we-retail/eq/water-sports/eqswsuaqr/size-one-size">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:21.159+01:00"
                         cq:lastRolledoutBy="admin"

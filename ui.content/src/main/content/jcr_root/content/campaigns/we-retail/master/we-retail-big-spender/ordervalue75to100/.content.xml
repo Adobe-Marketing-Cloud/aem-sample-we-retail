@@ -4,7 +4,7 @@
     <jcr:content
         cq:lastModified="{Date}2016-05-16T19:18:14.325+02:00"
         cq:lastModifiedBy="admin"
-        cq:segments="[/etc/segmentation/contexthub/order-value-75-to-100]"
+        cq:segments="[/conf/we-retail/settings/wcm/segments/order-value-75-to-100]"
         cq:template="/libs/cq/personalization/templates/experience"
         jcr:description="Active when a shopper is approaching the $100 boundary."
         jcr:primaryType="cq:PageContent"

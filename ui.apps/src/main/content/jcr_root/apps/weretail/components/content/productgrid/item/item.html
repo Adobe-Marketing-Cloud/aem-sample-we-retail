@@ -13,14 +13,14 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<li class="foundation-list-item" data-sly-use.item="Item" data-sly-test="${item.exists}">
+<li class="foundation-list-item" data-sly-use.item="we.retail.core.model.ProductGridItem" data-sly-test="${item.exists}">
     <we-product-item price="${item.filters.prices}"
                      color="${item.filters.colors}"
                      size="${item.filters.sizes}"
                      inline-template>
         <div class="we-ProductsGrid-item">
             <div class="we-ProductsGrid-item-image img-center">
-                <sly data-sly-resource="${item.image @ resourceType='weretail/components/content/image', decorationTagName='div' }"></sly>
+                <sly data-sly-resource="${item.image}"></sly>
             </div>
 
             <h3 class="we-ProductsGrid-item-title h4">${item.name}</h3>
@@ -33,7 +33,7 @@
             </strong>
 
             <span class="we-ProductsGrid-item-discount hidden"><span></span>${ 'off' @ i18n }</span>
-            <a href="${item.path}.html" class="we-ProductsGrid-item-link"></a>
+            <a href="${item.path @ extension = 'html'}" class="we-ProductsGrid-item-link"></a>
 
         </div>
         <!-- /.we-ProductsGrid-item -->

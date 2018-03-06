@@ -3,8 +3,6 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:checkoutPage=""
-        cq:contextHubPath="/etc/cloudsettings/default/contexthub"
-        cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
         cq:lastModified="{Date}2017-01-25T15:30:53.144+01:00"
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2017-01-25T15:30:53.145+01:00"

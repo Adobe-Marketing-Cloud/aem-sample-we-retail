@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2017-02-08T11:58:19.738+01:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/me/scarfs/meotwizuf"
+        cq:productMaster="/var/commerce/products/we-retail/me/scarfs/meotwizuf"
         cq:tags="[we-retail:apparel/scarf,we-retail:gender/men,we-retail:season/winter,we-retail:activity/others]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -34,7 +34,7 @@
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weretail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/me/scarfs/meotwizuf">
+                productData="/var/commerce/products/we-retail/me/scarfs/meotwizuf">
                 <meotwizuf-one-size
                     cq:commerceType="variant"
                     cq:lastRolledout="{Date}2017-02-08T11:58:19.720+01:00"
@@ -42,7 +42,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/scarfs/meotwizuf/size-one-size">
+                    productData="/var/commerce/products/we-retail/me/scarfs/meotwizuf/size-one-size">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:19.723+01:00"
                         cq:lastRolledoutBy="admin"
@@ -78,8 +78,7 @@
                     jpegQuality="85"
                     unsharpMaskAmount="0"
                     unsharpMaskRadius="0"
-                    unsharpMaskThreshold="0"
-                    width="300"/>
+                    unsharpMaskThreshold="0"/>
                 <assets
                     cq:lastRolledout="{Date}2017-02-08T11:58:19.728+01:00"
                     cq:lastRolledoutBy="admin"

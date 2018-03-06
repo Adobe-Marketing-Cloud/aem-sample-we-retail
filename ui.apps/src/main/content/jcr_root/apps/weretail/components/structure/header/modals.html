@@ -13,8 +13,8 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<div data-sly-use.header="Header"
-     class="we-SearchModal modal fade" id="navbar-search" role="dialog" data-color="primary">
+<sly data-sly-use.header="we.retail.core.model.Header" data-sly-test.isCommunitiesPage="${header.isCommunitiesPage}"></sly>
+<div class="we-SearchModal modal fade ${isCommunitiesPage?'we-SearchModal-community':''}" id="navbar-search" role="dialog" data-color="primary">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -25,19 +25,8 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <form id="form-search-input-inline" data-paths="[/content/we-retail/us/en]"
-                              class="scf-js-searchform navbar-form navbar-left" role="search">
-                            <div class="scf-quicksearch-form-group form-group">
-                                <input type="search" id="scf-js-quicksearch-input-inline" placeholder="Start typing..."
-                                       data-dropdown="drop_search" aria-controls="drop_search" aria-expanded="false" name="input_value"
-                                       class="we-SearchModal-input" value="" required="" autocomplete="off">
-                                <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
-                                <input type="hidden" name="resultPage" class="scf-js-seach-resultPage"
-                                       value="/content/we-retail/us/en/community/search"/>
-                                <input type="hidden" name="searchEndpoint" class="scf-js-search-endpoint"
-                                       value="/content/we-retail/us/en/community/search/jcr:content/content/primary/searchresult"/>
-                            </div>
-                        </form>
+                        <sly data-sly-test="${isCommunitiesPage}" data-sly-resource="${'./search' @ resourceType='weretail/components/structure/search', selectors='community'}"></sly>
+                        <sly data-sly-test="${!isCommunitiesPage}" data-sly-resource="${'./search' @ resourceType='weretail/components/structure/search', decoration='true'}"></sly>
                     </div>
                 </div>
             </div>
@@ -53,14 +42,7 @@
                 <h3 class="modal-title text-center">${ 'CHOOSE YOUR COUNTRY' @ i18n }</h3>
             </div>
             <div class="modal-body">
-                <ul class="we-LanguagesList" data-sly-list.country="${header.countries}">
-                    <li>
-                        <i class="we-lang-icon we-lang-icon-${country.countrycode}"></i><span data-sly-list.language="${country.languages}"><a
-                            href="${language.path}.html" class="${language.selected ? 'active' : ''}">${language.name}</a><sly
-                            data-sly-test="${!languageList.last}"> |
-                    </sly></span>
-                    </li>
-                </ul>
+                <sly data-sly-resource="${'./languagenavigation' @ resourceType='weretail/components/structure/languagenavigation', decoration=true}"/>
             </div>
         </div>
         <div class="modal-after">

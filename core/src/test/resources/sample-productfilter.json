@@ -1,0 +1,14 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "jcr:mixinTypes": [
+    "cq:LiveRelationship"
+  ],
+  "jcr:createdBy": "admin",
+  "jcr:lastModifiedBy": "admin",
+  "cq:lastRolledout": "Wed Feb 08 2017 11:58:35 GMT+0100",
+  "jcr:created": "Mon Sep 19 2016 10:56:08 GMT+0200",
+  "type": "color",
+  "jcr:lastModified": "Wed Feb 08 2017 11:58:35 GMT+0100",
+  "sling:resourceType": "weretail/components/structure/productfilter",
+  "cq:lastRolledoutBy": "admin"
+}

@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2016-06-29T14:20:50.981+02:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/me/shirts/mehisulat"
+        cq:productMaster="/var/commerce/products/we-retail/me/shirts/mehisulat"
         cq:tags="[we-retail:gender/men,we-retail:season/summer,we-retail:activity/hiking,we-retail:apparel/shirt]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -34,7 +34,7 @@
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weretail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/me/shirts/mehisulat">
+                productData="/var/commerce/products/we-retail/me/shirts/mehisulat">
                 <mehisulat-xs
                     cq:commerceType="variant"
                     cq:lastRolledout="{Date}2016-06-29T14:20:50.866+02:00"
@@ -42,7 +42,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/shirts/mehisulat/size-xs">
+                    productData="/var/commerce/products/we-retail/me/shirts/mehisulat/size-xs">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:20:50.887+02:00"
                         cq:lastRolledoutBy="admin"
@@ -66,7 +66,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/shirts/mehisulat/size-s">
+                    productData="/var/commerce/products/we-retail/me/shirts/mehisulat/size-s">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:20:50.909+02:00"
                         cq:lastRolledoutBy="admin"
@@ -90,7 +90,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/shirts/mehisulat/size-m">
+                    productData="/var/commerce/products/we-retail/me/shirts/mehisulat/size-m">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:20:50.930+02:00"
                         cq:lastRolledoutBy="admin"
@@ -114,7 +114,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/shirts/mehisulat/size-l">
+                    productData="/var/commerce/products/we-retail/me/shirts/mehisulat/size-l">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:20:50.946+02:00"
                         cq:lastRolledoutBy="admin"
@@ -138,7 +138,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/shirts/mehisulat/size-xl">
+                    productData="/var/commerce/products/we-retail/me/shirts/mehisulat/size-xl">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:20:50.959+02:00"
                         cq:lastRolledoutBy="admin"

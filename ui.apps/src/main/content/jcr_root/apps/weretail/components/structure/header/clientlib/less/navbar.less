@@ -29,13 +29,6 @@
     font-size: @font-size-base;
 
     text-transform: uppercase;
-
-    .navbar-center {
-        .make-md-column(9);
-        .make-md-column-offset(1);
-
-        position: static;
-    }
 }
 
 .navbar-default {}
@@ -63,7 +56,7 @@
 .navbar-nav {
     .divider {
         height: 1px;
-        margin: 11px -50px;
+        margin: 11px 0;
         overflow: hidden;
         background-color: #666;
     }
@@ -75,9 +68,18 @@
         & > a {
             padding-right: @padding-small-horizontal;
             padding-left: @padding-small-horizontal;
+
+            @media (min-width: @screen-sm-min) {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            @media (max-width: @screen-sm-max) {
+                display: inline-block;
+            }
         }
 
-        @media (min-width: @screen-sm-min) {
+        @media (min-width: @screen-md-min) {
             & > a {
                 padding-right: @padding-base-horizontal;
                 padding-left: @padding-base-horizontal;
@@ -103,20 +105,11 @@
                 }
             }
         }
-
-
-        @media (max-width: @grid-float-breakpoint-max) {
-            & > a {
-                display: inline-block;
-            }
-        }
     }
 }
 
 .navbar-header {
     .make-md-column(2);
-
-    margin-left: -@grid-gutter-width/2;
 
     position: relative;
 
@@ -409,6 +402,19 @@ nav.navbar-absolute-top {
             float: left;
         }
 
+        .navbar-header {
+            float: none;
+        }
+
+        .navbar-nav {
+            float: none;
+            margin: 9px -30px;
+
+            > li {
+                float: none;
+            }
+        }
+
         .navbar-collapse {
             position: fixed;
             left: 0;
@@ -426,6 +432,10 @@ nav.navbar-absolute-top {
             .nav {
                 display: none;
             }
+
+            &.collapse {
+                height: 100% !important;
+            }
         }
 
         .navbar-collapse.collapse.in {
@@ -440,6 +450,10 @@ nav.navbar-absolute-top {
         .navbar-inverse .navbar-toggle-close:hover,
         .navbar-inverse .navbar-toggle-close:focus {
             background-color: @brand-primary;
+        }
+
+        .navbar-toggle {
+            display: block;
         }
 
         .navbar-toggle-close {
@@ -465,7 +479,6 @@ nav.navbar-absolute-top {
             width: auto;
             transition-delay: 0s;
         }
-
     }
 }
 

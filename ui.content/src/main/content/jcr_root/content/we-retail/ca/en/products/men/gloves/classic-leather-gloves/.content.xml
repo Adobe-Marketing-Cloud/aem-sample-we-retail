@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2017-02-08T11:58:19.890+01:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/me/gloves/meotwicls"
+        cq:productMaster="/var/commerce/products/we-retail/me/gloves/meotwicls"
         cq:tags="[we-retail:gender/men,we-retail:apparel/gloves,we-retail:season/winter,we-retail:activity/others]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -34,7 +34,7 @@
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weretail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/me/gloves/meotwicls">
+                productData="/var/commerce/products/we-retail/me/gloves/meotwicls">
                 <meotwicls-s
                     cq:commerceType="variant"
                     cq:lastRolledout="{Date}2017-02-08T11:58:19.860+01:00"
@@ -42,7 +42,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/gloves/meotwicls/size-s">
+                    productData="/var/commerce/products/we-retail/me/gloves/meotwicls/size-s">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:19.863+01:00"
                         cq:lastRolledoutBy="admin"
@@ -66,7 +66,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/gloves/meotwicls/size-m">
+                    productData="/var/commerce/products/we-retail/me/gloves/meotwicls/size-m">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:19.869+01:00"
                         cq:lastRolledoutBy="admin"
@@ -90,7 +90,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/me/gloves/meotwicls/size-l">
+                    productData="/var/commerce/products/we-retail/me/gloves/meotwicls/size-l">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:19.875+01:00"
                         cq:lastRolledoutBy="admin"

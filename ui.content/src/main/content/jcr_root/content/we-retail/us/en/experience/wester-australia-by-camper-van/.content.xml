@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2018-02-07T17:42:36.574+01:00"
+        cq:lastModifiedBy="admin"
+        cq:lastRolledout="{Date}2018-02-07T18:48:04.957+01:00"
+        cq:lastRolledoutBy="admin"
+        cq:template="/conf/we-retail/settings/wcm/templates/experience-page"
+        jcr:mixinTypes="[cq:LiveRelationship]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Camping in Western Australia"
+        sling:resourceType="weretail/components/structure/page">
+        <root
+            cq:lastRolledout="{Date}2018-02-07T17:42:36.557+01:00"
+            cq:lastRolledoutBy="admin"
+            jcr:mixinTypes="[cq:LiveRelationship]"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <responsivegrid
+                cq:lastRolledout="{Date}2018-02-07T17:42:36.563+01:00"
+                cq:lastRolledoutBy="admin"
+                jcr:created="{Date}2016-01-13T15:58:09.854+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2018-02-07T17:42:36.560+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <contentfragment
+                    cq:lastRolledout="{Date}2018-02-07T17:42:36.570+01:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:created="{Date}2018-02-07T17:23:35.000+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2018-02-07T17:23:54.312+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="weretail/components/content/contentfragment"
+                    displayMode="singleText"
+                    elementNames="main"
+                    fragmentPath="/content/dam/we-retail/en/experiences/wester-australia-by-camper-van/wester-australia-by-camper-van"
+                    paragraphScope="all"
+                    text="&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    Western Australia by camper van&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    Text: Jacob Wester. Photos: Sofia Sjöberg&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    A vibrant red, dusty highway stretches out before us into what seems like infinity, at the far reach of our sights it distorts and shimmers from the afternoon heat, fading into the blue of the horizon. For the past hour the image has stayed roughly the same, apart from the occasional road train flying by, its fifty meters of steel and rubber promptly asking us to give way before disappearing in our rear view mirrors. The fuel gauge of our rented Toyota Hiace is well below one third, and we can’t seem to remember how far the next gas station is… Welcome to West Australia!&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    Traveling by camper van is an ambiguous affair – while avoiding many of the arduous preparations of a long journey, such as carefully planning ones stops, booking hotel nights and deciding what to do and see far in advance, one instead deals with the prospect of not knowing much at all of the itinerary beforehand. Not an easy task for a control freak, but an oh-so-alluring potential of exploration for the more adventurous traveler. Perhaps somewhere along the road towards your destination, an enticing sign leads you to something fantastic that you weren’t anticipating at all, or maybe you end up realizing that the quaint romantic town described in your guidebook was a total tourist trap and hardly worth staying in for long. Just get back in your van and go look for something new!&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    The Australian West coast is a camper’s heaven. Endless miles of desert roads leading to secret beaches, vast canyons and crystal clear rivers, and the very few people you are likely to meet on your journey will be some of the most easy-going characters you’ll find anywhere in the world. And if you think the landscape surrounding you is breathtakingly beautiful (and it is), you better prepare yourself for your first night in the Australian desert. It begins hours before the first stars come out. As the sun starts setting, the sky takes on a mesmerizing gradient, ranging from the brightest orange on the horizon to a dark purple above your head, and as you keep staring up and behind you, nearly tripping over, it stretches into a deep greyish green, far to the east. As night slowly falls, the spectrums of hues blend together into a thick impenetrable black, as one by one the stars of the southern hemisphere’s window into space reveal themselves. With no cities around for a thousand miles, light pollution is unheard of. At this point, time ceases to exist, as you gaze into the nothingness of the past, while scattered and confused thoughts of existentialism and the meaning of it all battle for your mind’s attention.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    “Are you sure we won’t get stuck in the sand here?”, Sofia asks me nervously as we trot in two-wheel drive down a winding road through the rolling dunes of the Quobba station outback. Somewhere in the distance the Indian Ocean is calling, salt saturating the desert air and flashes of blue horizon luring us closer to the end of the road. Rumors of a world class pointbreak has brought us and our surfboards here, and my intuition tells me we’re getting closer, every bend and rollover making me stretch my neck in the hope of finally seeing what I’m silently praying to discover. Just as our poor Toyota is about to sink into the increasingly deeper sand for a final resting place, we make it over one last knoll before our destination is revealed. In front of us a majestic bay stretches out, sapphire-blue waves crashing on sparkling sand, and a reeling lefthand pointbreak rolling down the far end, the offshore spray grooming the swell lines to perfection. At this point I’m having a hard time focusing on the road as we roll into the Red Bluff camping community. In the center of a handful of campgrounds scattered along the beach is a tiny general store/surf shop/pizza restaurant, run by a friendly local woman and her five sons and daughters, all miniature replicas of herself, sun-bleached hair and a deep golden surf tan from countless hours spent in the surf. We get allotted a private space on the far end of the beach where we set up camp for the next two nights, unknowing that they will turn to three, then four and eventually five, in this little slice of paradise. The following days turn into a timeless blur of surfing, sleeping, drinking beer around the fire, and watching the humpback whales migrate in the hundreds on their way north along the coast. These majestic creatures are constantly present, sometimes breaching the surface just outside the surf line-up, providing delightful entertainment in between waves.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    Then there’s the surf. A pointbreak breaking for 300 meters down a shallow coral shelf, producing immaculate almond-shaped barrels, grinding down the reef at a barely makeable speed. Even though many of the waves race past me on my struggling backhand, the few that I make it to the end of are some of the best I’ve ever experienced, and I have a hard time containing my excitement, hooting and hollering to Sofia on the cliffs, with her Canon 5D in hand. The line-up out back is an eclectic mix of old salty men on oversized gun surfboards, young semi-pros with stickered boards, girlfriends on longboards and hippies with dreadlocks and big smiles. Nothing of the notorious localism I have read about online, even though I quickly learn to respect the noticeable pecking order, letting the obviously more skilled crowd get the biggest set waves. There are still plenty of action for everyone, and a friendly smile opens up even the grumpiest old-timer. After the sun has set, the same faces are seen around campfires and tailgate barbeques all over the campground, where many seem to have gotten stuck for the season, ignoring distant calls of civilization urging them to return to normal lives. As the stars come out, we set up our cameras for timelapses, hoping to capture some of the magic that is happening above us, all the while our heads turn heavy from the five hours in the water and the beverages that followed.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;                    Three weeks of Australian outback living have come to an end as we once again cross the Perth city limit. The tan on our faces, salt in our hair and smell from our armpits tell the story of the past month, along with the hundreds of gigabytes of data captured, two-dimensional slices of memories, inscribed on our hard drives for future reminiscing. Traveling without a camera would be such a waste of time, we both agree. Or would it? While on a journey, time becomes a countdown to the return home, every day is relished and remembered because tomorrow you’re one day closer to the end. Did our incessant documenting make time slow down, and will the photos and videos make us remember the trip better? It’s impossible to ever capture the true feeling of being somewhere far from home without a single worry in the world, and photo albums will always only show one side of the story. It is our hope that they can inspire others to get out of their comfort zone, and awake the curious spirit inside of us all. Maybe your journey doesn’t take you to the other side of the planet, but maybe just to a neighboring town. So get the world atlas out, throw some darts and look for a camper van. No matter what you’re searching for, it’s all out there waiting to be found, behind the wheel on a dusty road lined with dead kangaroos!&#xa;&#xa;"
+                    variationName="master">
+                    <par8
+                        cq:lastRolledout="{Date}2018-02-07T17:42:36.572+01:00"
+                        cq:lastRolledoutBy="admin"
+                        jcr:mixinTypes="[cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid"/>
+                </contentfragment>
+            </responsivegrid>
+            <hero_image
+                cq:lastRolledout="{Date}2018-02-07T17:42:36.575+01:00"
+                cq:lastRolledoutBy="admin"
+                jcr:lastModified="{Date}2018-02-07T17:42:36.573+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:mixinTypes="[cq:LiveRelationship]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="weretail/components/content/heroimage"
+                fileReference="/content/dam/we-retail/en/experiences/wester-australia-by-camper-van/camping-in-western-australia.jpg"
+                useFullWidth="true"/>
+        </root>
+    </jcr:content>
+</jcr:root>

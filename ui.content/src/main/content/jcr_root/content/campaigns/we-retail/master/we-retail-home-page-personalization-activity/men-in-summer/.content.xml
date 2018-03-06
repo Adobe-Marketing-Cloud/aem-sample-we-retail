@@ -4,7 +4,7 @@
     <jcr:content
         cq:lastModified="{Date}2016-05-16T19:02:50.894+02:00"
         cq:lastModifiedBy="admin"
-        cq:segments="[/etc/segmentation/contexthub/summer-male]"
+        cq:segments="[/conf/we-retail/settings/wcm/segments/summer-male]"
         cq:template="/libs/cq/personalization/templates/experience"
         jcr:isCheckedOut="{Boolean}true"
         jcr:mixinTypes="[mix:versionable]"

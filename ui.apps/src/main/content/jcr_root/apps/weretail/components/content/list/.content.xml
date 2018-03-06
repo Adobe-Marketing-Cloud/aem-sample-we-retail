@@ -3,5 +3,5 @@
     jcr:primaryType="cq:Component"
     jcr:title="List"
     jcr:description="List"
-    sling:resourceSuperType="core/wcm/components/list/v1/list"
+    sling:resourceSuperType="core/wcm/components/list/v2/list"
     componentGroup="We.Retail"/>

@@ -72,6 +72,17 @@
                 }
             }
         },
+        computed: {
+            orderPromotions: function () {
+                if (this.cartPromotions) {
+                    return this.cartPromotions.filter(function (promotion) {
+                        return promotion.cartEntryIndex === undefined || promotion.cartEntryIndex === null;
+                    })
+                } else {
+                    return null;
+                }
+            }
+        },
         events: {
             'cart-button-expand': function(show) {
                 // handle fixed in js
@@ -119,6 +130,15 @@
                 this._fixed = this._fixed || new Fixed(this.$el);
                 this._fixed.on();
                 this._fixed.onScroll();
+            },
+            cartEntryPromotions: function(i) {
+                if (this.cartPromotions) {
+                    return this.cartPromotions.filter(function (promotion) {
+                        return promotion.cartEntryIndex == i;
+                    })
+                } else {
+                    return null;
+                }
             }
         }
     });

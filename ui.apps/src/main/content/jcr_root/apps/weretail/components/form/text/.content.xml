@@ -3,5 +3,5 @@
     jcr:primaryType="cq:Component"
     jcr:title="Form Text"
     jcr:description="Allows visitors to enter text information"
-    sling:resourceSuperType="core/wcm/components/form/text/v1/text"
+    sling:resourceSuperType="core/wcm/components/form/text/v2/text"
     componentGroup="We.Retail Form"/>

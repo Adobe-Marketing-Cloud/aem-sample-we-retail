@@ -241,46 +241,7 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/content/categoryteaser"
                     buttonLinkTo="/content/we-retail/us/en/products/equipment/snow-sports"
-                    fileReference="/content/dam/we-retail/en/activities/skiing/freeride-extreme.jpg">
-                    <cq:responsive
-                        cq:lastRolledout="{Date}2016-10-26T16:43:48.608+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured">
-                        <default
-                            cq:lastRolledout="{Date}2016-10-26T16:43:48.611+02:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            width="6"/>
-                    </cq:responsive>
-                </category_teaser_643606949>
-                <category_teaser_883210151
-                    cq:lastRolledout="{Date}2016-10-26T16:43:48.614+02:00"
-                    cq:lastRolledoutBy="admin"
-                    jcr:created="{Date}2016-03-13T22:42:33.168+01:00"
-                    jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-10-26T16:43:48.612+02:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="weretail/components/content/categoryteaser"
-                    buttonLabel="Snowboarding"
-                    buttonLinkTo="/content/we-retail/us/en/products/equipment/snow-sports"
-                    fileReference="/content/dam/we-retail/en/activities/skiing/freeride-siberia.jpg">
-                    <cq:responsive
-                        cq:lastRolledout="{Date}2016-10-26T16:43:48.616+02:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured">
-                        <default
-                            cq:lastRolledout="{Date}2016-10-26T16:43:48.618+02:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            width="6"/>
-                    </cq:responsive>
-                </category_teaser_883210151>
+                    fileReference="/content/dam/we-retail/en/activities/skiing/freeride-extreme.jpg"/>
             </responsivegrid>
         </root>
     </jcr:content>

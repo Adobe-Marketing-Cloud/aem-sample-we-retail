@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2017-02-08T11:58:21.134+01:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus"
+        cq:productMaster="/var/commerce/products/we-retail/eq/water-sports/eqswsupus"
         cq:tags="[we-retail:activity/swimming,we-retail:equipment,we-retail:season/summer]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -34,7 +34,7 @@
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weretail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus"
+                productData="/var/commerce/products/we-retail/eq/water-sports/eqswsupus"
                 variationAxis="color"
                 variationTitle="Color">
                 <eqswsupus_1-s
@@ -44,7 +44,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.1/size-s">
+                    productData="/var/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.1/size-s">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:21.071+01:00"
                         cq:lastRolledoutBy="admin"
@@ -68,7 +68,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.1/size-m">
+                    productData="/var/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.1/size-m">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:21.076+01:00"
                         cq:lastRolledoutBy="admin"
@@ -92,7 +92,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.1/size-l">
+                    productData="/var/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.1/size-l">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:21.083+01:00"
                         cq:lastRolledoutBy="admin"
@@ -116,7 +116,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.2/size-s">
+                    productData="/var/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.2/size-s">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:21.089+01:00"
                         cq:lastRolledoutBy="admin"
@@ -140,7 +140,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.2/size-m">
+                    productData="/var/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.2/size-m">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:21.096+01:00"
                         cq:lastRolledoutBy="admin"
@@ -164,7 +164,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.2/size-l">
+                    productData="/var/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.2/size-l">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:21.102+01:00"
                         cq:lastRolledoutBy="admin"
@@ -188,7 +188,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.3/size-s">
+                    productData="/var/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.3/size-s">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:21.109+01:00"
                         cq:lastRolledoutBy="admin"
@@ -212,7 +212,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.3/size-m">
+                    productData="/var/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.3/size-m">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:21.116+01:00"
                         cq:lastRolledoutBy="admin"
@@ -236,7 +236,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.3/size-l">
+                    productData="/var/commerce/products/we-retail/eq/water-sports/eqswsupus/eqswsupus.3/size-l">
                     <image
                         cq:lastRolledout="{Date}2017-02-08T11:58:21.121+01:00"
                         cq:lastRolledoutBy="admin"

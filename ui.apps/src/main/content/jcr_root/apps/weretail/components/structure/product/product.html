@@ -19,7 +19,7 @@
      data-sly-attribute="${hapiProduct.itemtype}">
 
     <div data-sly-test="${wcmmode.edit && !model.hasVariants}" class="cq-placeholder"
-         data-emptytext="Product Component"></div>
+         data-emptytext="${'Product Component' @ i18n}"></div>
     
     <we-product-variant
         data-sly-repeat.productItem="${productModel.productItem.variants}"

@@ -46,10 +46,10 @@ public class WeRetailCommerceSessionImpl extends AbstractJcrCommerceSession {
         {
             // A simple shipping pricing architecture with fixed shipping costs.
 
-            put("/etc/commerce/shipping-methods/we-retail/standard-shipping", new BigDecimal("5.00"));
-            put("/etc/commerce/shipping-methods/we-retail/ground-shipping", new BigDecimal("10.00"));
-            put("/etc/commerce/shipping-methods/we-retail/two-business-day", new BigDecimal("15.00"));
-            put("/etc/commerce/shipping-methods/we-retail/one-business-day", new BigDecimal("25.00"));
+            put("/var/commerce/shipping-methods/we-retail/standard-shipping", new BigDecimal("5.00"));
+            put("/var/commerce/shipping-methods/we-retail/ground-shipping", new BigDecimal("10.00"));
+            put("/var/commerce/shipping-methods/we-retail/two-business-day", new BigDecimal("15.00"));
+            put("/var/commerce/shipping-methods/we-retail/one-business-day", new BigDecimal("25.00"));
         }
     };
 
@@ -82,28 +82,34 @@ public class WeRetailCommerceSessionImpl extends AbstractJcrCommerceSession {
         // This is only a stub implementation for the demo site, for which there is no
         // real order processing.
         //
+        Session serviceSession = null;
         try {
-            Node order = resolver.getResource(orderPath).adaptTo(Node.class);
+            serviceSession = commerceService.serviceContext().slingRepository.loginService("orders", null);
+            Node order = serviceSession.getNode(orderPath);
             order.setProperty("orderStatus", "Processing");
             order.getSession().save();
         } catch (Exception e) {
             log.error("Failed to update order", e);
+        } finally {
+            if (serviceSession != null) {
+                serviceSession.logout();
+            }
         }
     }
 
     @Override
     protected String getOrderStatus(String orderId) throws CommerceException {
         //
-        // Status is kept in the vendor section (/etc/commerce); need to find corresponding order there.
+        // Status is kept in the vendor section (/var/commerce); need to find corresponding order there.
         //
         Session serviceSession = null;
         try {
             serviceSession = commerceService.serviceContext().slingRepository.loginService("orders", null);
             //
-            // example query: /jcr:root/etc/commerce/orders//element(*)[@orderId='foo')]
+            // example query: /jcr:root/var/commerce/orders//element(*)[@orderId='foo')]
             //
             StringBuilder buffer = new StringBuilder();
-            buffer.append("/jcr:root/etc/commerce/orders//element(*)[@orderId = '")
+            buffer.append("/jcr:root/var/commerce/orders//element(*)[@orderId = '")
                     .append(Text.escapeIllegalXpathSearchChars(orderId).replaceAll("'", "''"))
                     .append("']");
 

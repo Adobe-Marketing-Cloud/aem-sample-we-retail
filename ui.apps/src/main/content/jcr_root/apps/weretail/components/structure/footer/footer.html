@@ -17,28 +17,20 @@
         data-sly-use.clientlib="${'/libs/granite/sightly/templates/clientlib.html'}"
         data-sly-call="${clientLib.all @ categories='weretail.footer'}"/>
 
-<sly data-sly-use.footer="Footer">
+<sly data-sly-use.footer="we.retail.core.model.Footer">
     <footer class="we-Footer">
         <div class="container">
 
             <div class="row">
 
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="we-Logo we-Logo--big">
                         we.<strong>Retail</strong>
                     </div>
                 </div>
 
-                <div class="col-md-8 col-xs-12">
-                    <sly data-sly-list.item="${footer.items}">
-                        <div class="col-lg-2 col-md-2 col-xs-3">
-                            <div class="we-Footer-nav">
-                                <h2 class="h4">
-                                    <a href="${ item.path }.html">${item.title}</a>
-                                </h2>
-                            </div>
-                        </div>
-                    </sly>
+                <div class="col-md-9 col-sm-12">
+                    <sly data-sly-resource="${'./navigation' @ decoration=true}"></sly>
                 </div>
 
 

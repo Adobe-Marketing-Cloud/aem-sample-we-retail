@@ -2,9 +2,10 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-03-12T23:15:25.214+01:00"
+        cq:lastModified="{Date}2018-02-07T18:48:07.881+01:00"
         cq:lastModifiedBy="admin"
         cq:template="/conf/we-retail/settings/wcm/templates/hero-page"
+        jcr:description="[,]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Experience"
         sling:resourceType="weretail/components/structure/page"
@@ -26,27 +27,30 @@
             <responsivegrid
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
-                <articles_list
-                    jcr:created="{Date}2015-11-23T21:44:37.256+01:00"
+                <list
+                    cq:styleIds="[1508797744638,1508800123708]"
+                    jcr:created="2018-02-06T17:59:00.584+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2015-11-23T21:44:37.256+01:00"
+                    jcr:lastModified="2018-02-06T18:41:21.863+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="weretail/components/content/articleslist"
-                    displayAs="teaser"
-                    feedEnabled="true"
-                    limit="0"
+                    sling:resourceType="weretail/components/content/list"
+                    childDepth="1"
+                    itemType="article"
+                    linkItems="true"
                     listFrom="children"
-                    orderBy="cq:lastModified"
-                    pageMax="0"
+                    orderBy="modified"
+                    showDescription="false"
+                    showModificationDate="true"
+                    sortOrder="asc"
                     tagsMatch="any"/>
             </responsivegrid>
         </root>
     </jcr:content>
     <arctic-surfing-in-lofoten/>
-    <summit-success-in-the-himalayas/>
-    <climbing-on-kalymnos-island--greece/>
-    <running-at-the-great-wall-marathon/>
-    <skiing-deep-powder-in-siberia/>
-    <climbing-in-the-massif-du-mont-blanc/>
+    <hours-of-wilderness/>
+    <fly-fishing-the-amazon/>
+    <skitouring/>
+    <steelhead-and-spines-in-alaska/>
+    <wester-australia-by-camper-van/>
 </jcr:root>

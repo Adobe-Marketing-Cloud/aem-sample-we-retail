@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-@Version("1.0")
+@Version("1.1.0")
 @Export(optional = "provide:=true")
 package we.retail.core;
 

@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:lastRolledout="{Date}2016-06-29T14:21:03.470+02:00"
         cq:lastRolledoutBy="admin"
-        cq:productMaster="/etc/commerce/products/we-retail/eq/biking/eqbisumxs"
+        cq:productMaster="/var/commerce/products/we-retail/eq/biking/eqbisumxs"
         cq:tags="[we-retail:equipment,we-retail:activity/biking,we-retail:season/summer]"
         cq:template="/conf/we-retail/settings/wcm/templates/product-page"
         jcr:language="en"
@@ -34,7 +34,7 @@
                 jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="weretail/components/structure/product"
-                productData="/etc/commerce/products/we-retail/eq/biking/eqbisumxs">
+                productData="/var/commerce/products/we-retail/eq/biking/eqbisumxs">
                 <eqbisumxs-one-size
                     cq:commerceType="variant"
                     cq:lastRolledout="{Date}2016-06-29T14:21:03.441+02:00"
@@ -42,7 +42,7 @@
                     jcr:mixinTypes="[cq:CatalogSyncAction,cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/structure/product"
-                    productData="/etc/commerce/products/we-retail/eq/biking/eqbisumxs/size-one-size">
+                    productData="/var/commerce/products/we-retail/eq/biking/eqbisumxs/size-one-size">
                     <image
                         cq:lastRolledout="{Date}2016-06-29T14:21:03.451+02:00"
                         cq:lastRolledoutBy="admin"
@@ -74,7 +74,6 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="commerce/components/product/image"
                     fileReference="/content/dam/we-retail/en/products/activities/biking/source/MX121.jpg"
-                    height="300"
                     jpegQuality="85"
                     unsharpMaskAmount="0"
                     unsharpMaskRadius="0"
