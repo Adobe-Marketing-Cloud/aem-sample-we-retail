@@ -1,7 +1,7 @@
 # We.Retail
 [![Build Status](https://travis-ci.org/Adobe-Marketing-Cloud/aem-sample-we-retail.png?branch=master)](https://travis-ci.org/Adobe-Marketing-Cloud/aem-sample-we-retail)
 
-This is an AEM 6.2 reference implementation for the retail industry.
+This is an AEM 6.4 reference implementation for the retail industry.
 
 ## Modules
 
