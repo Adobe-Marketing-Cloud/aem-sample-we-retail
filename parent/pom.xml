@@ -185,6 +185,7 @@
                         <exclude>**/*.rej</exclude>
                         <!-- Jenkins configuration file -->
                         <exclude>Jenkinsfile</exclude>
+                        <exclude>jenkinsfiles/*</exclude>
                     </excludes>
                 </configuration>
                 <executions>
