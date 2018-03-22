@@ -63,7 +63,7 @@
         <div class="collapse navbar-collapse width" id="we-example-navbar-collapse-inverse">
             <ul  class="nav navbar-nav navbar-center">
                 <li class="visible-xs visible-sm"><a href="${header.languageRoot @ extension = 'html'}">we.<strong class="text-primary">Retail</strong></a></li>
-                <div class="we-navigation" data-sly-resource="${'./navigation' @ decoration=false}"></div>
+                <div class="we-navigation" data-sly-resource="${header.navigationResource @ decoration=false}"></div>
                 <li class="visible-xs visible-sm divider" role="separator"></li>
                 <li class="visible-xs visible-sm" data-sly-test="${header.anonymous}"><a href="${header.signInPath @ extension = 'html'}">${ 'Login' @ i18n }</a></li>
                 <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}"><a href="/system/sling/logout.html?resource=${header.currentPath @ extension = 'html'}">${ 'Log out' @ i18n }</a></li>

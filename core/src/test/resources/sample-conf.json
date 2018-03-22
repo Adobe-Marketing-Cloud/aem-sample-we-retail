@@ -1,0 +1,25 @@
+{
+    "wcm"            : {
+        "templates"      : {
+            "hero-page"      : {
+                "structure"      : {
+                    "jcr:content"    : {
+                        "root"           : {
+                            "header": {
+                                "navigation": {
+                                    "jcr:primaryType": "nt:unstructured"
+                                }
+                            }
+                        },
+                        "jcr:primaryType": "nt:unstructured"
+                    },
+                    "jcr:primaryType": "cq:Page"
+                },
+                "jcr:primaryType": "cq:Template"
+            },
+            "jcr:primaryType": "cq:Page"
+        },
+        "jcr:primaryType": "cq:Page"
+    },
+    "jcr:primaryType": "sling:Folder"
+}

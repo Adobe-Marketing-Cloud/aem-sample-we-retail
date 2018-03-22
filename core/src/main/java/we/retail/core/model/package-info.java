@@ -14,7 +14,7 @@
  * limitations under the License.
  ******************************************************************************/
 
-@Version("8.1.1")
+@Version("8.2.0")
 package we.retail.core.model;
 
 import org.osgi.annotation.versioning.Version;

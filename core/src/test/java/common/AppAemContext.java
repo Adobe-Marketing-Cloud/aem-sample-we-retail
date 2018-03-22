@@ -17,7 +17,6 @@ package common;
 
 
 import java.io.IOException;
-
 import javax.annotation.Nullable;
 
 import org.apache.jackrabbit.api.security.user.UserManager;
@@ -30,7 +29,6 @@ import com.adobe.cq.commerce.api.Product;
 import com.adobe.cq.social.community.api.CommunityContext;
 import com.day.cq.wcm.api.Page;
 import com.google.common.base.Function;
-
 import common.mock.MockCommerceService;
 import common.mock.MockCommunityContext;
 import common.mock.MockProduct;
@@ -41,6 +39,7 @@ import io.wcm.testing.mock.aem.junit.AemContextCallback;
 public class AppAemContext {
 
     public static final String CONTENT_ROOT = "/content/we-retail";
+    public static final String CONF_ROOT = "/conf/we-retail/settings";
     public static final String PRODUCT_ROOT = "/var/commerce/products/we-retail";
     public static final String ORDER_ROOT = "/var/commerce/orders/2016/12/12/order";
     public static final String BUTTON_PATH = "/content/we-retail/us/en/men/jcr:content/root/responsivegrid/button";
@@ -94,6 +93,7 @@ public class AppAemContext {
             });
             context.addModelsForPackage("we.retail.core.model");
             context.load().json("/sample-content.json", CONTENT_ROOT);
+            context.load().json("/sample-conf.json", CONF_ROOT);
             context.load().json("/sample-product.json", PRODUCT_ROOT);
             context.load().json("/sample-order.json", ORDER_ROOT);
             context.load().json("/sample-button.json", BUTTON_PATH);

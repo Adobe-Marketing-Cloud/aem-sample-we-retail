@@ -128,7 +128,7 @@
             .execTestCase(c.tcSaveConfigureDialog)
             .asserts.isTrue(function () {
                 return h.find(selectors.cmp.image.image + '[src*="' + h.param('testPagePath')() +
-                    '/_jcr_content/root/responsivegrid/image.img."]', '#ContentFrame').size() === 1;
+                    '/_jcr_content/root/responsivegrid/image.coreimg."]', '#ContentFrame').size() === 1;
             });
     };
 
@@ -153,7 +153,7 @@
             .execTestCase(c.tcSaveConfigureDialog)
             .asserts.isTrue(function () {
                 return h.find(selectors.cmp.image.image + '[src*="' + h.param('testPagePath')() +
-                    '/_jcr_content/root/responsivegrid/image.img."][alt="' + altText + '"][title="' + captionText + '"]', "#ContentFrame").size() === 1;
+                    '/_jcr_content/root/responsivegrid/image.coreimg."][alt="' + altText + '"][title="' + captionText + '"]', "#ContentFrame").size() === 1;
             });
     };
 
@@ -176,7 +176,7 @@
             .execTestCase(c.tcSaveConfigureDialog)
             .asserts.isTrue(function () {
                 return h.find(selectors.cmp.image.image + '[src*="' + h.param('testPagePath')() +
-                    '/_jcr_content/root/responsivegrid/image.img."][alt="' + altText + '"]', '#ContentFrame').size() === 1 &&
+                    '/_jcr_content/root/responsivegrid/image.coreimg."][alt="' + altText + '"]', '#ContentFrame').size() === 1 &&
                     h.find(selectors.cmp.image.title + ':contains("' + captionText + '")', '#ContentFrame').size() === 1;
             });
     };

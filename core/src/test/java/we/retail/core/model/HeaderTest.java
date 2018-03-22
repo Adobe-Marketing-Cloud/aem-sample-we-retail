@@ -31,7 +31,6 @@ import com.adobe.cq.sightly.WCMBindings;
 import com.adobe.granite.security.user.UserManagementService;
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
-
 import common.AppAemContext;
 import io.wcm.testing.mock.aem.junit.AemContext;
 
@@ -148,5 +147,11 @@ public class HeaderTest {
 		String actualCurrentLanguage = header.getCurrentLanguage().getName();
 		Assert.assertEquals(Constants.HEADER_CURR_LANG, actualCurrentLanguage);
 	}
+
+	@Test
+	public void testNavigationResource() {
+        Resource navigationResource = header.getNavigationResource();
+        Assert.assertEquals("/conf/we-retail/settings/wcm/templates/hero-page/structure/jcr:content/root/header/navigation", navigationResource.getPath());
+    }
 
 }

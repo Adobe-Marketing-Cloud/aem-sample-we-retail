@@ -18,7 +18,6 @@ package we.retail.core.model;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
 import javax.annotation.PostConstruct;
 import javax.jcr.RepositoryException;
 
@@ -40,7 +39,7 @@ import com.adobe.granite.security.user.UserManagementService;
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageFilter;
 import com.day.cq.wcm.api.PageManager;
-
+import com.day.cq.wcm.api.Template;
 import we.retail.core.util.WeRetailHelper;
 
 @Model(adaptables = {SlingHttpServletRequest.class})
@@ -61,6 +60,8 @@ public class Header {
     public static final String PROFILE_PATH = "community/profile";
     public static final String ACCOUNT_PATH = "/content/we-retail/us/en/user/account";
     public static final String DEFAULT_ROOT_PATH = "/content/we-retail/us/en/";
+    private static final String NN_NAVIGATION = "navigation";
+    private static final String NAVIGATION_TEMPLATE_RESOURCE_PATH = "structure/jcr:content/root/header/" + NN_NAVIGATION;
 
     @SlingObject
     private ResourceResolver resolver;
@@ -97,6 +98,7 @@ public class Header {
     private String userPath;
     private Page root;
     private UserManagementService ums;
+    private Resource navigationResource;
 
     @PostConstruct
     private void initModel() {
@@ -136,10 +138,25 @@ public class Header {
             userPath = resolver.adaptTo(UserManager.class).getAuthorizable(userId).getPath();
             isCommunitiesPage = currentPage.getPath().startsWith(languageRoot + "/community");
 
+            navigationResource = resource.getChild(NN_NAVIGATION);
+            if (navigationResource == null) {
+                Template template = currentPage.getTemplate();
+                if (template != null) {
+                    Resource templateResource = resolver.getResource(template.getPath());
+                    if (templateResource != null) {
+                        navigationResource = templateResource.getChild(NAVIGATION_TEMPLATE_RESOURCE_PATH);
+                    }
+                }
+            }
+
             printDebug();
         } catch (RepositoryException e) {
             LOGGER.error("Failed to initialize sling model", e);
         }
+    }
+
+    public Resource getNavigationResource() {
+        return navigationResource;
     }
 
     public String getUserPath() {
@@ -217,7 +234,7 @@ public class Header {
     }
 
     private boolean pageExists(final String pagePath) {
-        return pageManager!= null && pageManager.getPage(pagePath) != null;
+        return pageManager != null && pageManager.getPage(pagePath) != null;
     }
 
     /**

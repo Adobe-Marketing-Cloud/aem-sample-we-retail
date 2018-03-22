@@ -988,6 +988,30 @@
             .click(".cq-dialog-actions .cq-dialog-submit",{expectNav:true})
     };
 
+    /**
+     * Test: That header of We.Retail was loaded and added via Ajax.
+     * @param tcExecuteBeforeTest
+     * @param tcExecuteAfterTest
+     * @returns {*}
+     */
+    page.tcLoadHeader = function (tcExecuteBeforeTest, tcExecuteAfterTest) {
+        return new h.TestCase("Include Header via Ajax on publish", {
+            execBefore: tcExecuteBeforeTest,
+            execAfter: tcExecuteAfterTest,
+            metadata: {
+                ignoreOn63: true
+            }
+        })
+        // open the new page in wcmmode disabled
+            .navigateTo("%testPagePath%.html?wcmmode=disabled")
+
+            .assert.isTrue(function () {
+                $(document).on("we-header-content", function () {
+                    h.find(".navbar").size() === 2;
+                });
+            })
+    };
+
     var tcExecuteBeforeTest = page.tcExecuteBeforeTest();
     var tcExecuteAfterTest = page.tcExecuteAfterTest();
 
@@ -1016,6 +1040,7 @@
         .addTestCase(page.tcEffectivePermissionsPageProperties(tcExecuteBeforeTest, tcExecuteAfterTest))
         .addTestCase(page.tcBlueprintPageProperties64(tcExecuteBeforeTest, tcExecuteAfterTest))
         .addTestCase(page.tcLiveCopyPageProperties(tcExecuteBeforeTest, tcExecuteAfterTest))
+        .addTestCase(page.tcLoadHeader(tcExecuteBeforeTest, tcExecuteAfterTest))
     ;
 
 }(hobs, jQuery));
