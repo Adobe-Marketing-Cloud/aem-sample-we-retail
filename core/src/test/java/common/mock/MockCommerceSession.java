@@ -42,9 +42,16 @@ import com.adobe.cq.commerce.api.promotion.VoucherInfo;
 import com.adobe.cq.commerce.api.smartlist.SmartListManager;
 import com.adobe.cq.commerce.common.DefaultJcrCartEntry;
 import com.adobe.cq.commerce.common.PriceFilter;
-
-import we.retail.core.WeRetailConstants;
 import we.retail.core.model.Constants;
+
+import static we.retail.core.WeRetailConstants.PRICE_TYPE_CART;
+import static we.retail.core.WeRetailConstants.PRICE_TYPE_LINE;
+import static we.retail.core.WeRetailConstants.PRICE_TYPE_POST_TAX;
+import static we.retail.core.WeRetailConstants.PRICE_TYPE_PRE_TAX;
+import static we.retail.core.WeRetailConstants.PRICE_TYPE_SHIPPING;
+import static we.retail.core.WeRetailConstants.PRICE_TYPE_TAX;
+import static we.retail.core.WeRetailConstants.PRICE_TYPE_TOTAL;
+import static we.retail.core.WeRetailConstants.PRICE_TYPE_UNIT;
 
 public class MockCommerceSession implements CommerceSession {
 
@@ -152,14 +159,14 @@ public class MockCommerceSession implements CommerceSession {
         List<CartEntry> entries = getCartEntries();
         BigDecimal subTotal = BigDecimal.ZERO;
         for (CartEntry entry : entries) {
-            subTotal = subTotal.add(entry.getPriceInfo(new PriceFilter(WeRetailConstants.PRICE_FILTER_LINE)).get(0).getAmount());
+            subTotal = subTotal.add(entry.getPriceInfo(new PriceFilter(PRICE_TYPE_LINE)).get(0).getAmount());
         }
 
-        setPrice(new PriceInfo(Constants.SHIPPING_TOTAL_VALUE, locale), WeRetailConstants.PRICE_FILTER_SHIPPING);
-        setPrice(new PriceInfo(subTotal, locale), WeRetailConstants.PRICE_FILTER_PRE_TAX);
-        setPrice(new PriceInfo(Constants.TAX_TOTAL_VALUE, locale), WeRetailConstants.PRICE_FILTER_TAX);
+        setPrice(new PriceInfo(Constants.SHIPPING_TOTAL_VALUE, locale), PRICE_TYPE_SHIPPING, PRICE_TYPE_POST_TAX);
+        setPrice(new PriceInfo(subTotal, locale), PRICE_TYPE_CART, PRICE_TYPE_PRE_TAX);
+        setPrice(new PriceInfo(Constants.TAX_TOTAL_VALUE, locale), PRICE_TYPE_CART, PRICE_TYPE_TAX);
         BigDecimal total = subTotal.add(Constants.SHIPPING_TOTAL_VALUE).add(Constants.TAX_TOTAL_VALUE);
-        setPrice(new PriceInfo(total, locale), WeRetailConstants.PRICE_FILTER_TOTAL);
+        setPrice(new PriceInfo(total, locale), PRICE_TYPE_TOTAL);
     }
 
     private void setPrice(PriceInfo priceInfo, String... types) {
@@ -289,11 +296,9 @@ public class MockCommerceSession implements CommerceSession {
             if (price != null) {
                 BigDecimal unitPrice = new BigDecimal(price);
                 DefaultJcrCartEntry jcrCartEntry = (DefaultJcrCartEntry) cartEntry;
-                jcrCartEntry.setPrice(new PriceInfo(unitPrice, locale), WeRetailConstants.PRICE_FILTER_UNIT,
-                        WeRetailConstants.PRICE_FILTER_PRE_TAX);
+                jcrCartEntry.setPrice(new PriceInfo(unitPrice, locale), PRICE_TYPE_UNIT, PRICE_TYPE_PRE_TAX);
                 BigDecimal preTaxPrice = unitPrice.multiply(new BigDecimal(cartEntry.getQuantity()));
-                jcrCartEntry.setPrice(new PriceInfo(preTaxPrice, locale), WeRetailConstants.PRICE_FILTER_LINE,
-                        WeRetailConstants.PRICE_FILTER_PRE_TAX);
+                jcrCartEntry.setPrice(new PriceInfo(preTaxPrice, locale), PRICE_TYPE_LINE, PRICE_TYPE_PRE_TAX);
             }
         }
     }

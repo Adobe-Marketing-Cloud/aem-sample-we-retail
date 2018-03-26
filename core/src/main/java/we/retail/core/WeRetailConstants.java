@@ -25,14 +25,16 @@ public class WeRetailConstants {
 
     public static final int PRODUCT_THUMBNAIL_WIDTH = 120;
 
-    public static final String PRICE_FILTER_UNIT = "UNIT";
-    public static final String PRICE_FILTER_LINE = "LINE";
-    public static final String PRICE_FILTER_DISCOUNT = "DISCOUNT";
+    public static final String PRICE_TYPE_UNIT = "UNIT";
+    public static final String PRICE_TYPE_LINE = "LINE";
+    public static final String PRICE_TYPE_DISCOUNT = "DISCOUNT";
 
-    public static final String PRICE_FILTER_SHIPPING = "SHIPPING";
-    public static final String PRICE_FILTER_PRE_TAX = "PRE_TAX";
-    public static final String PRICE_FILTER_TAX = "TAX";
-    public static final String PRICE_FILTER_TOTAL = "TOTAL";
+    public static final String PRICE_TYPE_CART = "CART";
+    public static final String PRICE_TYPE_SHIPPING = "SHIPPING";
+    public static final String PRICE_TYPE_POST_TAX = "POST_TAX";
+    public static final String PRICE_TYPE_PRE_TAX = "PRE_TAX";
+    public static final String PRICE_TYPE_TAX = "TAX";
+    public static final String PRICE_TYPE_TOTAL = "TOTAL";
 
     public static final String ORDER_PLACED = "orderPlaced";
 

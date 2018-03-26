@@ -40,7 +40,12 @@ import com.adobe.cq.commerce.common.PriceFilter;
 import com.day.cq.i18n.I18n;
 import com.day.cq.wcm.api.Page;
 
-import we.retail.core.WeRetailConstants;
+import static we.retail.core.WeRetailConstants.PRICE_TYPE_CART;
+import static we.retail.core.WeRetailConstants.PRICE_TYPE_POST_TAX;
+import static we.retail.core.WeRetailConstants.PRICE_TYPE_PRE_TAX;
+import static we.retail.core.WeRetailConstants.PRICE_TYPE_SHIPPING;
+import static we.retail.core.WeRetailConstants.PRICE_TYPE_TAX;
+import static we.retail.core.WeRetailConstants.PRICE_TYPE_TOTAL;
 
 @Model(adaptables = SlingHttpServletRequest.class)
 public class ShoppingCartPricesModel {
@@ -101,10 +106,10 @@ public class ShoppingCartPricesModel {
 
         isEmpty = commerceSession.getCartEntries().isEmpty();
         
-        shippingTotal = formatShippingPrice(commerceSession.getCartPriceInfo(new PriceFilter(WeRetailConstants.PRICE_FILTER_SHIPPING)));
-        subTotal = commerceSession.getCartPrice(new PriceFilter(WeRetailConstants.PRICE_FILTER_PRE_TAX));
-        taxTotal = commerceSession.getCartPrice(new PriceFilter(WeRetailConstants.PRICE_FILTER_TAX));
-        total = commerceSession.getCartPrice(new PriceFilter(WeRetailConstants.PRICE_FILTER_TOTAL));
+        shippingTotal = formatShippingPrice(commerceSession.getCartPriceInfo(new PriceFilter(PRICE_TYPE_SHIPPING, PRICE_TYPE_POST_TAX)));
+        subTotal = commerceSession.getCartPrice(new PriceFilter(PRICE_TYPE_CART, PRICE_TYPE_PRE_TAX));
+        taxTotal = commerceSession.getCartPrice(new PriceFilter(PRICE_TYPE_CART, PRICE_TYPE_TAX));
+        total = commerceSession.getCartPrice(new PriceFilter(PRICE_TYPE_TOTAL));
     }
 
     private String formatShippingPrice(List<PriceInfo> prices) {
