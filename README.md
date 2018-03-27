@@ -14,7 +14,7 @@ The main parts of the template are:
 * it.launcher: contains glue code that deploys the ui.tests bundle (and dependent bundles) to the server and triggers the remote JUnit execution
 * all: additional module to build a single package embedding ui.apps and ui.content
 
-## How to build
+## How to Build
 
 To build all the modules run in the project root directory the following command with Maven 3:
 
@@ -65,9 +65,18 @@ There are three levels of testing contained in the project:
 
     in the navigation, go the 'Operations' section and open the 'Testing' console; the left panel will allow you to run your tests.
 
-
-## Maven settings
+## Maven Settings
 
 The project comes with the auto-public repository configured. To setup the repository in your Maven settings, refer to:
 
     http://helpx.adobe.com/experience-manager/kb/SetUpTheAdobeMavenRepository.html
+
+## Release History and System Requirements
+
+The We.Retail reference site was first introduced in AEM 6.2. The following table gives an overview of the We.Retail releases and their system requirements:
+
+We.Retail | Date       | AEM      | Core Components
+----------|------------|----------|----------------
+3.0.0     | 06/03/2018 | AEM 6.4  | 2.0.4
+2.0.4     | 04/08/2017 | AEM 6.3  | 1.0.x
+1.0.0     | 05/07/2016 | AEM 6.2  | N/A
