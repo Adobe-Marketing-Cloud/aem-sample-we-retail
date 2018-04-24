@@ -30,6 +30,7 @@ import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.api.scripting.SlingScriptHelper;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.apache.sling.models.annotations.injectorspecific.ScriptVariable;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import org.slf4j.Logger;
@@ -37,6 +38,7 @@ import org.slf4j.LoggerFactory;
 
 import com.adobe.cq.social.community.api.CommunityContext;
 import com.adobe.granite.security.user.UserManagementService;
+import com.day.cq.wcm.api.LanguageManager;
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageFilter;
 import com.day.cq.wcm.api.PageManager;
@@ -83,6 +85,9 @@ public class Header {
 
     @SlingObject
     private SlingScriptHelper slingScriptHelper;
+
+    @OSGiService
+    private LanguageManager languageManager;
 
     private boolean isModerator;
     private boolean isAnonymous;
@@ -150,6 +155,12 @@ public class Header {
             navigationResource = resource.getChild(NN_NAVIGATION);
             if (navigationResource == null) {
                 Template template = currentPage.getTemplate();
+                if (isCommunitiesPage && languageManager != null) {
+                    Page languageRoot = languageManager.getLanguageRoot(currentPage.getContentResource());
+                    if (languageRoot != null) {
+                        template = languageRoot.getTemplate();
+                    }
+                }
                 if (template != null) {
                     Resource templateResource = resolver.getResource(template.getPath());
                     if (templateResource != null) {
@@ -158,7 +169,9 @@ public class Header {
                 }
             }
 
-            printDebug();
+            if (LOGGER.isDebugEnabled()) {
+                printDebug();
+            }
         } catch (RepositoryException e) {
             LOGGER.error("Failed to initialize sling model", e);
         }

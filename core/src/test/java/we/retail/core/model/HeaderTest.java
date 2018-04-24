@@ -29,6 +29,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import com.adobe.cq.sightly.WCMBindings;
 import com.adobe.granite.security.user.UserManagementService;
+import com.day.cq.wcm.api.LanguageManager;
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
 import common.AppAemContext;
@@ -42,6 +43,9 @@ public class HeaderTest {
 
 	@Mock
 	private UserManagementService ums;
+
+	@Mock
+	private LanguageManager languageManager;
 
 	private Header header;
 
@@ -60,7 +64,8 @@ public class HeaderTest {
 		
 		context.request().setResource(resource);
 		context.registerService(UserManagementService.class, ums);
-		
+		context.registerService(LanguageManager.class, languageManager);
+
 		MockSlingHttpServletRequest request = context.request();
 		header = request.adaptTo(Header.class);
 	}
