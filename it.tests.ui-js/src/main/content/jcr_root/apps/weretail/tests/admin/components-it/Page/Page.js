@@ -625,7 +625,7 @@
             .click("coral-tab-label:contains('Cloud Services')", {after: 1000})
 
             .assert.isTrue(function () {
-                return h.find("div.js-cq-CloudServices-currentConfig:contains('Cloud Proxy Configuration') coral-select[name='./cq:cloudserviceconfigs'] span:contains('IDS worker')").size() === 1;
+                return h.find("div.js-cq-CloudServices-currentConfig:contains('Cloud Proxy Configuration') coral-select[name='./cq:cloudserviceconfigs'] span:contains('Default IDS Pool')").size() === 1;
             });
     };
 
@@ -656,7 +656,9 @@
             //add a brand
             .click("button:contains('Add Brand')")
             .click(".groupedServices-ServiceSelector-service-title")
-
+            // add an area reference
+            .click("coral-select[name='./cq:target-ambits'] button")
+            .click("coral-selectlist-item:contains('Master Area')")
             /*****  Check if the date is saved *****/
 
             //save the configuration and open again the page property
