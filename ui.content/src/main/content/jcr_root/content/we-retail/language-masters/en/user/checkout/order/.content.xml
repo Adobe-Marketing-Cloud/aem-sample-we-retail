@@ -272,6 +272,7 @@
                         jcr:lastModifiedBy="admin"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="weretail/components/content/shoppingcartprices"
+                        showShippingTax="true"
                         showShippingTotal="true"
                         showSubTotal="true"
                         showTaxTotal="true"

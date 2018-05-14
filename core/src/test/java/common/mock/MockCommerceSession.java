@@ -162,7 +162,7 @@ public class MockCommerceSession implements CommerceSession {
             subTotal = subTotal.add(entry.getPriceInfo(new PriceFilter(PRICE_TYPE_LINE)).get(0).getAmount());
         }
 
-        setPrice(new PriceInfo(Constants.SHIPPING_TOTAL_VALUE, locale), PRICE_TYPE_SHIPPING, PRICE_TYPE_POST_TAX);
+        setPrice(new PriceInfo(Constants.SHIPPING_TOTAL_VALUE, locale), PRICE_TYPE_SHIPPING, PRICE_TYPE_PRE_TAX);
         setPrice(new PriceInfo(subTotal, locale), PRICE_TYPE_CART, PRICE_TYPE_PRE_TAX);
         setPrice(new PriceInfo(Constants.TAX_TOTAL_VALUE, locale), PRICE_TYPE_CART, PRICE_TYPE_TAX);
         BigDecimal total = subTotal.add(Constants.SHIPPING_TOTAL_VALUE).add(Constants.TAX_TOTAL_VALUE);
@@ -299,6 +299,7 @@ public class MockCommerceSession implements CommerceSession {
                 jcrCartEntry.setPrice(new PriceInfo(unitPrice, locale), PRICE_TYPE_UNIT, PRICE_TYPE_PRE_TAX);
                 BigDecimal preTaxPrice = unitPrice.multiply(new BigDecimal(cartEntry.getQuantity()));
                 jcrCartEntry.setPrice(new PriceInfo(preTaxPrice, locale), PRICE_TYPE_LINE, PRICE_TYPE_PRE_TAX);
+                jcrCartEntry.setPrice(new PriceInfo(preTaxPrice, locale), PRICE_TYPE_LINE, PRICE_TYPE_POST_TAX);
             }
         }
     }

@@ -26,4 +26,9 @@
         description="Shipping cost total of the shopping cart"
         multiple="{Boolean}false"
         type="org.apache.sling.hapi.common.Text"/>
+    <shippingTax
+        jcr:primaryType="nt:unstructured"
+        description="Shipping tax of the shopping cart"
+        multiple="{Boolean}false"
+        type="org.apache.sling.hapi.common.Text"/>
 </jcr:root>

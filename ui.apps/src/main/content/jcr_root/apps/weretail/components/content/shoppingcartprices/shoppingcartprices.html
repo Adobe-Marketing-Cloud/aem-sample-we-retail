@@ -18,19 +18,24 @@
      data-sly-use.hapiCartPrices="${'org.apache.sling.hapi.sightly.HApiUse' @type='/apps/public/weretail/hapi_types/cartprices'}">
     <div class="shoppingcart-prices body" data-sly-attribute="${hapiCartPrices.itemtype}" data-sly-test="${!cart.isEmpty}">
         <div class="row" data-sly-test="${cart.showSubTotal}">
-            <div class="cell-title">${'Subtotal' @ i18n}</div>
+            <div class="cell-title">${'Products subtotal' @ i18n}</div>
             <div class="cell-align-right"
                 data-sly-attribute="${hapiCartPrices.itemprop.subTotal}">${cart.subTotal}</div>
+        </div>
+        <div class="row" data-sly-test="${cart.showTaxTotal}">
+            <div class="cell-title">${'Products tax' @ i18n}</div>
+            <div class="cell-align-right"
+                data-sly-attribute="${hapiCartPrices.itemprop.taxTotal}">${cart.taxTotal}</div>
         </div>
         <div class="row" data-sly-test="${cart.showShippingTotal}">
             <div class="cell-title">${'Shipping' @ i18n}</div>
             <div class="cell-align-right"
                 data-sly-attribute="${hapiCartPrices.itemprop.shippingTotal}">${cart.shippingTotal}</div>
         </div>
-        <div class="row" data-sly-test="${cart.showTaxTotal}">
-            <div class="cell-title">${'Tax' @ i18n}</div>
+        <div class="row" data-sly-test="${cart.showShippingTax}">
+            <div class="cell-title">${'Shipping tax' @ i18n}</div>
             <div class="cell-align-right"
-                data-sly-attribute="${hapiCartPrices.itemprop.taxTotal}">${cart.taxTotal}</div>
+                data-sly-attribute="${hapiCartPrices.itemprop.shippingTax}">${cart.shippingTax}</div>
         </div>
         <div class="row" data-sly-test="${cart.showTotal}">
             <div class="cell-title border-top">${'Total' @ i18n}</div>

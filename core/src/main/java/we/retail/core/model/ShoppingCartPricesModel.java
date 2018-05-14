@@ -41,7 +41,6 @@ import com.day.cq.i18n.I18n;
 import com.day.cq.wcm.api.Page;
 
 import static we.retail.core.WeRetailConstants.PRICE_TYPE_CART;
-import static we.retail.core.WeRetailConstants.PRICE_TYPE_POST_TAX;
 import static we.retail.core.WeRetailConstants.PRICE_TYPE_PRE_TAX;
 import static we.retail.core.WeRetailConstants.PRICE_TYPE_SHIPPING;
 import static we.retail.core.WeRetailConstants.PRICE_TYPE_TAX;
@@ -73,6 +72,10 @@ public class ShoppingCartPricesModel {
     
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     @Default(booleanValues = false)
+    private boolean showShippingTax;
+
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    @Default(booleanValues = false)
     private boolean showTaxTotal;
     
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
@@ -81,6 +84,7 @@ public class ShoppingCartPricesModel {
     
     private boolean isEmpty;
     private String shippingTotal;
+    private String shippingTax;
     private String subTotal;
     private String taxTotal;
     private String total;
@@ -106,7 +110,8 @@ public class ShoppingCartPricesModel {
 
         isEmpty = commerceSession.getCartEntries().isEmpty();
         
-        shippingTotal = formatShippingPrice(commerceSession.getCartPriceInfo(new PriceFilter(PRICE_TYPE_SHIPPING, PRICE_TYPE_POST_TAX)));
+        shippingTotal = formatShippingPrice(commerceSession.getCartPriceInfo(new PriceFilter(PRICE_TYPE_SHIPPING, PRICE_TYPE_PRE_TAX)));
+        shippingTax = commerceSession.getCartPrice(new PriceFilter(PRICE_TYPE_SHIPPING, PRICE_TYPE_TAX));
         subTotal = commerceSession.getCartPrice(new PriceFilter(PRICE_TYPE_CART, PRICE_TYPE_PRE_TAX));
         taxTotal = commerceSession.getCartPrice(new PriceFilter(PRICE_TYPE_CART, PRICE_TYPE_TAX));
         total = commerceSession.getCartPrice(new PriceFilter(PRICE_TYPE_TOTAL));
@@ -135,6 +140,10 @@ public class ShoppingCartPricesModel {
         return showShippingTotal;
     }
     
+    public boolean getShowShippingTax() {
+        return showShippingTax;
+    }
+
     public boolean getShowTaxTotal() {
         return showTaxTotal;
     }
@@ -147,6 +156,10 @@ public class ShoppingCartPricesModel {
         return shippingTotal;
     }
     
+    public String getShippingTax() {
+        return shippingTax;
+    }
+
     public String getSubTotal() {
         return subTotal;
     }

@@ -48,6 +48,7 @@ import com.day.cq.wcm.api.Page;
 
 import static we.retail.core.WeRetailConstants.PRICE_TYPE_DISCOUNT;
 import static we.retail.core.WeRetailConstants.PRICE_TYPE_LINE;
+import static we.retail.core.WeRetailConstants.PRICE_TYPE_PRE_TAX;
 import static we.retail.core.WeRetailConstants.PRICE_TYPE_UNIT;
 
 @Model(adaptables = SlingHttpServletRequest.class)
@@ -198,7 +199,7 @@ public class ShoppingCartModel {
             if (CollectionUtils.isNotEmpty(priceInfos)) {
                 return priceInfos.get(0).getFormattedString();
             } else {
-                priceInfos = entry.getPriceInfo(new PriceFilter(PRICE_TYPE_LINE));
+                priceInfos = entry.getPriceInfo(new PriceFilter(PRICE_TYPE_LINE, PRICE_TYPE_PRE_TAX));
                 return CollectionUtils.isNotEmpty(priceInfos) ? priceInfos.get(0).getFormattedString() : null;
             }
         }
@@ -206,7 +207,7 @@ public class ShoppingCartModel {
         public String getStrikeThroughTotalPrice() throws CommerceException {
             List<PriceInfo> priceInfos = entry.getPriceInfo(new PriceFilter(PRICE_TYPE_LINE, PRICE_TYPE_DISCOUNT));
             if (CollectionUtils.isNotEmpty(priceInfos)) {
-                priceInfos = entry.getPriceInfo(new PriceFilter(PRICE_TYPE_LINE));
+                priceInfos = entry.getPriceInfo(new PriceFilter(PRICE_TYPE_LINE, PRICE_TYPE_PRE_TAX));
                 priceInfos = filterOut(priceInfos, PRICE_TYPE_DISCOUNT);
 
                 if (CollectionUtils.isNotEmpty(priceInfos)) {
