@@ -21,6 +21,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.scripting.SlingBindings;
@@ -47,7 +48,7 @@ public class OrderHistoryModelTest {
     private static final String DUMMY_ORDER_LIST_ID_INDEX = "0";
 
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-    private SimpleDateFormat dateParser = new SimpleDateFormat("EEE MMM d yyyy HH:mm:ss 'GMT'Z");
+    private SimpleDateFormat dateParser = new SimpleDateFormat("EEE MMM d yyyy HH:mm:ss", Locale.US);
 
     @Rule
     public final AemContext context = AppAemContext.newAemContext();
