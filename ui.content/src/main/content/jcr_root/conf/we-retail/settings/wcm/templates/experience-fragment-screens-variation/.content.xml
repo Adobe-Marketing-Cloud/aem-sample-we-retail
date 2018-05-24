@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--****************************************************************************
+  * ADOBE CONFIDENTIAL
+  * __________________
+  *
+  * Copyright 2018 Adobe Systems Incorporated
+  * All Rights Reserved.
+  *
+  * NOTICE:  All information contained herein is, and remains
+  * the property of Adobe Systems Incorporated and its suppliers,
+  * if any.  The intellectual and technical concepts contained
+  * herein are proprietary to Adobe Systems Incorporated and its
+  * suppliers and are protected by trade secret or copyright law.
+  * Dissemination of this information or reproduction of this material
+  * is strictly forbidden unless prior written permission is obtained
+  * from Adobe Systems Incorporated.
+  ***************************************************************************-->
+
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Template">
+    <jcr:content
+            cq:templateType="/libs/settings/wcm/template-types/html5page"
+            jcr:primaryType="cq:PageContent"
+            jcr:title="Experience Fragment - Screens We.Retail Variation"
+            status="enabled"/>
+</jcr:root>
