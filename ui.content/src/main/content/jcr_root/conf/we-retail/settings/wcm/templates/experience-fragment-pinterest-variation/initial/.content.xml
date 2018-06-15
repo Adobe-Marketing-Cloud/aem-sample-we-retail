@@ -4,13 +4,13 @@
     <jcr:content
         cq:tags="[experience-fragments:variation/pinterest]"
         cq:template="/conf/we-retail/settings/wcm/templates/experience-fragment-pinterest-variation"
+        cq:xfShowInEditor="false"
+        cq:xfSocialActionStatus="Not Posted"
+        cq:xfSocialVariation="true"
+        cq:xfVariantType="pinterest"
         jcr:primaryType="cq:PageContent"
         jcr:title="Pinterest"
-        sling:resourceType="weretail/components/structure/xfpinterest"
-        cq:xfShowInEditor="false"
-        cq:xfVariantType="pinterest"
-        cq:xfSocialVariation="true"
-        cq:xfSocialActionStatus="Not Posted">
+        sling:resourceType="weretail/components/structure/xfpinterest">
         <root
             jcr:lastModified="{Date}2016-08-01T12:13:20.297+03:00"
             jcr:lastModifiedBy="admin"

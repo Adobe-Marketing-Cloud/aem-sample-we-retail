@@ -6,22 +6,21 @@
         cq:lastModifiedBy="admin"
         cq:template="/libs/cq/personalization/templates/teaser"
         jcr:primaryType="cq:PageContent"
-        jcr:title="en(category_teaser_859708776)"
+        jcr:title="en(teaser_859708776)"
         sling:resourceType="cq/personalization/components/teaserpage"
         location="ee033a3d-c7a2-4a80-9aa6-5db4aef6bdeb">
         <par
             jcr:primaryType="nt:unstructured"
             sling:resourceType="foundation/components/parsys">
-            <category_teaser_859708776
+            <teaser_859708776
                 jcr:created="{Date}2015-11-04T00:10:12.400+01:00"
                 jcr:createdBy="admin"
                 jcr:lastModified="{Date}2016-03-12T22:58:28.666+01:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="weretail/components/content/categoryteaser"
-                buttonLabel="Men"
-                buttonLinkTo="/content/we-retail/language-masters/en/men"
-                fileReference="/content/dam/we-retail/en/activities/biking/rocks-downhill.jpg">
+                sling:resourceType="weretail/components/content/teaser"
+                fileReference="/content/dam/we-retail/en/activities/biking/rocks-downhill.jpg"
+                actionsEnabled="{Boolean}true">
                 <cq:responsive jcr:primaryType="nt:unstructured">
                     <default
                         jcr:primaryType="nt:unstructured"
@@ -30,7 +29,13 @@
                         jcr:primaryType="nt:unstructured"
                         width="12"/>
                 </cq:responsive>
-            </category_teaser_859708776>
+                <actions jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        link="/content/we-retail/language-masters/en/men"
+                        text="Men"/>
+                </actions>
+            </teaser_859708776>
         </par>
     </jcr:content>
 </jcr:root>

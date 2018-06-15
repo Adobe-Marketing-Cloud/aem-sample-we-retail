@@ -17,7 +17,7 @@
             sling:resourceType="foundation/components/parsys"/>
     </jcr:content>
     <summer--female/>
-    <en-category_teaser/>
-    <en-category_teaser_859708776/>
-    <en-category_teaser_465639357/>
+    <en-teaser/>
+    <en-teaser_859708776/>
+    <en-teaser_465639357/>
 </jcr:root>

@@ -458,31 +458,6 @@
                         </cq:styleGroups>
                     </we-retail-default>
                 </list>
-                <categoryteaser jcr:primaryType="nt:unstructured">
-                    <policy_1492610142529
-                        jcr:lastModified="{Date}2017-04-20T16:06:08.451+02:00"
-                        jcr:lastModifiedBy="admin"
-                        jcr:primaryType="nt:unstructured"
-                        jcr:title="We.Retail Default"
-                        sling:resourceType="wcm/core/components/policy/policy"
-                        allowedRenditionWidths="[128,256,512,1024,1280,1440,1920,2048]"
-                        disableLazyLoading="true">
-                        <jcr:content jcr:primaryType="nt:unstructured"/>
-                    </policy_1492610142529>
-                </categoryteaser>
-                <categoryteaserimage jcr:primaryType="nt:unstructured">
-                    <policy_1492698986168
-                        jcr:lastModified="{Date}2017-04-20T16:36:47.151+02:00"
-                        jcr:lastModifiedBy="admin"
-                        jcr:primaryType="nt:unstructured"
-                        jcr:title="We.Retail Default"
-                        sling:resourceType="wcm/core/components/policy/policy"
-                        allowedRenditionWidths="[128,256,512,1024,1280,1440,1920,2048]"
-                        allowUpload="true"
-                        disableLazyLoading="true">
-                        <jcr:content jcr:primaryType="nt:unstructured"/>
-                    </policy_1492698986168>
-                </categoryteaserimage>
                 <contentfragment jcr:primaryType="nt:unstructured">
                     <default
                         jcr:lastModified="{Date}2018-02-02T16:04:55.135+01:00"
@@ -497,6 +472,51 @@
                             mergeList="{Boolean}true"/>
                     </default>
                 </contentfragment>
+                <teaser jcr:primaryType="nt:unstructured">
+                    <policy_1526037253202
+                        cq:styleDefaultClasses="we-Teaser"
+                        jcr:lastModified="{Date}2018-05-15T13:35:33.920+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Retail Default"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        hideImageLink="true"
+                        hideTitleLink="true">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Component Type"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="we-Teaser"
+                                        cq:styleId="1526367939478"
+                                        cq:styleLabel="Teaser"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="we-LinkButton"
+                                        cq:styleId="1526384118577"
+                                        cq:styleLabel="Link Button"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1526037253202>
+                </teaser>
+                <sitefeature jcr:primaryType="nt:unstructured">
+                    <policy_1528460924549
+                        jcr:lastModified="{Date}2018-06-08T15:29:16.680+03:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Retail Default"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        actionsDisabled="true"
+                        imageLinkHidden="true"
+                        titleLinkHidden="true"
+                        titleType="h4">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1528460924549>
+                </sitefeature>
             </content>
         </components>
     </weretail>

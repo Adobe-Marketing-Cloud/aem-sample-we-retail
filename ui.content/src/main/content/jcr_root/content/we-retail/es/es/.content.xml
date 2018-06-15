@@ -68,7 +68,7 @@
                     jcr:title="Discover the Finest Gear"
                     sling:resourceType="weretail/components/content/title"
                     type="h2"/>
-                <category_teaser
+                <teaser
                     cq:lastRolledout="{Date}2016-09-23T16:32:21.926-07:00"
                     cq:lastRolledoutBy="admin"
                     cq:targetEngine="cq_contexthub"
@@ -89,10 +89,9 @@
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="weretail/components/content/categoryteaser"
-                        buttonLabel="Women"
-                        buttonLinkTo="/content/we-retail/language-masters/en/women"
-                        fileReference="/content/dam/we-retail/en/activities/running/running-woods-woman.jpg">
+                        sling:resourceType="weretail/components/content/teaser"
+                        fileReference="/content/dam/we-retail/en/activities/running/running-woods-woman.jpg"
+                        actionsEnabled="{Boolean}true">
                         <cq:responsive
                             cq:lastRolledout="{Date}2016-09-23T16:32:21.933-07:00"
                             cq:lastRolledoutBy="admin"
@@ -111,6 +110,12 @@
                                 jcr:primaryType="nt:unstructured"
                                 width="12"/>
                         </cq:responsive>
+                        <actions jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                link="/content/we-retail/language-masters/en/women"
+                                text="Women"/>
+                        </actions>
                     </default>
                     <cq:responsive
                         cq:lastRolledout="{Date}2016-09-23T16:32:21.938-07:00"
@@ -130,8 +135,8 @@
                             jcr:primaryType="nt:unstructured"
                             width="12"/>
                     </cq:responsive>
-                </category_teaser>
-                <category_teaser_859708776
+                </teaser>
+                <teaser_859708776
                     cq:lastRolledout="{Date}2016-09-23T16:32:21.945-07:00"
                     cq:lastRolledoutBy="admin"
                     cq:targetEngine="cq_contexthub"
@@ -152,10 +157,9 @@
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="weretail/components/content/categoryteaser"
-                        buttonLabel="Men"
-                        buttonLinkTo="/content/we-retail/language-masters/en/men"
-                        fileReference="/content/dam/we-retail/en/activities/biking/rocks-downhill.jpg">
+                        sling:resourceType="weretail/components/content/teaser"
+                        fileReference="/content/dam/we-retail/en/activities/biking/rocks-downhill.jpg"
+                        actionsEnabled="{Boolean}true">
                         <cq:responsive
                             cq:lastRolledout="{Date}2016-09-23T16:32:21.952-07:00"
                             cq:lastRolledoutBy="admin"
@@ -174,6 +178,12 @@
                                 jcr:primaryType="nt:unstructured"
                                 width="12"/>
                         </cq:responsive>
+                        <actions jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                link="/content/we-retail/language-masters/en/men"
+                                text="Men"/>
+                        </actions>
                     </default>
                     <cq:responsive
                         cq:lastRolledout="{Date}2016-09-23T16:32:21.956-07:00"
@@ -193,8 +203,8 @@
                             jcr:primaryType="nt:unstructured"
                             width="12"/>
                     </cq:responsive>
-                </category_teaser_859708776>
-                <category_teaser_465639357
+                </teaser_859708776>
+                <teaser_465639357
                     cq:lastRolledout="{Date}2016-09-23T16:32:21.964-07:00"
                     cq:lastRolledoutBy="admin"
                     cq:targetEngine="cq_contexthub"
@@ -215,10 +225,9 @@
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="weretail/components/content/categoryteaser"
-                        buttonLabel="Equipment"
-                        buttonLinkTo="/content/we-retail/language-masters/en/equipment"
-                        fileReference="/content/dam/we-retail/en/activities/climbing/climber-gear-rope.jpg">
+                        sling:resourceType="weretail/components/content/teaser"
+                        fileReference="/content/dam/we-retail/en/activities/climbing/climber-gear-rope.jpg"
+                        actionsEnabled="{Boolean}true">
                         <cq:responsive
                             cq:lastRolledout="{Date}2016-09-23T16:32:21.970-07:00"
                             cq:lastRolledoutBy="admin"
@@ -237,6 +246,12 @@
                                 jcr:primaryType="nt:unstructured"
                                 width="12"/>
                         </cq:responsive>
+                        <actions jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                link="/content/we-retail/language-masters/en/equipment"
+                                text="Equipment"/>
+                        </actions>
                     </default>
                     <cq:responsive
                         cq:lastRolledout="{Date}2016-09-23T16:32:21.975-07:00"
@@ -256,7 +271,7 @@
                             jcr:primaryType="nt:unstructured"
                             width="12"/>
                     </cq:responsive>
-                </category_teaser_465639357>
+                </teaser_465639357>
                 <site_feature
                     cq:lastRolledout="{Date}2016-09-23T16:32:21.983-07:00"
                     cq:lastRolledoutBy="admin"
@@ -269,7 +284,7 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Free delivery"
                     sling:resourceType="weretail/components/content/sitefeature"
-                    icon="shoping-cart-alt">
+                    fileReference="/content/dam/we-retail/en/features/cart.png">
                     <cq:responsive
                         cq:lastRolledout="{Date}2016-09-23T16:32:21.984-07:00"
                         cq:lastRolledoutBy="admin"
@@ -301,7 +316,7 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Order tracking"
                     sling:resourceType="weretail/components/content/sitefeature"
-                    icon="compass">
+                    fileReference="/content/dam/we-retail/en/features/tracking.png">
                     <cq:responsive
                         cq:lastRolledout="{Date}2016-09-23T16:32:21.994-07:00"
                         cq:lastRolledoutBy="admin"
@@ -333,7 +348,7 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Online support"
                     sling:resourceType="weretail/components/content/sitefeature"
-                    icon="headphones">
+                    fileReference="/content/dam/we-retail/en/features/support.png">
                     <cq:responsive
                         cq:lastRolledout="{Date}2016-09-23T16:32:22.002-07:00"
                         cq:lastRolledoutBy="admin"
@@ -457,7 +472,7 @@
                     jcr:title="Join our Community"
                     sling:resourceType="weretail/components/content/title"
                     type="h2"/>
-                <category_teaser_984780047
+                <teaser_984780047
                     cq:lastRolledout="{Date}2016-09-23T16:32:22.045-07:00"
                     cq:lastRolledoutBy="admin"
                     jcr:created="{Date}2016-03-12T23:01:13.861+01:00"
@@ -466,7 +481,7 @@
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="weretail/components/content/categoryteaser"
+                    sling:resourceType="weretail/components/content/teaser"
                     buttonLabel="Blog"
                     fileReference="/content/dam/we-retail/en/activities/hiking-camping/camp-summer-night.jpg">
                     <cq:responsive
@@ -487,8 +502,8 @@
                             jcr:primaryType="nt:unstructured"
                             width="12"/>
                     </cq:responsive>
-                </category_teaser_984780047>
-                <category_teaser_305030210
+                </teaser_984780047>
+                <teaser_305030210
                     cq:lastRolledout="{Date}2016-09-23T16:32:22.055-07:00"
                     cq:lastRolledoutBy="admin"
                     jcr:created="{Date}2016-03-12T23:01:15.249+01:00"
@@ -497,7 +512,7 @@
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="weretail/components/content/categoryteaser"
+                    sling:resourceType="weretail/components/content/teaser"
                     buttonLabel="Forum"
                     fileReference="/content/dam/we-retail/en/activities/climbing/ice-climbing-group.jpg">
                     <cq:responsive
@@ -518,8 +533,8 @@
                             jcr:primaryType="nt:unstructured"
                             width="12"/>
                     </cq:responsive>
-                </category_teaser_305030210>
-                <category_teaser_1388037983
+                </teaser_305030210>
+                <teaser_1388037983
                     cq:lastRolledout="{Date}2016-09-23T16:32:22.064-07:00"
                     cq:lastRolledoutBy="admin"
                     jcr:created="{Date}2016-03-12T23:01:16.541+01:00"
@@ -528,7 +543,7 @@
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="weretail/components/content/categoryteaser"
+                    sling:resourceType="weretail/components/content/teaser"
                     buttonLabel="Q&amp;A"
                     fileReference="/content/dam/we-retail/en/activities/biking/group-mountain-bikers.jpg">
                     <cq:responsive
@@ -549,7 +564,7 @@
                             jcr:primaryType="nt:unstructured"
                             width="12"/>
                     </cq:responsive>
-                </category_teaser_1388037983>
+                </teaser_1388037983>
             </responsivegrid>
         </root>
         <cq:LiveSyncConfig

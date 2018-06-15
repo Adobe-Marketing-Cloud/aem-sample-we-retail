@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2017-06-21T12:19:17.583+02:00"
+        cq:lastModified="{Date}2018-06-08T15:29:16.682+03:00"
         cq:lastModifiedBy="admin"
         cq:policy="weretail/components/structure/page/we-retail-page"
         jcr:primaryType="nt:unstructured"
@@ -36,12 +36,12 @@
                                 cq:policy="weretail/components/content/list/we-retail-default"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/core/components/policies/mapping"/>
-                            <categoryteaser
-                                cq:policy="weretail/components/content/categoryteaser/policy_1492610142529"
+                            <teaser
+                                cq:policy="weretail/components/content/teaser/policy_1526037253202"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/core/components/policies/mapping"/>
-                            <categoryteaserimage
-                                cq:policy="weretail/components/content/categoryteaserimage/policy_1492698986168"
+                            <sitefeature
+                                cq:policy="weretail/components/content/sitefeature/policy_1528460924549"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/core/components/policies/mapping"/>
                         </content>

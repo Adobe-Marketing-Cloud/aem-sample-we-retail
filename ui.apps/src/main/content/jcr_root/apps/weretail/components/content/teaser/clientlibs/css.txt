@@ -14,4 +14,4 @@
 # limitations under the License.
 ###############################################################################
 
-less/category-teaser.less
+less/teaser.less

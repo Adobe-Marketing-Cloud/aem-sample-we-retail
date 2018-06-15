@@ -87,26 +87,4 @@
         .addTestCase(heroimage.tcCheckTabs(tcExecuteBeforeTest, tcExecuteAfterTest))
     ;
 
-    /* =================================================================================
-
-        Test for the CategoryTeaser
-
-        Note: as the HeroImage and the CategoryTeaser components are very similar and as we test
-        the same functionality (dialog tabs), we test the CategoryTeaser by switching the resource type
-        of the HeroImage to the CategoryTeaser and by performing the same test as for the HeroImage.
-
-       ================================================================================= */
-
-    heroimage.resourceType = c.rtCategoryTeaser;
-
-    /**
-     * The main test suite for Category Teaser Component
-     */
-    new h.TestSuite("We.Retail Tests - CategoryTeaser", {path: '/apps/weretail/tests/admin/components-it/HeroImage/HeroImage.js',
-        execBefore:c.tcExecuteBeforeTestSuite,
-        execInNewWindow : false})
-
-        .addTestCase(heroimage.tcCheckTabs(tcExecuteBeforeTest, tcExecuteAfterTest))
-    ;
-
 }(hobs, jQuery));

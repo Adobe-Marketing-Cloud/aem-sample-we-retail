@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2017-04-19T17:42:32.151+02:00"
+        cq:lastModified="{Date}2018-05-11T14:18:59.453+03:00"
         cq:lastModifiedBy="admin"
         cq:policy="weretail/components/structure/page/we-retail-product-page"
         jcr:lastModified="{Date}2016-03-03T18:46:02.571+01:00"
@@ -35,12 +35,8 @@
                                 cq:policy="weretail/components/content/image/policy_1490281316632"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/core/components/policies/mapping"/>
-                            <categoryteaser
-                                cq:policy="weretail/components/content/categoryteaser/policy_1492610142529"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="wcm/core/components/policies/mapping"/>
-                            <categoryteaserimage
-                                cq:policy="weretail/components/content/categoryteaserimage/policy_1492698986168"
+                            <teaser
+                                cq:policy="weretail/components/content/teaser/policy_1526037253202"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/core/components/policies/mapping"/>
                         </content>
@@ -64,12 +60,8 @@
                                 cq:policy="weretail/components/content/list/we-retail-default"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/core/components/policies/mapping"/>
-                            <categoryteaser
-                                cq:policy="weretail/components/content/categoryteaser/policy_1492610142529"
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="wcm/core/components/policies/mapping"/>
-                            <categoryteaserimage
-                                cq:policy="weretail/components/content/categoryteaserimage/policy_1492698986168"
+                            <teaser
+                                cq:policy="weretail/components/content/teaser/policy_1526037253202"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/core/components/policies/mapping"/>
                         </content>

@@ -4,13 +4,13 @@
     <jcr:content
         cq:tags="[experience-fragments:variation/facebook]"
         cq:template="/conf/we-retail/settings/wcm/templates/experience-fragment-facebook-variation"
+        cq:xfShowInEditor="false"
+        cq:xfSocialActionStatus="Not Posted"
+        cq:xfSocialVariation="true"
+        cq:xfVariantType="facebook"
         jcr:primaryType="cq:PageContent"
         jcr:title="Facebook"
-        sling:resourceType="weretail/components/structure/xffacebook"
-        cq:xfShowInEditor="false"
-        cq:xfVariantType="facebook"
-        cq:xfSocialVariation="true"
-        cq:xfSocialActionStatus="Not Posted">
+        sling:resourceType="weretail/components/structure/xffacebook">
         <root
             jcr:lastModified="{Date}2016-08-01T12:13:20.297+03:00"
             jcr:lastModifiedBy="admin"

@@ -17,10 +17,10 @@
     window.CQ.WeRetailIT.TeasersTest = function (h, $, count) {
         return new h.TestCase("Check category teasers")
             // Check category teasers are visible
-            .asserts.visible(".we-CategoryTeaser", true)
+            .asserts.visible(".we-Teaser .cmp-teaser", true)
             // Check category teasers buttons are visible
-            .asserts.visible(".we-CategoryTeaser .btn", true)
+            .asserts.visible(".we-Teaser .cmp-teaser__action-link", true)
             // Check category teasers number
-            .asserts.isTrue(function() {return window.CQ.WeRetailIT.checkNumberOfItems(h, ".we-CategoryTeaser", count);});
+            .asserts.isTrue(function() {return window.CQ.WeRetailIT.checkNumberOfItems(h, ".we-Teaser .cmp-teaser", count);});
     }
 })(hobs);

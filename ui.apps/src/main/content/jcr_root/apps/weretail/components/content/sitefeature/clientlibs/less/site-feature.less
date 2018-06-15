@@ -13,53 +13,79 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-
 @import (reference) "/apps/weretail/clientlibs/common/variables.less";
+@import (reference) "/apps/weretail/clientlibs/clientlib-site/less/main.less";
+
+@sitefeature-image-size: 36px;
+@sitefeature-image-gap: 16px;
+@sitefeature-image-space: @sitefeature-image-size + @sitefeature-image-gap;
 
 .we-SiteFeature {
-    margin: 2rem 0;
-    padding-left: 10%;
-    width: 100%;
-
-
-    text-align: left;
-}
-
-.we-SiteFeature .we-Icon {
-    margin-right: 1rem;
-    width: 2rem;
-
-    font-size: 2.3rem;
-    color: #c81017;
-
-    text-align: center;
-    vertical-align: middle;
-}
-
-.we-SiteFeature-header {
-    display: inline-block;
-    margin: 0;
-    font-size: @font-size-h4;
-    line-height: 1;
-    font-weight: 600;
-    text-transform: uppercase;
-
-    text-align: left;
-    vertical-align: middle;
-}
-
-.we-SiteFeature-header small {
-    display: block;
-    font-weight: 400;
-    color: @gray-light;
-    margin-top: 8px;
-    text-transform: initial;
-}
-
-@media (min-width: @screen-sm-min) {
-    .we-SiteFeature {
+    .cmp-teaser {
+        width: 100%;
         margin: 20px 0 40px;
-        padding-left: 0;
-        text-align: center;
+        padding-left: 20px;
+    }
+
+    .cmp-teaser__image {
+        float: left;
+        margin-right: @sitefeature-image-gap;
+
+        .cmp-image {
+            display: inline-block;
+            width: @sitefeature-image-size;
+        }
+    }
+
+    .cmp-teaser__title,
+    .cmp-teaser__description {
+        display: block;
+        margin: 0 0 0 @sitefeature-image-space;
+        width: ~"calc(100% - @{sitefeature-image-space})";
+    }
+
+    .cmp-teaser__title {
+        margin-bottom: 3px;
+        line-height: 20px;
+        font-size: @font-size-h4;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .cmp-teaser__description,
+    .cmp-teaser__description p {
+        line-height: 18px;
+        font-weight: 400;
+        color: @gray-light;
+    }
+
+    .cmp-teaser__action-container {
+        display: none;
+    }
+}
+
+@media (min-width: @screen-md-min) {
+    .we-SiteFeature {
+        .cmp-teaser {
+            padding: 0;
+            text-align: center;
+        }
+
+        .cmp-teaser__image {
+            margin-right: 0;
+            float: none;
+        }
+
+        .cmp-teaser__image,
+        .cmp-teaser__title,
+        .cmp-teaser__description {
+            display: block;
+        }
+
+        .cmp-teaser__title,
+        .cmp-teaser__description {
+            width: 100%;
+            margin-left: 0;
+        }
     }
 }

@@ -125,7 +125,7 @@
             .click(".header .we-navigation .cmp-navigation__item--level-0 > .cmp-navigation__item-link:contains(Men)", {expectNav: true})
             .asserts.location("/content/we-retail/us/en/men.html", true)
 
-            .click(".we-CategoryTeaser a:contains(Our strongest clothes)", {expectNav: true})
+            .click(".we-Teaser a:contains(Our strongest clothes)", {expectNav: true})
             .asserts.location("/content/we-retail/us/en/products/men/shirts.html", true)
 
             .click(BREADCRUMB_CLASS + " a:contains(Men)", {expectNav: true})
@@ -139,7 +139,7 @@
             .click(".header .we-navigation .cmp-navigation__item--level-0 > .cmp-navigation__item-link:contains(Men)", {expectNav: true})
             .asserts.location("/content/we-retail/us/en/men.html", true)
 
-            .click(".we-CategoryTeaser a:contains(Our warmest jackets)", {expectNav: true})
+            .click(".we-Teaser a:contains(Our warmest jackets)", {expectNav: true})
             .asserts.location("/content/we-retail/us/en/products/men/coats.html", true)
 
             .click(BREADCRUMB_CLASS + " a:contains(Men)", {expectNav: true})
@@ -232,7 +232,7 @@
             .click(".header .we-navigation .cmp-navigation__item--level-0 > .cmp-navigation__item-link:contains(Women)", {expectNav: true})
             .asserts.location("/content/we-retail/us/en/women.html", true)
 
-            .click(".we-CategoryTeaser a:contains(Our strongest clothes)", {expectNav: true})
+            .click(".we-Teaser a:contains(Our strongest clothes)", {expectNav: true})
             .asserts.location("/content/we-retail/us/en/products/women/shirts.html", true)
 
             .click(BREADCRUMB_CLASS + " a:contains(Women)", {expectNav: true})
@@ -246,7 +246,7 @@
             .click(".header .we-navigation .cmp-navigation__item--level-0 > .cmp-navigation__item-link:contains(Women)", {expectNav: true})
             .asserts.location("/content/we-retail/us/en/women.html", true)
 
-            .click(".we-CategoryTeaser a:contains(Our warmest jackets)", {expectNav: true})
+            .click(".we-Teaser a:contains(Our warmest jackets)", {expectNav: true})
             .asserts.location("/content/we-retail/us/en/products/women/coats.html", true)
 
             .click(BREADCRUMB_CLASS + " a:contains(Women)", {expectNav: true})
@@ -328,7 +328,7 @@
             .click(".header .we-navigation .cmp-navigation__item--level-0 > .cmp-navigation__item-link:contains(Equipment)", {expectNav: true})
             .asserts.location("/content/we-retail/us/en/equipment.html", true)
 
-            .click(".we-CategoryTeaser a:contains(Hiking)", {expectNav: true})
+            .click(".we-Teaser a:contains(Hiking)", {expectNav: true})
             .asserts.location("/content/we-retail/us/en/products/equipment/hiking.html", true)
 
             .click(BREADCRUMB_CLASS + " a:contains(Equipment)", {expectNav: true})
@@ -342,7 +342,7 @@
             .click(".header .we-navigation .cmp-navigation__item--level-0 > .cmp-navigation__item-link:contains(Equipment)", {expectNav: true})
             .asserts.location("/content/we-retail/us/en/equipment.html", true)
 
-            .click(".we-CategoryTeaser a:contains(Running)", {expectNav: true})
+            .click(".we-Teaser a:contains(Running)", {expectNav: true})
             .asserts.location("/content/we-retail/us/en/products/equipment/running.html", true)
 
             .click(BREADCRUMB_CLASS + " a:contains(Equipment)", {expectNav: true})
@@ -356,7 +356,7 @@
             .click(".header .we-navigation .cmp-navigation__item--level-0 > .cmp-navigation__item-link:contains(Equipment)", {expectNav: true})
             .asserts.location("/content/we-retail/us/en/equipment.html", true)
 
-            .click(".we-CategoryTeaser a:contains(Biking)", {expectNav: true})
+            .click(".we-Teaser a:contains(Biking)", {expectNav: true})
             .asserts.location("/content/we-retail/us/en/products/equipment/biking.html", true)
 
             .click(BREADCRUMB_CLASS + " a:contains(Equipment)", {expectNav: true})
@@ -370,7 +370,7 @@
             .click(".header .we-navigation .cmp-navigation__item--level-0 > .cmp-navigation__item-link:contains(Equipment)", {expectNav: true})
             .asserts.location("/content/we-retail/us/en/equipment.html", true)
 
-            .click(".we-CategoryTeaser a:contains(Surfing)", {expectNav: true})
+            .click(".we-Teaser a:contains(Surfing)", {expectNav: true})
             .asserts.location("/content/we-retail/us/en/products/equipment/surfing.html", true)
 
             .click(BREADCRUMB_CLASS + " a:contains(Equipment)", {expectNav: true})
@@ -384,7 +384,7 @@
             .click(".header .we-navigation .cmp-navigation__item--level-0 > .cmp-navigation__item-link:contains(Equipment)", {expectNav: true})
             .asserts.location("/content/we-retail/us/en/equipment.html", true)
 
-            .click(".we-CategoryTeaser a:contains(Snow Sports)", {expectNav: true})
+            .click(".we-Teaser a:contains(Snow Sports)", {expectNav: true})
             .asserts.location("/content/we-retail/us/en/products/equipment/snow-sports.html", true)
 
             .click(BREADCRUMB_CLASS + " a:contains(Equipment)", {expectNav: true})
