@@ -137,7 +137,7 @@
             // check if text is rendered correctly
             .assert.isTrue(function() {
                 var actualValue = h.find(itemSelector.title+' h1').html();
-                return actualValue === "Content name";
+                return actualValue.trim() === "Content name";
             });
     };
 
