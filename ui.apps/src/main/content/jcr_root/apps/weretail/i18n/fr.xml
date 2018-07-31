@@ -4,8 +4,7 @@
     jcr:mixinTypes="[mix:language]"
     jcr:primaryType="nt:folder">
     <copyright
-        jcr:mixinTypes="[sling:Message]"
-        jcr:primaryType="nt:folder"
+        jcr:primaryType="sling:MessageEntry"
         sling:key="&amp;copy; {0} We.Retail Site. All rights reserved."
         sling:message="&amp;copy; {0} We.Retail Site. Tous droits réservés."/>
 </jcr:root>
