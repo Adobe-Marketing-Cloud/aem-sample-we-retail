@@ -16,6 +16,7 @@
 package we.retail.core.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import javax.annotation.PostConstruct;
@@ -53,6 +54,8 @@ public class Header {
 
     public static final String SIGN_IN_PATH = "community/signin";
     public static final String SIGN_UP_PATH = "community/signup";
+
+    @SuppressWarnings("squid:S2068")
     public static final String FORGOT_PWD_PATH = "community/useraccount/forgotpassword";
     public static final String NOTIFICATION_PATH = "community/notifications";
     public static final String MODERATION_PATH = "community/moderation";
@@ -123,8 +126,10 @@ public class Header {
             String anonymousId = ums != null ? ums.getAnonymousId() : UserConstants.DEFAULT_ANONYMOUS_ID;
             String userId = resolver.getUserID();
 
-            isModerator = currentPage.adaptTo(CommunityContext.class)
-                    .checkIfUserIsModerator(resolver.adaptTo(UserManager.class), userId);
+            CommunityContext communityContext = currentPage.adaptTo(CommunityContext.class);
+            if (communityContext != null) {
+                isModerator = communityContext.checkIfUserIsModerator(resolver.adaptTo(UserManager.class), userId);
+            }
             isAnonymous = userId == null || userId.equals(anonymousId);
             currentPath = currentPage.getPath();
             signInPath = computePagePath(SIGN_IN_PATH);
@@ -135,7 +140,11 @@ public class Header {
             moderationPath = computePagePath(MODERATION_PATH);
             profilePath = computePagePath(PROFILE_PATH);
             accountPath = ACCOUNT_PATH;
-            userPath = resolver.adaptTo(UserManager.class).getAuthorizable(userId).getPath();
+
+            UserManager userManager = resolver.adaptTo(UserManager.class);
+            if (userManager != null) {
+                userPath = userManager.getAuthorizable(userId).getPath();
+            }
             isCommunitiesPage = currentPage.getPath().startsWith(languageRoot + "/community");
 
             navigationResource = resource.getChild(NN_NAVIGATION);
@@ -343,7 +352,7 @@ public class Header {
         public PagePojo(Page page, boolean selected, List<PagePojo> children) {
             this.page = page;
             this.selected = selected;
-            this.children = children;
+            this.children = new ArrayList<>(children);
         }
 
         public Page getPage() {
@@ -355,7 +364,7 @@ public class Header {
         }
 
         public List<PagePojo> getChildren() {
-            return children;
+            return Collections.unmodifiableList(children);
         }
 
     }

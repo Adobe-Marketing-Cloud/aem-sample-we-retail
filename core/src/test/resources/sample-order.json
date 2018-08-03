@@ -36,5 +36,6 @@
     "billing.state": "CA",
     "payment-option": "/var/commerce/payment-methods/we-retail/creditcard",
     "billing.country": "US"
-  }
+  },
+  "title" : "Order Title"
 }

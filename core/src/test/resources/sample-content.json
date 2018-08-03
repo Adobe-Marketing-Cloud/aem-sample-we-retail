@@ -743,6 +743,35 @@
                 "jcr:primaryType"          : "cq:Page"
             }
         },
+        "men": {
+          "jcr:primaryType": "cq:Page",
+          "jcr:createdBy": "admin",
+          "jcr:created": "Fri Oct 13 2017 18:01:17 GMT+0530",
+          "jcr:content": {
+            "jcr:primaryType": "cq:PageContent",
+            "jcr:mixinTypes": [
+              "cq:LiveRelationship"
+            ],
+            "jcr:createdBy": "admin",
+            "jcr:title": "Men",
+            "cq:template": "/conf/we-retail/settings/wcm/templates/hero-page",
+            "cq:lastRolledout": "Wed Jun 29 2016 14:20:45 GMT+0200",
+            "jcr:created": "Fri Oct 13 2017 18:01:17 GMT+0530",
+            "cq:lastModified": "Mon Mar 14 2016 22:18:58 GMT+0100",
+            "sling:resourceType": "weretail/components/structure/page",
+            "cq:lastRolledoutBy": "admin",
+            "cq:lastModifiedBy": "admin",
+            "root": {
+              "jcr:primaryType": "nt:unstructured",
+              "jcr:mixinTypes": [
+                "cq:LiveRelationship"
+              ],
+              "cq:lastRolledout": "Mon Mar 14 2016 22:18:57 GMT+0100",
+              "sling:resourceType": "wcm/foundation/components/responsivegrid",
+              "cq:lastRolledoutBy": "admin"
+            }
+          }
+        },
         "jcr:content"  : {
             "coverImage"            : "/content/dam/we-retail/en/products/Product_catalog.jpg",
             "cq:cloudserviceconfigs": [

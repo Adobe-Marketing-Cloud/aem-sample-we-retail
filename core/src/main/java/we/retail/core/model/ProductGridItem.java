@@ -15,6 +15,7 @@
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 package we.retail.core.model;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -87,13 +88,15 @@ public class ProductGridItem {
         image = imageResource.getPath();
         try {
             CommerceService commerceService = resource.adaptTo(CommerceService.class);
-            CommerceSession commerceSession = commerceService.login(request, response);
-            Product pimProduct = currentProduct.getPIMProduct();
-            name = pimProduct.getTitle();
-            description = pimProduct.getDescription();
-            price = commerceSession.getProductPrice(pimProduct);
-            path = productPage.getPath();
-            filters = getProductFilters(pimProduct, commerceSession);
+            if (commerceService != null) {
+                CommerceSession commerceSession = commerceService.login(request, response);
+                Product pimProduct = currentProduct.getPIMProduct();
+                name = pimProduct.getTitle();
+                description = pimProduct.getDescription();
+                price = commerceSession.getProductPrice(pimProduct);
+                path = productPage.getPath();
+                filters = getProductFilters(pimProduct, commerceSession);
+            }
         } catch (CommerceException e) {
             LOGGER.error("Can't extract product information from the resource", e);
         }
@@ -164,7 +167,7 @@ public class ProductGridItem {
         }
 
         public Set<String> getColors() {
-            return colors;
+            return Collections.unmodifiableSet(colors);
         }
 
         public void setColor(String color) {
@@ -172,7 +175,7 @@ public class ProductGridItem {
         }
 
         public Set<String> getSizes() {
-            return sizes;
+            return Collections.unmodifiableSet(sizes);
         }
 
         public void setSize(String size) {
@@ -180,7 +183,7 @@ public class ProductGridItem {
         }
 
         public Set<String> getPrices() {
-            return prices;
+            return Collections.unmodifiableSet(prices);
         }
 
         public void setPrice(String price) {

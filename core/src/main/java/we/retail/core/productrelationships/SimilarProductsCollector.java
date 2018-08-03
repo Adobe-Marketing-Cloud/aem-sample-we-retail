@@ -24,6 +24,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import com.day.cq.tagging.TagConstants;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 
@@ -34,6 +35,7 @@ import com.adobe.cq.commerce.api.ProductRelationship;
 import com.adobe.cq.commerce.common.AbstractJcrProduct;
 import com.adobe.cq.commerce.common.DefaultProductRelationship;
 import com.day.cq.wcm.api.PageManager;
+import org.apache.sling.api.resource.ValueMap;
 
 /**
  * A sample RelatedProductsCollector which matches based on tags.
@@ -74,7 +76,7 @@ public class SimilarProductsCollector {
         exclusionSKUs = new ArrayList<String>();
         for (Product product : contextProducts) {
             List<String> matchTags = new ArrayList<String>();
-            Collections.addAll(matchTags, product.getProperty("cq:tags", String[].class));
+            Collections.addAll(matchTags, product.getProperty(TagConstants.PN_TAGS, String[].class));
             matchTagSets.add(matchTags);
 
             try {
@@ -132,7 +134,7 @@ public class SimilarProductsCollector {
             if (pageManager.getContainingPage(resource).getPath().contains("activities")) {
                 return;
             }
-            String[] productTags = product.getProperty("cq:tags", String[].class);
+            String[] productTags = product.getProperty(TagConstants.PN_TAGS, String[].class);
             if (productTags == null || productTags.length == 0) {
                 return;
             }
@@ -163,7 +165,29 @@ public class SimilarProductsCollector {
         List<ProductRelationship> relationshipList = new ArrayList<ProductRelationship>(relationships.values());
         Collections.sort(relationshipList, new Comparator<ProductRelationship>() {
             public int compare(ProductRelationship a, ProductRelationship b) {
-                return b.getMetadata().get("rank", Integer.class).compareTo(a.getMetadata().get("rank", Integer.class));
+                ValueMap aMetadata = a.getMetadata();
+                ValueMap bMetadata = b.getMetadata();
+                if (aMetadata == null && bMetadata == null) {
+                    return 0;
+                } else {
+                    if (aMetadata == null) {
+                        return 1;
+                    } else if (bMetadata == null) {
+                        return -1;
+                    }
+                    Integer aRank = aMetadata.get("rank", Integer.class);
+                    Integer bRank = bMetadata.get("rank", Integer.class);
+                    if (aRank == null && bRank == null) {
+                        return 0;
+                    } else {
+                        if (aRank == null) {
+                            return 1;
+                        } else if (bRank == null) {
+                            return -1;
+                        }
+                        return aRank.compareTo(bRank);
+                    }
+                }
             }
         });
         return relationshipList;

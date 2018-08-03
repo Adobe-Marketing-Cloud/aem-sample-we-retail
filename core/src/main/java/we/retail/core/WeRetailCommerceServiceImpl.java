@@ -20,7 +20,9 @@ import java.util.Calendar;
 import java.util.List;
 
 import javax.jcr.Node;
+import javax.jcr.RepositoryException;
 
+import com.day.cq.wcm.api.WCMException;
 import org.apache.commons.collections.Predicate;
 import org.apache.jackrabbit.commons.JcrUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
@@ -39,7 +41,6 @@ import com.adobe.cq.commerce.api.promotion.Voucher;
 import com.adobe.cq.commerce.common.AbstractJcrCommerceService;
 import com.adobe.cq.commerce.common.CommerceHelper;
 import com.adobe.cq.commerce.common.ServiceContext;
-import com.adobe.cq.commerce.common.promotion.AbstractJcrVoucher;
 import com.day.cq.commons.jcr.JcrConstants;
 import com.day.cq.tagging.Tag;
 import com.day.cq.wcm.api.Page;
@@ -92,8 +93,8 @@ public class WeRetailCommerceServiceImpl extends AbstractJcrCommerceService impl
         if (resource != null) {
             // JCR-based vouchers are cq:Pages
             Resource contentResource = resource.getChild(JcrConstants.JCR_CONTENT);
-            if (contentResource != null && contentResource.isResourceType(AbstractJcrVoucher.VOUCHER_RESOURCE_TYPE)) {
-                return new AbstractJcrVoucher(resource);
+            if (contentResource != null) {
+                return resource.adaptTo(Voucher.class);
             }
         }
         return null;
@@ -123,17 +124,19 @@ public class WeRetailCommerceServiceImpl extends AbstractJcrCommerceService impl
             // In the sample product set, the optional axis is always "color".
             //
             Node productNode = product.adaptTo(Node.class);
-            if (productData.axisIsVariant("color")) {
-                if (!productNode.hasProperty("variationAxis")) {
-                    productNode.setProperty("variationAxis", "color");
-                    productNode.setProperty("variationTitle", "Color");
-                    changed = true;
-                }
-            } else {
-                if (productNode.hasProperty("variationAxis") && productNode.getProperty("variationAxis").getString().equals("color")) {
-                    productNode.setProperty("variationAxis", "");
-                    productNode.setProperty("variationTitle", "");
-                    changed = true;
+            if (productNode != null) {
+                if (productData.axisIsVariant("color")) {
+                    if (!productNode.hasProperty("variationAxis")) {
+                        productNode.setProperty("variationAxis", "color");
+                        productNode.setProperty("variationTitle", "Color");
+                        changed = true;
+                    }
+                } else {
+                    if (productNode.hasProperty("variationAxis") && productNode.getProperty("variationAxis").getString().equals("color")) {
+                        productNode.setProperty("variationAxis", "");
+                        productNode.setProperty("variationTitle", "");
+                        changed = true;
+                    }
                 }
             }
 
@@ -154,21 +157,21 @@ public class WeRetailCommerceServiceImpl extends AbstractJcrCommerceService impl
             // the (generic) page_product template's thumbnail.  This greatly improves the usability
             // of the pages content finder tab.
             //
-            if (!ResourceUtil.isA(productPage.getContentResource(), CommerceConstants.RT_PRODUCT_PAGE_PROXY)) {
+            if (!productPage.getContentResource().isResourceType(CommerceConstants.RT_PRODUCT_PAGE_PROXY)) {
                 String productImageRef = "";
                 Resource productImage = productData.getImage();
                 if (productImage != null) {
                     productImageRef = ResourceUtil.getValueMap(productImage).get("fileReference", "");
                 }
                 Node contentNode = productPage.getContentResource().adaptTo(Node.class);
-                Node pageImageNode = JcrUtils.getOrAddNode(contentNode, "image", "nt:unstructured");
+                Node pageImageNode = JcrUtils.getOrAddNode(contentNode, "image", JcrConstants.NT_UNSTRUCTURED);
                 pageImageNode.setProperty("fileReference", productImageRef);
             }
 
             if (changed) {
                 productPage.getPageManager().touch(productPage.adaptTo(Node.class), true, Calendar.getInstance(), false);
             }
-        } catch(Exception e) {
+        } catch(RepositoryException|WCMException e) {
             throw new CommerceException("Product rollout hook failed: ", e);
         }
     }

@@ -54,7 +54,7 @@ public class WeRetailHelper {
         if (res == null) {
             return false;
         }
-        ValueMap vm = res.adaptTo(ValueMap.class);
+        ValueMap vm = res.getValueMap();
         return vm.get(PROP_NAV_ROOT, false);
     }
 

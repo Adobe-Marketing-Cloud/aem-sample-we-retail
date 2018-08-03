@@ -75,7 +75,7 @@ public class ProductModelTest {
         assertNotNull(productItem.getSummary());
         assertNotNull(productItem.getFeatures());
         assertNotNull(productItem.getPrice());
-        assertNull(productItem.getImageUrl());
+        assertEquals("/content/dam/we-retail/en/products/apparel/footwear/source/Fleet Shoe.jpg", productItem.getImageUrl());
         assertNull(productItem.getThumbnailUrl());
     }
 

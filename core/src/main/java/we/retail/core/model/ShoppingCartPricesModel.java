@@ -83,8 +83,12 @@ public class ShoppingCartPricesModel {
     private I18n i18n;
 
     @PostConstruct
-    private void initModel() throws Exception {
+    private void initModel() throws CommerceException {
         CommerceService commerceService = currentPage.getContentResource().adaptTo(CommerceService.class);
+        if (commerceService == null) {
+            LOGGER.error("Failed to obtain commerce service");
+            return;
+        }
         try {
             commerceSession = commerceService.login(request, response);
         } catch (CommerceException e) {

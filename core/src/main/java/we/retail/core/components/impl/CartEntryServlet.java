@@ -18,9 +18,10 @@ package we.retail.core.components.impl;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.util.HashMap;
-import java.util.Map;
 
+import javax.json.Json;
+import javax.json.stream.JsonGenerator;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletResponse;
 
@@ -40,8 +41,8 @@ import org.apache.sling.api.servlets.SlingAllMethodsServlet;
 import org.apache.sling.api.wrappers.SlingHttpServletRequestWrapper;
 import org.apache.sling.api.wrappers.SlingHttpServletResponseWrapper;
 import org.apache.sling.auth.core.AuthUtil;
-import org.apache.sling.commons.json.JSONObject;
 import org.apache.sling.xss.XSSAPI;
+import org.osgi.framework.Constants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -62,12 +63,12 @@ import we.retail.core.util.WeRetailHelper;
 @Component
 @Service
 @Properties(value={
-        @Property(name = "service.description", value = "Provides cart services for We.Retail products"),
+        @Property(name = Constants.SERVICE_DESCRIPTION, value = "Provides cart services for We.Retail products"),
         @Property(name = "sling.servlet.resourceTypes", value = "sling/servlet/default"),
         @Property(name = "sling.servlet.selectors", value = { WeRetailConstants.DELETE_CARTENTRY_SELECTOR,
                 WeRetailConstants.MODIFY_CARTENTRY_SELECTOR, WeRetailConstants.ADD_CARTENTRY_SELECTOR }),
         @Property(name = "sling.servlet.extensions", value = {"html"}),
-        @Property(name = "sling.servlet.methods", value = "POST")
+        @Property(name = "sling.servlet.methods", value = HttpConstants.METHOD_POST)
 })
 public class CartEntryServlet extends SlingAllMethodsServlet {
 
@@ -76,16 +77,22 @@ public class CartEntryServlet extends SlingAllMethodsServlet {
     private static final String CONTENT_WE_RETAIL_DEFAULT = "/content/we-retail/us/en/";
     private static final String CART_PATH = "/user/cart/jcr:content/root/responsivegrid/cart";
     private static final String CART_PRICES_PATH = "/user/cart/jcr:content/root/responsivegrid/shoppingcartprices";
+
+    @SuppressWarnings("CQRules:CQBP-71")
     private static final String NAV_CART_PATH = "/apps/weretail/components/structure/navcart";
 
     @Reference
-    private XSSAPI xssAPI;
+    private transient XSSAPI xssAPI;
 
     @Override
     protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
         // Make sure commerceService is adapted from a product resource so that we get
         // the right service implementation (hybris, Geo, etc.)
         CommerceService commerceService = request.getResource().adaptTo(CommerceService.class);
+        if (commerceService == null) {
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            return;
+        }
         CommerceSession session;
         try {
             session = commerceService.login(request, response);
@@ -104,21 +111,21 @@ public class CartEntryServlet extends SlingAllMethodsServlet {
         }
 
         if (AuthUtil.isAjaxRequest(request)) {
-            try {
+            response.setContentType("application/json");
+            try (JsonGenerator jsonGenerator = Json.createGenerator(response.getWriter())) {
                 String shoppingCart = renderContent(request, response, CART_PATH);
                 String cartPrices = renderContent(request, response, CART_PRICES_PATH);
                 String navCart = renderNavCart(request, response);
 
-                Map<String, String> map = new HashMap<String, String>();
-                map.put("shoppingCart", shoppingCart);
-                map.put("cartPrices", cartPrices);
-                map.put("navCart", navCart);
-                map.put("entries", Integer.valueOf(session.getCartEntryCount()).toString());
 
-                response.setContentType("application/json");
-                JSONObject json = new JSONObject(map);
-                response.getWriter().write(json.toString());
-            } catch (Exception e) {
+                jsonGenerator.writeStartObject()
+                        .write("shoppingCart", shoppingCart)
+                        .write("cartPrices", cartPrices)
+                        .write("navCart", navCart)
+                        .write("entries", Integer.valueOf(session.getCartEntryCount()).toString())
+                        .writeEnd()
+                        .close();
+            } catch (CommerceException e) {
                 response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             }
         } else {
@@ -178,6 +185,10 @@ public class CartEntryServlet extends SlingAllMethodsServlet {
         String qty = request.getParameter("product-quantity");
 
         Resource productResource = request.getResourceResolver().getResource(productPath);
+        if (productResource == null) {
+            response.sendError(HttpServletResponse.SC_NOT_FOUND);
+            return;
+        }
         Product product = productResource.adaptTo(Product.class);
 
         int quantity = 1;
@@ -213,8 +224,13 @@ public class CartEntryServlet extends SlingAllMethodsServlet {
             path = root.getPath() + contentPath;
         }
 
-        request.getRequestDispatcher(path, options).include(requestWrapper, responseWrapper);
-        return responseWrapper.toStrippedOutput();
+        RequestDispatcher dispatcher = request.getRequestDispatcher(path, options);
+        if (dispatcher != null) {
+            dispatcher.include(requestWrapper, responseWrapper);
+            return responseWrapper.toStrippedOutput();
+        } else {
+            throw new ServletException("Unable to obtain Request Dispatcher");
+        }
     }
 
     private String renderNavCart(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
@@ -227,9 +243,14 @@ public class CartEntryServlet extends SlingAllMethodsServlet {
         options.setReplaceSelectors("");
 
         SyntheticResource resource = new SyntheticResource(request.getResourceResolver(), NAV_CART_PATH, NAV_CART_PATH);
-        request.getRequestDispatcher(resource, options).include(requestWrapper, responseWrapper);
+        RequestDispatcher dispatcher = request.getRequestDispatcher(resource, options);
+        if (dispatcher != null) {
+            dispatcher.include(requestWrapper, responseWrapper);
 
-        return responseWrapper.toStrippedOutput();
+            return responseWrapper.toStrippedOutput();
+        } else {
+            throw new ServletException("Unable to obtain Request Dispatcher");
+        }
     }
 
     private class GetRequestWrapper extends SlingHttpServletRequestWrapper {

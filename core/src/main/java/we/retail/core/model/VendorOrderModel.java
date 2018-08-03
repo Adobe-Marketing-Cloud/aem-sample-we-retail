@@ -17,6 +17,7 @@ package we.retail.core.model;
 
 import javax.annotation.PostConstruct;
 
+import com.adobe.cq.commerce.api.CommerceException;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
@@ -40,7 +41,7 @@ public class VendorOrderModel extends OrderModel {
     private String title;
 
     @PostConstruct
-    private void initModel() throws Exception {
+    private void initModel() throws CommerceException {
         placedOrder = order;
         populateCartEntries();
     }

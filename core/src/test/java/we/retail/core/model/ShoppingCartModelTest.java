@@ -20,6 +20,7 @@ import java.util.List;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.scripting.SlingBindings;
 import org.apache.sling.servlethelpers.MockSlingHttpServletRequest;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -44,6 +45,8 @@ public class ShoppingCartModelTest {
     private ShoppingCartModel shoppingCartModel;
     private ShoppingCartPricesModel shoppingCartPricesModel;
 
+    private MockCommerceSession commerceSession;
+
     @Before
     public void setUp() throws Exception {
         Page page = context.currentPage(Constants.TEST_ORDER_PAGE);
@@ -60,7 +63,7 @@ public class ShoppingCartModelTest {
 
         MockSlingHttpServletRequest request = context.request();
         CommerceService commerceService = page.getContentResource().adaptTo(CommerceService.class);
-        MockCommerceSession commerceSession = (MockCommerceSession) commerceService.login(request, context.response());
+        commerceSession = (MockCommerceSession) commerceService.login(request, context.response());
         commerceSession.registerPlacedOrder(Constants.TEST_ORDER_ID, mockDefaultJcrPlacedOrder);
 
         shoppingCartModel = request.adaptTo(ShoppingCartModel.class);
@@ -93,5 +96,11 @@ public class ShoppingCartModelTest {
         assertEquals(Constants.SHIPPING_TOTAL, shoppingCartPricesModel.getShippingTotal());
         assertEquals(Constants.TAX_TOTAL, shoppingCartPricesModel.getTaxTotal());
         assertEquals(Constants.TOTAL, shoppingCartPricesModel.getTotal());
+    }
+
+    @After
+    public void tearDown() {
+        commerceSession.clearCart();
+        commerceSession.clearPlacedOrders();
     }
 }

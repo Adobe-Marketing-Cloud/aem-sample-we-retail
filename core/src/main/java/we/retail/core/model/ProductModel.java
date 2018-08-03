@@ -91,7 +91,7 @@ public class ProductModel {
         }
 
         String anonymousId = ums != null ? ums.getAnonymousId() : UserConstants.DEFAULT_ANONYMOUS_ID;
-        isAnonymous = resourceResolver.getUserID() == null || resourceResolver.getUserID().equals(anonymousId);
+        isAnonymous = resourceResolver.getUserID() == null || anonymousId.equals(resourceResolver.getUserID());
     }
 
     public ProductItem getProductItem() {
