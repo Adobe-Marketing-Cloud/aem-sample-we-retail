@@ -26,6 +26,7 @@ import java.util.Locale;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.scripting.SlingBindings;
 import org.apache.sling.servlethelpers.MockSlingHttpServletRequest;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -54,6 +55,7 @@ public class OrderHistoryModelTest {
     public final AemContext context = AppAemContext.newAemContext();
 
     private OrderHistoryModel orderHistoryModel;
+    private MockCommerceSession commerceSession;
 
     @Before
     public void setUp() throws Exception {
@@ -66,7 +68,7 @@ public class OrderHistoryModelTest {
 
         MockSlingHttpServletRequest request = context.request();
         CommerceService commerceService = page.getContentResource().adaptTo(CommerceService.class);
-        MockCommerceSession commerceSession = (MockCommerceSession) commerceService.login(request, context.response());
+        commerceSession = (MockCommerceSession) commerceService.login(request, context.response());
 
         // We will use the mocked order defined in src/test/resources/sample-order.json twice
         // in order to have 2 orders in the order history: the "dummy" order is a copy of the mocked
@@ -117,5 +119,11 @@ public class OrderHistoryModelTest {
         assertEquals(Constants.ENTRIES_SIZE, order.getCartEntries().size());
         assertEquals(0, order.getPromotions().size());
         assertEquals(0, order.getVoucherInfos().size());
+    }
+
+    @After
+    public void tearDown() {
+        commerceSession.clearCart();
+        commerceSession.clearPlacedOrders();
     }
 }
