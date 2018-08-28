@@ -30,6 +30,8 @@
     c.relParentCompPath = "/jcr:content/root/responsivegrid/";
     // breadcrumb component
     c.rtBreadcrumb = "weretail/components/content/breadcrumb";
+    // carousel component
+    c.rtCarousel = "weretail/components/content/carousel";
     // image component
     c.rtImage = "weretail/components/content/image";
     // hero image component

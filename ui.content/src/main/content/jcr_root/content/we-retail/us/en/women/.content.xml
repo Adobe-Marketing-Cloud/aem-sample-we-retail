@@ -92,8 +92,8 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Push the limits"
                     sling:resourceType="weretail/components/content/teaser"
-                    fileReference="/content/dam/we-retail/en/activities/climbing/kalymnos-island-female.jpg"
-                    actionsEnabled="{Boolean}true">
+                    actionsEnabled="{Boolean}true"
+                    fileReference="/content/dam/we-retail/en/activities/climbing/kalymnos-island-female.jpg">
                     <cq:responsive
                         cq:lastRolledout="{Date}2016-03-14T22:18:58.090+01:00"
                         cq:lastRolledoutBy="admin"
@@ -124,8 +124,8 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Always comfortable"
                     sling:resourceType="weretail/components/content/teaser"
-                    fileReference="/content/dam/we-retail/en/activities/running/running-desert-woman.jpg"
-                    actionsEnabled="{Boolean}true">
+                    actionsEnabled="{Boolean}true"
+                    fileReference="/content/dam/we-retail/en/activities/running/running-desert-woman.jpg">
                     <cq:responsive
                         cq:lastRolledout="{Date}2016-03-14T22:18:58.098+01:00"
                         cq:lastRolledoutBy="admin"

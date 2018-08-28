@@ -36,6 +36,8 @@
         .addTestCase(window.CQ.WeRetailIT.NavbarTest(h, $, 7))
         .addTestCase(window.CQ.WeRetailIT.HeroImageTest(h, $))
         .addTestCase(window.CQ.WeRetailIT.TeasersTest(h, $, 6))
+        .addTestCase(window.CQ.WeRetailIT.CarouselSlidesTest(h, $, 3))
+        .addTestCase(window.CQ.WeRetailIT.CarouselSlidesNavigationTest(h, $))
         .addTestCase(window.CQ.WeRetailIT.SiteFeaturesTest(h, $))
         // Test featured products
         .addTestCase(window.CQ.WeRetailIT.ProductsGridTest(h, $, PRODUCT_GRID_CLASS + ":first", 6))

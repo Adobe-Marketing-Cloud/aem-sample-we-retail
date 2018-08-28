@@ -4,9 +4,9 @@
     <jcr:content
         cq:contextHubPath="/libs/settings/cloudsettings/legacy/contexthub"
         cq:contextHubSegmentsPath="/conf/we-retail/settings/wcm/segments"
-        cq:lastModified="{Date}2016-09-23T16:25:59.502-07:00"
+        cq:lastModified="{Date}2018-08-21T16:34:44.943+03:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-09-23T16:25:59.503-07:00"
+        cq:lastRolledout="{Date}2018-08-21T16:34:43.100+03:00"
         cq:lastRolledoutBy="admin"
         cq:template="/conf/we-retail/settings/wcm/templates/hero-page"
         jcr:language="en_CA"
@@ -16,16 +16,16 @@
         sling:resourceType="weretail/components/structure/page"
         navRoot="{Boolean}true">
         <root
-            cq:lastRolledout="{Date}2016-09-23T16:25:59.303-07:00"
+            cq:lastRolledout="{Date}2018-08-21T16:34:42.947+03:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <hero_image
-                cq:lastRolledout="{Date}2016-09-23T16:25:59.309-07:00"
+                cq:lastRolledout="{Date}2018-08-21T16:34:42.952+03:00"
                 cq:lastRolledoutBy="admin"
                 cq:targetEngine="cq_contexthub"
-                jcr:lastModified="{Date}2016-09-23T16:25:59.306-07:00"
+                jcr:lastModified="{Date}2018-08-21T16:34:42.949+03:00"
                 jcr:lastModifiedBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
@@ -34,11 +34,11 @@
                 strategyName="first"
                 strategyPath="cq/personalization/clientlib/source/strategies/list/first.js">
                 <default
-                    cq:lastRolledout="{Date}2016-09-23T16:25:59.315-07:00"
+                    cq:lastRolledout="{Date}2018-08-21T16:34:42.958+03:00"
                     cq:lastRolledoutBy="admin"
                     jcr:created="{Date}2016-01-13T15:58:04.452+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-09-23T16:25:59.311-07:00"
+                    jcr:lastModified="{Date}2018-08-21T16:34:42.955+03:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
@@ -51,234 +51,119 @@
                     useFullWidth="true"/>
             </hero_image>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-09-23T16:25:59.320-07:00"
+                cq:lastRolledout="{Date}2018-08-21T16:34:42.960+03:00"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
                 <section_title_496791378
-                    cq:lastRolledout="{Date}2016-09-23T16:25:59.338-07:00"
+                    cq:lastRolledout="{Date}2018-08-21T16:34:42.975+03:00"
                     cq:lastRolledoutBy="admin"
                     jcr:created="{Date}2015-11-04T00:47:33.815+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-09-23T16:25:59.335-07:00"
+                    jcr:lastModified="{Date}2018-08-21T16:34:42.972+03:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Discover the Finest Gear"
                     sling:resourceType="weretail/components/content/title"
                     type="h2"/>
-                <teaser
-                    cq:lastRolledout="{Date}2016-09-23T16:25:59.342-07:00"
+                <carousel
+                    cq:lastRolledout="{Date}2018-08-21T16:34:43.072+03:00"
                     cq:lastRolledoutBy="admin"
-                    cq:targetEngine="cq_contexthub"
-                    jcr:lastModified="{Date}2016-09-23T16:25:59.339-07:00"
+                    jcr:created="{Date}2018-08-02T17:22:49.457+03:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2018-08-02T17:22:49.457+03:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="cq/personalization/components/target"
-                    location="eadebf73-f250-47b5-8d35-b42479c81dca"
-                    strategyName="first"
-                    strategyPath="cq/personalization/clientlib/source/strategies/list/first.js">
-                    <default
-                        cq:lastRolledout="{Date}2016-09-23T16:25:59.348-07:00"
+                    sling:resourceType="weretail/components/content/carousel">
+                    <teaser
+                        cq:lastRolledout="{Date}2018-08-21T16:34:43.076+03:00"
                         cq:lastRolledoutBy="admin"
                         jcr:created="{Date}2015-11-03T23:52:30.703+01:00"
                         jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2016-09-23T16:25:59.345-07:00"
+                        jcr:lastModified="{Date}2018-08-21T16:34:43.074+03:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="weretail/components/content/teaser"
-                        fileReference="/content/dam/we-retail/en/activities/running/running-woods-woman.jpg"
-                        actionsEnabled="{Boolean}true">
-                        <cq:responsive
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.350-07:00"
+                        actionsEnabled="true"
+                        fileReference="/content/dam/we-retail/en/activities/running/running-woods-woman.jpg">
+                        <actions
+                            cq:lastRolledout="{Date}2018-08-21T16:34:43.078+03:00"
                             cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured">
-                            <default
-                                cq:lastRolledout="{Date}2016-09-23T16:25:59.354-07:00"
-                                cq:lastRolledoutBy="admin"
-                                jcr:mixinTypes="[cq:LiveRelationship]"
-                                jcr:primaryType="nt:unstructured"
-                                width="4"/>
-                            <phone
-                                cq:lastRolledout="{Date}2016-09-23T16:25:59.355-07:00"
-                                cq:lastRolledoutBy="admin"
-                                jcr:mixinTypes="[cq:LiveRelationship]"
-                                jcr:primaryType="nt:unstructured"
-                                width="12"/>
-                        </cq:responsive>
-                        <actions jcr:primaryType="nt:unstructured">
                             <item0
+                                cq:lastRolledout="{Date}2018-08-21T16:34:43.081+03:00"
+                                cq:lastRolledoutBy="admin"
+                                jcr:mixinTypes="[cq:LiveRelationship]"
                                 jcr:primaryType="nt:unstructured"
                                 link="/content/we-retail/ca/en/women"
                                 text="Women"/>
                         </actions>
-                    </default>
-                    <cq:responsive
-                        cq:lastRolledout="{Date}2016-09-23T16:25:59.357-07:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured">
-                        <default
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.360-07:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            width="4"/>
-                        <phone
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.362-07:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            width="12"/>
-                    </cq:responsive>
-                </teaser>
-                <teaser_859708776
-                    cq:lastRolledout="{Date}2016-09-23T16:25:59.366-07:00"
-                    cq:lastRolledoutBy="admin"
-                    cq:targetEngine="cq_contexthub"
-                    jcr:lastModified="{Date}2016-09-23T16:25:59.363-07:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="cq/personalization/components/target"
-                    location="ee033a3d-c7a2-4a80-9aa6-5db4aef6bdeb"
-                    strategyName="first"
-                    strategyPath="cq/personalization/clientlib/source/strategies/list/first.js">
-                    <default
-                        cq:lastRolledout="{Date}2016-09-23T16:25:59.372-07:00"
+                    </teaser>
+                    <teaser_859708776
+                        cq:lastRolledout="{Date}2018-08-21T16:34:43.084+03:00"
                         cq:lastRolledoutBy="admin"
                         jcr:created="{Date}2015-11-04T00:10:12.400+01:00"
                         jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2016-09-23T16:25:59.369-07:00"
+                        jcr:lastModified="{Date}2018-08-21T16:34:43.082+03:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="weretail/components/content/teaser"
-                        fileReference="/content/dam/we-retail/en/activities/biking/rocks-downhill.jpg"
-                        actionsEnabled="{Boolean}true">
-                        <cq:responsive
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.374-07:00"
+                        actionsEnabled="true"
+                        fileReference="/content/dam/we-retail/en/activities/biking/rocks-downhill.jpg">
+                        <actions
+                            cq:lastRolledout="{Date}2018-08-21T16:34:43.086+03:00"
                             cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured">
-                            <default
-                                cq:lastRolledout="{Date}2016-09-23T16:25:59.377-07:00"
-                                cq:lastRolledoutBy="admin"
-                                jcr:mixinTypes="[cq:LiveRelationship]"
-                                jcr:primaryType="nt:unstructured"
-                                width="4"/>
-                            <phone
-                                cq:lastRolledout="{Date}2016-09-23T16:25:59.379-07:00"
-                                cq:lastRolledoutBy="admin"
-                                jcr:mixinTypes="[cq:LiveRelationship]"
-                                jcr:primaryType="nt:unstructured"
-                                width="12"/>
-                        </cq:responsive>
-                        <actions jcr:primaryType="nt:unstructured">
                             <item0
+                                cq:lastRolledout="{Date}2018-08-21T16:34:43.088+03:00"
+                                cq:lastRolledoutBy="admin"
+                                jcr:mixinTypes="[cq:LiveRelationship]"
                                 jcr:primaryType="nt:unstructured"
                                 link="/content/we-retail/ca/en/men"
                                 text="Men"/>
                         </actions>
-                    </default>
-                    <cq:responsive
-                        cq:lastRolledout="{Date}2016-09-23T16:25:59.380-07:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured">
-                        <default
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.383-07:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            width="4"/>
-                        <phone
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.385-07:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            width="12"/>
-                    </cq:responsive>
-                </teaser_859708776>
-                <teaser_465639357
-                    cq:lastRolledout="{Date}2016-09-23T16:25:59.389-07:00"
-                    cq:lastRolledoutBy="admin"
-                    cq:targetEngine="cq_contexthub"
-                    jcr:lastModified="{Date}2016-09-23T16:25:59.386-07:00"
-                    jcr:lastModifiedBy="admin"
-                    jcr:mixinTypes="[cq:LiveRelationship]"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="cq/personalization/components/target"
-                    location="d2878954-431c-4f51-8465-7c6653344545"
-                    strategyName="first"
-                    strategyPath="cq/personalization/clientlib/source/strategies/list/first.js">
-                    <default
-                        cq:lastRolledout="{Date}2016-09-23T16:25:59.395-07:00"
+                    </teaser_859708776>
+                    <teaser_465639357
+                        cq:lastRolledout="{Date}2018-08-21T16:34:43.091+03:00"
                         cq:lastRolledoutBy="admin"
                         jcr:created="{Date}2015-11-04T00:10:50.268+01:00"
                         jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2016-09-23T16:25:59.392-07:00"
+                        jcr:lastModified="{Date}2018-08-21T16:34:43.089+03:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="weretail/components/content/teaser"
-                        fileReference="/content/dam/we-retail/en/activities/climbing/climber-gear-rope.jpg"
-                        actionsEnabled="{Boolean}true">
-                        <cq:responsive
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.397-07:00"
+                        actionsEnabled="true"
+                        fileReference="/content/dam/we-retail/en/activities/climbing/climber-gear-rope.jpg">
+                        <actions
+                            cq:lastRolledout="{Date}2018-08-21T16:34:43.093+03:00"
                             cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured">
-                            <default
-                                cq:lastRolledout="{Date}2016-09-23T16:25:59.401-07:00"
-                                cq:lastRolledoutBy="admin"
-                                jcr:mixinTypes="[cq:LiveRelationship]"
-                                jcr:primaryType="nt:unstructured"
-                                width="4"/>
-                            <phone
-                                cq:lastRolledout="{Date}2016-09-23T16:25:59.402-07:00"
-                                cq:lastRolledoutBy="admin"
-                                jcr:mixinTypes="[cq:LiveRelationship]"
-                                jcr:primaryType="nt:unstructured"
-                                width="12"/>
-                        </cq:responsive>
-                        <actions jcr:primaryType="nt:unstructured">
                             <item0
+                                cq:lastRolledout="{Date}2018-08-21T16:34:43.095+03:00"
+                                cq:lastRolledoutBy="admin"
+                                jcr:mixinTypes="[cq:LiveRelationship]"
                                 jcr:primaryType="nt:unstructured"
                                 link="/content/we-retail/ca/en/equipment"
                                 text="Equipment"/>
                         </actions>
-                    </default>
-                    <cq:responsive
-                        cq:lastRolledout="{Date}2016-09-23T16:25:59.403-07:00"
-                        cq:lastRolledoutBy="admin"
-                        jcr:mixinTypes="[cq:LiveRelationship]"
-                        jcr:primaryType="nt:unstructured">
-                        <default
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.406-07:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            width="4"/>
-                        <phone
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.408-07:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured"
-                            width="12"/>
-                    </cq:responsive>
-                </teaser_465639357>
+                    </teaser_465639357>
+                </carousel>
                 <site_feature
-                    cq:lastRolledout="{Date}2016-09-23T16:25:59.412-07:00"
+                    cq:lastRolledout="{Date}2018-08-21T16:34:42.981+03:00"
                     cq:lastRolledoutBy="admin"
                     jcr:created="{Date}2015-11-03T23:52:30.703+01:00"
                     jcr:createdBy="admin"
                     jcr:description="And free return"
-                    jcr:lastModified="{Date}2016-09-23T16:25:59.409-07:00"
+                    jcr:lastModified="{Date}2018-08-21T16:34:42.978+03:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
@@ -286,18 +171,18 @@
                     sling:resourceType="weretail/components/content/sitefeature"
                     fileReference="/content/dam/we-retail/en/features/cart.png">
                     <cq:responsive
-                        cq:lastRolledout="{Date}2016-09-23T16:25:59.414-07:00"
+                        cq:lastRolledout="{Date}2018-08-21T16:34:42.983+03:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured">
                         <default
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.417-07:00"
+                            cq:lastRolledout="{Date}2018-08-21T16:34:42.986+03:00"
                             cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             width="4"/>
                         <phone
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.419-07:00"
+                            cq:lastRolledout="{Date}2018-08-21T16:34:42.988+03:00"
                             cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
@@ -305,12 +190,12 @@
                     </cq:responsive>
                 </site_feature>
                 <site_feature_465639357
-                    cq:lastRolledout="{Date}2016-09-23T16:25:59.423-07:00"
+                    cq:lastRolledout="{Date}2018-08-21T16:34:42.992+03:00"
                     cq:lastRolledoutBy="admin"
                     jcr:created="{Date}2015-11-04T00:10:50.268+01:00"
                     jcr:createdBy="admin"
                     jcr:description="Worldwide shipping"
-                    jcr:lastModified="{Date}2016-09-23T16:25:59.420-07:00"
+                    jcr:lastModified="{Date}2018-08-21T16:34:42.989+03:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
@@ -318,18 +203,18 @@
                     sling:resourceType="weretail/components/content/sitefeature"
                     fileReference="/content/dam/we-retail/en/features/tracking.png">
                     <cq:responsive
-                        cq:lastRolledout="{Date}2016-09-23T16:25:59.425-07:00"
+                        cq:lastRolledout="{Date}2018-08-21T16:34:42.994+03:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured">
                         <default
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.428-07:00"
+                            cq:lastRolledout="{Date}2018-08-21T16:34:42.997+03:00"
                             cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             width="4"/>
                         <phone
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.429-07:00"
+                            cq:lastRolledout="{Date}2018-08-21T16:34:42.999+03:00"
                             cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
@@ -337,12 +222,12 @@
                     </cq:responsive>
                 </site_feature_465639357>
                 <site_feature_859708776
-                    cq:lastRolledout="{Date}2016-09-23T16:25:59.434-07:00"
+                    cq:lastRolledout="{Date}2018-08-21T16:34:43.002+03:00"
                     cq:lastRolledoutBy="admin"
                     jcr:created="{Date}2015-11-04T00:10:12.400+01:00"
                     jcr:createdBy="admin"
                     jcr:description="With our outdoor specialist"
-                    jcr:lastModified="{Date}2016-09-23T16:25:59.431-07:00"
+                    jcr:lastModified="{Date}2018-08-21T16:34:43.000+03:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
@@ -350,18 +235,18 @@
                     sling:resourceType="weretail/components/content/sitefeature"
                     fileReference="/content/dam/we-retail/en/features/support.png">
                     <cq:responsive
-                        cq:lastRolledout="{Date}2016-09-23T16:25:59.436-07:00"
+                        cq:lastRolledout="{Date}2018-08-21T16:34:43.004+03:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured">
                         <default
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.439-07:00"
+                            cq:lastRolledout="{Date}2018-08-21T16:34:43.007+03:00"
                             cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             width="4"/>
                         <phone
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.441-07:00"
+                            cq:lastRolledout="{Date}2018-08-21T16:34:43.008+03:00"
                             cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
@@ -369,11 +254,11 @@
                     </cq:responsive>
                 </site_feature_859708776>
                 <section_title
-                    cq:lastRolledout="{Date}2016-09-23T16:25:59.444-07:00"
+                    cq:lastRolledout="{Date}2018-08-21T16:34:43.011+03:00"
                     cq:lastRolledoutBy="admin"
                     jcr:created="{Date}2015-11-04T00:47:00.581+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-09-23T16:25:59.442-07:00"
+                    jcr:lastModified="{Date}2018-08-21T16:34:43.009+03:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
@@ -381,11 +266,11 @@
                     sling:resourceType="weretail/components/content/title"
                     type="h2"/>
                 <products_grid
-                    cq:lastRolledout="{Date}2016-09-23T16:25:59.450-07:00"
+                    cq:lastRolledout="{Date}2018-08-21T16:34:43.017+03:00"
                     cq:lastRolledoutBy="admin"
                     jcr:created="{Date}2015-11-03T23:39:56.441+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-09-23T16:25:59.446-07:00"
+                    jcr:lastModified="{Date}2018-08-21T16:34:43.014+03:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
@@ -400,11 +285,11 @@
                     pages="[/content/we-retail/ca/en/products/women/coats/sleek-insulated-coat,/content/we-retail/ca/en/products/men/coats/el-gordo-down-jacket,/content/we-retail/ca/en/products/men/shirts/expedition-tech-long-sleeved-shirt,/content/we-retail/ca/en/products/men/pants/trail-model-pants,/content/we-retail/ca/en/products/equipment/biking/marin-mountain-bike-shoes,/content/we-retail/ca/en/products/women/shirts/rios-t-shirt]"
                     tagsMatch="any"/>
                 <section_title_431279162
-                    cq:lastRolledout="{Date}2016-09-23T16:25:59.453-07:00"
+                    cq:lastRolledout="{Date}2018-08-21T16:34:43.021+03:00"
                     cq:lastRolledoutBy="admin"
                     jcr:created="{Date}2015-11-04T00:51:12.388+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-09-23T16:25:59.451-07:00"
+                    jcr:lastModified="{Date}2018-08-21T16:34:43.019+03:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
@@ -412,7 +297,7 @@
                     sling:resourceType="weretail/components/content/title"
                     type="h2"/>
                 <list
-                    cq:lastRolledout="{Date}2018-02-06T23:21:23.012+01:00"
+                    cq:lastRolledout="{Date}2018-08-21T16:34:43.100+03:00"
                     cq:lastRolledoutBy="admin"
                     cq:styleIds="[1508797744638,1508800123708]"
                     jcr:created="2018-02-06T17:59:00.584+01:00"
@@ -433,11 +318,11 @@
                     sortOrder="asc"
                     tagsMatch="any"/>
                 <section_title_239098915
-                    cq:lastRolledout="{Date}2016-09-23T16:25:59.462-07:00"
+                    cq:lastRolledout="{Date}2018-08-21T16:34:43.024+03:00"
                     cq:lastRolledoutBy="admin"
                     jcr:created="{Date}2015-11-04T00:51:38.275+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-09-23T16:25:59.460-07:00"
+                    jcr:lastModified="{Date}2018-08-21T16:34:43.022+03:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
@@ -445,11 +330,11 @@
                     sling:resourceType="weretail/components/content/title"
                     type="h2"/>
                 <products_grid_1773541649
-                    cq:lastRolledout="{Date}2016-09-23T16:25:59.468-07:00"
+                    cq:lastRolledout="{Date}2018-08-21T16:34:43.029+03:00"
                     cq:lastRolledoutBy="admin"
                     jcr:created="{Date}2015-11-04T00:51:55.043+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-09-23T16:25:59.464-07:00"
+                    jcr:lastModified="{Date}2018-08-21T16:34:43.026+03:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
@@ -464,11 +349,11 @@
                     pages="[/content/we-retail/ca/en/products/women/coats/sleek-insulated-coat,/content/we-retail/ca/en/products/men/coats/el-gordo-down-jacket,/content/we-retail/ca/en/products/men/shirts/expedition-tech-long-sleeved-shirt,/content/we-retail/ca/en/products/men/pants/trail-model-pants,/content/we-retail/ca/en/products/equipment/biking/marin-mountain-bike-shoes,/content/we-retail/ca/en/products/women/shirts/rios-t-shirt]"
                     tagsMatch="any"/>
                 <section_title_239098
-                    cq:lastRolledout="{Date}2016-09-23T16:25:59.471-07:00"
+                    cq:lastRolledout="{Date}2018-08-21T16:34:43.033+03:00"
                     cq:lastRolledoutBy="admin"
                     jcr:created="{Date}2015-11-04T00:51:38.275+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-09-23T16:25:59.469-07:00"
+                    jcr:lastModified="{Date}2018-08-21T16:34:43.031+03:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
@@ -476,30 +361,29 @@
                     sling:resourceType="weretail/components/content/title"
                     type="h2"/>
                 <teaser_984780047
-                    cq:lastRolledout="{Date}2016-09-23T16:25:59.475-07:00"
+                    cq:lastRolledout="{Date}2018-08-21T16:34:43.037+03:00"
                     cq:lastRolledoutBy="admin"
                     jcr:created="{Date}2016-03-12T23:01:13.861+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-09-23T16:25:59.473-07:00"
+                    jcr:lastModified="{Date}2018-08-21T16:34:43.034+03:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/content/teaser"
-                    buttonLabel="Blog"
                     fileReference="/content/dam/we-retail/en/activities/hiking-camping/camp-summer-night.jpg">
                     <cq:responsive
-                        cq:lastRolledout="{Date}2016-09-23T16:25:59.477-07:00"
+                        cq:lastRolledout="{Date}2018-08-21T16:34:43.039+03:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured">
                         <default
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.480-07:00"
+                            cq:lastRolledout="{Date}2018-08-21T16:34:43.042+03:00"
                             cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             width="4"/>
                         <phone
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.482-07:00"
+                            cq:lastRolledout="{Date}2018-08-21T16:34:43.044+03:00"
                             cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
@@ -507,30 +391,29 @@
                     </cq:responsive>
                 </teaser_984780047>
                 <teaser_305030210
-                    cq:lastRolledout="{Date}2016-09-23T16:25:59.485-07:00"
+                    cq:lastRolledout="{Date}2018-08-21T16:34:43.047+03:00"
                     cq:lastRolledoutBy="admin"
                     jcr:created="{Date}2016-03-12T23:01:15.249+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-09-23T16:25:59.483-07:00"
+                    jcr:lastModified="{Date}2018-08-21T16:34:43.044+03:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/content/teaser"
-                    buttonLabel="Forum"
                     fileReference="/content/dam/we-retail/en/activities/climbing/ice-climbing-group.jpg">
                     <cq:responsive
-                        cq:lastRolledout="{Date}2016-09-23T16:25:59.487-07:00"
+                        cq:lastRolledout="{Date}2018-08-21T16:34:43.049+03:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured">
                         <default
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.490-07:00"
+                            cq:lastRolledout="{Date}2018-08-21T16:34:43.052+03:00"
                             cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             width="4"/>
                         <phone
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.492-07:00"
+                            cq:lastRolledout="{Date}2018-08-21T16:34:43.053+03:00"
                             cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
@@ -538,30 +421,29 @@
                     </cq:responsive>
                 </teaser_305030210>
                 <teaser_1388037983
-                    cq:lastRolledout="{Date}2016-09-23T16:25:59.496-07:00"
+                    cq:lastRolledout="{Date}2018-08-21T16:34:43.056+03:00"
                     cq:lastRolledoutBy="admin"
                     jcr:created="{Date}2016-03-12T23:01:16.541+01:00"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2016-09-23T16:25:59.493-07:00"
+                    jcr:lastModified="{Date}2018-08-21T16:34:43.054+03:00"
                     jcr:lastModifiedBy="admin"
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/content/teaser"
-                    buttonLabel="Q&amp;A"
                     fileReference="/content/dam/we-retail/en/activities/biking/group-mountain-bikers.jpg">
                     <cq:responsive
-                        cq:lastRolledout="{Date}2016-09-23T16:25:59.498-07:00"
+                        cq:lastRolledout="{Date}2018-08-21T16:34:43.058+03:00"
                         cq:lastRolledoutBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured">
                         <default
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.501-07:00"
+                            cq:lastRolledout="{Date}2018-08-21T16:34:43.062+03:00"
                             cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"
                             width="4"/>
                         <phone
-                            cq:lastRolledout="{Date}2016-09-23T16:25:59.503-07:00"
+                            cq:lastRolledout="{Date}2018-08-21T16:34:43.064+03:00"
                             cq:lastRolledoutBy="admin"
                             jcr:mixinTypes="[cq:LiveRelationship]"
                             jcr:primaryType="nt:unstructured"

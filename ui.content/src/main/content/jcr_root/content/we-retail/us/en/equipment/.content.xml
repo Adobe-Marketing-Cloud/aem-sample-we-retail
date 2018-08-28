@@ -61,8 +61,8 @@
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/content/teaser"
-                    fileReference="/content/dam/we-retail/en/activities/hiking-camping/hiker-anapurna.jpg"
-                    actionsEnabled="{Boolean}true">
+                    actionsEnabled="{Boolean}true"
+                    fileReference="/content/dam/we-retail/en/activities/hiking-camping/hiker-anapurna.jpg">
                     <cq:responsive
                         cq:lastRolledout="{Date}2016-03-14T22:18:58.188+01:00"
                         cq:lastRolledoutBy="admin"
@@ -92,8 +92,8 @@
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/content/teaser"
-                    fileReference="/content/dam/we-retail/en/activities/running/running-trail-man.jpg"
-                    actionsEnabled="{Boolean}true">
+                    actionsEnabled="{Boolean}true"
+                    fileReference="/content/dam/we-retail/en/activities/running/running-trail-man.jpg">
                     <cq:responsive
                         cq:lastRolledout="{Date}2016-03-14T22:18:58.196+01:00"
                         cq:lastRolledoutBy="admin"
@@ -123,8 +123,8 @@
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/content/teaser"
-                    fileReference="/content/dam/we-retail/en/activities/biking/enduro-trail-jump.jpg"
-                    actionsEnabled="{Boolean}true">
+                    actionsEnabled="{Boolean}true"
+                    fileReference="/content/dam/we-retail/en/activities/biking/enduro-trail-jump.jpg">
                     <cq:responsive
                         cq:lastRolledout="{Date}2016-03-14T22:18:58.205+01:00"
                         cq:lastRolledoutBy="admin"
@@ -154,8 +154,8 @@
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/content/teaser"
-                    fileReference="/content/dam/we-retail/en/activities/surfing/wave-nicaragua.jpg"
-                    actionsEnabled="{Boolean}true">
+                    actionsEnabled="{Boolean}true"
+                    fileReference="/content/dam/we-retail/en/activities/surfing/wave-nicaragua.jpg">
                     <cq:responsive
                         cq:lastRolledout="{Date}2016-03-14T22:18:58.213+01:00"
                         cq:lastRolledoutBy="admin"
@@ -185,8 +185,8 @@
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/content/teaser"
-                    fileReference="/content/dam/we-retail/en/activities/skiing/freeride-steep.jpg"
-                    actionsEnabled="{Boolean}true">
+                    actionsEnabled="{Boolean}true"
+                    fileReference="/content/dam/we-retail/en/activities/skiing/freeride-steep.jpg">
                     <cq:responsive
                         cq:lastRolledout="{Date}2016-03-14T22:18:58.224+01:00"
                         cq:lastRolledoutBy="admin"
@@ -270,8 +270,8 @@
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/content/teaser"
-                    fileReference="/content/dam/we-retail/en/activities/skiing/freeride-extreme.jpg"
-                    actionsEnabled="{Boolean}true">
+                    actionsEnabled="{Boolean}true"
+                    fileReference="/content/dam/we-retail/en/activities/skiing/freeride-extreme.jpg">
                     <actions jcr:primaryType="nt:unstructured">
                         <item0
                             jcr:primaryType="nt:unstructured"

@@ -92,8 +92,8 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Push the limits"
                     sling:resourceType="weretail/components/content/teaser"
-                    fileReference="/content/dam/we-retail/en/activities/biking/enduro-trail-jump.jpg"
-                    actionsEnabled="{Boolean}true">
+                    actionsEnabled="{Boolean}true"
+                    fileReference="/content/dam/we-retail/en/activities/biking/enduro-trail-jump.jpg">
                     <cq:responsive
                         cq:lastRolledout="{Date}2016-03-14T22:18:58.008+01:00"
                         cq:lastRolledoutBy="admin"
@@ -124,8 +124,8 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Always comfortable"
                     sling:resourceType="weretail/components/content/teaser"
-                    fileReference="/content/dam/we-retail/en/activities/running/running-trail-man.jpg"
-                    actionsEnabled="{Boolean}true">
+                    actionsEnabled="{Boolean}true"
+                    fileReference="/content/dam/we-retail/en/activities/running/running-trail-man.jpg">
                     <cq:responsive
                         cq:lastRolledout="{Date}2016-03-14T22:18:58.016+01:00"
                         cq:lastRolledoutBy="admin"

@@ -13,14 +13,28 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-;(function(h) {
-    window.CQ.WeRetailIT.TeasersTest = function (h, $, count) {
-        return new h.TestCase("Check category teasers")
-            // Check category teasers are visible
-            .asserts.visible(".we-Teaser .cmp-teaser", true)
-            // Check category teasers buttons are visible
-            .asserts.visible(".we-Teaser .cmp-teaser__image", true)
-            // Check category teasers number
-            .asserts.isTrue(function() {return window.CQ.WeRetailIT.checkNumberOfItems(h, ".we-Teaser .cmp-teaser", count);});
-    }
-})(hobs);
+@import (reference) "/apps/weretail/clientlibs/common/variables.less";
+@import (reference) "/apps/weretail/clientlibs/clientlib-site/less/main.less";
+
+.cmp-carousel__action--prev, .cmp-carousel__action--next {
+    position: absolute;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    margin-top: -20px;
+    opacity: 1;
+    background-color: #000;
+}
+
+.cmp-carousel__action--prev {
+    left: 10px;
+}
+
+.cmp-carousel__action--next {
+    right: 10px;
+}
+
+.cmp-carousel__indicators {
+    background-color: #000;
+}
