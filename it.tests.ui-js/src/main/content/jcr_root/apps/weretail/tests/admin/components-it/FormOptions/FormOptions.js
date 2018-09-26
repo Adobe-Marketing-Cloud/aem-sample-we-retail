@@ -88,9 +88,9 @@
     //press the Add button
         .click("button :contains('Add')")
         //set the value
-        .fillInput("input[name='./value']",value)
+        .fillInput("input[name$='value']",value)
         //set the text
-        .fillInput("input[name='./text']",text)
+        .fillInput("input[name$='text']",text)
     ;
 
     /**
@@ -322,7 +322,7 @@
             //add one option
             .execTestCase(formOptions.addOption)
             //check the 'Active' option
-            .click("input[type='checkbox'][name='./selected']")
+            .click("input[type='checkbox'][name$='selected']")
             //close the edit dialog
             .execTestCase(c.tcSaveConfigureDialog)
             //check if the option is active
@@ -345,7 +345,7 @@
             //add one option
             .execTestCase(formOptions.addOption)
             //check the 'Active' option
-            .click("input[type='radio'][name='./selected']")
+            .click("input[type='radio'][name$='selected']")
             //close the edit dialog
             .execTestCase(c.tcSaveConfigureDialog)
             //check if the option is active
@@ -368,7 +368,7 @@
             //add one option
             .execTestCase(formOptions.addOption)
             //check the 'Active' option
-            .click("input[type='radio'][name='./selected']")
+            .click("input[type='radio'][name$='selected']")
             //close the edit dialog
             .execTestCase(c.tcSaveConfigureDialog)
             //check if the option is active
@@ -391,7 +391,7 @@
             //add one option
             .execTestCase(formOptions.addOption)
             //check the 'Active' option
-            .click("input[type='checkbox'][name='./selected']")
+            .click("input[type='checkbox'][name$='selected']")
             //close the edit dialog
             .execTestCase(c.tcSaveConfigureDialog)
             //check if the option is active
@@ -414,7 +414,7 @@
             //add one option
             .execTestCase(formOptions.addOption)
             //check the 'Disabled' option
-            .click("input[type='checkbox'][name='./disabled']")
+            .click("input[type='checkbox'][name$='disabled']")
             //close the edit dialog
             .execTestCase(c.tcSaveConfigureDialog)
             //check if the option is disabled
@@ -437,7 +437,7 @@
             //add one option
             .execTestCase(formOptions.addOption)
             //check the 'Disabled' option
-            .click("input[type='checkbox'][name='./disabled']")
+            .click("input[type='checkbox'][name$='disabled']")
             //close the edit dialog
             .execTestCase(c.tcSaveConfigureDialog)
             //check if the option is disabled
@@ -460,7 +460,7 @@
             //add one option
             .execTestCase(formOptions.addOption)
             //check the 'Disabled' option
-            .click("input[type='checkbox'][name='./disabled']")
+            .click("input[type='checkbox'][name$='disabled']")
             //close the edit dialog
             .execTestCase(c.tcSaveConfigureDialog)
             //check if the option is disabled
@@ -483,7 +483,7 @@
             //add one option
             .execTestCase(formOptions.addOption)
             //check the 'Disabled' option
-            .click("input[type='checkbox'][name='./disabled']")
+            .click("input[type='checkbox'][name$='disabled']")
             //close the edit dialog
             .execTestCase(c.tcSaveConfigureDialog)
             //check if the option is disabled
