@@ -4,5 +4,5 @@
     jcr:description="Displays a set of tabpanels"
     jcr:primaryType="cq:Component"
     jcr:title="Tabs"
-    sling:resourceSuperType="core/wcm/sandbox/components/tabs/v1/tabs"
+    sling:resourceSuperType="core/wcm/components/tabs/v1/tabs"
     componentGroup="We.Retail"/>

@@ -4,5 +4,5 @@
     jcr:description="Displays a navigable list of slides"
     jcr:primaryType="cq:Component"
     jcr:title="Carousel"
-    sling:resourceSuperType="core/wcm/sandbox/components/carousel/v1/carousel"
+    sling:resourceSuperType="core/wcm/components/carousel/v1/carousel"
     componentGroup="We.Retail"/>
