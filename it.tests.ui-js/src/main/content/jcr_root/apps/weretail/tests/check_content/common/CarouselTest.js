@@ -30,7 +30,7 @@
             },
             action:{
                 next: ".cmp-carousel__action--next",
-                prev: ".cmp-carousel__action--prev"
+                prev: ".cmp-carousel__action--previous"
             }
         },
         teaser: {
