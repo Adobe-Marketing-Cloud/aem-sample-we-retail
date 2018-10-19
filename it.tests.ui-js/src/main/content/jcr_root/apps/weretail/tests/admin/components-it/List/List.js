@@ -204,9 +204,7 @@
             .execTestCase(c.tcOpenConfigureDialog("cmpPath"))
 
             // set parent page
-            // NOTE: simulate an 'enter' at the end otherwise autocompletion will open a suggestion box
-            .simulate("foundation-autocomplete[name='./parentPage'] input[type!='hidden']", "key-sequence",
-                {sequence: "%parentPath%{enter}"})
+            .execTestCase(c.tcSelectInAutocomplete("[name='./parentPage']", "%parentPath%"))
 
             // close the dialog
             .execTestCase(c.tcSaveConfigureDialog)
@@ -241,9 +239,7 @@
             .execTestCase(c.tcOpenConfigureDialog("cmpPath"))
 
             // set parent page
-            // NOTE: simulate an 'enter' at the end otherwise autocompletion will open a suggestion box
-            .simulate("foundation-autocomplete[name='./parentPage'] input[type!='hidden']", "key-sequence",
-                {sequence: "%parentPath%{enter}"})
+            .execTestCase(c.tcSelectInAutocomplete("[name='./parentPage']", "%parentPath%"))
             // set depth to 2
             .fillInput("coral-numberinput[name='./childDepth'] > input", "2")
             // close the dialog
@@ -291,17 +287,13 @@
 
             // click the button
             .click("coral-multifield[data-granite-coral-multifield-name='./pages'] > button")
-            // NOTE: simulate an 'enter' at the end otherwise autocompletion will open a suggestion box
-            .simulate("foundation-autocomplete[name='./pages'] input[type!='hidden']", "key-sequence",
-                {sequence: "%page1Path%{enter}"})
+            .execTestCase(c.tcSelectInAutocomplete("[name='./pages']", "%page1Path%"))
 
             .click("coral-multifield[data-granite-coral-multifield-name='./pages'] > button")
-            .simulate("foundation-autocomplete[name='./pages']:eq(1) input[type!='hidden']", "key-sequence",
-                {sequence: "%page21Path%{enter}"})
+            .execTestCase(c.tcSelectInAutocomplete("[name='./pages']:eq(1)", "%page21Path%"))
 
             .click("coral-multifield[data-granite-coral-multifield-name='./pages'] > button")
-            .simulate("foundation-autocomplete[name='./pages']:eq(2) input[type!='hidden']", "key-sequence",
-                {sequence: "%page4Path%{enter}"})
+            .execTestCase(c.tcSelectInAutocomplete("[name='./pages']:eq(2)", "%page4Path%"))
 
             // close the dialog
             .execTestCase(c.tcSaveConfigureDialog)
@@ -333,8 +325,7 @@
             // set the search query
             .fillInput("input[name='./query']", searchValue)
             // set search location
-            .simulate("foundation-autocomplete[name='./searchIn'] input[type!='hidden']", "key-sequence",
-                {sequence: "%parentPath%{enter}"})
+            .execTestCase(c.tcSelectInAutocomplete("[name='./searchIn']", "%parentPath%"))
 
             // close the dialog
             .execTestCase(c.tcSaveConfigureDialog)
@@ -361,13 +352,10 @@
             // set the content path
             .execTestCase(c.tcUseDialogSelect("./listFrom", "tags"))
             // set parent page
-            .simulate("foundation-autocomplete[name='./tagsSearchRoot'] input[type!='hidden']", "key-sequence",
-                {sequence: "%parentPath%{enter}"})
+            .execTestCase(c.tcSelectInAutocomplete("[name='./tagsSearchRoot']", "%parentPath%"))
             // search for 2 tags
-            .simulate("foundation-autocomplete[name='./tags'] input[is='coral-textfield']", "key-sequence",
-                {sequence: tag1 + "{enter}"})
-            .simulate("foundation-autocomplete[name='./tags'] input[is='coral-textfield']", "key-sequence",
-                {sequence: tag2 + "{enter}"})
+            .execTestCase(c.tcSelectInTags("[name='./tags']", tag1))
+            .execTestCase(c.tcSelectInTags("[name='./tags']", tag2))
             // set the content path
             .execTestCase(c.tcUseDialogSelect("./tagsMatch", "any"))
 
@@ -399,13 +387,10 @@
             // set the content path
             .execTestCase(c.tcUseDialogSelect("./listFrom", "tags"))
             // set parent page
-            .simulate("foundation-autocomplete[name='./tagsSearchRoot'] input[type!='hidden']", "key-sequence",
-                {sequence: "%parentPath%{enter}"})
+            .execTestCase(c.tcSelectInAutocomplete("[name='./tagsSearchRoot']", "%parentPath%"))
             // search for 2 tags
-            .simulate("foundation-autocomplete[name='./tags'] input[is='coral-textfield']", "key-sequence",
-                {sequence: tag1 + "{enter}"})
-            .simulate("foundation-autocomplete[name='./tags'] input[is='coral-textfield']", "key-sequence",
-                {sequence: tag2 + "{enter}"})
+            .execTestCase(c.tcSelectInTags("[name='./tags']", tag1))
+            .execTestCase(c.tcSelectInTags("[name='./tags']", tag2))
             // set the content path
             .execTestCase(c.tcUseDialogSelect("./tagsMatch", "all"))
 
@@ -430,8 +415,7 @@
             .execTestCase(c.tcOpenConfigureDialog("cmpPath"))
 
             // set parent page
-            .simulate("foundation-autocomplete[name='./parentPage'] input[type!='hidden']", "key-sequence",
-                {sequence: "%parentPath%{enter}"})
+            .execTestCase(c.tcSelectInAutocomplete("[name='./parentPage']", "%parentPath%"))
             // set depth to 2
             .fillInput("coral-numberinput[name='./childDepth'] > input", "2")
             // set order by title
@@ -480,8 +464,7 @@
             .execTestCase(c.tcOpenConfigureDialog("cmpPath"))
 
             // set parent page
-            .simulate("foundation-autocomplete[name='./parentPage'] input[type!='hidden']", "key-sequence",
-                {sequence: "%parentPath%{enter}"})
+            .execTestCase(c.tcSelectInAutocomplete("[name='./parentPage']", "%parentPath%"))
             // set depth to 2
             .fillInput("coral-numberinput[name='./childDepth'] > input", "2")
             // set order by title
@@ -529,8 +512,7 @@
             // open the configuration dialog
             .execTestCase(c.tcOpenConfigureDialog("cmpPath"))
             // set parent page
-            .simulate("foundation-autocomplete[name='./parentPage'] input[type!='hidden']", "key-sequence",
-                {sequence: "%parentPath%{enter}"})
+            .execTestCase(c.tcSelectInAutocomplete("[name='./parentPage']", "%parentPath%"))
             // set depth to 2
             .fillInput("coral-numberinput[name='./childDepth'] > input", "2")
             // close the dialog
@@ -584,8 +566,7 @@
             .execTestCase(c.tcOpenConfigureDialog("cmpPath"))
 
             // set parent page
-            .simulate("foundation-autocomplete[name='./parentPage'] input[type!='hidden']", "key-sequence",
-                {sequence: "%parentPath%{enter}"})
+            .execTestCase(c.tcSelectInAutocomplete("[name='./parentPage']", "%parentPath%"))
             // set depth to 2
             .fillInput("coral-numberinput[name='./childDepth'] > input", "2")
             // set order by title
@@ -635,8 +616,7 @@
             .execTestCase(c.tcOpenConfigureDialog("cmpPath"))
 
             // set parent page
-            .simulate("foundation-autocomplete[name='./parentPage'] input[type!='hidden']", "key-sequence",
-                {sequence: "%parentPath%{enter}"})
+            .execTestCase(c.tcSelectInAutocomplete("[name='./parentPage']", "%parentPath%"))
             // set depth to 2
             .fillInput("coral-numberinput[name='./childDepth'] > input", "2")
             // set order by title
@@ -668,9 +648,7 @@
             .execTestCase(c.tcOpenConfigureDialog("cmpPath"))
 
             // set parent page
-            // NOTE: simulate an 'enter' at the end otherwise autocompletion will open a suggestion box
-            .simulate("foundation-autocomplete[name='./parentPage'] input[type!='hidden']", "key-sequence",
-                {sequence: "%parentPath%{enter}"})
+            .execTestCase(c.tcSelectInAutocomplete("[name='./parentPage']", "%parentPath%"))
 
             .click("coral-tab-label:contains('Item Settings')")
             .click("input[name='./linkItems']")
@@ -694,9 +672,7 @@
             .execTestCase(c.tcOpenConfigureDialog("cmpPath"))
 
             // set parent page
-            // NOTE: simulate an 'enter' at the end otherwise autocompletion will open a suggestion box
-            .simulate("foundation-autocomplete[name='./parentPage'] input[type!='hidden']", "key-sequence",
-                {sequence: "%parentPath%{enter}"})
+            .execTestCase(c.tcSelectInAutocomplete("[name='./parentPage']", "%parentPath%"))
 
             .click("coral-tab-label:contains('Item Settings')")
             .click("input[name='./showDescription']")
@@ -721,9 +697,7 @@
             .execTestCase(c.tcOpenConfigureDialog("cmpPath"))
 
             // set parent page
-            // NOTE: simulate an 'enter' at the end otherwise autocompletion will open a suggestion box
-            .simulate("foundation-autocomplete[name='./parentPage'] input[type!='hidden']", "key-sequence",
-                {sequence: "%parentPath%{enter}"})
+            .execTestCase(c.tcSelectInAutocomplete("[name='./parentPage']", "%parentPath%"))
 
             .click("coral-tab-label:contains('Item Settings')")
             .click("input[name='./showModificationDate']")
