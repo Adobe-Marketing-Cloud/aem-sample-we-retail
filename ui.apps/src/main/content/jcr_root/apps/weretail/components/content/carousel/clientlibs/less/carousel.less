@@ -13,28 +13,162 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-@import (reference) "/apps/weretail/clientlibs/common/variables.less";
-@import (reference) "/apps/weretail/clientlibs/clientlib-site/less/main.less";
 
-.cmp-carousel__action--previous, .cmp-carousel__action--next {
-    position: absolute;
-    top: 50%;
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
-    margin-top: -20px;
-    opacity: 1;
-    background-color: #000;
-}
+@we-carousel-action-size: 50px;
+@we-carousel-action-offset: 20px;
+@we-carousel-indicator-size: 10px;
+@we-carousel-indicators-padding-top: 35px;
+@we-carousel-indicators-padding-bottom: 45px;
+@we-carousel-indicators-height: @we-carousel-indicators-padding-top + @we-carousel-indicator-size + @we-carousel-indicators-padding-bottom;
 
-.cmp-carousel__action--previous {
-    left: 10px;
-}
+.we-carousel {
+    .cmp-carousel {
+        &:hover {
+            .cmp-carousel__action {
+                opacity: 1;
+            }
+        }
 
-.cmp-carousel__action--next {
-    right: 10px;
-}
+        .image img,
+        .we-Teaser .cmp-teaser {
+            margin-bottom: 0;
+        }
+    }
 
-.cmp-carousel__indicators {
-    background-color: #000;
+    .cmp-carousel__item {
+    }
+
+    .cmp-carousel__action {
+        position: absolute;
+
+        width: @we-carousel-action-size;
+        height: @we-carousel-action-size;
+        border: 0;
+        border-radius: 50%;
+        padding: 0;
+        line-height: @we-carousel-action-size;
+
+        opacity: 0;
+        transition: opacity linear .2s;
+        color: rgba(255, 255, 255, .8);
+        background-color: rgba(0, 0, 0, .5);
+
+        &:hover {
+            background-color: rgba(0, 0, 0, .8);
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(94, 158, 214, .6);
+        }
+
+        &--disabled {
+            display: none;
+        }
+    }
+
+    .cmp-carousel__action--previous, .cmp-carousel__action--next {
+        top: ~"calc(50% - (@{we-carousel-indicators-height} / 2) - (@{we-carousel-action-size} / 2))";
+    }
+
+    .cmp-carousel__action--previous {
+        left: @we-carousel-action-offset;
+    }
+
+    .cmp-carousel__action--next {
+        right: @we-carousel-action-offset;
+    }
+
+    .cmp-carousel__action--pause, .cmp-carousel__action--play {
+        bottom: @we-carousel-indicators-height + @we-carousel-action-offset;
+        left: ~"calc(50% - (@{we-carousel-action-size} / 2))";
+    }
+
+    .cmp-carousel__action-text {
+        position: absolute;
+
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+    }
+
+    .cmp-carousel__action-icon {
+        display: inline-block;
+        vertical-align: middle;
+
+        font-family: FontAwesome;
+        font-size: 20px;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .cmp-carousel__action--previous {
+        .cmp-carousel__action-icon {
+            margin-left: -1px;
+            margin-top: 1px;
+
+            &:before {
+                content: "\f053";
+            }
+        }
+    }
+
+    .cmp-carousel__action--next {
+        .cmp-carousel__action-icon {
+            margin-left: 2px;
+            margin-top: 1px;
+
+            &:before {
+                content: "\f054";
+            }
+        }
+    }
+
+    .cmp-carousel__action--pause {
+        .cmp-carousel__action-icon {
+            margin-top: -2px;
+            margin-left: 2px;
+
+            &:before {
+                content: "\f04c";
+            }
+        }
+    }
+
+    .cmp-carousel__action--play {
+        .cmp-carousel__action-icon {
+            margin-top: -3px;
+            margin-left: 4px;
+
+            &:before {
+                content: "\f04b";
+            }
+        }
+    }
+
+    .cmp-carousel__indicators {
+        padding: @we-carousel-indicators-padding-top 0 @we-carousel-indicators-padding-bottom;
+    }
+
+    .cmp-carousel__indicator {
+        outline: none;
+
+        &:not(.cmp-carousel__indicator--active) {
+            cursor: pointer;
+        }
+
+        &:hover {
+            background-color: rgba(0, 0, 0, .8);
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(94, 158, 214, .6);
+        }
+    }
 }
