@@ -127,11 +127,6 @@
                         </dependency>
                         <dependency>
                             <group>day/cq60/product</group>
-                            <name>com.adobe.qe.ui-testing-commons</name>
-                            <version>[6.2,)</version>
-                        </dependency>
-                        <dependency>
-                            <group>day/cq60/product</group>
                             <name>cq-commerce-content</name>
                             <version>[1.2.222,)</version>
                         </dependency>
