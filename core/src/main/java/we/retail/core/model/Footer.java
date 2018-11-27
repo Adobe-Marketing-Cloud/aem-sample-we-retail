@@ -17,6 +17,7 @@ package we.retail.core.model;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -62,7 +63,7 @@ public class Footer {
     }
 
     public List<Page> getItems() {
-        return items;
+        return Collections.unmodifiableList(items);
     }
 
     public int getCurrentYear() {

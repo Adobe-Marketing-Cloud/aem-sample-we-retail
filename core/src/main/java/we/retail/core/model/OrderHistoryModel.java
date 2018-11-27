@@ -64,18 +64,19 @@ public class OrderHistoryModel {
     @ScriptVariable
     private Page currentPage;
 
-    private CommerceSession commerceSession;
     private List<PlacedOrderWrapper> wrappedOrders;
 
     @PostConstruct
     private void initModel() {
         try {
             CommerceService commerceService = currentPage.getContentResource().adaptTo(CommerceService.class);
-            commerceSession = commerceService.login(request, response);
-            PlacedOrderResult orderResult = commerceSession.getPlacedOrders(null, 0, 0, null);
-            List<PlacedOrder> orders = orderResult.getOrders();
-            Collections.sort(orders, orderComparator);
-            wrappedOrders = convert(orders);
+            if (commerceService != null) {
+                CommerceSession commerceSession = commerceService.login(request, response);
+                PlacedOrderResult orderResult = commerceSession.getPlacedOrders(null, 0, 0, null);
+                List<PlacedOrder> orders = orderResult.getOrders();
+                Collections.sort(orders, orderComparator);
+                wrappedOrders = convert(orders);
+            }
         } catch (CommerceException e) {
             LOGGER.error("Failed to initialize sling model", e);
         }
@@ -125,7 +126,7 @@ public class OrderHistoryModel {
     }
 
     public List<PlacedOrderWrapper> getOrders() {
-        return wrappedOrders;
+        return Collections.unmodifiableList(wrappedOrders);
     }
 
     public boolean isEmpty() {

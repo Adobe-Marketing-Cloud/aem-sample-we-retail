@@ -1,0 +1,33 @@
+{
+  "with-label" : {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:mixinTypes": [
+      "cq:LiveRelationship"
+    ],
+    "jcr:createdBy": "admin",
+    "jcr:lastModifiedBy": "admin",
+    "cssClass": "myClass",
+    "buttonLinkTo": "/content/we-retail/us/en/products/men",
+    "cq:lastRolledout": "Mon Mar 14 2016 22:18:58 GMT+0100",
+    "jcr:created": "Mon Mar 14 2016 21:41:39 GMT+0100",
+    "buttonLabel": "All men's products",
+    "jcr:lastModified": "Mon Mar 14 2016 22:18:58 GMT+0100",
+    "sling:resourceType": "weretail/components/content/categoryteaser",
+    "cq:lastRolledoutBy": "admin"
+  },
+  "without-label" : {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:mixinTypes": [
+      "cq:LiveRelationship"
+    ],
+    "jcr:createdBy": "admin",
+    "jcr:lastModifiedBy": "admin",
+    "cssClass": "myClass",
+    "buttonLinkTo": "/content/we-retail/us/en/products/men",
+    "cq:lastRolledout": "Mon Mar 14 2016 22:18:58 GMT+0100",
+    "jcr:created": "Mon Mar 14 2016 21:41:39 GMT+0100",
+    "jcr:lastModified": "Mon Mar 14 2016 22:18:58 GMT+0100",
+    "sling:resourceType": "weretail/components/content/categoryteaser",
+    "cq:lastRolledoutBy": "admin"
+  }
+}

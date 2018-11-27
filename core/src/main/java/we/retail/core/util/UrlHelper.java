@@ -59,7 +59,7 @@ public class UrlHelper {
         Page redirectTarget = page;
         if (isRedirectPage(page)) {
             Resource contentResource = page.getContentResource();
-            ValueMap valueMap = contentResource.adaptTo(ValueMap.class);
+            ValueMap valueMap = contentResource.getValueMap();
             String redirectPagePath = valueMap.get(PN_REDIRECT_TARGET, StringUtils.EMPTY);
             Page resolvedPage = pageManager.getPage(redirectPagePath);
             if (resolvedPage != null) {

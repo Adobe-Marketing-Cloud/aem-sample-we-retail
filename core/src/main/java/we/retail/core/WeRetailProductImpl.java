@@ -39,7 +39,11 @@ public class WeRetailProductImpl extends AbstractJcrProduct {
 
         resourceResolver = resource.getResourceResolver();
         pageManager = resourceResolver.adaptTo(PageManager.class);
-        productPage = pageManager.getContainingPage(resource);
+        if (pageManager != null) {
+            productPage = pageManager.getContainingPage(resource);
+        } else {
+            productPage = null;
+        }
     }
 
     public String getSKU() {

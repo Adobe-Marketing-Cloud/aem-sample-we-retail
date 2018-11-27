@@ -16,6 +16,7 @@
 package we.retail.core.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -68,7 +69,7 @@ public class ShoppingCartModel {
     private Map<Integer, List<PromotionInfo>> cartEntryPromotions = new HashMap<Integer, List<PromotionInfo>>();
 
     @PostConstruct
-    private void initModel() throws Exception {
+    private void initModel() throws CommerceException {
         createCommerceSession();
         populatePromotions();
         populateCartEntries();
@@ -76,6 +77,10 @@ public class ShoppingCartModel {
 
     protected void createCommerceSession() {
         CommerceService commerceService = currentPage.getContentResource().adaptTo(CommerceService.class);
+        if (commerceService == null) {
+            LOGGER.error("Failed to obtain commerce service");
+            return;
+        }
         try {
             commerceSession = commerceService.login(request, response);
             allPromotions = commerceSession.getPromotions();
@@ -110,11 +115,11 @@ public class ShoppingCartModel {
     }
 
     public List<CartEntry> getEntries() {
-        return entries;
+        return Collections.unmodifiableList(entries);
     }
 
     public List<PromotionInfo> getOrderPromotions() {
-        return orderPromotions;
+        return Collections.unmodifiableList(orderPromotions);
     }
 
     public class CartEntry {
@@ -213,11 +218,11 @@ public class ShoppingCartModel {
         }
 
         public Map<String, String> getVariantAxesMap() {
-            return variantAxesMap;
+            return Collections.unmodifiableMap(variantAxesMap);
         }
 
         public List<PromotionInfo> getEntryPromotions() {
-            return entryPromotions;
+            return Collections.unmodifiableList(entryPromotions);
         }
 
         public boolean isWrapping() {

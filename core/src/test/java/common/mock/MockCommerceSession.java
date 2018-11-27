@@ -55,6 +55,8 @@ public class MockCommerceSession implements CommerceSession {
 
     private List<PriceInfo> prices;
 
+    private List<MockDefaultJcrCartEntry> cart;
+
     private Locale locale;
 
     public MockCommerceSession() {
@@ -63,7 +65,7 @@ public class MockCommerceSession implements CommerceSession {
 
     @Override
     public void addCartEntry(Product product, int quantity) throws CommerceException {
-        throw new UnsupportedOperationException();
+        addCartEntry(product, quantity, Collections.emptyMap());
     }
 
     @Override
@@ -118,11 +120,15 @@ public class MockCommerceSession implements CommerceSession {
 
     @Override
     public int getCartEntryCount() throws CommerceException {
-        throw new UnsupportedOperationException();
+        List<CartEntry> cart = getCartEntries();
+        return cart == null ? 0 : cart.size();
     }
 
     @Override
     public List<CartEntry> getCartEntries() throws CommerceException {
+        if (cart != null && !cart.isEmpty()) {
+            return Collections.unmodifiableList(cart);
+        }
         // To mock the shopping cart, we use the first registered order in the mock session 
         if (!placedOrders.isEmpty()) {
             PlacedOrder placedOrder = placedOrders.values().iterator().next();
@@ -134,7 +140,7 @@ public class MockCommerceSession implements CommerceSession {
 
             return placedOrder.getCartEntries();
         }
-        return null;
+        return Collections.emptyList();
     }
 
     private void initializeCartPrices() throws CommerceException {
@@ -181,12 +187,16 @@ public class MockCommerceSession implements CommerceSession {
 
     @Override
     public void addCartEntry(Product product, int quantity, Map<String, Object> properties) throws CommerceException {
-        throw new UnsupportedOperationException();
+        if (cart == null) {
+            cart = new ArrayList<>();
+        }
+        MockDefaultJcrCartEntry entry = new MockDefaultJcrCartEntry(cart.size() + 1, product, quantity);
+        cart.add(entry);
     }
 
     @Override
     public void modifyCartEntry(int entryNumber, int quantity) throws CommerceException {
-        throw new UnsupportedOperationException();
+        cart.get(entryNumber).setQuantity(quantity);
     }
 
     @Override
@@ -196,7 +206,9 @@ public class MockCommerceSession implements CommerceSession {
 
     @Override
     public void deleteCartEntry(int entryNumber) throws CommerceException {
-        throw new UnsupportedOperationException();
+        if (cart != null) {
+            cart.remove(entryNumber);
+        }
     }
 
     @Override
@@ -364,5 +376,13 @@ public class MockCommerceSession implements CommerceSession {
      */
     public void registerPlacedOrder(String orderId, PlacedOrder placedOrder) {
         placedOrders.put(orderId, placedOrder);
+    }
+
+    public void clearCart() {
+        cart = null;
+    }
+
+    public void clearPlacedOrders() {
+        placedOrders = new LinkedHashMap<>();
     }
 }

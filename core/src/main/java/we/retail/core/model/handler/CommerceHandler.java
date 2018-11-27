@@ -23,6 +23,7 @@ import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;
 import org.apache.sling.models.annotations.injectorspecific.RequestAttribute;
 import org.apache.sling.models.annotations.injectorspecific.ScriptVariable;
 import org.apache.sling.models.annotations.injectorspecific.Self;
@@ -61,16 +62,16 @@ public class CommerceHandler {
     @ScriptVariable
     private Style currentStyle;
 
-    @RequestAttribute(name = CommerceConstants.REQ_ATTR_CARTPAGE, optional = true)
+    @RequestAttribute(name = CommerceConstants.REQ_ATTR_CARTPAGE, injectionStrategy = InjectionStrategy.OPTIONAL)
     private String cartPage;
 
-    @RequestAttribute(name = CommerceConstants.REQ_ATTR_CARTOBJECT, optional = true)
+    @RequestAttribute(name = CommerceConstants.REQ_ATTR_CARTOBJECT, injectionStrategy = InjectionStrategy.OPTIONAL)
     private String cartObject;
 
-    @RequestAttribute(name = CommerceConstants.REQ_ATTR_PRODNOTFOUNDPAGE, optional = true)
+    @RequestAttribute(name = CommerceConstants.REQ_ATTR_PRODNOTFOUNDPAGE, injectionStrategy = InjectionStrategy.OPTIONAL)
     private String productNotFound;
 
-    @RequestAttribute(name = REQ_ATTR_CQ_COMMERCE_PRODUCT, optional = true)
+    @RequestAttribute(name = REQ_ATTR_CQ_COMMERCE_PRODUCT, injectionStrategy = InjectionStrategy.OPTIONAL)
     private Product product;
 
     private String addToCardUrl;

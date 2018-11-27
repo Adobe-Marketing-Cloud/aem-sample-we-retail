@@ -16,6 +16,7 @@
 
 package we.retail.core.model;
 
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -40,6 +41,10 @@ import com.adobe.cq.commerce.api.Product;
 import com.day.cq.commons.ImageResource;
 import com.day.cq.wcm.api.Page;
 import we.retail.core.WeRetailConstants;
+
+import javax.json.Json;
+import javax.json.JsonObjectBuilder;
+import javax.json.stream.JsonGenerator;
 
 /**
  * Generic UI product item model used by Sling Models like {@link ProductModel} or {@link ShoppingCartModel}.
@@ -197,7 +202,7 @@ public class ProductItem {
     }
 
     public List<ProductItem> getVariants() {
-        return variants;
+        return Collections.unmodifiableList(variants);
     }
 
     /**
@@ -221,7 +226,9 @@ public class ProductItem {
      * @return The JSON representation of the variant axes and values.
      */
     public String getVariantAxesMapJson() {
-        return new JSONObject(variantAxesMap).toString();
+        JsonObjectBuilder builder = Json.createObjectBuilder();
+        variantAxesMap.entrySet().forEach(e -> builder.add(e.getKey(), e.getValue()));
+        return builder.build().toString();
     }
 
     /**
