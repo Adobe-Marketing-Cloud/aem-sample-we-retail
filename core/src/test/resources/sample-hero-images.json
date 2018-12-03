@@ -5,5 +5,11 @@
   "full-width" : {
     "sling:resourceType" : "weretail/components/content/heroimage",
     "useFullWidth" : "true"
+  },
+  "withImage" : {
+    "sling:resourceType" : "weretail/components/content/heroimage",
+    "fileName" : "dummy.png",
+    "file" : {
+    }
   }
 }

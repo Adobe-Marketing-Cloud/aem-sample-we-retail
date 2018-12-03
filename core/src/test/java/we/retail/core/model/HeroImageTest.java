@@ -69,25 +69,19 @@ public class HeroImageTest {
         slingBindings.put(WCMBindings.PROPERTIES, buttonRes.getValueMap());
 
         HeroImage heroImage = request.adaptTo(HeroImage.class);
-
-        // here, image will be null because the adaptation is failing
-        assertNull(heroImage.getImage());
+        assertNull(heroImage.getImage().getSrc());
     }
 
     @Test
     public void testNoNullImage() {
         MockSlingHttpServletRequest request = context.request();
-        Resource buttonRes = context.currentResource(HERO_IMAGES_PATH + "/normal");
+        Resource buttonRes = context.currentResource(HERO_IMAGES_PATH + "/withImage");
         SlingBindings slingBindings = (SlingBindings) context.request().getAttribute(SlingBindings.class.getName());
         slingBindings.put(WCMBindings.PROPERTIES, buttonRes.getValueMap());
-        slingBindings.put(SlingBindings.RESOURCE, context.currentResource());
-        slingBindings.put(WCMBindings.PAGE_MANAGER, context.pageManager());
-        slingBindings.put(WCMBindings.CURRENT_PAGE, context.currentPage());
-        slingBindings.put(WCMBindings.CURRENT_STYLE, new EmptyStyle());
 
         HeroImage heroImage = request.adaptTo(HeroImage.class);
 
-        assertNotNull(heroImage.getImage());
+        assertNotNull(heroImage.getImage().getSrc());
     }
 
 
