@@ -24,10 +24,6 @@
     <filter root="/var/commerce/payment-methods/we-retail"/>
     <filter root="/var/commerce/shipping-methods/we-retail"/>
 
-    <filter root="/apps/msm/we-retail/blueprintconfigs/weretail-english"/>
-    <filter root="/apps/msm/we-retail/blueprintconfigs/weretail-french"/>
-    <filter root="/apps/msm/we-retail/blueprintconfigs/weretail-german"/>
-    <filter root="/apps/msm/we-retail/blueprintconfigs/weretail-italian"/>
-    <filter root="/apps/msm/we-retail/blueprintconfigs/weretail-spanish"/>
+    <filter root="/apps/msm/we-retail/blueprintconfigs/weretail"/>
 
 </workspaceFilter>
