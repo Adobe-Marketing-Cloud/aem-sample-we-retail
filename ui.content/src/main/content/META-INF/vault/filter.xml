@@ -15,7 +15,9 @@
   ~ limitations under the License.
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <workspaceFilter version="1.0">
-    <filter root="/conf/we-retail"/>
+    <filter root="/conf/we-retail">
+        <exclude pattern="/conf/we-retail/settings/dam/cfm(/.*)?"/>
+    </filter>
     <filter root="/content/campaigns/we-retail"/>
     <filter root="/content/catalogs/we-retail/en/website-catalog"/>
     <filter root="/content/catalogs/we-retail/en/website-template-pages"/>
