@@ -475,6 +475,20 @@
                         <jcr:content jcr:primaryType="nt:unstructured"/>
                     </policy_1528460924549>
                 </sitefeature>
+                <carousel jcr:primaryType="nt:unstructured">
+                    <policy_1550587632390
+                        jcr:lastModified="{Date}2019-02-19T16:48:47.789+02:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="We.Retail Default"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        autopauseDisabled="false"
+                        autoplay="false"
+                        components="/apps/weretail/components/content/teaser"
+                        delay="5000">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1550587632390>
+                </carousel>
             </content>
         </components>
     </weretail>

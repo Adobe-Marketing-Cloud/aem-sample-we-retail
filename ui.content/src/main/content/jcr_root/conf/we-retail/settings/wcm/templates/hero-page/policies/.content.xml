@@ -44,6 +44,10 @@
                                 cq:policy="weretail/components/content/sitefeature/policy_1528460924549"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <carousel
+                                cq:policy="weretail/components/content/carousel/policy_1550587632390"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
                         </content>
                     </components>
                 </weretail>
