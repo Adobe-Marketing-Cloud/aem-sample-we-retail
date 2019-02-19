@@ -29,22 +29,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     assetGroup="product"
                                     droptarget="product-data-reference"
-                                    resourceType="commerce/components/product"
+                                    resourceType="weretail/components/structure/product"
                                     type="Products"/>
-                                <document
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="media"
-                                    assetMimetype="[application/vnd.openxmlformats,application/msword,application/vnd.ms-powerpoint,application/mspowerpoint,application/powerpoint,application/x-mspowerpoint,application/x-msexcel,application/x-excel,application/excel,application/vnd.ms-excel,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document]"
-                                    droptarget="file"
-                                    resourceType="foundation/components/download"
-                                    type="Images"/>
-                                <video
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="media"
-                                    assetMimetype="video/*"
-                                    droptarget="video"
-                                    resourceType="foundation/components/video"
-                                    type="Images"/>
                                 <contentfragment
                                     jcr:primaryType="nt:unstructured"
                                     assetGroup="media"
@@ -87,22 +73,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     assetGroup="product"
                                     droptarget="product-data-reference"
-                                    resourceType="commerce/components/product"
+                                    resourceType="weretail/components/structure/product"
                                     type="Products"/>
-                                <document
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="media"
-                                    assetMimetype="[application/vnd.openxmlformats,application/msword,application/vnd.ms-powerpoint,application/mspowerpoint,application/powerpoint,application/x-mspowerpoint,application/x-msexcel,application/x-excel,application/excel,application/vnd.ms-excel,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document]"
-                                    droptarget="file"
-                                    resourceType="foundation/components/download"
-                                    type="Images"/>
-                                <video
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="media"
-                                    assetMimetype="video/*"
-                                    droptarget="video"
-                                    resourceType="foundation/components/video"
-                                    type="Images"/>
                                 <contentfragment
                                     jcr:primaryType="nt:unstructured"
                                     assetGroup="media"
@@ -190,22 +162,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     assetGroup="product"
                                     droptarget="product-data-reference"
-                                    resourceType="commerce/components/product"
+                                    resourceType="weretail/components/structure/product"
                                     type="Products"/>
-                                <document
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="media"
-                                    assetMimetype="[application/vnd.openxmlformats,application/msword,application/vnd.ms-powerpoint,application/mspowerpoint,application/powerpoint,application/x-mspowerpoint,application/x-msexcel,application/x-excel,application/excel,application/vnd.ms-excel,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document]"
-                                    droptarget="file"
-                                    resourceType="foundation/components/download"
-                                    type="Images"/>
-                                <video
-                                    jcr:primaryType="nt:unstructured"
-                                    assetGroup="media"
-                                    assetMimetype="video/*"
-                                    droptarget="video"
-                                    resourceType="foundation/components/video"
-                                    type="Images"/>
                                 <contentfragment
                                     jcr:primaryType="nt:unstructured"
                                     assetGroup="media"
