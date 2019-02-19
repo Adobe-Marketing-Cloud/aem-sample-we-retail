@@ -75,8 +75,10 @@ The project comes with the auto-public repository configured. To setup the repos
 
 The We.Retail reference site was first introduced in AEM 6.2. The following table gives an overview of the We.Retail releases and their system requirements:
 
-We.Retail | Date       | AEM      | Core Components
-----------|------------|----------|----------------
-3.0.0     | 06/03/2018 | AEM 6.4  | 2.0.4
-2.0.4     | 04/08/2017 | AEM 6.3  | 1.0.x
-1.0.0     | 05/07/2016 | AEM 6.2  | N/A
+We.Retail | Date        | AEM      | We.Retail Commons | Core Components | Core Components Extension
+----------|-------------|----------|-------------------|-----------------|--------------------------
+3.0.0     | 06/mar/2018 | 6.4.0.0  | 3.0.0             | 2.0.4           | 1.0.0
+2.0.4     | 04/aug/2017 | 6.3.0.0  | 2.0.0             | 1.0.6           | N/A
+1.0.0     | 05/jul/2016 | 6.2.0.0  | 1.0.0             | N/A             | N/A
+
+For a full list of minimum system requirements for historical versions of the Core Components, see [Historical System Requirements](https://github.com/adobe/aem-core-wcm-components/blob/master/VERSIONS.md).
