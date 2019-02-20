@@ -86,18 +86,19 @@
                         cq:lastRolledoutBy="admin"
                         jcr:created="{Date}2015-11-03T23:52:30.703+01:00"
                         jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2018-08-21T16:48:17.556+03:00"
+                        jcr:description="&lt;p>Explore products for women&lt;/p>&#xd;&#xa;"
+                        jcr:lastModified="{Date}2019-02-18T14:11:30.312+01:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
+                        jcr:title="For those who never stop"
                         sling:resourceType="weretail/components/content/teaser"
                         actionsEnabled="true"
-                        fileReference="/content/dam/we-retail/en/activities/running/running-woods-woman.jpg">
-                        <actions
-                            cq:lastRolledout="{Date}2018-08-21T16:48:17.559+03:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured">
+                        descriptionFromPage="false"
+                        fileReference="/content/dam/we-retail/en/activities/running/running-woods-woman.jpg"
+                        textIsRich="true"
+                        titleFromPage="false">
+                        <actions jcr:primaryType="nt:unstructured">
                             <item0
                                 cq:lastRolledout="{Date}2018-08-21T16:48:17.562+03:00"
                                 cq:lastRolledoutBy="admin"
@@ -112,18 +113,19 @@
                         cq:lastRolledoutBy="admin"
                         jcr:created="{Date}2015-11-04T00:10:12.400+01:00"
                         jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2018-08-21T16:48:17.563+03:00"
+                        jcr:description="&lt;p>Explore products for men&lt;/p>&#xd;&#xa;"
+                        jcr:lastModified="{Date}2019-02-18T14:12:22.077+01:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
+                        jcr:title="For those who challenge the elements"
                         sling:resourceType="weretail/components/content/teaser"
                         actionsEnabled="true"
-                        fileReference="/content/dam/we-retail/en/activities/biking/rocks-downhill.jpg">
-                        <actions
-                            cq:lastRolledout="{Date}2018-08-21T16:48:17.566+03:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured">
+                        descriptionFromPage="false"
+                        fileReference="/content/dam/we-retail/en/activities/biking/rocks-downhill.jpg"
+                        textIsRich="true"
+                        titleFromPage="false">
+                        <actions jcr:primaryType="nt:unstructured">
                             <item0
                                 cq:lastRolledout="{Date}2018-08-21T16:48:17.568+03:00"
                                 cq:lastRolledoutBy="admin"
@@ -138,18 +140,19 @@
                         cq:lastRolledoutBy="admin"
                         jcr:created="{Date}2015-11-04T00:10:50.268+01:00"
                         jcr:createdBy="admin"
-                        jcr:lastModified="{Date}2018-08-21T16:48:17.569+03:00"
+                        jcr:description="&lt;p>Explore equipment&lt;/p>&#xd;&#xa;"
+                        jcr:lastModified="{Date}2019-02-18T14:14:27.924+01:00"
                         jcr:lastModifiedBy="admin"
                         jcr:mixinTypes="[cq:LiveRelationship]"
                         jcr:primaryType="nt:unstructured"
+                        jcr:title="For the ones who want the strongest"
                         sling:resourceType="weretail/components/content/teaser"
                         actionsEnabled="true"
-                        fileReference="/content/dam/we-retail/en/activities/climbing/climber-gear-rope.jpg">
-                        <actions
-                            cq:lastRolledout="{Date}2018-08-21T16:48:17.573+03:00"
-                            cq:lastRolledoutBy="admin"
-                            jcr:mixinTypes="[cq:LiveRelationship]"
-                            jcr:primaryType="nt:unstructured">
+                        descriptionFromPage="false"
+                        fileReference="/content/dam/we-retail/en/activities/climbing/climber-gear-rope.jpg"
+                        textIsRich="true"
+                        titleFromPage="false">
+                        <actions jcr:primaryType="nt:unstructured">
                             <item0
                                 cq:lastRolledout="{Date}2018-08-21T16:48:17.575+03:00"
                                 cq:lastRolledoutBy="admin"
