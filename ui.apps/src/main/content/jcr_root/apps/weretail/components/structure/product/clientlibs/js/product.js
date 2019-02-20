@@ -16,6 +16,25 @@
 (function () {
     'use strict';
 
+    const entityMap = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;',
+        '`': '&#x60;',
+        '=': '&#x3D;'
+    };
+
+    function escapeHtml(string) {
+        if (string === undefined) {
+            return string;
+        }
+        return String(string).replace(/[&<>"'`=]/g, function (s) {
+            return entityMap[s];
+        });
+    }
+
     Vue.component('we-product-variant', {
         props: [
             'isBase',
@@ -40,7 +59,7 @@
                     data[prop] = JSON.parse(self[prop]);
                 }
                 else {
-                    data[prop] = self[prop];
+                    data[prop] = escapeHtml(self[prop]);
                 }
             });
 
