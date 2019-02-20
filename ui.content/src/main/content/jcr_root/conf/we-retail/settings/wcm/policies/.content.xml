@@ -484,7 +484,7 @@
                         sling:resourceType="wcm/core/components/policy/policy"
                         autopauseDisabled="false"
                         autoplay="false"
-                        components="/apps/weretail/components/content/teaser"
+                        components="[/libs/wcm/foundation/components/responsivegrid,/apps/weretail/components/content/teaser]"
                         delay="5000">
                         <jcr:content jcr:primaryType="nt:unstructured"/>
                     </policy_1550587632390>
