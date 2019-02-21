@@ -2,9 +2,9 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-03-14T22:18:58.296+01:00"
+        cq:lastModified="{Date}2019-02-21T18:43:53.310+02:00"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2016-06-29T14:20:45.113+02:00"
+        cq:lastRolledout="{Date}2019-02-21T18:43:53.312+02:00"
         cq:lastRolledoutBy="admin"
         cq:template="/conf/we-retail/settings/wcm/templates/hero-page"
         jcr:mixinTypes="[cq:LiveRelationship]"
@@ -12,17 +12,17 @@
         jcr:title="About Us"
         sling:resourceType="weretail/components/structure/page">
         <root
-            cq:lastRolledout="{Date}2016-03-14T22:18:58.289+01:00"
+            cq:lastRolledout="{Date}2019-02-21T18:43:53.259+02:00"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
             <hero_image
-                cq:lastRolledout="{Date}2016-03-14T22:18:58.295+01:00"
+                cq:lastRolledout="{Date}2019-02-21T18:43:53.264+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:created="{Date}2016-01-13T15:58:04.452+01:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2016-03-14T22:18:58.294+01:00"
+                jcr:lastModified="{Date}2019-02-21T18:43:53.262+02:00"
                 jcr:lastModifiedBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
@@ -30,15 +30,127 @@
                 fileReference="/content/dam/we-retail/en/activities/hiking-camping/trekker-ama-dablam.jpg"
                 useFullWidth="true"/>
             <responsivegrid
-                cq:lastRolledout="{Date}2016-03-14T22:18:58.297+01:00"
+                cq:lastRolledout="{Date}2019-02-21T18:43:53.267+02:00"
                 cq:lastRolledoutBy="admin"
                 jcr:created="{Date}2016-01-13T15:58:09.854+01:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2016-03-14T22:18:58.296+01:00"
+                jcr:lastModified="{Date}2019-02-21T18:43:53.265+02:00"
                 jcr:lastModifiedBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <title
+                    cq:lastRolledout="{Date}2019-02-21T18:43:53.273+02:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:created="{Date}2019-02-15T15:57:39.854+02:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2019-02-15T15:57:57.096+02:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Our Stores"
+                    sling:resourceType="weretail/components/content/title"
+                    type="h2"/>
+                <tabs
+                    cq:lastRolledout="{Date}2019-02-21T18:43:53.283+02:00"
+                    cq:lastRolledoutBy="admin"
+                    jcr:created="{Date}2019-02-15T10:24:57.710+02:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2019-02-15T10:27:30.535+02:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:mixinTypes="[cq:LiveRelationship]"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="weretail/components/content/tabs">
+                    <item_1
+                        cq:lastRolledout="{Date}2019-02-21T18:43:53.287+02:00"
+                        cq:lastRolledoutBy="admin"
+                        cq:panelTitle="New York"
+                        jcr:mixinTypes="[cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tab 1"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <contentfragment
+                            cq:lastRolledout="{Date}2019-02-21T18:43:53.292+02:00"
+                            cq:lastRolledoutBy="admin"
+                            jcr:created="{Date}2018-09-20T10:40:15.674+02:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-02-21T18:43:53.289+02:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:mixinTypes="[cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="weretail/components/content/contentfragment"
+                            displayMode="multi"
+                            elementNames="[storelocation,address,description,openinghours]"
+                            fragmentPath="/content/dam/we-retail/en/stores/we-retail-store-new-york"
+                            paragraphScope="all"
+                            text="Store Location WeRetail New York Address 1540 Broadway, 17th floor New York, NY 10036 Description New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square. Opening Hours Monday 8AM–5PM Tuesday 8AM–5PM Wednesday 8AM–5PM Thursday 8AM–5PM Friday 8AM–5PM Saturday Closed Sunday Closed"
+                            variationName="master">
+                            <cq:responsive
+                                cq:lastRolledout="{Date}2019-02-21T18:43:53.293+02:00"
+                                cq:lastRolledoutBy="admin"
+                                jcr:mixinTypes="[cq:LiveRelationship]"
+                                jcr:primaryType="nt:unstructured">
+                                <default
+                                    cq:lastRolledout="{Date}2019-02-21T18:43:53.296+02:00"
+                                    cq:lastRolledoutBy="admin"
+                                    jcr:mixinTypes="[cq:LiveRelationship]"
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="12"/>
+                            </cq:responsive>
+                        </contentfragment>
+                    </item_1>
+                    <item_2
+                        cq:lastRolledout="{Date}2019-02-21T18:43:53.299+02:00"
+                        cq:lastRolledoutBy="admin"
+                        cq:panelTitle="San Francisco"
+                        jcr:mixinTypes="[cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Tab 2"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <contentfragment
+                            cq:lastRolledout="{Date}2019-02-21T18:43:53.304+02:00"
+                            cq:lastRolledoutBy="admin"
+                            jcr:created="{Date}2019-02-15T10:25:16.888+02:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-02-21T18:43:53.302+02:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:mixinTypes="[cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="weretail/components/content/contentfragment"
+                            displayMode="multi"
+                            elementNames="[storelocation,address,description,openinghours]"
+                            fragmentPath="/content/dam/we-retail/en/stores/we-retail-store-san-francisco"
+                            paragraphScope="all"
+                            text="Store Location WeRetail San Francisco Address 601 Townsend St, San Francisco, CA 94103 Description San Francisco, in northern California, is a hilly city on the tip of a peninsula surrounded by the Pacific Ocean and San Francisco Bay. It's known for its year-round fog, iconic Golden Gate Bridge, cable cars and colorful Victorian houses. The Financial District's Transamerica Pyramid is its most distinctive skyscraper. In the bay sits Alcatraz Island, site of the notorious former prison. Opening Hours Monday 8AM–5PM Tuesday 8AM–5PM Wednesday 8AM–5PM Thursday 8AM–5PM Friday 8AM–5PM Saturday Closed Sunday Closed"
+                            variationName="master"/>
+                    </item_2>
+                    <item_3
+                        cq:lastRolledout="{Date}2019-02-21T18:43:53.306+02:00"
+                        cq:lastRolledoutBy="admin"
+                        cq:panelTitle="San Jose"
+                        jcr:mixinTypes="[cq:LiveRelationship]"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/foundation/components/responsivegrid">
+                        <contentfragment
+                            cq:lastRolledout="{Date}2019-02-21T18:43:53.311+02:00"
+                            cq:lastRolledoutBy="admin"
+                            jcr:created="{Date}2019-02-15T10:27:39.810+02:00"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2019-02-21T18:43:53.308+02:00"
+                            jcr:lastModifiedBy="admin"
+                            jcr:mixinTypes="[cq:LiveRelationship]"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="weretail/components/content/contentfragment"
+                            displayMode="multi"
+                            elementNames="[storelocation,address,description,openinghours]"
+                            fragmentPath="/content/dam/we-retail/en/stores/we-retail-store-san-jose"
+                            paragraphScope="all"
+                            text="Store Location WeRetail San Jose Address 345 Park Ave, San Jose, CA 95110345 Park Ave, San Jose, CA 95110 Description San Jose is a large city surrounded by rolling hills in Silicon Valley, a major technology hub in California's Bay Area. Architectural landmarks, from the 1883 Italianate-style Oddfellows building to Spanish Colonial Revival structures, make up the downtown historic district. The downtown area is also home to the Tech Museum of Innovation, devoted to the exploration of science and technology. Opening Hours Monday 8AM–5PM Tuesday 8AM–5PM Wednesday 8AM–5PM Thursday 8AM–5PM Friday 8AM–5PM Saturday Closed Sunday Closed"
+                            variationName="master"/>
+                    </item_3>
+                </tabs>
+            </responsivegrid>
         </root>
     </jcr:content>
 </jcr:root>
