@@ -18,6 +18,7 @@ ns.js
 common/NavbarTest.js
 common/HeroImageTest.js
 common/BreadcrumbTest.js
+common/TabTest.js
 common/TeasersTest.js
 common/CarouselTest.js
 common/SiteFeaturesTest.js
@@ -26,6 +27,7 @@ common/ProductTest.js
 common/FooterTest.js
 common/ButtonTest.js
 common/Utils.js
+about-us/AboutUsSuite.js
 homepage/HomepageSuite.js
 navigation/NavigationSuite.js
 product-category/ProductCategorySuite.js
