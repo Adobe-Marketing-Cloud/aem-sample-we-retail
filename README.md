@@ -77,6 +77,7 @@ The We.Retail reference site was first introduced in AEM 6.2. The following tabl
 
 We.Retail | Date        | AEM      | We.Retail Commons | Core Components | Core Components Extension
 ----------|-------------|----------|-------------------|-----------------|--------------------------
+4.0.0     | 26/feb/2019 | 6.5.0.0  | 4.0.0             | 2.3.0           | 1.0.10
 3.0.0     | 06/mar/2018 | 6.4.0.0  | 3.0.0             | 2.0.4           | 1.0.0
 2.0.4     | 04/aug/2017 | 6.3.0.0  | 2.0.0             | 1.0.6           | N/A
 1.0.0     | 05/jul/2016 | 6.2.0.0  | 1.0.0             | N/A             | N/A
