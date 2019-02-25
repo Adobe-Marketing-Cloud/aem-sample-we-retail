@@ -121,12 +121,12 @@
                         <dependency>
                             <group>adobe/aem6/sample</group>
                             <name>we.retail.ui.apps</name>
-                            <version>[1.9.0,)</version>
+                            <version>[4.0.0,)</version>
                         </dependency>
                         <dependency>
                             <group>adobe/aem6/sample</group>
                             <name>we.retail.commons.content</name>
-                            <version>[3.0.0,)</version>
+                            <version>[4.0.0,)</version>
                         </dependency>
                     </dependencies>
                 </configuration>
