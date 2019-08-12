@@ -23,6 +23,8 @@ sudo: false
 
 install: true
 
+dist: trusty
+
 env:
 - MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=512m"
 
