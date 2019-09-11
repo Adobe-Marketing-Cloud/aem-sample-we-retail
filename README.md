@@ -1,7 +1,6 @@
-# We.Retail
-[![Build Status](https://travis-ci.org/Adobe-Marketing-Cloud/aem-sample-we-retail.png?branch=master)](https://travis-ci.org/Adobe-Marketing-Cloud/aem-sample-we-retail)
+# 🚫 ARCHIVED
 
-This is an AEM (Adobe Experience Manager) reference implementation for the retail industry.
+We.Retail is no longer supported, the [WKND Guide](https://github.com/adobe/aem-guides-wknd) is the replacement reference site for Adobe Experience Manager.
 
 ## Modules
 
