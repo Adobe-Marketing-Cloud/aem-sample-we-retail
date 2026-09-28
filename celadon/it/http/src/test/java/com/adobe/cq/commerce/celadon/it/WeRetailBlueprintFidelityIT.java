@@ -22,6 +22,7 @@ import java.util.stream.Collectors;
 import org.junit.Test;
 
 import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.endsWith;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItems;
 import static org.hamcrest.Matchers.is;
@@ -50,6 +51,8 @@ public class WeRetailBlueprintFidelityIT extends GraphqlITBase {
     // Multi-category product: belongs to both equipment/hiking and women/pants via blueprint matchTags.
     private static final String HIKING_PANTS_SKU = "331050524";
     private static final String HIKING_PANTS_URL_KEY = "hiking-pants";
+    // Declares no cq:productVariantAxes and references its image through assets/* instead of image.
+    private static final String HIKING_POLES_SKU = "170227049";
 
     /**
      * Golden ground truth for the complete blueprint catalog (60 products), captured from the live
@@ -60,7 +63,7 @@ public class WeRetailBlueprintFidelityIT extends GraphqlITBase {
      */
     private static final String[] CATALOG = {
             "116138647|S|faba-running-pants|equipment,equipment/running,women,women/pants",
-            "170227049|C|hiking-poles|equipment,equipment/hiking",
+            "170227049|S|hiking-poles|equipment,equipment/hiking",
             "30941863|S|basa-mp3-player|equipment,equipment/running",
             "331050524|S|hiking-pants|equipment,equipment/hiking,women,women/pants",
             "84391210|S|spixa-runners|equipment,equipment/running",
@@ -122,12 +125,12 @@ public class WeRetailBlueprintFidelityIT extends GraphqlITBase {
     };
 
     /**
-     * Golden axes + flattened variant count for the 44 configurable products, as
+     * Golden axes + flattened variant count for the 43 configurable products, as
      * {@code sku|sortedAxes|variantCount}. Pins the {@code cq:productVariantAxes} flattening for
      * every configurable — single-axis (size/color) and multi-axis (color,size) alike.
      */
     private static final String[] CONFIGURABLES = {
-            "170227049|size|1", "eqbisucos|size|3", "eqbisumas|size|6", "eqbisumxs|size|1",
+            "eqbisucos|size|3", "eqbisumas|size|6", "eqbisumxs|size|1",
             "eqbisuset|size|4", "eqrusufle|size|3", "eqsmcz|color|2", "eqswsuaqr|size|1",
             "eqswsucal|size|1", "eqswsumak|size|1", "eqswsuprs|color,size|3", "eqswsupus|color,size|9",
             "eqswsuses|color,size|24", "eqwrsnbd|size|1", "mehisubus|size|4", "mehisucos|size|5",
@@ -228,6 +231,18 @@ public class WeRetailBlueprintFidelityIT extends GraphqlITBase {
                 .body("data.products.items[0].url_key", equalTo(HIKING_PANTS_URL_KEY))
                 .body("data.products.items[0].categories.url_path",
                         hasItems("equipment", "equipment/hiking", "women", "women/pants"));
+    }
+
+    /**
+     * A master that declares no {@code cq:productVariantAxes} is a simple product even though it has
+     * a variant child, and an image referenced through {@code assets/*} is imported like an
+     * {@code image} child. The Hiking Poles carry both legacy shapes.
+     */
+    @Test
+    public void shouldImportUndeclaredAxesProductAsSimpleWithAssetsImage() {
+        postQuery(Queries.PRODUCTS_BY_SKU_EQ, Map.of("sku", HIKING_POLES_SKU))
+                .body("data.products.items[0].__typename", equalTo("SimpleProduct"))
+                .body("data.products.items[0].image.url", endsWith("/equipment/hiking/hiking-poles_img_0.jpeg"));
     }
 
     /**

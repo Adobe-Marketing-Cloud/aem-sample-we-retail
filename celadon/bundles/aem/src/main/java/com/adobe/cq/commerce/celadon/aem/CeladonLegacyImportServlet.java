@@ -345,22 +345,22 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
         }
 
         // Image is the only field that needs the asset-import pipeline; keep it out of the manifest loop.
-        List<String> imagePaths = new ArrayList<>();
-        String productImage = resolveSourceImageUrl(sourceUrl, stringValue(map(product.get("image")).get("fileReference")));
-        if (!productImage.isBlank()) {
-            DownloadedAsset asset = download(productImage, sourceAuthorization);
-            String assetPath = cfParent.getPath() + "/" + nodeName + "_img_0." + asset.extension();
-            AemContentFragmentSupport.createOrUpdateAsset(resolver, assetPath, asset.bytes(), asset.mimeType());
-            imagePaths.add(assetPath);
-        }
+        List<String> imagePaths = importImages(resolver, product, cfParent.getPath() + "/" + nodeName,
+                sourceUrl, sourceAuthorization);
         AemContentFragmentSupport.writeTyped(fragment, "image", imagePaths);
 
+        // Only the axes the master declares are configurable; a product declaring none imports as a
+        // simple product because its variant children are not selectable in the classic storefront.
+        List<String> variantAxes = LegacyProductStructure.declaredVariantAxes(product);
         List<Map<String, Object>> leafVariants = new ArrayList<>();
-        collectLeafVariants(product, AemRepositorySupport.map(
-                "_resolvedSkuBase", productSku,
-                "_resolvedSkuBaseOwn", true
-        ), leafVariants);
-        List<String> optionPaths = buildManifestOptionReferences(optionWriter, leafVariants, manifest);
+        if (!variantAxes.isEmpty()) {
+            collectLeafVariants(product, AemRepositorySupport.map(
+                    "_resolvedSkuBase", productSku,
+                    "_resolvedSkuBaseOwn", true
+            ), leafVariants);
+        }
+        List<String> optionPaths = buildManifestOptionReferences(optionWriter, leafVariants,
+                LegacyProductStructure.configurableAxisEntries(manifest, variantAxes));
         optionWriter.writeProductReferences(fragment, optionPaths);
         Set<String> seenVariations = new LinkedHashSet<>();
         Set<String> seenVariantSkus = new LinkedHashSet<>();
@@ -378,14 +378,35 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
             // Manifest-driven write of every variant-scoped attribute.
             writeManifestAttributesLegacy(fragment, variant, variationName, manifest);
 
-            String variantImage = resolveSourceImageUrl(sourceUrl, stringValue(map(variant.get("image")).get("fileReference")));
-            if (!variantImage.isBlank()) {
-                DownloadedAsset asset = download(variantImage, sourceAuthorization);
-                String assetPath = cfParent.getPath() + "/" + nodeName + "_" + variationName + "_img_0." + asset.extension();
-                AemContentFragmentSupport.createOrUpdateAsset(resolver, assetPath, asset.bytes(), asset.mimeType());
-                AemContentFragmentSupport.writeVariationTyped(fragment, variationName, variationName, "image", List.of(assetPath));
+            List<String> variantImagePaths = importImages(resolver, variant,
+                    cfParent.getPath() + "/" + nodeName + "_" + variationName, sourceUrl, sourceAuthorization);
+            if (!variantImagePaths.isEmpty()) {
+                AemContentFragmentSupport.writeVariationTyped(fragment, variationName, variationName, "image", variantImagePaths);
             }
         }
+    }
+
+    /**
+     * Downloads every source image of a product or variant node and stores them as
+     * {@code <assetPathPrefix>_img_<n>} assets, returning the asset paths in source order.
+     */
+    private List<String> importImages(ResourceResolver resolver,
+                                      Map<String, Object> node,
+                                      String assetPathPrefix,
+                                      String sourceUrl,
+                                      String sourceAuthorization) throws Exception {
+        List<String> assetPaths = new ArrayList<>();
+        for (String reference : LegacyProductStructure.imageReferences(node)) {
+            String imageUrl = resolveSourceImageUrl(sourceUrl, reference);
+            if (imageUrl.isBlank()) {
+                continue;
+            }
+            DownloadedAsset asset = download(imageUrl, sourceAuthorization);
+            String assetPath = assetPathPrefix + "_img_" + assetPaths.size() + "." + asset.extension();
+            AemContentFragmentSupport.createOrUpdateAsset(resolver, assetPath, asset.bytes(), asset.mimeType());
+            assetPaths.add(assetPath);
+        }
+        return assetPaths;
     }
 
     /** Catalog-relative path of {@code node} under {@code targetRoot} (empty when it is the root itself). */
@@ -630,17 +651,14 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
     }
 
     /**
-     * For each SELECT/MULTISELECT attribute in the manifest with VARIANT/BOTH scope that
-     * has at least one value among the leaf variants, ensure the corresponding option
-     * definition CF exists and return the set of paths in manifest order.
+     * For each configurable axis entry that has at least one value among the leaf variants, ensure the
+     * corresponding option definition CF exists and return the set of paths in manifest order.
      */
     private List<String> buildManifestOptionReferences(OptionDefinitionWriter optionWriter,
                                                        List<Map<String, Object>> leafVariants,
-                                                       AttributeManifest manifest) throws Exception {
+                                                       List<AttributeEntry> axisEntries) throws Exception {
         List<String> paths = new ArrayList<>();
-        for (AttributeEntry entry : manifest.entries()) {
-            if (!entry.scope().appliesToVariant()) continue;
-            if (entry.type() != NormalizedType.SELECT && entry.type() != NormalizedType.MULTISELECT) continue;
+        for (AttributeEntry entry : axisEntries) {
             LinkedHashSet<String> values = new LinkedHashSet<>();
             for (Map<String, Object> variant : leafVariants) {
                 String value = stringValue(variant.get(entry.code()));
