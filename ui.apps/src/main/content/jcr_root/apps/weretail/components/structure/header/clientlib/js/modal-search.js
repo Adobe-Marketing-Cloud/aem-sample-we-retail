@@ -15,6 +15,12 @@
  */
 (function ($) {
     $(function () {
+        $('.we-retail-header').on('click.we-retail.modal', '[data-toggle="modal"][data-target]', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            $($(this).attr('data-target')).modal('show');
+        });
+
         $('#navbar-search').on('show.bs.modal hidden.bs.modal', function () {
             $('body').toggleClass('modal-color-'+ $(this).data('color'));
         });
