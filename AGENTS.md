@@ -53,6 +53,14 @@ New CIF code lives under `we.retail.core.commerce.cif`. Recommendation stubs are
 migrated to CIF are in `we.retail.core.model` (e.g. `ProductModel`, `ProductGrid`,
 `ProductGridItem`, `ProductFilter`, `ProductItem`).
 
+Product search: `ProductGrid` shows CIF search results only on the configured
+`cq:cifSearchResultsPage` (`?search_query=`). The header search pop-up adds a products
+section and a "see all results" link from
+`we.retail.core.commerce.cif.search.ProductSuggestionsServlet`
+(`<page>.productsuggestions.json?search_query=`); its script lives in the
+`weretail/components/structure/search` clientlib. Product links are built by
+`ProductGrid.toProductUrl`.
+
 ### CIF/Celadon OSGi config (`config`)
 
 `config/src/content/jcr_root/apps/weretail/osgiconfig/config/` contains:

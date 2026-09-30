@@ -81,4 +81,47 @@
   .cmp-search__item-mark {
     background-color: rgba(255, 288, 255, 0.4);
   }
+
+  .we-SearchSuggestions {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999999;
+    min-width: 100%;
+    max-height: 60vh;
+    overflow-y: auto;
+
+    &.is-open {
+      display: block;
+    }
+
+    .cmp-search__results {
+      position: static;
+      max-height: none;
+      overflow: visible;
+    }
+  }
+
+  .we-SearchSuggestions-heading {
+    padding: 1rem 0 0.25rem 3rem;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .we-SearchSuggestions-products,
+  .we-SearchSuggestions-all {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .we-SearchSuggestions-all {
+    margin-top: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+  }
 }
