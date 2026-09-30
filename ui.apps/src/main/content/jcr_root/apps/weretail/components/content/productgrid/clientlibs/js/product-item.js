@@ -32,22 +32,7 @@
     }
 
     function sortFilterSizes(sizes) {
-        return (sizes || []).slice().sort(function (left, right) {
-            var leftNum = parseFloat(left),
-                rightNum = parseFloat(right),
-                leftIsNum = !isNaN(leftNum),
-                rightIsNum = !isNaN(rightNum);
-
-            if (leftIsNum !== rightIsNum) {
-                return leftIsNum ? 1 : -1;
-            }
-
-            if (leftIsNum && rightIsNum) {
-                return leftNum - rightNum;
-            }
-
-            return String(left).localeCompare(String(right));
-        });
+        return sortSizes(sizes);
     }
 
     Vue.component('we-product-item', {
