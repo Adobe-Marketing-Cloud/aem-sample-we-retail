@@ -18,7 +18,7 @@
                 jcr:primaryType="nt:unstructured"
                 additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:16.331+03:00"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.331+03:00"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size,/content/dam/celadon/we-retail/_options/color--blue-green-yellow]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-yellow,/content/dam/celadon/we-retail/_options/size--one-size]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.377+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Bring your training goals into focus with startling clarity in the Pro Series Swim Goggles."
@@ -59,7 +59,7 @@
                 color="blue"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.385+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size,/content/dam/celadon/we-retail/_options/color--blue-green-yellow]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-yellow,/content/dam/celadon/we-retail/_options/size--one-size]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.378+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Bring your training goals into focus with startling clarity in the Pro Series Swim Goggles."
@@ -102,7 +102,7 @@
                 color="green"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.406+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size,/content/dam/celadon/we-retail/_options/color--blue-green-yellow]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-yellow,/content/dam/celadon/we-retail/_options/size--one-size]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.399+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Bring your training goals into focus with startling clarity in the Pro Series Swim Goggles."
@@ -145,7 +145,7 @@
                 color="yellow"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.482+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size,/content/dam/celadon/we-retail/_options/color--blue-green-yellow]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-yellow,/content/dam/celadon/we-retail/_options/size--one-size]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.477+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Bring your training goals into focus with startling clarity in the Pro Series Swim Goggles."
@@ -195,7 +195,7 @@
                 string_x0040_rating="5"
                 string_x0040_reviews="&#xa;By Bjornar&#xa;from The Burbs of MN&#xa;&#xa;These are my first goggles I bought last year and I have probably 20+ miles in them at this point. They are still keeping out leaks and fitting well. I first tried the foam gasket bargain goggles--those were bad, very bad. The rubber gasket does it's job so well I have lines afterward on my face. The tinted lenses are not too dark to use indoors in the pool but will give decent sun coverage outdoors. Range of vision is good and the fit is nice and snug. Obviously they will fog up if mistreated or simply because of the head of your body, but that's not the end of the world. You don't need to be able to find pennies on the bottom of the pool or anything."
                 string_x0040_sku="eqswsuprs"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size,/content/dam/celadon/we-retail/_options/color--blue-green-yellow]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-yellow,/content/dam/celadon/we-retail/_options/size--one-size]"/>
             <var-identifier-eqswsuprs1-size-onesize-color-blue
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -211,7 +211,7 @@
                 string_x0040_reviews="&#xa;By Bjornar&#xa;from The Burbs of MN&#xa;&#xa;These are my first goggles I bought last year and I have probably 20+ miles in them at this point. They are still keeping out leaks and fitting well. I first tried the foam gasket bargain goggles--those were bad, very bad. The rubber gasket does it's job so well I have lines afterward on my face. The tinted lenses are not too dark to use indoors in the pool but will give decent sun coverage outdoors. Range of vision is good and the fit is nice and snug. Obviously they will fog up if mistreated or simply because of the head of your body, but that's not the end of the world. You don't need to be able to find pennies on the bottom of the pool or anything."
                 string_x0040_size="One size"
                 string_x0040_sku="eqswsuprs.1-Onesize"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size,/content/dam/celadon/we-retail/_options/color--blue-green-yellow]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-yellow,/content/dam/celadon/we-retail/_options/size--one-size]"/>
             <var-identifier-eqswsuprs2-size-onesize-color-green
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -227,7 +227,7 @@
                 string_x0040_reviews="&#xa;By Bjornar&#xa;from The Burbs of MN&#xa;&#xa;These are my first goggles I bought last year and I have probably 20+ miles in them at this point. They are still keeping out leaks and fitting well. I first tried the foam gasket bargain goggles--those were bad, very bad. The rubber gasket does it's job so well I have lines afterward on my face. The tinted lenses are not too dark to use indoors in the pool but will give decent sun coverage outdoors. Range of vision is good and the fit is nice and snug. Obviously they will fog up if mistreated or simply because of the head of your body, but that's not the end of the world. You don't need to be able to find pennies on the bottom of the pool or anything."
                 string_x0040_size="One size"
                 string_x0040_sku="eqswsuprs.2-Onesize"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size,/content/dam/celadon/we-retail/_options/color--blue-green-yellow]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-yellow,/content/dam/celadon/we-retail/_options/size--one-size]"/>
             <var-identifier-eqswsuprs3-size-onesize-color-yellow
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -243,7 +243,7 @@
                 string_x0040_reviews="&#xa;By Bjornar&#xa;from The Burbs of MN&#xa;&#xa;These are my first goggles I bought last year and I have probably 20+ miles in them at this point. They are still keeping out leaks and fitting well. I first tried the foam gasket bargain goggles--those were bad, very bad. The rubber gasket does it's job so well I have lines afterward on my face. The tinted lenses are not too dark to use indoors in the pool but will give decent sun coverage outdoors. Range of vision is good and the fit is nice and snug. Obviously they will fog up if mistreated or simply because of the head of your body, but that's not the end of the world. You don't need to be able to find pennies on the bottom of the pool or anything."
                 string_x0040_size="One size"
                 string_x0040_sku="eqswsuprs.3-Onesize"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size,/content/dam/celadon/we-retail/_options/color--blue-green-yellow]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-yellow,/content/dam/celadon/we-retail/_options/size--one-size]"/>
         </indexedData>
         <metadata
             jcr:mixinTypes="[cq:Taggable]"

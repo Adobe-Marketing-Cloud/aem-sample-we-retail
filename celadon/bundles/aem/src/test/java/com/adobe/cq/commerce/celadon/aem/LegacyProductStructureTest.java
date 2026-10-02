@@ -124,8 +124,9 @@ public class LegacyProductStructureTest {
     }
 
     @Test
-    public void configurableAxisEntries_keepsDeclaredVariantSelectsInManifestOrder() {
-        assertEquals(List.of("size", "color"), axisCodes(List.of("color", "size")));
+    public void configurableAxisEntries_keepsDeclaredVariantSelectsInDeclarationOrder() {
+        assertEquals(List.of("color", "size"), axisCodes(List.of("color", "size")));
+        assertEquals(List.of("size", "color"), axisCodes(List.of("size", "color")));
         assertEquals(List.of("size"), axisCodes(List.of("size")));
     }
 

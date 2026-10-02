@@ -18,7 +18,7 @@
                 jcr:primaryType="nt:unstructured"
                 additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:16.005+03:00"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.005+03:00"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.038+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Pufferfish Snorkeling Fins make it easy to explore tropical reefs and freshwater aquatic life with minimal effort and maximum comfort."
@@ -59,7 +59,7 @@
                 color="blue"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.043+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.039+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Pufferfish Snorkeling Fins make it easy to explore tropical reefs and freshwater aquatic life with minimal effort and maximum comfort."
@@ -102,7 +102,7 @@
                 color="blue"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.070+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.055+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Pufferfish Snorkeling Fins make it easy to explore tropical reefs and freshwater aquatic life with minimal effort and maximum comfort."
@@ -145,7 +145,7 @@
                 color="blue"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.087+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.083+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Pufferfish Snorkeling Fins make it easy to explore tropical reefs and freshwater aquatic life with minimal effort and maximum comfort."
@@ -188,7 +188,7 @@
                 color="green"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.110+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.106+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Pufferfish Snorkeling Fins make it easy to explore tropical reefs and freshwater aquatic life with minimal effort and maximum comfort."
@@ -231,7 +231,7 @@
                 color="green"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.124+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.119+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Pufferfish Snorkeling Fins make it easy to explore tropical reefs and freshwater aquatic life with minimal effort and maximum comfort."
@@ -274,7 +274,7 @@
                 color="green"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.139+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.135+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Pufferfish Snorkeling Fins make it easy to explore tropical reefs and freshwater aquatic life with minimal effort and maximum comfort."
@@ -317,7 +317,7 @@
                 color="purple"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.152+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.148+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Pufferfish Snorkeling Fins make it easy to explore tropical reefs and freshwater aquatic life with minimal effort and maximum comfort."
@@ -360,7 +360,7 @@
                 color="purple"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.171+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.167+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Pufferfish Snorkeling Fins make it easy to explore tropical reefs and freshwater aquatic life with minimal effort and maximum comfort."
@@ -403,7 +403,7 @@
                 color="purple"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.188+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.184+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Pufferfish Snorkeling Fins make it easy to explore tropical reefs and freshwater aquatic life with minimal effort and maximum comfort."
@@ -453,7 +453,7 @@
                 string_x0040_rating="5"
                 string_x0040_reviews="This item is not yet reviewed. Be the first to write a review."
                 string_x0040_sku="eqswsupus"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"/>
             <var-identifier-eqswsupus1-size-s-color-blue
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -469,7 +469,7 @@
                 string_x0040_reviews="This item is not yet reviewed. Be the first to write a review."
                 string_x0040_size="S"
                 string_x0040_sku="eqswsupus.1-S"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"/>
             <var-identifier-eqswsupus1-size-m-color-blue
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -485,7 +485,7 @@
                 string_x0040_reviews="This item is not yet reviewed. Be the first to write a review."
                 string_x0040_size="M"
                 string_x0040_sku="eqswsupus.1-M"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"/>
             <var-identifier-eqswsupus1-size-l-color-blue
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -501,7 +501,7 @@
                 string_x0040_reviews="This item is not yet reviewed. Be the first to write a review."
                 string_x0040_size="L"
                 string_x0040_sku="eqswsupus.1-L"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"/>
             <var-identifier-eqswsupus2-size-s-color-green
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -517,7 +517,7 @@
                 string_x0040_reviews="This item is not yet reviewed. Be the first to write a review."
                 string_x0040_size="S"
                 string_x0040_sku="eqswsupus.2-S"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"/>
             <var-identifier-eqswsupus2-size-m-color-green
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -533,7 +533,7 @@
                 string_x0040_reviews="This item is not yet reviewed. Be the first to write a review."
                 string_x0040_size="M"
                 string_x0040_sku="eqswsupus.2-M"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"/>
             <var-identifier-eqswsupus2-size-l-color-green
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -549,7 +549,7 @@
                 string_x0040_reviews="This item is not yet reviewed. Be the first to write a review."
                 string_x0040_size="L"
                 string_x0040_sku="eqswsupus.2-L"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"/>
             <var-identifier-eqswsupus3-size-s-color-purple
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -565,7 +565,7 @@
                 string_x0040_reviews="This item is not yet reviewed. Be the first to write a review."
                 string_x0040_size="S"
                 string_x0040_sku="eqswsupus.3-S"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"/>
             <var-identifier-eqswsupus3-size-m-color-purple
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -581,7 +581,7 @@
                 string_x0040_reviews="This item is not yet reviewed. Be the first to write a review."
                 string_x0040_size="M"
                 string_x0040_sku="eqswsupus.3-M"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"/>
             <var-identifier-eqswsupus3-size-l-color-purple
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -597,7 +597,7 @@
                 string_x0040_reviews="This item is not yet reviewed. Be the first to write a review."
                 string_x0040_size="L"
                 string_x0040_sku="eqswsupus.3-L"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--s-m-l,/content/dam/celadon/we-retail/_options/color--blue-green-purple]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple,/content/dam/celadon/we-retail/_options/size--s-m-l]"/>
         </indexedData>
         <metadata
             jcr:mixinTypes="[cq:Taggable]"

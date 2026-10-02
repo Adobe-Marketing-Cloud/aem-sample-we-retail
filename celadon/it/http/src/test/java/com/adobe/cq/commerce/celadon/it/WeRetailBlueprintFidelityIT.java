@@ -199,13 +199,14 @@ public class WeRetailBlueprintFidelityIT extends GraphqlITBase {
     /**
      * The two-level JCR master -> color-group -> size-leaf structure is flattened into a single
      * ConfigurableProduct exposing BOTH the color and size axes, with all 10 combinations as
-     * variants. This is the {@code cq:productVariantAxes} fix surfaced through GraphQL.
+     * variants. This is the {@code cq:productVariantAxes} fix surfaced through GraphQL; the axes keep
+     * their declared order, color before size.
      */
     @Test
     public void shouldFlattenMultiAxisVariants() {
         postQuery(Queries.WR_PRODUCT_BY_URL_KEY_VARIANTS, Map.of("urlKey", SONJA_URL_KEY))
                 .body("data.products.items[0].__typename", equalTo("ConfigurableProduct"))
-                .body("data.products.items[0].configurable_options.attribute_code", hasItems("color", "size"))
+                .body("data.products.items[0].configurable_options.attribute_code", contains("color", "size"))
                 .body("data.products.items[0].variants.size()", equalTo(10));
     }
 

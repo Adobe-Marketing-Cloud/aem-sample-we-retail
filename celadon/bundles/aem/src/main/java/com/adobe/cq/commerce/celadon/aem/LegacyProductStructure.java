@@ -85,20 +85,19 @@ public final class LegacyProductStructure {
 
     /**
      * The manifest's variant-scoped {@code SELECT}/{@code MULTISELECT} entries that are among the
-     * product's declared axes, in manifest order. These are the only attributes that become
-     * configurable options of the product.
+     * product's declared axes, in declaration order. These are the only attributes that become
+     * configurable options of the product, and the classic storefront lists its variant selectors in
+     * that order.
      */
     public static List<AttributeEntry> configurableAxisEntries(AttributeManifest manifest, List<String> declaredAxes) {
         List<AttributeEntry> entries = new ArrayList<>();
-        for (AttributeEntry entry : manifest.entries()) {
-            if (!entry.scope().appliesToVariant()) {
-                continue;
-            }
-            if (entry.type() != NormalizedType.SELECT && entry.type() != NormalizedType.MULTISELECT) {
-                continue;
-            }
-            if (declaredAxes.contains(entry.code())) {
-                entries.add(entry);
+        for (String axis : declaredAxes) {
+            for (AttributeEntry entry : manifest.entries()) {
+                if (entry.code().equals(axis) && entry.scope().appliesToVariant()
+                        && (entry.type() == NormalizedType.SELECT || entry.type() == NormalizedType.MULTISELECT)) {
+                    entries.add(entry);
+                    break;
+                }
             }
         }
         return entries;

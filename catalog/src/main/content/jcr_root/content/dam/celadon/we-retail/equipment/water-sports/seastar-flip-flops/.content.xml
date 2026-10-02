@@ -18,7 +18,7 @@
                 jcr:primaryType="nt:unstructured"
                 additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:16.497+03:00"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.497+03:00"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.538+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -59,7 +59,7 @@
                 color="blue"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.542+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.539+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -102,7 +102,7 @@
                 color="blue"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.561+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.558+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -145,7 +145,7 @@
                 color="blue"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.585+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.581+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -188,7 +188,7 @@
                 color="blue"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.604+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.600+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -231,7 +231,7 @@
                 color="blue"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.619+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.615+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -274,7 +274,7 @@
                 color="blue"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.653+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.649+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -317,7 +317,7 @@
                 color="green"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.674+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.670+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -360,7 +360,7 @@
                 color="green"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.696+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.692+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -403,7 +403,7 @@
                 color="green"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.722+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.716+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -446,7 +446,7 @@
                 color="green"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.738+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.734+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -489,7 +489,7 @@
                 color="green"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.784+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.780+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -532,7 +532,7 @@
                 color="green"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.809+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.804+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -575,7 +575,7 @@
                 color="purple"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.839+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.836+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -618,7 +618,7 @@
                 color="purple"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.864+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.860+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -661,7 +661,7 @@
                 color="purple"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.888+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.884+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -704,7 +704,7 @@
                 color="purple"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.910+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.905+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -747,7 +747,7 @@
                 color="purple"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.936+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.932+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -790,7 +790,7 @@
                 color="purple"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.952+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.948+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -833,7 +833,7 @@
                 color="red"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.966+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.962+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -876,7 +876,7 @@
                 color="red"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:16.989+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.985+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -919,7 +919,7 @@
                 color="red"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:17.003+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.999+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -962,7 +962,7 @@
                 color="red"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:17.019+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:17.014+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -1005,7 +1005,7 @@
                 color="red"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:17.046+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:17.042+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -1048,7 +1048,7 @@
                 color="red"
                 color_x0040_LastModified="{Date}2026-06-24T12:58:17.064+03:00"
                 color_x0040_LastModifiedBy="admin"
-                configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"
                 configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:17.059+03:00"
                 configurableOptions_x0040_LastModifiedBy="admin"
                 description="Water resistant and durable, Seastar is known for its great non-slip tread."
@@ -1098,7 +1098,7 @@
                 string_x0040_rating="4"
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_sku="eqswsuses"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses1-size-8-color-blue
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1114,7 +1114,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="8"
                 string_x0040_sku="eqswsuses.1-8"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses1-size-9-color-blue
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1130,7 +1130,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="9"
                 string_x0040_sku="eqswsuses.1-9"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses1-size-10-color-blue
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1146,7 +1146,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="10"
                 string_x0040_sku="eqswsuses.1-10"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses1-size-11-color-blue
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1162,7 +1162,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="11"
                 string_x0040_sku="eqswsuses.1-11"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses1-size-12-color-blue
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1178,7 +1178,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="12"
                 string_x0040_sku="eqswsuses.1-12"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses1-size-13-color-blue
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1194,7 +1194,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="13"
                 string_x0040_sku="eqswsuses.1-13"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses2-size-8-color-green
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1210,7 +1210,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="8"
                 string_x0040_sku="eqswsuses.2-8"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses2-size-9-color-green
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1226,7 +1226,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="9"
                 string_x0040_sku="eqswsuses.2-9"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses2-size-10-color-green
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1242,7 +1242,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="10"
                 string_x0040_sku="eqswsuses.2-10"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses2-size-11-color-green
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1258,7 +1258,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="11"
                 string_x0040_sku="eqswsuses.2-11"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses2-size-12-color-green
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1274,7 +1274,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="12"
                 string_x0040_sku="eqswsuses.2-12"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses2-size-13-color-green
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1290,7 +1290,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="13"
                 string_x0040_sku="eqswsuses.2-13"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses3-size-8-color-purple
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1306,7 +1306,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="8"
                 string_x0040_sku="eqswsuses.3-8"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses3-size-9-color-purple
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1322,7 +1322,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="9"
                 string_x0040_sku="eqswsuses.3-9"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses3-size-10-color-purple
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1338,7 +1338,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="10"
                 string_x0040_sku="eqswsuses.3-10"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses3-size-11-color-purple
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1354,7 +1354,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="11"
                 string_x0040_sku="eqswsuses.3-11"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses3-size-12-color-purple
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1370,7 +1370,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="12"
                 string_x0040_sku="eqswsuses.3-12"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses3-size-13-color-purple
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1386,7 +1386,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="13"
                 string_x0040_sku="eqswsuses.3-13"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses4-size-8-color-red
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1402,7 +1402,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="8"
                 string_x0040_sku="eqswsuses.4-8"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses4-size-9-color-red
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1418,7 +1418,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="9"
                 string_x0040_sku="eqswsuses.4-9"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses4-size-10-color-red
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1434,7 +1434,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="10"
                 string_x0040_sku="eqswsuses.4-10"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses4-size-11-color-red
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1450,7 +1450,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="11"
                 string_x0040_sku="eqswsuses.4-11"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses4-size-12-color-red
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1466,7 +1466,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="12"
                 string_x0040_sku="eqswsuses.4-12"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
             <var-identifier-eqswsuses4-size-13-color-red
                 jcr:mixinTypes="[dam:IndexedFragmentData]"
                 jcr:primaryType="nt:unstructured"
@@ -1482,7 +1482,7 @@
                 string_x0040_reviews="&#xa;By Wandering Oregonian&#xa;from Bangkok, Thailand&#xa;&#xa;These flip-flops are probably the most comfortable pair I have ever tried on. The foot bed is cushioned but firm and provides excellent arch support. They do not become slippery when they get wet (a problem I have experienced with other brands). They are great at casual events, as well as by the poolside or beach front. I have worn mine through an entire vacation, from the plane to the beach, and from the hotel to the restaurant. These flip-flops do it all. The nylon toe strap may take a day or two to break in, but I did not even notice it after the first half hour."
                 string_x0040_size="13"
                 string_x0040_sku="eqswsuses.4-13"
-                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2,/content/dam/celadon/we-retail/_options/color--blue-green-purple-red]"/>
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-purple-red,/content/dam/celadon/we-retail/_options/size--8-9-10-11-plus2]"/>
         </indexedData>
         <metadata
             jcr:mixinTypes="[cq:Taggable]"
