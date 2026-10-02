@@ -15,6 +15,7 @@
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 package we.retail.core.model;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -67,6 +68,26 @@ public class ProductGridItemTest {
         assertTrue(item.getFilters().getColors().contains("red"));
         assertTrue(item.getFilters().getSizes().contains("9"));
         assertTrue(item.getFilters().getPrices().contains("$64.99"));
+    }
+
+    @Test
+    public void testShowsMinimumPriceAndFiltersOnBothEndsOfARange() {
+        ProductListItem listItem = mock(ProductListItem.class);
+        SlingHttpServletRequest request = mock(SlingHttpServletRequest.class);
+        Price price = createPrice("$119.00");
+        when(price.isRange()).thenReturn(Boolean.TRUE);
+        when(price.getFormattedFinalPriceMax()).thenReturn("$130.00");
+        ConfigurableProduct product = createConfigurableProduct();
+
+        when(listItem.getTitle()).thenReturn("El Gordo Down Jacket");
+        when(listItem.getURL()).thenReturn("/content/we-retail/us/en/products/product-page.html/men/coats/el-gordo-down-jacket.html");
+        when(listItem.getPriceRange()).thenReturn(price);
+        when(listItem.getProduct()).thenReturn(product);
+
+        ProductGridItem item = ProductGridItem.fromProductListItem(listItem, request, listItem.getURL());
+
+        assertEquals("$119.00", item.getPrice());
+        assertEquals(Arrays.asList("$119.00", "$130.00"), new ArrayList<String>(item.getFilters().getPrices()));
     }
 
     @Test

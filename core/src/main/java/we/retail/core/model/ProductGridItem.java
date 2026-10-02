@@ -24,6 +24,7 @@ import org.apache.sling.api.SlingHttpServletRequest;
 
 import com.day.cq.wcm.api.Page;
 
+import com.adobe.cq.commerce.core.components.models.common.Price;
 import com.adobe.cq.commerce.core.components.models.common.ProductListItem;
 import com.adobe.cq.commerce.core.components.models.product.Product;
 import com.adobe.cq.commerce.core.components.models.product.Variant;
@@ -81,7 +82,7 @@ public class ProductGridItem {
             ProductItem.descriptionLabel(productData),
             displayPrice,
             StringUtils.defaultIfBlank(resolvedPath, pagePath),
-            buildFilters(productData, displayPrice));
+            buildFilters(productData, displayPrice, selectedVariant != null ? null : product.getPriceRange()));
     }
 
     public static ProductGridItem fromProductListItem(ProductListItem productListItem, SlingHttpServletRequest request, String resolvedUrl) {
@@ -94,7 +95,7 @@ public class ProductGridItem {
             ProductItem.descriptionLabel(product),
             resolvedPrice,
             StringUtils.defaultIfBlank(resolvedUrl, StringUtils.defaultIfBlank(productListItem.getURL(), productListItem.getPath())),
-            buildFilters(product, resolvedPrice));
+            buildFilters(product, resolvedPrice, productListItem.getPriceRange()));
     }
 
     private static String resolvePagePath(Page page, SlingHttpServletRequest request) {
@@ -104,10 +105,14 @@ public class ProductGridItem {
         return request.getResourceResolver().map(request, page.getPath()) + ".html";
     }
 
-    private static ProductFilters buildFilters(ProductInterface product, String price) {
+    private static ProductFilters buildFilters(ProductInterface product, String price, Price priceRange) {
         ProductFilters productFilters = new ProductFilters();
         if (StringUtils.isNotBlank(price)) {
             productFilters.setPrice(price);
+        }
+        if (priceRange != null && !priceRange.isEmpty() && Boolean.TRUE.equals(priceRange.isRange())
+            && StringUtils.isNotBlank(priceRange.getFormattedFinalPriceMax())) {
+            productFilters.setPrice(priceRange.getFormattedFinalPriceMax());
         }
 
         if (product instanceof ConfigurableProduct) {

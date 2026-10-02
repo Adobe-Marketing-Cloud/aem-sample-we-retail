@@ -79,6 +79,15 @@ public class ProductItemTest {
             item.getVariants().get(0).getPagePath());
     }
 
+    @Test
+    public void testFormatsTheMinimumOfAPriceRange() {
+        Price price = createPrice("$39.00");
+        when(price.isRange()).thenReturn(Boolean.TRUE);
+        when(price.getFormattedFinalPriceMax()).thenReturn("$42.00");
+
+        assertEquals("$39.00", ProductItem.formatPrice(price));
+    }
+
     private Product createProduct() {
         return createProduct("me/footwear/meotwisus", "meotwisus-9");
     }

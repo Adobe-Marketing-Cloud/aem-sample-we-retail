@@ -137,9 +137,6 @@ public class ProductItem {
         if (priceRange == null || priceRange.isEmpty()) {
             return StringUtils.EMPTY;
         }
-        if (Boolean.TRUE.equals(priceRange.isRange()) && StringUtils.isNotBlank(priceRange.getFormattedFinalPriceMax())) {
-            return priceRange.getFormattedFinalPrice() + " - " + priceRange.getFormattedFinalPriceMax();
-        }
         if (StringUtils.isNotBlank(priceRange.getFormattedFinalPrice())) {
             return priceRange.getFormattedFinalPrice();
         }
