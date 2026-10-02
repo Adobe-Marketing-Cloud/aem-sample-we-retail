@@ -477,7 +477,6 @@
     <products/>
     <cif-products/>
     <community/>
-    <test-page/>
     <activitystreams jcr:primaryType="nt:unstructured">
         <activities/>
     </activitystreams>
