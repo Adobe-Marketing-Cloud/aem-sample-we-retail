@@ -61,6 +61,10 @@ section and a "see all results" link from
 `weretail/components/structure/search` clientlib. Product links are built by
 `ProductGrid.toProductUrl`.
 
+Breadcrumbs keep the classic `we-retail-product-page` policy (start level 5, current page
+hidden); `CatalogBreadcrumb` applies it to the trail the CIF breadcrumb builds on category
+and product pages.
+
 ### CIF/Celadon OSGi config (`config`)
 
 `config/src/content/jcr_root/apps/weretail/osgiconfig/config/` contains:
