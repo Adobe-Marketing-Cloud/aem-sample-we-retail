@@ -21,6 +21,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Consumer;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
@@ -41,7 +42,9 @@ import com.adobe.cq.commerce.core.components.models.searchresults.SearchResults;
 import com.adobe.cq.commerce.core.components.services.urls.ProductUrlFormat;
 import com.adobe.cq.commerce.core.components.services.urls.UrlProvider;
 import com.adobe.cq.commerce.magento.graphql.CategoryInterface;
+import com.adobe.cq.commerce.magento.graphql.Operations;
 import com.adobe.cq.commerce.magento.graphql.ProductInterface;
+import com.adobe.cq.commerce.magento.graphql.ProductInterfaceQuery;
 import com.day.cq.wcm.api.Page;
 
 import static org.junit.Assert.assertEquals;
@@ -55,6 +58,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+import org.mockito.ArgumentCaptor;
 import org.mockito.InOrder;
 
 public class ProductGridTest {
@@ -179,8 +183,10 @@ public class ProductGridTest {
         initMethod.invoke(productGrid);
 
         InOrder inOrder = inOrder(categoryRetriever, productList);
-        inOrder.verify(categoryRetriever).extendProductQueryWith(any());
+        ArgumentCaptor<Consumer<ProductInterfaceQuery>> queryExtension = productQueryCaptor();
+        inOrder.verify(categoryRetriever).extendProductQueryWith(queryExtension.capture());
         inOrder.verify(productList).getTitle();
+        assertTrue(renderProductQuery(queryExtension.getValue()).contains("... on SimpleProduct{size_custom_:size}"));
     }
 
     @Test
@@ -288,7 +294,9 @@ public class ProductGridTest {
         assertEquals("Eton Short-Sleeve Shirt", items.iterator().next().getName());
         assertEquals("/content/we-retail/us/en/products/product-page.html/men/shirts/eton-short-sleeve-shirt.html",
             items.iterator().next().getPath());
-        verify(searchResults).extendProductQueryWith(any());
+        ArgumentCaptor<Consumer<ProductInterfaceQuery>> queryExtension = productQueryCaptor();
+        verify(searchResults).extendProductQueryWith(queryExtension.capture());
+        assertTrue(renderProductQuery(queryExtension.getValue()).contains("... on SimpleProduct{size_custom_:size}"));
     }
 
     @Test
@@ -418,5 +426,15 @@ public class ProductGridTest {
         Field field = target.getClass().getDeclaredField(fieldName);
         field.setAccessible(true);
         field.set(target, value);
+    }
+
+    @SuppressWarnings("unchecked")
+    private ArgumentCaptor<Consumer<ProductInterfaceQuery>> productQueryCaptor() {
+        return ArgumentCaptor.forClass((Class<Consumer<ProductInterfaceQuery>>) (Class<?>) Consumer.class);
+    }
+
+    private String renderProductQuery(Consumer<ProductInterfaceQuery> extension) {
+        return Operations.query(query -> query.products(arguments -> arguments.search(""), products -> products.items(extension::accept)))
+            .toString();
     }
 }

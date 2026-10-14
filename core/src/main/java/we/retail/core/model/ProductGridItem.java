@@ -32,8 +32,11 @@ import com.adobe.cq.commerce.magento.graphql.ConfigurableProduct;
 import com.adobe.cq.commerce.magento.graphql.ConfigurableProductOptions;
 import com.adobe.cq.commerce.magento.graphql.ConfigurableProductOptionsValues;
 import com.adobe.cq.commerce.magento.graphql.ProductInterface;
+import com.google.gson.JsonElement;
 
 public class ProductGridItem {
+
+    static final String SIZE_ATTRIBUTE = "size";
 
     private final boolean exists;
     private final String image;
@@ -122,15 +125,25 @@ public class ProductGridItem {
                     for (ConfigurableProductOptionsValues value : option.getValues()) {
                         productFilters.setColor(StringUtils.lowerCase(value.getLabel()));
                     }
-                } else if ("size".equals(option.getAttributeCode())) {
+                } else if (SIZE_ATTRIBUTE.equals(option.getAttributeCode())) {
                     for (ConfigurableProductOptionsValues value : option.getValues()) {
                         productFilters.setSize(value.getLabel());
                     }
                 }
             }
+        } else if (product != null) {
+            String size = customFieldValue(product, SIZE_ATTRIBUTE);
+            if (StringUtils.isNotBlank(size)) {
+                productFilters.setSize(size);
+            }
         }
 
         return productFilters;
+    }
+
+    private static String customFieldValue(ProductInterface product, String field) {
+        Object value = product.get(field);
+        return value instanceof JsonElement && ((JsonElement) value).isJsonPrimitive() ? ((JsonElement) value).getAsString() : null;
     }
 
     private static Variant resolveSelectedVariant(Product product, String selectedVariantSku) {

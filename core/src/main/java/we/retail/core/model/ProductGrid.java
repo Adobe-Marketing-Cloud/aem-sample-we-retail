@@ -44,6 +44,7 @@ import com.adobe.cq.commerce.core.components.models.searchresults.SearchResults;
 import com.adobe.cq.commerce.core.components.services.urls.ProductUrlFormat;
 import com.adobe.cq.commerce.core.components.services.urls.UrlProvider;
 import com.adobe.cq.commerce.magento.graphql.ProductInterface;
+import com.adobe.cq.commerce.magento.graphql.ProductInterfaceQuery;
 import com.adobe.granite.ui.components.ValueMapResourceWrapper;
 import com.adobe.cq.wcm.core.components.models.ListItem;
 import com.day.cq.wcm.api.Page;
@@ -157,16 +158,7 @@ public class ProductGrid implements com.adobe.cq.wcm.core.components.models.List
             if (productList == null || productList.getCategoryRetriever() == null) {
                 return routeItems;
             }
-            productList.getCategoryRetriever().extendProductQueryWith(query -> query
-                .shortDescription(description -> description.html())
-                .categories(category -> category.name().urlPath())
-                .onConfigurableProduct(configurableProduct -> configurableProduct.configurableOptions(option -> option
-                    .attributeCode()
-                    .label()
-                    .values(value -> value
-                        .label()
-                        .valueIndex()
-                        .defaultLabel()))));
+            productList.getCategoryRetriever().extendProductQueryWith(ProductGrid::extendProductQuery);
             if (isPlaceholderCategoryTitle(productList.getTitle())) {
                 return Collections.emptyList();
             }
@@ -196,16 +188,7 @@ public class ProductGrid implements com.adobe.cq.wcm.core.components.models.List
             if (searchResults == null) {
                 return searchItems;
             }
-            searchResults.extendProductQueryWith(query -> query
-                .shortDescription(description -> description.html())
-                .categories(category -> category.name().urlPath())
-                .onConfigurableProduct(configurableProduct -> configurableProduct.configurableOptions(option -> option
-                    .attributeCode()
-                    .label()
-                    .values(value -> value
-                        .label()
-                        .valueIndex()
-                        .defaultLabel()))));
+            searchResults.extendProductQueryWith(ProductGrid::extendProductQuery);
 
             for (ProductListItem productListItem : searchResults.getProducts()) {
                 try {
@@ -223,6 +206,20 @@ public class ProductGrid implements com.adobe.cq.wcm.core.components.models.List
         }
 
         return searchItems;
+    }
+
+    private static void extendProductQuery(ProductInterfaceQuery query) {
+        query
+            .shortDescription(description -> description.html())
+            .categories(category -> category.name().urlPath())
+            .onConfigurableProduct(configurableProduct -> configurableProduct.configurableOptions(option -> option
+                .attributeCode()
+                .label()
+                .values(value -> value
+                    .label()
+                    .valueIndex()
+                    .defaultLabel())))
+            .onSimpleProduct(simpleProduct -> simpleProduct.addCustomSimpleField(ProductGridItem.SIZE_ATTRIBUTE));
     }
 
     private boolean hasSearchQuery() {

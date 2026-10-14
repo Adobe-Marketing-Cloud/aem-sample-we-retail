@@ -35,6 +35,9 @@ import com.adobe.cq.commerce.magento.graphql.ConfigurableProduct;
 import com.adobe.cq.commerce.magento.graphql.ConfigurableProductOptions;
 import com.adobe.cq.commerce.magento.graphql.ConfigurableProductOptionsValues;
 import com.adobe.cq.commerce.magento.graphql.ProductInterface;
+import com.adobe.cq.commerce.magento.graphql.SimpleProduct;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonNull;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -88,6 +91,30 @@ public class ProductGridItemTest {
 
         assertEquals("$119.00", item.getPrice());
         assertEquals(Arrays.asList("$119.00", "$130.00"), new ArrayList<String>(item.getFilters().getPrices()));
+    }
+
+    @Test
+    public void testBuildsSizeFilterFromSimpleProduct() {
+        JsonElement size = mock(JsonElement.class);
+        when(size.isJsonPrimitive()).thenReturn(true);
+        when(size.getAsString()).thenReturn("Regular");
+
+        ProductGridItem item = ProductGridItem.fromProductListItem(createSimpleListItem("Hiking Poles", size),
+            mock(SlingHttpServletRequest.class), "/content/we-retail/us/en/products/product-page.html/equipment/hiking/hiking-poles.html");
+
+        assertEquals(Collections.singletonList("Regular"), new ArrayList<String>(item.getFilters().getSizes()));
+        assertTrue(item.getFilters().getColors().isEmpty());
+    }
+
+    @Test
+    public void testSkipsSizeFilterWhenSimpleProductHasNoSize() {
+        ProductGridItem withNullSize = ProductGridItem.fromProductListItem(createSimpleListItem("Cabana Stripe Towel", JsonNull.INSTANCE),
+            mock(SlingHttpServletRequest.class), "/cabana-stripe-towel.html");
+        ProductGridItem withoutSizeField = ProductGridItem.fromProductListItem(createSimpleListItem("Cabana Stripe Towel", null),
+            mock(SlingHttpServletRequest.class), "/cabana-stripe-towel.html");
+
+        assertTrue(withNullSize.getFilters().getSizes().isEmpty());
+        assertTrue(withoutSizeField.getFilters().getSizes().isEmpty());
     }
 
     @Test
@@ -159,6 +186,17 @@ public class ProductGridItemTest {
         ComplexTextValue textValue = mock(ComplexTextValue.class);
         when(textValue.getHtml()).thenReturn(html);
         return textValue;
+    }
+
+    private ProductListItem createSimpleListItem(String title, Object sizeValue) {
+        SimpleProduct product = mock(SimpleProduct.class);
+        when(product.get("size")).thenReturn(sizeValue);
+        Price price = createPrice("$79.99");
+        ProductListItem listItem = mock(ProductListItem.class);
+        when(listItem.getTitle()).thenReturn(title);
+        when(listItem.getPriceRange()).thenReturn(price);
+        when(listItem.getProduct()).thenReturn(product);
+        return listItem;
     }
 
     private Price createPrice(String formattedFinalPrice) {
