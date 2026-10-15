@@ -123,7 +123,7 @@
                         {
                             done = true;
                             self.product = product;
-                            history.pushState(null, null, '#' + product.sku);
+                            history.replaceState(null, null, '#' + product.sku);
                         }
                     });
                 },
@@ -167,7 +167,7 @@
                     }
 
                     if (!done) {
-                        history.pushState(null, null, '#' + self.product.sku);
+                        history.replaceState(null, null, '#' + self.product.sku);
                     }
                 }
             }
