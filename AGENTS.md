@@ -58,7 +58,10 @@ Product search: `ProductGrid` shows CIF search results only on the configured
 section and a "see all results" link from
 `we.retail.core.commerce.cif.search.ProductSuggestionsServlet`
 (`<page>.productsuggestions.json?search_query=`); its script lives in the
-`weretail/components/structure/search` clientlib. Product links are built by
+`weretail/components/structure/search` clientlib. On a category page the script keeps the
+category suffix (`category-page.productsuggestions.json/men.html`), and the servlet scopes
+both the suggestions and the "see all results" link to that category with `category_uid`;
+elsewhere search covers the whole catalog. Product links are built by
 `ProductGrid.toProductUrl`.
 
 Breadcrumbs keep the classic `we-retail-product-page` policy (start level 5, current page

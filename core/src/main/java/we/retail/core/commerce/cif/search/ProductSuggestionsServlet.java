@@ -18,6 +18,11 @@ package we.retail.core.commerce.cif.search;
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 import javax.json.Json;
@@ -30,18 +35,27 @@ import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
+import org.apache.sling.api.wrappers.SlingHttpServletRequestWrapper;
 import org.apache.sling.models.factory.ModelFactory;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.adobe.cq.commerce.core.components.client.MagentoGraphqlClient;
 import com.adobe.cq.commerce.core.components.models.common.ProductListItem;
 import com.adobe.cq.commerce.core.components.models.common.SiteStructure;
 import com.adobe.cq.commerce.core.components.models.searchresults.SearchResults;
 import com.adobe.cq.commerce.core.components.services.urls.UrlProvider;
 import com.adobe.cq.commerce.core.search.models.SearchResultsSet;
+import com.adobe.cq.commerce.graphql.client.GraphqlResponse;
+import com.adobe.cq.commerce.magento.graphql.CategoryFilterInput;
+import com.adobe.cq.commerce.magento.graphql.CategoryTree;
+import com.adobe.cq.commerce.magento.graphql.FilterEqualTypeInput;
+import com.adobe.cq.commerce.magento.graphql.Operations;
 import com.adobe.cq.commerce.magento.graphql.ProductInterface;
+import com.adobe.cq.commerce.magento.graphql.Query;
+import com.adobe.cq.commerce.magento.graphql.gson.Error;
 import com.adobe.granite.ui.components.ValueMapResourceWrapper;
 import com.day.cq.i18n.I18n;
 import com.day.cq.wcm.api.Page;
@@ -67,6 +81,7 @@ public class ProductSuggestionsServlet extends SlingSafeMethodsServlet {
     private static final long serialVersionUID = 1L;
     private static final Logger LOGGER = LoggerFactory.getLogger(ProductSuggestionsServlet.class);
     private static final String SEARCH_QUERY_PARAMETER = "search_query";
+    private static final String CATEGORY_UID_PARAMETER = "category_uid";
     private static final String PN_PAGE_SIZE = "pageSize";
     private static final String CIF_SEARCH_RESULTS_RESOURCE_TYPE = "core/cif/components/commerce/searchresults/v1/searchresults";
 
@@ -92,16 +107,21 @@ public class ProductSuggestionsServlet extends SlingSafeMethodsServlet {
         JsonArrayBuilder products = Json.createArrayBuilder();
         int total = 0;
         String resultsUrl = null;
+        CategoryScope categoryScope = null;
         if (page != null && StringUtils.isNotEmpty(searchTerm)) {
-            total = addProducts(request, page, searchTerm, products);
-            resultsUrl = buildResultsUrl(request, page, searchTerm);
+            categoryScope = resolveCategoryScope(request, page);
+            total = addProducts(request, page, searchTerm, categoryScope, products);
+            resultsUrl = buildResultsUrl(request, page, searchTerm, categoryScope);
         }
 
         ResourceBundle resourceBundle = request.getResourceBundle(page != null ? page.getLanguage(false) : request.getLocale());
+        String seeAll = categoryScope != null
+            ? I18n.get(resourceBundle, "See all results for \"{0}\" in {1} ({2})", null, searchTerm, categoryScope.name, total)
+            : I18n.get(resourceBundle, "See all results for \"{0}\" ({1})", null, searchTerm, total);
         JsonObjectBuilder labels = Json.createObjectBuilder()
             .add("products", I18n.get(resourceBundle, "Products"))
             .add("pages", I18n.get(resourceBundle, "Pages"))
-            .add("seeAll", I18n.get(resourceBundle, "See all results for \"{0}\" ({1})", null, searchTerm, total));
+            .add("seeAll", seeAll);
 
         JsonObjectBuilder suggestions = Json.createObjectBuilder()
             .add("searchTerm", searchTerm)
@@ -119,9 +139,11 @@ public class ProductSuggestionsServlet extends SlingSafeMethodsServlet {
         response.getWriter().write(suggestions.build().toString());
     }
 
-    private int addProducts(SlingHttpServletRequest request, Page page, String searchTerm, JsonArrayBuilder products) {
+    private int addProducts(SlingHttpServletRequest request, Page page, String searchTerm, CategoryScope categoryScope,
+        JsonArrayBuilder products) {
         try {
-            SearchResults searchResults = searchProducts(request, page);
+            SearchResults searchResults = searchProducts(categoryScope != null ? new CategoryFilterRequest(request, categoryScope.uid) : request,
+                page);
             if (searchResults == null) {
                 return 0;
             }
@@ -169,7 +191,8 @@ public class ProductSuggestionsServlet extends SlingSafeMethodsServlet {
         return ProductGrid.toProductUrl(urlProvider, request, page, product.getSku(), product.getUrlPath(), null);
     }
 
-    private String buildResultsUrl(SlingHttpServletRequest request, Page page, String searchTerm) throws IOException {
+    private String buildResultsUrl(SlingHttpServletRequest request, Page page, String searchTerm, CategoryScope categoryScope)
+        throws IOException {
         SiteStructure siteStructure = page.adaptTo(SiteStructure.class);
         SiteStructure.Entry searchResultsEntry = siteStructure != null ? siteStructure.getSearchResultsPage() : null;
         Page searchResultsPage = searchResultsEntry != null ? searchResultsEntry.getPage() : null;
@@ -177,7 +200,88 @@ public class ProductSuggestionsServlet extends SlingSafeMethodsServlet {
             return null;
         }
 
-        return request.getResourceResolver().map(request, searchResultsPage.getPath()) + ".html?" + SEARCH_QUERY_PARAMETER + "="
+        String resultsUrl = request.getResourceResolver().map(request, searchResultsPage.getPath()) + ".html?" + SEARCH_QUERY_PARAMETER + "="
             + URLEncoder.encode(searchTerm, StandardCharsets.UTF_8.name());
+        if (categoryScope != null) {
+            resultsUrl += "&" + CATEGORY_UID_PARAMETER + "=" + URLEncoder.encode(categoryScope.uid, StandardCharsets.UTF_8.name());
+        }
+        return resultsUrl;
+    }
+
+    private CategoryScope resolveCategoryScope(SlingHttpServletRequest request, Page page) {
+        SiteStructure siteStructure = page.adaptTo(SiteStructure.class);
+        if (siteStructure == null || !siteStructure.isCategoryPage(page)) {
+            return null;
+        }
+
+        try {
+            String categoryUid = urlProvider.getCategoryIdentifier(request);
+            String categoryName = StringUtils.isNotBlank(categoryUid) ? fetchCategoryName(request, categoryUid) : null;
+            return StringUtils.isNotBlank(categoryName) ? new CategoryScope(categoryUid, categoryName) : null;
+        } catch (RuntimeException e) {
+            LOGGER.warn("Could not resolve the category to scope product suggestions on " + page.getPath(), e);
+            return null;
+        }
+    }
+
+    private String fetchCategoryName(SlingHttpServletRequest request, String categoryUid) {
+        MagentoGraphqlClient magentoGraphqlClient = request.adaptTo(MagentoGraphqlClient.class);
+        if (magentoGraphqlClient == null) {
+            return null;
+        }
+
+        CategoryFilterInput filter = new CategoryFilterInput().setCategoryUid(new FilterEqualTypeInput().setEq(categoryUid));
+        String query = Operations.query(q -> q.categoryList(args -> args.filters(filter), category -> category.name())).toString();
+        GraphqlResponse<Query, Error> response = magentoGraphqlClient.execute(query);
+        if (response == null || response.getErrors() != null && !response.getErrors().isEmpty() || response.getData() == null) {
+            return null;
+        }
+
+        List<CategoryTree> categories = response.getData().getCategoryList();
+        return categories != null && !categories.isEmpty() && categories.get(0) != null ? categories.get(0).getName() : null;
+    }
+
+    private static final class CategoryScope {
+
+        private final String uid;
+        private final String name;
+
+        private CategoryScope(String uid, String name) {
+            this.uid = uid;
+            this.name = name;
+        }
+    }
+
+    private static final class CategoryFilterRequest extends SlingHttpServletRequestWrapper {
+
+        private final Map<String, String[]> parameters;
+
+        private CategoryFilterRequest(SlingHttpServletRequest request, String categoryUid) {
+            super(request);
+            Map<String, String[]> merged = new LinkedHashMap<String, String[]>(request.getParameterMap());
+            merged.put(CATEGORY_UID_PARAMETER, new String[] { categoryUid });
+            parameters = Collections.unmodifiableMap(merged);
+        }
+
+        @Override
+        public String getParameter(String name) {
+            String[] values = parameters.get(name);
+            return values != null && values.length > 0 ? values[0] : null;
+        }
+
+        @Override
+        public String[] getParameterValues(String name) {
+            return parameters.get(name);
+        }
+
+        @Override
+        public Map<String, String[]> getParameterMap() {
+            return parameters;
+        }
+
+        @Override
+        public Enumeration<String> getParameterNames() {
+            return Collections.enumeration(parameters.keySet());
+        }
     }
 }

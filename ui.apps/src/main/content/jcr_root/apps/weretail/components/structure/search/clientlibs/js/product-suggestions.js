@@ -66,7 +66,10 @@
             return;
         }
 
-        var endpoint = action.substring(0, pagePathEnd) + '.productsuggestions.json';
+        var pagePath = action.substring(0, pagePathEnd);
+        var currentPath = window.location.pathname;
+        var suffix = currentPath.indexOf(pagePath + '.html/') === 0 ? currentPath.substring(pagePath.length + '.html'.length) : '';
+        var endpoint = pagePath + '.productsuggestions.json' + suffix;
         var minLength = parseInt(search.getAttribute('data-cmp-min-length'), 10) || 3;
         var panel = createElement('div', 'we-SearchSuggestions');
         var productsHeading = createElement('div', 'we-SearchSuggestions-heading');

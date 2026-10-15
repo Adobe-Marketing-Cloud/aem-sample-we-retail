@@ -21,8 +21,10 @@ import java.io.StringWriter;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import javax.json.Json;
 import javax.json.JsonArray;
@@ -37,18 +39,25 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 
+import com.adobe.cq.commerce.core.components.client.MagentoGraphqlClient;
 import com.adobe.cq.commerce.core.components.models.common.ProductListItem;
 import com.adobe.cq.commerce.core.components.models.common.SiteStructure;
 import com.adobe.cq.commerce.core.components.models.searchresults.SearchResults;
 import com.adobe.cq.commerce.core.components.services.urls.ProductUrlFormat;
 import com.adobe.cq.commerce.core.components.services.urls.UrlProvider;
 import com.adobe.cq.commerce.core.search.models.SearchResultsSet;
+import com.adobe.cq.commerce.graphql.client.GraphqlResponse;
+import com.adobe.cq.commerce.magento.graphql.CategoryTree;
 import com.adobe.cq.commerce.magento.graphql.ProductInterface;
+import com.adobe.cq.commerce.magento.graphql.Query;
+import com.adobe.cq.commerce.magento.graphql.gson.Error;
 import com.day.cq.wcm.api.Page;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.any;
+import static org.mockito.Matchers.anyString;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Matchers.isA;
 import static org.mockito.Mockito.mock;
@@ -72,6 +81,7 @@ public class ProductSuggestionsServletTest {
     private SearchResults searchResults;
     private SearchResultsSet searchResultsSet;
     private SiteStructure.Entry searchResultsEntry;
+    private SiteStructure siteStructure;
 
     @Before
     public void setUp() throws Exception {
@@ -89,7 +99,7 @@ public class ProductSuggestionsServletTest {
         Resource pageResource = mock(Resource.class);
         Resource contentResource = mock(Resource.class);
         ResourceResolver resourceResolver = mock(ResourceResolver.class);
-        SiteStructure siteStructure = mock(SiteStructure.class);
+        siteStructure = mock(SiteStructure.class);
         Page searchResultsPage = mock(Page.class);
 
         when(request.getResource()).thenReturn(pageResource);
@@ -200,10 +210,69 @@ public class ProductSuggestionsServletTest {
         assertEquals(SEARCH_RESULTS_PAGE_PATH + ".html?search_query=shirt", suggestions.getString("resultsUrl"));
     }
 
+    @Test
+    public void testScopesSuggestionsAndResultsToTheCurrentCategory() throws Exception {
+        ProductListItem product = createProduct("Corona Shorts", "meshcor", "men/shorts/corona-shorts");
+        Map<String, String[]> parameters = new HashMap<String, String[]>();
+        parameters.put("search_query", new String[] { "shorts" });
+        when(request.getParameter("search_query")).thenReturn("shorts");
+        when(request.getParameterMap()).thenReturn(parameters);
+        when(siteStructure.isCategoryPage(page)).thenReturn(true);
+        when(urlProvider.getCategoryIdentifier(request)).thenReturn("men");
+        mockCategoryName("Men");
+        SearchResults scopedResults = mock(SearchResults.class);
+        when(scopedResults.getProducts()).thenReturn(Collections.singletonList(product));
+        when(scopedResults.getSearchResultsSet()).thenReturn(searchResultsSet);
+        when(searchResultsSet.getTotalResults()).thenReturn(5);
+        when(modelFactory.getModelFromWrappedRequest(any(SlingHttpServletRequest.class), any(Resource.class), eq(SearchResults.class)))
+            .thenReturn(scopedResults);
+
+        JsonObject suggestions = get();
+
+        assertEquals(5, suggestions.getInt("total"));
+        assertEquals(PRODUCT_PAGE_URL + "men/shorts/corona-shorts.html", suggestions.getJsonArray("products").getJsonObject(0).getString("url"));
+        assertEquals(SEARCH_RESULTS_PAGE_PATH + ".html?search_query=shorts&category_uid=men", suggestions.getString("resultsUrl"));
+        assertEquals("See all results for \"shorts\" in Men (5)", suggestions.getJsonObject("labels").getString("seeAll"));
+
+        ArgumentCaptor<SlingHttpServletRequest> searchRequest = ArgumentCaptor.forClass(SlingHttpServletRequest.class);
+        verify(modelFactory).getModelFromWrappedRequest(searchRequest.capture(), any(Resource.class), eq(SearchResults.class));
+        assertEquals("men", searchRequest.getValue().getParameter("category_uid"));
+        assertEquals("shorts", searchRequest.getValue().getParameter("search_query"));
+        assertArrayEquals(new String[] { "men" }, (String[]) searchRequest.getValue().getParameterMap().get("category_uid"));
+    }
+
+    @Test
+    public void testSearchesEverywhereWhenTheCategoryCannotBeResolved() throws Exception {
+        when(request.getParameter("search_query")).thenReturn("shorts");
+        when(siteStructure.isCategoryPage(page)).thenReturn(true);
+        when(urlProvider.getCategoryIdentifier(request)).thenReturn("men");
+        when(searchResults.getProducts()).thenReturn(Collections.<ProductListItem>emptyList());
+        when(searchResultsSet.getTotalResults()).thenReturn(8);
+
+        JsonObject suggestions = get();
+
+        assertEquals(SEARCH_RESULTS_PAGE_PATH + ".html?search_query=shorts", suggestions.getString("resultsUrl"));
+        assertEquals("See all results for \"shorts\" (8)", suggestions.getJsonObject("labels").getString("seeAll"));
+        verify(modelFactory).getModelFromWrappedRequest(eq(request), any(Resource.class), eq(SearchResults.class));
+    }
+
     private JsonObject get() throws Exception {
         servlet.doGet(request, response);
         verify(response).setContentType("application/json");
         return Json.createReader(new StringReader(output.toString())).readObject();
+    }
+
+    @SuppressWarnings("unchecked")
+    private void mockCategoryName(String name) {
+        MagentoGraphqlClient magentoGraphqlClient = mock(MagentoGraphqlClient.class);
+        GraphqlResponse<Query, Error> graphqlResponse = mock(GraphqlResponse.class);
+        Query data = mock(Query.class);
+        CategoryTree category = mock(CategoryTree.class);
+        when(category.getName()).thenReturn(name);
+        when(data.getCategoryList()).thenReturn(Collections.singletonList(category));
+        when(graphqlResponse.getData()).thenReturn(data);
+        when(magentoGraphqlClient.execute(anyString())).thenReturn(graphqlResponse);
+        when(request.adaptTo(MagentoGraphqlClient.class)).thenReturn(magentoGraphqlClient);
     }
 
     private ProductListItem createProduct(String title, String sku, String urlPath) {
