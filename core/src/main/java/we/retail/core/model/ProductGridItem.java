@@ -16,6 +16,7 @@
 package we.retail.core.model;
 
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -190,7 +191,7 @@ public class ProductGridItem {
 
     public static class ProductFilters {
 
-        private final Set<String> colors = new LinkedHashSet<String>();
+        private final Set<String> colors = new HashSet<String>();
         private final Set<String> sizes = new LinkedHashSet<String>();
         private final Set<String> prices = new LinkedHashSet<String>();
 

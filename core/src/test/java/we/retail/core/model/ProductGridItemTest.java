@@ -18,6 +18,7 @@ package we.retail.core.model;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 import org.junit.Test;
 import org.apache.sling.api.SlingHttpServletRequest;
@@ -118,6 +119,22 @@ public class ProductGridItemTest {
     }
 
     @Test
+    public void testListsColorsInClassicOrder() {
+        ConfigurableProduct product = mock(ConfigurableProduct.class);
+        ConfigurableProductOptions colorOption = createOption("color", "blue", "green", "purple", "red");
+        when(product.getConfigurableOptions()).thenReturn(Collections.singletonList(colorOption));
+        Price price = createPrice("$12.00");
+        ProductListItem listItem = mock(ProductListItem.class);
+        when(listItem.getTitle()).thenReturn("Seastar Flip Flops");
+        when(listItem.getPriceRange()).thenReturn(price);
+        when(listItem.getProduct()).thenReturn(product);
+
+        ProductGridItem item = ProductGridItem.fromProductListItem(listItem, mock(SlingHttpServletRequest.class), "/seastar-flip-flops.html");
+
+        assertEquals(Arrays.asList("red", "green", "blue", "purple"), new ArrayList<String>(item.getFilters().getColors()));
+    }
+
+    @Test
     public void testUsesSelectedVariantForImageAndPrice() {
         Product product = mock(Product.class);
         Variant variant = mock(Variant.class);
@@ -167,12 +184,16 @@ public class ProductGridItemTest {
         return product;
     }
 
-    private ConfigurableProductOptions createOption(String attributeCode, String label) {
+    private ConfigurableProductOptions createOption(String attributeCode, String... labels) {
         ConfigurableProductOptions option = mock(ConfigurableProductOptions.class);
-        ConfigurableProductOptionsValues value = mock(ConfigurableProductOptionsValues.class);
-        when(value.getLabel()).thenReturn(label);
+        List<ConfigurableProductOptionsValues> values = new ArrayList<ConfigurableProductOptionsValues>();
+        for (String label : labels) {
+            ConfigurableProductOptionsValues value = mock(ConfigurableProductOptionsValues.class);
+            when(value.getLabel()).thenReturn(label);
+            values.add(value);
+        }
         when(option.getAttributeCode()).thenReturn(attributeCode);
-        when(option.getValues()).thenReturn(Collections.singletonList(value));
+        when(option.getValues()).thenReturn(values);
         return option;
     }
 
