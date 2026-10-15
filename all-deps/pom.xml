@@ -28,7 +28,7 @@
     <artifactId>we.retail.all.deps</artifactId>
     <packaging>content-package</packaging>
     <name>We.Retail - All (with dependencies)</name>
-    <description>Self-contained We.Retail package embedding Core WCM Components, CIF Core Components and the GraphQL client/Magento GraphQL bundles. Only the AEM Commerce Add-on is required on the instance.</description>
+    <description>Self-contained We.Retail package embedding Core WCM Components, CIF Core Components and the Magento GraphQL bundle. Only the AEM Commerce Add-on (2025.09.18.00 or later, which provides the GraphQL client) is required on the instance.</description>
 
     <build>
         <plugins>
@@ -42,12 +42,6 @@
                     <group>adobe/cq60/sample</group>
                     <failOnMissingEmbed>true</failOnMissingEmbed>
                     <embeddeds>
-                        <embedded>
-                            <groupId>com.adobe.commerce.cif</groupId>
-                            <artifactId>graphql-client</artifactId>
-                            <target>/apps/weretail/install</target>
-                            <filter>true</filter>
-                        </embedded>
                         <embedded>
                             <groupId>com.adobe.commerce.cif</groupId>
                             <artifactId>magento-graphql</artifactId>
@@ -126,12 +120,6 @@
             <artifactId>core-cif-components-all</artifactId>
             <version>${core.cif.components.version}</version>
             <type>zip</type>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.adobe.commerce.cif</groupId>
-            <artifactId>graphql-client</artifactId>
-            <version>${graphql.client.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

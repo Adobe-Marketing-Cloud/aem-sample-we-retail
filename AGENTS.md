@@ -32,7 +32,7 @@ must render empty; product recommendations are deferred (no-op stubs only).
 | `config` | `we.retail.config` | OSGi configs, incl. CIF/Celadon `osgiconfig` |
 | `commons.content.slim` | `we.retail.commons.content.slim` | Shared commons content |
 | `all` | `we.retail.all` | Combined package embedding all subpackages |
-| `all-deps` | `we.retail.all.deps` | Self-contained package: embeds Core WCM, CIF Core, GraphQL client + Magento GraphQL bundles and the `all` subpackage. Only the AEM Commerce Add-on must be pre-installed |
+| `all-deps` | `we.retail.all.deps` | Self-contained package: embeds Core WCM, CIF Core, the Magento GraphQL bundle and the `all` subpackage. Only the AEM Commerce Add-on (2025.09.18.00 or later) must be pre-installed |
 
 Key versions (in `parent/pom.xml`): UberJar `6.4.4`, Core WCM Components `2.29.0`,
 Core CIF Components `2.18.0`, GraphQL client `1.10.0`, Magento GraphQL `9.1.0-magento242ee`.
@@ -113,10 +113,12 @@ mvn clean install -PautoInstallPackage         # deploy that module's package
 ### One-click deploy (`all-deps`)
 
 For a fresh instance that has **only** the AEM Commerce Add-on pre-installed, deploy the
-self-contained `all-deps` package — it brings its own Core WCM, CIF Core, GraphQL client
-and Magento GraphQL bundles plus the `all` subpackage, so no other dependency packages
-are needed. Build the full reactor first (so the embedded artifacts exist), then install
-just `all-deps`:
+self-contained `all-deps` package — it brings its own Core WCM, CIF Core and Magento
+GraphQL bundles plus the `all` subpackage, so no other dependency packages are needed.
+The GraphQL client comes from the add-on, so the add-on must be **2025.09.18.00 or later**
+on every flavor (6.5, 6.5 LTS, SDK): CIF Core 2.18 needs the client API at 1.13, which
+older add-ons do not provide (6.5 `2024.09.05.00` ships client 1.7.11 / API 1.10). Build
+the full reactor first (so the embedded artifacts exist), then install just `all-deps`:
 
 ```bash
 export JAVA_HOME=/path/to/jdk-21
