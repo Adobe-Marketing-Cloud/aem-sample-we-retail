@@ -83,7 +83,7 @@
         var timeout;
 
         results.parentNode.insertBefore(panel, results);
-        [productsHeading, products, pagesHeading, results, seeAll].forEach(function (element) {
+        [productsHeading, products, seeAll, pagesHeading, results].forEach(function (element) {
             panel.appendChild(element);
         });
         seeAll.setAttribute('role', 'option');
