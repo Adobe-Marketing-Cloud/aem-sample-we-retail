@@ -91,6 +91,21 @@ public class LegacyDiscoveryTest {
     }
 
     @Test
+    public void seedsNameForProductsAndVariants() {
+        String tree = """
+            {"products":{
+                "jacket":{
+                    "cq:commerceType":"product","sku":"J-1","jcr:title":"Jacket","cq:productVariantAxes":["color"],
+                    "green":{"cq:commerceType":"variant","jcr:title":"Jacket Green","color":"green"}
+                }
+            }}""";
+        AttributeManifest m = LegacyDiscovery.parse("we-retail", tree,
+                new DiscoveryHints(List.of(), List.of()));
+        assertEquals(AttributeScope.BOTH, m.entryFor("name").orElseThrow().scope());
+        assertFalse(m.entryFor("jcr:title").isPresent());
+    }
+
+    @Test
     public void denyListExcludes() {
         String tree = """
             {"products":{

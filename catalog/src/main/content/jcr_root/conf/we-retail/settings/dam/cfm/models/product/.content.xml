@@ -18,7 +18,7 @@
             jcr:primaryType="cq:PageContent"
             sling:resourceType="wcm/scaffolding/components/scaffolding"
             dataTypesConfig="/mnt/overlay/settings/dam/cfm/models/formbuilderconfig/datatypes"
-            maxGeneratedOrder="{Long}11">
+            maxGeneratedOrder="{Long}12">
             <cq:dialog
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="cq/gui/components/authoring/dialog">
@@ -27,7 +27,7 @@
                     sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
                     <items
                         jcr:primaryType="nt:unstructured"
-                        maxGeneratedOrder="{Long}14">
+                        maxGeneratedOrder="{Long}15">
                         <image
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
@@ -114,7 +114,7 @@
                             metaType="text-single"
                             name="name"
                             renderReadOnly="false"
-                            scope="product"
+                            scope="both"
                             showEmptyInReadOnly="true"
                             valueType="string"/>
                         <description
@@ -238,7 +238,7 @@
                         sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
                         <items
                             jcr:primaryType="nt:unstructured"
-                            maxGeneratedOrder="{Long}6">
+                            maxGeneratedOrder="{Long}7">
                             <image
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
@@ -280,12 +280,24 @@
                                 scope="both"
                                 showEmptyInReadOnly="true"
                                 valueType="string"/>
+                            <name
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                cfm-element="Name"
+                                fieldLabel="Name"
+                                listOrder="3"
+                                metaType="text-single"
+                                name="name"
+                                renderReadOnly="false"
+                                scope="both"
+                                showEmptyInReadOnly="true"
+                                valueType="string"/>
                             <price
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
                                 cfm-element="Price"
                                 fieldLabel="Price"
-                                listOrder="3"
+                                listOrder="4"
                                 metaType="number"
                                 name="price"
                                 renderReadOnly="false"
@@ -298,7 +310,7 @@
                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                 cfm-element="identifier"
                                 fieldLabel="identifier"
-                                listOrder="4"
+                                listOrder="5"
                                 metaType="text-single"
                                 name="identifier"
                                 renderReadOnly="false"
@@ -310,7 +322,7 @@
                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                 cfm-element="size"
                                 fieldLabel="size"
-                                listOrder="5"
+                                listOrder="6"
                                 metaType="text-single"
                                 name="size"
                                 renderReadOnly="false"
@@ -322,7 +334,7 @@
                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                 cfm-element="color"
                                 fieldLabel="color"
-                                listOrder="6"
+                                listOrder="7"
                                 metaType="text-single"
                                 name="color"
                                 renderReadOnly="false"

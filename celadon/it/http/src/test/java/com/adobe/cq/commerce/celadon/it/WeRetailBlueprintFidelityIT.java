@@ -24,6 +24,7 @@ import org.junit.Test;
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.endsWith;
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.everyItem;
 import static org.hamcrest.Matchers.hasItems;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.startsWith;
@@ -244,6 +245,22 @@ public class WeRetailBlueprintFidelityIT extends GraphqlITBase {
         postQuery(Queries.WR_PRODUCT_BY_URL_KEY_DESCRIPTIONS, Map.of("urlKey", "sleek-insulated-coat"))
                 .body("data.products.items[0].description.html", startsWith("Stay warm but avoid that 'overstuffed' look"))
                 .body("data.products.items[0].short_description.html", equalTo("coat"));
+    }
+
+    /**
+     * Classic colour-level variants carry their own {@code jcr:title}, inherited by the size
+     * variants below them; variants without one keep the product name.
+     */
+    @Test
+    public void shouldNameVariantsAfterTheirClassicTitle() {
+        postQuery(Queries.WR_PRODUCT_BY_URL_KEY_VARIANT_NAMES, Map.of("urlKey", "el-gordo-down-jacket"))
+                .body("data.products.items[0].name", equalTo("El Gordo Down Jacket"))
+                .body("data.products.items[0].variants.findAll { it.product.sku.startsWith('meskwielt.1-') }.product.name",
+                        everyItem(equalTo("El Gordo Down Jacket Green")))
+                .body("data.products.items[0].variants.findAll { it.product.sku.startsWith('meskwielt.3-') }.product.name",
+                        everyItem(equalTo("El Gordo Down Jacket Red")));
+        postQuery(Queries.WR_PRODUCT_BY_URL_KEY_VARIANT_NAMES, Map.of("urlKey", "sleek-insulated-coat"))
+                .body("data.products.items[0].variants.product.name", everyItem(equalTo("Sleek Insulated Coat")));
     }
 
     /**

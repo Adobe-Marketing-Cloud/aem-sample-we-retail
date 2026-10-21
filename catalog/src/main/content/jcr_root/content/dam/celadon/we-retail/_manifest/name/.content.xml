@@ -32,7 +32,7 @@
                 ordering="{Long}1"
                 ordering_x0040_LastModified="{Date}2026-06-24T12:58:14.598+03:00"
                 ordering_x0040_LastModifiedBy="admin"
-                scope="PRODUCT"
+                scope="BOTH"
                 scope_x0040_LastModified="{Date}2026-06-24T12:58:14.597+03:00"
                 scope_x0040_LastModifiedBy="admin"
                 sourceHint_x0040_LastModified="{Date}2026-06-24T12:58:14.593+03:00"
@@ -52,7 +52,7 @@
                 long_x0040_ordering="{Long}1"
                 string_x0040_code="name"
                 string_x0040_label="Name"
-                string_x0040_scope="PRODUCT"
+                string_x0040_scope="BOTH"
                 string_x0040_type="STRING"/>
         </indexedData>
         <metadata

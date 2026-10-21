@@ -45,7 +45,7 @@ public final class LegacyDiscovery {
      */
     private static final List<AttributeEntry> UNIVERSAL = List.of(
             AttributeEntry.of("sku",         "SKU",         NormalizedType.STRING,    AttributeScope.BOTH,    true,  false, 0),
-            AttributeEntry.of("name",        "Name",        NormalizedType.STRING,    AttributeScope.PRODUCT, true,  false, 1),
+            AttributeEntry.of("name",        "Name",        NormalizedType.STRING,    AttributeScope.BOTH,    true,  false, 1),
             AttributeEntry.of("description", "Description", NormalizedType.TEXT,      AttributeScope.PRODUCT, false, false, 2),
             AttributeEntry.of("price",       "Price",       NormalizedType.PRICE,     AttributeScope.BOTH,    true,  true,  3),
             AttributeEntry.of("image",       "Image",       NormalizedType.IMAGE_URL, AttributeScope.PRODUCT, false, false, 4),
