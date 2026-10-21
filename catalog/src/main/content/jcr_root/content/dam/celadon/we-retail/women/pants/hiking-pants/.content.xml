@@ -42,6 +42,10 @@
                 price_x0040_LastModifiedBy="admin"
                 rating_x0040_LastModified="{Date}2026-06-24T12:58:14.911+03:00"
                 reviews_x0040_LastModified="{Date}2026-06-24T12:58:14.911+03:00"
+                short_description="pants"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
                 size_x0040_LastModified="{Date}2026-06-24T12:58:14.911+03:00"
                 sku="331050524"
                 sku_x0040_LastModified="{Date}2026-06-24T12:58:14.915+03:00"
@@ -59,6 +63,7 @@
                 string_x0040_features="Stay cool, crisp and dry. High performance materials breathe well while giving you flexibility during those long treks. "
                 string_x0040_identifier="331050524"
                 string_x0040_name="Hiking Pants"
+                string_x0040_short_description="pants"
                 string_x0040_sku="331050524"
                 stringArray_x0040_additionalCategories="[equipment/hiking]"/>
         </indexedData>

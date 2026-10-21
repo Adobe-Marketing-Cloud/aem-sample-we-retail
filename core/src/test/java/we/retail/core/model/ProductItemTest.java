@@ -18,6 +18,7 @@ package we.retail.core.model;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedHashMap;
+import java.util.function.Consumer;
 
 import org.junit.Test;
 
@@ -30,15 +31,19 @@ import com.adobe.cq.commerce.core.components.models.product.VariantValue;
 import com.adobe.cq.commerce.core.components.models.retriever.AbstractProductRetriever;
 import com.adobe.cq.commerce.magento.graphql.CategoryInterface;
 import com.adobe.cq.commerce.magento.graphql.ComplexTextValue;
+import com.adobe.cq.commerce.magento.graphql.Operations;
 import com.adobe.cq.commerce.magento.graphql.ProductImage;
 import com.adobe.cq.commerce.magento.graphql.ProductInterface;
+import com.adobe.cq.commerce.magento.graphql.ProductInterfaceQuery;
 
 import org.apache.sling.api.SlingHttpServletRequest;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+import org.mockito.ArgumentCaptor;
 
 public class ProductItemTest {
 
@@ -51,9 +56,9 @@ public class ProductItemTest {
 
         assertEquals("meotwisus", item.getSku());
         assertEquals("Sussex Rain Boots", item.getTitle());
-        assertEquals("Footwear", item.getDescription());
+        assertEquals("footwear", item.getDescription());
         assertEquals("$65.00", item.getPrice());
-        assertEquals("Current CIF summary", item.getSummary());
+        assertEquals("Current CIF description", item.getSummary());
         assertEquals("https://cdn.example.com/current-cif-image.jpg", item.getImageUrl());
         assertEquals("/content/we-retail/us/en/products/product-page.html/me/footwear/meotwisus.html", item.getPath());
         assertEquals(1, item.getVariants().size());
@@ -86,6 +91,35 @@ public class ProductItemTest {
         when(price.getFormattedFinalPriceMax()).thenReturn("$42.00");
 
         assertEquals("$39.00", ProductItem.formatPrice(price));
+    }
+
+    @Test
+    public void testFallsBackToTheDeepestCategoryWithoutShortDescription() {
+        ProductInterface productData = mock(ProductInterface.class);
+        CategoryInterface women = createCategory("Women");
+        CategoryInterface snowSports = createCategory("Snow Sports");
+        when(women.getUrlPath()).thenReturn("women");
+        when(snowSports.getUrlPath()).thenReturn("equipment/snow-sports");
+        when(productData.getCategories()).thenReturn(Arrays.asList(women, snowSports));
+
+        assertEquals("Snow Sports", ProductItem.descriptionLabel(productData));
+    }
+
+    @Test
+    @SuppressWarnings("unchecked")
+    public void testRequestsShortDescriptionFromTheProductRetriever() {
+        Product product = mock(Product.class);
+        AbstractProductRetriever retriever = mock(AbstractProductRetriever.class);
+        when(product.getProductRetriever()).thenReturn(retriever);
+
+        ProductItem.requestShortDescription(product);
+
+        ArgumentCaptor<Consumer<ProductInterfaceQuery>> extension = ArgumentCaptor.forClass(
+            (Class<Consumer<ProductInterfaceQuery>>) (Class<?>) Consumer.class);
+        verify(retriever).extendProductQueryWith(extension.capture());
+        String query = Operations.query(q -> q.products(arguments -> arguments.search(""), products -> products.items(
+            extension.getValue()::accept))).toString();
+        assertTrue(query.contains("short_description{html}"));
     }
 
     private Product createProduct() {
@@ -150,7 +184,7 @@ public class ProductItemTest {
     private ProductInterface createProductData() {
         ProductInterface productData = mock(ProductInterface.class);
         CategoryInterface category = createCategory("Footwear");
-        ComplexTextValue shortDescription = createTextValue("<p>Current CIF summary</p>");
+        ComplexTextValue shortDescription = createTextValue("<p>footwear</p>");
         ComplexTextValue description = createTextValue("<p>Current CIF description</p>");
         ProductImage image = createImage("https://cdn.example.com/current-cif-image.jpg");
 

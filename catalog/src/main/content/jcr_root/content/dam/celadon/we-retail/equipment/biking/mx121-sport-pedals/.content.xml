@@ -46,6 +46,10 @@
                 reviews="&#xa;By GTI_Driver&#xa;from Switzerland&#xa;I have a hybrid bike. These pedals suit perfectly my needs. Daily comute to work with a solid base, intuitive to position your foot without looking too much. When going to the hills using the cleats they are also reliable and shape helps to quickly find the correct side! Cleats don't come off even on a quite-loose set up.&#xa;&#xa;Also like the design &amp; weight.&#xa;For a hybrid these are ok. Don't think them for a mountain bike or a full road one."
                 reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.980+03:00"
                 reviews_x0040_LastModifiedBy="admin"
+                short_description="equipment"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
                 size_x0040_LastModified="{Date}2026-06-24T12:58:15.969+03:00"
                 sku="eqbisumxs"
                 sku_x0040_LastModified="{Date}2026-06-24T12:58:15.977+03:00"
@@ -86,6 +90,10 @@
                 reviews="&#xa;By GTI_Driver&#xa;from Switzerland&#xa;I have a hybrid bike. These pedals suit perfectly my needs. Daily comute to work with a solid base, intuitive to position your foot without looking too much. When going to the hills using the cleats they are also reliable and shape helps to quickly find the correct side! Cleats don't come off even on a quite-loose set up.&#xa;&#xa;Also like the design &amp; weight.&#xa;For a hybrid these are ok. Don't think them for a mountain bike or a full road one."
                 reviews_x0040_LastModified="{Date}2026-06-24T12:58:16.002+03:00"
                 reviews_x0040_LastModifiedBy="admin"
+                short_description="equipment"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
                 size="One size"
                 size_x0040_LastModified="{Date}2026-06-24T12:58:16.004+03:00"
                 size_x0040_LastModifiedBy="admin"
@@ -107,6 +115,7 @@
                 string_x0040_name="MX121 Sport Pedals"
                 string_x0040_rating="4"
                 string_x0040_reviews="&#xa;By GTI_Driver&#xa;from Switzerland&#xa;I have a hybrid bike. These pedals suit perfectly my needs. Daily comute to work with a solid base, intuitive to position your foot without looking too much. When going to the hills using the cleats they are also reliable and shape helps to quickly find the correct side! Cleats don't come off even on a quite-loose set up.&#xa;&#xa;Also like the design &amp; weight.&#xa;For a hybrid these are ok. Don't think them for a mountain bike or a full road one."
+                string_x0040_short_description="equipment"
                 string_x0040_sku="eqbisumxs"
                 stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"/>
             <var-size-onesize
@@ -121,6 +130,7 @@
                 string_x0040_name="MX121 Sport Pedals"
                 string_x0040_rating="4"
                 string_x0040_reviews="&#xa;By GTI_Driver&#xa;from Switzerland&#xa;I have a hybrid bike. These pedals suit perfectly my needs. Daily comute to work with a solid base, intuitive to position your foot without looking too much. When going to the hills using the cleats they are also reliable and shape helps to quickly find the correct side! Cleats don't come off even on a quite-loose set up.&#xa;&#xa;Also like the design &amp; weight.&#xa;For a hybrid these are ok. Don't think them for a mountain bike or a full road one."
+                string_x0040_short_description="equipment"
                 string_x0040_size="One size"
                 string_x0040_sku="eqbisumxs-Onesize"
                 stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"/>

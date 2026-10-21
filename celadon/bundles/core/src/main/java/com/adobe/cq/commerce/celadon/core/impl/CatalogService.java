@@ -856,6 +856,7 @@ public final class CatalogService {
             result.put("sku", productSku);
             result.put("name", product.displayName());
             result.put("description", Map.of("html", product.descriptionHtml()));
+            result.put("short_description", complexText(product.shortDescription()));
             result.put("image", imageObject(requestContext.catalogGateway(), firstImagePath, ""));
             result.put("small_image", imageObject(requestContext.catalogGateway(), firstImagePath, ""));
             result.put("thumbnail", imageObject(requestContext.catalogGateway(), firstImagePath, ""));
@@ -1000,6 +1001,8 @@ public final class CatalogService {
             variantProduct.put("name", stringValue(product.elementVariationMap("name", variationId).getOrDefault("value", product.displayName())));
             variantProduct.put("description", Map.of("html",
                     stringValue(product.elementVariationMap("description", variationId).getOrDefault("value", product.descriptionHtml()))));
+            variantProduct.put("short_description", complexText(
+                    stringValue(product.elementVariationMap("short_description", variationId).getOrDefault("value", product.shortDescription()))));
             variantProduct.put("image", imageObject(requestContext.catalogGateway(), firstImage, ""));
             variantProduct.put("small_image", imageObject(requestContext.catalogGateway(), firstImage, ""));
             variantProduct.put("thumbnail", imageObject(requestContext.catalogGateway(), firstImage, ""));
@@ -1218,6 +1221,10 @@ public final class CatalogService {
 
     private static String stringValue(Object value) {
         return value == null ? "" : value.toString();
+    }
+
+    private static Map<String, Object> complexText(String html) {
+        return html == null || html.isBlank() ? null : Map.of("html", html);
     }
 
     private static GraphqlRequestContext requestContext(DataFetchingEnvironment environment) {

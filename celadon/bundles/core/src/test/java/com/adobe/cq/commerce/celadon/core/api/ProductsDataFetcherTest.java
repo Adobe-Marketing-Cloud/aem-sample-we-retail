@@ -39,6 +39,7 @@ public class ProductsDataFetcherTest {
                               url_key
                               url_path
                               description { html }
+                              short_description { html }
                               image { url }
                               media_gallery { url }
                               categories { uid name breadcrumbs { category_uid } }
@@ -53,6 +54,7 @@ public class ProductsDataFetcherTest {
                                   product {
                                     sku
                                     name
+                                    short_description { html }
                                     image { url }
                                     color
                                     price_range { minimum_price { final_price { value } } }
@@ -74,6 +76,7 @@ public class ProductsDataFetcherTest {
         // url_path is null (Magento parity); CIF derives the PDP URL from url_rewrites + context.
         Assert.assertNull(product.get("url_path"));
         Assert.assertEquals("Flowing dress for spring.", castMap(product.get("description")).get("html"));
+        Assert.assertEquals("Elegant dress", castMap(product.get("short_description")).get("html"));
         Assert.assertFalse(castMap(product.get("image")).get("url").toString().contains("["));
         Assert.assertEquals(49.99, ((Number) castMap(castMap(castMap(product.get("price_range")).get("minimum_price")).get("final_price")).get("value")).doubleValue(), 0.001);
         Assert.assertEquals(69.99, ((Number) castMap(castMap(castMap(product.get("price_range")).get("maximum_price")).get("final_price")).get("value")).doubleValue(), 0.001);
@@ -92,6 +95,7 @@ public class ProductsDataFetcherTest {
         Assert.assertEquals("Lilac", castList(variants.getFirst().get("attributes")).getFirst().get("label"));
         Map<String, Object> variantProduct = castMap(variants.getFirst().get("product"));
         Assert.assertEquals(CANDACE_VARIANT_SKU, variantProduct.get("sku"));
+        Assert.assertEquals("Elegant dress", castMap(variantProduct.get("short_description")).get("html"));
         Assert.assertEquals(92, ((Number) variantProduct.get("color")).intValue());
         Assert.assertFalse(castMap(variantProduct.get("image")).get("url").toString().isBlank());
     }

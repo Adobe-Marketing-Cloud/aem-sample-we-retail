@@ -67,7 +67,7 @@ public class ProductGridItemTest {
         ProductGridItem item = ProductGridItem.fromProductListItem(listItem, request, listItem.getURL());
 
         assertTrue(item.exists());
-        assertEquals("Footwear", item.getDescription());
+        assertEquals("Lightweight training shoe", item.getDescription());
         assertEquals("/content/dam/celadon/we-retail/me/footwear/meotwisus_img_0.jpeg", item.getImage());
         assertTrue(item.getFilters().getColors().contains("red"));
         assertTrue(item.getFilters().getSizes().contains("9"));

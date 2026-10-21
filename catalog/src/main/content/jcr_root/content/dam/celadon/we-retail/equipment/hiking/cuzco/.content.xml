@@ -42,6 +42,10 @@
                 price_x0040_LastModifiedBy="admin"
                 rating_x0040_LastModified="{Date}2026-06-24T12:58:15.766+03:00"
                 reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.766+03:00"
+                short_description="Backpack"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
                 size_x0040_LastModified="{Date}2026-06-24T12:58:15.766+03:00"
                 sku="eqsmcz"
                 sku_x0040_LastModified="{Date}2026-06-24T12:58:15.777+03:00"
@@ -81,6 +85,10 @@
                 rating_x0040_LastModifiedBy="admin"
                 reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.806+03:00"
                 reviews_x0040_LastModifiedBy="admin"
+                short_description="Backpack"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
                 size_x0040_LastModified="{Date}2026-06-24T12:58:15.806+03:00"
                 size_x0040_LastModifiedBy="admin"
                 sku="eqsmcz.1"
@@ -121,6 +129,10 @@
                 rating_x0040_LastModifiedBy="admin"
                 reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.810+03:00"
                 reviews_x0040_LastModifiedBy="admin"
+                short_description="Backpack"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
                 size_x0040_LastModified="{Date}2026-06-24T12:58:15.810+03:00"
                 size_x0040_LastModifiedBy="admin"
                 sku="eqsmcz.2"
@@ -139,6 +151,7 @@
                 string_x0040_features="..."
                 string_x0040_identifier="eqsmcz"
                 string_x0040_name="Cuzco"
+                string_x0040_short_description="Backpack"
                 string_x0040_sku="eqsmcz"
                 stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--cuzco-blue-cuzco-orange]"/>
             <var-identifier-eqsmcz1-color-cuzcoblue
@@ -152,6 +165,7 @@
                 string_x0040_features="..."
                 string_x0040_identifier="eqsmcz.1"
                 string_x0040_name="Cuzco"
+                string_x0040_short_description="Backpack"
                 string_x0040_sku="eqsmcz.1"
                 stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--cuzco-blue-cuzco-orange]"/>
             <var-identifier-eqsmcz2-color-cuzcoorange
@@ -165,6 +179,7 @@
                 string_x0040_features="..."
                 string_x0040_identifier="eqsmcz.2"
                 string_x0040_name="Cuzco"
+                string_x0040_short_description="Backpack"
                 string_x0040_sku="eqsmcz.2"
                 stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--cuzco-blue-cuzco-orange]"/>
         </indexedData>

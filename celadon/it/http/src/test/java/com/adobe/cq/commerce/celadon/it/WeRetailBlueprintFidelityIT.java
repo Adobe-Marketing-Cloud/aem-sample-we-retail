@@ -26,6 +26,7 @@ import static org.hamcrest.Matchers.endsWith;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItems;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.startsWith;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -232,6 +233,17 @@ public class WeRetailBlueprintFidelityIT extends GraphqlITBase {
                 .body("data.products.items[0].url_key", equalTo(HIKING_PANTS_URL_KEY))
                 .body("data.products.items[0].categories.url_path",
                         hasItems("equipment", "equipment/hiking", "women", "women/pants"));
+    }
+
+    /**
+     * Legacy products keep their long-form text under {@code summary}; the standard classic
+     * {@code jcr:description} then holds a short label and is served as {@code short_description}.
+     */
+    @Test
+    public void shouldImportSummaryAsDescriptionAndJcrDescriptionAsShortDescription() {
+        postQuery(Queries.WR_PRODUCT_BY_URL_KEY_DESCRIPTIONS, Map.of("urlKey", "sleek-insulated-coat"))
+                .body("data.products.items[0].description.html", startsWith("Stay warm but avoid that 'overstuffed' look"))
+                .body("data.products.items[0].short_description.html", equalTo("coat"));
     }
 
     /**

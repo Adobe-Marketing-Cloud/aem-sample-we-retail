@@ -44,6 +44,10 @@
                 reviews="By Nico&#xa;from bluehawaii&#xa;This is the ultimate beginner surfboard. The board is soft so if you bump yourself or anyone else with the surfboard it's not going to be that bad. The boards are very bouyant and catch waves easily. The foam does get a little slick once you're in the water, so sometimes your feet may slip if you don't have them well planted. If you're just starting out surfing and want something safe, this is the board to go with."
                 reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.647+03:00"
                 reviews_x0040_LastModifiedBy="admin"
+                short_description="equipment"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
                 size_x0040_LastModified="{Date}2026-06-24T12:58:15.639+03:00"
                 sku="eqsusuthd"
                 sku_x0040_LastModified="{Date}2026-06-24T12:58:15.644+03:00"
@@ -63,6 +67,7 @@
                 string_x0040_name="The Stretch Longboard"
                 string_x0040_rating="4"
                 string_x0040_reviews="By Nico&#xa;from bluehawaii&#xa;This is the ultimate beginner surfboard. The board is soft so if you bump yourself or anyone else with the surfboard it's not going to be that bad. The boards are very bouyant and catch waves easily. The foam does get a little slick once you're in the water, so sometimes your feet may slip if you don't have them well planted. If you're just starting out surfing and want something safe, this is the board to go with."
+                string_x0040_short_description="equipment"
                 string_x0040_sku="eqsusuthd"/>
         </indexedData>
         <metadata

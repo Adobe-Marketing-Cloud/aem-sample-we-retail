@@ -38,6 +38,10 @@
                 price_x0040_LastModifiedBy="admin"
                 rating_x0040_LastModified="{Date}2026-06-24T12:58:14.897+03:00"
                 reviews_x0040_LastModified="{Date}2026-06-24T12:58:14.897+03:00"
+                short_description="gloves"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
                 size_x0040_LastModified="{Date}2026-06-24T12:58:14.897+03:00"
                 sku="90019930"
                 sku_x0040_LastModified="{Date}2026-06-24T12:58:14.901+03:00"
@@ -54,6 +58,7 @@
                 string_x0040_description="The perfect fit keeps your hands warm but flexible. Tactile grip ensures no loss of control with sweat wicking interior. "
                 string_x0040_identifier="90019930"
                 string_x0040_name="Gloves"
+                string_x0040_short_description="gloves"
                 string_x0040_sku="90019930"/>
         </indexedData>
         <metadata

@@ -40,15 +40,16 @@ public final class LegacyDiscovery {
      * Universal core attributes seeded on every legacy catalog so the resulting
      * model and GraphQL schema always carry the canonical product fields, even
      * when the source tree stores them under legacy keys ({@code jcr:title} for
-     * the name, {@code summary} for the description) that discovery would
-     * otherwise skip or mis-name.
+     * the name, {@code summary} or {@code jcr:description} for the descriptions)
+     * that discovery would otherwise skip or mis-name.
      */
     private static final List<AttributeEntry> UNIVERSAL = List.of(
             AttributeEntry.of("sku",         "SKU",         NormalizedType.STRING,    AttributeScope.BOTH,    true,  false, 0),
             AttributeEntry.of("name",        "Name",        NormalizedType.STRING,    AttributeScope.PRODUCT, true,  false, 1),
             AttributeEntry.of("description", "Description", NormalizedType.TEXT,      AttributeScope.PRODUCT, false, false, 2),
             AttributeEntry.of("price",       "Price",       NormalizedType.PRICE,     AttributeScope.BOTH,    true,  true,  3),
-            AttributeEntry.of("image",       "Image",       NormalizedType.IMAGE_URL, AttributeScope.PRODUCT, false, false, 4)
+            AttributeEntry.of("image",       "Image",       NormalizedType.IMAGE_URL, AttributeScope.PRODUCT, false, false, 4),
+            AttributeEntry.of("short_description", "Short Description", NormalizedType.TEXT, AttributeScope.PRODUCT, false, false, 5)
     );
 
     /**

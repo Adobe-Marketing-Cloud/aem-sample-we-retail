@@ -60,6 +60,7 @@ public class ProductModel {
         }
 
         try {
+            ProductItem.requestShortDescription(cifProduct);
             if (isUsableRouteProduct(cifProduct)) {
                 productItem = new ProductItem(cifProduct, request, currentPage);
             }

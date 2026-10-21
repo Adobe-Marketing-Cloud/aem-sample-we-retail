@@ -44,6 +44,10 @@
                 reviews="&#xa;By Texas Runner&#xa;from Dallas, TX&#xa;&#xa;Battery life without GPS may be decent, but isn't the GPS tracking why someone would buy this device? It is completely worthless for marathon runners (and even some half marathon runners). Using GPS, but without music or bluetooth, I couldn't get more than 3 hours of battery life out of it while running. &#xa;&#xa;If you're a casual short distance runner/cyclist looking for an iPod that also measures speed/distance then maybe this will work for you. If you're training for longer distances, you will be extremely disappointed."
                 reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.582+03:00"
                 reviews_x0040_LastModifiedBy="admin"
+                short_description="equipment"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
                 size_x0040_LastModified="{Date}2026-06-24T12:58:15.566+03:00"
                 sku="eqrusugor"
                 sku_x0040_LastModified="{Date}2026-06-24T12:58:15.580+03:00"
@@ -63,6 +67,7 @@
                 string_x0040_name="GoMobile Fitness Monitor/Smart Music Player"
                 string_x0040_rating="2"
                 string_x0040_reviews="&#xa;By Texas Runner&#xa;from Dallas, TX&#xa;&#xa;Battery life without GPS may be decent, but isn't the GPS tracking why someone would buy this device? It is completely worthless for marathon runners (and even some half marathon runners). Using GPS, but without music or bluetooth, I couldn't get more than 3 hours of battery life out of it while running. &#xa;&#xa;If you're a casual short distance runner/cyclist looking for an iPod that also measures speed/distance then maybe this will work for you. If you're training for longer distances, you will be extremely disappointed."
+                string_x0040_short_description="equipment"
                 string_x0040_sku="eqrusugor"/>
         </indexedData>
         <metadata

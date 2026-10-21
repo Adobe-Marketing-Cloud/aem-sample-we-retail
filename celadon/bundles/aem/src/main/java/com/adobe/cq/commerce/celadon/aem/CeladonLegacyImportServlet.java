@@ -693,13 +693,18 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
 
     /**
      * Maps a manifest attribute code to its legacy JCR field name where the two
-     * disagree on the wire (legacy stores titles under {@code jcr:title} and
-     * long-form descriptions under {@code summary}).
+     * disagree on the wire. Legacy stores titles under {@code jcr:title} and the
+     * standard product description under {@code jcr:description}; catalogs that
+     * keep the long-form description under {@code summary} use
+     * {@code jcr:description} as the short description instead.
      */
-    private static String legacyAttributeKey(String code, Map<String, Object> source) {
+    static String legacyAttributeKey(String code, Map<String, Object> source) {
         return switch (code) {
             case "name" -> source.containsKey("jcr:title") ? "jcr:title" : "name";
-            case "description" -> source.containsKey("summary") ? "summary" : "description";
+            case "description" -> source.containsKey("summary") ? "summary"
+                    : source.containsKey("jcr:description") ? "jcr:description" : "description";
+            case "short_description" -> source.containsKey("summary") && source.containsKey("jcr:description")
+                    ? "jcr:description" : "short_description";
             default -> code;
         };
     }

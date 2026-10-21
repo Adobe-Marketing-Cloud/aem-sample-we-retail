@@ -38,6 +38,10 @@
                 price_x0040_LastModifiedBy="admin"
                 rating_x0040_LastModified="{Date}2026-06-24T12:58:15.439+03:00"
                 reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.439+03:00"
+                short_description="Featuring our latest mesh technology for ultimate flexibility.  Memory foam cushion hugs your feet in support during those long cross country runs. "
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
                 size_x0040_LastModified="{Date}2026-06-24T12:58:15.439+03:00"
                 sku="84391210"
                 sku_x0040_LastModified="{Date}2026-06-24T12:58:15.447+03:00"
@@ -54,6 +58,7 @@
                 string_x0040_description="&lt;p>Featuring our latest mesh technology for ultimate flexibility. &amp;nbsp;Memory foam cushion hugs your feet in support during those long cross country runs.&amp;nbsp;&lt;br>&lt;/p>"
                 string_x0040_identifier="84391210"
                 string_x0040_name="Spixa Runners"
+                string_x0040_short_description="Featuring our latest mesh technology for ultimate flexibility.  Memory foam cushion hugs your feet in support during those long cross country runs. "
                 string_x0040_sku="84391210"/>
         </indexedData>
         <metadata

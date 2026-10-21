@@ -40,6 +40,10 @@
                 price_x0040_LastModifiedBy="admin"
                 rating_x0040_LastModified="{Date}2026-06-24T12:58:15.741+03:00"
                 reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.741+03:00"
+                short_description="Increase your hiking time with the ease and comfort of hiking poles.  Rust proof and added traction make this a versatile essential for any hiker."
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
                 size="Regular"
                 size_x0040_LastModified="{Date}2026-06-24T12:58:15.748+03:00"
                 size_x0040_LastModifiedBy="admin"
@@ -59,6 +63,7 @@
                 string_x0040_features="&lt;p>Rust proof&lt;/p>&lt;p>Traction claws&lt;/p>"
                 string_x0040_identifier="170227049"
                 string_x0040_name="Hiking Poles"
+                string_x0040_short_description="Increase your hiking time with the ease and comfort of hiking poles.  Rust proof and added traction make this a versatile essential for any hiker."
                 string_x0040_size="Regular"
                 string_x0040_sku="170227049"/>
         </indexedData>

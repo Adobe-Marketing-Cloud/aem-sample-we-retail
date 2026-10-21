@@ -44,6 +44,10 @@
                 reviews="By gcsailing&#xa;from Biloxi, MS&#xa;I broke my bike chain not far from my house and decided to use this tool to put on a spare chain I had. After two hours of trying to line the pin up I still could not get it to go into the chain link. I don't know if I was just doing something wrong but even after reading the directions supplied with the tool I could not fix the chain. I ended up taking it to a bike shop and getting it fixed for less than the cost of the tool."
                 reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.903+03:00"
                 reviews_x0040_LastModifiedBy="admin"
+                short_description="equipment"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
                 size_x0040_LastModified="{Date}2026-06-24T12:58:15.896+03:00"
                 sku="eqbisucol"
                 sku_x0040_LastModified="{Date}2026-06-24T12:58:15.900+03:00"
@@ -63,6 +67,7 @@
                 string_x0040_name="Compact Chain Tool"
                 string_x0040_rating="1"
                 string_x0040_reviews="By gcsailing&#xa;from Biloxi, MS&#xa;I broke my bike chain not far from my house and decided to use this tool to put on a spare chain I had. After two hours of trying to line the pin up I still could not get it to go into the chain link. I don't know if I was just doing something wrong but even after reading the directions supplied with the tool I could not fix the chain. I ended up taking it to a bike shop and getting it fixed for less than the cost of the tool."
+                string_x0040_short_description="equipment"
                 string_x0040_sku="eqbisucol"/>
         </indexedData>
         <metadata

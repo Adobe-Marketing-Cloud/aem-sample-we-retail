@@ -44,6 +44,10 @@
                 reviews="By Plasma&#xa;from San Jose, CA&#xa;Great all round longboard. Good paddling and turning. Better in good waves due to large amount of rocker. Plenty of volume. Thick rails but the tail rocker means it turns well."
                 reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.631+03:00"
                 reviews_x0040_LastModifiedBy="admin"
+                short_description="equipment"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
                 size_x0040_LastModified="{Date}2026-06-24T12:58:15.624+03:00"
                 sku="eqsusubed"
                 sku_x0040_LastModified="{Date}2026-06-24T12:58:15.629+03:00"
@@ -63,6 +67,7 @@
                 string_x0040_name="Bear 8'8&quot; Longboard"
                 string_x0040_rating="5"
                 string_x0040_reviews="By Plasma&#xa;from San Jose, CA&#xa;Great all round longboard. Good paddling and turning. Better in good waves due to large amount of rocker. Plenty of volume. Thick rails but the tail rocker means it turns well."
+                string_x0040_short_description="equipment"
                 string_x0040_sku="eqsusubed"/>
         </indexedData>
         <metadata

@@ -170,11 +170,17 @@ public class ProductItem {
     }
 
     static String descriptionLabel(ProductInterface productData) {
-        String category = firstCategoryName(productData);
-        if (StringUtils.isNotBlank(category)) {
-            return category;
+        String shortDescription = stripHtml(productData != null ? productData.getShortDescription() : null);
+        if (StringUtils.isNotBlank(shortDescription)) {
+            return shortDescription;
         }
-        return stripHtml(productData != null ? productData.getShortDescription() : null);
+        return firstCategoryName(productData);
+    }
+
+    static void requestShortDescription(Product product) {
+        if (product != null && product.getProductRetriever() != null) {
+            product.getProductRetriever().extendProductQueryWith(query -> query.shortDescription(description -> description.html()));
+        }
     }
 
     static String assetPath(List<Asset> assets) {
@@ -222,11 +228,11 @@ public class ProductItem {
     }
 
     private static String resolveSummary(ProductInterface productData) {
-        String shortDescription = stripHtml(productData != null ? productData.getShortDescription() : null);
-        if (StringUtils.isNotBlank(shortDescription)) {
-            return shortDescription;
+        String description = stripHtml(productData != null ? productData.getDescription() : null);
+        if (StringUtils.isNotBlank(description)) {
+            return description;
         }
-        return stripHtml(productData != null ? productData.getDescription() : null);
+        return stripHtml(productData != null ? productData.getShortDescription() : null);
     }
 
     private static String normalizeSku(String sku) {

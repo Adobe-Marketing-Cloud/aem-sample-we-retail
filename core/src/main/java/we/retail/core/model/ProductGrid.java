@@ -282,7 +282,9 @@ public class ProductGrid implements com.adobe.cq.wcm.core.components.models.List
 
         ValueMapResourceWrapper wrappedResource = new ValueMapResourceWrapper(resource, CIF_PRODUCT_RESOURCE_TYPE);
         wrappedResource.getValueMap().put(PN_SELECTION, sku);
-        return modelFactory.getModelFromWrappedRequest(request, wrappedResource, Product.class);
+        Product product = modelFactory.getModelFromWrappedRequest(request, wrappedResource, Product.class);
+        ProductItem.requestShortDescription(product);
+        return product;
     }
 
     private String buildRouteProductUrl(ProductListItem productListItem) {

@@ -73,6 +73,24 @@ public class LegacyDiscoveryTest {
     }
 
     @Test
+    public void seedsShortDescriptionAlongsideTheStandardDescription() {
+        String tree = """
+            {"products":{
+                "coat":{
+                    "cq:commerceType":"product","sku":"C-1","jcr:title":"Coat",
+                    "jcr:description":"coat","summary":"Warm without bulk."
+                }
+            }}""";
+        AttributeManifest m = LegacyDiscovery.parse("we-retail", tree,
+                new DiscoveryHints(List.of(), List.of()));
+        assertEquals(NormalizedType.TEXT, m.entryFor("description").orElseThrow().type());
+        assertEquals(NormalizedType.TEXT, m.entryFor("short_description").orElseThrow().type());
+        assertEquals(AttributeScope.PRODUCT, m.entryFor("short_description").orElseThrow().scope());
+        assertFalse(m.entryFor("jcr:description").isPresent());
+        assertFalse(m.entryFor("summary").isPresent());
+    }
+
+    @Test
     public void denyListExcludes() {
         String tree = """
             {"products":{

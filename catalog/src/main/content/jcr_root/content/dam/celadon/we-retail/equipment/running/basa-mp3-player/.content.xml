@@ -38,6 +38,10 @@
                 price_x0040_LastModifiedBy="admin"
                 rating_x0040_LastModified="{Date}2026-06-24T12:58:15.538+03:00"
                 reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.538+03:00"
+                short_description="equipment"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
                 size="one"
                 size_x0040_LastModified="{Date}2026-06-24T12:58:15.554+03:00"
                 size_x0040_LastModifiedBy="admin"
@@ -56,6 +60,7 @@
                 string_x0040_description="Carries up to 20,000 of your favorite tunes! Also features built in timer and workout monitor to track your energy and calories. "
                 string_x0040_identifier="30941863"
                 string_x0040_name="Basa MP3 Player"
+                string_x0040_short_description="equipment"
                 string_x0040_size="one"
                 string_x0040_sku="30941863"/>
         </indexedData>

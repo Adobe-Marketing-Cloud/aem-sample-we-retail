@@ -87,7 +87,9 @@ fresh deploy, with **no import step**:
 - Blueprint-mode catalog content under `content/dam/celadon/we-retail/`: the authored
   category tree (`women`, `men`, `equipment`) plus `_manifest` and `_options`. Product
   fragments live under their blueprint categories and carry editorial slugs used for
-  PDP/PLP URLs.
+  PDP/PLP URLs. `description` holds the classic `summary` (the product page summary) and
+  `short_description` the classic `jcr:description` (the label above the product name and
+  the product card subtitle).
 
 The package `filter.xml` covers all three model roots and `/content/dam/celadon`. The
 served catalog is `we-retail` (default, `ready=true`, ~60 products / 21 categories).

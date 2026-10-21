@@ -41,6 +41,8 @@ final class Queries {
     static final String WR_PRODUCT_BY_URL_KEY_VARIANTS = "query($urlKey:String!){ products(filter:{ url_key:{ eq:$urlKey } }) { items { __typename sku url_key name ... on ConfigurableProduct { configurable_options { attribute_code label } variants { product { sku } } } } } }";
     // Product by SKU exposing its full (multi-)category membership — the blueprint matchTags case.
     static final String WR_PRODUCT_BY_SKU_CATEGORIES = "query($sku:String!){ products(filter:{ sku:{ eq:$sku } }) { items { sku url_key name categories { name url_path } } } }";
+    // Product by url_key exposing both descriptions — the legacy summary / jcr:description split.
+    static final String WR_PRODUCT_BY_URL_KEY_DESCRIPTIONS = "query($urlKey:String!){ products(filter:{ url_key:{ eq:$urlKey } }) { items { sku description { html } short_description { html } } } }";
     // Whole-catalog probe: every product with its type, editorial url_key, full category membership
     // and (for configurables) variant axes + flattened variants — drives all-product verification.
     static final String WR_ALL_PRODUCTS = "{ products(filter:{}, currentPage:1, pageSize:100){ total_count items { __typename sku url_key categories { url_path } ... on ConfigurableProduct { configurable_options { attribute_code } variants { product { sku } } } } } }";
