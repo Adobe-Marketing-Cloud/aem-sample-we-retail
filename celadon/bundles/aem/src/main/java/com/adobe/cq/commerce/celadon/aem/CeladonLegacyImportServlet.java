@@ -384,6 +384,21 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
                 AemContentFragmentSupport.writeVariationTyped(fragment, variationName, variationName, "image", variantImagePaths);
             }
         }
+
+        // Variations from an earlier import that the source no longer has must not survive a re-import.
+        List<String> staleVariations = AemContentFragmentSupport.removeVariationsExcept(fragment, seenVariations);
+        if (!staleVariations.isEmpty()) {
+            List<Resource> staleImages = new ArrayList<>();
+            for (Resource child : cfParent.getChildren()) {
+                if (LegacyProductStructure.isVariationImage(child.getName(), nodeName, staleVariations)) {
+                    staleImages.add(child);
+                }
+            }
+            for (Resource image : staleImages) {
+                resolver.delete(image);
+            }
+            LOG.info(() -> "celadon: legacy import - removed stale variations " + staleVariations + " from product " + productKey);
+        }
     }
 
     /**

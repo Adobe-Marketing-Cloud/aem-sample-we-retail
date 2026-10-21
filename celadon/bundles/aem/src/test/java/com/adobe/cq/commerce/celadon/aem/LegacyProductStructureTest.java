@@ -16,6 +16,8 @@
 package com.adobe.cq.commerce.celadon.aem;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import com.adobe.cq.commerce.celadon.core.api.attribute.AttributeEntry;
 import com.adobe.cq.commerce.celadon.core.api.attribute.AttributeManifest;
@@ -134,5 +136,17 @@ public class LegacyProductStructureTest {
     public void configurableAxisEntries_ignoresUndeclaredAndNonVariantSelectAttributes() {
         assertEquals(List.of(), axisCodes(List.of()));
         assertEquals(List.of(), axisCodes(List.of("brand", "price", "sku")));
+    }
+
+    @Test
+    public void isVariationImage_matchesOnlyTheGivenVariationsOfTheProduct() {
+        List<String> stale = List.of("var-size-l");
+
+        assertTrue(LegacyProductStructure.isVariationImage("coat_var-size-l_img_0.jpeg", "coat", stale));
+        assertTrue(LegacyProductStructure.isVariationImage("coat_var-size-l_img_12.png", "coat", stale));
+        assertFalse(LegacyProductStructure.isVariationImage("coat_var-size-xl_img_0.jpeg", "coat", stale));
+        assertFalse(LegacyProductStructure.isVariationImage("coat_img_0.jpeg", "coat", stale));
+        assertFalse(LegacyProductStructure.isVariationImage("raincoat_var-size-l_img_0.jpeg", "coat", stale));
+        assertFalse(LegacyProductStructure.isVariationImage("coat_var-size-l_img_0.jpeg", "coat", List.of()));
     }
 }

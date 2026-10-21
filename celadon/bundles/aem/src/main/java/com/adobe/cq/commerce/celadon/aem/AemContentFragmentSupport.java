@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import org.apache.sling.api.resource.ModifiableValueMap;
 import org.apache.sling.api.resource.PersistenceException;
 import org.apache.sling.api.resource.Resource;
@@ -139,6 +140,26 @@ public final class AemContentFragmentSupport {
         try (InputStream inputStream = new ByteArrayInputStream(data)) {
             invoke(assetManager, "createAsset", assetPath, inputStream, mimeType, true);
         }
+    }
+
+    /**
+     * Removes every variation of the fragment that is not named in {@code keep} and returns the
+     * names of the removed variations.
+     */
+    static List<String> removeVariationsExcept(Resource fragmentResource, Set<String> keep) throws Exception {
+        Object fragment = requireFragment(fragmentResource);
+        List<String> stale = new ArrayList<>();
+        Iterator<?> variations = (Iterator<?>) invoke(fragment, "listAllVariations");
+        while (variations.hasNext()) {
+            String name = (String) invoke(variations.next(), "getName");
+            if (!keep.contains(name)) {
+                stale.add(name);
+            }
+        }
+        for (String name : stale) {
+            invoke(fragment, "removeVariation", name);
+        }
+        return stale;
     }
 
     private static Object ensureVariation(Resource fragmentResource,

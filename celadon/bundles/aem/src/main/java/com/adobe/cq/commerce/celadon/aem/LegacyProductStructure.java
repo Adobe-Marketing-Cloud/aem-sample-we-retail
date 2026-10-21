@@ -19,6 +19,7 @@ import com.adobe.cq.commerce.celadon.core.api.attribute.AttributeEntry;
 import com.adobe.cq.commerce.celadon.core.api.attribute.AttributeManifest;
 import com.adobe.cq.commerce.celadon.core.api.attribute.NormalizedType;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
@@ -101,6 +102,19 @@ public final class LegacyProductStructure {
             }
         }
         return entries;
+    }
+
+    /**
+     * Whether an asset next to a product fragment holds an image of one of the given variations,
+     * which the importer stores as {@code <productNodeName>_<variationName>_img_<n>.<ext>}.
+     */
+    static boolean isVariationImage(String assetName, String productNodeName, Collection<String> variationNames) {
+        for (String variationName : variationNames) {
+            if (assetName.startsWith(productNodeName + "_" + variationName + "_img_")) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private static void addAxis(Set<String> axes, Object value) {
