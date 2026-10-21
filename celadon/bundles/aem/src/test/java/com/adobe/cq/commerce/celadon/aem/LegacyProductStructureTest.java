@@ -26,6 +26,7 @@ import com.adobe.cq.commerce.celadon.core.api.attribute.NormalizedType;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import org.junit.Test;
 
 public class LegacyProductStructureTest {
@@ -148,5 +149,26 @@ public class LegacyProductStructureTest {
         assertFalse(LegacyProductStructure.isVariationImage("coat_img_0.jpeg", "coat", stale));
         assertFalse(LegacyProductStructure.isVariationImage("raincoat_var-size-l_img_0.jpeg", "coat", stale));
         assertFalse(LegacyProductStructure.isVariationImage("coat_var-size-l_img_0.jpeg", "coat", List.of()));
+    }
+
+    @Test
+    public void isProductImage_matchesTheProductAndVariationImagesOnly() {
+        assertTrue(LegacyProductStructure.isProductImage("coat_img_0.jpeg", "coat"));
+        assertTrue(LegacyProductStructure.isProductImage("coat_var-size-l_img_3.png", "coat"));
+        assertFalse(LegacyProductStructure.isProductImage("raincoat_img_0.jpeg", "coat"));
+        assertFalse(LegacyProductStructure.isProductImage("coat-hanger_img_0.jpeg", "coat"));
+        assertFalse(LegacyProductStructure.isProductImage("bear-8_8_-longboard_img_0.jpeg", "bear-8"));
+        assertFalse(LegacyProductStructure.isProductImage("coat", "coat"));
+    }
+
+    @Test
+    public void isStaleProduct_removesDuplicatesAlwaysAndOtherProductsOnlyWhenPruning() {
+        Set<String> imported = Set.of("meskwielt", "wootwisot");
+
+        assertTrue(LegacyProductStructure.isStaleProduct("meskwielt", imported, false));
+        assertFalse(LegacyProductStructure.isStaleProduct("RETIRED-1", imported, false));
+        assertFalse(LegacyProductStructure.isStaleProduct("", imported, false));
+        assertTrue(LegacyProductStructure.isStaleProduct("RETIRED-1", imported, true));
+        assertTrue(LegacyProductStructure.isStaleProduct("", imported, true));
     }
 }

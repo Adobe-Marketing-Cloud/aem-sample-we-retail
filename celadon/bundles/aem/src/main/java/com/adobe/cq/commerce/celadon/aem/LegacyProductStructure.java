@@ -117,6 +117,23 @@ public final class LegacyProductStructure {
         return false;
     }
 
+    /**
+     * Whether an asset next to a product fragment holds one of its images, which the importer
+     * stores as {@code <productNodeName>_img_<n>.<ext>} and {@code <productNodeName>_<variation>_img_<n>.<ext>}.
+     */
+    static boolean isProductImage(String assetName, String productNodeName) {
+        return assetName.startsWith(productNodeName + "_img_")
+                || assetName.startsWith(productNodeName + "_var-") && assetName.contains("_img_");
+    }
+
+    /**
+     * Whether a product fragment the import did not write should be removed: always when the import
+     * wrote its SKU elsewhere, and for any other product only when pruning.
+     */
+    static boolean isStaleProduct(String sku, Set<String> importedSkus, boolean prune) {
+        return prune || sku != null && !sku.isBlank() && importedSkus.contains(sku);
+    }
+
     private static void addAxis(Set<String> axes, Object value) {
         if (value == null) {
             return;

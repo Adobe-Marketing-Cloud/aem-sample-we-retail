@@ -34,6 +34,7 @@ import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -86,6 +87,8 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
         // Optional (BLUEPRINT only): authored product-page tree carrying editorial slugs via
         // jcr:content/cq:productMaster. When present, harvested slugs replace SKU-based CF node names.
         String productPageTreePath = request.getParameter("productPageTreePath");
+        // Optional: also remove products the source no longer has (duplicates are always removed).
+        boolean prune = Boolean.parseBoolean(request.getParameter("prune"));
         if (isBlank(sourceUrl) || isBlank(targetCatalog)) {
             response.setStatus(SlingHttpServletResponse.SC_BAD_REQUEST);
             response.getWriter().write("Missing required parameters: sourceUrl, targetCatalog");
@@ -98,7 +101,7 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
         }
         try {
             importLegacyCatalog(request.getResourceResolver(), sourceUrl, targetCatalog, sourceAuthorization,
-                    categoryMode, catalogBlueprintPath, productPageTreePath);
+                    categoryMode, catalogBlueprintPath, productPageTreePath, prune);
             response.setStatus(SlingHttpServletResponse.SC_OK);
             response.getWriter().write("Import completed successfully");
         } catch (Exception e) {
@@ -114,7 +117,8 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
                                      String sourceAuthorization,
                                      LegacyTagCategories.CategoryMode mode,
                                      String catalogBlueprintPath,
-                                     String productPageTreePath) throws Exception {
+                                     String productPageTreePath,
+                                     boolean prune) throws Exception {
         Resource catalogRoot = AemRepositorySupport.ensureOrderedFolder(resolver, "/content/dam/celadon", AemRepositorySupport.CELADON_ROOT_TITLE);
         Resource targetRoot = AemRepositorySupport.ensureOrderedFolder(catalogRoot.getResourceResolver(),
                 catalogRoot.getPath() + "/" + AemRepositorySupport.escapeNodeName(targetCatalog),
@@ -203,7 +207,10 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
         // Catalog-wide guard so every product CF node name is unique within the catalog, regardless of
         // mode (the slug path can collide; SKU-keyed names are already unique so this is a safety net).
         Set<String> usedProductNodeNames = new LinkedHashSet<>();
-        processLegacyNode(resolver, modelResource, optionWriter, targetRoot, targetRoot, "", source, sourceUrl, sourceAuthorization, manifest, mode, blueprint, productSlugs, usedProductNodeNames);
+        Map<String, String> importedProducts = new LinkedHashMap<>();
+        processLegacyNode(resolver, modelResource, optionWriter, targetRoot, targetRoot, "", source, sourceUrl, sourceAuthorization, manifest, mode, blueprint, productSlugs, usedProductNodeNames, importedProducts);
+        resolver.commit();
+        removeStaleProducts(resolver, targetRoot, modelResource.getPath(), importedProducts, prune);
         resolver.commit();
 
         // Step 7: write option definitions for manifest SELECT/MULTISELECT entries.
@@ -213,6 +220,68 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
         // Step 8: mark the catalog ready.
         ReadyFlag.set(resolver, catalog, true);
         LOG.info(() -> "celadon: legacy - catalog " + catalog + " marked ready");
+    }
+
+    /**
+     * Removes the product fragments this import did not write, with their images: always when
+     * the import wrote the same SKU elsewhere (the product moved or was renamed), and for SKUs the
+     * source no longer has only when {@code prune} is set.
+     */
+    private void removeStaleProducts(ResourceResolver resolver,
+                                     Resource targetRoot,
+                                     String productModelPath,
+                                     Map<String, String> importedProducts,
+                                     boolean prune) throws Exception {
+        Set<String> importedSkus = new HashSet<>(importedProducts.values());
+        List<Resource> productFragments = new ArrayList<>();
+        collectProductFragments(targetRoot, productModelPath, true, productFragments);
+        int removed = 0;
+        List<String> kept = new ArrayList<>();
+        for (Resource fragment : productFragments) {
+            if (importedProducts.containsKey(fragment.getPath())) {
+                continue;
+            }
+            Resource master = fragment.getChild("jcr:content/data/master");
+            String sku = master != null ? master.getValueMap().get("sku", "") : "";
+            if (!LegacyProductStructure.isStaleProduct(sku, importedSkus, prune)) {
+                kept.add(fragment.getPath());
+                continue;
+            }
+            Resource parent = fragment.getParent();
+            List<Resource> images = new ArrayList<>();
+            for (Resource sibling : parent.getChildren()) {
+                if (LegacyProductStructure.isProductImage(sibling.getName(), fragment.getName())) {
+                    images.add(sibling);
+                }
+            }
+            String path = fragment.getPath();
+            for (Resource image : images) {
+                resolver.delete(image);
+            }
+            resolver.delete(fragment);
+            removed++;
+            LOG.info(() -> "celadon: legacy import - removed stale product " + path + " (sku " + sku + ")");
+        }
+        int removedCount = removed;
+        LOG.info(() -> "celadon: legacy import - removed " + removedCount + " stale product(s); kept " + kept.size()
+                + " product(s) the source does not have" + (kept.isEmpty() ? "" : " (import with prune=true to remove them): " + kept));
+    }
+
+    private static void collectProductFragments(Resource node, String productModelPath, boolean isRoot, List<Resource> fragments) {
+        for (Resource child : node.getChildren()) {
+            String name = child.getName();
+            if (name.startsWith("jcr:") || (isRoot && (name.equals("_manifest") || name.equals("_options")))) {
+                continue;
+            }
+            Resource data = child.getChild("jcr:content/data");
+            if (data != null) {
+                if (productModelPath.equals(data.getValueMap().get("cq:model", String.class))) {
+                    fragments.add(child);
+                }
+                continue;
+            }
+            collectProductFragments(child, productModelPath, false, fragments);
+        }
     }
 
     private void writeManifestOptionDefinitions(OptionDefinitionWriter optionWriter,
@@ -243,7 +312,8 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
                                    LegacyTagCategories.CategoryMode mode,
                                    LegacyBlueprintCategories blueprint,
                                    LegacyProductSlugs productSlugs,
-                                   Set<String> usedProductNodeNames) throws Exception {
+                                   Set<String> usedProductNodeNames,
+                                   Map<String, String> importedProducts) throws Exception {
         for (Map.Entry<String, Object> entry : node.entrySet()) {
             String key = entry.getKey();
             if (skipLegacyKey(key)) {
@@ -255,7 +325,7 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
             }
             String commerceType = stringValue(child.get("cq:commerceType"));
             if ("product".equals(commerceType)) {
-                importLegacyProduct(resolver, modelResource, optionWriter, parent, targetRoot, sourceFolderPath, key, child, sourceUrl, sourceAuthorization, manifest, mode, blueprint, productSlugs, usedProductNodeNames);
+                importLegacyProduct(resolver, modelResource, optionWriter, parent, targetRoot, sourceFolderPath, key, child, sourceUrl, sourceAuthorization, manifest, mode, blueprint, productSlugs, usedProductNodeNames, importedProducts);
             } else if ("variant".equals(commerceType)) {
                 continue;
             } else if (mode == LegacyTagCategories.CategoryMode.BLUEPRINT) {
@@ -265,7 +335,7 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
                 // resolver can favor the product's original editorial home when multiple sections match.
                 // Products matching no section fall back to the catalog root via the blank folderPrimary.
                 String childSource = appendSegment(sourceFolderPath, AemRepositorySupport.escapeNodeName(key));
-                processLegacyNode(resolver, modelResource, optionWriter, parent, targetRoot, childSource, child, sourceUrl, sourceAuthorization, manifest, mode, blueprint, productSlugs, usedProductNodeNames);
+                processLegacyNode(resolver, modelResource, optionWriter, parent, targetRoot, childSource, child, sourceUrl, sourceAuthorization, manifest, mode, blueprint, productSlugs, usedProductNodeNames, importedProducts);
             } else {
                 String segment = AemRepositorySupport.escapeNodeName(key);
                 Resource category = AemRepositorySupport.ensureOrderedFolder(
@@ -274,7 +344,7 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
                         firstNonBlank(stringValue(child.get("jcr:title")), key)
                 );
                 String childSource = appendSegment(sourceFolderPath, segment);
-                processLegacyNode(resolver, modelResource, optionWriter, category, targetRoot, childSource, child, sourceUrl, sourceAuthorization, manifest, mode, blueprint, productSlugs, usedProductNodeNames);
+                processLegacyNode(resolver, modelResource, optionWriter, category, targetRoot, childSource, child, sourceUrl, sourceAuthorization, manifest, mode, blueprint, productSlugs, usedProductNodeNames, importedProducts);
             }
         }
     }
@@ -293,7 +363,8 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
                                      LegacyTagCategories.CategoryMode mode,
                                      LegacyBlueprintCategories blueprint,
                                      LegacyProductSlugs productSlugs,
-                                     Set<String> usedProductNodeNames) throws Exception {
+                                     Set<String> usedProductNodeNames,
+                                     Map<String, String> importedProducts) throws Exception {
         String productSku = legacyBaseSku(product, productKey);
         String title = firstNonBlank(stringValue(product.get("jcr:title")), productKey);
 
@@ -332,6 +403,7 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
             }
         }
         Resource fragment = AemContentFragmentSupport.ensureFragment(resolver, modelResource, cfParent, nodeName, title);
+        importedProducts.put(fragment.getPath(), productSku);
         // Surface the resolved sku into the source map so the manifest writer below picks it up.
         product.putIfAbsent("sku", productSku);
 
