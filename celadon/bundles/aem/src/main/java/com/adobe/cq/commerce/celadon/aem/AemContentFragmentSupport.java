@@ -15,11 +15,13 @@
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 package com.adobe.cq.commerce.celadon.aem;
 
+import com.day.cq.tagging.Tag;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -139,6 +141,17 @@ public final class AemContentFragmentSupport {
         }
         try (InputStream inputStream = new ByteArrayInputStream(data)) {
             invoke(assetManager, "createAsset", assetPath, inputStream, mimeType, true);
+        }
+    }
+
+    /** Sets the tags of each named variation of the fragment. */
+    static void setVariationTags(Resource fragmentResource, Collection<String> variationNames, Tag[] tags) throws Exception {
+        if (tags.length == 0 && fragmentResource.getChild("jcr:content/metadata/dam:cfVariations") == null) {
+            return;
+        }
+        Object fragment = requireFragment(fragmentResource);
+        for (String variationName : variationNames) {
+            invoke(fragment, "setVariationTags", tags, variationName);
         }
     }
 

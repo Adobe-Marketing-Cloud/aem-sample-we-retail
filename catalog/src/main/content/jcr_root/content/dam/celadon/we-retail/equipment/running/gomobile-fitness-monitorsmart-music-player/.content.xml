@@ -71,6 +71,7 @@
                 string_x0040_sku="eqrusugor"/>
         </indexedData>
         <metadata
+            cq:tags="[we-retail:equipment,we-retail:season/summer,we-retail:activity/running]"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>
         <related jcr:primaryType="nt:unstructured"/>

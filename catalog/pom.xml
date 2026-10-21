@@ -116,6 +116,12 @@
                     <properties>
                         <acHandling>merge_preserve</acHandling>
                     </properties>
+                    <dependencies>
+                        <dependency>
+                            <group>adobe/aem6/sample</group>
+                            <name>we.retail.commons.content.slim</name>
+                        </dependency>
+                    </dependencies>
                 </configuration>
             </plugin>
         </plugins>

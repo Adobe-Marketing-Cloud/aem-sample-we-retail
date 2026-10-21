@@ -24,6 +24,8 @@ import com.adobe.cq.commerce.celadon.core.api.JsonSupport;
 import com.adobe.cq.commerce.celadon.core.api.attribute.AttributeEntry;
 import com.adobe.cq.commerce.celadon.core.api.attribute.AttributeManifest;
 import com.adobe.cq.commerce.celadon.core.api.attribute.NormalizedType;
+import com.day.cq.tagging.Tag;
+import com.day.cq.tagging.TagManager;
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -204,6 +206,10 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
             LOG.info(() -> "celadon: legacy - pre-pass ensured " + rawTagIds.size() + " tag-derived category branches");
         }
 
+        // Every product tag must exist on the target before the products reference it.
+        ensureTags(resolver, collectTagIds(source), sourceUrl, sourceAuthorization);
+        resolver.commit();
+
         // Catalog-wide guard so every product CF node name is unique within the catalog, regardless of
         // mode (the slug path can collide; SKU-keyed names are already unique so this is a safety net).
         Set<String> usedProductNodeNames = new LinkedHashSet<>();
@@ -282,6 +288,88 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
             }
             collectProductFragments(child, productModelPath, false, fragments);
         }
+    }
+
+    /**
+     * Creates the given tags, and their ancestors up to the namespace, where the target lacks them,
+     * copying title, description and translated titles from the source taxonomy. Existing tags are
+     * left untouched. Caller commits.
+     */
+    private void ensureTags(ResourceResolver resolver,
+                            Set<String> tagIds,
+                            String sourceUrl,
+                            String sourceAuthorization) throws Exception {
+        TagManager tagManager = resolver.adaptTo(TagManager.class);
+        if (tagManager == null) {
+            LOG.warning(() -> "celadon: legacy import - TagManager unavailable, product tags are not imported");
+            return;
+        }
+        List<String> created = new ArrayList<>();
+        for (String tagId : tagIds) {
+            for (String id : LegacyTags.selfAndAncestorIds(tagId)) {
+                if (tagManager.resolve(id) != null) {
+                    continue;
+                }
+                Map<String, Object> sourceTag = fetchSourceTag(LegacyTags.taxonomyPath(id), sourceUrl, sourceAuthorization);
+                String path = LegacyTags.taxonomyPath(id);
+                String title = firstNonBlank(stringValue(sourceTag.get("jcr:title")), titleCase(path.substring(path.lastIndexOf('/') + 1)));
+                String description = stringValue(sourceTag.get("jcr:description"));
+                Tag tag = tagManager.createTag(id, title, description.isBlank() ? null : description, false);
+                Map<String, String> localizedTitles = LegacyTags.localizedTitles(sourceTag);
+                Resource tagResource = resolver.getResource(tag.getPath());
+                if (!localizedTitles.isEmpty() && tagResource != null) {
+                    tagResource.adaptTo(ModifiableValueMap.class).putAll(localizedTitles);
+                }
+                created.add(id);
+            }
+        }
+        LOG.info(() -> "celadon: legacy import - " + tagIds.size() + " product tag(s) in use, created " + created.size()
+                + " missing tag(s)" + (created.isEmpty() ? "" : ": " + created));
+    }
+
+    /** The source taxonomy node of a tag, read from {@code /content/cq:tags} or the older {@code /etc/tags}. */
+    private Map<String, Object> fetchSourceTag(String taxonomyPath, String sourceUrl, String sourceAuthorization) {
+        String host = taxonomyHost(sourceUrl);
+        for (String root : List.of("/content/cq:tags/", "/etc/tags/")) {
+            try {
+                Map<String, Object> node = fetchJson(host + root + taxonomyPath + ".json", sourceAuthorization);
+                if (!node.isEmpty()) {
+                    return node;
+                }
+            } catch (Exception e) {
+                LOG.fine(() -> "celadon: legacy import - tag " + taxonomyPath + " not found under " + root);
+            }
+        }
+        return Map.of();
+    }
+
+    /** Sets the product fragment's tags to the source product's tags. Caller commits. */
+    private static void writeProductTags(ResourceResolver resolver, Resource fragment, List<String> tagIds) throws PersistenceException {
+        Resource content = fragment.getChild("jcr:content");
+        if (content == null) {
+            return;
+        }
+        Resource metadata = content.getChild("metadata");
+        if (metadata == null) {
+            if (tagIds.isEmpty()) {
+                return;
+            }
+            metadata = resolver.create(content, "metadata", Map.of("jcr:primaryType", "nt:unstructured"));
+        }
+        ModifiableValueMap properties = metadata.adaptTo(ModifiableValueMap.class);
+        if (tagIds.isEmpty()) {
+            properties.remove("cq:tags");
+        } else {
+            properties.put("cq:tags", tagIds.toArray(String[]::new));
+        }
+    }
+
+    private static Tag[] resolveTags(ResourceResolver resolver, List<String> tagIds) {
+        TagManager tagManager = resolver.adaptTo(TagManager.class);
+        if (tagManager == null) {
+            return new Tag[0];
+        }
+        return tagIds.stream().map(tagManager::resolve).filter(Objects::nonNull).toArray(Tag[]::new);
     }
 
     private void writeManifestOptionDefinitions(OptionDefinitionWriter optionWriter,
@@ -404,6 +492,8 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
         }
         Resource fragment = AemContentFragmentSupport.ensureFragment(resolver, modelResource, cfParent, nodeName, title);
         importedProducts.put(fragment.getPath(), productSku);
+        List<String> tagIds = LegacyTags.tagIds(product.get("cq:tags"));
+        writeProductTags(resolver, fragment, tagIds);
         // Surface the resolved sku into the source map so the manifest writer below picks it up.
         product.putIfAbsent("sku", productSku);
 
@@ -471,6 +561,7 @@ public class CeladonLegacyImportServlet extends SlingAllMethodsServlet {
             }
             LOG.info(() -> "celadon: legacy import - removed stale variations " + staleVariations + " from product " + productKey);
         }
+        AemContentFragmentSupport.setVariationTags(fragment, seenVariations, resolveTags(resolver, tagIds));
     }
 
     /**

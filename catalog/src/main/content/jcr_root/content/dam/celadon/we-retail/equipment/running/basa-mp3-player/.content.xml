@@ -65,6 +65,7 @@
                 string_x0040_sku="30941863"/>
         </indexedData>
         <metadata
+            cq:tags="[we-retail:equipment,we-retail:activity/running]"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>
         <related jcr:primaryType="nt:unstructured"/>

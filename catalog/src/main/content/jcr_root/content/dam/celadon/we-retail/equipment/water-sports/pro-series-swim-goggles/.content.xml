@@ -266,8 +266,24 @@
                 stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--blue-green-yellow,/content/dam/celadon/we-retail/_options/size--one-size]"/>
         </indexedData>
         <metadata
+            cq:tags="[we-retail:activity/swimming,we-retail:equipment,we-retail:season/summer]"
             jcr:mixinTypes="[cq:Taggable]"
-            jcr:primaryType="nt:unstructured"/>
+            jcr:primaryType="nt:unstructured">
+            <dam:cfVariations jcr:primaryType="nt:unstructured">
+                <var-identifier-eqswsuprs1-size-onesize-color-blue
+                    cq:tags="[we-retail:season/summer,we-retail:equipment,we-retail:activity/swimming]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-identifier-eqswsuprs2-size-onesize-color-green
+                    cq:tags="[we-retail:season/summer,we-retail:equipment,we-retail:activity/swimming]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-identifier-eqswsuprs3-size-onesize-color-yellow
+                    cq:tags="[we-retail:season/summer,we-retail:equipment,we-retail:activity/swimming]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+            </dam:cfVariations>
+        </metadata>
         <model jcr:primaryType="nt:unstructured">
             <variations jcr:primaryType="nt:unstructured">
                 <var-identifier-eqswsuprs1-size-onesize-color-blue

@@ -68,6 +68,7 @@
                 string_x0040_sku="170227049"/>
         </indexedData>
         <metadata
+            cq:tags="[we-retail:activity/hiking,we-retail:equipment]"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>
         <related jcr:primaryType="nt:unstructured"/>

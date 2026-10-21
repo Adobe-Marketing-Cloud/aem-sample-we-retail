@@ -446,8 +446,36 @@
                 stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--7-8-9-10-plus2]"/>
         </indexedData>
         <metadata
+            cq:tags="[we-retail:activity/biking,we-retail:apparel/footwear,we-retail:season/summer]"
             jcr:mixinTypes="[cq:Taggable]"
-            jcr:primaryType="nt:unstructured"/>
+            jcr:primaryType="nt:unstructured">
+            <dam:cfVariations jcr:primaryType="nt:unstructured">
+                <var-size-7
+                    cq:tags="[we-retail:activity/biking,we-retail:season/summer,we-retail:apparel/footwear]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-size-8
+                    cq:tags="[we-retail:activity/biking,we-retail:season/summer,we-retail:apparel/footwear]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-size-9
+                    cq:tags="[we-retail:activity/biking,we-retail:season/summer,we-retail:apparel/footwear]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-size-10
+                    cq:tags="[we-retail:activity/biking,we-retail:season/summer,we-retail:apparel/footwear]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-size-11
+                    cq:tags="[we-retail:activity/biking,we-retail:season/summer,we-retail:apparel/footwear]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-size-12
+                    cq:tags="[we-retail:activity/biking,we-retail:season/summer,we-retail:apparel/footwear]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+            </dam:cfVariations>
+        </metadata>
         <model jcr:primaryType="nt:unstructured">
             <variations jcr:primaryType="nt:unstructured">
                 <var-size-7

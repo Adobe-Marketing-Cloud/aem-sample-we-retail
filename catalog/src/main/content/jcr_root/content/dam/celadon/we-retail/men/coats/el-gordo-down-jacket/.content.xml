@@ -1067,8 +1067,72 @@
                 stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--green-purple-red,/content/dam/celadon/we-retail/_options/size--xs-s-m-l-plus1]"/>
         </indexedData>
         <metadata
+            cq:tags="[we-retail:activity/skiing,we-retail:gender/men,we-retail:season/winter,we-retail:apparel/coat]"
             jcr:mixinTypes="[cq:Taggable]"
-            jcr:primaryType="nt:unstructured"/>
+            jcr:primaryType="nt:unstructured">
+            <dam:cfVariations jcr:primaryType="nt:unstructured">
+                <var-identifier-meskwielt1-size-xs-color-green
+                    cq:tags="[we-retail:gender/men,we-retail:apparel/coat,we-retail:season/winter,we-retail:activity/skiing]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-identifier-meskwielt1-size-s-color-green
+                    cq:tags="[we-retail:gender/men,we-retail:apparel/coat,we-retail:season/winter,we-retail:activity/skiing]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-identifier-meskwielt1-size-m-color-green
+                    cq:tags="[we-retail:gender/men,we-retail:apparel/coat,we-retail:season/winter,we-retail:activity/skiing]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-identifier-meskwielt1-size-l-color-green
+                    cq:tags="[we-retail:gender/men,we-retail:apparel/coat,we-retail:season/winter,we-retail:activity/skiing]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-identifier-meskwielt1-size-xl-color-green
+                    cq:tags="[we-retail:gender/men,we-retail:apparel/coat,we-retail:season/winter,we-retail:activity/skiing]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-identifier-meskwielt2-size-xs-color-purple
+                    cq:tags="[we-retail:gender/men,we-retail:apparel/coat,we-retail:season/winter,we-retail:activity/skiing]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-identifier-meskwielt2-size-s-color-purple
+                    cq:tags="[we-retail:gender/men,we-retail:apparel/coat,we-retail:season/winter,we-retail:activity/skiing]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-identifier-meskwielt2-size-m-color-purple
+                    cq:tags="[we-retail:gender/men,we-retail:apparel/coat,we-retail:season/winter,we-retail:activity/skiing]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-identifier-meskwielt2-size-l-color-purple
+                    cq:tags="[we-retail:gender/men,we-retail:apparel/coat,we-retail:season/winter,we-retail:activity/skiing]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-identifier-meskwielt2-size-xl-color-purple
+                    cq:tags="[we-retail:gender/men,we-retail:apparel/coat,we-retail:season/winter,we-retail:activity/skiing]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-identifier-meskwielt3-size-xs-color-red
+                    cq:tags="[we-retail:gender/men,we-retail:apparel/coat,we-retail:season/winter,we-retail:activity/skiing]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-identifier-meskwielt3-size-s-color-red
+                    cq:tags="[we-retail:gender/men,we-retail:apparel/coat,we-retail:season/winter,we-retail:activity/skiing]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-identifier-meskwielt3-size-m-color-red
+                    cq:tags="[we-retail:gender/men,we-retail:apparel/coat,we-retail:season/winter,we-retail:activity/skiing]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-identifier-meskwielt3-size-l-color-red
+                    cq:tags="[we-retail:gender/men,we-retail:apparel/coat,we-retail:season/winter,we-retail:activity/skiing]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-identifier-meskwielt3-size-xl-color-red
+                    cq:tags="[we-retail:gender/men,we-retail:apparel/coat,we-retail:season/winter,we-retail:activity/skiing]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+            </dam:cfVariations>
+        </metadata>
         <model jcr:primaryType="nt:unstructured">
             <variations jcr:primaryType="nt:unstructured">
                 <var-identifier-meskwielt1-size-xs-color-green

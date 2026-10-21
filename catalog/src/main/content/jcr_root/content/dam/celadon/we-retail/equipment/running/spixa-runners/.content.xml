@@ -62,6 +62,7 @@
                 string_x0040_sku="84391210"/>
         </indexedData>
         <metadata
+            cq:tags="[we-retail:activity/running,we-retail:apparel/footwear]"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>
         <related jcr:primaryType="nt:unstructured"/>

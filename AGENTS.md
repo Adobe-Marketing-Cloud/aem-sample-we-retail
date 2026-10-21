@@ -30,7 +30,7 @@ must render empty; product recommendations are deferred (no-op stubs only).
 | `ui.content` | `we.retail.ui.content` | Sample content under `/content` |
 | `catalog` | `we.retail.catalog` | Celadon CFM models + blueprint-mode catalog content under `/content/dam/celadon` |
 | `config` | `we.retail.config` | OSGi configs, incl. CIF/Celadon `osgiconfig` |
-| `commons.content.slim` | `we.retail.commons.content.slim` | Shared commons content |
+| `commons.content.slim` | `we.retail.commons.content.slim` | Shared commons content: `/content/dam/we-retail` assets and the `we-retail` tag taxonomy |
 | `all` | `we.retail.all` | Combined package embedding all subpackages |
 | `all-deps` | `we.retail.all.deps` | Self-contained package: embeds Core WCM, CIF Core, the Magento GraphQL bundle and the `all` subpackage. Only the AEM Commerce Add-on (2025.09.18.00 or later) must be pre-installed |
 
@@ -89,10 +89,14 @@ fresh deploy, with **no import step**:
   fragments live under their blueprint categories and carry editorial slugs used for
   PDP/PLP URLs. `description` holds the classic `summary` (the product page summary) and
   `short_description` the classic `jcr:description` (the label above the product name and
-  the product card subtitle).
+  the product card subtitle). Product fragments carry the classic product tags in
+  `metadata/cq:tags`, mirrored onto each variation.
 
 The package `filter.xml` covers all three model roots and `/content/dam/celadon`. The
 served catalog is `we-retail` (default, `ready=true`, ~60 products / 21 categories).
+The `we-retail` tag taxonomy ships in `commons.content.slim`; the catalog package declares
+a dependency on it so the tags exist before the fragments install (AEM strips `cq:tags`
+values that reference missing tags).
 
 ## Build & Deploy
 

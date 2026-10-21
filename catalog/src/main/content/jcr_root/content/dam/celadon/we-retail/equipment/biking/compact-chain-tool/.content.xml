@@ -71,6 +71,7 @@
                 string_x0040_sku="eqbisucol"/>
         </indexedData>
         <metadata
+            cq:tags="[we-retail:equipment,we-retail:activity/biking,we-retail:season/summer]"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>
         <related jcr:primaryType="nt:unstructured"/>

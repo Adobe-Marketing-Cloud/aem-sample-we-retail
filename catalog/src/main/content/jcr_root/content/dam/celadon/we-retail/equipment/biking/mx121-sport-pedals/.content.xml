@@ -136,8 +136,16 @@
                 stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"/>
         </indexedData>
         <metadata
+            cq:tags="[we-retail:equipment,we-retail:activity/biking,we-retail:season/summer]"
             jcr:mixinTypes="[cq:Taggable]"
-            jcr:primaryType="nt:unstructured"/>
+            jcr:primaryType="nt:unstructured">
+            <dam:cfVariations jcr:primaryType="nt:unstructured">
+                <var-size-onesize
+                    cq:tags="[we-retail:activity/biking,we-retail:season/summer,we-retail:equipment]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+            </dam:cfVariations>
+        </metadata>
         <model jcr:primaryType="nt:unstructured">
             <variations jcr:primaryType="nt:unstructured">
                 <var-size-onesize

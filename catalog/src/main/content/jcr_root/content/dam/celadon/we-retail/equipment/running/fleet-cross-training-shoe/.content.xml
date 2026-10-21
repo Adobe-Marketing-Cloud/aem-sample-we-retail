@@ -260,8 +260,24 @@
                 stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--9-11-13]"/>
         </indexedData>
         <metadata
+            cq:tags="[we-retail:apparel/footwear,we-retail:season/summer,we-retail:activity/running]"
             jcr:mixinTypes="[cq:Taggable]"
-            jcr:primaryType="nt:unstructured"/>
+            jcr:primaryType="nt:unstructured">
+            <dam:cfVariations jcr:primaryType="nt:unstructured">
+                <var-size-9
+                    cq:tags="[we-retail:season/summer,we-retail:activity/running,we-retail:apparel/footwear]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-size-11
+                    cq:tags="[we-retail:season/summer,we-retail:activity/running,we-retail:apparel/footwear]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-size-13
+                    cq:tags="[we-retail:season/summer,we-retail:activity/running,we-retail:apparel/footwear]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+            </dam:cfVariations>
+        </metadata>
         <model jcr:primaryType="nt:unstructured">
             <variations jcr:primaryType="nt:unstructured">
                 <var-size-9

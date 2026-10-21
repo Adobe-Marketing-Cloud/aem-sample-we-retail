@@ -184,8 +184,20 @@
                 stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/color--cuzco-blue-cuzco-orange]"/>
         </indexedData>
         <metadata
+            cq:tags="[we-retail:activity/hiking,we-retail:season/summer]"
             jcr:mixinTypes="[cq:Taggable]"
-            jcr:primaryType="nt:unstructured"/>
+            jcr:primaryType="nt:unstructured">
+            <dam:cfVariations jcr:primaryType="nt:unstructured">
+                <var-identifier-eqsmcz1-color-cuzcoblue
+                    cq:tags="[we-retail:activity/hiking,we-retail:season/summer]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+                <var-identifier-eqsmcz2-color-cuzcoorange
+                    cq:tags="[we-retail:activity/hiking,we-retail:season/summer]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+            </dam:cfVariations>
+        </metadata>
         <model jcr:primaryType="nt:unstructured">
             <variations jcr:primaryType="nt:unstructured">
                 <var-identifier-eqsmcz1-color-cuzcoblue

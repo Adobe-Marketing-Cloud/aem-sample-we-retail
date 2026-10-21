@@ -65,6 +65,7 @@
                 stringArray_x0040_additionalCategories="[equipment/running]"/>
         </indexedData>
         <metadata
+            cq:tags="[we-retail:gender/women,we-retail:activity/running,we-retail:apparel/pants]"
             jcr:mixinTypes="[cq:Taggable]"
             jcr:primaryType="nt:unstructured"/>
         <related jcr:primaryType="nt:unstructured"/>
