@@ -18,7 +18,7 @@ package we.retail.core.model;
 public class Constants {
     public static final String TEST_HOME_PAGE = "/content/we-retail/us/en";
 
-    public static final String HEADER_SIGNIN_PATH = "/content/we-retail/us/en/community/signin";
+    public static final String HEADER_SIGNIN_PATH = "/libs/granite/core/content/login.html?resource=/content/we-retail/us/en.html";
     public static final String HEADER_SIGNUP_PATH = "/content/we-retail/us/en/community/signup";
     public static final String HEADER_FORGOT_PWD_PATH = "/content/we-retail/us/en/community/useraccount/forgotpassword";
     public static final String HEADER_ACCOUNT_PATH = "/content/we-retail/us/en/user/account";

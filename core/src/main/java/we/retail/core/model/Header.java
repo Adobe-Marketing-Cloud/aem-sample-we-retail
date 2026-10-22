@@ -51,7 +51,7 @@ public class Header {
     public static final String PROP_REDIRECT_TARGET = "cq:redirectTarget";
     public static final String PROP_HIDE_SUB_IN_NAV = "hideSubItemsInNav";
 
-    public static final String SIGN_IN_PATH = "community/signin";
+    public static final String SIGN_IN_PATH = "/libs/granite/core/content/login.html";
     public static final String SIGN_UP_PATH = "community/signup";
 
     @SuppressWarnings("squid:S2068")
@@ -118,7 +118,7 @@ public class Header {
 
             isAnonymous = userId == null || userId.equals(anonymousId);
             currentPath = currentPage.getPath();
-            signInPath = computePagePath(SIGN_IN_PATH);
+            signInPath = SIGN_IN_PATH + "?resource=" + currentPath + ".html";
             signUpPath = computePagePath(SIGN_UP_PATH);
             forgotPwdPath = computePagePath(FORGOT_PWD_PATH);
             accountPath = ACCOUNT_PATH;
