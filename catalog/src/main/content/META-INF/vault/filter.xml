@@ -15,6 +15,7 @@
   ~ limitations under the License.
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <workspaceFilter version="1.0">
+    <filter root="/content/cq:tags/we-retail" mode="merge"/>
     <filter root="/conf/we-retail/settings/dam/cfm/models/product"/>
     <filter root="/conf/we-retail/settings/dam/cfm/models/celadon-option-definition"/>
     <filter root="/conf/we-retail/settings/dam/cfm/models/celadon-attribute"/>

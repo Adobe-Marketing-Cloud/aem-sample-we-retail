@@ -105,7 +105,6 @@
                                     <overWrite>true</overWrite>
                                     <includes>
                                         jcr_root/content/dam/we-retail/**,
-                                        jcr_root/content/_cq_tags/we-retail/**,
                                         jcr_root/conf/we-retail/settings/dam/cfm/models/we-retail-store-info/**
                                     </includes>
                                 </artifactItem>

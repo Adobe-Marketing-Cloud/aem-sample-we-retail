@@ -16,6 +16,5 @@
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <workspaceFilter version="1.0">
     <filter root="/content/dam/we-retail"/>
-    <filter root="/content/cq:tags/we-retail"/>
     <filter root="/conf/we-retail/settings/dam/cfm/models/we-retail-store-info"/>
 </workspaceFilter>
