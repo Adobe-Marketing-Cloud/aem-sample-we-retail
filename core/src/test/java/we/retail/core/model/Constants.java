@@ -21,10 +21,6 @@ public class Constants {
     public static final String HEADER_SIGNIN_PATH = "/content/we-retail/us/en/community/signin";
     public static final String HEADER_SIGNUP_PATH = "/content/we-retail/us/en/community/signup";
     public static final String HEADER_FORGOT_PWD_PATH = "/content/we-retail/us/en/community/useraccount/forgotpassword";
-    public static final String HEADER_MESSAGING_PATH = "/content/we-retail/us/en/community/messaging";
-    public static final String HEADER_NOTIFICATION_PATH = "/content/we-retail/us/en/community/notifications";
-    public static final String HEADER_MODERATION_PATH = "/content/we-retail/us/en/community/moderation";
-    public static final String HEADER_PROFILE_PATH = "/content/we-retail/us/en/community/profile";
     public static final String HEADER_ACCOUNT_PATH = "/content/we-retail/us/en/user/account";
     public static final String HEADER_THEME = "inverse";
     public static final String HEADER_LANG_ROOT = "/content/we-retail/us/en";

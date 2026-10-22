@@ -22,24 +22,6 @@
         <ul class="nav navbar-nav navbar-right">
             <sly data-sly-test.notAnonymous="${!header.anonymous}">
             <li><a href="${header.accountPath @ extension = 'html'}">${ 'Account' @ i18n }</a></li>
-            <li>
-                <a data-sly-test="${header.profileAvailable}" href="${header.profilePath @ extension = 'html'}">${ 'Profile' @ i18n }</a>
-                <a data-sly-test="${!header.profileAvailable}" href="#" aria-disabled="true">${ 'Profile' @ i18n }</a>
-            </li>
-            <li>
-                <a data-sly-test="${header.messagingAvailable}" href="${header.messagingPath @ extension = 'html'}"><i class="fa fa-envelope-o"></i> ${
-                    'Messages' @ i18n }
-                    <span class="badge" id="we-retail-message-count" data-siteurl="/content/we-retail/us/en/community">0</span></a>
-                <a data-sly-test="${!header.messagingAvailable}" href="#" aria-disabled="true"><i class="fa fa-envelope-o"></i> ${
-                    'Messages' @ i18n }
-                    <span class="badge" id="we-retail-message-count" data-siteurl="/content/we-retail/us/en/community">0</span></a>
-            </li>
-            <li>
-                <a data-sly-test="${header.notificationAvailable}" href="${header.notificationPath @ extension = 'html'}"><i class="fa fa-flag-o"></i> ${ 'Notifications' @ i18n }
-                    <span class="badge" id="we-retail-notification-count" data-siteurl="/content/we-retail/us/en/community">0</span></a>
-                <a data-sly-test="${!header.notificationAvailable}" href="#" aria-disabled="true"><i class="fa fa-flag-o"></i> ${ 'Notifications' @ i18n }
-                    <span class="badge" id="we-retail-notification-count" data-siteurl="/content/we-retail/us/en/community">0</span></a>
-            </li>
             </sly>
             <li>
                 <div class="we-Cart we-Cart--disabled">
@@ -47,10 +29,6 @@
                         <i class="fa fa-shopping-cart"></i> ${'My cart' @ i18n}
                     </a>
                 </div>
-            </li>
-            <li data-sly-test="${!header.anonymous && (header.isModerator || !header.moderationAvailable)}">
-                <a data-sly-test="${header.isModerator && header.moderationAvailable}" href="${header.moderationPath @ extension = 'html'}">${ 'Moderation' @ i18n }</a>
-                <a data-sly-test="${!header.moderationAvailable}" href="#" aria-disabled="true">${ 'Moderation' @ i18n }</a>
             </li>
             <li data-sly-test="${!notAnonymous}"><a href="${header.signInPath @ extension = 'html'}">${ 'Login' @ i18n }</a></li>
             <li data-sly-test="${notAnonymous}"><a href="/system/sling/logout.html?resource=${header.currentPath @ extension = 'html'}">${
@@ -92,30 +70,6 @@
                 <li class="visible-xs visible-sm divider" role="separator"></li>
                 <li class="visible-xs visible-sm" data-sly-test="${header.anonymous}"><a href="${header.signInPath @ extension = 'html'}">${ 'Login' @ i18n }</a></li>
                 <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}"><a href="/system/sling/logout.html?resource=${header.currentPath @ extension = 'html'}">${ 'Log out' @ i18n }</a></li>
-                <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}">
-                    <a data-sly-test="${header.profileAvailable}" href="${header.profilePath @ extension = 'html'}">${ 'Profile' @ i18n }</a>
-                    <a data-sly-test="${!header.profileAvailable}" href="#" aria-disabled="true">${ 'Profile' @ i18n }</a>
-                </li>
-                <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}">
-                    <a data-sly-test="${header.messagingAvailable}" href="${header.messagingPath @ extension = 'html'}" class="visible-xs visible-sm">${ 'Messages' @ i18n }
-                        <span class="badge pull-right">0</span>
-                    </a>
-                    <a data-sly-test="${!header.messagingAvailable}" href="#" aria-disabled="true" class="visible-xs visible-sm">${ 'Messages' @ i18n }
-                        <span class="badge pull-right">0</span>
-                    </a>
-                </li>
-                <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}">
-                    <a data-sly-test="${header.notificationAvailable}" href="${header.notificationPath @ extension = 'html'}" class="visible-xs visible-sm">${ 'Notifications' @ i18n }
-                        <span class="badge pull-right">0</span>
-                    </a>
-                    <a data-sly-test="${!header.notificationAvailable}" href="#" aria-disabled="true" class="visible-xs visible-sm">${ 'Notifications' @ i18n }
-                        <span class="badge pull-right">0</span>
-                    </a>
-                </li>
-                <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous && (header.isModerator || !header.moderationAvailable)}">
-                    <a data-sly-test="${header.isModerator && header.moderationAvailable}" href="${header.moderationPath @ extension = 'html'}">${ 'Moderation' @ i18n }</a>
-                    <a data-sly-test="${!header.moderationAvailable}" href="#" aria-disabled="true">${ 'Moderation' @ i18n }</a>
-                </li>
                 <li class="visible-xs visible-sm"><a href="#" data-toggle="modal" data-target=".we-LanguageModal"><i class="we-lang-icon we-lang-icon-${header.currentLanguage.countrycode}"></i> ${header.currentLanguage.languagecode}</a></li>
             </ul>
         </div>

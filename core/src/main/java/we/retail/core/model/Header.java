@@ -30,14 +30,12 @@ import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.api.scripting.SlingScriptHelper;
 import org.apache.sling.models.annotations.Model;
-import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.apache.sling.models.annotations.injectorspecific.ScriptVariable;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.adobe.granite.security.user.UserManagementService;
-import com.day.cq.wcm.api.LanguageManager;
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageFilter;
 import com.day.cq.wcm.api.PageManager;
@@ -58,10 +56,6 @@ public class Header {
 
     @SuppressWarnings("squid:S2068")
     public static final String FORGOT_PWD_PATH = "community/useraccount/forgotpassword";
-    public static final String NOTIFICATION_PATH = "community/notifications";
-    public static final String MODERATION_PATH = "community/moderation";
-    public static final String MESSAGING_PATH = "community/messaging";
-    public static final String PROFILE_PATH = "community/profile";
     public static final String ACCOUNT_PATH = "/content/we-retail/us/en/user/account";
     public static final String DEFAULT_ROOT_PATH = "/content/we-retail/us/en/";
     private static final String NN_NAVIGATION = "navigation";
@@ -85,27 +79,15 @@ public class Header {
     @SlingObject
     private SlingScriptHelper slingScriptHelper;
 
-    @OSGiService
-    private LanguageManager languageManager;
 
-    private boolean isModerator;
     private boolean isAnonymous;
     private String currentPath;
     private String signInPath;
     private String signUpPath;
     private String forgotPwdPath;
-    private String messagingPath;
-    private String notificationPath;
-    private String moderationPath;
-    private String profilePath;
     private String accountPath;
     private String languageRoot;
     private Language currentLanguage;
-    private boolean isCommunitiesPage;
-    private boolean profileAvailable;
-    private boolean messagingAvailable;
-    private boolean notificationAvailable;
-    private boolean moderationAvailable;
     private String userPath;
     private Page root;
     private UserManagementService ums;
@@ -134,39 +116,21 @@ public class Header {
             String anonymousId = ums != null ? ums.getAnonymousId() : UserConstants.DEFAULT_ANONYMOUS_ID;
             String userId = resolver.getUserID();
 
-            // Communities APIs are not available on the target SDK, so keep
-            // moderator-specific header behavior disabled when that runtime is absent.
-            isModerator = false;
             isAnonymous = userId == null || userId.equals(anonymousId);
             currentPath = currentPage.getPath();
             signInPath = computePagePath(SIGN_IN_PATH);
             signUpPath = computePagePath(SIGN_UP_PATH);
             forgotPwdPath = computePagePath(FORGOT_PWD_PATH);
-            messagingPath = computePagePath(MESSAGING_PATH);
-            notificationPath = computePagePath(NOTIFICATION_PATH);
-            moderationPath = computePagePath(MODERATION_PATH);
-            profilePath = computePagePath(PROFILE_PATH);
             accountPath = ACCOUNT_PATH;
-            profileAvailable = pageExists(profilePath);
-            messagingAvailable = pageExists(messagingPath);
-            notificationAvailable = pageExists(notificationPath);
-            moderationAvailable = pageExists(moderationPath);
 
             UserManager userManager = resolver.adaptTo(UserManager.class);
             if (userManager != null) {
                 userPath = userManager.getAuthorizable(userId).getPath();
             }
-            isCommunitiesPage = currentPage.getPath().startsWith(languageRoot + "/community");
 
             navigationResource = resource.getChild(NN_NAVIGATION);
             if (navigationResource == null) {
                 Template template = currentPage.getTemplate();
-                if (isCommunitiesPage && languageManager != null) {
-                    Page languageRoot = languageManager.getLanguageRoot(currentPage.getContentResource());
-                    if (languageRoot != null) {
-                        template = languageRoot.getTemplate();
-                    }
-                }
                 if (template != null) {
                     Resource templateResource = resolver.getResource(template.getPath());
                     if (templateResource != null) {
@@ -191,10 +155,6 @@ public class Header {
         return userPath;
     }
 
-    public boolean isModerator() {
-        return isModerator;
-    }
-
     public boolean isAnonymous() {
         return isAnonymous;
     }
@@ -215,38 +175,6 @@ public class Header {
         return forgotPwdPath;
     }
 
-    public String getMessagingPath() {
-        return messagingPath;
-    }
-
-    public String getNotificationPath() {
-        return notificationPath;
-    }
-
-    public String getModerationPath() {
-        return moderationPath;
-    }
-
-    public String getProfilePath() {
-        return profilePath;
-    }
-
-    public boolean isProfileAvailable() {
-        return profileAvailable;
-    }
-
-    public boolean isMessagingAvailable() {
-        return messagingAvailable;
-    }
-
-    public boolean isNotificationAvailable() {
-        return notificationAvailable;
-    }
-
-    public boolean isModerationAvailable() {
-        return moderationAvailable;
-    }
-
     public String getAccountPath() {
         return accountPath;
     }
@@ -257,10 +185,6 @@ public class Header {
 
     public Language getCurrentLanguage() {
         return currentLanguage;
-    }
-
-    public boolean isCommunitiesPage() {
-        return isCommunitiesPage;
     }
 
     private String computePagePath(final String relativePath) {
@@ -320,15 +244,11 @@ public class Header {
     private void printDebug() {
         LOGGER.debug("======================================");
         LOGGER.debug("userPath: {}", userPath);
-        LOGGER.debug("isModerator: {}", isModerator);
         LOGGER.debug("isAnonymous: {}", isAnonymous);
         LOGGER.debug("currentPath: {}", currentPath);
         LOGGER.debug("signInPath: {}", signInPath);
         LOGGER.debug("signUpPath: {}", signUpPath);
         LOGGER.debug("forgotPwdPath: {}", forgotPwdPath);
-        LOGGER.debug("messagingPath: {}", messagingPath);
-        LOGGER.debug("notificationPath: {}", notificationPath);
-        LOGGER.debug("profilePath: {}", profilePath);
         LOGGER.debug("languageRoot: {}", languageRoot);
         if (currentLanguage != null) {
             LOGGER.debug("currentLanguage: {}", currentLanguage.getName());

@@ -77,11 +77,6 @@ public class HeaderTest {
 	}
 
 	@Test
-	public void testIsModerator() {
-		Assert.assertFalse(header.isModerator());
-	}
-
-	@Test
 	public void testIsAnonymous() {
 		Assert.assertTrue(header.isAnonymous());
 	}
@@ -108,30 +103,6 @@ public class HeaderTest {
 	public void testForgotPwdPath() {
 		String actualForgotPwdPath = header.getForgotPwdPath();
 		Assert.assertEquals(Constants.HEADER_FORGOT_PWD_PATH, actualForgotPwdPath);
-	}
-
-	@Test
-	public void testMessagingPath() {
-		String actualMessagingPath = header.getMessagingPath();
-		Assert.assertEquals(Constants.HEADER_MESSAGING_PATH, actualMessagingPath);
-	}
-
-	@Test
-	public void testNotificationPath() {
-		String actualNotificationPath = header.getNotificationPath();
-		Assert.assertEquals(Constants.HEADER_NOTIFICATION_PATH, actualNotificationPath);
-	}
-
-	@Test
-	public void testModerationPath() {
-		String actualModerationPath = header.getModerationPath();
-		Assert.assertEquals(Constants.HEADER_MODERATION_PATH, actualModerationPath);
-	}
-
-	@Test
-	public void testProfilePath() {
-		String actualProfilePath = header.getProfilePath();
-		Assert.assertEquals(Constants.HEADER_PROFILE_PATH, actualProfilePath);
 	}
 
 	@Test

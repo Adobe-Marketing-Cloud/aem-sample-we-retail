@@ -26,11 +26,8 @@ import org.apache.sling.testing.mock.sling.ResourceResolverType;
 
 import com.adobe.cq.commerce.api.CommerceService;
 import com.adobe.cq.commerce.api.Product;
-import com.adobe.cq.social.community.api.CommunityContext;
-import com.day.cq.wcm.api.Page;
 import com.google.common.base.Function;
 import common.mock.MockCommerceService;
-import common.mock.MockCommunityContext;
 import common.mock.MockProduct;
 import common.mock.MockUserManager;
 import io.wcm.testing.mock.aem.junit.AemContext;
@@ -80,13 +77,6 @@ public class AppAemContext {
                 @Override
                 public Product apply(@Nullable Resource resource) {
                     return new MockProduct(resource);
-                }
-            });
-            context.registerAdapter(Page.class, CommunityContext.class, new Function<Page, CommunityContext>() {
-                @Nullable
-                @Override
-                public CommunityContext apply(@Nullable Page page) {
-                    return new MockCommunityContext();
                 }
             });
             context.registerAdapter(ResourceResolver.class, UserManager.class, new Function<ResourceResolver, UserManager>() {
