@@ -92,11 +92,15 @@ fresh deploy, with **no import step**:
   the product card subtitle). Product fragments carry the classic product tags in
   `metadata/cq:tags`, mirrored onto each variation.
 - The tags those products use, under `content/_cq_tags/we-retail/`, as the importer
-  creates them from the classic taxonomy.
+  creates them from the classic taxonomy, one `.content.xml` per tag.
 
 The package `filter.xml` covers `/content/cq:tags/we-retail` (`merge` mode), all three
 model roots and `/content/dam/celadon`. The tags root must stay first: FileVault imports
 sibling nodes in filter order, and AEM strips `cq:tags` values that reference missing tags.
+`commons.content.slim` adds the FAQ tag `commonly-asked-question` to the same namespace the
+same way; one file per tag lets either package add its tags when the other installed
+first, because `merge` mode skips an existing node together with children defined inline
+in its file.
 The served catalog is `we-retail` (default, `ready=true`, ~60 products / 21 categories).
 
 ## Build & Deploy

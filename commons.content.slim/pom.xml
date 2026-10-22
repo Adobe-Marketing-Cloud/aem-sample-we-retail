@@ -48,6 +48,9 @@
                 <targetPath>../vault-work/META-INF</targetPath>
             </resource>
             <resource>
+                <directory>${basedir}/src/main/content/jcr_root</directory>
+            </resource>
+            <resource>
                 <directory>${project.build.directory}/generated-content/jcr_root</directory>
                 <excludes>
                     <exclude>**/.vlt</exclude>
