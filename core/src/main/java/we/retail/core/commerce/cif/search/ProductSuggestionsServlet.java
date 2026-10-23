@@ -21,7 +21,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
 
@@ -48,19 +47,11 @@ import com.adobe.cq.commerce.core.components.models.common.SiteStructure;
 import com.adobe.cq.commerce.core.components.models.searchresults.SearchResults;
 import com.adobe.cq.commerce.core.components.services.urls.UrlProvider;
 import com.adobe.cq.commerce.core.search.models.SearchResultsSet;
-import com.adobe.cq.commerce.graphql.client.GraphqlResponse;
-import com.adobe.cq.commerce.magento.graphql.CategoryFilterInput;
-import com.adobe.cq.commerce.magento.graphql.CategoryTree;
-import com.adobe.cq.commerce.magento.graphql.FilterEqualTypeInput;
-import com.adobe.cq.commerce.magento.graphql.Operations;
-import com.adobe.cq.commerce.magento.graphql.ProductInterface;
-import com.adobe.cq.commerce.magento.graphql.Query;
-import com.adobe.cq.commerce.magento.graphql.gson.Error;
 import com.adobe.granite.ui.components.ValueMapResourceWrapper;
 import com.day.cq.i18n.I18n;
 import com.day.cq.wcm.api.Page;
 
-import we.retail.core.model.ProductGrid;
+import we.retail.core.commerce.cif.CategoryNames;
 
 /**
  * Suggests the best matching products for a search term, together with the link to the site's search results page.
@@ -155,7 +146,7 @@ public class ProductSuggestionsServlet extends SlingSafeMethodsServlet {
                 }
 
                 String title = productListItem.getTitle();
-                String url = buildProductUrl(request, page, productListItem);
+                String url = productListItem.getURL();
                 if (StringUtils.isNotBlank(title) && StringUtils.isNotBlank(url)) {
                     products.add(Json.createObjectBuilder().add("title", title).add("url", url));
                     count++;
@@ -180,15 +171,6 @@ public class ProductSuggestionsServlet extends SlingSafeMethodsServlet {
         ValueMapResourceWrapper searchResultsResource = new ValueMapResourceWrapper(contentResource, CIF_SEARCH_RESULTS_RESOURCE_TYPE);
         searchResultsResource.getValueMap().put(PN_PAGE_SIZE, MAX_SUGGESTIONS);
         return modelFactory.getModelFromWrappedRequest(request, searchResultsResource, SearchResults.class);
-    }
-
-    private String buildProductUrl(SlingHttpServletRequest request, Page page, ProductListItem productListItem) {
-        ProductInterface product = productListItem.getProduct();
-        if (product == null) {
-            return StringUtils.EMPTY;
-        }
-
-        return ProductGrid.toProductUrl(urlProvider, request, page, product.getSku(), product.getUrlPath(), null);
     }
 
     private String buildResultsUrl(SlingHttpServletRequest request, Page page, String searchTerm, CategoryScope categoryScope)
@@ -216,29 +198,14 @@ public class ProductSuggestionsServlet extends SlingSafeMethodsServlet {
 
         try {
             String categoryUid = urlProvider.getCategoryIdentifier(request);
-            String categoryName = StringUtils.isNotBlank(categoryUid) ? fetchCategoryName(request, categoryUid) : null;
+            String categoryName = StringUtils.isNotBlank(categoryUid)
+                ? CategoryNames.byUid(request.adaptTo(MagentoGraphqlClient.class), categoryUid)
+                : null;
             return StringUtils.isNotBlank(categoryName) ? new CategoryScope(categoryUid, categoryName) : null;
         } catch (RuntimeException e) {
             LOGGER.warn("Could not resolve the category to scope product suggestions on " + page.getPath(), e);
             return null;
         }
-    }
-
-    private String fetchCategoryName(SlingHttpServletRequest request, String categoryUid) {
-        MagentoGraphqlClient magentoGraphqlClient = request.adaptTo(MagentoGraphqlClient.class);
-        if (magentoGraphqlClient == null) {
-            return null;
-        }
-
-        CategoryFilterInput filter = new CategoryFilterInput().setCategoryUid(new FilterEqualTypeInput().setEq(categoryUid));
-        String query = Operations.query(q -> q.categoryList(args -> args.filters(filter), category -> category.name())).toString();
-        GraphqlResponse<Query, Error> response = magentoGraphqlClient.execute(query);
-        if (response == null || response.getErrors() != null && !response.getErrors().isEmpty() || response.getData() == null) {
-            return null;
-        }
-
-        List<CategoryTree> categories = response.getData().getCategoryList();
-        return categories != null && !categories.isEmpty() && categories.get(0) != null ? categories.get(0).getName() : null;
     }
 
     private static final class CategoryScope {

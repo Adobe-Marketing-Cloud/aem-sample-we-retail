@@ -25,15 +25,14 @@ import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;
 import org.apache.sling.models.annotations.injectorspecific.ScriptVariable;
 import org.apache.sling.models.annotations.injectorspecific.Self;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
-import org.apache.sling.models.annotations.Via;
-import org.apache.sling.models.annotations.via.ForcedResourceType;
 import com.adobe.cq.commerce.core.components.models.common.SiteStructure;
 import com.adobe.cq.commerce.core.components.models.product.Product;
 import com.day.cq.wcm.api.Page;
 
+import we.retail.core.commerce.cif.CatalogPlaceholders;
+
 @Model(adaptables = SlingHttpServletRequest.class)
 public class ProductModel {
-    private static final String CIF_PRODUCT_RESOURCE_TYPE = "core/cif/components/commerce/product/v2/product";
 
     @SlingObject
     private Resource resource;
@@ -48,7 +47,6 @@ public class ProductModel {
     private SiteStructure siteStructure;
 
     @Self(injectionStrategy = InjectionStrategy.OPTIONAL)
-    @Via(type = ForcedResourceType.class, value = CIF_PRODUCT_RESOURCE_TYPE)
     private Product cifProduct;
 
     private ProductItem productItem;
@@ -87,6 +85,6 @@ public class ProductModel {
     private boolean isUsableRouteProduct(Product product) {
         return product != null
             && Boolean.TRUE.equals(product.getFound())
-            && !StringUtils.equals(product.getName(), "Product name");
+            && !CatalogPlaceholders.isProductName(product.getName());
     }
 }

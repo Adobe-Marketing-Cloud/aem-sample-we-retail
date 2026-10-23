@@ -17,7 +17,7 @@ Celadon is built in-reactor as the `celadon` module and deployed alongside We.Re
 
 See `cif_migration.md` for the full migration specification, scope, principles, and
 acceptance criteria. Cart, checkout, and order history are explicitly out of scope and
-must render empty; product recommendations are deferred (no-op stubs only).
+must render empty; product recommendations are deferred (the component renders a placeholder).
 
 ## Modules
 
@@ -48,11 +48,16 @@ Deploy). The we.retail bundle (`core`) still targets Java 8 bytecode.
 
 ### CIF adapter layer (`core`)
 
-New CIF code lives under `we.retail.core.commerce.cif`. Recommendation stubs are in
-`we.retail.core.commerce.cif.recommendations` (`RecommendationService`,
-`NoopRecommendationService`, `RecommendationItem`). Storefront Sling Models being
-migrated to CIF are in `we.retail.core.model` (e.g. `ProductModel`, `ProductGrid`,
-`ProductGridItem`, `ProductFilter`, `ProductItem`).
+New CIF code lives under `we.retail.core.commerce.cif` (`CategoryNames`,
+`CatalogPlaceholders`). Storefront Sling Models being migrated to CIF are in
+`we.retail.core.model` (e.g. `ProductModel`, `ProductGrid`, `ProductGridItem`,
+`ProductFilter`, `ProductItem`). They adapt the CIF models (product, product list, search
+results, product carousel) and map their data onto the classic HTL contract.
+
+`ProductGrid` lists a category through the CIF product list, search results through the
+CIF search results and author-picked products through the CIF product carousel, which
+loads all picked SKUs in one query; a picked variant keeps the label and filters of its
+product. Product links are the CIF product list items' URLs.
 
 Product search: `ProductGrid` shows CIF search results only on the configured
 `cq:cifSearchResultsPage` (`?search_query=`). The header search pop-up adds a products
@@ -62,8 +67,7 @@ section and a "see all results" link from
 `weretail/components/structure/search` clientlib. On a category page the script keeps the
 category suffix (`category-page.productsuggestions.json/men.html`), and the servlet scopes
 both the suggestions and the "see all results" link to that category with `category_uid`;
-elsewhere search covers the whole catalog. Product links are built by
-`ProductGrid.toProductUrl`.
+elsewhere search covers the whole catalog.
 
 Breadcrumbs keep the classic `we-retail-product-page` policy (start level 5, current page
 hidden); `CatalogBreadcrumb` applies it to the trail the CIF breadcrumb builds on category
@@ -199,8 +203,8 @@ curl -s -u admin:admin "http://localhost:4502/crx/packmgr/service.jsp?cmd=ls"
   instance. They require `JAVA_HOME` to point at JDK 21.
 - After changing a Sling Model or service, update the corresponding tests and run them.
 - Suggested coverage per `cif_migration.md` §8.7: PDP/PLP models build the current HTL
-  contract from CIF data; unsupported cart/order models removed or empty;
-  `NoopRecommendationService` returns no items; feature flags disable transactional actions.
+  contract from CIF data; unsupported cart/order models removed or empty; feature flags
+  disable transactional actions.
 
 ## Notes
 

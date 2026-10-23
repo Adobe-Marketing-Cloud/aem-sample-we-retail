@@ -36,16 +36,14 @@ import com.adobe.granite.ui.components.ValueMapResourceWrapper;
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.Template;
 
+import we.retail.core.commerce.cif.CatalogPlaceholders;
+
 @Model(adaptables = SlingHttpServletRequest.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class PageHeadMetadata {
     private static final String WERETAIL_PRODUCT_RESOURCE_TYPE = "weretail/components/structure/product";
     private static final String WERETAIL_PRODUCT_GRID_RESOURCE_TYPE = "weretail/components/content/productgrid";
     private static final String CIF_PRODUCT_RESOURCE_TYPE = "core/cif/components/commerce/product/v2/product";
     private static final String CIF_PRODUCT_LIST_RESOURCE_TYPE = "core/cif/components/commerce/productlist/v2/productlist";
-    private static final String CATEGORY_PAGE_TITLE = "Category Page";
-    private static final String PRODUCT_PAGE_TITLE = "Product Page";
-    private static final String CATEGORY_PLACEHOLDER = "Category name";
-    private static final String PRODUCT_PLACEHOLDER = "Product name";
 
     @Self
     private SlingHttpServletRequest request;
@@ -200,9 +198,8 @@ public class PageHeadMetadata {
             return false;
         }
 
-        return !StringUtils.equals(value, CATEGORY_PAGE_TITLE)
-            && !StringUtils.equals(value, PRODUCT_PAGE_TITLE)
-            && !StringUtils.equals(value, CATEGORY_PLACEHOLDER)
-            && !StringUtils.equals(value, PRODUCT_PLACEHOLDER);
+        return !CatalogPlaceholders.isPageTitle(value)
+            && !CatalogPlaceholders.isCategoryName(value)
+            && !CatalogPlaceholders.isProductName(value);
     }
 }

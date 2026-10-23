@@ -23,12 +23,8 @@ import java.util.Set;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 
-import com.day.cq.wcm.api.Page;
-
 import com.adobe.cq.commerce.core.components.models.common.Price;
 import com.adobe.cq.commerce.core.components.models.common.ProductListItem;
-import com.adobe.cq.commerce.core.components.models.product.Product;
-import com.adobe.cq.commerce.core.components.models.product.Variant;
 import com.adobe.cq.commerce.magento.graphql.ConfigurableProduct;
 import com.adobe.cq.commerce.magento.graphql.ConfigurableProductOptions;
 import com.adobe.cq.commerce.magento.graphql.ConfigurableProductOptionsValues;
@@ -57,56 +53,23 @@ public class ProductGridItem {
         this.filters = filters;
     }
 
-    public static ProductGridItem fromProduct(Product product, Page page, SlingHttpServletRequest request) {
-        return fromProduct(product, page, request, null);
+    public static ProductGridItem fromProductListItem(ProductListItem productListItem, SlingHttpServletRequest request) {
+        return fromProductListItem(productListItem, request, null);
     }
 
-    public static ProductGridItem fromProduct(Product product, Page page, SlingHttpServletRequest request, String resolvedPath) {
-        return fromProduct(product, page, request, resolvedPath, null);
-    }
-
-    public static ProductGridItem fromProduct(Product product, Page page, SlingHttpServletRequest request, String resolvedPath,
-        String selectedVariantSku) {
-        ProductInterface productData = ProductItem.fetchProduct(product);
-        String defaultImage = ProductItem.resolveImage(request, ProductItem.assetPath(product.getAssets()), ProductItem.imagePath(productData));
-        String resolvedPrice = ProductItem.formatPrice(product.getPriceRange());
-        Variant selectedVariant = resolveSelectedVariant(product, selectedVariantSku);
-        String image = selectedVariant != null
-            ? ProductItem.resolveImage(request, ProductItem.assetPath(selectedVariant.getAssets()), defaultImage)
-            : defaultImage;
-        String displayName = selectedVariant != null ? StringUtils.defaultIfBlank(selectedVariant.getName(), product.getName()) : product.getName();
-        String displayPrice = selectedVariant != null
-            ? StringUtils.defaultIfBlank(ProductItem.formatPrice(selectedVariant.getPriceRange()), resolvedPrice)
-            : resolvedPrice;
-        String pagePath = resolvePagePath(page, request);
-
-        return new ProductGridItem(
-            image,
-            displayName,
-            ProductItem.descriptionLabel(productData),
-            displayPrice,
-            StringUtils.defaultIfBlank(resolvedPath, pagePath),
-            buildFilters(productData, displayPrice, selectedVariant != null ? null : product.getPriceRange()));
-    }
-
-    public static ProductGridItem fromProductListItem(ProductListItem productListItem, SlingHttpServletRequest request, String resolvedUrl) {
-        ProductInterface product = productListItem.getProduct();
+    /** Takes the label and the filters from {@code product} when given, e.g. the configurable product of a listed variant. */
+    public static ProductGridItem fromProductListItem(ProductListItem productListItem, SlingHttpServletRequest request,
+        ProductInterface product) {
+        ProductInterface productData = product != null ? product : productListItem.getProduct();
         String resolvedPrice = ProductItem.formatPrice(productListItem.getPriceRange());
 
         return new ProductGridItem(
             ProductItem.mapAssetPath(request, productListItem.getImageURL()),
             productListItem.getTitle(),
-            ProductItem.descriptionLabel(product),
+            ProductItem.descriptionLabel(productData),
             resolvedPrice,
-            StringUtils.defaultIfBlank(resolvedUrl, StringUtils.defaultIfBlank(productListItem.getURL(), productListItem.getPath())),
-            buildFilters(product, resolvedPrice, productListItem.getPriceRange()));
-    }
-
-    private static String resolvePagePath(Page page, SlingHttpServletRequest request) {
-        if (page == null || request == null || request.getResourceResolver() == null) {
-            return StringUtils.EMPTY;
-        }
-        return request.getResourceResolver().map(request, page.getPath()) + ".html";
+            StringUtils.defaultIfBlank(productListItem.getURL(), productListItem.getPath()),
+            buildFilters(productData, resolvedPrice, productListItem.getPriceRange()));
     }
 
     private static ProductFilters buildFilters(ProductInterface product, String price, Price priceRange) {
@@ -145,20 +108,6 @@ public class ProductGridItem {
     private static String customFieldValue(ProductInterface product, String field) {
         Object value = product.get(field);
         return value instanceof JsonElement && ((JsonElement) value).isJsonPrimitive() ? ((JsonElement) value).getAsString() : null;
-    }
-
-    private static Variant resolveSelectedVariant(Product product, String selectedVariantSku) {
-        if (product == null || StringUtils.isBlank(selectedVariantSku) || product.getVariants() == null) {
-            return null;
-        }
-
-        for (Variant variant : product.getVariants()) {
-            if (variant != null && StringUtils.equals(selectedVariantSku, variant.getSku())) {
-                return variant;
-            }
-        }
-
-        return null;
     }
 
     public boolean exists() {

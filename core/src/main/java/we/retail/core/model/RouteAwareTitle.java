@@ -15,8 +15,6 @@
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 package we.retail.core.model;
 
-import java.util.List;
-
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.request.RequestPathInfo;
@@ -31,18 +29,12 @@ import org.apache.sling.models.annotations.via.ResourceSuperType;
 
 import com.adobe.cq.commerce.core.components.client.MagentoGraphqlClient;
 import com.adobe.cq.commerce.core.components.models.common.SiteStructure;
-import com.adobe.cq.commerce.graphql.client.GraphqlResponse;
-import com.adobe.cq.commerce.magento.graphql.CategoryFilterInput;
-import com.adobe.cq.commerce.magento.graphql.CategoryTree;
-import com.adobe.cq.commerce.magento.graphql.CategoryTreeQueryDefinition;
-import com.adobe.cq.commerce.magento.graphql.FilterEqualTypeInput;
-import com.adobe.cq.commerce.magento.graphql.Operations;
-import com.adobe.cq.commerce.magento.graphql.Query;
-import com.adobe.cq.commerce.magento.graphql.QueryQuery;
-import com.adobe.cq.commerce.magento.graphql.gson.Error;
 import com.adobe.cq.wcm.core.components.commons.link.Link;
 import com.adobe.cq.wcm.core.components.models.Title;
 import com.day.cq.wcm.api.Page;
+
+import we.retail.core.commerce.cif.CatalogPlaceholders;
+import we.retail.core.commerce.cif.CategoryNames;
 
 @Model(
     adaptables = SlingHttpServletRequest.class,
@@ -129,9 +121,9 @@ public class RouteAwareTitle implements Title {
             return StringUtils.EMPTY;
         }
 
-        CategoryTree category = fetchCategoryByUrlPath(routePath);
-        if (category != null && StringUtils.isNotBlank(category.getName())) {
-            return category.getName();
+        String categoryName = fetchCategoryName(routePath);
+        if (StringUtils.isNotBlank(categoryName)) {
+            return categoryName;
         }
 
         return humanizeRoutePath(routePath);
@@ -147,11 +139,7 @@ public class RouteAwareTitle implements Title {
             return false;
         }
 
-        return !isPlaceholderTitle(delegateText) && !isPlaceholderTitle(authoredTitle);
-    }
-
-    private boolean isPlaceholderTitle(String text) {
-        return StringUtils.equals(text, "Category Page") || StringUtils.equals(text, "Product Page");
+        return !CatalogPlaceholders.isPageTitle(delegateText) && !CatalogPlaceholders.isPageTitle(authoredTitle);
     }
 
     private String extractRoutePath() {
@@ -172,41 +160,12 @@ public class RouteAwareTitle implements Title {
         return StringUtils.removeStart(StringUtils.removeEnd(suffix, ".html"), "/");
     }
 
-    private CategoryTree fetchCategoryByUrlPath(String routePath) {
-        if (magentoGraphqlClient == null || StringUtils.isBlank(routePath)) {
-            return null;
-        }
-
+    private String fetchCategoryName(String routePath) {
         try {
-            GraphqlResponse<Query, Error> response = magentoGraphqlClient.execute(buildCategoryQuery(routePath));
-            if (response == null || response.getErrors() != null && !response.getErrors().isEmpty()) {
-                return null;
-            }
-
-            Query data = response.getData();
-            List<CategoryTree> categories = data != null ? data.getCategoryList() : null;
-            if (categories == null || categories.isEmpty()) {
-                return null;
-            }
-
-            for (CategoryTree category : categories) {
-                if (category != null) {
-                    return category;
-                }
-            }
-            return null;
+            return CategoryNames.byUrlPath(magentoGraphqlClient, routePath);
         } catch (RuntimeException e) {
             return null;
         }
-    }
-
-    private String buildCategoryQuery(String routePath) {
-        CategoryFilterInput filter = new CategoryFilterInput().setUrlPath(new FilterEqualTypeInput().setEq(routePath));
-        QueryQuery.CategoryListArgumentsDefinition searchArgs = args -> args.filters(filter);
-        CategoryTreeQueryDefinition queryArgs = category -> category
-            .urlPath()
-            .name();
-        return Operations.query(query -> query.categoryList(searchArgs, queryArgs)).toString();
     }
 
     private String humanizeRoutePath(String routePath) {

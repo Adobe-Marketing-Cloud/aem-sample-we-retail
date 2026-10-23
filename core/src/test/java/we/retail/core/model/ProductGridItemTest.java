@@ -26,16 +26,11 @@ import org.apache.sling.api.resource.ResourceResolver;
 
 import com.adobe.cq.commerce.core.components.models.common.Price;
 import com.adobe.cq.commerce.core.components.models.common.ProductListItem;
-import com.adobe.cq.commerce.core.components.models.product.Asset;
-import com.adobe.cq.commerce.core.components.models.product.Product;
-import com.adobe.cq.commerce.core.components.models.product.Variant;
-import com.adobe.cq.commerce.core.components.models.retriever.AbstractProductRetriever;
 import com.adobe.cq.commerce.magento.graphql.CategoryInterface;
 import com.adobe.cq.commerce.magento.graphql.ComplexTextValue;
 import com.adobe.cq.commerce.magento.graphql.ConfigurableProduct;
 import com.adobe.cq.commerce.magento.graphql.ConfigurableProductOptions;
 import com.adobe.cq.commerce.magento.graphql.ConfigurableProductOptionsValues;
-import com.adobe.cq.commerce.magento.graphql.ProductInterface;
 import com.adobe.cq.commerce.magento.graphql.SimpleProduct;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
@@ -64,7 +59,7 @@ public class ProductGridItemTest {
         when(resourceResolver.map(request, "/content/dam/celadon/we-retail/me/footwear/meotwisus_img_0.jpeg"))
             .thenReturn("/content/dam/celadon/we-retail/me/footwear/meotwisus_img_0.jpeg");
 
-        ProductGridItem item = ProductGridItem.fromProductListItem(listItem, request, listItem.getURL());
+        ProductGridItem item = ProductGridItem.fromProductListItem(listItem, request);
 
         assertTrue(item.exists());
         assertEquals("Lightweight training shoe", item.getDescription());
@@ -88,7 +83,7 @@ public class ProductGridItemTest {
         when(listItem.getPriceRange()).thenReturn(price);
         when(listItem.getProduct()).thenReturn(product);
 
-        ProductGridItem item = ProductGridItem.fromProductListItem(listItem, request, listItem.getURL());
+        ProductGridItem item = ProductGridItem.fromProductListItem(listItem, request);
 
         assertEquals("$119.00", item.getPrice());
         assertEquals(Arrays.asList("$119.00", "$130.00"), new ArrayList<String>(item.getFilters().getPrices()));
@@ -101,7 +96,7 @@ public class ProductGridItemTest {
         when(size.getAsString()).thenReturn("Regular");
 
         ProductGridItem item = ProductGridItem.fromProductListItem(createSimpleListItem("Hiking Poles", size),
-            mock(SlingHttpServletRequest.class), "/content/we-retail/us/en/products/product-page.html/equipment/hiking/hiking-poles.html");
+            mock(SlingHttpServletRequest.class));
 
         assertEquals(Collections.singletonList("Regular"), new ArrayList<String>(item.getFilters().getSizes()));
         assertTrue(item.getFilters().getColors().isEmpty());
@@ -110,9 +105,9 @@ public class ProductGridItemTest {
     @Test
     public void testSkipsSizeFilterWhenSimpleProductHasNoSize() {
         ProductGridItem withNullSize = ProductGridItem.fromProductListItem(createSimpleListItem("Cabana Stripe Towel", JsonNull.INSTANCE),
-            mock(SlingHttpServletRequest.class), "/cabana-stripe-towel.html");
+            mock(SlingHttpServletRequest.class));
         ProductGridItem withoutSizeField = ProductGridItem.fromProductListItem(createSimpleListItem("Cabana Stripe Towel", null),
-            mock(SlingHttpServletRequest.class), "/cabana-stripe-towel.html");
+            mock(SlingHttpServletRequest.class));
 
         assertTrue(withNullSize.getFilters().getSizes().isEmpty());
         assertTrue(withoutSizeField.getFilters().getSizes().isEmpty());
@@ -129,46 +124,38 @@ public class ProductGridItemTest {
         when(listItem.getPriceRange()).thenReturn(price);
         when(listItem.getProduct()).thenReturn(product);
 
-        ProductGridItem item = ProductGridItem.fromProductListItem(listItem, mock(SlingHttpServletRequest.class), "/seastar-flip-flops.html");
+        ProductGridItem item = ProductGridItem.fromProductListItem(listItem, mock(SlingHttpServletRequest.class));
 
         assertEquals(Arrays.asList("red", "green", "blue", "purple"), new ArrayList<String>(item.getFilters().getColors()));
     }
 
     @Test
-    public void testUsesSelectedVariantForImageAndPrice() {
-        Product product = mock(Product.class);
-        Variant variant = mock(Variant.class);
-        AbstractProductRetriever productRetriever = mock(AbstractProductRetriever.class);
-        ProductInterface productData = mock(ProductInterface.class);
+    public void testUsesProductLabelAndFiltersForListedVariant() {
+        ProductListItem variantItem = mock(ProductListItem.class);
         SlingHttpServletRequest request = mock(SlingHttpServletRequest.class);
         ResourceResolver resourceResolver = mock(ResourceResolver.class);
-        Asset variantAsset = mock(Asset.class);
-        Price basePrice = createPrice("$64.99");
         Price variantPrice = createPrice("$74.99");
 
         when(request.getResourceResolver()).thenReturn(resourceResolver);
-        when(product.getName()).thenReturn("Sussex Rain Boots");
-        when(product.getPriceRange()).thenReturn(basePrice);
-        when(product.getVariants()).thenReturn(Collections.singletonList(variant));
-        when(product.getProductRetriever()).thenReturn(productRetriever);
-        when(productRetriever.fetchProduct()).thenReturn(productData);
-        when(variant.getSku()).thenReturn("meotwisus-red-9");
-        when(variant.getName()).thenReturn("Sussex Rain Boots");
-        when(variant.getPriceRange()).thenReturn(variantPrice);
-        when(variant.getAssets()).thenReturn(Collections.singletonList(variantAsset));
-        when(variantAsset.getPath()).thenReturn("/content/dam/celadon/we-retail/me/footwear/meotwisus-red-9.jpeg");
+        when(variantItem.getTitle()).thenReturn("Sussex Rain Boots Red");
+        when(variantItem.getProduct()).thenReturn(mock(SimpleProduct.class));
+        when(variantItem.getPriceRange()).thenReturn(variantPrice);
+        when(variantItem.getImageURL()).thenReturn("/content/dam/celadon/we-retail/me/footwear/meotwisus-red-9.jpeg");
+        when(variantItem.getURL()).thenReturn("/content/we-retail/us/en/products/product-page.html/me/footwear/meotwisus.html#meotwisus-red-9");
         when(resourceResolver.map(request, "/content/dam/celadon/we-retail/me/footwear/meotwisus-red-9.jpeg"))
             .thenReturn("/content/dam/celadon/we-retail/me/footwear/meotwisus-red-9.jpeg");
 
-        ProductGridItem item = ProductGridItem.fromProduct(product, null, request,
-            "/content/we-retail/us/en/products/product-page.html/me/footwear/meotwisus.html#meotwisus-red-9",
-            "meotwisus-red-9");
+        ProductGridItem item = ProductGridItem.fromProductListItem(variantItem, request, createConfigurableProduct());
 
         assertTrue(item.exists());
+        assertEquals("Sussex Rain Boots Red", item.getName());
         assertEquals("$74.99", item.getPrice());
         assertEquals("/content/dam/celadon/we-retail/me/footwear/meotwisus-red-9.jpeg", item.getImage());
         assertEquals("/content/we-retail/us/en/products/product-page.html/me/footwear/meotwisus.html#meotwisus-red-9",
             item.getPath());
+        assertEquals("Lightweight training shoe", item.getDescription());
+        assertTrue(item.getFilters().getColors().contains("red"));
+        assertEquals(Collections.singletonList("$74.99"), new ArrayList<String>(item.getFilters().getPrices()));
     }
 
     private ConfigurableProduct createConfigurableProduct() {

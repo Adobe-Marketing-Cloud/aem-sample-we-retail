@@ -28,19 +28,16 @@ import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.wrappers.ValueMapDecorator;
-import org.apache.sling.models.factory.ModelFactory;
 import org.junit.Test;
 
 import com.adobe.cq.commerce.core.components.models.common.Price;
 import com.adobe.cq.commerce.core.components.models.common.ProductListItem;
 import com.adobe.cq.commerce.core.components.models.common.SiteStructure;
-import com.adobe.cq.commerce.core.components.models.product.Product;
-import com.adobe.cq.commerce.core.components.models.retriever.AbstractProductRetriever;
+import com.adobe.cq.commerce.core.components.models.productcarousel.ProductCarousel;
 import com.adobe.cq.commerce.core.components.models.productlist.CategoryRetriever;
 import com.adobe.cq.commerce.core.components.models.productlist.ProductList;
+import com.adobe.cq.commerce.core.components.models.retriever.AbstractProductsRetriever;
 import com.adobe.cq.commerce.core.components.models.searchresults.SearchResults;
-import com.adobe.cq.commerce.core.components.services.urls.ProductUrlFormat;
-import com.adobe.cq.commerce.core.components.services.urls.UrlProvider;
 import com.adobe.cq.commerce.magento.graphql.CategoryInterface;
 import com.adobe.cq.commerce.magento.graphql.Operations;
 import com.adobe.cq.commerce.magento.graphql.ProductInterface;
@@ -51,8 +48,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Matchers.any;
-import static org.mockito.Matchers.eq;
-import static org.mockito.Matchers.isA;
 import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
@@ -73,7 +68,6 @@ public class ProductGridTest {
         Page currentPage = mock(Page.class);
         Resource currentPageContent = mock(Resource.class);
         ResourceResolver resourceResolver = mock(ResourceResolver.class);
-        UrlProvider urlProvider = mock(UrlProvider.class);
         ProductList productList = mock(ProductList.class);
         CategoryRetriever categoryRetriever = mock(CategoryRetriever.class);
         ProductListItem productListItem = mock(ProductListItem.class);
@@ -99,8 +93,6 @@ public class ProductGridTest {
         when(productListItem.getPriceRange()).thenReturn(price);
         when(product.getSku()).thenReturn("mehisucos");
         when(product.getUrlPath()).thenReturn("me/shorts/corona-shorts");
-        when(urlProvider.toProductUrl(eq(request), eq(currentPage), isA(ProductUrlFormat.Params.class)))
-            .thenReturn("/content/we-retail/us/en/products/product-page.html/me/shorts/corona-shorts.html");
 
         when(price.isEmpty()).thenReturn(false);
         when(price.isRange()).thenReturn(Boolean.FALSE);
@@ -114,7 +106,6 @@ public class ProductGridTest {
         setField(productGrid, "resource", resource);
         setField(productGrid, "currentPage", currentPage);
         setField(productGrid, "cifProductList", productList);
-        setField(productGrid, "urlProvider", urlProvider);
 
         Method initMethod = ProductGrid.class.getDeclaredMethod("initModel");
         initMethod.setAccessible(true);
@@ -125,34 +116,6 @@ public class ProductGridTest {
         assertEquals(1, items.size());
         assertEquals("/content/we-retail/us/en/products/product-page.html/me/shorts/corona-shorts.html",
             items.iterator().next().getPath());
-        verify(urlProvider).toProductUrl(eq(request), eq(currentPage), isA(ProductUrlFormat.Params.class));
-    }
-
-    @Test
-    public void testBuildRouteProductUrlUsesUrlProviderOnly() throws Exception {
-        ProductGrid productGrid = new ProductGrid();
-        SlingHttpServletRequest request = mock(SlingHttpServletRequest.class);
-        Page currentPage = mock(Page.class);
-        UrlProvider urlProvider = mock(UrlProvider.class);
-        ProductListItem productListItem = mock(ProductListItem.class);
-        ProductInterface product = mock(ProductInterface.class);
-
-        when(productListItem.getProduct()).thenReturn(product);
-        when(product.getSku()).thenReturn("eqbisublp");
-        when(product.getUrlPath()).thenReturn("eq/biking/eqbisublp");
-        when(urlProvider.toProductUrl(eq(request), eq(currentPage), isA(ProductUrlFormat.Params.class)))
-            .thenReturn("/content/we-retail/us/en/products/product-page.html/eq/biking/eqbisublp.html");
-
-        setField(productGrid, "request", request);
-        setField(productGrid, "currentPage", currentPage);
-        setField(productGrid, "urlProvider", urlProvider);
-
-        Method routeUrlMethod = ProductGrid.class.getDeclaredMethod("buildRouteProductUrl", ProductListItem.class);
-        routeUrlMethod.setAccessible(true);
-        String routeUrl = (String) routeUrlMethod.invoke(productGrid, productListItem);
-
-        assertEquals("/content/we-retail/us/en/products/product-page.html/eq/biking/eqbisublp.html", routeUrl);
-        verify(urlProvider).toProductUrl(eq(request), eq(currentPage), isA(ProductUrlFormat.Params.class));
     }
 
     @Test
@@ -194,43 +157,42 @@ public class ProductGridTest {
         ProductGrid productGrid = new ProductGrid();
         SlingHttpServletRequest request = mock(SlingHttpServletRequest.class);
         Resource resource = mock(Resource.class);
-        Page currentPage = mock(Page.class);
-        Resource currentPageContent = mock(Resource.class);
-        ModelFactory modelFactory = mock(ModelFactory.class);
-        UrlProvider urlProvider = mock(UrlProvider.class);
-        Product product = mock(Product.class);
-        AbstractProductRetriever productRetriever = mock(AbstractProductRetriever.class);
-        ProductInterface productData = mock(ProductInterface.class);
+        ProductCarousel productCarousel = mock(ProductCarousel.class);
+        AbstractProductsRetriever productsRetriever = mock(AbstractProductsRetriever.class);
+        ProductInterface product = mock(ProductInterface.class);
+        ProductListItem variantItem = mock(ProductListItem.class);
+        CategoryInterface category = createCategory("Shorts");
         Price price = createPrice("$39.00");
 
         when(resource.getValueMap()).thenReturn(valueMap("product", new String[] { "mehisucos#mehisucos-blue" }));
-        when(currentPage.getContentResource()).thenReturn(currentPageContent);
-        when(currentPageContent.getValueMap()).thenReturn(valueMap("cq:cifProductPage",
-            "/content/we-retail/us/en/products/product-page"));
-        when(modelFactory.getModelFromWrappedRequest(any(), isA(Resource.class), eq(Product.class))).thenReturn(product);
-        when(product.getFound()).thenReturn(Boolean.TRUE);
-        when(product.getName()).thenReturn("Corona Shorts");
-        when(product.getPriceRange()).thenReturn(price);
-        when(product.getProductRetriever()).thenReturn(productRetriever);
-        when(productRetriever.fetchProduct()).thenReturn(productData);
-        when(urlProvider.toProductUrl(request, currentPage, "mehisucos"))
-            .thenReturn("/content/we-retail/us/en/products/product-page.html/me/shorts/mehisucos.html");
+        when(productCarousel.getProductsRetriever()).thenReturn(productsRetriever);
+        when(productsRetriever.fetchProducts()).thenReturn(Collections.singletonList(product));
+        when(product.getSku()).thenReturn("mehisucos");
+        when(product.getCategories()).thenReturn(Collections.singletonList(category));
+        when(productCarousel.getProducts()).thenReturn(Collections.singletonList(variantItem));
+        when(variantItem.getSKU()).thenReturn("mehisucos");
+        when(variantItem.getTitle()).thenReturn("Corona Shorts Blue");
+        when(variantItem.getProduct()).thenReturn(mock(ProductInterface.class));
+        when(variantItem.getPriceRange()).thenReturn(price);
+        when(variantItem.getURL()).thenReturn("/content/we-retail/us/en/products/product-page.html/me/shorts/mehisucos.html#mehisucos-blue");
 
         setField(productGrid, "request", request);
         setField(productGrid, "resource", resource);
-        setField(productGrid, "currentPage", currentPage);
-        setField(productGrid, "modelFactory", modelFactory);
-        setField(productGrid, "urlProvider", urlProvider);
+        setField(productGrid, "cifProductCarousel", productCarousel);
 
         Method initMethod = ProductGrid.class.getDeclaredMethod("initModel");
         initMethod.setAccessible(true);
         initMethod.invoke(productGrid);
 
         Collection<ProductGridItem> items = productGrid.getProducts();
-        assertNotNull(items);
         assertEquals(1, items.size());
-        assertEquals("/content/we-retail/us/en/products/product-page.html/me/shorts/mehisucos.html#mehisucos-blue",
-            items.iterator().next().getPath());
+        ProductGridItem item = items.iterator().next();
+        assertEquals("Corona Shorts Blue", item.getName());
+        assertEquals("Shorts", item.getDescription());
+        assertEquals("/content/we-retail/us/en/products/product-page.html/me/shorts/mehisucos.html#mehisucos-blue", item.getPath());
+        InOrder inOrder = inOrder(productsRetriever, productCarousel);
+        inOrder.verify(productsRetriever).extendProductQueryWith(any());
+        inOrder.verify(productCarousel).getProducts();
     }
 
     @Test
@@ -264,7 +226,6 @@ public class ProductGridTest {
         Resource resource = mock(Resource.class);
         Page currentPage = mock(Page.class);
         ResourceResolver resourceResolver = mock(ResourceResolver.class);
-        UrlProvider urlProvider = mock(UrlProvider.class);
         SiteStructure siteStructure = createSiteStructure(SEARCH_RESULTS_PAGE);
         SearchResults searchResults = mock(SearchResults.class);
         ProductListItem productListItem = createProductListItem(request, resourceResolver, "Eton Short-Sleeve Shirt",
@@ -275,15 +236,12 @@ public class ProductGridTest {
         when(resource.getValueMap()).thenReturn(new ValueMapDecorator(new HashMap<String, Object>()));
         when(currentPage.getPath()).thenReturn(SEARCH_RESULTS_PAGE);
         when(searchResults.getProducts()).thenReturn(Collections.singletonList(productListItem));
-        when(urlProvider.toProductUrl(eq(request), eq(currentPage), isA(ProductUrlFormat.Params.class)))
-            .thenReturn("/content/we-retail/us/en/products/product-page.html/men/shirts/eton-short-sleeve-shirt.html");
 
         setField(productGrid, "request", request);
         setField(productGrid, "resource", resource);
         setField(productGrid, "currentPage", currentPage);
         setField(productGrid, "siteStructure", siteStructure);
         setField(productGrid, "cifSearchResults", searchResults);
-        setField(productGrid, "urlProvider", urlProvider);
 
         Method initMethod = ProductGrid.class.getDeclaredMethod("initModel");
         initMethod.setAccessible(true);
@@ -306,7 +264,6 @@ public class ProductGridTest {
         Resource resource = mock(Resource.class);
         Page currentPage = mock(Page.class);
         ResourceResolver resourceResolver = mock(ResourceResolver.class);
-        UrlProvider urlProvider = mock(UrlProvider.class);
         SiteStructure siteStructure = createSiteStructure(SEARCH_RESULTS_PAGE);
         SearchResults searchResults = mock(SearchResults.class);
         ProductList productList = mock(ProductList.class);
@@ -322,8 +279,6 @@ public class ProductGridTest {
         when(productList.getCategoryRetriever()).thenReturn(categoryRetriever);
         when(productList.getTitle()).thenReturn("Men");
         when(productList.getProducts()).thenReturn(Collections.singletonList(productListItem));
-        when(urlProvider.toProductUrl(eq(request), eq(currentPage), isA(ProductUrlFormat.Params.class)))
-            .thenReturn("/content/we-retail/us/en/products/product-page.html/men/shorts/corona-shorts.html");
 
         setField(productGrid, "request", request);
         setField(productGrid, "resource", resource);
@@ -331,7 +286,6 @@ public class ProductGridTest {
         setField(productGrid, "siteStructure", siteStructure);
         setField(productGrid, "cifProductList", productList);
         setField(productGrid, "cifSearchResults", searchResults);
-        setField(productGrid, "urlProvider", urlProvider);
 
         Method initMethod = ProductGrid.class.getDeclaredMethod("initModel");
         initMethod.setAccessible(true);
@@ -388,6 +342,7 @@ public class ProductGridTest {
 
         when(productListItem.getProduct()).thenReturn(product);
         when(productListItem.getTitle()).thenReturn(title);
+        when(productListItem.getURL()).thenReturn("/content/we-retail/us/en/products/product-page.html/" + urlPath + ".html");
         when(productListItem.getImageURL()).thenReturn(imageUrl);
         when(productListItem.getPriceRange()).thenReturn(price);
         when(product.getSku()).thenReturn(sku);

@@ -43,12 +43,10 @@ import com.adobe.cq.commerce.core.components.client.MagentoGraphqlClient;
 import com.adobe.cq.commerce.core.components.models.common.ProductListItem;
 import com.adobe.cq.commerce.core.components.models.common.SiteStructure;
 import com.adobe.cq.commerce.core.components.models.searchresults.SearchResults;
-import com.adobe.cq.commerce.core.components.services.urls.ProductUrlFormat;
 import com.adobe.cq.commerce.core.components.services.urls.UrlProvider;
 import com.adobe.cq.commerce.core.search.models.SearchResultsSet;
 import com.adobe.cq.commerce.graphql.client.GraphqlResponse;
 import com.adobe.cq.commerce.magento.graphql.CategoryTree;
-import com.adobe.cq.commerce.magento.graphql.ProductInterface;
 import com.adobe.cq.commerce.magento.graphql.Query;
 import com.adobe.cq.commerce.magento.graphql.gson.Error;
 import com.day.cq.wcm.api.Page;
@@ -59,7 +57,6 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Matchers.eq;
-import static org.mockito.Matchers.isA;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
@@ -117,8 +114,6 @@ public class ProductSuggestionsServletTest {
         when(modelFactory.getModelFromWrappedRequest(eq(request), any(Resource.class), eq(SearchResults.class)))
             .thenReturn(searchResults);
         when(searchResults.getSearchResultsSet()).thenReturn(searchResultsSet);
-        when(urlProvider.toProductUrl(eq(request), eq(page), isA(ProductUrlFormat.Params.class))).thenAnswer(invocation ->
-            PRODUCT_PAGE_URL + ((ProductUrlFormat.Params) invocation.getArguments()[2]).getUrlPath() + ".html");
 
         setField("modelFactory", modelFactory);
         setField("urlProvider", urlProvider);
@@ -128,7 +123,7 @@ public class ProductSuggestionsServletTest {
     public void testSuggestsTopProductsWithTotalAndResultsUrl() throws Exception {
         List<ProductListItem> products = new ArrayList<ProductListItem>();
         for (int i = 1; i <= 6; i++) {
-            products.add(createProduct("Shirt " + i, "sku" + i, "men/shirts/shirt-" + i));
+            products.add(createProduct("Shirt " + i, "men/shirts/shirt-" + i));
         }
         when(request.getParameter("search_query")).thenReturn(" short sleeve ");
         when(searchResults.getProducts()).thenReturn(products);
@@ -169,7 +164,7 @@ public class ProductSuggestionsServletTest {
 
     @Test
     public void testMissingSearchResultsPageHasNoResultsUrl() throws Exception {
-        ProductListItem product = createProduct("Eton Shirt", "meotsuett", "men/shirts/eton-short-sleeve-shirt");
+        ProductListItem product = createProduct("Eton Shirt", "men/shirts/eton-short-sleeve-shirt");
         when(request.getParameter("search_query")).thenReturn("shirt");
         when(searchResults.getProducts()).thenReturn(Collections.singletonList(product));
         when(searchResultsSet.getTotalResults()).thenReturn(1);
@@ -187,7 +182,7 @@ public class ProductSuggestionsServletTest {
         when(withoutProduct.getTitle()).thenReturn("Broken");
         List<ProductListItem> products = new ArrayList<ProductListItem>();
         products.add(withoutProduct);
-        products.add(createProduct("Eton Shirt", "meotsuett", "men/shirts/eton-short-sleeve-shirt"));
+        products.add(createProduct("Eton Shirt", "men/shirts/eton-short-sleeve-shirt"));
         when(request.getParameter("search_query")).thenReturn("shirt");
         when(searchResults.getProducts()).thenReturn(products);
         when(searchResultsSet.getTotalResults()).thenReturn(2);
@@ -212,7 +207,7 @@ public class ProductSuggestionsServletTest {
 
     @Test
     public void testScopesSuggestionsAndResultsToTheCurrentCategory() throws Exception {
-        ProductListItem product = createProduct("Corona Shorts", "meshcor", "men/shorts/corona-shorts");
+        ProductListItem product = createProduct("Corona Shorts", "men/shorts/corona-shorts");
         Map<String, String[]> parameters = new HashMap<String, String[]>();
         parameters.put("search_query", new String[] { "shorts" });
         when(request.getParameter("search_query")).thenReturn("shorts");
@@ -275,13 +270,10 @@ public class ProductSuggestionsServletTest {
         when(request.adaptTo(MagentoGraphqlClient.class)).thenReturn(magentoGraphqlClient);
     }
 
-    private ProductListItem createProduct(String title, String sku, String urlPath) {
+    private ProductListItem createProduct(String title, String urlPath) {
         ProductListItem productListItem = mock(ProductListItem.class);
-        ProductInterface product = mock(ProductInterface.class);
         when(productListItem.getTitle()).thenReturn(title);
-        when(productListItem.getProduct()).thenReturn(product);
-        when(product.getSku()).thenReturn(sku);
-        when(product.getUrlPath()).thenReturn(urlPath);
+        when(productListItem.getURL()).thenReturn(PRODUCT_PAGE_URL + urlPath + ".html");
         return productListItem;
     }
 
