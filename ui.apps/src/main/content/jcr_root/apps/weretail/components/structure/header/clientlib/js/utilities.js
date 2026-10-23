@@ -59,35 +59,4 @@
             }
         });
     }
-
-    function unreadCounter($el, path, successHandler) {
-        if($el.length) {
-            var siteUrl = $el.data('siteurl'),
-                data = {};
-
-            $.ajax({
-                type: "GET",
-                url: CQ.shared.HTTP.getContextPath() + siteUrl + path,
-                async: true,
-                cache: false,
-                data: data,
-                success: function(json) {
-                    $el.text(successHandler(json));
-                }
-            });
-        }
-    }
-
-    $(document).on('we-header-loaded', function() {
-        unreadCounter($('#we-retail-message-count'),
-            "/messaging/jcr:content/content/primary/messagebox_5ab3.social.0.0.json", function(json) {
-                return json["messageCounts"].nonDeletedUnreadCount;
-            });
-
-        unreadCounter($('#we-retail-notification-count'),
-            "/notifications/jcr:content/content/primary/notifications.social.0.0.json", function(json) {
-                return json.unreadCount;
-            });
-
-    });
 })(jQuery, document);

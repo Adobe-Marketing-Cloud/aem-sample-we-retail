@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="f27b3906-d206-4b26-9d38-b8469cd92a8e">
+    <jcr:content
+        jcr:lastModified="{Date}2026-06-24T12:58:16.240+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Aqua Force GPS Fitness Monitor"
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/we-retail/settings/dam/cfm/models/product"
+            jcr:primaryType="nt:unstructured"
+            _strucVersion="{Long}1">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:16.201+03:00"
+                color_x0040_LastModified="{Date}2026-06-24T12:58:16.201+03:00"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"
+                configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.236+03:00"
+                configurableOptions_x0040_LastModifiedBy="admin"
+                description="Waterproof GPS fitness monitor accurately records and displays your time, distance, and heart rate while you swim (or run) to help you attain your fitness goals."
+                description_x0040_ContentType="text/html"
+                description_x0040_LastModified="{Date}2026-06-24T12:58:16.217+03:00"
+                description_x0040_LastModifiedBy="admin"
+                features="Water-resistant construction meets IPX7 standards &#xd;&#xa;Includes the standard wrist strap and 2 fabric replacement straps that fit a variety of wrist sizes&#xd;&#xa;Optional heart rate monitor strap (sold separately) lets you track heart rate for optimal performance; add the strap and gain access to 5 customizable heart rate zones"
+                features_x0040_LastModified="{Date}2026-06-24T12:58:16.218+03:00"
+                features_x0040_LastModifiedBy="admin"
+                identifier="eqswsuaqr"
+                identifier_x0040_LastModified="{Date}2026-06-24T12:58:16.218+03:00"
+                identifier_x0040_LastModifiedBy="admin"
+                image="[/content/dam/celadon/we-retail/equipment/water-sports/aqua-force-gps-fitness-monitor_img_0.jpeg]"
+                image_x0040_LastModified="{Date}2026-06-24T12:58:16.234+03:00"
+                image_x0040_LastModifiedBy="admin"
+                name="Aqua Force GPS Fitness Monitor"
+                name_x0040_LastModified="{Date}2026-06-24T12:58:16.217+03:00"
+                name_x0040_LastModifiedBy="admin"
+                price="{Double}200.0"
+                price_x0040_LastModified="{Date}2026-06-24T12:58:16.217+03:00"
+                price_x0040_LastModifiedBy="admin"
+                rating="5"
+                rating_x0040_LastModified="{Date}2026-06-24T12:58:16.218+03:00"
+                rating_x0040_LastModifiedBy="admin"
+                reviews="&#xa;By NE2WA&#xa;from Edmonds, WA&#xa;&#xa;This watch/gps/heart rate monitor is a data crunching gem. With the free online connection, you can actually watch a graphical display of your swim/run on a map with associated changes in your heart rate, pace and step rate (with the foot chip). It takes a little time to set up, but is simple to use once you get started. I am loving this device and the feedback it's giving me."
+                reviews_x0040_LastModified="{Date}2026-06-24T12:58:16.218+03:00"
+                reviews_x0040_LastModifiedBy="admin"
+                short_description="equipment"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
+                size_x0040_LastModified="{Date}2026-06-24T12:58:16.201+03:00"
+                sku="eqswsuaqr"
+                sku_x0040_LastModified="{Date}2026-06-24T12:58:16.216+03:00"
+                sku_x0040_LastModifiedBy="admin"/>
+            <var-size-onesize
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                _x0040_variationCreationDate="{Date}2026-06-24T12:58:16.237+03:00"
+                additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:16.238+03:00"
+                additionalCategories_x0040_LastModifiedBy="admin"
+                color_x0040_LastModified="{Date}2026-06-24T12:58:16.240+03:00"
+                color_x0040_LastModifiedBy="admin"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"
+                configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.237+03:00"
+                configurableOptions_x0040_LastModifiedBy="admin"
+                description="Waterproof GPS fitness monitor accurately records and displays your time, distance, and heart rate while you swim (or run) to help you attain your fitness goals."
+                description_x0040_ContentType="text/html"
+                description_x0040_LastModified="{Date}2026-06-24T12:58:16.238+03:00"
+                description_x0040_LastModifiedBy="admin"
+                features="Water-resistant construction meets IPX7 standards &#xd;&#xa;Includes the standard wrist strap and 2 fabric replacement straps that fit a variety of wrist sizes&#xd;&#xa;Optional heart rate monitor strap (sold separately) lets you track heart rate for optimal performance; add the strap and gain access to 5 customizable heart rate zones"
+                features_x0040_LastModified="{Date}2026-06-24T12:58:16.239+03:00"
+                features_x0040_LastModifiedBy="admin"
+                identifier="eqswsuaqr"
+                identifier_x0040_LastModified="{Date}2026-06-24T12:58:16.239+03:00"
+                identifier_x0040_LastModifiedBy="admin"
+                image="[/content/dam/celadon/we-retail/equipment/water-sports/aqua-force-gps-fitness-monitor_img_0.jpeg]"
+                image_x0040_LastModified="{Date}2026-06-24T12:58:16.237+03:00"
+                image_x0040_LastModifiedBy="admin"
+                name="Aqua Force GPS Fitness Monitor"
+                name_x0040_LastModified="{Date}2026-06-24T12:58:16.238+03:00"
+                name_x0040_LastModifiedBy="admin"
+                price="{Double}200.0"
+                price_x0040_LastModified="{Date}2026-06-24T12:58:16.238+03:00"
+                price_x0040_LastModifiedBy="admin"
+                rating="5"
+                rating_x0040_LastModified="{Date}2026-06-24T12:58:16.239+03:00"
+                rating_x0040_LastModifiedBy="admin"
+                reviews="&#xa;By NE2WA&#xa;from Edmonds, WA&#xa;&#xa;This watch/gps/heart rate monitor is a data crunching gem. With the free online connection, you can actually watch a graphical display of your swim/run on a map with associated changes in your heart rate, pace and step rate (with the foot chip). It takes a little time to set up, but is simple to use once you get started. I am loving this device and the feedback it's giving me."
+                reviews_x0040_LastModified="{Date}2026-06-24T12:58:16.239+03:00"
+                reviews_x0040_LastModifiedBy="admin"
+                short_description="equipment"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
+                size="One size"
+                size_x0040_LastModified="{Date}2026-06-24T12:58:16.240+03:00"
+                size_x0040_LastModifiedBy="admin"
+                sku="eqswsuaqr-Onesize"
+                sku_x0040_LastModified="{Date}2026-06-24T12:58:16.240+03:00"
+                sku_x0040_LastModifiedBy="admin"/>
+        </data>
+        <indexedData jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="eb4ee6d2-f2a4-4eb8-8901-02cbda2b473c"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/product"
+                _x0040_stringArray_x0040_variations="[var-size-onesize]"
+                double_x0040_price="{Double}200.0"
+                string_x0040_description="Waterproof GPS fitness monitor accurately records and displays your time, distance, and heart rate while you swim (or run) to help you attain your fitness goals."
+                string_x0040_features="Water-resistant construction meets IPX7 standards &#xd;&#xa;Includes the standard wrist strap and 2 fabric replacement straps that fit a variety of wrist sizes&#xd;&#xa;Optional heart rate monitor strap (sold separately) lets you track heart rate for optimal performance; add the strap and gain access to 5 customizable heart rate zones"
+                string_x0040_identifier="eqswsuaqr"
+                string_x0040_name="Aqua Force GPS Fitness Monitor"
+                string_x0040_rating="5"
+                string_x0040_reviews="&#xa;By NE2WA&#xa;from Edmonds, WA&#xa;&#xa;This watch/gps/heart rate monitor is a data crunching gem. With the free online connection, you can actually watch a graphical display of your swim/run on a map with associated changes in your heart rate, pace and step rate (with the foot chip). It takes a little time to set up, but is simple to use once you get started. I am loving this device and the feedback it's giving me."
+                string_x0040_short_description="equipment"
+                string_x0040_sku="eqswsuaqr"
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"/>
+            <var-size-onesize
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="af8c44a6-883b-4f59-9ec7-ac5be76b5eb4"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/product"
+                double_x0040_price="{Double}200.0"
+                string_x0040_description="Waterproof GPS fitness monitor accurately records and displays your time, distance, and heart rate while you swim (or run) to help you attain your fitness goals."
+                string_x0040_features="Water-resistant construction meets IPX7 standards &#xd;&#xa;Includes the standard wrist strap and 2 fabric replacement straps that fit a variety of wrist sizes&#xd;&#xa;Optional heart rate monitor strap (sold separately) lets you track heart rate for optimal performance; add the strap and gain access to 5 customizable heart rate zones"
+                string_x0040_identifier="eqswsuaqr"
+                string_x0040_name="Aqua Force GPS Fitness Monitor"
+                string_x0040_rating="5"
+                string_x0040_reviews="&#xa;By NE2WA&#xa;from Edmonds, WA&#xa;&#xa;This watch/gps/heart rate monitor is a data crunching gem. With the free online connection, you can actually watch a graphical display of your swim/run on a map with associated changes in your heart rate, pace and step rate (with the foot chip). It takes a little time to set up, but is simple to use once you get started. I am loving this device and the feedback it's giving me."
+                string_x0040_short_description="equipment"
+                string_x0040_size="One size"
+                string_x0040_sku="eqswsuaqr-Onesize"
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"/>
+        </indexedData>
+        <metadata
+            cq:tags="[we-retail:activity/swimming,we-retail:equipment,we-retail:season/summer]"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured">
+            <dam:cfVariations jcr:primaryType="nt:unstructured">
+                <var-size-onesize
+                    cq:tags="[we-retail:season/summer,we-retail:equipment,we-retail:activity/swimming]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+            </dam:cfVariations>
+        </metadata>
+        <model jcr:primaryType="nt:unstructured">
+            <variations jcr:primaryType="nt:unstructured">
+                <var-size-onesize
+                    jcr:description="Variant: var-size-onesize"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="var-size-onesize"
+                    name="var-size-onesize"/>
+            </variations>
+        </model>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

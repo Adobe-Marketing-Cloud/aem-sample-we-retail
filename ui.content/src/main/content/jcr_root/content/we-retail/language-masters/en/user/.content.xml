@@ -23,9 +23,6 @@
                 sling:resourceType="wcm/foundation/components/responsivegrid"/>
         </root>
     </jcr:content>
-    <smartlist/>
     <mailbox/>
     <account/>
-    <cart/>
-    <checkout/>
 </jcr:root>

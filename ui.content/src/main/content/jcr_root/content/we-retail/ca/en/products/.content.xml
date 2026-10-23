@@ -2,7 +2,6 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:catalogBlueprint="/content/catalogs/we-retail/en/website-catalog"
         cq:commerceProvider="we-retail"
         cq:commerceType="section"
         cq:lastModified="{Date}2017-02-08T11:58:16.756+01:00"
@@ -11,7 +10,6 @@
         cq:lastRolledout="{Date}2017-02-08T11:58:16.757+01:00"
         cq:lastRolledoutBy="admin"
         cq:template="/conf/we-retail/settings/wcm/templates/section-page"
-        jcr:language="en"
         jcr:mixinTypes="[cq:LiveRelationship]"
         jcr:primaryType="cq:PageContent"
         jcr:title="Products"

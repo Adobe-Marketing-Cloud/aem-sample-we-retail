@@ -1,0 +1,5 @@
+{
+  "scripts": [
+    "create service user celadon-catalog-reader\n\ncreate path (sling:OrderedFolder) /content/dam/celadon\n\nset ACL for celadon-catalog-reader\n    allow jcr:read on /content/dam/celadon\nend"
+  ]
+}

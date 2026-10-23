@@ -36,6 +36,13 @@
         <vault.user>admin</vault.user>
         <vault.password>admin</vault.password>
         <slf4j.version>1.5.11</slf4j.version>
+        <uber.jar.version>6.4.4</uber.jar.version>
+        <core.wcm.components.version>2.29.0</core.wcm.components.version>
+        <core.cif.components.version>2.18.0</core.cif.components.version>
+        <graphql.client.version>1.10.0</graphql.client.version>
+        <magento.graphql.version>9.1.0-magento242ee</magento.graphql.version>
+        <celadon.version>0.1.0-SNAPSHOT</celadon.version>
+        <test.jvm.opens />
     </properties>
 
     <scm>
@@ -186,6 +193,10 @@
                         <!-- Jenkins configuration file -->
                         <exclude>Jenkinsfile</exclude>
                         <exclude>jenkinsfiles/*</exclude>
+                        <!-- Migration helper / agent guideline files -->
+                        <exclude>.java-version</exclude>
+                        <exclude>AGENTS.md</exclude>
+                        <exclude>CLAUDE.md</exclude>
                     </excludes>
                 </configuration>
                 <executions>
@@ -222,7 +233,7 @@
                 <plugin>
                     <groupId>org.apache.felix</groupId>
                     <artifactId>maven-scr-plugin</artifactId>
-                    <version>1.20.0</version>
+                    <version>1.26.4</version>
                     <dependencies>
                         <dependency>
                             <groupId>org.slf4j</groupId>
@@ -256,12 +267,18 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>2.18.1</version>
+                    <configuration>
+                        <argLine>${test.jvm.opens}</argLine>
+                    </configuration>
                 </plugin>
                 <!-- Maven Failsafe Plugin -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
                     <version>2.18.1</version>
+                    <configuration>
+                        <argLine>${test.jvm.opens}</argLine>
+                    </configuration>
                 </plugin>
                 <!-- Maven Deploy Plugin -->
                 <plugin>
@@ -475,6 +492,16 @@
         </profile>
 
         <profile>
+            <id>modern-jdk-test-opens</id>
+            <activation>
+                <jdk>[16,)</jdk>
+            </activation>
+            <properties>
+                <test.jvm.opens>--add-opens java.base/java.lang=ALL-UNNAMED</test.jvm.opens>
+            </properties>
+        </profile>
+
+        <profile>
             <!-- This is the release profile. -->
             <id>release</id>
             <activation>
@@ -571,7 +598,7 @@
             <dependency>
                 <groupId>com.adobe.aem</groupId>
                 <artifactId>uber-jar</artifactId>
-                <version>6.3.1.2</version>
+                <version>${uber.jar.version}</version>
                 <classifier>apis</classifier>
                 <scope>provided</scope>
             </dependency>
@@ -614,6 +641,48 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>3.0.1</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.cq</groupId>
+                <artifactId>core.wcm.components.core</artifactId>
+                <version>${core.wcm.components.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-core</artifactId>
+                <version>${core.cif.components.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-apps</artifactId>
+                <version>${core.cif.components.version}</version>
+                <type>zip</type>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-config</artifactId>
+                <version>${core.cif.components.version}</version>
+                <type>zip</type>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>core-cif-components-extensions-product-recs-content</artifactId>
+                <version>${core.cif.components.version}</version>
+                <type>zip</type>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>graphql-client</artifactId>
+                <version>${graphql.client.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.adobe.commerce.cif</groupId>
+                <artifactId>magento-graphql</artifactId>
+                <version>${magento.graphql.version}</version>
                 <scope>provided</scope>
             </dependency>
             <!-- Testing -->

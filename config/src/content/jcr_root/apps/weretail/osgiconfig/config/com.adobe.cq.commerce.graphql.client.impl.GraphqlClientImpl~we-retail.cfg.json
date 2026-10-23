@@ -1,0 +1,13 @@
+{
+  "identifier": "we-retail",
+  "url": "http://localhost:4502/apps/celadon/graphql",
+  "httpMethod": "GET",
+  "allowHttpProtocol": true,
+  "acceptSelfSignedCertificates": true,
+  "connectionKeepAlive": -1,
+  "connectionTimeout": 5000,
+  "maxHttpConnections": 20,
+  "requestPoolTimeout": 2000,
+  "socketTimeout": 5000,
+  "service.ranking": 0
+}

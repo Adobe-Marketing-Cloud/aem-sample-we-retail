@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Shirts">
+        <folderThumbnail/>
+    </jcr:content>
+    <rios-t-shirt/>
+    <rios-t-shirt_img_0.jpeg/>
+    <devi-sleeveless-shirt/>
+    <devi-sleeveless-shirt_img_0.jpeg/>
+    <soleil-tunic/>
+    <soleil-tunic_img_0.jpeg/>
+    <soleil-tunic_var-identifier-woswsusoc1-size-xs-color-yellow_img_0.jpeg/>
+    <soleil-tunic_var-identifier-woswsusoc1-size-s-color-yellow_img_0.jpeg/>
+    <soleil-tunic_var-identifier-woswsusoc1-size-m-color-yellow_img_0.jpeg/>
+    <soleil-tunic_var-identifier-woswsusoc1-size-l-color-yellow_img_0.jpeg/>
+    <soleil-tunic_var-identifier-woswsusoc1-size-xl-color-yellow_img_0.jpeg/>
+    <soleil-tunic_var-identifier-woswsusoc2-size-xs-color-red_img_0.jpeg/>
+    <soleil-tunic_var-identifier-woswsusoc2-size-s-color-red_img_0.jpeg/>
+    <soleil-tunic_var-identifier-woswsusoc2-size-m-color-red_img_0.jpeg/>
+    <soleil-tunic_var-identifier-woswsusoc2-size-l-color-red_img_0.jpeg/>
+    <soleil-tunic_var-identifier-woswsusoc2-size-xl-color-red_img_0.jpeg/>
+</jcr:root>

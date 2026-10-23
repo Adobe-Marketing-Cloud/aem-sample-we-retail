@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.adobe.commerce.cif</groupId>
+        <artifactId>celadon-it</artifactId>
+        <version>0.1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>celadon-it-http</artifactId>
+    <name>Celadon - Integration Tests - HTTP</name>
+
+    <properties>
+        <celadon.it.enabled>false</celadon.it.enabled>
+        <celadon.it.baseUrl>http://localhost:4502</celadon.it.baseUrl>
+        <celadon.it.basePath>/apps/celadon/graphql</celadon.it.basePath>
+        <celadon.it.user>admin</celadon.it.user>
+        <celadon.it.password>admin</celadon.it.password>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.adobe.commerce.cif</groupId>
+            <artifactId>celadon-core</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <configuration>
+                    <systemPropertyVariables>
+                        <celadon.it.enabled>${celadon.it.enabled}</celadon.it.enabled>
+                        <celadon.it.baseUrl>${celadon.it.baseUrl}</celadon.it.baseUrl>
+                        <celadon.it.basePath>${celadon.it.basePath}</celadon.it.basePath>
+                        <celadon.it.user>${celadon.it.user}</celadon.it.user>
+                        <celadon.it.password>${celadon.it.password}</celadon.it.password>
+                    </systemPropertyVariables>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

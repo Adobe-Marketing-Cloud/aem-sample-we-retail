@@ -13,29 +13,33 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<li class="foundation-list-item" data-sly-use.item="we.retail.core.model.ProductGridItem" data-sly-test="${item.exists}">
-    <we-product-item price="${item.filters.prices}"
-                     color="${item.filters.colors}"
-                     size="${item.filters.sizes}"
-                     inline-template>
-        <div class="we-ProductsGrid-item">
-            <div class="we-ProductsGrid-item-image img-center">
-                <sly data-sly-resource="${item.image}"></sly>
+<template data-sly-template.item="${@ item}">
+    <li class="foundation-list-item" data-sly-test="${item.exists}">
+        <we-product-item price="${item.filters.prices}"
+                         color="${item.filters.colors}"
+                         size="${item.filters.sizes}"
+                         inline-template>
+            <div class="we-ProductsGrid-item">
+                <div class="we-ProductsGrid-item-image img-center">
+                    <div data-sly-test="${item.image}" class="cmp-image">
+                        <img src="${item.image}" alt="${item.name}" title="${item.name}" class="cmp-image__image cq-dd-image"/>
+                    </div>
+                </div>
+
+                <h3 class="we-ProductsGrid-item-title h4">${item.name}</h3>
+                <span class="we-ProductsGrid-item-subtitle small text-muted">${item.description}</span>
+
+                <strong class="we-ProductsGrid-item-price">
+                    <span>${item.price}</span>
+                    <span class="we-ProductsGrid-item-price-new"></span>
+                    <s class="we-ProductsGrid-item-price-old"></s>
+                </strong>
+
+                <span class="we-ProductsGrid-item-discount hidden"><span></span>${ 'off' @ i18n }</span>
+                <a href="${item.path}" class="we-ProductsGrid-item-link"></a>
+
             </div>
-
-            <h3 class="we-ProductsGrid-item-title h4">${item.name}</h3>
-            <span class="we-ProductsGrid-item-subtitle small text-muted">${item.description}</span>
-
-            <strong class="we-ProductsGrid-item-price">
-                <span>${item.price}</span>
-                <span class="we-ProductsGrid-item-price-new"></span>
-                <s class="we-ProductsGrid-item-price-old"></s>
-            </strong>
-
-            <span class="we-ProductsGrid-item-discount hidden"><span></span>${ 'off' @ i18n }</span>
-            <a href="${item.path @ extension = 'html'}" class="we-ProductsGrid-item-link"></a>
-
-        </div>
-        <!-- /.we-ProductsGrid-item -->
-    </we-product-item>
-</li>
+            <!-- /.we-ProductsGrid-item -->
+        </we-product-item>
+    </li>
+</template>

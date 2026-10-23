@@ -35,7 +35,8 @@ import com.day.cq.wcm.api.PageManager;
 
 public class MockProduct extends ResourceWrapper implements Product {
 
-    public static final String PRODUCT_DATA = "productData";
+    private static final String COMMERCE_TYPE = "cq:commerceType";
+    private static final String VARIANT = "variant";
     private final Resource resource;
 
     public MockProduct(@Nonnull Resource resource) {
@@ -112,7 +113,11 @@ public class MockProduct extends ResourceWrapper implements Product {
 
     @Override
     public ImageResource getImage() {
-        Resource imageResource = resource.getResourceResolver().getResource(getValueMap().get("productData", String.class)).getChild("image");
+        Resource imageResource = resource.getChild("image");
+        if (imageResource == null) {
+            Resource baseProduct = getBaseProductResource();
+            imageResource = baseProduct != null ? baseProduct.getChild("image") : null;
+        }
         if (imageResource == null) {
             return null;
         }
@@ -130,13 +135,13 @@ public class MockProduct extends ResourceWrapper implements Product {
 
     @Override
     public <T> T getProperty(String name, Class<T> type) {
-        if(getValueMap().containsKey(name)) {
+        if (getValueMap().containsKey(name)) {
             return getValueMap().get(name, type);
-        } else if(getValueMap().containsKey(PRODUCT_DATA)){
-            Resource productResource = this.resource.getResourceResolver().getResource(getValueMap().get(PRODUCT_DATA, String.class));
-            if(productResource != null && productResource.getValueMap().containsKey(name)) {
-                return productResource.getValueMap().get(name, type);
-            }
+        }
+
+        Resource baseProduct = getBaseProductResource();
+        if (baseProduct != null && baseProduct.getValueMap().containsKey(name)) {
+            return baseProduct.getValueMap().get(name, type);
         }
         return null;
     }
@@ -169,15 +174,17 @@ public class MockProduct extends ResourceWrapper implements Product {
 
     @Override
     public Product getBaseProduct() throws CommerceException {
-        if (StringUtils.equals(getValueMap().get("cq:commerceType", String.class), "variant")) {
-            return new MockProduct(resource.getParent());
+        Resource baseProduct = getBaseProductResource();
+        if (baseProduct != null) {
+            return new MockProduct(baseProduct);
         }
         return null;
     }
 
     @Override
     public Product getPIMProduct() throws CommerceException {
-        return new MockProduct(resource.getResourceResolver().getResource(getValueMap().get(PRODUCT_DATA, String.class)));
+        Resource baseProduct = getBaseProductResource();
+        return new MockProduct(baseProduct != null ? baseProduct : resource);
     }
 
     @Override
@@ -192,6 +199,13 @@ public class MockProduct extends ResourceWrapper implements Product {
 
     @Override
     public ImageResource getThumbnail() {
+        return null;
+    }
+
+    private Resource getBaseProductResource() {
+        if (StringUtils.equals(getValueMap().get(COMMERCE_TYPE, String.class), VARIANT)) {
+            return resource.getParent();
+        }
         return null;
     }
 }

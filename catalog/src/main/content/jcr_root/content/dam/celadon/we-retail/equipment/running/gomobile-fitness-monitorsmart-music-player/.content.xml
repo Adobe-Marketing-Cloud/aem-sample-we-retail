@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="b43972b8-ebe6-4fbf-ad62-70f3aa27fe97">
+    <jcr:content
+        jcr:lastModified="{Date}2026-06-24T12:58:15.594+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="GoMobile Fitness Monitor/Smart Music Player"
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/we-retail/settings/dam/cfm/models/product"
+            jcr:primaryType="nt:unstructured"
+            _strucVersion="{Long}1">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:15.566+03:00"
+                color_x0040_LastModified="{Date}2026-06-24T12:58:15.566+03:00"
+                configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:15.566+03:00"
+                description="The GoMobile fitness monitor and smart music player tracks your performance and pumps out tunes to keep you going."
+                description_x0040_ContentType="text/html"
+                description_x0040_LastModified="{Date}2026-06-24T12:58:15.581+03:00"
+                description_x0040_LastModifiedBy="admin"
+                features="GPS tracks your speed and distance while you run, walk and bike outdoors; built-in accelerometer tracks your speed, distance and steps taken during indoor workouts&#xd;&#xa;8 gigabyte memory lets you load your favorite music; built-in FM tuner picks up local radio stations&#xd;&#xa;Smart music player learns which songs help you run faster and burn more calories, and then compiles them into a high-performance playlist"
+                features_x0040_LastModified="{Date}2026-06-24T12:58:15.582+03:00"
+                features_x0040_LastModifiedBy="admin"
+                identifier="eqrusugor"
+                identifier_x0040_LastModified="{Date}2026-06-24T12:58:15.582+03:00"
+                identifier_x0040_LastModifiedBy="admin"
+                image="[/content/dam/celadon/we-retail/equipment/running/gomobile-fitness-monitorsmart-music-player_img_0.jpeg]"
+                image_x0040_LastModified="{Date}2026-06-24T12:58:15.594+03:00"
+                image_x0040_LastModifiedBy="admin"
+                name="GoMobile Fitness Monitor/Smart Music Player"
+                name_x0040_LastModified="{Date}2026-06-24T12:58:15.581+03:00"
+                name_x0040_LastModifiedBy="admin"
+                price="{Double}150.0"
+                price_x0040_LastModified="{Date}2026-06-24T12:58:15.581+03:00"
+                price_x0040_LastModifiedBy="admin"
+                rating="2"
+                rating_x0040_LastModified="{Date}2026-06-24T12:58:15.582+03:00"
+                rating_x0040_LastModifiedBy="admin"
+                reviews="&#xa;By Texas Runner&#xa;from Dallas, TX&#xa;&#xa;Battery life without GPS may be decent, but isn't the GPS tracking why someone would buy this device? It is completely worthless for marathon runners (and even some half marathon runners). Using GPS, but without music or bluetooth, I couldn't get more than 3 hours of battery life out of it while running. &#xa;&#xa;If you're a casual short distance runner/cyclist looking for an iPod that also measures speed/distance then maybe this will work for you. If you're training for longer distances, you will be extremely disappointed."
+                reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.582+03:00"
+                reviews_x0040_LastModifiedBy="admin"
+                short_description="equipment"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
+                size_x0040_LastModified="{Date}2026-06-24T12:58:15.566+03:00"
+                sku="eqrusugor"
+                sku_x0040_LastModified="{Date}2026-06-24T12:58:15.580+03:00"
+                sku_x0040_LastModifiedBy="admin"/>
+        </data>
+        <indexedData jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="0fd17628-5b13-4057-a63d-8fceca60e2b6"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/product"
+                _x0040_stringArray_x0040_variations="[]"
+                double_x0040_price="{Double}150.0"
+                string_x0040_description="The GoMobile fitness monitor and smart music player tracks your performance and pumps out tunes to keep you going."
+                string_x0040_features="GPS tracks your speed and distance while you run, walk and bike outdoors; built-in accelerometer tracks your speed, distance and steps taken during indoor workouts&#xd;&#xa;8 gigabyte memory lets you load your favorite music; built-in FM tuner picks up local radio stations&#xd;&#xa;Smart music player learns which songs help you run faster and burn more calories, and then compiles them into a high-performance playlist"
+                string_x0040_identifier="eqrusugor"
+                string_x0040_name="GoMobile Fitness Monitor/Smart Music Player"
+                string_x0040_rating="2"
+                string_x0040_reviews="&#xa;By Texas Runner&#xa;from Dallas, TX&#xa;&#xa;Battery life without GPS may be decent, but isn't the GPS tracking why someone would buy this device? It is completely worthless for marathon runners (and even some half marathon runners). Using GPS, but without music or bluetooth, I couldn't get more than 3 hours of battery life out of it while running. &#xa;&#xa;If you're a casual short distance runner/cyclist looking for an iPod that also measures speed/distance then maybe this will work for you. If you're training for longer distances, you will be extremely disappointed."
+                string_x0040_short_description="equipment"
+                string_x0040_sku="eqrusugor"/>
+        </indexedData>
+        <metadata
+            cq:tags="[we-retail:equipment,we-retail:season/summer,we-retail:activity/running]"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

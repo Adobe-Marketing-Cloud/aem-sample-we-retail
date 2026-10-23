@@ -32,6 +32,86 @@
 
     we.filterStore = we.filterStore || new FiltersStore();
 
+    function priceLowerBound(label) {
+        var match = /\$(\d+)/.exec(label || '');
+        return match ? match[1] : null;
+    }
+
+    function writeFiltersToHash(activeFilters) {
+        var parts = [];
+
+        Object.keys(activeFilters).forEach(function (prop) {
+            var values = activeFilters[prop].map(function (val) {
+                if (prop !== 'price') {
+                    return val;
+                }
+                var bucket = (we.filterStore.data.price || []).filter(function (priceBucket) {
+                    return priceBucket.list === val;
+                })[0];
+                return bucket ? priceLowerBound(bucket.label) : null;
+            }).filter(function (val) {
+                return val !== null && val !== undefined;
+            });
+
+            if (values.length) {
+                parts.push(prop + '=' + values.map(encodeURIComponent).join(','));
+            }
+        });
+
+        history.replaceState(history.state, '', window.location.pathname + window.location.search + (parts.length ? '#' + parts.join('&') : ''));
+    }
+
+    function readFiltersFromHash() {
+        var filters = {};
+
+        window.location.hash.replace(/^#/, '').split('&').forEach(function (part) {
+            var pair = part.split('=');
+            if (pair.length === 2 && pair[1]) {
+                filters[pair[0]] = pair[1].split(',').map(decodeURIComponent);
+            }
+        });
+
+        return filters;
+    }
+
+    function findFilterInput(prop, value) {
+        var text = value;
+
+        if (prop === 'color') {
+            return $('.we-product-filter input[name="product-color"]').filter(function () {
+                return this.value === value;
+            })[0];
+        }
+
+        if (prop === 'price') {
+            var bucket = (we.filterStore.data.price || []).filter(function (priceBucket) {
+                return priceLowerBound(priceBucket.label) === value;
+            })[0];
+            if (!bucket) {
+                return null;
+            }
+            text = bucket.label;
+        }
+
+        return $('.we-product-filter .checkbox label').filter(function () {
+            return $.trim($(this).text()) === text;
+        }).find('input')[0];
+    }
+
+    function restoreFiltersFromHash() {
+        var filters = readFiltersFromHash();
+
+        Object.keys(filters).forEach(function (prop) {
+            filters[prop].forEach(function (value) {
+                var input = findFilterInput(prop, value);
+                if (input) {
+                    input.checked = false;
+                    input.click();
+                }
+            });
+        });
+    }
+
 
     // Vue.config.debug = true;
 
@@ -68,6 +148,7 @@
                     }
 
                     this.$dispatch('show-product-item', this.$parent.activeFilters);
+                    writeFiltersToHash(this.$parent.activeFilters);
                     
                     $("input[value='" + val + "']").siblings('div').toggleClass('tick');
                 },
@@ -81,6 +162,10 @@
                 }
             }
         });
+    });
+
+    $(function () {
+        Vue.nextTick(restoreFiltersFromHash);
     });
 
 })(jQuery);

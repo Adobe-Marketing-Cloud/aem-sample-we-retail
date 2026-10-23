@@ -11,6 +11,7 @@
         jcr:primaryType="cq:PageContent"
         jcr:title="We.Retail"
         sling:resourceType="weretail/components/structure/page"
+        sling:configRef="/conf/we-retail"
         cq:redirectTarget="/content/we-retail/us/en">
         <image
             jcr:primaryType="nt:unstructured"

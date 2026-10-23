@@ -17,89 +17,148 @@ package we.retail.core.model;
 
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.Set;
-
-import javax.annotation.PostConstruct;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
-import org.apache.sling.api.SlingHttpServletResponse;
-import org.apache.sling.api.resource.Resource;
-import org.apache.sling.api.resource.ResourceResolver;
-import org.apache.sling.models.annotations.Model;
-import org.apache.sling.models.annotations.injectorspecific.ScriptVariable;
-import org.apache.sling.models.annotations.injectorspecific.Self;
-import org.apache.sling.models.annotations.injectorspecific.SlingObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import com.day.cq.commons.ImageResource;
 import com.day.cq.wcm.api.Page;
-import com.day.cq.wcm.api.PageManager;
-import com.adobe.cq.commerce.api.CommerceException;
-import com.adobe.cq.commerce.api.CommerceService;
-import com.adobe.cq.commerce.api.CommerceSession;
-import com.adobe.cq.commerce.api.Product;
-import com.adobe.cq.commerce.common.CommerceHelper;
 
-@Model(adaptables = SlingHttpServletRequest.class)
+import com.adobe.cq.commerce.core.components.models.common.Price;
+import com.adobe.cq.commerce.core.components.models.common.ProductListItem;
+import com.adobe.cq.commerce.core.components.models.product.Product;
+import com.adobe.cq.commerce.core.components.models.product.Variant;
+import com.adobe.cq.commerce.magento.graphql.ConfigurableProduct;
+import com.adobe.cq.commerce.magento.graphql.ConfigurableProductOptions;
+import com.adobe.cq.commerce.magento.graphql.ConfigurableProductOptionsValues;
+import com.adobe.cq.commerce.magento.graphql.ProductInterface;
+import com.google.gson.JsonElement;
+
 public class ProductGridItem {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ProductGridItem.class);
+    static final String SIZE_ATTRIBUTE = "size";
 
-    @SlingObject
-    private ResourceResolver resourceResolver;
+    private final boolean exists;
+    private final String image;
+    private final String name;
+    private final String description;
+    private final String price;
+    private final String path;
+    private final ProductFilters filters;
 
-    @SlingObject
-    private Resource resource;
+    private ProductGridItem(String image, String name, String description, String price, String path, ProductFilters filters) {
+        this.exists = StringUtils.isNotBlank(name) && StringUtils.isNotBlank(path);
+        this.image = image;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.path = path;
+        this.filters = filters;
+    }
 
-    @Self
-    private SlingHttpServletRequest request;
+    public static ProductGridItem fromProduct(Product product, Page page, SlingHttpServletRequest request) {
+        return fromProduct(product, page, request, null);
+    }
 
-    @SlingObject
-    private SlingHttpServletResponse response;
+    public static ProductGridItem fromProduct(Product product, Page page, SlingHttpServletRequest request, String resolvedPath) {
+        return fromProduct(product, page, request, resolvedPath, null);
+    }
 
-    @ScriptVariable
-    private PageManager pageManager;
+    public static ProductGridItem fromProduct(Product product, Page page, SlingHttpServletRequest request, String resolvedPath,
+        String selectedVariantSku) {
+        ProductInterface productData = ProductItem.fetchProduct(product);
+        String defaultImage = ProductItem.resolveImage(request, ProductItem.assetPath(product.getAssets()), ProductItem.imagePath(productData));
+        String resolvedPrice = ProductItem.formatPrice(product.getPriceRange());
+        Variant selectedVariant = resolveSelectedVariant(product, selectedVariantSku);
+        String image = selectedVariant != null
+            ? ProductItem.resolveImage(request, ProductItem.assetPath(selectedVariant.getAssets()), defaultImage)
+            : defaultImage;
+        String displayName = selectedVariant != null ? StringUtils.defaultIfBlank(selectedVariant.getName(), product.getName()) : product.getName();
+        String displayPrice = selectedVariant != null
+            ? StringUtils.defaultIfBlank(ProductItem.formatPrice(selectedVariant.getPriceRange()), resolvedPrice)
+            : resolvedPrice;
+        String pagePath = resolvePagePath(page, request);
 
-    private boolean exists;
-    private String image;
-    private String name;
-    private String description;
-    private String price;
-    private String path;
-    private ProductFilters filters;
+        return new ProductGridItem(
+            image,
+            displayName,
+            ProductItem.descriptionLabel(productData),
+            displayPrice,
+            StringUtils.defaultIfBlank(resolvedPath, pagePath),
+            buildFilters(productData, displayPrice, selectedVariant != null ? null : product.getPriceRange()));
+    }
 
-    @PostConstruct
-    private void initModel() {
-        Page productPage = pageManager.getContainingPage(resource.getPath());
-        Product currentProduct = CommerceHelper.findCurrentProduct(productPage);
-        if(currentProduct == null) {
-            exists = false;
-            return;
+    public static ProductGridItem fromProductListItem(ProductListItem productListItem, SlingHttpServletRequest request, String resolvedUrl) {
+        ProductInterface product = productListItem.getProduct();
+        String resolvedPrice = ProductItem.formatPrice(productListItem.getPriceRange());
+
+        return new ProductGridItem(
+            ProductItem.mapAssetPath(request, productListItem.getImageURL()),
+            productListItem.getTitle(),
+            ProductItem.descriptionLabel(product),
+            resolvedPrice,
+            StringUtils.defaultIfBlank(resolvedUrl, StringUtils.defaultIfBlank(productListItem.getURL(), productListItem.getPath())),
+            buildFilters(product, resolvedPrice, productListItem.getPriceRange()));
+    }
+
+    private static String resolvePagePath(Page page, SlingHttpServletRequest request) {
+        if (page == null || request == null || request.getResourceResolver() == null) {
+            return StringUtils.EMPTY;
         }
-        ImageResource imageResource = currentProduct.getImage();
-        if (imageResource == null) {
-            exists = false;
-            return;
+        return request.getResourceResolver().map(request, page.getPath()) + ".html";
+    }
+
+    private static ProductFilters buildFilters(ProductInterface product, String price, Price priceRange) {
+        ProductFilters productFilters = new ProductFilters();
+        if (StringUtils.isNotBlank(price)) {
+            productFilters.setPrice(price);
         }
-        exists = true;
-        image = imageResource.getPath();
-        try {
-            CommerceService commerceService = resource.adaptTo(CommerceService.class);
-            if (commerceService != null) {
-                CommerceSession commerceSession = commerceService.login(request, response);
-                Product pimProduct = currentProduct.getPIMProduct();
-                name = pimProduct.getTitle();
-                description = pimProduct.getDescription();
-                price = commerceSession.getProductPrice(pimProduct);
-                path = productPage.getPath();
-                filters = getProductFilters(pimProduct, commerceSession);
+        if (priceRange != null && !priceRange.isEmpty() && Boolean.TRUE.equals(priceRange.isRange())
+            && StringUtils.isNotBlank(priceRange.getFormattedFinalPriceMax())) {
+            productFilters.setPrice(priceRange.getFormattedFinalPriceMax());
+        }
+
+        if (product instanceof ConfigurableProduct) {
+            ConfigurableProduct configurableProduct = (ConfigurableProduct) product;
+            for (ConfigurableProductOptions option : configurableProduct.getConfigurableOptions()) {
+                if ("color".equals(option.getAttributeCode())) {
+                    for (ConfigurableProductOptionsValues value : option.getValues()) {
+                        productFilters.setColor(StringUtils.lowerCase(value.getLabel()));
+                    }
+                } else if (SIZE_ATTRIBUTE.equals(option.getAttributeCode())) {
+                    for (ConfigurableProductOptionsValues value : option.getValues()) {
+                        productFilters.setSize(value.getLabel());
+                    }
+                }
             }
-        } catch (CommerceException e) {
-            LOGGER.error("Can't extract product information from the resource", e);
+        } else if (product != null) {
+            String size = customFieldValue(product, SIZE_ATTRIBUTE);
+            if (StringUtils.isNotBlank(size)) {
+                productFilters.setSize(size);
+            }
         }
+
+        return productFilters;
+    }
+
+    private static String customFieldValue(ProductInterface product, String field) {
+        Object value = product.get(field);
+        return value instanceof JsonElement && ((JsonElement) value).isJsonPrimitive() ? ((JsonElement) value).getAsString() : null;
+    }
+
+    private static Variant resolveSelectedVariant(Product product, String selectedVariantSku) {
+        if (product == null || StringUtils.isBlank(selectedVariantSku) || product.getVariants() == null) {
+            return null;
+        }
+
+        for (Variant variant : product.getVariants()) {
+            if (variant != null && StringUtils.equals(selectedVariantSku, variant.getSku())) {
+                return variant;
+            }
+        }
+
+        return null;
     }
 
     public boolean exists() {
@@ -130,41 +189,11 @@ public class ProductGridItem {
         return filters;
     }
 
-    private ProductFilters getProductFilters(Product product, CommerceSession commerceSession) throws CommerceException {
-        String variationAxis = product.getProperty("cq:productVariantAxes", String.class);
-        ProductFilters productFilters = new ProductFilters();
-        if (StringUtils.isNotEmpty(variationAxis)) {
-            Iterator<Product> unorderedVariations = product.getVariants();
-            while (unorderedVariations.hasNext()) {
-                Product productVariation = unorderedVariations.next();
-                ProductProperties variation = new ProductProperties(productVariation, commerceSession);
-                if (StringUtils.isNotEmpty(variation.getColor())) {
-                    productFilters.setColor(variation.getColor().toLowerCase());
-                }
-                if (StringUtils.isNotEmpty(variation.getSize())) {
-                    productFilters.setSize(variation.getSize());
-                }
-                productFilters.setPrice(variation.getPrice());
-            }
-        } else {
-            String color = product.getProperty("color", String.class);
-            if (StringUtils.isNotEmpty(color)) {
-                productFilters.setColor(color.toLowerCase());
-            }
-            productFilters.setSize(product.getProperty("size", String.class));
-            productFilters.setPrice(price);
-        }
-        return productFilters;
-    }
+    public static class ProductFilters {
 
-    public class ProductFilters {
-
-        private Set<String> colors = new HashSet<String>();
-        private Set<String> sizes = new HashSet<String>();
-        private Set<String> prices = new HashSet<String>();
-
-        public ProductFilters() {
-        }
+        private final Set<String> colors = new HashSet<String>();
+        private final Set<String> sizes = new LinkedHashSet<String>();
+        private final Set<String> prices = new LinkedHashSet<String>();
 
         public Set<String> getColors() {
             return Collections.unmodifiableSet(colors);
@@ -191,123 +220,4 @@ public class ProductGridItem {
         }
 
     }
-
-    public class ProductProperties {
-
-        private Product product;
-        private CommerceSession commerceSession;
-
-        private String path;
-        private Iterator<String> variants;
-        private String sku;
-        private String title;
-        private String description;
-        private String color;
-        private String colorClass;
-        private String size;
-        private String price;
-        private String summary;
-        private String features;
-        private String image;
-
-        public ProductProperties(Product product, CommerceSession commerceSession) {
-            this.product = product;
-            this.commerceSession = commerceSession;
-        }
-
-        public String getPath() {
-            if (path == null) {
-                path = product.getPath();
-            }
-            return path;
-        }
-
-        public Iterator<String> getVariants() {
-            if (variants == null) {
-                variants = product.getVariantAxes();
-            }
-            return variants;
-        }
-
-        public String getSku() {
-            if (sku == null) {
-                sku = product.getSKU();
-            }
-            return sku;
-        }
-
-        public String getTitle() {
-            if (title == null) {
-                title = product.getTitle();
-            }
-            return title;
-        }
-
-        public String getDescription() {
-            if (description == null) {
-                description = product.getDescription();
-            }
-            return description;
-        }
-
-        public String getColor() {
-            if (color == null) {
-                color = product.getProperty("color", String.class);
-            }
-            return color;
-        }
-
-        public String getColorClass() {
-            if (colorClass == null) {
-                String color = getColor();
-                if (color != null) {
-                    colorClass = color.toLowerCase();
-                }
-            }
-            return colorClass;
-        }
-
-        public String getSize() {
-            if (size == null) {
-                size = product.getProperty("size", String.class);
-            }
-            return size;
-        }
-
-        public String getPrice() {
-            if (price == null) {
-                try {
-                    price = commerceSession.getProductPrice(product);
-                } catch (CommerceException e) {
-                    LOGGER.error("Error getting the product price: {}", e);
-                }
-            }
-            return price;
-        }
-
-        public String getSummary() {
-            if (summary == null) {
-                summary = product.getProperty("summary", String.class);
-            }
-            return summary;
-        }
-
-        public String getFeatures() {
-            if (features == null) {
-                features = product.getProperty("features", String.class);
-            }
-            return features;
-        }
-
-        public String getImage() {
-            if (image == null) {
-                ImageResource imageResource = product.getImage();
-                if (imageResource != null) {
-                    image = imageResource.getFileReference();
-                }
-            }
-            return image;
-        }
-    }
-
 }

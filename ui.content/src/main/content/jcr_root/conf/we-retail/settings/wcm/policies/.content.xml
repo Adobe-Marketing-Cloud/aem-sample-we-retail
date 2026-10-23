@@ -249,7 +249,6 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="We.Retail Product Page"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        clientlibs="we-retail.product-page"
                         faviconClientLib="we-retail.structure.page">
                         <jcr:content jcr:primaryType="nt:unstructured"/>
                     </we-retail-product-page>

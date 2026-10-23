@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="nt:unstructured"
     jcr:title="Button"
-    sling:resourceType="cq/gui/components/authoring/dialog">
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[cif.shell.picker]">
     <content
         jcr:primaryType="nt:unstructured"
         sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
@@ -16,14 +17,131 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                         fieldLabel="Button label"
-                        name="./label"/>
-                    <linkTo
+                        name="./jcr:title"/>
+                    <linkType
+                        granite:class="cq-dialog-dropdown-showhide"
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                        fieldLabel="Link to"
-                        name="./linkTo"
-                        rootPath="/content"
-                        suffix=".html"/>
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Link type"
+                        name="./linkType">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            cq-dialog-dropdown-showhide-target=".we-button-linktype-showhide-target"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <linkTo
+                                jcr:primaryType="nt:unstructured"
+                                selected="{Boolean}true"
+                                text="Page"
+                                value="linkTo"/>
+                            <product
+                                jcr:primaryType="nt:unstructured"
+                                text="Product"
+                                value="product"/>
+                            <category
+                                jcr:primaryType="nt:unstructured"
+                                text="Category"
+                                value="category"/>
+                            <externalLink
+                                jcr:primaryType="nt:unstructured"
+                                text="External link"
+                                value="externalLink"/>
+                        </items>
+                    </linkType>
+                    <setLinkTo
+                        granite:class="hide we-button-linktype-showhide-target foundation-layout-util-vmargin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="linkTo"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <well
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/well">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <linkTo
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Page"
+                                        name="./linkTo"
+                                        rootPath="/content"
+                                        suffix=".html"/>
+                                </items>
+                            </well>
+                        </items>
+                    </setLinkTo>
+                    <setProduct
+                        granite:class="hide we-button-linktype-showhide-target foundation-layout-util-vmargin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="product"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <well
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/well">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <productSku
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="commerce/gui/components/common/cifproductfield"
+                                        fieldLabel="Product"
+                                        name="./productSku"
+                                        selectionId="sku"
+                                        showLink="{Boolean}true"/>
+                                </items>
+                            </well>
+                        </items>
+                    </setProduct>
+                    <setCategory
+                        granite:class="hide we-button-linktype-showhide-target foundation-layout-util-vmargin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="category"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <well
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/well">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <categoryId
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="commerce/gui/components/common/cifcategoryfield"
+                                        fieldLabel="Category"
+                                        name="./categoryId"
+                                        selectionId="urlPath"
+                                        showLink="{Boolean}true"/>
+                                    <categoryIdType
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                        name="./categoryIdType"
+                                        value="urlPath"/>
+                                </items>
+                            </well>
+                        </items>
+                    </setCategory>
+                    <setExternalLink
+                        granite:class="hide we-button-linktype-showhide-target foundation-layout-util-vmargin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="externalLink"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <well
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/well">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <externalLink
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="External link"
+                                        name="./externalLink"/>
+                                </items>
+                            </well>
+                        </items>
+                    </setExternalLink>
                     <cssClass
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"

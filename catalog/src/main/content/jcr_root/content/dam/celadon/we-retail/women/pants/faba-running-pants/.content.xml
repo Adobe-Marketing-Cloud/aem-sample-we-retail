@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="b673a476-5c5a-4368-8485-ac2ebfc08a18">
+    <jcr:content
+        jcr:lastModified="{Date}2026-06-24T12:58:14.941+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Faba Running Pants"
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/we-retail/settings/dam/cfm/models/product"
+            jcr:primaryType="nt:unstructured"
+            _strucVersion="{Long}1">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                additionalCategories="[equipment/running]"
+                additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:14.931+03:00"
+                additionalCategories_x0040_LastModifiedBy="admin"
+                color_x0040_LastModified="{Date}2026-06-24T12:58:14.926+03:00"
+                configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:14.926+03:00"
+                description="So versatile you'll wear it for running, yoga, or even just lounging around on the weekends.  Super cool stretch material fits your every move. "
+                description_x0040_ContentType="text/html"
+                description_x0040_LastModified="{Date}2026-06-24T12:58:14.931+03:00"
+                description_x0040_LastModifiedBy="admin"
+                features_x0040_LastModified="{Date}2026-06-24T12:58:14.926+03:00"
+                identifier="116138647"
+                identifier_x0040_LastModified="{Date}2026-06-24T12:58:14.931+03:00"
+                identifier_x0040_LastModifiedBy="admin"
+                image="[/content/dam/celadon/we-retail/women/pants/faba-running-pants_img_0.jpeg]"
+                image_x0040_LastModified="{Date}2026-06-24T12:58:14.941+03:00"
+                image_x0040_LastModifiedBy="admin"
+                name="Faba Running Pants"
+                name_x0040_LastModified="{Date}2026-06-24T12:58:14.930+03:00"
+                name_x0040_LastModifiedBy="admin"
+                price="{Double}39.99"
+                price_x0040_LastModified="{Date}2026-06-24T12:58:14.931+03:00"
+                price_x0040_LastModifiedBy="admin"
+                rating_x0040_LastModified="{Date}2026-06-24T12:58:14.926+03:00"
+                reviews_x0040_LastModified="{Date}2026-06-24T12:58:14.926+03:00"
+                short_description="pants"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
+                size_x0040_LastModified="{Date}2026-06-24T12:58:14.926+03:00"
+                sku="116138647"
+                sku_x0040_LastModified="{Date}2026-06-24T12:58:14.930+03:00"
+                sku_x0040_LastModifiedBy="admin"/>
+        </data>
+        <indexedData jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="68eff06b-d936-42e1-8e46-b4dd99b0aa12"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/product"
+                _x0040_stringArray_x0040_variations="[]"
+                double_x0040_price="{Double}39.99"
+                string_x0040_description="So versatile you'll wear it for running, yoga, or even just lounging around on the weekends.  Super cool stretch material fits your every move. "
+                string_x0040_identifier="116138647"
+                string_x0040_name="Faba Running Pants"
+                string_x0040_short_description="pants"
+                string_x0040_sku="116138647"
+                stringArray_x0040_additionalCategories="[equipment/running]"/>
+        </indexedData>
+        <metadata
+            cq:tags="[we-retail:gender/women,we-retail:activity/running,we-retail:apparel/pants]"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

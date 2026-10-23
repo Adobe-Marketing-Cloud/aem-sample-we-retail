@@ -17,4 +17,6 @@
 <workspaceFilter version="1.0">
     <filter root="/apps/weretail/config"/>
     <filter root="/apps/weretail/config.publish"/>
+    <filter root="/apps/weretail/osgiconfig/config"/>
+    <filter root="/apps/weretail/osgiconfig/config.publish"/>
 </workspaceFilter>

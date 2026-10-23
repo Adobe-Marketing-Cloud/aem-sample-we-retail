@@ -1,100 +1,97 @@
-/*
- *   Copyright 2016 Adobe Systems Incorporated
- *
- *   Licensed under the Apache License, Version 2.0 (the "License");
- *   you may not use this file except in compliance with the License.
- *   You may obtain a copy of the License at
- *
- *       http://www.apache.org/licenses/LICENSE-2.0
- *
- *   Unless required by applicable law or agreed to in writing, software
- *   distributed under the License is distributed on an "AS IS" BASIS,
- *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *   See the License for the specific language governing permissions and
- *   limitations under the License.
- */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ ~ Copyright 2026 Adobe
+ ~
+ ~ Licensed under the Apache License, Version 2.0 (the "License");
+ ~ you may not use this file except in compliance with the License.
+ ~ You may obtain a copy of the License at
+ ~
+ ~     http://www.apache.org/licenses/LICENSE-2.0
+ ~
+ ~ Unless required by applicable law or agreed to in writing, software
+ ~ distributed under the License is distributed on an "AS IS" BASIS,
+ ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ ~ See the License for the specific language governing permissions and
+ ~ limitations under the License.
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 package we.retail.core.model;
 
-import org.apache.sling.api.scripting.SlingBindings;
-import org.junit.Before;
-import org.junit.Rule;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.util.Collections;
+import java.util.HashMap;
+
+import org.apache.sling.api.SlingHttpServletRequest;
+import org.apache.sling.api.resource.Resource;
+import org.apache.sling.api.wrappers.ValueMapDecorator;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
 
-import com.adobe.cq.sightly.WCMBindings;
-import com.adobe.granite.security.user.UserManagementService;
-import com.day.cq.wcm.api.designer.Style;
-import common.AppAemContext;
-import io.wcm.testing.mock.aem.junit.AemContext;
+import com.adobe.cq.commerce.core.components.models.common.SiteStructure;
+import com.adobe.cq.commerce.core.components.models.common.Price;
+import com.adobe.cq.commerce.core.components.models.product.Product;
+import com.adobe.cq.commerce.core.components.models.retriever.AbstractProductRetriever;
+import com.day.cq.wcm.api.Page;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
-@RunWith(MockitoJUnitRunner.class)
 public class ProductModelTest {
 
-    private static final String CURRENT_RESOURCE = "/content/we-retail/us/en/products/equipment/running/fleet-cross-training-shoe/jcr:content/root/product";
-    private static final String CURRENT_PAGE = "/content/we-retail/us/en/products/equipment/running/fleet-cross-training-shoe";
+    @Test
+    public void testAdaptsToCifBackedProductModel() throws Exception {
+        ProductModel productModel = new ProductModel();
+        SlingHttpServletRequest request = mock(SlingHttpServletRequest.class);
+        Resource resource = mock(Resource.class);
+        Page currentPage = mock(Page.class);
+        SiteStructure siteStructure = mock(SiteStructure.class);
+        Product product = createProduct();
 
-    @Rule
-    public final AemContext context = AppAemContext.newAemContext();
+        when(request.getRequestURI()).thenReturn("/content/we-retail/us/en/products/product-page.html/eq/running/eqrusufle.html");
+        when(resource.getPath()).thenReturn("/content/we-retail/us/en/products/product-page/jcr:content/root/product");
+        when(resource.getChildren()).thenReturn(Collections.<Resource>emptyList());
+        when(resource.getValueMap()).thenReturn(new ValueMapDecorator(new HashMap<String, Object>()));
+        when(currentPage.getPath()).thenReturn("/content/we-retail/us/en/products/product-page");
+        when(siteStructure.isProductPage(currentPage)).thenReturn(true);
 
-    @Mock
-    private Style style;
+        setField(productModel, "request", request);
+        setField(productModel, "resource", resource);
+        setField(productModel, "currentPage", currentPage);
+        setField(productModel, "siteStructure", siteStructure);
+        setField(productModel, "cifProduct", product);
 
-    @Mock
-    private UserManagementService ums;
+        Method initMethod = ProductModel.class.getDeclaredMethod("initModel");
+        initMethod.setAccessible(true);
+        initMethod.invoke(productModel);
 
-    private ProductModel productModel;
-    private ProductItem productItem;
-
-    @Before
-    public void setUp() throws Exception {
-        context.currentPage(CURRENT_PAGE);
-        SlingBindings attribute = (SlingBindings) context.request().getAttribute(SlingBindings.class.getName());
-        attribute.put("currentStyle", style);
-        attribute.put(WCMBindings.CURRENT_PAGE, context.currentPage());
-        context.currentResource(CURRENT_RESOURCE);
-        context.registerService(UserManagementService.class, ums);
-
-        productModel = context.request().adaptTo(ProductModel.class);
-        productItem = productModel.getProductItem();
+        assertNotNull(productModel.getProductItem());
+        assertNotNull(productModel.getProductItem().getTitle());
     }
 
-    @Test
-    public void testProduct() throws Exception {
-        assertNotNull(productItem);
-        assertNull(productItem.getVariantValueForAxis("size"));
-        assertEquals("eqrusufle", productItem.getSku());
-        assertEquals(CURRENT_RESOURCE, productItem.getPath());
-        assertNull(productItem.getTitle());
-        assertNull(productItem.getDescription());
-        assertNotNull(productItem.getSummary());
-        assertNotNull(productItem.getFeatures());
-        assertNotNull(productItem.getPrice());
-        assertEquals("/content/dam/we-retail/en/products/apparel/footwear/source/Fleet Shoe.jpg", productItem.getImageUrl());
-        assertNull(productItem.getThumbnailUrl());
+    private Product createProduct() {
+        Product product = mock(Product.class);
+        Price price = mock(Price.class);
+        AbstractProductRetriever retriever = mock(AbstractProductRetriever.class);
+
+        when(price.isEmpty()).thenReturn(false);
+        when(price.isRange()).thenReturn(Boolean.FALSE);
+        when(price.getFormattedFinalPrice()).thenReturn("$64.99");
+
+        when(product.getFound()).thenReturn(Boolean.TRUE);
+        when(product.getSku()).thenReturn("eqrusufle");
+        when(product.getName()).thenReturn("Fleet Cross-Training Shoe");
+        when(product.getPriceRange()).thenReturn(price);
+        when(product.getAssets()).thenReturn(Collections.emptyList());
+        when(product.getVariants()).thenReturn(Collections.emptyList());
+        when(product.getVariantAttributes()).thenReturn(Collections.emptyList());
+        when(product.getProductRetriever()).thenReturn(retriever);
+
+        return product;
     }
 
-    @Test
-    public void testVariants() throws Exception {
-        assertEquals(3, productItem.getVariants().size());
-        ProductItem variantItem = productItem.getVariants().get(0);
-        assertEquals(CURRENT_RESOURCE + "/eqrusufle-9", variantItem.getPath());
-        assertNotNull(variantItem.getPagePath());
-        assertEquals("eqrusufle-9", variantItem.getSku());
-        assertNull(variantItem.getTitle());
-        assertNull(variantItem.getDescription());
-        assertNull(variantItem.getVariantValueForAxis("color"));
-        assertEquals("9", variantItem.getVariantValueForAxis("size"));
-        assertNull(variantItem.getPrice());
-        assertNull(variantItem.getSummary());
-        assertNull(variantItem.getFeatures());
-        assertNull(variantItem.getImageUrl());
-        assertNull(variantItem.getThumbnailUrl());
+    private void setField(Object target, String fieldName, Object value) throws Exception {
+        Field field = target.getClass().getDeclaredField(fieldName);
+        field.setAccessible(true);
+        field.set(target, value);
     }
 
 }

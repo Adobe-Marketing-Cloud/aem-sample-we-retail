@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <jcr:content
+        dam:noThumbnail="{Boolean}true"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Attribute Manifest"/>
+    <sku/>
+    <name/>
+    <description/>
+    <price/>
+    <image/>
+    <short_description/>
+    <identifier/>
+    <rating/>
+    <features/>
+    <reviews/>
+    <size/>
+    <color/>
+</jcr:root>

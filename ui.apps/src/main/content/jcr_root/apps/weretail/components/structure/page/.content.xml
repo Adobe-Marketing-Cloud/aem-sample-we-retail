@@ -3,5 +3,5 @@
     jcr:description="Page component with we.retail specific header and footer libs"
     jcr:primaryType="cq:Component"
     jcr:title="We.Retail Page"
-    sling:resourceSuperType="core/wcm/components/page/v2/page"
+    sling:resourceSuperType="core/cif/components/structure/page/v3/page"
     componentGroup=".hidden"/>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="6966bcde-965d-4e7e-b17e-37cdccfa3a67">
+    <jcr:content
+        jcr:lastModified="{Date}2026-06-24T12:58:15.653+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="The Stretch Longboard"
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/we-retail/settings/dam/cfm/models/product"
+            jcr:primaryType="nt:unstructured"
+            _strucVersion="{Long}1">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:15.639+03:00"
+                color_x0040_LastModified="{Date}2026-06-24T12:58:15.639+03:00"
+                configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:15.639+03:00"
+                description="The Stretch is agreat everyday longboard for beginners to intermediate surfers. It's extremely forgiving and balanced, which is great for beginners or more advanced surfers who just want an easy day of surfing."
+                description_x0040_ContentType="text/html"
+                description_x0040_LastModified="{Date}2026-06-24T12:58:15.645+03:00"
+                description_x0040_LastModifiedBy="admin"
+                features="Longboard&#xd;&#xa;&#xd;&#xa;3 fin&#xd;&#xa;&#xd;&#xa;Polyurethane&#xd;&#xa;&#xd;&#xa;Ideal Use&#xd;&#xa;&#xd;&#xa;Waves: All around&#xd;&#xa;&#xd;&#xa;Skill: Novice"
+                features_x0040_LastModified="{Date}2026-06-24T12:58:15.647+03:00"
+                features_x0040_LastModifiedBy="admin"
+                identifier="eqsusuthd"
+                identifier_x0040_LastModified="{Date}2026-06-24T12:58:15.646+03:00"
+                identifier_x0040_LastModifiedBy="admin"
+                image="[/content/dam/celadon/we-retail/equipment/surfing/the-stretch-longboard_img_0.png]"
+                image_x0040_LastModified="{Date}2026-06-24T12:58:15.653+03:00"
+                image_x0040_LastModifiedBy="admin"
+                name="The Stretch Longboard"
+                name_x0040_LastModified="{Date}2026-06-24T12:58:15.644+03:00"
+                name_x0040_LastModifiedBy="admin"
+                price="{Double}900.0"
+                price_x0040_LastModified="{Date}2026-06-24T12:58:15.646+03:00"
+                price_x0040_LastModifiedBy="admin"
+                rating="4"
+                rating_x0040_LastModified="{Date}2026-06-24T12:58:15.646+03:00"
+                rating_x0040_LastModifiedBy="admin"
+                reviews="By Nico&#xa;from bluehawaii&#xa;This is the ultimate beginner surfboard. The board is soft so if you bump yourself or anyone else with the surfboard it's not going to be that bad. The boards are very bouyant and catch waves easily. The foam does get a little slick once you're in the water, so sometimes your feet may slip if you don't have them well planted. If you're just starting out surfing and want something safe, this is the board to go with."
+                reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.647+03:00"
+                reviews_x0040_LastModifiedBy="admin"
+                short_description="equipment"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
+                size_x0040_LastModified="{Date}2026-06-24T12:58:15.639+03:00"
+                sku="eqsusuthd"
+                sku_x0040_LastModified="{Date}2026-06-24T12:58:15.644+03:00"
+                sku_x0040_LastModifiedBy="admin"/>
+        </data>
+        <indexedData jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="644942aa-fb5b-4744-91f4-fa30a7070021"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/product"
+                _x0040_stringArray_x0040_variations="[]"
+                double_x0040_price="{Double}900.0"
+                string_x0040_description="The Stretch is agreat everyday longboard for beginners to intermediate surfers. It's extremely forgiving and balanced, which is great for beginners or more advanced surfers who just want an easy day of surfing."
+                string_x0040_features="Longboard&#xd;&#xa;&#xd;&#xa;3 fin&#xd;&#xa;&#xd;&#xa;Polyurethane&#xd;&#xa;&#xd;&#xa;Ideal Use&#xd;&#xa;&#xd;&#xa;Waves: All around&#xd;&#xa;&#xd;&#xa;Skill: Novice"
+                string_x0040_identifier="eqsusuthd"
+                string_x0040_name="The Stretch Longboard"
+                string_x0040_rating="4"
+                string_x0040_reviews="By Nico&#xa;from bluehawaii&#xa;This is the ultimate beginner surfboard. The board is soft so if you bump yourself or anyone else with the surfboard it's not going to be that bad. The boards are very bouyant and catch waves easily. The foam does get a little slick once you're in the water, so sometimes your feet may slip if you don't have them well planted. If you're just starting out surfing and want something safe, this is the board to go with."
+                string_x0040_short_description="equipment"
+                string_x0040_sku="eqsusuthd"/>
+        </indexedData>
+        <metadata
+            cq:tags="[we-retail:equipment,we-retail:season/summer,we-retail:activity/surfing]"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

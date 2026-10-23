@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="0e942b28-d236-48fd-a964-585ce4f621c3">
+    <jcr:content
+        jcr:lastModified="{Date}2026-06-24T12:58:16.004+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="MX121 Sport Pedals"
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/we-retail/settings/dam/cfm/models/product"
+            jcr:primaryType="nt:unstructured"
+            _strucVersion="{Long}1">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:15.969+03:00"
+                color_x0040_LastModified="{Date}2026-06-24T12:58:15.969+03:00"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"
+                configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:15.999+03:00"
+                configurableOptions_x0040_LastModifiedBy="admin"
+                description="MX121 Sport Pedals work with cleats and without you decide whether to clip in or to flip pedals and crank on the wide platform."
+                description_x0040_ContentType="text/html"
+                description_x0040_LastModified="{Date}2026-06-24T12:58:15.978+03:00"
+                description_x0040_LastModifiedBy="admin"
+                features="Ideal for recumbents, commuters and recreational cyclists. the SPD compatible step-in system flips over to a concave, stable pedaling platform&#xd;&#xa;Pedals feature durable chromoly spindles with 8mm Allen wrench mounts and low-maintenance sealed-bearing-cartridge axles"
+                features_x0040_LastModified="{Date}2026-06-24T12:58:15.980+03:00"
+                features_x0040_LastModifiedBy="admin"
+                identifier="eqbisumxs"
+                identifier_x0040_LastModified="{Date}2026-06-24T12:58:15.979+03:00"
+                identifier_x0040_LastModifiedBy="admin"
+                image="[/content/dam/celadon/we-retail/equipment/biking/mx121-sport-pedals_img_0.jpeg]"
+                image_x0040_LastModified="{Date}2026-06-24T12:58:15.998+03:00"
+                image_x0040_LastModifiedBy="admin"
+                name="MX121 Sport Pedals"
+                name_x0040_LastModified="{Date}2026-06-24T12:58:15.978+03:00"
+                name_x0040_LastModifiedBy="admin"
+                price="{Double}65.0"
+                price_x0040_LastModified="{Date}2026-06-24T12:58:15.979+03:00"
+                price_x0040_LastModifiedBy="admin"
+                rating="4"
+                rating_x0040_LastModified="{Date}2026-06-24T12:58:15.979+03:00"
+                rating_x0040_LastModifiedBy="admin"
+                reviews="&#xa;By GTI_Driver&#xa;from Switzerland&#xa;I have a hybrid bike. These pedals suit perfectly my needs. Daily comute to work with a solid base, intuitive to position your foot without looking too much. When going to the hills using the cleats they are also reliable and shape helps to quickly find the correct side! Cleats don't come off even on a quite-loose set up.&#xa;&#xa;Also like the design &amp; weight.&#xa;For a hybrid these are ok. Don't think them for a mountain bike or a full road one."
+                reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.980+03:00"
+                reviews_x0040_LastModifiedBy="admin"
+                short_description="equipment"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
+                size_x0040_LastModified="{Date}2026-06-24T12:58:15.969+03:00"
+                sku="eqbisumxs"
+                sku_x0040_LastModified="{Date}2026-06-24T12:58:15.977+03:00"
+                sku_x0040_LastModifiedBy="admin"/>
+            <var-size-onesize
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                _x0040_variationCreationDate="{Date}2026-06-24T12:58:15.999+03:00"
+                additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:16.000+03:00"
+                additionalCategories_x0040_LastModifiedBy="admin"
+                color_x0040_LastModified="{Date}2026-06-24T12:58:16.002+03:00"
+                color_x0040_LastModifiedBy="admin"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"
+                configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:16.000+03:00"
+                configurableOptions_x0040_LastModifiedBy="admin"
+                description="MX121 Sport Pedals work with cleats and without you decide whether to clip in or to flip pedals and crank on the wide platform."
+                description_x0040_ContentType="text/html"
+                description_x0040_LastModified="{Date}2026-06-24T12:58:16.001+03:00"
+                description_x0040_LastModifiedBy="admin"
+                features="Ideal for recumbents, commuters and recreational cyclists. the SPD compatible step-in system flips over to a concave, stable pedaling platform&#xd;&#xa;Pedals feature durable chromoly spindles with 8mm Allen wrench mounts and low-maintenance sealed-bearing-cartridge axles"
+                features_x0040_LastModified="{Date}2026-06-24T12:58:16.002+03:00"
+                features_x0040_LastModifiedBy="admin"
+                identifier="eqbisumxs"
+                identifier_x0040_LastModified="{Date}2026-06-24T12:58:16.001+03:00"
+                identifier_x0040_LastModifiedBy="admin"
+                image="[/content/dam/celadon/we-retail/equipment/biking/mx121-sport-pedals_img_0.jpeg]"
+                image_x0040_LastModified="{Date}2026-06-24T12:58:16.000+03:00"
+                image_x0040_LastModifiedBy="admin"
+                name="MX121 Sport Pedals"
+                name_x0040_LastModified="{Date}2026-06-24T12:58:16.001+03:00"
+                name_x0040_LastModifiedBy="admin"
+                price="{Double}65.0"
+                price_x0040_LastModified="{Date}2026-06-24T12:58:16.001+03:00"
+                price_x0040_LastModifiedBy="admin"
+                rating="4"
+                rating_x0040_LastModified="{Date}2026-06-24T12:58:16.002+03:00"
+                rating_x0040_LastModifiedBy="admin"
+                reviews="&#xa;By GTI_Driver&#xa;from Switzerland&#xa;I have a hybrid bike. These pedals suit perfectly my needs. Daily comute to work with a solid base, intuitive to position your foot without looking too much. When going to the hills using the cleats they are also reliable and shape helps to quickly find the correct side! Cleats don't come off even on a quite-loose set up.&#xa;&#xa;Also like the design &amp; weight.&#xa;For a hybrid these are ok. Don't think them for a mountain bike or a full road one."
+                reviews_x0040_LastModified="{Date}2026-06-24T12:58:16.002+03:00"
+                reviews_x0040_LastModifiedBy="admin"
+                short_description="equipment"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
+                size="One size"
+                size_x0040_LastModified="{Date}2026-06-24T12:58:16.004+03:00"
+                size_x0040_LastModifiedBy="admin"
+                sku="eqbisumxs-Onesize"
+                sku_x0040_LastModified="{Date}2026-06-24T12:58:16.004+03:00"
+                sku_x0040_LastModifiedBy="admin"/>
+        </data>
+        <indexedData jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="1654ff10-1dd0-44fa-b701-f6d79bfa27eb"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/product"
+                _x0040_stringArray_x0040_variations="[var-size-onesize]"
+                double_x0040_price="{Double}65.0"
+                string_x0040_description="MX121 Sport Pedals work with cleats and without you decide whether to clip in or to flip pedals and crank on the wide platform."
+                string_x0040_features="Ideal for recumbents, commuters and recreational cyclists. the SPD compatible step-in system flips over to a concave, stable pedaling platform&#xd;&#xa;Pedals feature durable chromoly spindles with 8mm Allen wrench mounts and low-maintenance sealed-bearing-cartridge axles"
+                string_x0040_identifier="eqbisumxs"
+                string_x0040_name="MX121 Sport Pedals"
+                string_x0040_rating="4"
+                string_x0040_reviews="&#xa;By GTI_Driver&#xa;from Switzerland&#xa;I have a hybrid bike. These pedals suit perfectly my needs. Daily comute to work with a solid base, intuitive to position your foot without looking too much. When going to the hills using the cleats they are also reliable and shape helps to quickly find the correct side! Cleats don't come off even on a quite-loose set up.&#xa;&#xa;Also like the design &amp; weight.&#xa;For a hybrid these are ok. Don't think them for a mountain bike or a full road one."
+                string_x0040_short_description="equipment"
+                string_x0040_sku="eqbisumxs"
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"/>
+            <var-size-onesize
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="1d873514-eeef-4715-938c-691aef9fe7dd"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/product"
+                double_x0040_price="{Double}65.0"
+                string_x0040_description="MX121 Sport Pedals work with cleats and without you decide whether to clip in or to flip pedals and crank on the wide platform."
+                string_x0040_features="Ideal for recumbents, commuters and recreational cyclists. the SPD compatible step-in system flips over to a concave, stable pedaling platform&#xd;&#xa;Pedals feature durable chromoly spindles with 8mm Allen wrench mounts and low-maintenance sealed-bearing-cartridge axles"
+                string_x0040_identifier="eqbisumxs"
+                string_x0040_name="MX121 Sport Pedals"
+                string_x0040_rating="4"
+                string_x0040_reviews="&#xa;By GTI_Driver&#xa;from Switzerland&#xa;I have a hybrid bike. These pedals suit perfectly my needs. Daily comute to work with a solid base, intuitive to position your foot without looking too much. When going to the hills using the cleats they are also reliable and shape helps to quickly find the correct side! Cleats don't come off even on a quite-loose set up.&#xa;&#xa;Also like the design &amp; weight.&#xa;For a hybrid these are ok. Don't think them for a mountain bike or a full road one."
+                string_x0040_short_description="equipment"
+                string_x0040_size="One size"
+                string_x0040_sku="eqbisumxs-Onesize"
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"/>
+        </indexedData>
+        <metadata
+            cq:tags="[we-retail:equipment,we-retail:activity/biking,we-retail:season/summer]"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured">
+            <dam:cfVariations jcr:primaryType="nt:unstructured">
+                <var-size-onesize
+                    cq:tags="[we-retail:activity/biking,we-retail:season/summer,we-retail:equipment]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+            </dam:cfVariations>
+        </metadata>
+        <model jcr:primaryType="nt:unstructured">
+            <variations jcr:primaryType="nt:unstructured">
+                <var-size-onesize
+                    jcr:description="Variant: var-size-onesize"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="var-size-onesize"
+                    name="var-size-onesize"/>
+            </variations>
+        </model>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

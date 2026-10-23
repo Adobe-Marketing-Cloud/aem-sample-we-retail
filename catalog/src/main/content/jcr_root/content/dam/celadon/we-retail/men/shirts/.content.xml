@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Shirts">
+        <folderThumbnail/>
+    </jcr:content>
+    <eton-short-sleeve-shirt/>
+    <eton-short-sleeve-shirt_img_0.jpeg/>
+    <amsterdam-short-sleeve-travel-shirt/>
+    <amsterdam-short-sleeve-travel-shirt_img_0.jpeg/>
+    <laguna-short-sleeve-shirt/>
+    <laguna-short-sleeve-shirt_img_0.jpeg/>
+    <expedition-tech-long-sleeved-shirt/>
+    <expedition-tech-long-sleeved-shirt_img_0.jpeg/>
+</jcr:root>

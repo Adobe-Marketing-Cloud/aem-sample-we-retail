@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2026 Adobe Systems Incorporated
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<workspaceFilter version="1.0">
+    <filter root="/content/cq:tags/we-retail" mode="merge"/>
+    <filter root="/conf/we-retail/settings/dam/cfm/models/product"/>
+    <filter root="/conf/we-retail/settings/dam/cfm/models/celadon-option-definition"/>
+    <filter root="/conf/we-retail/settings/dam/cfm/models/celadon-attribute"/>
+    <filter root="/content/dam/celadon">
+        <include pattern="/content/dam/celadon"/>
+        <include pattern="/content/dam/celadon/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/celadon/we-retail"/>
+</workspaceFilter>

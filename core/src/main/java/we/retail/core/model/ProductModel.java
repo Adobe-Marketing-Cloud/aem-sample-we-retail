@@ -17,31 +17,23 @@ package we.retail.core.model;
 
 import javax.annotation.PostConstruct;
 
-import org.apache.jackrabbit.oak.spi.security.user.UserConstants;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
-import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.Resource;
-import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.models.annotations.Model;
-import org.apache.sling.models.annotations.injectorspecific.OSGiService;
+import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;
 import org.apache.sling.models.annotations.injectorspecific.ScriptVariable;
 import org.apache.sling.models.annotations.injectorspecific.Self;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.adobe.cq.commerce.api.CommerceException;
-import com.adobe.cq.commerce.api.CommerceService;
-import com.adobe.cq.commerce.api.CommerceSession;
-import com.adobe.cq.commerce.api.Product;
-import com.adobe.granite.security.user.UserManagementService;
+import org.apache.sling.models.annotations.Via;
+import org.apache.sling.models.annotations.via.ForcedResourceType;
+import com.adobe.cq.commerce.core.components.models.common.SiteStructure;
+import com.adobe.cq.commerce.core.components.models.product.Product;
 import com.day.cq.wcm.api.Page;
-import we.retail.core.model.handler.CommerceHandler;
 
 @Model(adaptables = SlingHttpServletRequest.class)
 public class ProductModel {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(ProductModel.class);
+    private static final String CIF_PRODUCT_RESOURCE_TYPE = "core/cif/components/commerce/product/v2/product";
 
     @SlingObject
     private Resource resource;
@@ -49,49 +41,32 @@ public class ProductModel {
     @SlingObject
     private SlingHttpServletRequest request;
 
-    @SlingObject
-    private SlingHttpServletResponse response;
-
-    @SlingObject
-    private ResourceResolver resourceResolver;
-
     @ScriptVariable
     private Page currentPage;
 
-    @Self
-    private CommerceHandler commerceHandler;
+    @Self(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private SiteStructure siteStructure;
 
-    @OSGiService
-    private UserManagementService ums;
+    @Self(injectionStrategy = InjectionStrategy.OPTIONAL)
+    @Via(type = ForcedResourceType.class, value = CIF_PRODUCT_RESOURCE_TYPE)
+    private Product cifProduct;
 
-    private CommerceService commerceService;
     private ProductItem productItem;
-    private boolean isAnonymous;
 
     @PostConstruct
     private void initModel() {
-        try {
-            commerceService = currentPage.getContentResource().adaptTo(CommerceService.class);
-            if (commerceService != null) {
-                CommerceSession commerceSession = commerceService.login(request, response);
-                Product product;
-                //for proxy page use product from commerce handler
-                if (commerceHandler.isProductPageProxy()) {
-                    product = commerceHandler.getProduct();
-                } else {
-                    product = resource.adaptTo(Product.class);
-                }
-
-                if (product != null) {
-                    productItem = new ProductItem(product, commerceSession, request, currentPage);
-                }
-            }
-        } catch (CommerceException e) {
-            LOGGER.error("Can't extract product from page", e);
+        if (siteStructure == null || currentPage == null || !siteStructure.isProductPage(currentPage)) {
+            return;
         }
 
-        String anonymousId = ums != null ? ums.getAnonymousId() : UserConstants.DEFAULT_ANONYMOUS_ID;
-        isAnonymous = resourceResolver.getUserID() == null || anonymousId.equals(resourceResolver.getUserID());
+        try {
+            ProductItem.requestShortDescription(cifProduct);
+            if (isUsableRouteProduct(cifProduct)) {
+                productItem = new ProductItem(cifProduct, request, currentPage);
+            }
+        } catch (RuntimeException e) {
+            // Fail soft so route pages can render surrounding authored content even when commerce data is unavailable.
+        }
     }
 
     public ProductItem getProductItem() {
@@ -102,19 +77,16 @@ public class ProductModel {
         return productItem != null && !productItem.getVariants().isEmpty();
     }
 
-    public String getAddToCartUrl() {
-        return commerceHandler.getAddToCardUrl();
-    }
-
-    public String getAddToSmartListUrl() {
-        return commerceHandler.getAddToSmartListUrl();
-    }
-
     public String getProductTrackingPath() {
-        return commerceHandler.getProductTrackingPath();
+        if (productItem != null && StringUtils.isNotBlank(productItem.getPagePath())) {
+            return StringUtils.substringBefore(productItem.getPagePath(), ".html");
+        }
+        return currentPage != null ? currentPage.getPath() : resource.getPath();
     }
 
-    public boolean isAnonymous() {
-        return isAnonymous;
+    private boolean isUsableRouteProduct(Product product) {
+        return product != null
+            && Boolean.TRUE.equals(product.getFound())
+            && !StringUtils.equals(product.getName(), "Product name");
     }
 }

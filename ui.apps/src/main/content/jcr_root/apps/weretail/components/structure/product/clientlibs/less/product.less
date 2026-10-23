@@ -282,6 +282,48 @@
     &-actions {
         float: right;
         min-width: 265px;
+
+        &--disabled {
+            .btn {
+                opacity: 1;
+                cursor: default;
+                pointer-events: none;
+            }
+
+            .btn[disabled] {
+                background-color: @brand-primary;
+                border-color: @brand-primary;
+                color: #fff;
+
+                &:hover,
+                &:focus {
+                    background-color: @brand-primary;
+                    border-color: @brand-primary;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &-unavailable {
+        clear: both;
+        margin: 12px 0 0;
+        color: @text-muted;
+        font-size: 13px;
+    }
+
+    .recommendations-default {
+        padding-top: 10px;
+    }
+
+    .recommendations-default-list {
+        margin-bottom: 10px;
+    }
+
+    .recommendations-default-message {
+        padding: 1rem 0;
+        color: @text-muted;
+        text-align: center;
     }
 
     .form-group {
@@ -305,10 +347,6 @@
         color: @text-muted;
 
         text-transform: none;
-    }
-
-    .we-Rating {
-        margin-bottom: 8px;
     }
 
     .separator {

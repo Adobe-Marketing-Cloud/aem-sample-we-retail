@@ -77,7 +77,7 @@
                 },
                 "image"                : {
                     "jcr:primaryType"     : "nt:unstructured",
-                    "fileReference"       : "/content/dam/we-retail/en/products/apparel/footwear/source/Fleet Shoe.jpg",
+                    "fileReference"       : "/content/dam/celadon/we-retail/eq/running/eqrusufle.jpeg",
                     "height"              : "300",
                     "jcr:lastModifiedBy"  : "admin",
                     "unsharpMaskAmount"   : "0",

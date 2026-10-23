@@ -14,10 +14,11 @@
   ~ limitations under the License.
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
 <div class="we-product-grid-container"
-     data-sly-use.list="we.retail.core.model.ProductGrid"
+     data-sly-use.productGrid="we.retail.core.model.ProductGrid"
+     data-sly-use.itemTemplate="item/item.html"
      data-sly-use.template="core/wcm/components/commons/v1/templates.html">
-    <ul data-sly-list.listItem="${list.listItems}" class="foundation-ordered-list-container">
-        <sly data-sly-resource="${ '{0}/jcr:content' @ format=[listItem.path], resourceType='weretail/components/content/productgrid/item' }"></sly>
+    <ul data-sly-list.item="${productGrid.products}" class="foundation-ordered-list-container">
+        <sly data-sly-call="${itemTemplate.item @ item=item}"></sly>
     </ul>
 </div>
-<sly data-sly-call="${template.placeholder @ isEmpty=list.listItems.size == 0}"/>
+<sly data-sly-call="${template.placeholder @ isEmpty=productGrid.products.size == 0}"/>

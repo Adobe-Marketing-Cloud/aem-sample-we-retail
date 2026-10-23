@@ -1,0 +1,5 @@
+{
+  "user.mapping": [
+    "com.adobe.commerce.cif.celadon-aem:catalog-reader=celadon-catalog-reader"
+  ]
+}

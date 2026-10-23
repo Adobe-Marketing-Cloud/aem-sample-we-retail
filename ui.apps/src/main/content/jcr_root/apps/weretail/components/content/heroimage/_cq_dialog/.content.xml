@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="nt:unstructured"
     jcr:title="Hero Image"
-    sling:resourceType="cq/gui/components/authoring/dialog">
-    <content jcr:primaryType="nt:unstructured">
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[cif.shell.picker]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
         <items jcr:primaryType="nt:unstructured">
-            <tabs jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
                 <items jcr:primaryType="nt:unstructured">
                     <metadata
                         jcr:primaryType="nt:unstructured"
@@ -13,6 +19,7 @@
                     <properties
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Properties"
+                        sling:orderBefore="asset"
                         sling:resourceType="granite/ui/components/coral/foundation/container"
                         margin="{Boolean}true">
                         <items jcr:primaryType="nt:unstructured">
@@ -40,13 +47,130 @@
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                                 fieldLabel="Button label"
                                                 name="./buttonLabel"/>
-                                            <buttonLinkTo
+                                            <buttonLinkType
+                                                granite:class="cq-dialog-dropdown-showhide"
                                                 jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                fieldLabel="Link to"
-                                                name="./buttonLinkTo"
-                                                rootPath="/content"
-                                                suffix=".html"/>
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Button link type"
+                                                name="./buttonLinkType">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-dropdown-showhide-target=".we-heroimage-linktype-showhide-target"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <linkTo
+                                                        jcr:primaryType="nt:unstructured"
+                                                        selected="{Boolean}true"
+                                                        text="Page"
+                                                        value="linkTo"/>
+                                                    <product
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Product"
+                                                        value="product"/>
+                                                    <category
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Category"
+                                                        value="category"/>
+                                                    <externalLink
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="External link"
+                                                        value="externalLink"/>
+                                                </items>
+                                            </buttonLinkType>
+                                            <setButtonLinkTo
+                                                granite:class="hide we-heroimage-linktype-showhide-target foundation-layout-util-vmargin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="linkTo"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <well
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <buttonLinkTo
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                fieldLabel="Page"
+                                                                name="./buttonLinkTo"
+                                                                rootPath="/content"
+                                                                suffix=".html"/>
+                                                        </items>
+                                                    </well>
+                                                </items>
+                                            </setButtonLinkTo>
+                                            <setButtonProduct
+                                                granite:class="hide we-heroimage-linktype-showhide-target foundation-layout-util-vmargin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="product"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <well
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <buttonProductSku
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="commerce/gui/components/common/cifproductfield"
+                                                                fieldLabel="Product"
+                                                                name="./buttonProductSku"
+                                                                selectionId="sku"
+                                                                showLink="{Boolean}true"/>
+                                                        </items>
+                                                    </well>
+                                                </items>
+                                            </setButtonProduct>
+                                            <setButtonCategory
+                                                granite:class="hide we-heroimage-linktype-showhide-target foundation-layout-util-vmargin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="category"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <well
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <buttonCategoryId
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="commerce/gui/components/common/cifcategoryfield"
+                                                                fieldLabel="Category"
+                                                                name="./buttonCategoryId"
+                                                                selectionId="urlPath"
+                                                                showLink="{Boolean}true"/>
+                                                            <buttonCategoryIdType
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                                                                name="./buttonCategoryIdType"
+                                                                value="urlPath"/>
+                                                        </items>
+                                                    </well>
+                                                </items>
+                                            </setButtonCategory>
+                                            <setButtonExternalLink
+                                                granite:class="hide we-heroimage-linktype-showhide-target foundation-layout-util-vmargin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="externalLink"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <well
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <buttonExternalLink
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="External link"
+                                                                name="./buttonExternalLink"/>
+                                                        </items>
+                                                    </well>
+                                                </items>
+                                            </setButtonExternalLink>
                                             <useFullWidth
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"

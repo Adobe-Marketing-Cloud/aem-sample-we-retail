@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="32f08833-af97-4405-b972-754318558c12">
+    <jcr:content
+        jcr:lastModified="{Date}2026-06-24T12:58:15.209+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="color: yellow, red"
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/we-retail/settings/dam/cfm/models/celadon-option-definition"
+            jcr:primaryType="nt:unstructured"
+            _strucVersion="{Long}1">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                attributeCode="color"
+                attributeCode_x0040_LastModified="{Date}2026-06-24T12:58:15.209+03:00"
+                attributeCode_x0040_LastModifiedBy="admin"
+                label="color"
+                label_x0040_LastModified="{Date}2026-06-24T12:58:15.209+03:00"
+                label_x0040_LastModifiedBy="admin"
+                productField="color"
+                productField_x0040_LastModified="{Date}2026-06-24T12:58:15.209+03:00"
+                productField_x0040_LastModifiedBy="admin"
+                swatchType_x0040_LastModified="{Date}2026-06-24T12:58:15.209+03:00"
+                swatchType_x0040_LastModifiedBy="admin"
+                values="[1;yellow,2;red]"
+                values_x0040_LastModified="{Date}2026-06-24T12:58:15.209+03:00"
+                values_x0040_LastModifiedBy="admin"/>
+        </data>
+        <indexedData jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="41b70203-5b5c-4229-8018-349233fd0957"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/celadon-option-definition"
+                _x0040_stringArray_x0040_variations="[]"
+                string_x0040_attributeCode="color"
+                string_x0040_label="color"
+                string_x0040_productField="color"
+                stringArray_x0040_values="[1;yellow,2;red]"/>
+        </indexedData>
+        <metadata
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

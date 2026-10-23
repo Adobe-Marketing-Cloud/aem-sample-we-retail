@@ -72,6 +72,25 @@
             </resource>
         </resources>
         <plugins>
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>reset-vault-work</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <delete dir="${project.build.directory}/vault-work"/>
+                                <delete dir="${project.build.directory}/classes"/>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
             <!-- we want to keep some of the META-INF files and not configure everything
                 in the plugin (mainly the filters). copy the resource explicitly instead
                 of attaching it to the default resources -->
@@ -93,7 +112,7 @@
                             <outputDirectory>${project.build.directory}/vault-work/META-INF</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>${basedir}/META-INF</directory>
+                                    <directory>${basedir}/src/main/content/META-INF</directory>
                                     <filtering>false</filtering>
                                 </resource>
                             </resources>
@@ -110,25 +129,13 @@
                 <artifactId>content-package-maven-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
-                    <filterSource>${basedir}/META-INF/vault/filter.xml</filterSource>
+                    <filterSource>${basedir}/src/main/content/META-INF/vault/filter.xml</filterSource>
                     <verbose>true</verbose>
                     <failOnError>true</failOnError>
                     <group>adobe/aem6/sample</group>
                     <properties>
                         <acHandling>merge_preserve</acHandling>
                     </properties>
-                    <dependencies>
-                        <dependency>
-                            <group>adobe/aem6/sample</group>
-                            <name>we.retail.ui.apps</name>
-                            <version>[4.0.0,)</version>
-                        </dependency>
-                        <dependency>
-                            <group>adobe/aem6/sample</group>
-                            <name>we.retail.commons.content</name>
-                            <version>[4.0.0,)</version>
-                        </dependency>
-                    </dependencies>
                 </configuration>
             </plugin>
         </plugins>

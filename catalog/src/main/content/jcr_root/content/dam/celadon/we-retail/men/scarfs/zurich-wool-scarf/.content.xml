@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="7929b117-1cd8-4973-b8df-fc6671947b47">
+    <jcr:content
+        jcr:lastModified="{Date}2026-06-24T12:58:17.766+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Zurich Wool Scarf"
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/we-retail/settings/dam/cfm/models/product"
+            jcr:primaryType="nt:unstructured"
+            _strucVersion="{Long}1">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:17.734+03:00"
+                color_x0040_LastModified="{Date}2026-06-24T12:58:17.734+03:00"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"
+                configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:17.760+03:00"
+                configurableOptions_x0040_LastModifiedBy="admin"
+                description="Warp yourself in warmth this winter with the Zurich Scarf, woven in natural wool"
+                description_x0040_ContentType="text/html"
+                description_x0040_LastModified="{Date}2026-06-24T12:58:17.742+03:00"
+                description_x0040_LastModifiedBy="admin"
+                features="&lt;ul>&lt;li>&#x9;Lightweight merino wool design offers soft and luxurious warmth&lt;/li>&lt;/ul>"
+                features_x0040_LastModified="{Date}2026-06-24T12:58:17.743+03:00"
+                features_x0040_LastModifiedBy="admin"
+                identifier="meotwizuf"
+                identifier_x0040_LastModified="{Date}2026-06-24T12:58:17.742+03:00"
+                identifier_x0040_LastModifiedBy="admin"
+                image="[/content/dam/celadon/we-retail/men/scarfs/zurich-wool-scarf_img_0.jpeg]"
+                image_x0040_LastModified="{Date}2026-06-24T12:58:17.760+03:00"
+                image_x0040_LastModifiedBy="admin"
+                name="Zurich Wool Scarf"
+                name_x0040_LastModified="{Date}2026-06-24T12:58:17.742+03:00"
+                name_x0040_LastModifiedBy="admin"
+                price="{Double}45.0"
+                price_x0040_LastModified="{Date}2026-06-24T12:58:17.742+03:00"
+                price_x0040_LastModifiedBy="admin"
+                rating="4"
+                rating_x0040_LastModified="{Date}2026-06-24T12:58:17.743+03:00"
+                rating_x0040_LastModifiedBy="admin"
+                reviews="This item is not yet reviewed.  Be the first to write a review."
+                reviews_x0040_LastModified="{Date}2026-06-24T12:58:17.743+03:00"
+                reviews_x0040_LastModifiedBy="admin"
+                short_description="scarf"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
+                size_x0040_LastModified="{Date}2026-06-24T12:58:17.734+03:00"
+                sku="meotwizuf"
+                sku_x0040_LastModified="{Date}2026-06-24T12:58:17.741+03:00"
+                sku_x0040_LastModifiedBy="admin"/>
+            <var-size-onesize
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                _x0040_variationCreationDate="{Date}2026-06-24T12:58:17.761+03:00"
+                additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:17.762+03:00"
+                additionalCategories_x0040_LastModifiedBy="admin"
+                color_x0040_LastModified="{Date}2026-06-24T12:58:17.765+03:00"
+                color_x0040_LastModifiedBy="admin"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"
+                configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:17.762+03:00"
+                configurableOptions_x0040_LastModifiedBy="admin"
+                description="Warp yourself in warmth this winter with the Zurich Scarf, woven in natural wool"
+                description_x0040_ContentType="text/html"
+                description_x0040_LastModified="{Date}2026-06-24T12:58:17.764+03:00"
+                description_x0040_LastModifiedBy="admin"
+                features="&lt;ul>&lt;li>&#x9;Lightweight merino wool design offers soft and luxurious warmth&lt;/li>&lt;/ul>"
+                features_x0040_LastModified="{Date}2026-06-24T12:58:17.765+03:00"
+                features_x0040_LastModifiedBy="admin"
+                identifier="meotwizuf"
+                identifier_x0040_LastModified="{Date}2026-06-24T12:58:17.764+03:00"
+                identifier_x0040_LastModifiedBy="admin"
+                image="[/content/dam/celadon/we-retail/men/scarfs/zurich-wool-scarf_img_0.jpeg]"
+                image_x0040_LastModified="{Date}2026-06-24T12:58:17.762+03:00"
+                image_x0040_LastModifiedBy="admin"
+                name="Zurich Wool Scarf"
+                name_x0040_LastModified="{Date}2026-06-24T12:58:17.764+03:00"
+                name_x0040_LastModifiedBy="admin"
+                price="{Double}45.0"
+                price_x0040_LastModified="{Date}2026-06-24T12:58:17.764+03:00"
+                price_x0040_LastModifiedBy="admin"
+                rating="4"
+                rating_x0040_LastModified="{Date}2026-06-24T12:58:17.764+03:00"
+                rating_x0040_LastModifiedBy="admin"
+                reviews="This item is not yet reviewed.  Be the first to write a review."
+                reviews_x0040_LastModified="{Date}2026-06-24T12:58:17.765+03:00"
+                reviews_x0040_LastModifiedBy="admin"
+                short_description="scarf"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
+                size="One size"
+                size_x0040_LastModified="{Date}2026-06-24T12:58:17.766+03:00"
+                size_x0040_LastModifiedBy="admin"
+                sku="meotwizuf-Onesize"
+                sku_x0040_LastModified="{Date}2026-06-24T12:58:17.766+03:00"
+                sku_x0040_LastModifiedBy="admin"/>
+        </data>
+        <indexedData jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="ac78732e-414a-4078-9780-d78266e5b302"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/product"
+                _x0040_stringArray_x0040_variations="[var-size-onesize]"
+                double_x0040_price="{Double}45.0"
+                string_x0040_description="Warp yourself in warmth this winter with the Zurich Scarf, woven in natural wool"
+                string_x0040_features="&lt;ul>&lt;li>&#x9;Lightweight merino wool design offers soft and luxurious warmth&lt;/li>&lt;/ul>"
+                string_x0040_identifier="meotwizuf"
+                string_x0040_name="Zurich Wool Scarf"
+                string_x0040_rating="4"
+                string_x0040_reviews="This item is not yet reviewed.  Be the first to write a review."
+                string_x0040_short_description="scarf"
+                string_x0040_sku="meotwizuf"
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"/>
+            <var-size-onesize
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="fecb70b7-273b-4a47-8098-f066d7a39c58"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/product"
+                double_x0040_price="{Double}45.0"
+                string_x0040_description="Warp yourself in warmth this winter with the Zurich Scarf, woven in natural wool"
+                string_x0040_features="&lt;ul>&lt;li>&#x9;Lightweight merino wool design offers soft and luxurious warmth&lt;/li>&lt;/ul>"
+                string_x0040_identifier="meotwizuf"
+                string_x0040_name="Zurich Wool Scarf"
+                string_x0040_rating="4"
+                string_x0040_reviews="This item is not yet reviewed.  Be the first to write a review."
+                string_x0040_short_description="scarf"
+                string_x0040_size="One size"
+                string_x0040_sku="meotwizuf-Onesize"
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"/>
+        </indexedData>
+        <metadata
+            cq:tags="[we-retail:apparel/scarf,we-retail:gender/men,we-retail:season/winter,we-retail:activity/others]"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured">
+            <dam:cfVariations jcr:primaryType="nt:unstructured">
+                <var-size-onesize
+                    cq:tags="[we-retail:gender/men,we-retail:activity/others,we-retail:apparel/scarf,we-retail:season/winter]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+            </dam:cfVariations>
+        </metadata>
+        <model jcr:primaryType="nt:unstructured">
+            <variations jcr:primaryType="nt:unstructured">
+                <var-size-onesize
+                    jcr:description="Variant: var-size-onesize"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="var-size-onesize"
+                    name="var-size-onesize"/>
+            </variations>
+        </model>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

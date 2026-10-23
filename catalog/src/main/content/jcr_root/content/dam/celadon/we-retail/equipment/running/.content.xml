@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Running">
+        <folderThumbnail/>
+    </jcr:content>
+    <spixa-runners/>
+    <spixa-runners_img_0.jpeg/>
+    <bpa-free-water-bottle/>
+    <bpa-free-water-bottle_img_0.jpeg/>
+    <fleet-cross-training-shoe/>
+    <fleet-cross-training-shoe_img_0.jpeg/>
+    <basa-mp3-player/>
+    <basa-mp3-player_img_0.jpeg/>
+    <gomobile-fitness-monitorsmart-music-player/>
+    <gomobile-fitness-monitorsmart-music-player_img_0.jpeg/>
+</jcr:root>

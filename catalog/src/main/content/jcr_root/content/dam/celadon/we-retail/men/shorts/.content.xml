@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Shorts">
+        <folderThumbnail/>
+    </jcr:content>
+    <corona-shorts/>
+    <corona-shorts_img_0.jpeg/>
+    <buffalo-plaid-shorts/>
+    <buffalo-plaid-shorts_img_0.jpeg/>
+    <stretch-fatigue-shorts/>
+    <stretch-fatigue-shorts_img_0.jpeg/>
+    <slot-canyon-active-shorts/>
+    <slot-canyon-active-shorts_img_0.jpeg/>
+    <pipeline-board-shorts/>
+    <pipeline-board-shorts_img_0.jpeg/>
+    <pipeline-board-shorts_var-identifier-mesusupis1-size-s-color-orange_img_0.jpeg/>
+    <pipeline-board-shorts_var-identifier-mesusupis1-size-m-color-orange_img_0.jpeg/>
+    <pipeline-board-shorts_var-identifier-mesusupis1-size-l-color-orange_img_0.jpeg/>
+    <pipeline-board-shorts_var-identifier-mesusupis1-size-xl-color-orange_img_0.jpeg/>
+    <pipeline-board-shorts_var-identifier-mesusupis1-size-xxl-color-orange_img_0.jpeg/>
+    <pipeline-board-shorts_var-identifier-mesusupis2-size-s-color-blue_img_0.jpeg/>
+    <pipeline-board-shorts_var-identifier-mesusupis2-size-m-color-blue_img_0.jpeg/>
+    <pipeline-board-shorts_var-identifier-mesusupis2-size-l-color-blue_img_0.jpeg/>
+    <pipeline-board-shorts_var-identifier-mesusupis2-size-xl-color-blue_img_0.jpeg/>
+    <pipeline-board-shorts_var-identifier-mesusupis2-size-xxl-color-blue_img_0.jpeg/>
+    <pipeline-board-shorts_var-identifier-mesusupis3-size-s-color-red_img_0.jpeg/>
+    <pipeline-board-shorts_var-identifier-mesusupis3-size-m-color-red_img_0.jpeg/>
+    <pipeline-board-shorts_var-identifier-mesusupis3-size-l-color-red_img_0.jpeg/>
+    <pipeline-board-shorts_var-identifier-mesusupis3-size-xl-color-red_img_0.jpeg/>
+    <pipeline-board-shorts_var-identifier-mesusupis3-size-xxl-color-red_img_0.jpeg/>
+</jcr:root>

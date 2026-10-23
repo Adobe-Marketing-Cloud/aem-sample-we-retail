@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="6a07b3c1-0add-4d7b-8607-3b2be1fb9100">
+    <jcr:content
+        jcr:lastModified="{Date}2026-06-24T12:58:15.489+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="BPA-Free Water Bottle"
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/we-retail/settings/dam/cfm/models/product"
+            jcr:primaryType="nt:unstructured"
+            _strucVersion="{Long}1">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:15.462+03:00"
+                color_x0040_LastModified="{Date}2026-06-24T12:58:15.462+03:00"
+                configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:15.462+03:00"
+                description="BPA-free, our water bottle water bottle gives you quick access to hydration while at the gym or on the trail."
+                description_x0040_ContentType="text/html"
+                description_x0040_LastModified="{Date}2026-06-24T12:58:15.466+03:00"
+                description_x0040_LastModifiedBy="admin"
+                features="Bottle is made with premium polycarbonate that is toxin free; inner surface is finished with an electrolyte charge and dolomitic sand blasting; finish is completely BPA free&#xd;&#xa;Certified food-grade polypropylene threaded opening and screw-top lid create a spill-resistant seal; food-grade silicon gasket is used inside the lid to help prevent leaks&#xd;&#xa;Shaped body features a narrow point near the neck of the bottle for easy grasping"
+                features_x0040_LastModified="{Date}2026-06-24T12:58:15.466+03:00"
+                features_x0040_LastModifiedBy="admin"
+                identifier="eqrusubpe"
+                identifier_x0040_LastModified="{Date}2026-06-24T12:58:15.466+03:00"
+                identifier_x0040_LastModifiedBy="admin"
+                image="[/content/dam/celadon/we-retail/equipment/running/bpa-free-water-bottle_img_0.jpeg]"
+                image_x0040_LastModified="{Date}2026-06-24T12:58:15.489+03:00"
+                image_x0040_LastModifiedBy="admin"
+                name="BPA-Free Water Bottle"
+                name_x0040_LastModified="{Date}2026-06-24T12:58:15.465+03:00"
+                name_x0040_LastModifiedBy="admin"
+                price="{Double}18.0"
+                price_x0040_LastModified="{Date}2026-06-24T12:58:15.466+03:00"
+                price_x0040_LastModifiedBy="admin"
+                rating="5"
+                rating_x0040_LastModified="{Date}2026-06-24T12:58:15.466+03:00"
+                rating_x0040_LastModifiedBy="admin"
+                reviews="This item is not yet reviewed.  Be the first to write a review."
+                reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.467+03:00"
+                reviews_x0040_LastModifiedBy="admin"
+                short_description="equipment"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
+                size_x0040_LastModified="{Date}2026-06-24T12:58:15.462+03:00"
+                sku="eqrusubpe"
+                sku_x0040_LastModified="{Date}2026-06-24T12:58:15.465+03:00"
+                sku_x0040_LastModifiedBy="admin"/>
+        </data>
+        <indexedData jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="aa7aca97-0a35-4738-b648-0b93fdb57ad6"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/product"
+                _x0040_stringArray_x0040_variations="[]"
+                double_x0040_price="{Double}18.0"
+                string_x0040_description="BPA-free, our water bottle water bottle gives you quick access to hydration while at the gym or on the trail."
+                string_x0040_features="Bottle is made with premium polycarbonate that is toxin free; inner surface is finished with an electrolyte charge and dolomitic sand blasting; finish is completely BPA free&#xd;&#xa;Certified food-grade polypropylene threaded opening and screw-top lid create a spill-resistant seal; food-grade silicon gasket is used inside the lid to help prevent leaks&#xd;&#xa;Shaped body features a narrow point near the neck of the bottle for easy grasping"
+                string_x0040_identifier="eqrusubpe"
+                string_x0040_name="BPA-Free Water Bottle"
+                string_x0040_rating="5"
+                string_x0040_reviews="This item is not yet reviewed.  Be the first to write a review."
+                string_x0040_short_description="equipment"
+                string_x0040_sku="eqrusubpe"/>
+        </indexedData>
+        <metadata
+            cq:tags="[we-retail:equipment,we-retail:season/summer,we-retail:activity/running]"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

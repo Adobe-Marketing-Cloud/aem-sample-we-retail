@@ -3,6 +3,5 @@
     jcr:primaryType="cq:Component"
     jcr:title="Product Recommendations"
     jcr:description="Display product recommendations"
-    sling:resourceSuperType="commerce/components/recommendation"
     cq:icon="archive"
     componentGroup="We.Retail Commerce"/>

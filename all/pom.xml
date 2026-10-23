@@ -61,6 +61,18 @@
                             <target>/apps/weretail/install</target>
                             <filter>true</filter>
                         </embedded>
+                        <embedded>
+                            <groupId>com.adobe.commerce.cif</groupId>
+                            <artifactId>celadon-core</artifactId>
+                            <target>/apps/weretail/install</target>
+                            <filter>true</filter>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.adobe.commerce.cif</groupId>
+                            <artifactId>celadon-aem</artifactId>
+                            <target>/apps/weretail/install</target>
+                            <filter>true</filter>
+                        </embedded>
                     </embeddeds>
                     <subPackages>
                         <subPackage>
@@ -80,27 +92,15 @@
                         </subPackage>
                         <subPackage>
                             <groupId>com.adobe.cq.sample</groupId>
-                            <artifactId>we.retail.commons.content</artifactId>
+                            <artifactId>we.retail.catalog</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
+                        <subPackage>
+                            <groupId>com.adobe.cq.sample</groupId>
+                            <artifactId>we.retail.commons.content.slim</artifactId>
                             <filter>true</filter>
                         </subPackage>
                     </subPackages>
-                    <dependencies>
-                        <dependency>
-                            <group>day/cq60/product</group>
-                            <name>cq-content</name>
-                            <version>[6.1.76,)</version>
-                        </dependency>
-                        <dependency>
-                            <group>day/cq60/product</group>
-                            <name>cq-commerce-content</name>
-                            <version>[1.2.222,)</version>
-                        </dependency>
-                        <dependency>
-                            <group>adobe/cq60</group>
-                            <name>core.wcm.components.all</name>
-                            <version>[2.4.0,)</version>
-                        </dependency>
-                    </dependencies>
                 </configuration>
             </plugin>
         </plugins>
@@ -144,13 +144,6 @@
         </dependency>
         <dependency>
             <groupId>com.adobe.cq.sample</groupId>
-            <artifactId>we.retail.commons.content</artifactId>
-            <version>4.0.0</version>
-            <type>zip</type>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.adobe.cq.sample</groupId>
             <artifactId>we.retail.ui.apps</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
@@ -168,6 +161,32 @@
             <artifactId>we.retail.config</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.cq.sample</groupId>
+            <artifactId>we.retail.catalog</artifactId>
+            <version>${project.version}</version>
+            <type>zip</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.cq.sample</groupId>
+            <artifactId>we.retail.commons.content.slim</artifactId>
+            <version>${project.version}</version>
+            <type>zip</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.commerce.cif</groupId>
+            <artifactId>celadon-core</artifactId>
+            <version>${celadon.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.commerce.cif</groupId>
+            <artifactId>celadon-aem</artifactId>
+            <version>${celadon.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="c8c5a0a6-a569-4be9-b32c-64d734736ed6">
+    <jcr:content
+        jcr:lastModified="{Date}2026-06-24T12:58:17.703+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Midweight Fleece Gloves"
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/we-retail/settings/dam/cfm/models/product"
+            jcr:primaryType="nt:unstructured"
+            _strucVersion="{Long}1">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                additionalCategories="[equipment/snow-sports]"
+                additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:17.685+03:00"
+                additionalCategories_x0040_LastModifiedBy="admin"
+                color_x0040_LastModified="{Date}2026-06-24T12:58:17.675+03:00"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"
+                configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:17.699+03:00"
+                configurableOptions_x0040_LastModifiedBy="admin"
+                description="Form-fitting, breathable fleece gloves are designed to keep hands warm while allowing maximum digital dexterity."
+                description_x0040_ContentType="text/html"
+                description_x0040_LastModified="{Date}2026-06-24T12:58:17.683+03:00"
+                description_x0040_LastModifiedBy="admin"
+                features="&lt;ul>&lt;li>&#x9;Fleece contours comfortably to your hands, blocks wind and allows excellent freedom of movement&#xd;&#xa;&lt;/li>&lt;li>&#x9;Suede palms with silicon dots on thumbs and fingertips provide a sure grip and remain supple, even in wet weather&#xd;&#xa;&lt;/li>&lt;li>&#x9;Elasticized wristbands keep the weather out and your body heat in&#xd;&#xa;&lt;/li>&lt;/ul>"
+                features_x0040_LastModified="{Date}2026-06-24T12:58:17.684+03:00"
+                features_x0040_LastModifiedBy="admin"
+                identifier="meskwimis"
+                identifier_x0040_LastModified="{Date}2026-06-24T12:58:17.684+03:00"
+                identifier_x0040_LastModifiedBy="admin"
+                image="[/content/dam/celadon/we-retail/men/gloves/midweight-fleece-gloves_img_0.jpeg]"
+                image_x0040_LastModified="{Date}2026-06-24T12:58:17.698+03:00"
+                image_x0040_LastModifiedBy="admin"
+                name="Midweight Fleece Gloves"
+                name_x0040_LastModified="{Date}2026-06-24T12:58:17.683+03:00"
+                name_x0040_LastModifiedBy="admin"
+                price="{Double}30.0"
+                price_x0040_LastModified="{Date}2026-06-24T12:58:17.683+03:00"
+                price_x0040_LastModifiedBy="admin"
+                rating="4"
+                rating_x0040_LastModified="{Date}2026-06-24T12:58:17.684+03:00"
+                rating_x0040_LastModifiedBy="admin"
+                reviews="By WoodsDude&#xa;from Maryland&#xa;&#xa;I got these a few years back, and they are just now starting to wear out. They had little bumps on the fingers, but those were gone in about 5 minutes as soon as I climbed something. So even without the grippy bumps they work fantastic! These are the only gloves I've owned that have long enough fingers. My hands aren't that large(I don't think), but whatever hand they use to size most gloves must be missing the top half-inch of fingertip it seems. The between finger seam on these actually goes down to where my fingers meet! I was amazed with that. My area just got pounded with snow, and after days and days of shoveling/snowball fights, well it's about time for new gloves. I shouldn't have used these as snow gloves, but I don't have a decent pair other than these, so the constant soaking/drying has left them in need of replacement. Not the glove's fault, they just aren't meant for heavy snow use."
+                reviews_x0040_LastModified="{Date}2026-06-24T12:58:17.684+03:00"
+                reviews_x0040_LastModifiedBy="admin"
+                short_description="gloves"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
+                size_x0040_LastModified="{Date}2026-06-24T12:58:17.675+03:00"
+                sku="meskwimis"
+                sku_x0040_LastModified="{Date}2026-06-24T12:58:17.682+03:00"
+                sku_x0040_LastModifiedBy="admin"/>
+            <var-size-onesize
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                _x0040_variationCreationDate="{Date}2026-06-24T12:58:17.699+03:00"
+                additionalCategories="[equipment/snow-sports]"
+                additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:17.700+03:00"
+                additionalCategories_x0040_LastModifiedBy="admin"
+                color_x0040_LastModified="{Date}2026-06-24T12:58:17.703+03:00"
+                color_x0040_LastModifiedBy="admin"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"
+                configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:17.700+03:00"
+                configurableOptions_x0040_LastModifiedBy="admin"
+                description="Form-fitting, breathable fleece gloves are designed to keep hands warm while allowing maximum digital dexterity."
+                description_x0040_ContentType="text/html"
+                description_x0040_LastModified="{Date}2026-06-24T12:58:17.701+03:00"
+                description_x0040_LastModifiedBy="admin"
+                features="&lt;ul>&lt;li>&#x9;Fleece contours comfortably to your hands, blocks wind and allows excellent freedom of movement&#xd;&#xa;&lt;/li>&lt;li>&#x9;Suede palms with silicon dots on thumbs and fingertips provide a sure grip and remain supple, even in wet weather&#xd;&#xa;&lt;/li>&lt;li>&#x9;Elasticized wristbands keep the weather out and your body heat in&#xd;&#xa;&lt;/li>&lt;/ul>"
+                features_x0040_LastModified="{Date}2026-06-24T12:58:17.702+03:00"
+                features_x0040_LastModifiedBy="admin"
+                identifier="meskwimis"
+                identifier_x0040_LastModified="{Date}2026-06-24T12:58:17.701+03:00"
+                identifier_x0040_LastModifiedBy="admin"
+                image="[/content/dam/celadon/we-retail/men/gloves/midweight-fleece-gloves_img_0.jpeg]"
+                image_x0040_LastModified="{Date}2026-06-24T12:58:17.700+03:00"
+                image_x0040_LastModifiedBy="admin"
+                name="Midweight Fleece Gloves"
+                name_x0040_LastModified="{Date}2026-06-24T12:58:17.701+03:00"
+                name_x0040_LastModifiedBy="admin"
+                price="{Double}30.0"
+                price_x0040_LastModified="{Date}2026-06-24T12:58:17.701+03:00"
+                price_x0040_LastModifiedBy="admin"
+                rating="4"
+                rating_x0040_LastModified="{Date}2026-06-24T12:58:17.702+03:00"
+                rating_x0040_LastModifiedBy="admin"
+                reviews="By WoodsDude&#xa;from Maryland&#xa;&#xa;I got these a few years back, and they are just now starting to wear out. They had little bumps on the fingers, but those were gone in about 5 minutes as soon as I climbed something. So even without the grippy bumps they work fantastic! These are the only gloves I've owned that have long enough fingers. My hands aren't that large(I don't think), but whatever hand they use to size most gloves must be missing the top half-inch of fingertip it seems. The between finger seam on these actually goes down to where my fingers meet! I was amazed with that. My area just got pounded with snow, and after days and days of shoveling/snowball fights, well it's about time for new gloves. I shouldn't have used these as snow gloves, but I don't have a decent pair other than these, so the constant soaking/drying has left them in need of replacement. Not the glove's fault, they just aren't meant for heavy snow use."
+                reviews_x0040_LastModified="{Date}2026-06-24T12:58:17.702+03:00"
+                reviews_x0040_LastModifiedBy="admin"
+                short_description="gloves"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
+                size="One size"
+                size_x0040_LastModified="{Date}2026-06-24T12:58:17.703+03:00"
+                size_x0040_LastModifiedBy="admin"
+                sku="meskwimis-Onesize"
+                sku_x0040_LastModified="{Date}2026-06-24T12:58:17.703+03:00"
+                sku_x0040_LastModifiedBy="admin"/>
+        </data>
+        <indexedData jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="d45d05a8-f844-40d8-93ab-74b09d057d75"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/product"
+                _x0040_stringArray_x0040_variations="[var-size-onesize]"
+                double_x0040_price="{Double}30.0"
+                string_x0040_description="Form-fitting, breathable fleece gloves are designed to keep hands warm while allowing maximum digital dexterity."
+                string_x0040_features="&lt;ul>&lt;li>&#x9;Fleece contours comfortably to your hands, blocks wind and allows excellent freedom of movement&#xd;&#xa;&lt;/li>&lt;li>&#x9;Suede palms with silicon dots on thumbs and fingertips provide a sure grip and remain supple, even in wet weather&#xd;&#xa;&lt;/li>&lt;li>&#x9;Elasticized wristbands keep the weather out and your body heat in&#xd;&#xa;&lt;/li>&lt;/ul>"
+                string_x0040_identifier="meskwimis"
+                string_x0040_name="Midweight Fleece Gloves"
+                string_x0040_rating="4"
+                string_x0040_reviews="By WoodsDude&#xa;from Maryland&#xa;&#xa;I got these a few years back, and they are just now starting to wear out. They had little bumps on the fingers, but those were gone in about 5 minutes as soon as I climbed something. So even without the grippy bumps they work fantastic! These are the only gloves I've owned that have long enough fingers. My hands aren't that large(I don't think), but whatever hand they use to size most gloves must be missing the top half-inch of fingertip it seems. The between finger seam on these actually goes down to where my fingers meet! I was amazed with that. My area just got pounded with snow, and after days and days of shoveling/snowball fights, well it's about time for new gloves. I shouldn't have used these as snow gloves, but I don't have a decent pair other than these, so the constant soaking/drying has left them in need of replacement. Not the glove's fault, they just aren't meant for heavy snow use."
+                string_x0040_short_description="gloves"
+                string_x0040_sku="meskwimis"
+                stringArray_x0040_additionalCategories="[equipment/snow-sports]"
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"/>
+            <var-size-onesize
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="f6283ce4-27d2-4deb-8f70-6fae3982a957"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/product"
+                double_x0040_price="{Double}30.0"
+                string_x0040_description="Form-fitting, breathable fleece gloves are designed to keep hands warm while allowing maximum digital dexterity."
+                string_x0040_features="&lt;ul>&lt;li>&#x9;Fleece contours comfortably to your hands, blocks wind and allows excellent freedom of movement&#xd;&#xa;&lt;/li>&lt;li>&#x9;Suede palms with silicon dots on thumbs and fingertips provide a sure grip and remain supple, even in wet weather&#xd;&#xa;&lt;/li>&lt;li>&#x9;Elasticized wristbands keep the weather out and your body heat in&#xd;&#xa;&lt;/li>&lt;/ul>"
+                string_x0040_identifier="meskwimis"
+                string_x0040_name="Midweight Fleece Gloves"
+                string_x0040_rating="4"
+                string_x0040_reviews="By WoodsDude&#xa;from Maryland&#xa;&#xa;I got these a few years back, and they are just now starting to wear out. They had little bumps on the fingers, but those were gone in about 5 minutes as soon as I climbed something. So even without the grippy bumps they work fantastic! These are the only gloves I've owned that have long enough fingers. My hands aren't that large(I don't think), but whatever hand they use to size most gloves must be missing the top half-inch of fingertip it seems. The between finger seam on these actually goes down to where my fingers meet! I was amazed with that. My area just got pounded with snow, and after days and days of shoveling/snowball fights, well it's about time for new gloves. I shouldn't have used these as snow gloves, but I don't have a decent pair other than these, so the constant soaking/drying has left them in need of replacement. Not the glove's fault, they just aren't meant for heavy snow use."
+                string_x0040_short_description="gloves"
+                string_x0040_size="One size"
+                string_x0040_sku="meskwimis-Onesize"
+                stringArray_x0040_additionalCategories="[equipment/snow-sports]"
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"/>
+        </indexedData>
+        <metadata
+            cq:tags="[we-retail:activity/skiing,we-retail:gender/men,we-retail:apparel/gloves,we-retail:season/winter]"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured">
+            <dam:cfVariations jcr:primaryType="nt:unstructured">
+                <var-size-onesize
+                    cq:tags="[we-retail:gender/men,we-retail:season/winter,we-retail:activity/skiing,we-retail:apparel/gloves]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+            </dam:cfVariations>
+        </metadata>
+        <model jcr:primaryType="nt:unstructured">
+            <variations jcr:primaryType="nt:unstructured">
+                <var-size-onesize
+                    jcr:description="Variant: var-size-onesize"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="var-size-onesize"
+                    name="var-size-onesize"/>
+            </variations>
+        </model>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

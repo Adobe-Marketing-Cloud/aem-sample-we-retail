@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="f803c040-c48c-4f5a-b639-5103f9ad5667">
+    <jcr:content
+        jcr:lastModified="{Date}2026-06-24T12:58:15.461+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Spixa Runners"
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/we-retail/settings/dam/cfm/models/product"
+            jcr:primaryType="nt:unstructured"
+            _strucVersion="{Long}1">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:15.439+03:00"
+                color_x0040_LastModified="{Date}2026-06-24T12:58:15.439+03:00"
+                configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:15.439+03:00"
+                description="&lt;p>Featuring our latest mesh technology for ultimate flexibility. &amp;nbsp;Memory foam cushion hugs your feet in support during those long cross country runs.&amp;nbsp;&lt;br>&lt;/p>"
+                description_x0040_ContentType="text/html"
+                description_x0040_LastModified="{Date}2026-06-24T12:58:15.447+03:00"
+                description_x0040_LastModifiedBy="admin"
+                features_x0040_LastModified="{Date}2026-06-24T12:58:15.439+03:00"
+                identifier="84391210"
+                identifier_x0040_LastModified="{Date}2026-06-24T12:58:15.448+03:00"
+                identifier_x0040_LastModifiedBy="admin"
+                image="[/content/dam/celadon/we-retail/equipment/running/spixa-runners_img_0.jpeg]"
+                image_x0040_LastModified="{Date}2026-06-24T12:58:15.461+03:00"
+                image_x0040_LastModifiedBy="admin"
+                name="Spixa Runners"
+                name_x0040_LastModified="{Date}2026-06-24T12:58:15.447+03:00"
+                name_x0040_LastModifiedBy="admin"
+                price="{Double}119.99"
+                price_x0040_LastModified="{Date}2026-06-24T12:58:15.448+03:00"
+                price_x0040_LastModifiedBy="admin"
+                rating_x0040_LastModified="{Date}2026-06-24T12:58:15.439+03:00"
+                reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.439+03:00"
+                short_description="Featuring our latest mesh technology for ultimate flexibility.  Memory foam cushion hugs your feet in support during those long cross country runs. "
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
+                size_x0040_LastModified="{Date}2026-06-24T12:58:15.439+03:00"
+                sku="84391210"
+                sku_x0040_LastModified="{Date}2026-06-24T12:58:15.447+03:00"
+                sku_x0040_LastModifiedBy="admin"/>
+        </data>
+        <indexedData jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="7ef00462-1fae-4d3c-a051-b747d7430306"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/product"
+                _x0040_stringArray_x0040_variations="[]"
+                double_x0040_price="{Double}119.99"
+                string_x0040_description="&lt;p>Featuring our latest mesh technology for ultimate flexibility. &amp;nbsp;Memory foam cushion hugs your feet in support during those long cross country runs.&amp;nbsp;&lt;br>&lt;/p>"
+                string_x0040_identifier="84391210"
+                string_x0040_name="Spixa Runners"
+                string_x0040_short_description="Featuring our latest mesh technology for ultimate flexibility.  Memory foam cushion hugs your feet in support during those long cross country runs. "
+                string_x0040_sku="84391210"/>
+        </indexedData>
+        <metadata
+            cq:tags="[we-retail:activity/running,we-retail:apparel/footwear]"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

@@ -16,149 +16,255 @@
 
 package we.retail.core.model;
 
-import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
-
-import org.apache.commons.lang3.StringUtils;
-import org.apache.sling.api.SlingHttpServletRequest;
-import org.apache.sling.api.resource.ResourceResolver;
-import org.apache.sling.commons.json.JSONObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.adobe.cq.commerce.api.CommerceConstants;
-import com.adobe.cq.commerce.api.CommerceException;
-import com.adobe.cq.commerce.api.CommerceSession;
-import com.adobe.cq.commerce.api.Product;
-import com.day.cq.commons.ImageResource;
-import com.day.cq.wcm.api.Page;
-import we.retail.core.WeRetailConstants;
 
 import javax.json.Json;
 import javax.json.JsonObjectBuilder;
-import javax.json.stream.JsonGenerator;
 
-/**
- * Generic UI product item model used by Sling Models like {@link ProductModel} or {@link ShoppingCartModel}.
- */
+import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.sling.api.SlingHttpServletRequest;
+
+import com.adobe.cq.commerce.core.components.models.common.Price;
+import com.adobe.cq.commerce.core.components.models.product.Asset;
+import com.adobe.cq.commerce.core.components.models.product.Product;
+import com.adobe.cq.commerce.core.components.models.product.Variant;
+import com.adobe.cq.commerce.core.components.models.product.VariantAttribute;
+import com.adobe.cq.commerce.core.components.models.product.VariantValue;
+import com.adobe.cq.commerce.magento.graphql.CategoryInterface;
+import com.adobe.cq.commerce.magento.graphql.ComplexTextValue;
+import com.adobe.cq.commerce.magento.graphql.ProductImage;
+import com.adobe.cq.commerce.magento.graphql.ProductInterface;
+import com.day.cq.wcm.api.Page;
+
 public class ProductItem {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ProductItem.class);
+    private final String path;
+    private final String pagePath;
+    private final String sku;
+    private final String title;
+    private final String description;
+    private final String price;
+    private final String summary;
+    private final String imageUrl;
+    private final String thumbnailUrl;
+    private final List<ProductItem> variants;
+    private final Map<String, String> variantAxesMap;
+    private final Map<String, Collection<String>> variantsAxesValues;
 
-    private static final String PN_FEATURES = "features";
-    private static final String PN_SUMMARY = "summary";
-
-    private String path;
-    private String pagePath;
-    private String sku;
-    private String title;
-    private String description;
-    private String price;
-    private String summary;
-    private String features;
-    private String imageUrl;
-    private String thumbnailUrl;
-
-    private List<ProductItem> variants = new ArrayList<ProductItem>();
-
-    private List<String> variantAxes = new ArrayList<String>();
-    private Map<String, String> variantAxesMap = new LinkedHashMap<String, String>();
-
-    public ProductItem(Product product, CommerceSession commerceSession, SlingHttpServletRequest request, Page currentPage) {
-        this(product, commerceSession, request, currentPage, null);
+    public ProductItem(Product product, SlingHttpServletRequest request, Page currentPage) {
+        this(product, request, resolvePagePath(request, currentPage));
     }
 
-    private ProductItem(Product product, CommerceSession commerceSession, SlingHttpServletRequest request,  Page currentPage,
-                        ProductItem baseProductItem) {
+    private ProductItem(Product product, SlingHttpServletRequest request, String resolvedPagePath) {
+        ProductInterface productData = fetchProduct(product);
+        String resolvedDescription = descriptionLabel(productData);
+        String resolvedSummary = resolveSummary(productData);
+        String resolvedImage = resolveImage(request, assetPath(product.getAssets()), imagePath(productData));
 
-        ResourceResolver resourceResolver = request.getResourceResolver();
+        path = resolvedPagePath;
+        pagePath = resolvedPagePath;
+        sku = normalizeSku(product.getSku());
+        title = product.getName();
+        description = resolvedDescription;
+        price = formatPrice(product.getPriceRange());
+        summary = resolvedSummary;
+        imageUrl = resolvedImage;
+        thumbnailUrl = resolvedImage;
 
-        path = product.getPath();
-        pagePath = product.getPagePath();
-        if (StringUtils.isNotBlank(pagePath)) {
-            pagePath = resourceResolver.map(request, pagePath);
-        }
-
-        Locale currentLocale = currentPage.getLanguage(false);
-
-        sku = product.getSKU();
-        title = product.getTitle(currentLocale.getLanguage());
-        description = product.getDescription(currentLocale.getLanguage());
-
-        summary = product.getProperty(PN_SUMMARY, currentLocale.getLanguage(), String.class);
-        features = product.getProperty(PN_FEATURES, currentLocale.getLanguage(), String.class);
-
-        ImageResource image = product.getImage();
-        imageUrl = image != null ? image.getFileReference() : null;
-        if (StringUtils.isNotBlank(imageUrl)) {
-            imageUrl = resourceResolver.map(request, imageUrl);
-        }
-
-        thumbnailUrl = product.getThumbnailUrl(WeRetailConstants.PRODUCT_THUMBNAIL_WIDTH);
-        if (StringUtils.isNotBlank(thumbnailUrl)) {
-            thumbnailUrl = resourceResolver.map(request, thumbnailUrl);
-        }
-
-        if (commerceSession != null) {
-            try {
-                price = commerceSession.getProductPrice(product);
-            } catch (CommerceException e) {
-                LOGGER.error("Error getting the product price: {}", e);
+        Map<String, Collection<String>> aggregatedAxesValues = new LinkedHashMap<String, Collection<String>>();
+        Map<String, Map<Integer, String>> valueLookup = new LinkedHashMap<String, Map<Integer, String>>();
+        for (VariantAttribute attribute : product.getVariantAttributes()) {
+            Collection<String> values = new LinkedHashSet<String>();
+            Map<Integer, String> idsToLabels = new LinkedHashMap<Integer, String>();
+            for (VariantValue value : attribute.getValues()) {
+                values.add(value.getLabel());
+                idsToLabels.put(value.getId(), value.getLabel());
             }
+            aggregatedAxesValues.put(attribute.getId(), values);
+            valueLookup.put(attribute.getId(), idsToLabels);
         }
 
-        if (baseProductItem == null) {
-            String[] productVariantAxes = product.getProperty(CommerceConstants.PN_PRODUCT_VARIANT_AXES, String[].class);
-            if (productVariantAxes != null) {
-                setVariantAxes(productVariantAxes);
+        variantAxesMap = Collections.emptyMap();
+        variantsAxesValues = aggregatedAxesValues;
+        variants = new ArrayList<ProductItem>();
+        if (!product.getVariants().isEmpty()) {
+            for (Variant variant : product.getVariants()) {
+                variants.add(new ProductItem(variant, resolvedPagePath, resolvedDescription, resolvedSummary,
+                    resolvedImage, valueLookup, request));
             }
-            populateAllVariants(product, commerceSession, request, currentPage);
         } else {
-            populateVariantAxesValues(baseProductItem.variantAxes, product);
+            variants.add(this);
         }
     }
 
-    private void populateAllVariants(Product product, CommerceSession commerceSession, SlingHttpServletRequest request,  Page currentPage) {
+    private ProductItem(Variant variant, String resolvedPagePath, String resolvedDescription, String resolvedSummary,
+        String fallbackImage, Map<String, Map<Integer, String>> valueLookup, SlingHttpServletRequest request) {
+        String resolvedSku = normalizeSku(variant.getSku());
+        path = resolvedPagePath + "#" + resolvedSku;
+        pagePath = path;
+        sku = resolvedSku;
+        title = variant.getName();
+        description = resolvedDescription;
+        price = formatPrice(variant.getPriceRange());
+        summary = StringUtils.defaultIfBlank(stripHtml(variant.getDescription()), resolvedSummary);
+        imageUrl = resolveImage(request, assetPath(variant.getAssets()), fallbackImage);
+        thumbnailUrl = imageUrl;
+        variants = Collections.emptyList();
+        variantsAxesValues = Collections.emptyMap();
+        variantAxesMap = buildVariantAxesMap(variant, valueLookup);
+    }
 
-        try {
-            Iterator<Product> productVariants = product.getVariants();
-            while (productVariants.hasNext()) {
-                ProductItem variant = new ProductItem(productVariants.next(), commerceSession, request, currentPage, this);
-                variants.add(variant);
+    private static String resolvePagePath(SlingHttpServletRequest request, Page currentPage) {
+        String requestUri = request != null ? request.getRequestURI() : null;
+        if (StringUtils.isNotBlank(requestUri)) {
+            return requestUri;
+        }
+        return currentPage != null ? currentPage.getPath() + ".html" : StringUtils.EMPTY;
+    }
+
+    static ProductInterface fetchProduct(Product product) {
+        return product != null && product.getProductRetriever() != null ? product.getProductRetriever().fetchProduct() : null;
+    }
+
+    static String formatPrice(Price priceRange) {
+        if (priceRange == null || priceRange.isEmpty()) {
+            return StringUtils.EMPTY;
+        }
+        if (StringUtils.isNotBlank(priceRange.getFormattedFinalPrice())) {
+            return priceRange.getFormattedFinalPrice();
+        }
+        return StringUtils.defaultString(priceRange.getFormattedRegularPrice());
+    }
+
+    static String firstCategoryName(ProductInterface productData) {
+        if (productData == null || productData.getCategories() == null || productData.getCategories().isEmpty()) {
+            return StringUtils.EMPTY;
+        }
+
+        CategoryInterface selectedCategory = null;
+        for (CategoryInterface category : productData.getCategories()) {
+            if (category == null || StringUtils.isBlank(category.getName())) {
+                continue;
             }
 
-            // If there are no variants, the product itself is defined as the first variant
-            if (variants.isEmpty()) {
-                variants.add(this);
+            if (selectedCategory == null) {
+                selectedCategory = category;
+                continue;
             }
-        } catch (CommerceException e) {
-            LOGGER.error("Error getting the product variants: {}", e);
+
+            int currentDepth = StringUtils.countMatches(StringUtils.defaultString(category.getUrlPath()), "/");
+            int selectedDepth = StringUtils.countMatches(StringUtils.defaultString(selectedCategory.getUrlPath()), "/");
+            if (currentDepth >= selectedDepth) {
+                selectedCategory = category;
+            }
+        }
+
+        return selectedCategory != null ? StringUtils.defaultString(selectedCategory.getName()) : StringUtils.EMPTY;
+    }
+
+    static String descriptionLabel(ProductInterface productData) {
+        String shortDescription = stripHtml(productData != null ? productData.getShortDescription() : null);
+        if (StringUtils.isNotBlank(shortDescription)) {
+            return shortDescription;
+        }
+        return firstCategoryName(productData);
+    }
+
+    static void requestShortDescription(Product product) {
+        if (product != null && product.getProductRetriever() != null) {
+            product.getProductRetriever().extendProductQueryWith(query -> query.shortDescription(description -> description.html()));
         }
     }
 
-    private void populateVariantAxesValues(List<String> variantAxes, Product product) {
-        for (String variantAxis : variantAxes) {
-            String value = product.getProperty(variantAxis, String.class);
-            if (value != null && !variantAxesMap.containsKey(variantAxis)) {
-                variantAxesMap.put(variantAxis, value);
-            }
+    static String assetPath(List<Asset> assets) {
+        if (assets == null || assets.isEmpty()) {
+            return StringUtils.EMPTY;
         }
+        Asset asset = assets.get(0);
+        return asset != null ? StringUtils.defaultString(asset.getPath()) : StringUtils.EMPTY;
     }
 
-    private void setVariantAxes(String[] variantAxes) {
-        if (variantAxes != null) {
-            for (String axis : variantAxes) {
-                this.variantAxes.add(axis.trim());
+    static String imagePath(ProductInterface productData) {
+        if (productData == null) {
+            return StringUtils.EMPTY;
+        }
+        ProductImage smallImage = productData.getSmallImage();
+        if (smallImage != null && StringUtils.isNotBlank(smallImage.getUrl())) {
+            return smallImage.getUrl();
+        }
+        ProductImage thumbnail = productData.getThumbnail();
+        if (thumbnail != null && StringUtils.isNotBlank(thumbnail.getUrl())) {
+            return thumbnail.getUrl();
+        }
+        ProductImage image = productData.getImage();
+        if (image != null) {
+            return StringUtils.defaultString(image.getUrl());
+        }
+        return StringUtils.EMPTY;
+    }
+
+    static String resolveImage(SlingHttpServletRequest request, String preferredImage, String fallbackImage) {
+        return mapAssetPath(request, StringUtils.defaultIfBlank(preferredImage, fallbackImage));
+    }
+
+    static String mapAssetPath(SlingHttpServletRequest request, String assetPath) {
+        if (StringUtils.isBlank(assetPath)) {
+            return StringUtils.EMPTY;
+        }
+
+        String mappedPath = assetPath;
+        if (request != null && request.getResourceResolver() != null && StringUtils.startsWith(assetPath, "/")) {
+            mappedPath = request.getResourceResolver().map(request, assetPath);
+        }
+
+        return StringUtils.replace(mappedPath, " ", "%20");
+    }
+
+    private static String resolveSummary(ProductInterface productData) {
+        String description = stripHtml(productData != null ? productData.getDescription() : null);
+        if (StringUtils.isNotBlank(description)) {
+            return description;
+        }
+        return stripHtml(productData != null ? productData.getShortDescription() : null);
+    }
+
+    private static String normalizeSku(String sku) {
+        String normalizedSku = StringUtils.defaultString(sku);
+        String resolvedSku = StringUtils.substringAfterLast(normalizedSku, "/");
+        return StringUtils.isNotBlank(resolvedSku) ? resolvedSku : normalizedSku;
+    }
+
+    private static Map<String, String> buildVariantAxesMap(Variant variant, Map<String, Map<Integer, String>> valueLookup) {
+        Map<String, String> axisValues = new LinkedHashMap<String, String>();
+        for (Map.Entry<String, Integer> attribute : variant.getVariantAttributes().entrySet()) {
+            Map<Integer, String> values = valueLookup.get(attribute.getKey());
+            if (values != null) {
+                String resolvedValue = values.get(attribute.getValue());
+                if (StringUtils.isNotBlank(resolvedValue)) {
+                    axisValues.put(attribute.getKey(), resolvedValue);
+                }
             }
         }
+        return axisValues;
+    }
+
+    private static String stripHtml(ComplexTextValue textValue) {
+        return textValue != null ? stripHtml(textValue.getHtml()) : StringUtils.EMPTY;
+    }
+
+    private static String stripHtml(String value) {
+        if (StringUtils.isBlank(value)) {
+            return StringUtils.EMPTY;
+        }
+        String withoutTags = value.replaceAll("<[^>]+>", " ");
+        return StringEscapeUtils.unescapeHtml4(withoutTags).replaceAll("\\s+", " ").trim();
     }
 
     public String getPath() {
@@ -189,10 +295,6 @@ public class ProductItem {
         return summary;
     }
 
-    public String getFeatures() {
-        return features;
-    }
-
     public String getImageUrl() {
         return imageUrl;
     }
@@ -205,65 +307,20 @@ public class ProductItem {
         return Collections.unmodifiableList(variants);
     }
 
-    /**
-     * This method returns the value (if any) for the given variant axis.
-     *
-     * @param axis
-     *            The name of the variant axis, for example "color" or "size".
-     * @return The value (for example, "red") for that axis, or null if the variant does not have a value for that axis.
-     */
     public String getVariantValueForAxis(String axis) {
         return variantAxesMap.get(axis);
     }
 
-    /**
-     * This method returns a JSON representation of the variant axes and values for a product variant.<br>
-     * For example and since the variant axes and values are typically represented as a map, this method might return the following
-     * String for a variant product with 2 axes color and size:<br>
-     * <br>
-     * <code>{'color':'red','size':'XS'}</code>
-     *
-     * @return The JSON representation of the variant axes and values.
-     */
     public String getVariantAxesMapJson() {
         JsonObjectBuilder builder = Json.createObjectBuilder();
         variantAxesMap.entrySet().forEach(e -> builder.add(e.getKey(), e.getValue()));
         return builder.build().toString();
     }
 
-    /**
-     * This method returns a map of variant axes and all their respective values by axis.<br>
-     * The keys of the map represent the axis names (e.g. color, size), and the values are stored in a Collection.<br>
-     * <br>
-     * For example, the returned map can look like<br>
-     * <code>color --&gt; red, green, blue<br>
-     * size --&gt; XS, S, M</code>
-     *
-     * @return The map of all variant axes and their respective values.
-     */
     public Map<String, Collection<String>> getVariantsAxesValues() {
-        if (variants.isEmpty() || variantAxes.isEmpty()) {
+        if (variantsAxesValues.isEmpty()) {
             return Collections.emptyMap();
         }
-
-        Map<String, Collection<String>> map = new LinkedHashMap<String, Collection<String>>();
-        for (String axis : variantAxes) {
-            for (ProductItem variant : variants) {
-                String axisValue = variant.variantAxesMap.get(axis);
-                if (axisValue != null) {
-                    Collection<String> set = map.get(axis);
-                    if (set == null) {
-                        set = new LinkedHashSet<String>();
-                        map.put(axis, set);
-                    }
-
-                    if (!set.contains(axisValue)) {
-                        set.add(axisValue);
-                    }
-                }
-            }
-        }
-
-        return map;
+        return Collections.unmodifiableMap(variantsAxesValues);
     }
 }

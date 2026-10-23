@@ -46,7 +46,6 @@
             'description',
             'price',
             'summary',
-            'features',
             'image',
             'thumbnail',
             'variantAxes'
@@ -124,7 +123,7 @@
                         {
                             done = true;
                             self.product = product;
-                            history.pushState(null, null, '#' + product.sku);
+                            history.replaceState(null, null, '#' + product.sku);
                         }
                     });
                 },
@@ -149,47 +148,6 @@
                     }
 
                 },
-                trackCartAdd: function (event) {
-                    if (this.product && window.ContextHub && ContextHub.getStore("abandonedproducts")) {
-                        ContextHub.getStore("abandonedproducts").record(
-                            this.product.pagePath,
-                            this.product.title,
-                            this.product.thumbnail,
-                            this.product.price
-                        );
-                    }
-                    window.cartComponent.show();
-                },
-                addToWishlist: function (event) {
-                    if (this.product) {
-                        var $form = $(event.target).closest('form');
-                        $.ajax({
-                            url: event.currentTarget.getAttribute("data-smartlist-url"),
-                            data: $form.serialize(),
-                            cache: false,
-                            type: $form.attr('method')
-                        }).done(function (json) {
-                            if (window.ContextHub && ContextHub.getStore('smartlists')) {
-                                if (ContextHub.getStore('smartlists').getTree().length == 0) {
-                                    // wait until new created smart list is available, which may take > 1 sec
-                                    var smartlistCheck = setInterval(function(){
-                                        ContextHub.getStore('smartlists').queryService();
-                                        if (ContextHub.getStore('smartlists').getTree().length > 0) {
-                                            clearInterval(smartlistCheck);
-                                            window.smartlistComponent.show();
-                                        }
-                                    }, 500);
-                                } else {
-                                    ContextHub.getStore('smartlists').queryService();
-                                    window.smartlistComponent.show();
-                                }
-                            }
-                        }).fail(function () {
-                            alert('An error occured while trying to perform this operation.');
-                        });
-                    }
-
-                },
                 processHash: function () {
                     var self = this;
                     var done = false;
@@ -209,7 +167,7 @@
                     }
 
                     if (!done) {
-                        history.pushState(null, null, '#' + self.product.sku);
+                        history.replaceState(null, null, '#' + self.product.sku);
                     }
                 }
             }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    cq:policyOrigin="local"
+    cq:templatesOrigin="local"
+    cq:templateTypesOrigin="local"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="sling:OrderedFolder"
+    jcr:title="We.Retail">
+    <settings/>
+    <sling:configs/>
+</jcr:root>

@@ -6,6 +6,9 @@
         cq:checkoutPage="/content/we-retail/language-masters/en/user/cart"
         cq:contextHubPath="/libs/settings/cloudsettings/legacy/contexthub"
         cq:contextHubSegmentsPath="/conf/we-retail/settings/wcm/segments"
+        cq:cifCategoryPage="/content/we-retail/language-masters/en/products/category-page"
+        cq:cifProductPage="/content/we-retail/language-masters/en/products/product-page"
+        cq:cifSearchResultsPage="/content/we-retail/language-masters/en/products/search"
         cq:lastModified="{Date}2018-08-02T17:31:45.152+03:00"
         cq:lastModifiedBy="admin"
         cq:lastReplicated="{Date}2017-03-01T22:33:20.182+01:00"
@@ -39,7 +42,9 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/content/heroimage"
                     buttonLabel="Shop Now"
-                    buttonLinkTo="/content/we-retail/language-masters/en/products/equipment/snow-sports"
+                    buttonCategoryId="equipment/snow-sports"
+                    buttonCategoryIdType="urlPath"
+                    buttonLinkType="category"
                     fileReference="/content/dam/we-retail/en/activities/hiking-camping/trekker-khumbu-valley.jpg"
                     heading="All-new winter collection"
                     title="Built for the coldest winter on earth"
@@ -205,10 +210,10 @@
                     feedEnabled="{Boolean}true"
                     limit="6"
                     listCSSClass="row"
-                    listFrom="static"
+                    listFrom="products"
                     orderBy="jcr:title"
                     pageMax="0"
-                    pages="[/content/we-retail/language-masters/en/products/women/coats/sleek-insulated-coat,/content/we-retail/language-masters/en/products/men/coats/el-gordo-down-jacket,/content/we-retail/language-masters/en/products/men/shirts/expedition-tech-long-sleeved-shirt,/content/we-retail/language-masters/en/products/men/pants/trail-model-pants,/content/we-retail/language-masters/en/products/equipment/biking/marin-mountain-bike-shoes,/content/we-retail/language-masters/en/products/women/shirts/rios-t-shirt]"
+                    product="[woskwislt,meskwielt,mehiwiext,mehisutrs,eqbisumas,wohisurit]"
                     tagsMatch="any"/>
                 <section_title_431279162
                     jcr:created="{Date}2015-11-04T00:51:12.388+01:00"
@@ -257,10 +262,10 @@
                     feedEnabled="{Boolean}true"
                     limit="6"
                     listCSSClass="row"
-                    listFrom="static"
+                    listFrom="products"
                     orderBy="jcr:title"
                     pageMax="0"
-                    pages="[/content/we-retail/language-masters/en/products/women/coats/sleek-insulated-coat,/content/we-retail/language-masters/en/products/men/coats/el-gordo-down-jacket,/content/we-retail/language-masters/en/products/men/shirts/expedition-tech-long-sleeved-shirt,/content/we-retail/language-masters/en/products/men/pants/trail-model-pants,/content/we-retail/language-masters/en/products/equipment/biking/marin-mountain-bike-shoes,/content/we-retail/language-masters/en/products/women/shirts/rios-t-shirt]"
+                    product="[woskwislt,meskwielt,mehiwiext,mehisutrs,eqbisumas,wohisurit]"
                     tagsMatch="any"/>
                 <section_title_239098
                     jcr:created="{Date}2015-11-04T00:51:38.275+01:00"
@@ -331,5 +336,6 @@
     <equipment/>
     <about-us/>
     <products/>
+    <cif-products/>
     <user/>
 </jcr:root>

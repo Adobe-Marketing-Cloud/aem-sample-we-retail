@@ -26,14 +26,12 @@ import org.apache.sling.testing.mock.sling.ResourceResolverType;
 
 import com.adobe.cq.commerce.api.CommerceService;
 import com.adobe.cq.commerce.api.Product;
-import com.adobe.cq.social.community.api.CommunityContext;
-import com.day.cq.wcm.api.Page;
 import com.google.common.base.Function;
 import common.mock.MockCommerceService;
-import common.mock.MockCommunityContext;
 import common.mock.MockProduct;
 import common.mock.MockUserManager;
 import io.wcm.testing.mock.aem.junit.AemContext;
+import io.wcm.testing.mock.aem.junit.AemContextBuilder;
 import io.wcm.testing.mock.aem.junit.AemContextCallback;
 
 public class AppAemContext {
@@ -41,10 +39,8 @@ public class AppAemContext {
     public static final String CONTENT_ROOT = "/content/we-retail";
     public static final String CONF_ROOT = "/conf/we-retail/settings";
     public static final String PRODUCT_ROOT = "/var/commerce/products/we-retail";
-    public static final String ORDER_ROOT = "/var/commerce/orders/2016/12/12/order";
     public static final String BUTTON_PATH = "/content/we-retail/us/en/men/jcr:content/root/responsivegrid/button";
-    public static final String PRODUCT_FILTER_PATH = "/content/we-retail/us/en/products/women/shirts/jcr:content/root/product-grid-container/product-filter/productfilter-color";
-    public static final String TEASERS_PATH = "/content/we-retail/us/en/men/jcr:content/root/responsivegrid/teasers";
+    public static final String PRODUCT_FILTER_PATH = "/content/we-retail/us/en/products/category-page/jcr:content/root/product-grid-container/product-filter/productfilter-color";
     public static final String HERO_IMAGES_PATH = "/content/we-retail/us/en/men/jcr:content/root/responsivegrid/hero-images";
 
     private static MockCommerceService mockCommerceService = null;
@@ -54,7 +50,11 @@ public class AppAemContext {
     }
 
     public static AemContext newAemContext() {
-        return new AemContext(new SetUpCallback(), ResourceResolverType.RESOURCERESOLVER_MOCK);
+        return new AemContextBuilder()
+            .registerSlingModelsFromClassPath(false)
+            .resourceResolverType(ResourceResolverType.RESOURCERESOLVER_MOCK)
+            .afterSetUp(new SetUpCallback())
+            .build();
     }
 
     private static final class SetUpCallback implements AemContextCallback {
@@ -79,13 +79,6 @@ public class AppAemContext {
                     return new MockProduct(resource);
                 }
             });
-            context.registerAdapter(Page.class, CommunityContext.class, new Function<Page, CommunityContext>() {
-                @Nullable
-                @Override
-                public CommunityContext apply(@Nullable Page page) {
-                    return new MockCommunityContext();
-                }
-            });
             context.registerAdapter(ResourceResolver.class, UserManager.class, new Function<ResourceResolver, UserManager>() {
                 @Nullable
                 @Override
@@ -97,10 +90,8 @@ public class AppAemContext {
             context.load().json("/sample-content.json", CONTENT_ROOT);
             context.load().json("/sample-conf.json", CONF_ROOT);
             context.load().json("/sample-product.json", PRODUCT_ROOT);
-            context.load().json("/sample-order.json", ORDER_ROOT);
             context.load().json("/sample-button.json", BUTTON_PATH);
             context.load().json("/sample-productfilter.json", PRODUCT_FILTER_PATH);
-            context.load().json("/sample-category-teasers.json", TEASERS_PATH);
             context.load().json("/sample-hero-images.json", HERO_IMAGES_PATH);
         }
     }

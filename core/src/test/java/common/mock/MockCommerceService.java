@@ -38,7 +38,6 @@ import com.day.cq.wcm.api.Page;
 public class MockCommerceService extends SlingAdaptable implements CommerceService {
 
     private Resource resource;
-    private MockCommerceSession mockCommerceSession = new MockCommerceSession();
 
     public MockCommerceService(Resource resource) {
         this.resource = resource;
@@ -51,7 +50,7 @@ public class MockCommerceService extends SlingAdaptable implements CommerceServi
 
     @Override
     public CommerceSession login(SlingHttpServletRequest request, SlingHttpServletResponse response) throws CommerceException {
-        return mockCommerceSession;
+        return null;
     }
 
     @Override
@@ -78,7 +77,7 @@ public class MockCommerceService extends SlingAdaptable implements CommerceServi
     public Product getProduct(String path) throws CommerceException {
         ResourceResolver resourceResolver = resource.getResourceResolver();
         Resource productResource = resourceResolver.getResource(path);
-        if(productResource != null) {
+        if (productResource != null) {
             return new MockProduct(productResource);
         }
         return null;

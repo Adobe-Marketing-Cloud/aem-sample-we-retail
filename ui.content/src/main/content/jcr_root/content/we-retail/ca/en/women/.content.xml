@@ -64,10 +64,10 @@
                     displayAs="products"
                     feedEnabled="{Boolean}true"
                     limit="6"
-                    listFrom="static"
+                    listFrom="products"
                     orderBy="jcr:title"
                     pageMax="0"
-                    pages="[/content/we-retail/ca/en/products/women/shorts/bahamas-shorts,/content/we-retail/ca/en/products/women/pants/hiking-pants,/content/we-retail/ca/en/products/women/shirts/devi-sleeveless-shirt,/content/we-retail/ca/en/products/women/shorts/candide-trail-short,/content/we-retail/ca/en/products/women/shorts/fleet-fox-running-shorts,/content/we-retail/ca/en/products/women/shirts/soleil-tunic]"
+                    product="[woswsubas,331050524,wootsudet,wohisucat,wohisufls,woswsusoc]"
                     tagsMatch="any"/>
                 <button
                     cq:lastRolledout="{Date}2016-10-26T16:43:44.717+02:00"
@@ -79,8 +79,10 @@
                     jcr:mixinTypes="[cq:LiveRelationship]"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="weretail/components/content/button"
-                    label="All women's products"
-                    linkTo="/content/we-retail/ca/en/products/women"/>
+                    jcr:title="All women's products"
+                    categoryId="women"
+                    categoryIdType="urlPath"
+                    linkType="category"/>
                 <teaser
                     cq:lastRolledout="{Date}2016-10-26T16:43:44.721+02:00"
                     cq:lastRolledoutBy="admin"
@@ -109,7 +111,8 @@
                     <actions jcr:primaryType="nt:unstructured">
                         <item0
                             jcr:primaryType="nt:unstructured"
-                            link="/content/we-retail/ca/en/products/women/shirts"
+                            categoryId="women/shirts"
+                            categoryIdType="urlPath"
                             text="Our strongest clothes"/>
                     </actions>
                 </teaser>
@@ -141,7 +144,8 @@
                     <actions jcr:primaryType="nt:unstructured">
                         <item0
                             jcr:primaryType="nt:unstructured"
-                            link="/content/we-retail/ca/en/products/women/coats"
+                            categoryId="women/coats"
+                            categoryIdType="urlPath"
                             text="Our warmest jackets"/>
                     </actions>
                 </teaser_980945351>

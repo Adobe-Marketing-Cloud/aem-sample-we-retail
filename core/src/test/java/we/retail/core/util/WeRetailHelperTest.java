@@ -40,7 +40,7 @@ import we.retail.core.model.Constants;
 public class WeRetailHelperTest {
 
     private static final String MOCK_RESOURCE_TITLE = "mockResourceTitle";
-    private static final String ORDER_DETAILS_TITLE = "Order Details";
+    private static final String PAGE_TITLE = "English";
 
     @Rule
     public final AemContext context = AppAemContext.newAemContext();
@@ -49,8 +49,8 @@ public class WeRetailHelperTest {
 
     @Before
     public void setUp() throws Exception {
-        page = context.currentPage(Constants.TEST_ORDER_PAGE);
-        context.currentResource(Constants.TEST_ORDER_RESOURCE);
+        page = context.currentPage(Constants.TEST_HOME_PAGE);
+        context.currentResource(Constants.TEST_HOME_PAGE + "/jcr:content");
     }
 
     @Test
@@ -62,8 +62,8 @@ public class WeRetailHelperTest {
         when(mockResource.adaptTo(ValueMap.class)).thenReturn(vm);
 
         assertEquals(MOCK_RESOURCE_TITLE, WeRetailHelper.getTitle(mockResource, page));
-        assertEquals(ORDER_DETAILS_TITLE, WeRetailHelper.getPageTitle(page));
-        assertEquals(ORDER_DETAILS_TITLE, WeRetailHelper.getTitle(page));
+        assertEquals(PAGE_TITLE, WeRetailHelper.getPageTitle(page));
+        assertEquals(PAGE_TITLE, WeRetailHelper.getTitle(page));
 
         assertNull(WeRetailHelper.getTitle(null, page));
         assertNull(WeRetailHelper.getPageTitle(null));
@@ -73,6 +73,6 @@ public class WeRetailHelperTest {
         Map<String, Object> map2 = new HashMap<String, Object>();
         ValueMap vm2 = new ValueMapDecorator(map2);
         when(mockResource.adaptTo(ValueMap.class)).thenReturn(vm2);
-        assertEquals(ORDER_DETAILS_TITLE, WeRetailHelper.getTitle(mockResource, page));
+        assertEquals(PAGE_TITLE, WeRetailHelper.getTitle(mockResource, page));
     }
 }

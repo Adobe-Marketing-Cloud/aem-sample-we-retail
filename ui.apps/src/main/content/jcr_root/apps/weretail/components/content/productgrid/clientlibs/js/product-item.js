@@ -21,6 +21,20 @@
     var parentEl;
     // Vue.config.debug = true
 
+    function union(list, values) {
+        var result = Array.isArray(list) ? list.slice() : [];
+        (values || []).forEach(function (value) {
+            if (result.indexOf(value) === -1) {
+                result.push(value);
+            }
+        });
+        return result;
+    }
+
+    function sortFilterSizes(sizes) {
+        return sortSizes(sizes);
+    }
+
     Vue.component('we-product-item', {
         props: [
             'price',
@@ -47,21 +61,18 @@
 
                             vm[filter] = pricesList;
 
-                            vm.$parent.filters[filter] = _.union(vm.$parent.filters[filter], pricesList);
+                            vm.$parent.filters[filter] = union(vm.$parent.filters[filter], pricesList);
 
                             break;
                         default:
-                            vm.$parent.filters[filter] = _.union(vm.$parent.filters[filter], vm[filter].split(','));
+                            vm.$parent.filters[filter] = union(vm.$parent.filters[filter], vm[filter].split(','));
 
                             break;
                     }
                 }
             });
 
-            vm.$parent.filters['size'] = _.sortBy(vm.$parent.filters['size'], function (size) {
-                var tmp = parseFloat(size);
-                return _.isNumber(tmp) && !_.isNaN(tmp);
-            });
+            vm.$parent.filters.size = sortFilterSizes(vm.$parent.filters.size);
 
             vm.isVisible = true;
         },
@@ -98,9 +109,9 @@
                 });
 
                 isVisible = visibleArray.length ?
-                    _.reduce(visibleArray, function (memo, visible) {
+                    visibleArray.reduce(function (memo, visible) {
                         return memo && visible;
-                    }) : true;
+                    }, true) : true;
 
                 vm.isVisible = isVisible;
 
@@ -172,10 +183,10 @@
             numbers = [],
             others = [];
 
-        _.each(sizes, function(item) {
+        (sizes || []).forEach(function(item) {
            if(!isNaN(item)) {
-               numbers.push(item)
-           } else if(_.contains(dualSizesRef, item)) {
+               numbers.push(item);
+           } else if(dualSizesRef.indexOf(item) !== -1) {
                dualSizes.push(item);
            }
            else {
@@ -191,7 +202,7 @@
             return parseInt(a) - parseInt(b);
         });
 
-        return _.union(others, dualSizes, numbers);
+        return union(union(others, dualSizes), numbers);
     }
 
 })(jQuery);

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="b48839ed-bae2-4fc3-92a1-6b2726c9829c">
+    <jcr:content
+        jcr:lastModified="{Date}2026-06-24T12:58:15.523+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="size: 9, 11, 13"
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/we-retail/settings/dam/cfm/models/celadon-option-definition"
+            jcr:primaryType="nt:unstructured"
+            _strucVersion="{Long}1">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                attributeCode="size"
+                attributeCode_x0040_LastModified="{Date}2026-06-24T12:58:15.522+03:00"
+                attributeCode_x0040_LastModifiedBy="admin"
+                label="size"
+                label_x0040_LastModified="{Date}2026-06-24T12:58:15.522+03:00"
+                label_x0040_LastModifiedBy="admin"
+                productField="size"
+                productField_x0040_LastModified="{Date}2026-06-24T12:58:15.522+03:00"
+                productField_x0040_LastModifiedBy="admin"
+                swatchType_x0040_LastModified="{Date}2026-06-24T12:58:15.523+03:00"
+                swatchType_x0040_LastModifiedBy="admin"
+                values="[1;9,2;11,3;13]"
+                values_x0040_LastModified="{Date}2026-06-24T12:58:15.523+03:00"
+                values_x0040_LastModifiedBy="admin"/>
+        </data>
+        <indexedData jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="3ceba9e5-af5a-4b4b-95c2-9e45ee0b1054"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/celadon-option-definition"
+                _x0040_stringArray_x0040_variations="[]"
+                string_x0040_attributeCode="size"
+                string_x0040_label="size"
+                string_x0040_productField="size"
+                stringArray_x0040_values="[1;9,2;11,3;13]"/>
+        </indexedData>
+        <metadata
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

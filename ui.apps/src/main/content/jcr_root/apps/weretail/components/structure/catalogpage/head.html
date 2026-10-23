@@ -1,0 +1,24 @@
+<!--/*
+    Copyright 2026 Adobe Systems Incorporated
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+<sly data-sly-use.metadata="we.retail.core.model.PageHeadMetadata"/>
+<meta charset="UTF-8"/>
+<title>${metadata.title || currentPage.title || currentPage.name}</title>
+<meta name="template" content="${currentPage.template.name}"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta data-sly-test="${metadata.description}" name="description" content="${metadata.description}"/>
+<link data-sly-test="${metadata.canonicalUrl}" rel="canonical" href="${metadata.canonicalUrl}"/>
+<link data-sly-test="${!metadata.canonicalUrl}" rel="canonical" href="${currentPage.path}.html"/>
+<sly data-sly-include="customheaderlibs.html"/>

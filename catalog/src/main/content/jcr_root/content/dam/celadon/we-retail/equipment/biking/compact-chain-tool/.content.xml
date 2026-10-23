@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="2fc2f805-c9c4-471d-b492-9d07ac231d14">
+    <jcr:content
+        jcr:lastModified="{Date}2026-06-24T12:58:15.911+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Compact Chain Tool"
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/we-retail/settings/dam/cfm/models/product"
+            jcr:primaryType="nt:unstructured"
+            _strucVersion="{Long}1">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:15.896+03:00"
+                color_x0040_LastModified="{Date}2026-06-24T12:58:15.896+03:00"
+                configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:15.896+03:00"
+                description="This lightweight, compact chain tool is built to travel! Fits into any pocket or bike bag, yet performs like a shop-quality instrument."
+                description_x0040_ContentType="text/html"
+                description_x0040_LastModified="{Date}2026-06-24T12:58:15.901+03:00"
+                description_x0040_LastModifiedBy="admin"
+                features="Works on any chain, including Hyperglide&#xd;&#xa;Has a built-in shelf for loosening tight links"
+                features_x0040_LastModified="{Date}2026-06-24T12:58:15.902+03:00"
+                features_x0040_LastModifiedBy="admin"
+                identifier="eqbisucol"
+                identifier_x0040_LastModified="{Date}2026-06-24T12:58:15.902+03:00"
+                identifier_x0040_LastModifiedBy="admin"
+                image="[/content/dam/celadon/we-retail/equipment/biking/compact-chain-tool_img_0.jpeg]"
+                image_x0040_LastModified="{Date}2026-06-24T12:58:15.911+03:00"
+                image_x0040_LastModifiedBy="admin"
+                name="Compact Chain Tool"
+                name_x0040_LastModified="{Date}2026-06-24T12:58:15.901+03:00"
+                name_x0040_LastModifiedBy="admin"
+                price="{Double}15.0"
+                price_x0040_LastModified="{Date}2026-06-24T12:58:15.901+03:00"
+                price_x0040_LastModifiedBy="admin"
+                rating="1"
+                rating_x0040_LastModified="{Date}2026-06-24T12:58:15.902+03:00"
+                rating_x0040_LastModifiedBy="admin"
+                reviews="By gcsailing&#xa;from Biloxi, MS&#xa;I broke my bike chain not far from my house and decided to use this tool to put on a spare chain I had. After two hours of trying to line the pin up I still could not get it to go into the chain link. I don't know if I was just doing something wrong but even after reading the directions supplied with the tool I could not fix the chain. I ended up taking it to a bike shop and getting it fixed for less than the cost of the tool."
+                reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.903+03:00"
+                reviews_x0040_LastModifiedBy="admin"
+                short_description="equipment"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
+                size_x0040_LastModified="{Date}2026-06-24T12:58:15.896+03:00"
+                sku="eqbisucol"
+                sku_x0040_LastModified="{Date}2026-06-24T12:58:15.900+03:00"
+                sku_x0040_LastModifiedBy="admin"/>
+        </data>
+        <indexedData jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="29aa326c-1214-42a0-8b61-19d4bb7a87a5"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/product"
+                _x0040_stringArray_x0040_variations="[]"
+                double_x0040_price="{Double}15.0"
+                string_x0040_description="This lightweight, compact chain tool is built to travel! Fits into any pocket or bike bag, yet performs like a shop-quality instrument."
+                string_x0040_features="Works on any chain, including Hyperglide&#xd;&#xa;Has a built-in shelf for loosening tight links"
+                string_x0040_identifier="eqbisucol"
+                string_x0040_name="Compact Chain Tool"
+                string_x0040_rating="1"
+                string_x0040_reviews="By gcsailing&#xa;from Biloxi, MS&#xa;I broke my bike chain not far from my house and decided to use this tool to put on a spare chain I had. After two hours of trying to line the pin up I still could not get it to go into the chain link. I don't know if I was just doing something wrong but even after reading the directions supplied with the tool I could not fix the chain. I ended up taking it to a bike shop and getting it fixed for less than the cost of the tool."
+                string_x0040_short_description="equipment"
+                string_x0040_sku="eqbisucol"/>
+        </indexedData>
+        <metadata
+            cq:tags="[we-retail:equipment,we-retail:activity/biking,we-retail:season/summer]"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

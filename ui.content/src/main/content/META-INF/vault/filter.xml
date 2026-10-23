@@ -19,13 +19,9 @@
         <exclude pattern="/conf/we-retail/settings/dam/cfm(/.*)?"/>
     </filter>
     <filter root="/content/campaigns/we-retail"/>
-    <filter root="/content/catalogs/we-retail/en/website-catalog"/>
-    <filter root="/content/catalogs/we-retail/en/website-template-pages"/>
     <filter root="/content/dam/collections/w/we-retail" mode="merge"/>
     <filter root="/content/dam/projects/we-retail"/>
-    <filter root="/content/we-retail">
-        <exclude pattern="/content/we-retail/us/en/community"/>
-    </filter>
+    <filter root="/content/we-retail"/>
     <filter root="/content/projects/we-retail"/>
     <filter root="/home/groups/projects/admin/we_retail"/>
 </workspaceFilter>

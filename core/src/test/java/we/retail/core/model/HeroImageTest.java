@@ -15,110 +15,164 @@
  */
 package we.retail.core.model;
 
-import com.adobe.cq.sightly.WCMBindings;
-import com.day.cq.wcm.api.designer.Cell;
-import com.day.cq.wcm.api.designer.Design;
-import com.day.cq.wcm.api.designer.Style;
-import common.AppAemContext;
-import io.wcm.testing.mock.aem.junit.AemContext;
-import org.apache.sling.api.resource.Resource;
-import org.apache.sling.api.scripting.SlingBindings;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.api.wrappers.ValueMapDecorator;
-import org.apache.sling.servlethelpers.MockSlingHttpServletRequest;
-import org.junit.Rule;
 import org.junit.Test;
 
-import java.util.Collections;
+import com.adobe.cq.commerce.core.components.services.urls.UrlProvider;
+import com.day.cq.wcm.api.Page;
 
-import static common.AppAemContext.HERO_IMAGES_PATH;
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Matchers.any;
+import static org.mockito.Matchers.eq;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class HeroImageTest {
 
-    @Rule
-    public final AemContext context = AppAemContext.newAemContext();
-
     @Test
-    public void testNormal() {
-        MockSlingHttpServletRequest request = context.request();
-        Resource buttonRes = context.currentResource(HERO_IMAGES_PATH + "/normal");
-        SlingBindings slingBindings = (SlingBindings) context.request().getAttribute(SlingBindings.class.getName());
-        slingBindings.put(WCMBindings.PROPERTIES, buttonRes.getValueMap());
+    public void testNormal() throws Exception {
+        HeroImage heroImage = new HeroImage();
 
-        HeroImage heroImage = request.adaptTo(HeroImage.class);
+        setField(heroImage, "request", createRequestWithImageSrc(null));
+        setField(heroImage, "properties", valueMap());
+        invokeInit(heroImage);
+
         assertEquals("we-HeroImage", heroImage.getClassList());
     }
 
     @Test
-    public void testFullWidth() {
-        MockSlingHttpServletRequest request = context.request();
-        Resource buttonRes = context.currentResource(HERO_IMAGES_PATH + "/full-width");
-        SlingBindings slingBindings = (SlingBindings) context.request().getAttribute(SlingBindings.class.getName());
-        slingBindings.put(WCMBindings.PROPERTIES, buttonRes.getValueMap());
+    public void testFullWidth() throws Exception {
+        HeroImage heroImage = new HeroImage();
 
-        HeroImage heroImage = request.adaptTo(HeroImage.class);
+        setField(heroImage, "request", createRequestWithImageSrc(null));
+        setField(heroImage, "properties", valueMap("useFullWidth", "true"));
+        invokeInit(heroImage);
+
         assertEquals("we-HeroImage width-full", heroImage.getClassList());
     }
 
     @Test
-    public void testNullImage() {
-        MockSlingHttpServletRequest request = context.request();
-        Resource buttonRes = context.currentResource(HERO_IMAGES_PATH + "/normal");
-        SlingBindings slingBindings = (SlingBindings) context.request().getAttribute(SlingBindings.class.getName());
-        slingBindings.put(WCMBindings.PROPERTIES, buttonRes.getValueMap());
+    public void testNullImage() throws Exception {
+        HeroImage heroImage = new HeroImage();
 
-        HeroImage heroImage = request.adaptTo(HeroImage.class);
+        setField(heroImage, "request", createRequestWithImageSrc(null));
+        setField(heroImage, "properties", valueMap());
+        invokeInit(heroImage);
+
         assertNull(heroImage.getImage().getSrc());
     }
 
     @Test
-    public void testNoNullImage() {
-        MockSlingHttpServletRequest request = context.request();
-        Resource buttonRes = context.currentResource(HERO_IMAGES_PATH + "/withImage");
-        SlingBindings slingBindings = (SlingBindings) context.request().getAttribute(SlingBindings.class.getName());
-        slingBindings.put(WCMBindings.PROPERTIES, buttonRes.getValueMap());
+    public void testNoNullImage() throws Exception {
+        HeroImage heroImage = new HeroImage();
 
-        HeroImage heroImage = request.adaptTo(HeroImage.class);
+        setField(heroImage, "request", createRequestWithImageSrc("/content/dam/we-retail/hero.jpg"));
+        setField(heroImage, "properties", valueMap());
+        invokeInit(heroImage);
 
         assertNotNull(heroImage.getImage().getSrc());
     }
 
+    @Test
+    public void testResolvesCategoryButtonLink() throws Exception {
+        HeroImage heroImage = new HeroImage();
+        org.apache.sling.api.SlingHttpServletRequest request = createRequestWithImageSrc(null);
+        Page currentPage = mock(Page.class);
+        UrlProvider urlProvider = mock(UrlProvider.class);
 
-    private class EmptyStyle extends ValueMapDecorator implements Style {
-        private EmptyStyle() {
-            super(Collections.emptyMap());
-        }
+        when(urlProvider.formatCategoryUrl(eq(request), eq(currentPage), any()))
+            .thenReturn("/content/we-retail/us/en/products/category-page.html/eq/hiking.html");
 
-        @Override
-        public Cell getCell() {
-            return null;
-        }
+        setField(heroImage, "request", request);
+        setField(heroImage, "properties", valueMap());
+        setField(heroImage, "currentPage", currentPage);
+        setField(heroImage, "urlProvider", urlProvider);
+        setField(heroImage, "buttonLabel", "Explore hiking");
+        setField(heroImage, "buttonLinkType", "category");
+        setField(heroImage, "buttonCategoryId", "eq/hiking");
+        setField(heroImage, "buttonCategoryIdType", "urlPath");
+        invokeInit(heroImage);
 
-        @Override
-        public Design getDesign() {
-            return null;
-        }
-
-        @Override
-        public Resource getDefiningResource(String s) {
-            return null;
-        }
-
-        @Override
-        public String getDefiningPath(String s) {
-            return null;
-        }
-
-        @Override
-        public Style getSubStyle(String s) {
-            return null;
-        }
-
-        @Override
-        public String getPath() {
-            return null;
-        }
+        assertEquals("/content/we-retail/us/en/products/category-page.html/eq/hiking.html", heroImage.getButtonLink());
+        assertTrue(heroImage.isButtonCallToAction());
     }
 
+    @Test
+    public void testResolvesProductButtonLink() throws Exception {
+        HeroImage heroImage = new HeroImage();
+        org.apache.sling.api.SlingHttpServletRequest request = createRequestWithImageSrc(null);
+        Page currentPage = mock(Page.class);
+        UrlProvider urlProvider = mock(UrlProvider.class);
+
+        when(urlProvider.toProductUrl(request, currentPage, "meskwielt"))
+            .thenReturn("/content/we-retail/us/en/products/product-page.html/me/coats/meskwielt.html");
+
+        setField(heroImage, "request", request);
+        setField(heroImage, "properties", valueMap());
+        setField(heroImage, "currentPage", currentPage);
+        setField(heroImage, "urlProvider", urlProvider);
+        setField(heroImage, "buttonLabel", "Shop coat");
+        setField(heroImage, "buttonLinkType", "product");
+        setField(heroImage, "buttonProductSku", "meskwielt");
+        invokeInit(heroImage);
+
+        assertEquals("/content/we-retail/us/en/products/product-page.html/me/coats/meskwielt.html", heroImage.getButtonLink());
+        assertTrue(heroImage.isButtonCallToAction());
+    }
+
+    @Test
+    public void testHidesButtonWithoutResolvedLink() throws Exception {
+        HeroImage heroImage = new HeroImage();
+
+        setField(heroImage, "request", createRequestWithImageSrc(null));
+        setField(heroImage, "properties", valueMap());
+        setField(heroImage, "buttonLabel", "Explore hiking");
+        setField(heroImage, "buttonLinkType", "category");
+        invokeInit(heroImage);
+
+        assertEquals("#", heroImage.getButtonLink());
+        assertFalse(heroImage.isButtonCallToAction());
+    }
+
+    private org.apache.sling.api.SlingHttpServletRequest createRequestWithImageSrc(String src) {
+        org.apache.sling.api.SlingHttpServletRequest request = mock(org.apache.sling.api.SlingHttpServletRequest.class);
+        com.adobe.cq.wcm.core.components.models.Image image = mock(com.adobe.cq.wcm.core.components.models.Image.class);
+        when(image.getSrc()).thenReturn(src);
+        when(request.adaptTo(com.adobe.cq.wcm.core.components.models.Image.class)).thenReturn(image);
+        return request;
+    }
+
+    private ValueMap valueMap() {
+        return valueMap(null, null);
+    }
+
+    private ValueMap valueMap(String key, String value) {
+        Map<String, Object> values = new HashMap<String, Object>();
+        if (key != null) {
+            values.put(key, value);
+        }
+        return new ValueMapDecorator(values);
+    }
+
+    private void invokeInit(HeroImage heroImage) throws Exception {
+        Method initMethod = HeroImage.class.getDeclaredMethod("initModel");
+        initMethod.setAccessible(true);
+        initMethod.invoke(heroImage);
+    }
+
+    private void setField(Object target, String fieldName, Object value) throws Exception {
+        Field field = target.getClass().getDeclaredField(fieldName);
+        field.setAccessible(true);
+        field.set(target, value);
+    }
 }

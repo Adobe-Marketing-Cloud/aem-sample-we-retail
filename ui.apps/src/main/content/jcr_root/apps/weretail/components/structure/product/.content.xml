@@ -4,5 +4,5 @@
     jcr:title="Product"
     jcr:description="Product component with vue.js component"
     cq:icon="archive"
-    sling:resourceSuperType="commerce/components/product_reference"
+    sling:resourceSuperType="core/cif/components/commerce/product/v2/product"
     componentGroup="We.Retail Commerce"/>

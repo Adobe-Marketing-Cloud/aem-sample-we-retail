@@ -32,7 +32,7 @@ import com.day.cq.wcm.api.PageFilter;
 import com.day.cq.wcm.api.PageManager;
 
 import we.retail.core.util.UrlHelper;
-import we.retail.core.util.WeRetailHelper;
+import we.retail.core.util. WeRetailHelper;
 
 @Model(adaptables = { SlingHttpServletRequest.class })
 public class Footer {

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Water Sports">
+        <folderThumbnail/>
+    </jcr:content>
+    <pufferfish-snorkeling-fins/>
+    <pufferfish-snorkeling-fins_img_0.jpeg/>
+    <pufferfish-snorkeling-fins_var-identifier-eqswsupus1-size-s-color-blue_img_0.jpeg/>
+    <pufferfish-snorkeling-fins_var-identifier-eqswsupus1-size-m-color-blue_img_0.jpeg/>
+    <pufferfish-snorkeling-fins_var-identifier-eqswsupus1-size-l-color-blue_img_0.jpeg/>
+    <pufferfish-snorkeling-fins_var-identifier-eqswsupus2-size-s-color-green_img_0.jpeg/>
+    <pufferfish-snorkeling-fins_var-identifier-eqswsupus2-size-m-color-green_img_0.jpeg/>
+    <pufferfish-snorkeling-fins_var-identifier-eqswsupus2-size-l-color-green_img_0.jpeg/>
+    <pufferfish-snorkeling-fins_var-identifier-eqswsupus3-size-s-color-purple_img_0.jpeg/>
+    <pufferfish-snorkeling-fins_var-identifier-eqswsupus3-size-m-color-purple_img_0.jpeg/>
+    <pufferfish-snorkeling-fins_var-identifier-eqswsupus3-size-l-color-purple_img_0.jpeg/>
+    <aqua-force-gps-fitness-monitor/>
+    <aqua-force-gps-fitness-monitor_img_0.jpeg/>
+    <cabana-stripe-towel/>
+    <cabana-stripe-towel_img_0.jpeg/>
+    <pro-series-swim-goggles/>
+    <pro-series-swim-goggles_img_0.jpeg/>
+    <pro-series-swim-goggles_var-identifier-eqswsuprs1-size-onesize-color-blue_img_0.jpeg/>
+    <pro-series-swim-goggles_var-identifier-eqswsuprs2-size-onesize-color-green_img_0.jpeg/>
+    <pro-series-swim-goggles_var-identifier-eqswsuprs3-size-onesize-color-yellow_img_0.jpeg/>
+    <seastar-flip-flops/>
+    <seastar-flip-flops_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses1-size-8-color-blue_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses1-size-9-color-blue_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses1-size-10-color-blue_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses1-size-11-color-blue_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses1-size-12-color-blue_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses1-size-13-color-blue_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses2-size-8-color-green_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses2-size-9-color-green_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses2-size-10-color-green_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses2-size-11-color-green_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses2-size-12-color-green_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses2-size-13-color-green_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses3-size-8-color-purple_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses3-size-9-color-purple_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses3-size-10-color-purple_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses3-size-11-color-purple_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses3-size-12-color-purple_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses3-size-13-color-purple_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses4-size-8-color-red_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses4-size-9-color-red_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses4-size-10-color-red_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses4-size-11-color-red_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses4-size-12-color-red_img_0.jpeg/>
+    <seastar-flip-flops_var-identifier-eqswsuses4-size-13-color-red_img_0.jpeg/>
+    <manta-ray-snorkel-and-dive-mask/>
+    <manta-ray-snorkel-and-dive-mask_img_0.jpeg/>
+</jcr:root>

@@ -21,8 +21,6 @@
     <filter root="/apps/weretail/i18n"/>
 
     <filter root="/apps/public/weretail"/>
-    <filter root="/var/commerce/payment-methods/we-retail"/>
-    <filter root="/var/commerce/shipping-methods/we-retail"/>
 
     <filter root="/apps/msm/we-retail/blueprintconfigs/weretail"/>
 

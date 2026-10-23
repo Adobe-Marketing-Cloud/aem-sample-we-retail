@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <jcr:content
+        dam:noThumbnail="{Boolean}true"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Configurable Options"/>
+    <size--xs-s-m-l-plus1/>
+    <color--darkgreen-purple/>
+    <size--xxs-xs-s-m-plus2/>
+    <size--0-3-6-9-plus2/>
+    <size--xxs-s-m-l-plus2/>
+    <color--yellow-red/>
+    <size--9-11-13/>
+    <size--one-size/>
+    <color--cuzco-blue-cuzco-orange/>
+    <size--s-m-l-xl/>
+    <size--s-m-l/>
+    <size--7-8-9-10-plus2/>
+    <color--blue-green-purple/>
+    <color--blue-green-yellow/>
+    <size--8-9-10-11-plus2/>
+    <color--blue-green-purple-red/>
+    <color--green-purple-red/>
+    <size--28-30-32-34-plus5/>
+    <size--s-m-l-xl-plus2/>
+    <size--xs-s-m-l-plus2/>
+    <size--s-m-l-xl-plus1/>
+    <color--orange-blue-red/>
+    <size--s-m-l-xl-plus1-2/>
+    <size--44-regular-28-xxk-plus29/>
+    <color--red-orange-cuzco-blue-green-plus5/>
+</jcr:root>

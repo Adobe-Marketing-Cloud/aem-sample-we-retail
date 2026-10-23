@@ -22,16 +22,14 @@
         <ul class="nav navbar-nav navbar-right">
             <sly data-sly-test.notAnonymous="${!header.anonymous}">
             <li><a href="${header.accountPath @ extension = 'html'}">${ 'Account' @ i18n }</a></li>
-            <li><a href="${header.profilePath @ extension = 'html'}">${ 'Profile' @ i18n }</a></li>
-            <li data-sly-resource="${@ resourceType='weretail/components/structure/navwishlist'}"></li>
-            <li><a href="${header.messagingPath @ extension = 'html'}"><i class="fa fa-envelope-o"></i> ${
-                'Messages' @ i18n }
-                <span class="badge" id="we-retail-message-count" data-siteurl="/content/we-retail/us/en/community">0</span></a></li>
-            <li><a href="${header.notificationPath @ extension = 'html'}"><i class="fa fa-flag-o"></i> ${ 'Notifications' @ i18n }
-                <span class="badge" id="we-retail-notification-count" data-siteurl="/content/we-retail/us/en/community">0</span></a></li>
             </sly>
-            <li data-sly-resource="${@ resourceType='weretail/components/structure/navcart'}"></li>
-            <li data-sly-test="${header.isModerator}"><a href="${header.moderationPath @ extension = 'html'}">${ 'Moderation' @ i18n }</a></li>
+            <li>
+                <div class="we-Cart we-Cart--disabled">
+                    <a class="we-Cart-button" href="#" aria-disabled="true">
+                        <i class="fa fa-shopping-cart"></i> ${'My cart' @ i18n}
+                    </a>
+                </div>
+            </li>
             <li data-sly-test="${!notAnonymous}"><a href="${header.signInPath @ extension = 'html'}">${ 'Login' @ i18n }</a></li>
             <li data-sly-test="${notAnonymous}"><a href="/system/sling/logout.html?resource=${header.currentPath @ extension = 'html'}">${
                 'Log out' @ i18n }</a></li>
@@ -55,8 +53,13 @@
             </button>
 
             <a class="navbar-brand" href="${header.languageRoot @ extension = 'html'}">we.<strong>Retail</strong></a>
-            <div class="pull-right visible-xs visible-sm"
-                 data-sly-resource="${@ resourceType='weretail/components/structure/navcart', selectors='mobilebutton'}"></div>
+            <div class="pull-right visible-xs visible-sm">
+                <div class="we-Cart we-Cart--disabled">
+                    <a class="we-Cart-button" href="#" aria-disabled="true">
+                        <i class="fa fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
         </div>
 
         <!-- /.navbar-header -->
@@ -67,18 +70,6 @@
                 <li class="visible-xs visible-sm divider" role="separator"></li>
                 <li class="visible-xs visible-sm" data-sly-test="${header.anonymous}"><a href="${header.signInPath @ extension = 'html'}">${ 'Login' @ i18n }</a></li>
                 <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}"><a href="/system/sling/logout.html?resource=${header.currentPath @ extension = 'html'}">${ 'Log out' @ i18n }</a></li>
-                <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}"><a href="${header.profilePath @ extension = 'html'}">${ 'Profile' @ i18n }</a></li>
-                <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}">
-                    <a href="${header.messagingPath @ extension = 'html'}" class="visible-xs visible-sm">${ 'Messages' @ i18n }
-                        <span class="badge pull-right">0</span>
-                    </a>
-                </li>
-                <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}">
-                    <a href="${header.notificationPath @ extension = 'html'}" class="visible-xs visible-sm">${ 'Notifications' @ i18n }
-                        <span class="badge pull-right">0</span>
-                    </a>
-                </li>
-                <li class="visible-xs visible-sm" data-sly-test="${!header.anonymous}" data-sly-resource="${@ resourceType='weretail/components/structure/navwishlist', selectors='mobilelink'}"></li>
                 <li class="visible-xs visible-sm"><a href="#" data-toggle="modal" data-target=".we-LanguageModal"><i class="we-lang-icon we-lang-icon-${header.currentLanguage.countrycode}"></i> ${header.currentLanguage.languagecode}</a></li>
             </ul>
         </div>

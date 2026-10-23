@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="0e026d79-653f-4f9b-b4a0-106d87f6419a">
+    <jcr:content
+        jcr:lastModified="{Date}2026-06-24T12:58:15.704+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Even Keel Paddleboard"
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/we-retail/settings/dam/cfm/models/product"
+            jcr:primaryType="nt:unstructured"
+            _strucVersion="{Long}1">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:15.690+03:00"
+                color_x0040_LastModified="{Date}2026-06-24T12:58:15.690+03:00"
+                configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:15.690+03:00"
+                description="Besides providing a new way to get on the water, paddleboarding develops core muscles and balance it's the perfect training activity for surfers, skiers and paddlers"
+                description_x0040_ContentType="text/html"
+                description_x0040_LastModified="{Date}2026-06-24T12:58:15.696+03:00"
+                description_x0040_LastModifiedBy="admin"
+                features="Incredibly stable 33 in. width offers stability that inspires confidence in beginning paddlers. &#xd;&#xa;EPS, epoxy and fiberglass construction reduces weight and creates high responsiveness"
+                features_x0040_LastModified="{Date}2026-06-24T12:58:15.697+03:00"
+                features_x0040_LastModifiedBy="admin"
+                identifier="eqsusuevd"
+                identifier_x0040_LastModified="{Date}2026-06-24T12:58:15.696+03:00"
+                identifier_x0040_LastModifiedBy="admin"
+                image="[/content/dam/celadon/we-retail/equipment/surfing/even-keel-paddleboard_img_0.jpeg]"
+                image_x0040_LastModified="{Date}2026-06-24T12:58:15.704+03:00"
+                image_x0040_LastModifiedBy="admin"
+                name="Even Keel Paddleboard"
+                name_x0040_LastModified="{Date}2026-06-24T12:58:15.695+03:00"
+                name_x0040_LastModifiedBy="admin"
+                price="{Double}800.0"
+                price_x0040_LastModified="{Date}2026-06-24T12:58:15.696+03:00"
+                price_x0040_LastModifiedBy="admin"
+                rating="3"
+                rating_x0040_LastModified="{Date}2026-06-24T12:58:15.697+03:00"
+                rating_x0040_LastModifiedBy="admin"
+                reviews="By djslalom&#xa;from Lee Vining, CA&#xa;The board was nice to get started, but now that I've gotten my stroke down, a left turn bias has become dramatically apparent. A fin box misalignment might be causing this.  Finally, in less than a year, a bubble has appeared under the skin on the hull side (despite careful storage). Requests for a remedy from the manufacturer was deferred to the salesman, and both have become unresponsive. I would absolutely avoid this company and am spreading the word."
+                reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.697+03:00"
+                reviews_x0040_LastModifiedBy="admin"
+                short_description="equipment"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
+                size_x0040_LastModified="{Date}2026-06-24T12:58:15.690+03:00"
+                sku="eqsusuevd"
+                sku_x0040_LastModified="{Date}2026-06-24T12:58:15.695+03:00"
+                sku_x0040_LastModifiedBy="admin"/>
+        </data>
+        <indexedData jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="cebf2473-d551-4d38-9cac-fc6ce8d83911"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/product"
+                _x0040_stringArray_x0040_variations="[]"
+                double_x0040_price="{Double}800.0"
+                string_x0040_description="Besides providing a new way to get on the water, paddleboarding develops core muscles and balance it's the perfect training activity for surfers, skiers and paddlers"
+                string_x0040_features="Incredibly stable 33 in. width offers stability that inspires confidence in beginning paddlers. &#xd;&#xa;EPS, epoxy and fiberglass construction reduces weight and creates high responsiveness"
+                string_x0040_identifier="eqsusuevd"
+                string_x0040_name="Even Keel Paddleboard"
+                string_x0040_rating="3"
+                string_x0040_reviews="By djslalom&#xa;from Lee Vining, CA&#xa;The board was nice to get started, but now that I've gotten my stroke down, a left turn bias has become dramatically apparent. A fin box misalignment might be causing this.  Finally, in less than a year, a bubble has appeared under the skin on the hull side (despite careful storage). Requests for a remedy from the manufacturer was deferred to the salesman, and both have become unresponsive. I would absolutely avoid this company and am spreading the word."
+                string_x0040_short_description="equipment"
+                string_x0040_sku="eqsusuevd"/>
+        </indexedData>
+        <metadata
+            cq:tags="[we-retail:equipment,we-retail:season/summer,we-retail:activity/surfing]"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

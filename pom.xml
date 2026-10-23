@@ -34,12 +34,15 @@
     
     <modules>
         <module>parent</module>
+        <module>celadon</module>
         <module>config</module>
         <module>core</module>
         <module>ui.apps</module>
         <module>ui.content</module>
-        <module>it.tests.ui-js</module>
+        <module>catalog</module>
+        <module>commons.content.slim</module>
         <module>all</module>
+        <module>all-deps</module>
     </modules>
 
     <scm>

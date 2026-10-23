@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="3ff6a70f-7174-49cf-a526-6c418d12b62b">
+    <jcr:content
+        jcr:lastModified="{Date}2026-06-24T12:58:15.623+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Flying Snowboard"
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/we-retail/settings/dam/cfm/models/product"
+            jcr:primaryType="nt:unstructured"
+            _strucVersion="{Long}1">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:15.595+03:00"
+                color_x0040_LastModified="{Date}2026-06-24T12:58:15.595+03:00"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"
+                configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:15.620+03:00"
+                configurableOptions_x0040_LastModifiedBy="admin"
+                description="&lt;p>Often imitated, never outdone, and backed by a 20-year legacy as snowboarding’s one-board answer to all terrain.&lt;/p>&#xd;&#xa;"
+                description_x0040_ContentType="text/html"
+                description_x0040_LastModified="{Date}2026-06-24T12:58:15.603+03:00"
+                description_x0040_LastModifiedBy="admin"
+                features="&lt;p>Since its humble beginnings, innovation has defined the Flying Snowboard series and set it apart as the most popular, versatile, and mimicked board in snowboarding. These days, the one-board answer to all terrain celebrates its 20-year reign with a proven formula that combines time-honored design and envelope-pushing ingredients for a lightweight, poppy, and stable snowboard that were unheard of two decades ago.&lt;br>&lt;/p>"
+                features_x0040_LastModified="{Date}2026-06-24T12:58:15.604+03:00"
+                features_x0040_LastModifiedBy="admin"
+                identifier="eqwrsnbd"
+                identifier_x0040_LastModified="{Date}2026-06-24T12:58:15.604+03:00"
+                identifier_x0040_LastModifiedBy="admin"
+                image="[/content/dam/celadon/we-retail/equipment/snow-sports/flying-snowboard_img_0.jpeg]"
+                image_x0040_LastModified="{Date}2026-06-24T12:58:15.612+03:00"
+                image_x0040_LastModifiedBy="admin"
+                name="Flying Snowboard"
+                name_x0040_LastModified="{Date}2026-06-24T12:58:15.603+03:00"
+                name_x0040_LastModifiedBy="admin"
+                price="{Double}599.0"
+                price_x0040_LastModified="{Date}2026-06-24T12:58:15.604+03:00"
+                price_x0040_LastModifiedBy="admin"
+                rating="5"
+                rating_x0040_LastModified="{Date}2026-06-24T12:58:15.604+03:00"
+                rating_x0040_LastModifiedBy="admin"
+                reviews="&#xa;By NE2WA&#xa;from Edmonds, WA&#xa;&#xa;This watch/gps/heart rate monitor is a data crunching gem. With the free online connection, you can actually watch a graphical display of your swim/run on a map with associated changes in your heart rate, pace and step rate (with the foot chip). It takes a little time to set up, but is simple to use once you get started. I am loving this device and the feedback it's giving me."
+                reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.605+03:00"
+                reviews_x0040_LastModifiedBy="admin"
+                short_description="equipment"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
+                size_x0040_LastModified="{Date}2026-06-24T12:58:15.595+03:00"
+                sku="eqwrsnbd"
+                sku_x0040_LastModified="{Date}2026-06-24T12:58:15.603+03:00"
+                sku_x0040_LastModifiedBy="admin"/>
+            <var-size-onesize
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                _x0040_variationCreationDate="{Date}2026-06-24T12:58:15.620+03:00"
+                additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:15.621+03:00"
+                additionalCategories_x0040_LastModifiedBy="admin"
+                color_x0040_LastModified="{Date}2026-06-24T12:58:15.623+03:00"
+                color_x0040_LastModifiedBy="admin"
+                configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"
+                configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:15.621+03:00"
+                configurableOptions_x0040_LastModifiedBy="admin"
+                description="&lt;p>Often imitated, never outdone, and backed by a 20-year legacy as snowboarding’s one-board answer to all terrain.&lt;/p>&#xd;&#xa;"
+                description_x0040_ContentType="text/html"
+                description_x0040_LastModified="{Date}2026-06-24T12:58:15.621+03:00"
+                description_x0040_LastModifiedBy="admin"
+                features="&lt;p>Since its humble beginnings, innovation has defined the Flying Snowboard series and set it apart as the most popular, versatile, and mimicked board in snowboarding. These days, the one-board answer to all terrain celebrates its 20-year reign with a proven formula that combines time-honored design and envelope-pushing ingredients for a lightweight, poppy, and stable snowboard that were unheard of two decades ago.&lt;br>&lt;/p>"
+                features_x0040_LastModified="{Date}2026-06-24T12:58:15.622+03:00"
+                features_x0040_LastModifiedBy="admin"
+                identifier="eqwrsnbd"
+                identifier_x0040_LastModified="{Date}2026-06-24T12:58:15.622+03:00"
+                identifier_x0040_LastModifiedBy="admin"
+                image="[/content/dam/celadon/we-retail/equipment/snow-sports/flying-snowboard_img_0.jpeg]"
+                image_x0040_LastModified="{Date}2026-06-24T12:58:15.620+03:00"
+                image_x0040_LastModifiedBy="admin"
+                name="Flying Snowboard"
+                name_x0040_LastModified="{Date}2026-06-24T12:58:15.621+03:00"
+                name_x0040_LastModifiedBy="admin"
+                price="{Double}599.0"
+                price_x0040_LastModified="{Date}2026-06-24T12:58:15.621+03:00"
+                price_x0040_LastModifiedBy="admin"
+                rating="5"
+                rating_x0040_LastModified="{Date}2026-06-24T12:58:15.622+03:00"
+                rating_x0040_LastModifiedBy="admin"
+                reviews="&#xa;By NE2WA&#xa;from Edmonds, WA&#xa;&#xa;This watch/gps/heart rate monitor is a data crunching gem. With the free online connection, you can actually watch a graphical display of your swim/run on a map with associated changes in your heart rate, pace and step rate (with the foot chip). It takes a little time to set up, but is simple to use once you get started. I am loving this device and the feedback it's giving me."
+                reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.622+03:00"
+                reviews_x0040_LastModifiedBy="admin"
+                short_description="equipment"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
+                size="One size"
+                size_x0040_LastModified="{Date}2026-06-24T12:58:15.623+03:00"
+                size_x0040_LastModifiedBy="admin"
+                sku="eqwrsnbd-Onesize"
+                sku_x0040_LastModified="{Date}2026-06-24T12:58:15.623+03:00"
+                sku_x0040_LastModifiedBy="admin"/>
+        </data>
+        <indexedData jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="6b3beb06-426f-46ed-9a32-e723688e5d10"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/product"
+                _x0040_stringArray_x0040_variations="[var-size-onesize]"
+                double_x0040_price="{Double}599.0"
+                string_x0040_description="&lt;p>Often imitated, never outdone, and backed by a 20-year legacy as snowboarding’s one-board answer to all terrain.&lt;/p>&#xd;&#xa;"
+                string_x0040_features="&lt;p>Since its humble beginnings, innovation has defined the Flying Snowboard series and set it apart as the most popular, versatile, and mimicked board in snowboarding. These days, the one-board answer to all terrain celebrates its 20-year reign with a proven formula that combines time-honored design and envelope-pushing ingredients for a lightweight, poppy, and stable snowboard that were unheard of two decades ago.&lt;br>&lt;/p>"
+                string_x0040_identifier="eqwrsnbd"
+                string_x0040_name="Flying Snowboard"
+                string_x0040_rating="5"
+                string_x0040_reviews="&#xa;By NE2WA&#xa;from Edmonds, WA&#xa;&#xa;This watch/gps/heart rate monitor is a data crunching gem. With the free online connection, you can actually watch a graphical display of your swim/run on a map with associated changes in your heart rate, pace and step rate (with the foot chip). It takes a little time to set up, but is simple to use once you get started. I am loving this device and the feedback it's giving me."
+                string_x0040_short_description="equipment"
+                string_x0040_sku="eqwrsnbd"
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"/>
+            <var-size-onesize
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="199c5cbe-7d51-4d1c-b777-5948778d3182"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/product"
+                double_x0040_price="{Double}599.0"
+                string_x0040_description="&lt;p>Often imitated, never outdone, and backed by a 20-year legacy as snowboarding’s one-board answer to all terrain.&lt;/p>&#xd;&#xa;"
+                string_x0040_features="&lt;p>Since its humble beginnings, innovation has defined the Flying Snowboard series and set it apart as the most popular, versatile, and mimicked board in snowboarding. These days, the one-board answer to all terrain celebrates its 20-year reign with a proven formula that combines time-honored design and envelope-pushing ingredients for a lightweight, poppy, and stable snowboard that were unheard of two decades ago.&lt;br>&lt;/p>"
+                string_x0040_identifier="eqwrsnbd"
+                string_x0040_name="Flying Snowboard"
+                string_x0040_rating="5"
+                string_x0040_reviews="&#xa;By NE2WA&#xa;from Edmonds, WA&#xa;&#xa;This watch/gps/heart rate monitor is a data crunching gem. With the free online connection, you can actually watch a graphical display of your swim/run on a map with associated changes in your heart rate, pace and step rate (with the foot chip). It takes a little time to set up, but is simple to use once you get started. I am loving this device and the feedback it's giving me."
+                string_x0040_short_description="equipment"
+                string_x0040_size="One size"
+                string_x0040_sku="eqwrsnbd-Onesize"
+                stringArray_x0040_configurableOptions="[/content/dam/celadon/we-retail/_options/size--one-size]"/>
+        </indexedData>
+        <metadata
+            cq:tags="[we-retail:season/winter,we-retail:activity/skiing,we-retail:equipment]"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured">
+            <dam:cfVariations jcr:primaryType="nt:unstructured">
+                <var-size-onesize
+                    cq:tags="[we-retail:season/winter,we-retail:activity/skiing,we-retail:equipment]"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"/>
+            </dam:cfVariations>
+        </metadata>
+        <model jcr:primaryType="nt:unstructured">
+            <variations jcr:primaryType="nt:unstructured">
+                <var-size-onesize
+                    jcr:description="Variant: var-size-onesize"
+                    jcr:mixinTypes="[cq:Taggable]"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="var-size-onesize"
+                    name="var-size-onesize"/>
+            </variations>
+        </model>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

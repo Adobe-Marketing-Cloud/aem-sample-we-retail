@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <jcr:content
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Surfing">
+        <folderThumbnail/>
+    </jcr:content>
+    <bear-8_8_-longboard/>
+    <bear-8_8_-longboard_img_0.jpeg/>
+    <the-stretch-longboard/>
+    <the-stretch-longboard_img_0.png/>
+    <rusty-parrot-shortboad/>
+    <rusty-parrot-shortboad_img_0.jpeg/>
+    <el-greco-8_-shorty/>
+    <el-greco-8_-shorty_img_0.jpeg/>
+    <even-keel-paddleboard/>
+    <even-keel-paddleboard_img_0.jpeg/>
+    <chasing-tail-surfboard/>
+    <chasing-tail-surfboard_img_0.jpeg/>
+    <the-neutrino/>
+    <the-neutrino_img_0.jpeg/>
+</jcr:root>

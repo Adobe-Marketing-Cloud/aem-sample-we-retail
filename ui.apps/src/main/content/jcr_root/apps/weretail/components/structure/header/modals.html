@@ -13,8 +13,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<sly data-sly-use.header="we.retail.core.model.Header" data-sly-test.isCommunitiesPage="${header.isCommunitiesPage}"></sly>
-<div class="we-SearchModal modal fade ${isCommunitiesPage?'we-SearchModal-community':''}" id="navbar-search" role="dialog" data-color="primary">
+<div class="we-SearchModal modal fade" id="navbar-search" role="dialog" data-color="primary">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -25,8 +24,7 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <sly data-sly-test="${isCommunitiesPage}" data-sly-resource="${'./search' @ resourceType='weretail/components/structure/search', selectors='community'}"></sly>
-                        <sly data-sly-test="${!isCommunitiesPage}" data-sly-resource="${'./search' @ resourceType='weretail/components/structure/search', decoration='true'}"></sly>
+                        <sly data-sly-resource="${'./search' @ resourceType='weretail/components/structure/search', decoration='true'}"></sly>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:dam="http://www.day.com/dam/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:mixinTypes="[mix:referenceable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="25037f92-94a2-4e69-9a8f-f8e112ff7d8a">
+    <jcr:content
+        jcr:lastModified="{Date}2026-06-24T12:58:15.720+03:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Chasing Tail Surfboard"
+        contentFragment="{Boolean}true">
+        <data
+            cq:model="/conf/we-retail/settings/dam/cfm/models/product"
+            jcr:primaryType="nt:unstructured"
+            _strucVersion="{Long}1">
+            <master
+                jcr:mixinTypes="[cq:Taggable,dam:cfVariationNode]"
+                jcr:primaryType="nt:unstructured"
+                additionalCategories_x0040_LastModified="{Date}2026-06-24T12:58:15.705+03:00"
+                color_x0040_LastModified="{Date}2026-06-24T12:58:15.705+03:00"
+                configurableOptions_x0040_LastModified="{Date}2026-06-24T12:58:15.705+03:00"
+                description="Full rails and extra flotation make this board ideal for mushed out summer waves.For the beginner to advanced surfer, this board works great in knee high to head high surf."
+                description_x0040_ContentType="text/html"
+                description_x0040_LastModified="{Date}2026-06-24T12:58:15.711+03:00"
+                description_x0040_LastModifiedBy="admin"
+                features="&#xd;&#xa;Polyurethane, Balsa Wood&#xd;&#xa;High gloss finish"
+                features_x0040_LastModified="{Date}2026-06-24T12:58:15.712+03:00"
+                features_x0040_LastModifiedBy="admin"
+                identifier="eqsusuchd"
+                identifier_x0040_LastModified="{Date}2026-06-24T12:58:15.711+03:00"
+                identifier_x0040_LastModifiedBy="admin"
+                image="[/content/dam/celadon/we-retail/equipment/surfing/chasing-tail-surfboard_img_0.jpeg]"
+                image_x0040_LastModified="{Date}2026-06-24T12:58:15.720+03:00"
+                image_x0040_LastModifiedBy="admin"
+                name="Chasing Tail Surfboard"
+                name_x0040_LastModified="{Date}2026-06-24T12:58:15.711+03:00"
+                name_x0040_LastModifiedBy="admin"
+                price="{Double}785.0"
+                price_x0040_LastModified="{Date}2026-06-24T12:58:15.711+03:00"
+                price_x0040_LastModifiedBy="admin"
+                rating="5"
+                rating_x0040_LastModified="{Date}2026-06-24T12:58:15.712+03:00"
+                rating_x0040_LastModifiedBy="admin"
+                reviews="By surfersean20&#xa;from Kona&#xa;The california typical day board.this thing is sick.great for huge airs ad big gouges.this board makes airs easy!!"
+                reviews_x0040_LastModified="{Date}2026-06-24T12:58:15.712+03:00"
+                reviews_x0040_LastModifiedBy="admin"
+                short_description="equipment"
+                short_description_x0040_ContentType="text/html"
+                short_description_x0040_LastModified="{Date}2026-10-20T22:17:16.000+03:00"
+                short_description_x0040_LastModifiedBy="admin"
+                size_x0040_LastModified="{Date}2026-06-24T12:58:15.705+03:00"
+                sku="eqsusuchd"
+                sku_x0040_LastModified="{Date}2026-06-24T12:58:15.711+03:00"
+                sku_x0040_LastModifiedBy="admin"/>
+        </data>
+        <indexedData jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[dam:IndexedFragmentData]"
+                jcr:primaryType="nt:unstructured"
+                jcr:uuid="04ff3b63-76df-4828-9e0c-8d7ae1b63e2a"
+                _x0040_string_x0040_model="/conf/we-retail/settings/dam/cfm/models/product"
+                _x0040_stringArray_x0040_variations="[]"
+                double_x0040_price="{Double}785.0"
+                string_x0040_description="Full rails and extra flotation make this board ideal for mushed out summer waves.For the beginner to advanced surfer, this board works great in knee high to head high surf."
+                string_x0040_features="&#xd;&#xa;Polyurethane, Balsa Wood&#xd;&#xa;High gloss finish"
+                string_x0040_identifier="eqsusuchd"
+                string_x0040_name="Chasing Tail Surfboard"
+                string_x0040_rating="5"
+                string_x0040_reviews="By surfersean20&#xa;from Kona&#xa;The california typical day board.this thing is sick.great for huge airs ad big gouges.this board makes airs easy!!"
+                string_x0040_short_description="equipment"
+                string_x0040_sku="eqsusuchd"/>
+        </indexedData>
+        <metadata
+            cq:tags="[we-retail:equipment,we-retail:season/summer,we-retail:activity/surfing]"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

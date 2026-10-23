@@ -1,15 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
           jcr:primaryType="nt:unstructured"
           jcr:title="Product Grid"
-          sling:resourceType="cq/gui/components/authoring/dialog">
-    <content jcr:primaryType="nt:unstructured">
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          extraClientlibs="[cif.shell.picker]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
         <items jcr:primaryType="nt:unstructured">
-            <tabs jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
                 <items jcr:primaryType="nt:unstructured">
-                    <itemSettings
-                        jcr:primaryType="nt:unstructured"
-                        sling:hideResource="{Boolean}true"/>
+                    <listSettings jcr:primaryType="nt:unstructured">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns jcr:primaryType="nt:unstructured">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column jcr:primaryType="nt:unstructured">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <listFrom jcr:primaryType="nt:unstructured">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <products
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:orderBefore="search"
+                                                        text="Products"
+                                                        value="products"/>
+                                                </items>
+                                            </listFrom>
+                                            <setProducts
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:orderBefore="setSearch"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                granite:class="hide list-option-listfrom-showhide-target foundation-layout-util-vmargin">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="products"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <heading
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                        granite:class="coral-Heading coral-Heading--4"
+                                                        level="{Long}4"
+                                                        text="Options for Products"/>
+                                                    <well
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <productsLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/text"
+                                                                text="Select products with the CIF product picker. The grid keeps the current We.Retail card layout while linking to the CIF product detail page."/>
+                                                            <products
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                fieldLabel="Products"
+                                                                typeHint="[product@String[]]">
+                                                                <field
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="commerce/gui/components/common/cifproductfield"
+                                                                    fieldLabel="Product"
+                                                                    name="./product"
+                                                                    showLink="{Boolean}true"
+                                                                    selectionId="combinedSku"/>
+                                                            </products>
+                                                        </items>
+                                                    </well>
+                                                </items>
+                                            </setProducts>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </listSettings>
                 </items>
             </tabs>
         </items>

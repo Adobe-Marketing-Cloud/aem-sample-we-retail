@@ -61,3 +61,7 @@ ui.content/src/main/content/jcr_root/etc/commerce/.content.xml
 ui.content/src/main/content/jcr_root/etc/commerce/products/.content.xml
 
 src/main/content/META-INF/vault/properties.xml
+/output/
+/.claude/
+/.clawdea/
+/local/

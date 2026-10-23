@@ -1,4 +1,0 @@
-{
-    "jcr:primaryType"   : "nt:unstructured",
-    "sling:resourceType": "weretail/components/form/options/datasource/countriesdatasource"
-}
