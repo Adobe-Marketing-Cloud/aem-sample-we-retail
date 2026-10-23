@@ -37,8 +37,9 @@
         <vault.password>admin</vault.password>
         <slf4j.version>1.5.11</slf4j.version>
         <uber.jar.version>6.4.4</uber.jar.version>
-        <core.wcm.components.version>2.29.0</core.wcm.components.version>
-        <core.cif.components.version>2.18.0</core.cif.components.version>
+        <core.wcm.components.version>2.33.0</core.wcm.components.version>
+        <core.wcm.components.api.version>2.29.0</core.wcm.components.api.version>
+        <core.cif.components.version>2.19.2</core.cif.components.version>
         <graphql.client.version>1.10.0</graphql.client.version>
         <magento.graphql.version>9.1.0-magento242ee</magento.graphql.version>
         <celadon.version>0.1.0-SNAPSHOT</celadon.version>
@@ -646,7 +647,7 @@
             <dependency>
                 <groupId>com.adobe.cq</groupId>
                 <artifactId>core.wcm.components.core</artifactId>
-                <version>${core.wcm.components.version}</version>
+                <version>${core.wcm.components.api.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>

@@ -34,8 +34,9 @@ must render empty; product recommendations are deferred (no-op stubs only).
 | `all` | `we.retail.all` | Combined package embedding all subpackages |
 | `all-deps` | `we.retail.all.deps` | Self-contained package: embeds Core WCM, CIF Core, the Magento GraphQL bundle and the `all` subpackage. Only the AEM Commerce Add-on (2025.09.18.00 or later) must be pre-installed |
 
-Key versions (in `parent/pom.xml`): UberJar `6.4.4`, Core WCM Components `2.29.0`,
-Core CIF Components `2.18.0`, GraphQL client `1.10.0`, Magento GraphQL `9.1.0-magento242ee`.
+Key versions (in `parent/pom.xml`): UberJar `6.4.4`, Core WCM Components `2.33.0` (embedded
+in `all-deps`; `core` compiles against `2.29.0` so it also runs with the SDK's built-in copy),
+Core CIF Components `2.19.2`, GraphQL client `1.10.0`, Magento GraphQL `9.1.0-magento242ee`.
 
 ### Celadon backend (`celadon`)
 
